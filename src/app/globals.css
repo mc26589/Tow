@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+}
+
+/* ============================================
+   GRAR Towing SEO — Global Styles
+   ============================================ */
+
+:root {
+  --trust-blue: #1d4ed8;
+  --trust-blue-dark: #1e3a8a;
+  --trust-blue-light: #eff6ff;
+  --alert-yellow: #f59e0b;
+  --alert-orange: #d97706;
+  --whatsapp-green: #25D366;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+}
+
+/* RTL base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-heebo), "Segoe UI", Tahoma, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   WhatsApp CTA Button — Pulse Animation
+   ============================================ */
+
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: whatsapp-pulse 2s infinite;
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+/* Trust gradient for hero sections */
+.gradient-trust {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 50%, #172554 100%);
+}
+
+/* Alert gradient for CTA elements */
+.gradient-alert {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+/* Card hover lift effect */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Star rating styles */
+.star-filled {
+  color: #f59e0b;
+}
+
+.star-empty {
+  color: #e2e8f0;
+}
+
+/* ============================================
+   Responsive Breakpoints Helper
+   ============================================ */
+
+@layer utilities {
+
+  /* Safe area for mobile CTA (avoid overlap with sticky button) */
+  .pb-safe-cta {
+    padding-bottom: 5rem;
+  }
+}
