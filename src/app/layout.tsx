@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Heebo, Rubik } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -57,6 +58,7 @@ export default function RootLayout({
                 <main className="min-h-screen pb-safe-cta">{children}</main>
                 <Footer />
                 <WhatsAppCTA />
+                <Analytics />
             </body>
         </html>
     );
