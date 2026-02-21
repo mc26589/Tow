@@ -1,10 +1,10 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 
 const VERIFY_TOKEN = "tiptap_agent_secret_123";
 const META_TOKEN = "EAAUCb23UhFMBQZCSZA4YaAo41k1APlzNY1Txxfv8HPDGR13tf3pYfdZClu4ryaZBqJlHG54fGAnCDUVyw0v8K8cXriO9NvRg22BTdc3lLdWEFTBWZCwIlNiJNokW0liWnakmW5UG78CuNcggNBFMx8imUV95NT2BkJvbCDQMI045an55zK01KivR4G6hWF56PE0jw5bZCsDR0SccBDrHqHXMB8Lyp9c7KTiERYzMEvLFAMZClhcX3ycmJuIZCe4DVwYlZAqmLZBdKUyii0zOaSFQZDZD";
 
 // --- חלק 1: אימות מול מטא (GET) ---
-export async function GET(request) {
+export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const mode = searchParams.get('hub.mode');
     const token = searchParams.get('hub.verify_token');
@@ -22,7 +22,7 @@ export async function GET(request) {
 }
 
 // --- חלק 2: קבלת הודעות וואטסאפ (POST) ---
-export async function POST(request) {
+export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
 
