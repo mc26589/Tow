@@ -62,6 +62,19 @@ export async function POST(request: NextRequest) {
 }
 
 async function processCustomerMessage(phone: string, input: string) {
+    // 1. Block the customer if they already have an active open job
+    const { data: openJobs, error: openJobsError } = await supabase
+        .from("jobs")
+        .select("*")
+        .eq("customer_phone", phone)
+        .eq("status", "open");
+
+    if (openJobs && openJobs.length > 0) {
+        await sendMessage(phone, "אנחנו עדיין מנסים לאתר נהג פנוי, אנא המתן בבקשה.");
+        return; // Ensure they do not drop into the session setup below
+    }
+
+    // 2. Proceed normally with session creation / loading for new jobs
     let { data: session, error: selectError } = await supabase.from("sessions").select("*").eq("phone_number", phone).single();
 
     if (selectError && selectError.code !== 'PGRST116') {
@@ -69,21 +82,6 @@ async function processCustomerMessage(phone: string, input: string) {
     }
 
     if (!session) {
-        // If the customer has an open job and NO session, they are trying to start a new chat while waiting.
-        // We will notify them to wait, but we MUST NOT return so they aren't trapped in a broken state forever.
-        // Actually, returning here is fine ONLY IF we already sent a message. BUT for robustness, 
-        // let's just create a new session if they want to override.
-        const { data: openJobs } = await supabase
-            .from("jobs")
-            .select("*")
-            .eq("customer_phone", phone)
-            .eq("status", "open");
-
-        if (openJobs && openJobs.length > 0) {
-            await sendMessage(phone, "אנחנו עדיין מנסים לאתר נהג פנוי, אנא המתן בבקשה.");
-            return;
-        }
-
         session = { phone_number: phone, step: "INIT", data: {} };
         const { error: insertError } = await supabase.from("sessions").insert(session);
         if (insertError) console.error("Supabase insert error:", insertError);
@@ -229,6 +227,9 @@ async function handleDriverTakeJob(driverPhone: string, jobId: string) {
         // Race condition won!
         const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
         await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
     } else {
         // Race condition lost
         await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
