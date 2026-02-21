@@ -1,0 +1,17 @@
+name: Cleanup Expired Jobs
+
+on:
+  schedule:
+    # Run every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Vercel Cleanup Route
+        run: |
+          curl -X GET "https://grar-towing-seo.vercel.app/api/cron/cleanup" \
+          -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+          -s -o /dev/null -w "%{http_code}"
