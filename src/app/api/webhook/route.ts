@@ -232,9 +232,9 @@ IMPORTANT: Your output must be ONLY the final integer number. Absolutely no othe
                 ];
                 await sendInteractiveButtons(phone, quoteMsg, approvalButtons);
 
-            } catch (pricingError) {
+            } catch (pricingError: any) {
                 console.error("Gemini pricing error:", pricingError);
-                await sendMessage(phone, "מצטערים, חלה שגיאה בחישוב המחיר. אנא נסה שוב מאוחר יותר.");
+                await sendMessage(phone, `מצטערים, חלה שגיאה בחישוב המחיר. פרטים טכניים:\n${pricingError.message || pricingError}`);
                 await supabase.from("sessions").delete().eq("phone_number", phone);
             }
             break;
