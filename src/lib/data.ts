@@ -43,7 +43,7 @@ export const VEHICLES = [
 ] as const;
 
 export const BUSINESS_INFO = {
-    name: "גרר צפון - שירותי גרירה",
+    name: "גרר מפרץ אקספרס - שירותי גרירה",
     phone: "972549174414",
     whatsappBase: "https://wa.me/972549174414",
     description: "שירותי גרירה מהירים ומקצועיים בצפון הארץ. הגעה מהירה, מחירים הוגנים, 24/7.",

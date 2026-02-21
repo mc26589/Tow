@@ -9,7 +9,7 @@ export function Footer() {
                     {/* Brand + Description */}
                     <div>
                         <h3 className="font-rubik font-black text-2xl text-white mb-3 tracking-tight">
-                            גרר צפון
+                            גרר מפרץ אקספרס
                         </h3>
                         <p className="text-sm leading-relaxed text-slate-400">
                             {BUSINESS_INFO.description}
@@ -84,7 +84,7 @@ export function Footer() {
 
                 {/* Copyright Bar */}
                 <div className="mt-10 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
-                    <p>© {new Date().getFullYear()} גרר צפון — שירותי גרירה מקצועיים. כל הזכויות שמורות.</p>
+                    <p>© {new Date().getFullYear()} גרר מפרץ אקספרס — שירותי גרירה מקצועיים. כל הזכויות שמורות.</p>
                 </div>
             </div>
         </footer>

@@ -141,7 +141,7 @@ export default async function CityVehiclePage({ params }: PageProps) {
             <section className="py-14">
                 <div className="max-w-5xl mx-auto px-4">
                     <h2 className="font-rubik font-bold text-2xl md:text-3xl text-slate-900 mb-8 text-center">
-                        למה לבחור בגרר צפון לגרירת ה{vehicle.name_he} שלכם?
+                        למה לבחור בגרר מפרץ אקספרס לגרירת ה{vehicle.name_he} שלכם?
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

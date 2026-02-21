@@ -13,7 +13,7 @@ export function JsonLd({ cityName, citySlug, vehicleName, faqs }: JsonLdProps) {
     const localBusiness = {
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "AutoRepair"],
-        name: "גרר צפון - שירותי גרירה",
+        name: "גרר מפרץ אקספרס - שירותי גרירה",
         description: vehicleName && cityName
             ? `שירותי גרירה מקצועיים ל${vehicleName} ב${cityName}. הגעה מהירה תוך 30 דקות, מחירים הוגנים, 24/7.`
             : "שירותי גרירה מהירים ומקצועיים בחיפה, הקריות ואזור הצפון. 24/7.",

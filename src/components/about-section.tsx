@@ -22,7 +22,7 @@ export function AboutSection() {
             icon: "🕐",
             title: "24/7 — תמיד זמינים",
             description:
-                "שעתיים בלילה? שבת? חגים? לא משנה מתי — אנחנו כאן. גרר צפון עובד 24 שעות ביממה.",
+                "שעתיים בלילה? שבת? חגים? לא משנה מתי — אנחנו כאן. גרר מפרץ אקספרס עובד 24 שעות ביממה.",
         },
         {
             icon: "🚗",
@@ -43,7 +43,7 @@ export function AboutSection() {
             <div className="max-w-6xl mx-auto px-4">
                 <div className="text-center mb-10">
                     <h2 className="font-rubik font-black text-3xl md:text-4xl text-slate-900 mb-3 tracking-tight">
-                        🏆 למה לבחור בגרר צפון?
+                        🏆 למה לבחור בגרר מפרץ אקספרס?
                     </h2>
                     <p className="text-slate-600 text-lg md:text-xl font-medium max-w-2xl mx-auto">
                         אנחנו לא סתם גוררים — אנחנו הפתרון המהיר, האמין והשקוף ביותר באזור חיפה והצפון.

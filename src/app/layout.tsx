@@ -20,8 +20,8 @@ const rubik = Rubik({
 
 export const metadata: Metadata = {
     title: {
-        default: "גרר צפון | שירותי גרירה מהירים בצפון - 24/7",
-        template: "%s | גרר צפון",
+        default: "גרר מפרץ אקספרס | שירותי גרירה מהירים בצפון - 24/7",
+        template: "%s | גרר מפרץ אקספרס",
     },
     description:
         "שירותי גרירה מהירים ומקצועיים בחיפה, הקריות, עכו ויקנעם. הגעה מהירה תוך 30 דקות, מחירים הוגנים, 24 שעות ביממה 7 ימים בשבוע.",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         locale: "he_IL",
-        siteName: "גרר צפון",
+        siteName: "גרר מפרץ אקספרס",
     },
     robots: {
         index: true,
