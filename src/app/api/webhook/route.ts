@@ -68,9 +68,11 @@ async function processCustomerMessage(phone: string, input: string) {
         console.error("Supabase select error:", selectError);
     }
 
-    // Only block if the customer has an open job AND they are trying to start a new chat 
-    // (We don't block INIT so we don't trap them forever if something breaks)
-    if (!session || session.step === "INIT") {
+    if (!session) {
+        // If the customer has an open job and NO session, they are trying to start a new chat while waiting.
+        // We will notify them to wait, but we MUST NOT return so they aren't trapped in a broken state forever.
+        // Actually, returning here is fine ONLY IF we already sent a message. BUT for robustness, 
+        // let's just create a new session if they want to override.
         const { data: openJobs } = await supabase
             .from("jobs")
             .select("*")
@@ -81,9 +83,7 @@ async function processCustomerMessage(phone: string, input: string) {
             await sendMessage(phone, "אנחנו עדיין מנסים לאתר נהג פנוי, אנא המתן בבקשה.");
             return;
         }
-    }
 
-    if (!session) {
         session = { phone_number: phone, step: "INIT", data: {} };
         const { error: insertError } = await supabase.from("sessions").insert(session);
         if (insertError) console.error("Supabase insert error:", insertError);
