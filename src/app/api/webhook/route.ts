@@ -70,7 +70,12 @@ async function processCustomerMessage(phone: string, input: string) {
         { id: "haifa", title: "חיפה" },
         { id: "akko", title: "עכו" },
         { id: "yokneam", title: "יקנעם" },
-        { id: "krayot", title: "כל הקריות" },
+        { id: "k_bialik", title: "קריית ביאליק" },
+        { id: "k_motzkin", title: "קריית מוצקין" },
+        { id: "k_haim", title: "קריית חיים" },
+        { id: "k_ata", title: "קריית אתא" },
+        { id: "k_shmuel", title: "קריית שמואל" },
+        { id: "k_yam", title: "קריית ים" },
         { id: "other", title: "אחר" }
     ];
 
@@ -161,9 +166,15 @@ async function processCustomerMessage(phone: string, input: string) {
 }
 
 async function updateSessionStep(phone: string, step: string, data: any) {
-    const { data: check } = await supabase.from("sessions").select('*').eq("phone_number", phone).single();
-    if (check) {
-        await supabase.from("sessions").update({ step, data, updated_at: new Date().toISOString() }).eq("phone_number", phone);
+    const { error } = await supabase.from("sessions").upsert({
+        phone_number: phone,
+        step,
+        data,
+        updated_at: new Date().toISOString()
+    });
+
+    if (error) {
+        console.error("Failed to upsert session:", error);
     }
 }
 
