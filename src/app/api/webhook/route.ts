@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
 import { sendMessage, sendInteractiveList, sendInteractiveButtons } from "@/lib/whatsapp";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const mode = searchParams.get("hub.mode");
@@ -60,10 +62,16 @@ export async function POST(request: NextRequest) {
 }
 
 async function processCustomerMessage(phone: string, input: string) {
-    let { data: session } = await supabase.from("sessions").select("*").eq("phone_number", phone).single();
+    let { data: session, error: selectError } = await supabase.from("sessions").select("*").eq("phone_number", phone).single();
+
+    if (selectError && selectError.code !== 'PGRST116') {
+        console.error("Supabase select error:", selectError);
+    }
+
     if (!session) {
         session = { phone_number: phone, step: "INIT", data: {} };
-        await supabase.from("sessions").insert(session);
+        const { error: insertError } = await supabase.from("sessions").insert(session);
+        if (insertError) console.error("Supabase insert error:", insertError);
     }
 
     const cityOptions = [
