@@ -3,8 +3,10 @@ import { notFound } from "next/navigation";
 import { CITIES, VEHICLES, findCity, findVehicle, getWhatsAppLink, BUSINESS_INFO } from "@/lib/data";
 import { ReviewsSection } from "@/components/reviews-section";
 import { AboutSection } from "@/components/about-section";
+import { FAQSection } from "@/components/faq-section";
 import { JsonLd } from "@/components/json-ld";
 import { supabase } from "@/lib/supabase";
+import { generateHeroText, generateValueProps, generateHiddenText, generateFAQs } from "@/lib/seo-content";
 
 // ============================================
 // Static Generation: 11 cities × 20 vehicles = 220 pages
@@ -72,9 +74,19 @@ export default async function CityVehiclePage({ params }: PageProps) {
     // Other vehicles for internal linking
     const otherVehicles = VEHICLES.filter((v) => v.slug !== vehicle.slug).slice(0, 6);
 
+    const heroText = generateHeroText(city.name_he, vehicle.name_he);
+    const valueProps = generateValueProps(city.name_he, vehicle.name_he);
+    const hiddenSeoText = generateHiddenText(city.slug, city.name_he, vehicle.name_he);
+    const pageFaqs = generateFAQs(city.name_he, vehicle.name_he);
+
     return (
         <>
-            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName={vehicle.name_he} />
+            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName={vehicle.name_he} faqs={pageFaqs} />
+
+            {/* Hidden semantic text for Googlebot/Screen readers (Long-tail keywords) */}
+            <div className="sr-only" aria-hidden="true">
+                {hiddenSeoText}
+            </div>
 
             {/* ============================================
           HERO
@@ -94,8 +106,7 @@ export default async function CityVehiclePage({ params }: PageProps) {
                     </h1>
 
                     <p className="text-lg text-blue-100 max-w-xl mx-auto mb-8 leading-relaxed">
-                        נתקעתם עם ה{vehicle.name_he} ב{city.name_he}? אנחנו מגיעים אליכם תוך 30 דקות עם ציוד גרירה מקצועי.
-                        מחירים שקופים, בלי הפתעות.
+                        {heroText}
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -136,25 +147,25 @@ export default async function CityVehiclePage({ params }: PageProps) {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="bg-trust-blue-50 rounded-2xl p-6 border border-trust-blue-100">
                             <div className="text-3xl mb-3">⚡</div>
-                            <h3 className="font-rubik font-semibold text-lg text-slate-900 mb-2">הגעה מהירה ל{city.name_he}</h3>
+                            <h3 className="font-rubik font-semibold text-lg text-slate-900 mb-2">{valueProps[0].title}</h3>
                             <p className="text-sm text-slate-600 leading-relaxed">
-                                הנהגים שלנו פרוסים בכל {city.name_he} והסביבה. זמן הגעה ממוצע — 30 דקות. לא עוזבים אתכם תקועים.
+                                {valueProps[0].desc}
                             </p>
                         </div>
 
                         <div className="bg-alert-50 rounded-2xl p-6 border border-alert-100">
                             <div className="text-3xl mb-3">💰</div>
-                            <h3 className="font-rubik font-semibold text-lg text-slate-900 mb-2">מחיר הוגן ושקוף</h3>
+                            <h3 className="font-rubik font-semibold text-lg text-slate-900 mb-2">{valueProps[1].title}</h3>
                             <p className="text-sm text-slate-600 leading-relaxed">
-                                מקבלים מחיר סופי לפני שמתחילים. בלי תוספות נסתרות, בלי הפתעות. מה שסוכם — מה שמשלמים.
+                                {valueProps[1].desc}
                             </p>
                         </div>
 
                         <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
                             <div className="text-3xl mb-3">🛡️</div>
-                            <h3 className="font-rubik font-semibold text-lg text-slate-900 mb-2">גרירה בטוחה ל{vehicle.name_he}</h3>
+                            <h3 className="font-rubik font-semibold text-lg text-slate-900 mb-2">{valueProps[2].title}</h3>
                             <p className="text-sm text-slate-600 leading-relaxed">
-                                ציוד מתקדם ומותאם לגרירת {vehicle.name_he}. הרכב שלכם מגיע ליעד בשלמות מוחלטת.
+                                {valueProps[2].desc}
                             </p>
                         </div>
                     </div>
@@ -205,6 +216,11 @@ export default async function CityVehiclePage({ params }: PageProps) {
           REVIEWS
           ============================================ */}
             <ReviewsSection cityId={cityData?.id} />
+
+            {/* ============================================
+          DYNAMIC FAQS
+          ============================================ */}
+            <FAQSection faqs={pageFaqs} city={city.name_he} vehicle={vehicle.name_he} />
 
             {/* ============================================
           INTERNAL LINKING (SEO)

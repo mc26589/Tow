@@ -31,12 +31,12 @@ export function CityVehicleGrid() {
                                     <Link
                                         key={`${city.slug}-${vehicle.slug}`}
                                         href={`/${city.slug}/${vehicle.slug}`}
-                                        className="flex items-center gap-2 bg-white border border-slate-150 rounded-xl 
-                               px-3.5 py-2.5 text-sm text-slate-700 hover:border-trust-blue-300 
-                               hover:text-trust-blue-600 hover:bg-trust-blue-50 transition-all
-                               shadow-sm card-hover"
+                                        className="flex items-center gap-2 bg-white border-2 border-slate-100 rounded-xl 
+                               px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:border-trust-blue-300 
+                               hover:text-trust-blue-700 hover:bg-trust-blue-50 transition-all
+                               shadow-sm card-hover focus-ring"
                                     >
-                                        <span className="text-xs">🚛</span>
+                                        <span className="text-base" aria-hidden="true">🚛</span>
                                         <span className="truncate">{vehicle.name_he}</span>
                                     </Link>
                                 ))}
@@ -53,7 +53,7 @@ export function CityVehicleGrid() {
                             <span key={city.slug}>
                                 <Link
                                     href={`/${city.slug}/private-car`}
-                                    className="text-trust-blue-500 hover:underline"
+                                    className="text-trust-blue-600 font-medium hover:text-trust-blue-800 hover:underline focus-ring rounded-sm px-1"
                                 >
                                     {city.name_he}
                                 </Link>

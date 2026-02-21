@@ -6,9 +6,9 @@ export function Header() {
         <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-slate-100">
             <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
                 {/* Logo / Brand */}
-                <Link href="/" className="flex items-center gap-2 group">
-                    <div className="w-10 h-10 rounded-xl gradient-trust flex items-center justify-center shadow-sm
-                          group-hover:shadow-md transition-shadow">
+                <Link href="/" className="flex items-center gap-2 group focus-ring rounded-lg p-1 -ml-1">
+                    <div className="w-10 h-10 rounded-xl gradient-trust flex items-center justify-center shadow-md
+                          group-hover:shadow-lg transition-shadow">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="22"
@@ -19,6 +19,7 @@ export function Header() {
                             strokeWidth="2.5"
                             strokeLinecap="round"
                             strokeLinejoin="round"
+                            aria-hidden="true"
                         >
                             <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
                             <path d="M15 18H9" />
@@ -28,10 +29,10 @@ export function Header() {
                         </svg>
                     </div>
                     <div className="flex flex-col">
-                        <span className="font-rubik font-bold text-lg text-trust-blue-700 leading-tight">
+                        <span className="font-rubik font-black text-xl text-slate-900 leading-tight">
                             גרר צפון
                         </span>
-                        <span className="text-xs text-slate-400 leading-tight hidden sm:block">
+                        <span className="text-xs font-medium text-slate-500 leading-tight hidden sm:block">
                             שירותי גרירה 24/7
                         </span>
                     </div>
@@ -40,8 +41,8 @@ export function Header() {
                 {/* CTA Phone */}
                 <a
                     href={`tel:+${BUSINESS_INFO.phone}`}
-                    className="flex items-center gap-2 gradient-trust text-white rounded-full px-4 py-2.5
-                     text-sm font-semibold shadow-sm hover:shadow-md transition-shadow"
+                    className="flex items-center gap-2 gradient-trust text-white rounded-full px-5 py-2.5
+                     text-sm font-bold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all focus-ring"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -53,6 +54,7 @@ export function Header() {
                         strokeWidth="2.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
+                        aria-hidden="true"
                     >
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                     </svg>

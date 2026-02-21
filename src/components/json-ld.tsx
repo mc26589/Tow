@@ -1,10 +1,15 @@
+import Script from 'next/script';
+import { BUSINESS_INFO } from '@/lib/data';
+import { FAQItem } from '@/lib/seo-content';
+
 interface JsonLdProps {
     cityName?: string;
     citySlug?: string;
     vehicleName?: string;
+    faqs?: FAQItem[];
 }
 
-export function JsonLd({ cityName, citySlug, vehicleName }: JsonLdProps) {
+export function JsonLd({ cityName, citySlug, vehicleName, faqs }: JsonLdProps) {
     const localBusiness = {
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "AutoRepair"],
@@ -72,10 +77,32 @@ export function JsonLd({ cityName, citySlug, vehicleName }: JsonLdProps) {
         },
     };
 
+    // 3. FAQPage Schema (if faqs are provided)
+    const faqSchema = faqs && faqs.length > 0 ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((faq) => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+            }
+        }))
+    } : null;
+
+    const schemas: any[] = [localBusiness];
+    if (faqSchema) {
+        schemas.push(faqSchema);
+    }
+
     return (
-        <script
+        <Script
+            id="json-ld"
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
+            dangerouslySetInnerHTML={{
+                __html: JSON.stringify(schemas)
+            }}
         />
     );
 }

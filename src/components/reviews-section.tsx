@@ -9,11 +9,12 @@ function Stars({ rating }: { rating: number }) {
                 <svg
                     key={i}
                     xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill={i <= rating ? "#f59e0b" : "#e2e8f0"}
-                    className={i <= rating ? "star-filled" : "star-empty"}
+                    className={i <= rating ? "star-filled drop-shadow-sm" : "star-empty"}
+                    aria-hidden="true"
                 >
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                 </svg>
@@ -25,14 +26,14 @@ function Stars({ rating }: { rating: number }) {
 // Single review card
 function ReviewCard({ review }: { review: Review }) {
     return (
-        <div className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm card-hover">
-            <div className="flex items-start justify-between mb-3">
+        <div className="bg-white rounded-2xl border-2 border-slate-100 p-6 shadow-sm card-hover hover:border-trust-blue-200 transition-all">
+            <div className="flex items-start justify-between mb-4">
                 <div>
-                    <h4 className="font-rubik font-semibold text-slate-900">{review.author}</h4>
+                    <h4 className="font-rubik font-bold text-lg text-slate-900">{review.author}</h4>
                 </div>
                 <Stars rating={review.rating} />
             </div>
-            <p className="text-sm text-slate-600 leading-relaxed">{review.body}</p>
+            <p className="text-base font-medium text-slate-700 leading-relaxed">&quot;{review.body}&quot;</p>
         </div>
     );
 }
@@ -62,12 +63,12 @@ export async function ReviewsSection({ cityId }: ReviewsSectionProps) {
     return (
         <section className="py-16 bg-slate-50" id="reviews">
             <div className="max-w-6xl mx-auto px-4">
-                <div className="text-center mb-10">
-                    <h2 className="font-rubik font-bold text-2xl md:text-3xl text-slate-900 mb-2">
+                <div className="text-center mb-12">
+                    <h2 className="font-rubik font-black text-3xl md:text-4xl text-slate-900 mb-3 tracking-tight">
                         💬 מה הלקוחות שלנו אומרים
                     </h2>
-                    <p className="text-slate-500">
-                        מאות לקוחות מרוצים בצפון הארץ
+                    <p className="text-slate-600 text-lg font-medium">
+                        מאות לקוחות מרוצים בצפון הארץ שקיבלו שירות מעל ומעבר
                     </p>
                 </div>
 

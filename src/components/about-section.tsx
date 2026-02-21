@@ -42,11 +42,11 @@ export function AboutSection() {
         <section className="py-16" id="about">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="text-center mb-10">
-                    <h2 className="font-rubik font-bold text-2xl md:text-3xl text-slate-900 mb-2">
+                    <h2 className="font-rubik font-black text-3xl md:text-4xl text-slate-900 mb-3 tracking-tight">
                         🏆 למה לבחור בגרר צפון?
                     </h2>
-                    <p className="text-slate-500 max-w-xl mx-auto">
-                        אנחנו לא סתם גוררים — אנחנו הפתרון המהיר, האמין והשקוף ביותר באזור חיפה והצפון
+                    <p className="text-slate-600 text-lg md:text-xl font-medium max-w-2xl mx-auto">
+                        אנחנו לא סתם גוררים — אנחנו הפתרון המהיר, האמין והשקוף ביותר באזור חיפה והצפון.
                     </p>
                 </div>
 
@@ -54,14 +54,14 @@ export function AboutSection() {
                     {features.map((feature) => (
                         <div
                             key={feature.title}
-                            className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm card-hover
-                         hover:border-trust-blue-200"
+                            className="bg-white rounded-2xl border-2 border-slate-100 p-6 shadow-sm card-hover
+                         hover:border-trust-blue-300 hover:shadow-md transition-all"
                         >
-                            <div className="text-3xl mb-3">{feature.icon}</div>
-                            <h3 className="font-rubik font-semibold text-lg text-slate-900 mb-2">
+                            <div className="text-4xl mb-4" aria-hidden="true">{feature.icon}</div>
+                            <h3 className="font-rubik font-bold text-xl text-slate-900 mb-2 tracking-tight">
                                 {feature.title}
                             </h3>
-                            <p className="text-sm text-slate-500 leading-relaxed">
+                            <p className="text-base text-slate-600 leading-relaxed font-medium">
                                 {feature.description}
                             </p>
                         </div>
