@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
 import { sendMessage, sendInteractiveList, sendInteractiveButtons } from "@/lib/whatsapp";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export const dynamic = "force-dynamic";
 
@@ -49,6 +50,8 @@ export async function POST(request: NextRequest) {
             userInput = msg.text.body;
         } else if (msg.type === "interactive" && msg.interactive?.type === "list_reply") {
             userInput = msg.interactive.list_reply.title;
+        } else if (msg.type === "interactive" && msg.interactive?.type === "button_reply") {
+            userInput = msg.interactive.button_reply.title;
         }
 
         if (!userInput) return NextResponse.json({ success: true });
@@ -106,6 +109,17 @@ async function processCustomerMessage(phone: string, input: string) {
         { id: "other", title: "אחר" }
     ];
 
+    const terrainOptions = [
+        { id: "open", title: "שטח פתוח" },
+        { id: "roofed", title: "חניון מקורה" }
+    ];
+
+    const wheelsOptions = [
+        { id: "free", title: "משוחררים" },
+        { id: "locked_2", title: "2 נעולים" },
+        { id: "locked_4", title: "4 נעולים" }
+    ];
+
     switch (session.step) {
         case "INIT":
             await updateSessionStep(phone, "ASK_ORIGIN", session.data);
@@ -152,29 +166,101 @@ async function processCustomerMessage(phone: string, input: string) {
                 await sendMessage(phone, "תזין בבקשה מלל לאיזה עיר");
             } else {
                 session.data.destination = input;
-                await updateSessionStep(phone, "ASK_NOTES", session.data);
-                await sendMessage(phone, "האם יש לך הערות נוספות שחשוב לדעת, תקלה מיוחדת או בקצרה מה קרה?");
+                await updateSessionStep(phone, "ASK_TERRAIN", session.data);
+                await sendInteractiveList(phone, "היכן הרכב ממוקם?", "בחר תוואי", "תוואי שטח", terrainOptions);
             }
             break;
 
         case "WAIT_DESTINATION_TEXT":
             session.data.destination = input;
+            await updateSessionStep(phone, "ASK_TERRAIN", session.data);
+            await sendInteractiveList(phone, "היכן הרכב ממוקם?", "בחר תוואי", "תוואי שטח", terrainOptions);
+            break;
+
+        case "ASK_TERRAIN":
+            session.data.terrain = input;
+            await updateSessionStep(phone, "ASK_WHEELS", session.data);
+            await sendInteractiveList(phone, "מה מצב הגלגלים של הרכב?", "בחר מצב", "מצב גלגלים", wheelsOptions);
+            break;
+
+        case "ASK_WHEELS":
+            session.data.wheels = input;
             await updateSessionStep(phone, "ASK_NOTES", session.data);
             await sendMessage(phone, "האם יש לך הערות נוספות שחשוב לדעת, תקלה מיוחדת או בקצרה מה קרה?");
             break;
 
         case "ASK_NOTES":
             session.data.notes = input;
-            const { data: job } = await supabase.from("jobs").insert({
-                customer_phone: phone,
-                details: session.data,
-                status: "open"
-            }).select().single();
+            // Transition to wait pricing state to prevent duplicates while Gemini is thinking
+            await updateSessionStep(phone, "WAIT_APPROVAL", session.data);
 
-            await supabase.from("sessions").delete().eq("phone_number", phone);
-            await sendMessage(phone, "תודה רבה אנחנו בודקים נהג פנוי בסביבתך ותוך 5 דקות יצור איתך קשר הנהג.");
+            // Generate Pricing using Gemini 1.5 Flash
+            try {
+                await sendMessage(phone, "מחשב הצעת מחיר, אנא המתן מספר שניות... ⏳");
+                const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
+                const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash", generationConfig: { temperature: 0.5 } });
 
-            if (job) await dispatchToDrivers(job);
+                const prompt = `
+You are an expert towing dispatcher pricing algorithm in Israel.
+Calculate the final estimated price for a towing job in New Israeli Shekels (NIS) as an integer.
+Base fee to add: 50 NIS.
+The price must factor in:
+1. Origin: ${session.data.origin}
+2. Destination: ${session.data.destination}
+3. Vehicle Type: ${session.data.vehicle}
+4. Terrain: ${session.data.terrain} (If "חניון מקורה" / roofed, it's harder and costs more)
+5. Wheels: ${session.data.wheels} (If "2 נעולים" needs 1 dolly, if "4 נעולים" needs 2 dollies, which significantly limits eligible drivers and increases price)
+
+Calculate a realistic Israeli towing market price and add 50 NIS.
+IMPORTANT: Your output must be ONLY the final integer number. Absolutely no other text, words, or symbols.
+                `;
+                const result = await model.generateContent(prompt);
+                const priceText = result.response.text().trim().replace(/[^0-9]/g, '');
+                const price = parseInt(priceText, 10);
+
+                if (isNaN(price)) {
+                    throw new Error("Failed to parse Gemini output as integer.");
+                }
+
+                session.data.price = price;
+                await updateSessionStep(phone, "WAIT_APPROVAL", session.data);
+
+                const quoteMsg = `הצעת המחיר המשוערת עבורך היא: ${price} ש"ח לא כולל מע"מ.\nהאם לאשר את הקריאה ולחפש נהג פנוי?`;
+                const approvalButtons = [
+                    { id: "APPROVE_QUOTE", title: "מעוניין" },
+                    { id: "DECLINE_QUOTE", title: "לא מעוניין" }
+                ];
+                await sendInteractiveButtons(phone, quoteMsg, approvalButtons);
+
+            } catch (pricingError) {
+                console.error("Gemini pricing error:", pricingError);
+                await sendMessage(phone, "מצטערים, חלה שגיאה בחישוב המחיר. אנא נסה שוב מאוחר יותר.");
+                await supabase.from("sessions").delete().eq("phone_number", phone);
+            }
+            break;
+
+        case "WAIT_APPROVAL":
+            // Both Interactive Button texts and Payloads end up in 'input' or interactive routes.
+            // But since 'APPROVE_QUOTE' might be intercepted in `interactive.button_reply.id`, let's check input directly.
+            // Actually, in `route.ts`, button replies that aren't starting with TAKE_JOB_ or DECLINE_JOB_ fall down to `userInput`.
+            // Let's handle if input is the Title.
+            if (input === "מעוניין") {
+                const { data: job } = await supabase.from("jobs").insert({
+                    customer_phone: phone,
+                    details: session.data,
+                    status: "open"
+                }).select().single();
+
+                await supabase.from("sessions").delete().eq("phone_number", phone);
+                await sendMessage(phone, "תודה רבה אנחנו בודקים נהג פנוי בסביבתך ותוך דקות ספורות יצור איתך קשר ראשון הנהגים שיאשר.");
+
+                if (job) await dispatchToDrivers(job);
+            } else if (input === "לא מעוניין") {
+                await supabase.from("sessions").delete().eq("phone_number", phone);
+                await sendMessage(phone, "שמחנו לעמוד לשירותך, נשמח לראותך שוב בפעם הבאה! 👋");
+            } else {
+                await sendMessage(phone, "אנא בחר בתפריט האם אתה מעוניין בהצעת המחיר או לא.");
+            }
             break;
 
         default:
