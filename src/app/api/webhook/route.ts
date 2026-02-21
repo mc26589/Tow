@@ -62,6 +62,18 @@ export async function POST(request: NextRequest) {
 }
 
 async function processCustomerMessage(phone: string, input: string) {
+    // Check if the customer already has an active open job
+    const { data: openJobs, error: openJobsError } = await supabase
+        .from("jobs")
+        .select("*")
+        .eq("customer_phone", phone)
+        .eq("status", "open");
+
+    if (openJobs && openJobs.length > 0) {
+        await sendMessage(phone, "אנחנו עדיין מנסים לאתר נהג פנוי, אנא המתן בבקשה.");
+        return;
+    }
+
     let { data: session, error: selectError } = await supabase.from("sessions").select("*").eq("phone_number", phone).single();
 
     if (selectError && selectError.code !== 'PGRST116') {
