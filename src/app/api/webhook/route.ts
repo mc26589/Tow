@@ -198,7 +198,7 @@ async function processCustomerMessage(phone: string, input: string) {
             try {
                 await sendMessage(phone, "מחשב הצעת מחיר, אנא המתן מספר שניות... ⏳");
                 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
-                const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash", generationConfig: { temperature: 0.5 } });
+                const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash", generationConfig: { temperature: 0.5 } });
 
                 const prompt = `
 You are an expert towing dispatcher pricing algorithm in Israel.
