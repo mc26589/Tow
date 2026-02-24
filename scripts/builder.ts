@@ -42,7 +42,9 @@ async function buildSGERoute(trendQuery: string, locationSlug: string, locationC
             generationConfig: { temperature: 0.1 } // Extremely low temperature for coding precision
         });
 
-        const output = JSON.parse(result.response.text());
+        let text = result.response.text();
+        text = text.replace(/```json/g, '').replace(/```/g, '').trim();
+        const output = JSON.parse(text);
         const targetDir = path.join(APP_DIR, locationSlug, output.slug);
 
         // 1. Write the physical page.tsx
@@ -85,7 +87,10 @@ async function runBuilder() {
     }
 
     for (const trend of trends) {
-        const success = await buildSGERoute(trend.query, trend.micro_locations.slug, trend.micro_locations.city);
+        const locationSlug = trend.micro_locations?.slug || 'haifa-general';
+        const locationCity = trend.micro_locations?.city || 'Haifa and Krayot';
+
+        const success = await buildSGERoute(trend.query, locationSlug, locationCity);
         if (success) {
             // Update status
             await supabase.from('local_trends').update({ status: 'completed', processed_at: new Date() }).eq('id', trend.id);
