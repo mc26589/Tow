@@ -37,6 +37,7 @@ jobs:
         run: |
           git config --global user.name "AI-Towing-Agent"
           git config --global user.email "agent@towing.haifa.ai"
-          git add src/app/areas/
+          mkdir -p src/app/areas/
+          git add src/app/areas/ || true
           git commit -m "Auto-generate pSEO pages: E-E-A-T & SGE [skip ci]" || echo "No changes to commit"
           git push
