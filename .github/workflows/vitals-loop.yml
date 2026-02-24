@@ -34,12 +34,12 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: npm run agent:analytics
         
-      # Optional: Auto-apply the AI suggestion if safe
-      - name: Auto-apply technical improvements (LCP/INP/CLS)
-        run: |
-          npm run agent:apply-fixes
-          git config --global user.name "AI-Towing-Vitals"
-          git config --global user.email "vitals@towing.haifa.ai"
-          git add src/app/ src/components/
-          git commit -m "Auto-fix Core Web Vitals (LCP/INP/CLS) [skip ci]" || echo "No fixes applied"
-          git push
+        # Optional: Auto-apply the AI suggestion if safe
+      # - name: Auto-apply technical improvements (LCP/INP/CLS)
+      #   run: |
+      #     npm run agent:apply-fixes
+      #     git config --global user.name "AI-Towing-Vitals"
+      #     git config --global user.email "vitals@towing.haifa.ai"
+      #     git add src/app/ src/components/ || true
+      #     git commit -m "Auto-fix Core Web Vitals (LCP/INP/CLS) [skip ci]" || echo "No fixes applied"
+      #     git push
