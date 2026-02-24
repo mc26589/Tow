@@ -27,7 +27,7 @@ async function runLocalResearcher() {
     console.log("Starting Local Researcher...");
 
     // Setup Gemini 2.0 Flash with low temperature for factual trend extraction
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     const weather = await fetchWeatherStatus("Haifa");
 
     let systemPrompt = `

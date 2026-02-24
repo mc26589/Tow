@@ -50,7 +50,7 @@ async function runAnalyticsLoop() {
         return;
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash", generationConfig: { responseMimeType: "application/json" } });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash", generationConfig: { responseMimeType: "application/json" } });
 
     for (const page of poorPages) {
         const prompt = `

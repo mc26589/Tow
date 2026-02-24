@@ -12,7 +12,7 @@ const APP_DIR = path.join(process.cwd(), 'src', 'app', 'areas');
 
 async function buildSGERoute(trendQuery: string, locationSlug: string, locationCity: string) {
     console.log(`Building Route for: ${trendQuery} in ${locationCity}...`);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash", generationConfig: { responseMimeType: "application/json" } });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash", generationConfig: { responseMimeType: "application/json" } });
 
     // Enforce 10/10 E-E-A-T and SGE formatting
     const systemPrompt = `
