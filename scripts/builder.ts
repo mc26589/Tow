@@ -22,7 +22,7 @@ async function buildSGERoute(trendQuery: string, locationSlug: string, locationC
 
         Constraints:
         1.  **SGE Format:** Answer-first placement. Start the page content exactly addressing the query directly and factually (e.g., "Yes, we provide 24/7 heavy motorcycle towing in...").
-        2.  **RSC (Server Components):** The React component MUST be a Server Component (no 'use client').
+        2.  **RSC (Server Components):** The React component MUST be a Server Component (no 'use client'). You must use \`className\` instead of \`class\` for any HTML attributes.
         3.  **E-E-A-T Injections:** You must inject transparent pricing (e.g., "Starting at 250 ILS"), licensing/insurance signals, and consistent NAP text (Name: Towing Rescue Haifa, Phone: 050-XXXXXXX).
         4.  **Structured Data:** Generate exact \`AutoTowing\` JSON-LD schema. Includes areaServed (${locationCity}), openingHoursSpecification (24/7), geo-coordinates (approximate for the area), priceRange, and serviceType.
 

@@ -108,14 +108,14 @@ export default function Page() {
           </p>
           <h2 className="text-2xl font-semibold mb-3">זמינות מיידית באחוזה, חיפה והקריות</h2>
           <p className="mb-4">
-            לשירות גרירה דחוף לרכב ספורט נמוך באחוזה, חיפה או בכל עיר בקריות, צרו קשר עם <strong>גרירה חילוץ חיפה</strong> בטלפון: <a href="tel:0501234567" class="text-blue-600 hover:underline">050-1234567</a>. אנו זמינים תמיד לספק מענה מהיר ויעיל.
+            לשירות גרירה דחוף לרכב ספורט נמוך באחוזה, חיפה או בכל עיר בקריות, צרו קשר עם <strong>גרירה חילוץ חיפה</strong> בטלפון: <a href="tel:0501234567" className="text-blue-600 hover:underline">050-1234567</a>. אנו זמינים תמיד לספק מענה מהיר ויעיל.
           </p>
           <div className="bg-gray-100 p-4 rounded-lg mt-6 text-sm">
-            <p class="mb-1">
+            <p className="mb-1">
               <strong>שם העסק:</strong> גרירה חילוץ חיפה
             </p>
-            <p class="mb-1">
-              <strong>טלפון:</strong> <a href="tel:0501234567" class="text-blue-600 hover:underline">050-1234567</a>
+            <p className="mb-1">
+              <strong>טלפון:</strong> <a href="tel:0501234567" className="text-blue-600 hover:underline">050-1234567</a>
             </p>
             <p>
               <strong>אזור שירות:</strong> חיפה והקריות, כולל אחוזה, כרמל, נווה שאנן, קרית ים, קרית מוצקין, קרית ביאליק, קרית אתא.
