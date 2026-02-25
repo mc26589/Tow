@@ -34,8 +34,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     if (!city || !vehicle) return {};
 
-    const title = `גרר ל${vehicle.name_he} ב${city.name_he} - הגעה מהירה 24/7`;
-    const description = `שירותי גרירה מקצועיים ל${vehicle.name_he} ב${city.name_he} והסביבה. הגעה תוך 30 דקות, מחירים הוגנים, ציוד מתקדם. התקשרו עכשיו!`;
+    const title = `גרר ל${vehicle.name_he} ב${city.name_he} | אקספרס 24/7 ⏱️ הגעה ב-30 דקות`;
+    const description = `נתקעתם עם ${vehicle.name_he}? שירותי גרירה מקצועיים ב${city.name_he} והסביבה הקרובה. התחייבות להגעה מהירה תוך 30 דקות, מחיר הוגן שנקבע מראש וזמינות מלאה 24 שעות. התקשרו עכשיו!`;
 
     return {
         title,

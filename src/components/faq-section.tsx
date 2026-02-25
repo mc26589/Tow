@@ -43,7 +43,7 @@ export function FAQSection({ faqs, city, vehicle }: FAQSectionProps) {
                                     className="w-full text-right px-5 py-4 font-heebo flex justify-between items-center transition-colors focus-ring"
                                     aria-expanded={isOpen}
                                 >
-                                    <span className={`font-semibold ${isOpen ? 'text-trust-blue-600' : 'text-slate-800'}`}>{faq.question}</span>
+                                    <h3 className={`font-semibold text-base m-0 ${isOpen ? 'text-trust-blue-600' : 'text-slate-800'}`}>{faq.question}</h3>
                                     <span className="text-trust-blue-600 text-lg mr-2 font-bold select-none">
                                         {isOpen ? "−" : "+"}
                                     </span>
