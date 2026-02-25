@@ -20,6 +20,7 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.grar-mifratz.co.il'),
     title: {
         default: "גרר מפרץ אקספרס | שירותי גרירה מהירים בצפון - 24/7",
         template: "%s | גרר מפרץ אקספרס",
