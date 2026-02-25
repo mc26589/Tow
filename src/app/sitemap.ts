@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { supabase } from '@/lib/supabase';
+import { CITIES, VEHICLES } from '@/lib/data';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://grar-haifa.vercel.app';
@@ -21,16 +22,29 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
     }));
 
-    // Define static routes
+    // Generate all 220 city/vehicle static combinations
+    const cityVehicleUrls: MetadataRoute.Sitemap = [];
+    for (const city of CITIES) {
+        for (const vehicle of VEHICLES) {
+            cityVehicleUrls.push({
+                url: `${baseUrl}/${city.slug}/${vehicle.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.9,
+            });
+        }
+    }
+
+    // Define core static routes
     const staticRoutes: MetadataRoute.Sitemap = [
         {
             url: baseUrl,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 1,
-        },
-        // Add other static routes here if applicable
+        }
     ];
 
-    return [...staticRoutes, ...dynamicUrls];
+    return [...staticRoutes, ...cityVehicleUrls, ...dynamicUrls];
 }
+
