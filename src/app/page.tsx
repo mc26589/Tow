@@ -7,7 +7,7 @@ import { getWhatsAppLink, BUSINESS_INFO } from "@/lib/data";
 export default function HomePage() {
     return (
         <>
-            <JsonLd />
+            <JsonLd isHomePage={true} />
 
             {/* ============================================
           HERO SECTION

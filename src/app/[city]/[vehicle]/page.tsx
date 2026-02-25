@@ -46,6 +46,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             type: "website",
             locale: "he_IL",
         },
+        alternates: {
+            canonical: `/${city.slug}/${vehicle.slug}`,
+        },
     };
 }
 
@@ -81,7 +84,7 @@ export default async function CityVehiclePage({ params }: PageProps) {
 
     return (
         <>
-            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName={vehicle.name_he} faqs={pageFaqs} />
+            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName={vehicle.name_he} vehicleSlug={vehicle.slug} faqs={pageFaqs} />
 
             {/* Hidden semantic text for Googlebot/Screen readers (Long-tail keywords) */}
             <div className="sr-only" aria-hidden="true">

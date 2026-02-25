@@ -6,10 +6,14 @@ interface JsonLdProps {
     cityName?: string;
     citySlug?: string;
     vehicleName?: string;
+    vehicleSlug?: string;
     faqs?: FAQItem[];
+    isHomePage?: boolean;
 }
 
-export function JsonLd({ cityName, citySlug, vehicleName, faqs }: JsonLdProps) {
+export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isHomePage }: JsonLdProps) {
+    const baseUrl = "https://grar-haifa.vercel.app";
+
     const localBusiness = {
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "AutoRepair"],
@@ -18,8 +22,8 @@ export function JsonLd({ cityName, citySlug, vehicleName, faqs }: JsonLdProps) {
             ? `שירותי גרירה מקצועיים ל${vehicleName} ב${cityName}. הגעה מהירה תוך 30 דקות, מחירים הוגנים, 24/7.`
             : "שירותי גרירה מהירים ומקצועיים בחיפה, הקריות ואזור הצפון. 24/7.",
         telephone: "+972-54-917-4414",
-        url: "https://grar-north.co.il",
-        image: "https://grar-north.co.il/og-image.jpg",
+        url: baseUrl,
+        image: `${baseUrl}/logo.png`,
         priceRange: "$$",
         openingHoursSpecification: {
             "@type": "OpeningHoursSpecification",
@@ -92,6 +96,48 @@ export function JsonLd({ cityName, citySlug, vehicleName, faqs }: JsonLdProps) {
     } : null;
 
     const schemas: any[] = [localBusiness];
+
+    if (isHomePage) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "גרר מפרץ אקספרס",
+            "url": baseUrl,
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": `${baseUrl}/?q={search_term_string}`,
+                "query-input": "required name=search_term_string"
+            }
+        });
+    }
+
+    if (citySlug && vehicleSlug && cityName && vehicleName) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "עמוד הבית",
+                    "item": baseUrl
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": `גרירה ב${cityName}`,
+                    "item": `${baseUrl}/${citySlug}`
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": `גרר ל${vehicleName} ב${cityName}`,
+                    "item": `${baseUrl}/${citySlug}/${vehicleSlug}`
+                }
+            ]
+        });
+    }
+
     if (faqSchema) {
         schemas.push(faqSchema);
     }
