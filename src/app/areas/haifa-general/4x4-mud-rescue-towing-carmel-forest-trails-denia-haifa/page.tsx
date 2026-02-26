@@ -131,7 +131,7 @@ export default function Page() {
               התקשרו אלינו מיד לקבלת עזרה מהירה ומקצועית בשבילי יער הכרמל ובסביבת דניה חיפה.
             </p>
             <p className="text-5xl font-extrabold mb-2">
-              <span className="font-semibold">Towing Rescue Haifa:</span> <a href="tel:0501234567" class="hover:underline">050-1234567</a>
+              <span className="font-semibold">Towing Rescue Haifa:</span> <a href="tel:0501234567" className="hover:underline">050-1234567</a>
             </p>
             <p className="text-lg mt-3">
               <strong className="font-semibold">אזור שירות:</strong> חיפה והקריות, כולל שבילי יער הכרמל, דניה, וכל האזורים הסמוכים.

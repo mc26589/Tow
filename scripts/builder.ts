@@ -45,6 +45,12 @@ async function buildSGERoute(trendQuery: string, locationSlug: string, locationC
         let text = result.response.text();
         text = text.replace(/```json/g, '').replace(/```/g, '').trim();
         const output = JSON.parse(text);
+        
+        // Safeguard against LLM using 'class=' instead of 'className='
+        if (output.rsc_code) {
+            output.rsc_code = output.rsc_code.replace(/ class=/g, ' className=');
+        }
+
         const targetDir = path.join(APP_DIR, locationSlug, output.slug);
 
         // 1. Write the physical page.tsx
