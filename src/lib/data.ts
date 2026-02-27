@@ -50,6 +50,14 @@ export const BUSINESS_INFO = {
     areas: "חיפה והקריות, עכו, יקנעם, קרית טבעון, רכסים",
 } as const;
 
+export const OWNER_INFO = {
+    name: "אביעד סטין",
+    jobTitle: "בעלים ומנהל מקצועי",
+    description: "מומחה לחילוץ וגרירה עם מעל 15 שנות ניסיון בשטח. מתמחה בחילוצי תאונות מורכבים וגרירת רכבים פרטיים ומסחריים.",
+    experience: "15+ שנים",
+    image: "/images/owner.jpg", // Placeholder for actual image
+} as const;
+
 // Helper: find city/vehicle by slug
 export function findCity(slug: string) {
     return CITIES.find((c) => c.slug === slug);

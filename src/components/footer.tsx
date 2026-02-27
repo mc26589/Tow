@@ -54,29 +54,28 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    {/* Quick Info */}
+                    {/* Quick Info / Links */}
                     <div>
-                        <h3 className="font-rubik font-bold text-white mb-3">מידע מהיר</h3>
+                        <h3 className="font-rubik font-bold text-white mb-3">מידע וקישורים</h3>
                         <ul className="space-y-2 text-sm">
-                            <li className="flex items-center gap-2">
-                                <span className="text-green-400">✓</span>
-                                זמינות 24 שעות, 7 ימים בשבוע
+                            <li>
+                                <Link href="/about" className="text-slate-400 hover:text-white transition-colors">
+                                    אודות החברה והצוות
+                                </Link>
                             </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-green-400">✓</span>
-                                הגעה תוך 30 דקות
+                            <li>
+                                <Link href="/guides" className="text-slate-400 hover:text-white transition-colors">
+                                    מרכז המידע: מדריכים וטיפים לבטיחות
+                                </Link>
                             </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-green-400">✓</span>
-                                מחירים שקופים, ללא הפתעות
+                            <li className="pt-2 border-t border-slate-800">
+                                <span className="text-green-400">✓</span> זמינות 24 שעות, 7 ימים בשבוע
                             </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-green-400">✓</span>
-                                גרירה בטוחה לכל סוגי הרכבים
+                            <li>
+                                <span className="text-green-400">✓</span> 15+ שנות ניסיון מקצועי
                             </li>
-                            <li className="flex items-center gap-2">
-                                <span className="text-green-400">✓</span>
-                                נהגים מקצועיים ומנוסים
+                            <li>
+                                <span className="text-green-400">✓</span> מחירים שקופים, ללא הפתעות
                             </li>
                         </ul>
                     </div>

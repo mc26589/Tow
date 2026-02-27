@@ -22,6 +22,16 @@ export function Header() {
                     </div>
                 </Link>
 
+                {/* Navigation Links */}
+                <nav className="hidden md:flex items-center gap-6">
+                    <Link href="/about" className="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
+                        אודות
+                    </Link>
+                    <Link href="/guides" className="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
+                        מדריכים וטיפים
+                    </Link>
+                </nav>
+
                 {/* CTA Phone */}
                 <a
                     href={`tel:+${BUSINESS_INFO.phone}`}
