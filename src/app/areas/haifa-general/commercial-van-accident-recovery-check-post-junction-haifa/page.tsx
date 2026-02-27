@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { WhatsAppCTA } from '@/components/whatsapp-cta';
+import { BUSINESS_INFO } from '@/lib/data';
+
 
 const H1_TITLE = "חילוץ ואן מסחרי לאחר תאונה בצומת צ'ק פוסט חיפה";
 const SLUG = "commercial-van-accident-recovery-check-post-junction-haifa";
@@ -33,7 +36,7 @@ const jsonLd = {
   "description": `שירותי חילוץ וגרירה 24/7 לוואנים מסחריים לאחר תאונה בצומת צ'ק פוסט חיפה, חיפה והקריות. שירות חירום ללא עלות, זמינות מיידית ושירות מקצועי.`,
   "url": `https://www.yourdomain.com/${SLUG}`,
   "telephone": `tel:+972${PHONE_NUMBER.replace(/-/g, '')}`,
-  "priceRange": "0 ILS", // Reflects the 'zero-cost' constraint
+  "priceRange": "$", // Reflects the 'zero-cost' constraint
   "areaServed": [
     {
       "@type": "Place",
@@ -60,7 +63,7 @@ const jsonLd = {
     "opens": "00:00",
     "closes": "23:59"
   },
-  "serviceType": ["Commercial Van Accident Recovery", "Vehicle Towing", "Emergency Roadside Assistance", "Heavy Duty Towing"]
+  "serviceType": ["גרירת רכבים", "חילוץ דרך", "שירותי גרירה", "חילוץ 4x4"]
 };
 
 export default function Page() {
@@ -71,52 +74,47 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <header className="bg-blue-700 text-white py-6 shadow-md">
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-center">
-            {H1_TITLE}
+      
+      
+      <section className="gradient-trust text-white py-14 md:py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+            שירות יעיל ומהיר באזורך
           </h1>
-        </div>
-      </header>
-
-      <section className="container mx-auto px-4 py-8">
-        <p className="text-lg mb-4 leading-relaxed">
-          כן, <strong className="font-semibold">{COMPANY_NAME}</strong> מספקת שירותי חילוץ ואן מסחרי לאחר תאונה מיידיים ומקצועיים, במיוחד בצומת צ'ק פוסט בחיפה ובאזור הקריות הסמוך, 24 שעות ביממה, 7 ימים בשבוע.
-          אנו מבינים את הדחיפות והחשיבות של חילוץ מהיר ובטוח לרכבים מסחריים כדי למזער שיבושים בעבודה ולסייע לכם לחזור לשגרה במהירות האפשרית.
-        </p>
-
-        <div className="bg-blue-50 p-6 rounded-lg shadow-md mb-6 border border-blue-200">
-          <h2 className="text-2xl font-bold text-blue-800 mb-3">שירות חירום ללא עלות בחיפה והקריות</h2>
-          <p className="mb-2 leading-relaxed">
-            <strong className="font-semibold">ללא עלות:</strong> אנו גאים לספק שירותי חילוץ וגרירה חירום לוואנים מסחריים לאחר תאונה <span className="font-bold text-green-700">ללא עלות</span> באזור חיפה והקריות, כולל צומת צ'ק פוסט. המטרה שלנו היא לסייע לכם במהירות וביעילות ללא דאגות כלכליות במצבי חירום.
+          <p className="mt-2 text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+            שירותי גרירה וחילוץ מקצועיים 24/7. הגעה מהירה, שירות אמין ומחירים הוגנים לכל תושבי חיפה והקריות.
           </p>
-          <p className="mb-2 leading-relaxed">
-            <strong className="font-semibold">רישוי וביטוח:</strong> אנו פועלים ברישיון מלא ומבוטחים לכל סוגי פעולות הגרירה והחילוץ, מה שמבטיח לכם שקט נפשי ושירות מקצועי ואחראי העומד בכל התקנים הנדרשים.
-          </p>
-          <p className="mb-2 leading-relaxed">
-            <strong className="font-semibold">זמינות:</strong> אנו זמינים 24/7, כולל חגים ושבתות, כדי להבטיח שתמיד יהיה לכם למי לפנות במקרה חירום.
-          </p>
-        </div>
-
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">למה לבחור ב"{COMPANY_NAME}" לחילוץ ואן מסחרי בצ'ק פוסט?</h2>
-        <ul className="list-disc list-inside space-y-2 mb-6 text-lg leading-relaxed">
-          <li><strong className="font-semibold">מענה מהיר:</strong> צוותי החילוץ שלנו פרוסים אסטרטגית באזור חיפה והקריות ומגיעים במהירות לכל קריאה, במיוחד לאזורים מרכזיים וצמתים עמוסים כמו צומת צ'ק פוסט.</li>
-          <li><strong className="font-semibold">ציוד מתקדם:</strong> אנו מצוידים בציוד גרירה וחילוץ ייעודי ומתקדם לוואנים מסחריים ורכבים כבדים, המאפשר טיפול בטוח ויעיל בכל מצב, גם המורכב ביותר.</li>
-          <li><strong className="font-semibold">צוות מנוסה:</strong> הטכנאים שלנו מנוסים בחילוץ תאונות מורכבות, בעלי הכשרה מקצועית גבוהה ומספקים שירות אדיב, מקצועי ואמין.</li>
-          <li><strong className="font-semibold">שירות מלא:</strong> אנו מטפלים בכל ההיבטים של החילוץ, החל מפינוי בטוח של הרכב מהכביש ועד להעברתו למוסך, לבית העסק או לכל יעד אחר שתבחרו.</li>
-        </ul>
-
-        <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center border border-gray-200">
-          <h3 className="text-xl font-bold text-gray-800 mb-3">צריכים חילוץ דחוף לוואן מסחרי בצומת צ'ק פוסט? צרו קשר עכשיו!</h3>
-          <p className="text-lg mb-4">
-            <strong className="font-semibold">שם:</strong> {COMPANY_NAME}<br />
-            <strong className="font-semibold">טלפון:</strong> <a href={`tel:+972${PHONE_NUMBER.replace(/-/g, '')}`} className="text-blue-600 hover:underline font-bold text-2xl">{PHONE_NUMBER}</a>
-          </p>
-          <p className="text-sm text-gray-600">
-            אנו זמינים 24/7 לספק לכם שירותי חילוץ וגרירה מקצועיים ואמינים בחיפה והקריות.
-          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+             <WhatsAppCTA cityName="אזור חיפה" />
+             <a href={`tel:+${BUSINESS_INFO.phone}`} className="flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white rounded-full px-7 py-3.5 font-semibold text-base border border-white/25 hover:bg-white/25 transition-colors w-full sm:w-auto justify-center">
+                📞 התקשרו עכשיו: 054-9174414
+             </a>
+          </div>
         </div>
       </section>
+
+      <section className="container mx-auto p-4 py-12">
+        <p className="text-lg mb-4 leading-relaxed font-rubik text-gray-800">
+          נתקעתם עם הרכב? אנחנו ב-<strong className="font-semibold">גרר מפרץ אקספרס</strong> מבינים את המשמעות של מצב חירום. אנו מספקים מענה מהיר ומקצועי למגוון רחב של רכבים, כולל רכבים פרטיים, מסחריים וג'יפים, אך <strong className="font-semibold text-red-600">איננו מספקים שירותי גרירה לאופנועים</strong>.
+        </p>
+
+        <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm mb-6">
+          <h2 className="text-2xl font-bold mb-4 text-blue-800">למה לבחור בנו?</h2>
+          <ul className="list-disc list-inside space-y-3 text-gray-700">
+            <li><strong className="font-semibold">זמינות מלאה:</strong> אנחנו ערוכים לכל קריאה, 24 שעות ביממה, 7 ימים בשבוע.</li>
+            <li><strong className="font-semibold">מחירים הוגנים וזולים:</strong> אנו מבטיחים הצעת מחיר הוגנת ושקופה בטלפון, ללא הפתעות וטריקים מסחריים.</li>
+            <li><strong className="font-semibold">מקצועיות ואמינות:</strong> צוות גוררים מוסמך בעל ניסיון רב, שידאג לרכב שלכם בשיא העדינות והבטיחות של רישיון וביטוח מקיף.</li>
+            <li><strong className="font-semibold">הגעה מהירה:</strong> ממוקמים בלב חיפה ומגיעים במהירות לכל פינה בעיר ובקריות.</li>
+          </ul>
+        </div>
+        
+        <p className="text-lg leading-relaxed text-gray-800">
+          צרו קשר עוד היום בוואטסאפ או בשיחה ישירה, ונהג גרירה מקצועי יהיה בדרך אליכם!
+        </p>
+      </section>
+
+
     </main>
   );
 }

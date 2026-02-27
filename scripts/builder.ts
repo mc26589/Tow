@@ -14,17 +14,24 @@ async function buildSGERoute(trendQuery: string, locationSlug: string, locationC
     console.log(`Building Route for: ${trendQuery} in ${locationCity}...`);
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash", generationConfig: { responseMimeType: "application/json" } });
 
-    // Enforce 10/10 E-E-A-T and SGE formatting
+    // Enforce 10/10 E-E-A-T and SGE formatting with strict business rules
     const systemPrompt = `
         You are an elite Next.js (App Router) architect and Technical SEO.
         We provide zero-cost emergency towing and rescue in ${locationCity}, Israel.
         Create an SGE-optimized page for the exact long-tail search query: "${trendQuery}".
 
-        Constraints:
-        1.  **SGE Format:** Answer-first placement. Start the page content exactly addressing the query directly and factually (e.g., "Yes, we provide 24/7 heavy motorcycle towing in...").
-        2.  **RSC (Server Components):** The React component MUST be a Server Component (no 'use client'). You must use \`className\` instead of \`class\` for any HTML attributes.
-        3.  **E-E-A-T Injections:** You must inject transparent pricing (e.g., "Starting at 250 ILS"), licensing/insurance signals, and consistent NAP text (Name: Towing Rescue Haifa, Phone: 050-XXXXXXX).
-        4.  **Structured Data:** Generate exact \`AutoTowing\` JSON-LD schema. Includes areaServed (${locationCity}), openingHoursSpecification (24/7), geo-coordinates (approximate for the area), priceRange, and serviceType.
+        STRICT Constraints:
+        1.  **Language:** 100% Hebrew ONLY! Do not use any English in the text or headers.
+        2.  **Contact Info:** NEVER hardcode phone numbers. You MUST import and use our official CTA components:
+            \`import { WhatsAppCTA } from "@/components/whatsapp-cta";\`
+            \`import { BUSINESS_INFO } from "@/lib/data";\`
+            Use \`<WhatsAppCTA cityName="${locationCity}" />\` and buttons with \`href={\`tel:+\${BUSINESS_INFO.phone}\`}\` for regular calls.
+        3.  **Pricing:** NEVER use exact prices (like "250 ILS" or "250 ש"ח"). Only use general statements like "מחירים הוגנים", "מחיר זול" or "הצעת מחיר בטלפון".
+        4.  **Design:** Apply the official dark theme gradient to the HERO section: \`<section className="gradient-trust text-white py-14 md:py-20">\`. Ensure consistency with our premium dark UI, avoiding generic white backgrounds where possible.
+        5.  **No Motorcycles:** We do NOT tow motorcycles (אופנועים). If the query mentions motorcycles, re-frame the page to state we specialize in cars, commercial vehicles, and 4x4s, and CANNOT assist with motorcycles.
+        6.  **SGE Format:** Answer-first placement. Start the page content exactly addressing the query directly and factually (In Hebrew).
+        7.  **RSC (Server Components):** The React component MUST be a Server Component (no 'use client'). You must use \`className\` instead of \`class\`.
+        8.  **Structured Data:** Generate exact \`AutoTowing\` JSON-LD schema. Includes areaServed (${locationCity}), openingHoursSpecification (24/7), geo-coordinates (approximate for the area), priceRange ("$"), and serviceType.
 
         Output must be a valid JSON object with:
         {
@@ -45,7 +52,7 @@ async function buildSGERoute(trendQuery: string, locationSlug: string, locationC
         let text = result.response.text();
         text = text.replace(/```json/g, '').replace(/```/g, '').trim();
         const output = JSON.parse(text);
-        
+
         // Safeguard against LLM using 'class=' instead of 'className='
         if (output.rsc_code) {
             output.rsc_code = output.rsc_code.replace(/ class=/g, ' className=');

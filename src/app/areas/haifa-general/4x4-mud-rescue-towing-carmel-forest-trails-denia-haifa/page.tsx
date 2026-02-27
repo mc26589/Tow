@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
+import { WhatsAppCTA } from '@/components/whatsapp-cta';
+import { BUSINESS_INFO } from '@/lib/data';
+
 
 export const metadata: Metadata = {
   title: 'שירותי חילוץ 4x4 מבוץ וגרירה בשבילי יער הכרמל ליד דניה חיפה | Towing Rescue Haifa',
-  description: 'Towing Rescue Haifa provides 24/7 4x4 mud rescue and towing services for vehicles stuck on Carmel forest trails near Denia, Haifa. Starting from 250 ILS. Fully licensed and insured. Call 050-1234567.',
+  description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!',
   keywords: 'חילוץ 4x4, גרירה 4x4, בוץ, יער הכרמל, דניה חיפה, חילוץ רכב שטח, גרירת רכב שטח, שירותי גרירה חיפה, חילוץ חיפה, Towing Rescue Haifa',
   alternates: {
     canonical: 'https://www.towingrescuehaifa.co.il/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa',
@@ -24,11 +27,11 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "Towing Rescue Haifa",
-    "description": "24/7 4x4 mud rescue and towing services for vehicles stuck on Carmel forest trails near Denia, Haifa, and throughout the Krayot area. Fully licensed and insured.",
+    "name": "גרר מפרץ אקספרס",
+    "description": "גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי.",
     "url": "https://www.towingrescuehaifa.co.il/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa",
-    "telephone": "050-1234567",
-    "priceRange": "250 ILS - 800 ILS",
+    "telephone": "tel:+972549174414",
+    "priceRange": "$",
     "areaServed": [
       {
         "@type": "Place",
@@ -66,13 +69,7 @@ export default function Page() {
       "latitude": 32.778,
       "longitude": 35.000
     },
-    "serviceType": [
-      "4x4 mud rescue towing",
-      "off-road recovery",
-      "vehicle towing",
-      "emergency towing",
-      "Carmel forest towing"
-    ],
+    "serviceType": ["גרירת רכבים", "חילוץ דרך", "שירותי גרירה", "חילוץ 4x4"],
     "image": "https://www.towingrescuehaifa.co.il/images/4x4-rescue-carmel.jpg"
   };
 
@@ -83,61 +80,45 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main className="min-h-screen bg-gray-50 text-gray-800">
-        <section className="container mx-auto p-4 py-8">
-          <h1 className="text-4xl font-extrabold text-center mb-8 text-blue-800">
-            שירותי חילוץ 4x4 מבוץ וגרירה בשבילי יער הכרמל ליד דניה חיפה
+        
+      <section className="gradient-trust text-white py-14 md:py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+            שירות יעיל ומהיר באזורך
           </h1>
-
-          <p className="text-lg mb-4 leading-relaxed">
-            כן, <strong className="font-semibold text-blue-700">Towing Rescue Haifa</strong> מספקת שירותי חילוץ 4x4 מבוץ וגרירה 24/7 לרכבים שנתקעו בשבילי יער הכרמל, כולל אזורים סמוכים לדניה חיפה, ובכל רחבי חיפה והקריות. אנו מומחים בחילוץ רכבי שטח מכל מצב, בין אם מדובר בבוץ עמוק, חול טובעני או שטח טרשי קשה, ומבטיחים הגעה מהירה וטיפול מקצועי.
+          <p className="mt-2 text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+            שירותי גרירה וחילוץ מקצועיים 24/7. הגעה מהירה, שירות אמין ומחירים הוגנים לכל תושבי חיפה והקריות.
           </p>
-
-          <div className="bg-blue-50 p-6 rounded-lg shadow-md mb-8 border-l-4 border-blue-500">
-            <h2 className="text-2xl font-bold mb-3 text-blue-800">שקיפות מלאה במחיר ובשירות</h2>
-            <p className="mb-3 text-gray-700">
-              <strong className="font-semibold">מחיר:</strong> שירותי החילוץ שלנו מתחילים מ-
-              <span className="font-bold text-green-700 text-xl">250 ש"ח</span>, והמחיר הסופי נקבע בהתאם למורכבות החילוץ, סוג הרכב והמיקום המדויק ביער הכרמל. אנו מספקים הצעת מחיר הוגנת ושקופה לפני תחילת העבודה, ללא הפתעות.
-            </p>
-            <p className="mb-3 text-gray-700">
-              <strong className="font-semibold">רישוי וביטוח:</strong> <strong className="font-semibold text-blue-700">Towing Rescue Haifa</strong> היא חברה מורשית ומבוטחת במלואה (רישיון מס' 123456789), מה שמבטיח לכם שקט נפשי וטיפול מקצועי ובטוח ברכבכם ובנוסעים.
-            </p>
-            <p className="mb-3 text-gray-700">
-              <strong className="font-semibold">זמינות:</strong> אנו זמינים 24 שעות ביממה, 7 ימים בשבוע, כולל חגים וסופי שבוע. צוותי החילוץ שלנו ערוכים לצאת לדרך בכל עת, כדי להבטיח שתקבלו עזרה בכל שעה שתזדקקו לה.
-            </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+             <WhatsAppCTA cityName="אזור חיפה" />
+             <a href={`tel:+${BUSINESS_INFO.phone}`} className="flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white rounded-full px-7 py-3.5 font-semibold text-base border border-white/25 hover:bg-white/25 transition-colors w-full sm:w-auto justify-center">
+                📞 התקשרו עכשיו: 054-9174414
+             </a>
           </div>
+        </div>
+      </section>
 
-          <h2 className="text-3xl font-bold mb-5 text-center text-blue-800">למה לבחור ב-Towing Rescue Haifa לחילוץ 4x4 ביער הכרמל?</h2>
-          <ul className="list-disc list-inside mb-8 space-y-3 text-lg text-gray-700">
-            <li>
-              <strong className="font-semibold text-blue-700">ניסיון ומומחיות:</strong> צוות מיומן עם שנים של ניסיון בחילוץ רכבי שטח מכל סוגי התוואי, וציוד חילוץ מתקדם המותאם במיוחד לשטח קשה ובוצי ביער הכרמל.
-            </li>
-            <li>
-              <strong className="font-semibold text-blue-700">תגובה מהירה:</strong> אנו מבינים את הדחיפות שבמצב חירום בשטח ומגיעים במהירות האפשרית לכל נקודה ביער הכרמל, תוך מזעור זמן ההמתנה שלכם.
-            </li>
-            <li>
-              <strong className="font-semibold text-blue-700">שירות אדיב ומקצועי:</strong> אנו מתחייבים ליחס אישי, אדיב ומקצועי, מהרגע הראשון של יצירת הקשר ועד לסיום החילוץ המוצלח.
-            </li>
-            <li>
-              <strong className="font-semibold text-blue-700">כיסוי נרחב:</strong> שירותינו מכסים את כל אזור חיפה, הקריות, ודגש מיוחד על שבילי יער הכרמל, כולל שבילים נידחים וקשים לגישה.
-            </li>
-            <li>
-              <strong className="font-semibold text-blue-700">בטיחות מעל הכל:</strong> אנו מקפידים על נהלי בטיחות מחמירים בכל פעולת חילוץ, כדי להבטיח את שלומכם ושלמות רכבכם.
-            </li>
+      <section className="container mx-auto p-4 py-12">
+        <p className="text-lg mb-4 leading-relaxed font-rubik text-gray-800">
+          נתקעתם עם הרכב? אנחנו ב-<strong className="font-semibold">גרר מפרץ אקספרס</strong> מבינים את המשמעות של מצב חירום. אנו מספקים מענה מהיר ומקצועי למגוון רחב של רכבים, כולל רכבים פרטיים, מסחריים וג'יפים, אך <strong className="font-semibold text-red-600">איננו מספקים שירותי גרירה לאופנועים</strong>.
+        </p>
+
+        <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm mb-6">
+          <h2 className="text-2xl font-bold mb-4 text-blue-800">למה לבחור בנו?</h2>
+          <ul className="list-disc list-inside space-y-3 text-gray-700">
+            <li><strong className="font-semibold">זמינות מלאה:</strong> אנחנו ערוכים לכל קריאה, 24 שעות ביממה, 7 ימים בשבוע.</li>
+            <li><strong className="font-semibold">מחירים הוגנים וזולים:</strong> אנו מבטיחים הצעת מחיר הוגנת ושקופה בטלפון, ללא הפתעות וטריקים מסחריים.</li>
+            <li><strong className="font-semibold">מקצועיות ואמינות:</strong> צוות גוררים מוסמך בעל ניסיון רב, שידאג לרכב שלכם בשיא העדינות והבטיחות של רישיון וביטוח מקיף.</li>
+            <li><strong className="font-semibold">הגעה מהירה:</strong> ממוקמים בלב חיפה ומגיעים במהירות לכל פינה בעיר ובקריות.</li>
           </ul>
+        </div>
+        
+        <p className="text-lg leading-relaxed text-gray-800">
+          צרו קשר עוד היום בוואטסאפ או בשיחה ישירה, ונהג גרירה מקצועי יהיה בדרך אליכם!
+        </p>
+      </section>
 
-          <div className="bg-blue-600 text-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-3xl font-bold mb-3">נתקעתם בשטח? אל תחכו!</h3>
-            <p className="mb-4 text-xl">
-              התקשרו אלינו מיד לקבלת עזרה מהירה ומקצועית בשבילי יער הכרמל ובסביבת דניה חיפה.
-            </p>
-            <p className="text-5xl font-extrabold mb-2">
-              <span className="font-semibold">Towing Rescue Haifa:</span> <a href="tel:0501234567" className="hover:underline">050-1234567</a>
-            </p>
-            <p className="text-lg mt-3">
-              <strong className="font-semibold">אזור שירות:</strong> חיפה והקריות, כולל שבילי יער הכרמל, דניה, וכל האזורים הסמוכים.
-            </p>
-          </div>
-        </section>
       </main>
     </>
   );

@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
+import { WhatsAppCTA } from '@/components/whatsapp-cta';
+import { BUSINESS_INFO } from '@/lib/data';
+
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "AutoTowing",
-  "name": "Towing Rescue Haifa",
-  "description": "Professional towing services for junk cars, non-running vehicles, and emergency roadside assistance in Haifa, Kiryat Motzkin, and the Krayot region. Immediate pickup and transport solutions.",
+  "name": "גרר מפרץ אקספרס",
+  "description": "גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי.",
   "url": "https://www.towingrescuehaifa.co.il/cash-for-junk-cars-for-parts-kiryat-motzkin-immediate-pickup",
-  "telephone": "tel:+972501234567",
-  "priceRange": "250 ILS+",
+  "telephone": "tel:+972549174414",
+  "priceRange": "$",
   "areaServed": [
     {
       "@type": "Place",
@@ -55,13 +58,7 @@ const jsonLd = {
     "latitude": "32.8183",
     "longitude": "35.0000"
   },
-  "serviceType": [
-    "Towing Service",
-    "Junk Car Removal",
-    "Vehicle Recovery",
-    "Roadside Assistance",
-    "Emergency Towing"
-  ],
+  "serviceType": ["גרירת רכבים", "חילוץ דרך", "שירותי גרירה", "חילוץ 4x4"],
   "image": "https://www.towingrescuehaifa.co.il/images/towing-truck.jpg",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -72,7 +69,7 @@ const jsonLd = {
         "itemOffered": {
           "@type": "Service",
           "name": "Junk Car Towing",
-          "description": "Towing and removal of non-running or junk cars for parts or scrap.",
+          "description": "גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי.",
           "areaServed": {
             "@type": "Place",
             "name": "Kiryat Motzkin"
@@ -89,7 +86,7 @@ const jsonLd = {
         "itemOffered": {
           "@type": "Service",
           "name": "Emergency Towing",
-          "description": "24/7 emergency towing and rescue services.",
+          "description": "גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי.",
           "areaServed": {
             "@type": "Place",
             "name": "Haifa and Krayot"
@@ -101,7 +98,7 @@ const jsonLd = {
           "minPrice": 0,
           "maxPrice": 0,
           "valueAddedTaxIncluded": false,
-          "description": "Zero-cost under specific emergency conditions."
+          "description": "גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי."
         }
       }
     ]
@@ -145,63 +142,47 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <header className="bg-blue-800 text-white py-6">
+      
+      
+      <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
             גרירת רכבי גרוטאות לחלפים בקריית מוצקין: פתרונות איסוף מיידי
           </h1>
-          <p className="mt-2 text-xl">
-            Towing Rescue Haifa: שירותי גרירה מקצועיים 24/7 באזור חיפה והקריות
+          <p className="mt-2 text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+            שירותי גרירה וחילוץ מקצועיים 24/7. הגעה מהירה, שירות אמין ומחירים הוגנים לכל תושבי חיפה והקריות.
           </p>
-        </div>
-      </header>
-
-      <section className="container mx-auto p-4 py-8">
-        <p className="text-lg mb-4 leading-relaxed">
-          While <strong className="font-semibold">Towing Rescue Haifa</strong> specializes in zero-cost emergency towing and rescue services for vehicles across Haifa and the Krayot region, including <strong className="font-semibold">Kiryat Motzkin</strong>, we do not directly purchase junk cars for parts. However, if you are looking to sell a junk car for parts in Kiryat Motzkin and require <strong className="font-semibold">immediate pickup</strong> and transport to a scrap yard, a recycling facility, or a buyer, we provide prompt, professional, and reliable towing services.
-        </p>
-        <p className="text-lg mb-4 leading-relaxed">
-          Our expert team is equipped to handle non-running vehicles and junk cars, ensuring safe and efficient removal from your location in Kiryat Motzkin. We understand the urgency of clearing unwanted vehicles, and our services are available <strong className="font-semibold">24/7</strong> to meet your needs.
-        </p>
-
-        <div className="bg-gray-100 p-6 rounded-lg shadow-md mb-6">
-          <h2 className="text-2xl font-bold mb-3 text-blue-700">Why Choose Towing Rescue Haifa for Junk Car Towing?</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
-            <li>
-              <strong className="font-semibold">Immediate Pickup:</strong> We prioritize urgent requests for junk car removal in Kiryat Motzkin and the surrounding Krayot area.
-            </li>
-            <li>
-              <strong className="font-semibold">Transparent Pricing:</strong> Our towing services for junk cars start from <strong className="font-semibold">250 ILS</strong>, with clear quotes provided upfront based on vehicle type and distance. While emergency towing may be zero-cost under specific conditions, general towing services like junk car removal are priced competitively.
-            </li>
-            <li>
-              <strong className="font-semibold">Fully Licensed &amp; Insured:</strong> <strong className="font-semibold">Towing Rescue Haifa</strong> operates with all necessary licenses and comprehensive insurance, giving you peace of mind. Our professional, certified operators ensure your vehicle is handled safely and responsibly.
-            </li>
-            <li>
-              <strong className="font-semibold">24/7 Availability:</strong> Day or night, weekday or weekend, our team is ready to assist you with your towing needs.
-            </li>
-            <li>
-              <strong className="font-semibold">Local Expertise:</strong> Serving <strong className="font-semibold">Haifa and Krayot</strong>, we have in-depth knowledge of the area, ensuring quick response times.
-            </li>
-          </ul>
-        </div>
-
-        <p className="text-lg mb-4 leading-relaxed">
-          Don't let an old, non-functional car take up valuable space. Contact <strong className="font-semibold">Towing Rescue Haifa</strong> today for reliable and efficient towing of your junk car for parts in Kiryat Motzkin. We'll help you clear your property quickly and transport your vehicle to its next destination.
-        </p>
-
-        <div className="bg-blue-700 text-white p-6 rounded-lg text-center">
-          <h3 className="text-2xl font-bold mb-2">Contact Us for Immediate Service!</h3>
-          <p className="text-xl mb-2">
-            <strong className="font-semibold">Towing Rescue Haifa</strong>
-          </p>
-          <p className="text-xl mb-2">
-            Phone: <a href="tel:0501234567" className="underline text-white hover:text-blue-200 transition-colors">050-1234567</a>
-          </p>
-          <p className="text-lg">
-            Serving Haifa, Kiryat Motzkin, and all Krayot areas.
-          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+             <WhatsAppCTA cityName="אזור חיפה" />
+             <a href={`tel:+${BUSINESS_INFO.phone}`} className="flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white rounded-full px-7 py-3.5 font-semibold text-base border border-white/25 hover:bg-white/25 transition-colors w-full sm:w-auto justify-center">
+                📞 התקשרו עכשיו: 054-9174414
+             </a>
+          </div>
         </div>
       </section>
+
+      <section className="container mx-auto p-4 py-12">
+        <p className="text-lg mb-4 leading-relaxed font-rubik text-gray-800">
+          נתקעתם עם הרכב? אנחנו ב-<strong className="font-semibold">גרר מפרץ אקספרס</strong> מבינים את המשמעות של מצב חירום. אנו מספקים מענה מהיר ומקצועי למגוון רחב של רכבים, כולל רכבים פרטיים, מסחריים וג'יפים, אך <strong className="font-semibold text-red-600">איננו מספקים שירותי גרירה לאופנועים</strong>.
+        </p>
+
+        <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm mb-6">
+          <h2 className="text-2xl font-bold mb-4 text-blue-800">למה לבחור בנו?</h2>
+          <ul className="list-disc list-inside space-y-3 text-gray-700">
+            <li><strong className="font-semibold">זמינות מלאה:</strong> אנחנו ערוכים לכל קריאה, 24 שעות ביממה, 7 ימים בשבוע.</li>
+            <li><strong className="font-semibold">מחירים הוגנים וזולים:</strong> אנו מבטיחים הצעת מחיר הוגנת ושקופה בטלפון, ללא הפתעות וטריקים מסחריים.</li>
+            <li><strong className="font-semibold">מקצועיות ואמינות:</strong> צוות גוררים מוסמך בעל ניסיון רב, שידאג לרכב שלכם בשיא העדינות והבטיחות של רישיון וביטוח מקיף.</li>
+            <li><strong className="font-semibold">הגעה מהירה:</strong> ממוקמים בלב חיפה ומגיעים במהירות לכל פינה בעיר ובקריות.</li>
+          </ul>
+        </div>
+        
+        <p className="text-lg leading-relaxed text-gray-800">
+          צרו קשר עוד היום בוואטסאפ או בשיחה ישירה, ונהג גרירה מקצועי יהיה בדרך אליכם!
+        </p>
+      </section>
+
+
     </main>
   );
 }

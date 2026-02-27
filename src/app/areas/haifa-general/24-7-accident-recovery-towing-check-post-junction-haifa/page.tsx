@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
+import { WhatsAppCTA } from '@/components/whatsapp-cta';
+import { BUSINESS_INFO } from '@/lib/data';
+
 
 // Define the JSON-LD schema directly in the component or as a constant
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "AutoTowing",
-  "name": "Towing Rescue Haifa",
+  "name": "גרר מפרץ אקספרס",
   "description": "שירותי גרירת חילוץ תאונות 24/7 בצומת צ'ק פוסט חיפה ובאזור הקריות. זמינות מיידית, שירות מקצועי ואמין.",
-  "telephone": "tel:+972501234567", // Placeholder phone number
+  "telephone": "tel:+972549174414", // Placeholder phone number
   "url": "https://www.towingrescuehaifa.co.il/24-7-accident-recovery-towing-check-post-junction-haifa", // Example URL
-  "priceRange": "250 ILS - 800 ILS",
+  "priceRange": "$",
   "areaServed": [
     {
       "@type": "Place",
@@ -30,12 +33,12 @@ const jsonLd = {
     "latitude": 32.8070, // Approximate for Check Post junction, Haifa
     "longitude": 35.0000  // Approximate for Check Post junction, Haifa
   },
-  "serviceType": ["Accident Recovery Towing", "Emergency Towing", "Roadside Assistance", "Vehicle Recovery"]
+  "serviceType": ["גרירת רכבים", "חילוץ דרך", "שירותי גרירה", "חילוץ 4x4"]
 };
 
 export const metadata: Metadata = {
   title: "גרירת חילוץ תאונות 24/7 צומת צ'ק פוסט חיפה - גרירת חילוץ חיפה",
-  description: "זקוקים לגרירת חילוץ תאונות בצומת צ'ק פוסט בחיפה? אנו מספקים שירות 24/7, מהיר, מקצועי ומבוטח. התקשרו עכשיו!",
+  description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!',
   alternates: {
     canonical: "https://www.towingrescuehaifa.co.il/24-7-accident-recovery-towing-check-post-junction-haifa",
   },
@@ -53,64 +56,44 @@ export default function Page() {
   const companyName = "גרירת חילוץ חיפה"; // Consistent company name
 
   return (
-    <section className="container mx-auto p-4 text-right" dir="rtl">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+    <>
+      <section className="gradient-trust text-white py-14 md:py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+            גרירת חילוץ תאונות 24/7 צומת צ'ק פוסט חיפה - גרירת חילוץ חיפה
+          </h1>
+          <p className="mt-2 text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+            שירותי גרירה וחילוץ מקצועיים 24/7. הגעה מהירה, שירות אמין ומחירים הוגנים לכל תושבי חיפה והקריות.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+             <WhatsAppCTA cityName="אזור חיפה" />
+             <a href={`tel:+${BUSINESS_INFO.phone}`} className="flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white rounded-full px-7 py-3.5 font-semibold text-base border border-white/25 hover:bg-white/25 transition-colors w-full sm:w-auto justify-center">
+                📞 התקשרו עכשיו: 054-9174414
+             </a>
+          </div>
+        </div>
+      </section>
 
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-blue-800">
-        גרירת חילוץ תאונות 24/7 צומת צ'ק פוסט חיפה
-      </h1>
-
-      <p className="text-lg mb-4 leading-relaxed">
-        <strong>כן, אנו מספקים שירותי גרירת חילוץ תאונות 24/7 בצומת צ'ק פוסט בחיפה ובסביבתה המיידית.</strong>
-        {" "}
-        צוות "גרירת חילוץ חיפה" זמין עבורכם בכל שעה, ביום ובלילה, כדי להעניק מענה מהיר ומקצועי לכל אירוע תאונה או תקלה באזור צומת צ'ק פוסט, חיפה והקריות.
-      </p>
-
-      <h2 className="text-2xl font-semibold mb-3 text-blue-700">למה לבחור בנו לחילוץ בצ'ק פוסט?</h2>
-      <ul className="list-disc list-inside mb-6 text-lg leading-relaxed">
-        <li className="mb-2">
-          <strong>זמינות מיידית 24/7:</strong> אנו מבינים שאירועי תאונה אינם מתרחשים בשעות נוחות. לכן, אנו עומדים לרשותכם מסביב לשעון, כולל סופי שבוע וחגים.
-        </li>
-        <li className="mb-2">
-          <strong>מענה מהיר:</strong> מיקומנו האסטרטגי מאפשר לנו להגיע במהירות שיא לצומת צ'ק פוסט ולכל נקודה בחיפה והקריות.
-        </li>
-        <li className="mb-2">
-          <strong>מקצועיות ואמינות:</strong> צוות הגרריסטים שלנו מנוסה ומיומן בטיפול בכל סוגי הרכבים ובכל מצבי התאונה, תוך הקפדה על בטיחות הרכב והנוסעים.
-        </li>
-        <li className="mb-2">
-          <strong>ציוד מתקדם:</strong> אנו משתמשים בציוד גרירה וחילוץ חדיש ומתקדם, המאפשר טיפול יעיל ובטוח גם במקרים מורכבים.
-        </li>
-      </ul>
-
-      <p className="text-lg mb-4 leading-relaxed">
-        בין אם מדובר בתאונה קלה או מורכבת, תקלה מכנית או פנצ'ר, אנו כאן כדי לסייע לכם לחזור לשגרה במהירות ובבטחה.
-      </p>
-
-      <div className="bg-blue-50 border-r-4 border-blue-500 text-blue-700 p-4 mb-6 shadow-md">
-        <h3 className="text-xl font-bold mb-2">פרטי יצירת קשר ושירות:</h3>
-        <p className="text-lg mb-1">
-          <strong>שם החברה:</strong> {companyName}
+      <section className="container mx-auto p-4 py-12">
+        <p className="text-lg mb-4 leading-relaxed font-rubik text-gray-800">
+          נתקעתם עם הרכב? אנחנו ב-<strong className="font-semibold">גרר מפרץ אקספרס</strong> מבינים את המשמעות של מצב חירום. אנו מספקים מענה מהיר ומקצועי למגוון רחב של רכבים, כולל רכבים פרטיים, מסחריים וג'יפים, אך <strong className="font-semibold text-red-600">איננו מספקים שירותי גרירה לאופנועים</strong>.
         </p>
-        <p className="text-lg mb-1">
-          <strong>טלפון לשירות 24/7:</strong> <a href={`tel:+972${phoneNumber.replace(/-/g, '')}`} className="text-blue-600 hover:underline font-semibold">{phoneNumber}</a>
-        </p>
-        <p className="text-lg mb-1">
-          <strong>אזורי שירות:</strong> חיפה והקריות (כולל צומת צ'ק פוסט, נשר, קרית אתא, קרית ביאליק, קרית ים, קרית מוצקין).
-        </p>
-        <p className="text-lg mb-1">
-          <strong>מחיר התחלתי:</strong> החל מ-250 ש"ח (המחיר הסופי ייקבע בהתאם למורכבות האירוע ומרחק הגרירה).
-        </p>
-        <p className="text-lg">
-          <strong>רישוי וביטוח:</strong> אנו חברה מורשית ומבוטחת במלואה, המספקת שירותים בהתאם לכל התקנים הנדרשים.
-        </p>
-      </div>
 
-      <p className="text-lg leading-relaxed">
-        אל תהססו להתקשר אלינו בכל עת. אנו כאן כדי לספק לכם שקט נפשי ופתרון מהיר ויעיל.
-      </p>
-    </section>
+        <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm mb-6">
+          <h2 className="text-2xl font-bold mb-4 text-blue-800">למה לבחור בנו?</h2>
+          <ul className="list-disc list-inside space-y-3 text-gray-700">
+            <li><strong className="font-semibold">זמינות מלאה:</strong> אנחנו ערוכים לכל קריאה, 24 שעות ביממה, 7 ימים בשבוע.</li>
+            <li><strong className="font-semibold">מחירים הוגנים וזולים:</strong> אנו מבטיחים הצעת מחיר הוגנת ושקופה בטלפון, ללא הפתעות וטריקים מסחריים.</li>
+            <li><strong className="font-semibold">מקצועיות ואמינות:</strong> צוות גוררים מוסמך בעל ניסיון רב, שידאג לרכב שלכם בשיא העדינות והבטיחות של רישיון וביטוח מקיף.</li>
+            <li><strong className="font-semibold">הגעה מהירה:</strong> ממוקמים בלב חיפה ומגיעים במהירות לכל פינה בעיר ובקריות.</li>
+          </ul>
+        </div>
+        
+        <p className="text-lg leading-relaxed text-gray-800">
+          צרו קשר עוד היום בוואטסאפ או בשיחה ישירה, ונהג גרירה מקצועי יהיה בדרך אליכם!
+        </p>
+      </section>
+    </>
   );
 }

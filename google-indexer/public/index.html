@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Indexing Automation - Local Tool</title>
+    <style>
+        :root {
+            --bg-color: #0f1115;
+            --surface-color: #1a1d24;
+            --primary-color: #bbb;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-color: #2e3542;
+            --success-color: #10b981;
+            --error-color: #ef4444;
+            --warn-color: #f59e0b;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--text-primary);
+            font-size: 2rem;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .tab-btn:hover:not(.active) {
+            background: var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1rem;
+            font-family: monospace;
+            box-sizing: border-box;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        textarea {
+            height: 250px;
+            resize: vertical;
+            direction: ltr; /* English URLs */
+        }
+
+        input[type="text"]:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .action-bar {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 0.85rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn:disabled {
+            background-color: #3f4451;
+            color: #8c98a7;
+            cursor: not-allowed;
+        }
+
+        .btn-green {
+            background-color: var(--success-color);
+        }
+        
+        .btn-green:hover {
+            background-color: #059669;
+        }
+
+        #log-container {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1rem;
+            height: 250px;
+            overflow-y: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9rem;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .log-entry { margin-bottom: 0.35rem; line-height: 1.4; }
+        .success { color: var(--success-color); }
+        .error { color: var(--error-color); }
+        .info { color: var(--text-secondary); }
+        .warn { color: var(--warn-color); }
+        .highlight { color: #facc15; }
+
+        /* Dashboard Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: right;
+            direction: ltr; /* Data is in english */
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--bg-color);
+            color: var(--text-secondary);
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+
+        .table-container {
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+
+        .badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .badge.INDEXED { background-color: rgba(16, 185, 129, 0.2); color: var(--success-color); }
+        .badge.UNINDEXED { background-color: rgba(239, 68, 68, 0.2); color: var(--error-color); }
+        .badge.CHANGED { background-color: rgba(245, 158, 11, 0.2); color: var(--warn-color); }
+        
+        .url-text {
+            word-break: break-all;
+            max-width: 400px;
+            display: inline-block;
+        }
+
+        .btn-small {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+            width: auto;
+            background-color: #475569;
+        }
+        .btn-small:hover { background-color: #334155; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Google Search Console & Indexing API</h1>
+            <p class="info" style="margin-top:0;">לוח בקרה מתקדם לאינדוקס האתר. כלי מקומי ובשליטה שלך בלבד.</p>
+        </header>
+
+        <div class="card">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('dashboard-tab', event)">📊 GSC Dashboard (בקרה מלאה)</button>
+                <button class="tab-btn" onclick="switchTab('full-site', event)">🚀 אינדוקס מפה מהיר</button>
+                <button class="tab-btn" onclick="switchTab('manual-urls', event)">✏️ הדבקה ידנית</button>
+            </div>
+
+            <!-- Tab: GSC Dashboard -->
+            <div id="dashboard-tab" class="tab-content active">
+                <div class="action-bar" style="direction: ltr;">
+                    <div style="flex-grow: 1;">
+                        <input type="text" id="gsc-sitemap-url" value="https://grar-haifa.vercel.app/google-sitemap.xml" style="margin-bottom: 0;" placeholder="Sitemap URL" />
+                    </div>
+                    <div style="flex-grow: 1;">
+                        <input type="text" id="gsc-site-url" value="https://grar-haifa.vercel.app/" style="margin-bottom: 0;" placeholder="GSC Site Property (e.g. https://grar-haifa.vercel.app/)" />
+                    </div>
+                    <button class="btn" id="btn-load-dashboard" onclick="loadDashboard()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        נתח סטטוס אינדוקס
+                    </button>
+                </div>
+                
+                <div class="action-bar" id="dashboard-actions" style="display:none; justify-content: space-between;">
+                    <div>
+                        <span id="dashboard-stats" class="highlight" style="font-size: 1.1rem; font-weight: bold;"></span>
+                    </div>
+                    <button class="btn btn-green" id="btn-index-all-actionable" onclick="indexActionableURLs()">
+                        🚀 שלח את כל הכתובות ששונו / לא אונדקסו לגוגל
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table id="gsc-table">
+                        <thead>
+                            <tr>
+                                <th>URL</th>
+                                <th>Status</th>
+                                <th>Crawl Date vs Sitemap mod</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="gsc-table-body">
+                            <tr><td colspan="4" style="text-align:center; padding: 2rem;">לחץ על ״נתח סטטוס אינדוקס״ כדי לסרוק את האתר מול גוגל סרצ' קונסול. (זה עלול לקחת כמה דקות לסרוק מעל 200 עמודים)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab: Full Site via Sitemap -->
+            <div id="full-site" class="tab-content">
+                <label>הכנס כתובת מלאה למפת האתר (Sitemap XML)</label>
+                <input type="text" id="sitemap-url" value="https://grar-haifa.vercel.app/google-sitemap.xml" dir="ltr" />
+                <button class="btn btn-green" style="width: 100%;" id="btn-fetch-sitemap" onclick="fetchSitemapAndIndex()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    משוך את כל האתר ומייד שלח דחיפה לאינדוקס (ללא בדיקה)
+                </button>
+            </div>
+
+            <!-- Tab: Manual Specific URLs -->
+            <div id="manual-urls" class="tab-content">
+                <label>הדבק רשימת כתובות URL לאינדוקס בלבד (אחת בכל שורה)</label>
+                <textarea id="urls-input" placeholder="https://grar-haifa.vercel.app/haifa/private-car&#10;https://grar-haifa.vercel.app/haifa/commercial"></textarea>
+                <button class="btn" style="width: 100%;" id="btn-index-manual" onclick="startManualIndexing()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    שלח דחיפה לכתובות אלו
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 style="margin-top:0; color:var(--text-secondary);">יומן פעולות (Live Logs)</h3>
+            <div id="log-container">
+                <div class="log-entry info">ממתין לפעולה...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let dashboardData = []; // Store the data globally for the "Actionable" operation
+
+        function switchTab(tabId, event) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            if(event) event.target.classList.add('active');
+        }
+
+        function appendLog(message, type) {
+            const container = document.getElementById('log-container');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            const time = new Date().toLocaleTimeString('en-US', { hour12: false });
+            entry.innerText = `[${time}] ${message}`;
+            container.appendChild(entry);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        // ============================================
+        // DASHBOARD LOGIC (Search Console API)
+        // ============================================
+        async function loadDashboard() {
+            const sitemapUrl = document.getElementById('gsc-sitemap-url').value.trim();
+            const siteUrl = document.getElementById('gsc-site-url').value.trim();
+            
+            if (!sitemapUrl || !siteUrl) return alert("אנא הזן כתובת sitemap וכתובת נכס חוקיות");
+
+            const btn = document.getElementById('btn-load-dashboard');
+            btn.disabled = true;
+            document.getElementById('gsc-table-body').innerHTML = '<tr><td colspan="4" style="text-align:center;">טוען את מפת האתר מול שרתי גוגל... נא להמתין. פעולה זו עלולה לארוך מספר דקות עקב הגבלות גוגל.</td></tr>';
+            document.getElementById('dashboard-actions').style.display = 'none';
+            dashboardData = [];
+
+            appendLog(`Fetching URLs from ${sitemapUrl}...`, 'highlight');
+
+            try {
+                // 1. Fetch the sitemap to get URLs and LastMods
+                const resSitemap = await fetch('/api/fetch-sitemap', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ sitemapUrl })
+                });
+
+                const dataSitemap = await resSitemap.json();
+                if (!resSitemap.ok) throw new Error(dataSitemap.error || 'Failed to fetch sitemap');
+
+                if (!dataSitemap.urls || dataSitemap.urls.length === 0) {
+                    throw new Error('No URLs found in the sitemap.');
+                }
+
+                appendLog(`Extracted ${dataSitemap.urls.length} URLs. Starting deep inspection...`, 'highlight');
+                
+                // 2. Perform URL inspection with SSE streaming to build the table
+                document.getElementById('gsc-table-body').innerHTML = ''; // clear table
+                
+                const response = await fetch('/api/inspect-urls', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ urls: dataSitemap.urls, siteUrl })
+                });
+
+                if (!response.ok) throw new Error('Failed to start URL inspection');
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder("utf-8");
+
+                let actionableCount = 0;
+                let indexedCount = 0;
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    const chunk = decoder.decode(value, { stream: true });
+                    const lines = chunk.split('\n');
+
+                    lines.forEach(line => {
+                        if (line.startsWith('data: ')) {
+                            try {
+                                const data = JSON.parse(line.substring(6));
+                                
+                                if (data.type === 'completed') {
+                                    appendLog('✅ Inspection complete.', 'success');
+                                    btn.disabled = false;
+                                    document.getElementById('dashboard-actions').style.display = 'flex';
+                                    document.getElementById('dashboard-stats').innerText = `Total: ${dataSitemap.urls.length} | Indexed: ${indexedCount} | Needs Action: ${actionableCount}`;
+                                } else if (data.type === 'success') {
+                                    appendLog(`Inspected: ${data.url}`, 'info');
+                                    
+                                    // Logic to determine state and if action is needed
+                                    let badgeClass = 'UNINDEXED';
+                                    let badgeLabel = data.indexingState || 'UNKNOWN';
+                                    let isActionable = false;
+
+                                    if (badgeLabel === 'INDEXING_STATE_INDEXED') {
+                                        badgeLabel = 'INDEXED';
+                                        badgeClass = 'INDEXED';
+                                        indexedCount++;
+                                    } else {
+                                        isActionable = true;
+                                    }
+
+                                    // Logic: Is lastmod newer than lastCrawlTime?
+                                    let crawlInfo = data.lastCrawlTime ? new Date(data.lastCrawlTime).toLocaleDateString() : 'Never Crawled';
+                                    let modInfo = data.lastmod ? new Date(data.lastmod).toLocaleDateString() : 'No LastMod';
+                                    
+                                    if (data.lastmod && data.lastCrawlTime) {
+                                        if (new Date(data.lastmod) > new Date(data.lastCrawlTime)) {
+                                            isActionable = true;
+                                            if(badgeClass === 'INDEXED') {
+                                                badgeClass = 'CHANGED';
+                                                badgeLabel = 'INDEXED, BUT CHANGED';
+                                                indexedCount--; // remove from purely indexed
+                                            }
+                                        }
+                                    }
+
+                                    if(isActionable) actionableCount++;
+
+                                    // Push to global memory so we can batch trigger them later
+                                    const rowData = { url: data.url, badgeClass, isActionable };
+                                    dashboardData.push(rowData);
+
+                                    // Create HTML row
+                                    const tr = document.createElement('tr');
+                                    tr.innerHTML = `
+                                        <td><span class="url-text" title="${data.url}">${data.url.replace('https://grar-haifa.vercel.app', '') || '/'}</span></td>
+                                        <td><span class="badge ${badgeClass}">${badgeLabel}</span></td>
+                                        <td><span style="color:var(--text-secondary)">Crawl:</span> ${crawlInfo} <br/> <span style="color:var(--text-secondary)">Mod:</span> ${modInfo}</td>
+                                        <td><button class="btn btn-small" onclick="forceIndexSingle('${data.url}', this)">Index Now</button></td>
+                                    `;
+                                    document.getElementById('gsc-table-body').appendChild(tr);
+
+                                } else if (data.type === 'error') {
+                                    appendLog(`${data.message}`, 'error');
+                                }
+                            } catch (e) { }
+                        }
+                    });
+                }
+            } catch (err) {
+                appendLog(`[ERROR] ${err.message}`, 'error');
+                btn.disabled = false;
+            }
+        }
+
+        async function indexActionableURLs() {
+            const urlsToPush = dashboardData.filter(d => d.isActionable).map(d => d.url);
+            if(urlsToPush.length === 0) {
+                return alert("לא נמצאו נתונים לאינדוקס. הכל נראה מעודכן!");
+            }
+
+            if(confirm(`האם לשלוח ${urlsToPush.length} כתובות לאינדוקס עכשיו?`)) {
+                const btn = document.getElementById('btn-index-all-actionable');
+                await executeIndexing(urlsToPush, btn, "🚀 שלח את כל הכתובות ששונו / לא אונדקסו לגוגל");
+            }
+        }
+
+        async function forceIndexSingle(url, btnElement) {
+            await executeIndexing([url], btnElement, "Index Now");
+            btnElement.innerText = "Sent!";
+            btnElement.classList.add("btn-green");
+        }
+
+
+        // ============================================
+        // PUSH INDEXING LOGIC (Using Indexing API)
+        // ============================================
+        async function fetchSitemapAndIndex() {
+            const sitemapUrl = document.getElementById('sitemap-url').value.trim();
+            if (!sitemapUrl) return alert("אנא הזן כתובת sitemap חוקית");
+
+            const btn = document.getElementById('btn-fetch-sitemap');
+            btn.disabled = true;
+            appendLog(`Fetching URLs from ${sitemapUrl}...`, 'highlight');
+
+            try {
+                const res = await fetch('/api/fetch-sitemap', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ sitemapUrl })
+                });
+
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || 'Failed to fetch sitemap');
+
+                if (!data.urls || data.urls.length === 0) {
+                    throw new Error('No URLs found in the sitemap.');
+                }
+
+                // data.urls is an array of objects ({loc, lastmod}), we just need loc strings for push
+                const cleanUrls = data.urls.map(u => u.loc);
+
+                appendLog(`Successfully extracted ${cleanUrls.length} URLs from Sitemap.`, 'highlight');
+                await executeIndexing(cleanUrls, btn, "משוך את כל האתר ומייד שלח דחיפה לאינדוקס (ללא בדיקה)");
+
+            } catch (err) {
+                appendLog(`Error fetching sitemap: ${err.message}`, 'error');
+                btn.disabled = false;
+            }
+        }
+
+        async function startManualIndexing() {
+            const rawUrls = document.getElementById('urls-input').value;
+            const urls = rawUrls.split('\n').map(u => u.trim()).filter(u => u.startsWith('http'));
+            
+            if (urls.length === 0) return alert("אנא הזן כתובות URL חוקיות (חייבות להתחיל ב http או https)");
+
+            const btn = document.getElementById('btn-index-manual');
+            await executeIndexing(urls, btn, "שלח דחיפה לכתובות אלו");
+        }
+
+        async function executeIndexing(urls, buttonElement, originalText) {
+            buttonElement.disabled = true;
+            buttonElement.innerText = "⏳ שולח...";
+
+            try {
+                const response = await fetch('/api/index-urls', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ urls })
+                });
+
+                if (!response.ok) throw new Error('Server encountered an error initializing stream');
+
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder("utf-8");
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    const chunk = decoder.decode(value, { stream: true });
+                    const lines = chunk.split('\n');
+
+                    lines.forEach(line => {
+                        if (line.startsWith('data: ')) {
+                            try {
+                                const data = JSON.parse(line.substring(6));
+                                
+                                if (data.type === 'completed') {
+                                    appendLog('✅ Indexing Push Complete.', 'success');
+                                    buttonElement.disabled = false;
+                                    buttonElement.innerText = originalText;
+                                } else if (data.type === 'success') {
+                                    appendLog(`${data.message}`, 'success');
+                                } else if (data.type === 'error') {
+                                    appendLog(`${data.message}`, 'error');
+                                } else if (data.type === 'info') {
+                                    appendLog(`${data.message}`, 'info');
+                                }
+                            } catch (e) { }
+                        }
+                    });
+                }
+            } catch (err) {
+                appendLog(`[FATAL ERROR] ${err.message}`, 'error');
+                buttonElement.disabled = false;
+                buttonElement.innerText = originalText;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,14 +1,16 @@
 import Script from 'next/script';
+import { WhatsAppCTA } from '@/components/whatsapp-cta';
+import { BUSINESS_INFO } from '@/lib/data';
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "Towing Rescue Haifa",
-    "description": "Affordable flatbed towing and emergency rescue services in Haifa and Krayot, including Route 22. Available 24/7 with transparent pricing starting from 250 ILS.",
+    "name": "גרר מפרץ אקספרס",
+    "description": "גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי.",
     "url": "https://www.towingrescuehaifa.co.il/affordable-flatbed-towing-route-22-krayot-area",
-    "telephone": "050-XXXXXXX",
-    "priceRange": "250 ILS - 600 ILS",
+    "telephone": "tel:+972549174414",
+    "priceRange": "$",
     "areaServed": [
       {
         "@type": "Place",
@@ -48,13 +50,7 @@ export default function Page() {
       "latitude": 32.8200,
       "longitude": 35.0700
     },
-    "serviceType": [
-      "Flatbed Towing",
-      "Emergency Towing",
-      "Roadside Assistance",
-      "Vehicle Recovery",
-      "Motorcycle Towing"
-    ],
+    "serviceType": ["גרירת רכבים", "חילוץ דרך", "שירותי גרירה", "חילוץ 4x4"],
     "hasOffer": {
       "@type": "Offer",
       "itemOffered": {
@@ -91,47 +87,45 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-right">גרר שטוח במחיר נוח כביש 22 אזור הקריות</h1>
-        <div className="bg-white shadow-lg rounded-lg p-6 md:p-8 text-right">
-          <p className="text-lg md:text-xl text-gray-800 mb-4 leading-relaxed">
-            <strong className="text-blue-600">כן, אנו מספקים שירותי גרירה שטוחה במחיר נוח במיוחד לאורך כביש 22 ובכל אזור הקריות.</strong>
-            "Towing Rescue Haifa" מתמחה במתן מענה מהיר, אמין ובטוח לכל צרכי הגרירה שלכם, 24 שעות ביממה, 7 ימים בשבוע.
+      
+      <section className="gradient-trust text-white py-14 md:py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+            שירות יעיל ומהיר באזורך
+          </h1>
+          <p className="mt-2 text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+            שירותי גרירה וחילוץ מקצועיים 24/7. הגעה מהירה, שירות אמין ומחירים הוגנים לכל תושבי חיפה והקריות.
           </p>
-          <p className="text-md md:text-lg text-gray-700 mb-4 leading-relaxed">
-            בין אם נתקעתם עם רכב פרטי, רכב שטח, או אופנוע, צוות המומחים שלנו מצויד בגררים שטוחים חדישים המבטיחים הובלה בטוחה ללא נזקים נוספים.
-            אנו מבינים את הצורך בשירות מהיר ויעיל, במיוחד בכבישים ראשיים כמו כביש 22.
-          </p>
-          <div className="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-4 mb-6 rounded-md">
-            <h2 className="font-semibold text-xl mb-2">שקיפות במחיר ושירות מקצועי:</h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li>
-                <strong className="text-blue-700">מחירים תחרותיים:</strong> שירותי גרירה שטוחה <strong className="text-green-600">החל מ-250 ש"ח</strong>. אנו מתחייבים למחיר הוגן ושקוף ללא הפתעות.
-              </li>
-              <li>
-                <strong className="text-blue-700">רישיון וביטוח מלא:</strong> כחברה מורשית ומבוטחת במלואה, "Towing Rescue Haifa" מבטיחה שקט נפשי ובטיחות מרבית לרכבכם.
-              </li>
-              <li>
-                <strong className="text-blue-700">זמינות 24/7:</strong> אנו זמינים עבורכם בכל שעה, ביום ובלילה, כולל סופי שבוע וחגים.
-              </li>
-              <li>
-                <strong className="text-blue-700">אזור שירות:</strong> חיפה והקריות, כולל כביש 22, כביש 4, כביש 70, וכל היישובים הסמוכים.
-              </li>
-            </ul>
-          </div>
-          <p className="text-md md:text-lg text-gray-700 mb-4 leading-relaxed">
-            לשירות גרירה מהיר, אמין ובמחיר נוח באזור כביש 22 והקריות, צרו קשר עם <strong className="text-blue-600">Towing Rescue Haifa</strong>.
-            אנו כאן כדי לעזור לכם לחזור לדרך בבטחה.
-          </p>
-          <div className="text-center mt-6">
-            <p className="text-xl font-bold text-gray-900 mb-2">התקשרו עכשיו לקבלת שירות מיידי:</p>
-            <a href="tel:050-XXXXXXX" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-2xl transition duration-300 ease-in-out">
-              050-XXXXXXX
-            </a>
-            <p className="text-sm text-gray-600 mt-2">Towing Rescue Haifa - שירותי גרירה וחילוץ בחיפה והקריות</p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+             <WhatsAppCTA cityName="אזור חיפה" />
+             <a href={`tel:+${BUSINESS_INFO.phone}`} className="flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white rounded-full px-7 py-3.5 font-semibold text-base border border-white/25 hover:bg-white/25 transition-colors w-full sm:w-auto justify-center">
+                📞 התקשרו עכשיו: 054-9174414
+             </a>
           </div>
         </div>
       </section>
+
+      <section className="container mx-auto p-4 py-12">
+        <p className="text-lg mb-4 leading-relaxed font-rubik text-gray-800">
+          נתקעתם עם הרכב? אנחנו ב-<strong className="font-semibold">גרר מפרץ אקספרס</strong> מבינים את המשמעות של מצב חירום. אנו מספקים מענה מהיר ומקצועי למגוון רחב של רכבים, כולל רכבים פרטיים, מסחריים וג'יפים, אך <strong className="font-semibold text-red-600">איננו מספקים שירותי גרירה לאופנועים</strong>.
+        </p>
+
+        <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm mb-6">
+          <h2 className="text-2xl font-bold mb-4 text-blue-800">למה לבחור בנו?</h2>
+          <ul className="list-disc list-inside space-y-3 text-gray-700">
+            <li><strong className="font-semibold">זמינות מלאה:</strong> אנחנו ערוכים לכל קריאה, 24 שעות ביממה, 7 ימים בשבוע.</li>
+            <li><strong className="font-semibold">מחירים הוגנים וזולים:</strong> אנו מבטיחים הצעת מחיר הוגנת ושקופה בטלפון, ללא הפתעות וטריקים מסחריים.</li>
+            <li><strong className="font-semibold">מקצועיות ואמינות:</strong> צוות גוררים מוסמך בעל ניסיון רב, שידאג לרכב שלכם בשיא העדינות והבטיחות של רישיון וביטוח מקיף.</li>
+            <li><strong className="font-semibold">הגעה מהירה:</strong> ממוקמים בלב חיפה ומגיעים במהירות לכל פינה בעיר ובקריות.</li>
+          </ul>
+        </div>
+        
+        <p className="text-lg leading-relaxed text-gray-800">
+          צרו קשר עוד היום בוואטסאפ או בשיחה ישירה, ונהג גרירה מקצועי יהיה בדרך אליכם!
+        </p>
+      </section>
+
     </>
   );
 }

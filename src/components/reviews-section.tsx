@@ -33,7 +33,7 @@ function ReviewCard({ review }: { review: Review }) {
                 </div>
                 <Stars rating={review.rating} />
             </div>
-            <p className="text-base font-medium text-slate-700 leading-relaxed">&quot;{review.body}&quot;</p>
+            <p className="text-base font-medium text-slate-700 leading-relaxed">{"\""}{review.body}{"\""}</p>
         </div>
     );
 }

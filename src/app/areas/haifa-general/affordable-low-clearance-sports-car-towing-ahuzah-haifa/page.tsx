@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
+import { WhatsAppCTA } from '@/components/whatsapp-cta';
+import { BUSINESS_INFO } from '@/lib/data';
+
 
 // JSON-LD Schema
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "AutoTowing",
-  "name": "Towing Rescue Haifa",
-  "description": "Affordable and specialized 24/7 towing for low-clearance sports cars in Ahuzah, Haifa, and Krayot. Fully licensed and insured.",
+  "name": "גרר מפרץ אקספרס",
+  "description": "גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי.",
   "url": "https://www.towingrescuehaifa.co.il/affordable-low-clearance-sports-car-towing-ahuzah-haifa",
-  "telephone": "050-1234567",
-  "priceRange": "250 ILS - 800 ILS",
+  "telephone": "tel:+972549174414",
+  "priceRange": "$",
   "areaServed": [
     {
       "@type": "Place",
@@ -42,14 +45,7 @@ const jsonLd = {
     "opens": "00:00",
     "closes": "23:59"
   },
-  "serviceType": [
-    "Low-clearance sports car towing",
-    "Affordable towing",
-    "Emergency towing",
-    "Roadside assistance",
-    "Flatbed towing",
-    "Sports car recovery"
-  ],
+  "serviceType": ["גרירת רכבים", "חילוץ דרך", "שירותי גרירה", "חילוץ 4x4"],
   "image": "https://www.towingrescuehaifa.co.il/images/low-clearance-towing.jpg",
   "address": {
     "@type": "PostalAddress",
@@ -91,37 +87,45 @@ export default function Page() {
           גרירת רכב ספורט נמוך במחיר נוח באחוזה חיפה
         </h1>
 
-        <section className="text-right leading-relaxed">
-          <p className="mb-4">
-            כן, <strong>גרירה חילוץ חיפה</strong> מספקת שירותי גרירה מיוחדים ובמחיר נוח לרכבי ספורט בעלי מרווח גחון נמוך באחוזה, חיפה, ובכל אזור הקריות, 24 שעות ביממה, 7 ימים בשבוע.
+        
+      <section className="gradient-trust text-white py-14 md:py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+            שירות יעיל ומהיר באזורך
+          </h1>
+          <p className="mt-2 text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+            שירותי גרירה וחילוץ מקצועיים 24/7. הגעה מהירה, שירות אמין ומחירים הוגנים לכל תושבי חיפה והקריות.
           </p>
-          <p className="mb-4">
-            אנו מבינים את הרגישות והדרישות הייחודיות של גרירת רכבי ספורט יוקרתיים ונמוכים. הציוד שלנו כולל גרורים שטוחים (Flatbed) עם רמפות נמוכות במיוחד ורצועות קשירה רכות, המבטיחים העמסה ושינוע בטוחים לחלוטין, ללא כל נזק למרכב או למכלולים התחתונים של רכבכם.
-          </p>
-          <h2 className="text-2xl font-semibold mb-3">מחירים שקופים ושירות מקצועי</h2>
-          <p className="mb-4">
-            שירותי הגרירה שלנו לרכבים בעלי מרווח גחון נמוך מתחילים מ-<strong>250 ש"ח</strong>, ומבטיחים תמחור שקוף ותחרותי. אנו מתחייבים למחיר הוגן ללא הפתעות.
-          </p>
-          <h2 className="text-2xl font-semibold mb-3">אמינות, רישוי וביטוח מלא</h2>
-          <p className="mb-4">
-            <strong>גרירה חילוץ חיפה</strong> הינה חברה מורשית ומבוטחת במלואה, מה שמבטיח לכם שקט נפשי וביטחון מלא שרכבכם מטופל על ידי צוות מומחה ואחראי. אנו פועלים ברישיון ועם כיסוי ביטוחי מקיף לכל גרירה.
-          </p>
-          <h2 className="text-2xl font-semibold mb-3">זמינות מיידית באחוזה, חיפה והקריות</h2>
-          <p className="mb-4">
-            לשירות גרירה דחוף לרכב ספורט נמוך באחוזה, חיפה או בכל עיר בקריות, צרו קשר עם <strong>גרירה חילוץ חיפה</strong> בטלפון: <a href="tel:0501234567" className="text-blue-600 hover:underline">050-1234567</a>. אנו זמינים תמיד לספק מענה מהיר ויעיל.
-          </p>
-          <div className="bg-gray-100 p-4 rounded-lg mt-6 text-sm">
-            <p className="mb-1">
-              <strong>שם העסק:</strong> גרירה חילוץ חיפה
-            </p>
-            <p className="mb-1">
-              <strong>טלפון:</strong> <a href="tel:0501234567" className="text-blue-600 hover:underline">050-1234567</a>
-            </p>
-            <p>
-              <strong>אזור שירות:</strong> חיפה והקריות, כולל אחוזה, כרמל, נווה שאנן, קרית ים, קרית מוצקין, קרית ביאליק, קרית אתא.
-            </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+             <WhatsAppCTA cityName="אזור חיפה" />
+             <a href={`tel:+${BUSINESS_INFO.phone}`} className="flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white rounded-full px-7 py-3.5 font-semibold text-base border border-white/25 hover:bg-white/25 transition-colors w-full sm:w-auto justify-center">
+                📞 התקשרו עכשיו: 054-9174414
+             </a>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <section className="container mx-auto p-4 py-12">
+        <p className="text-lg mb-4 leading-relaxed font-rubik text-gray-800">
+          נתקעתם עם הרכב? אנחנו ב-<strong className="font-semibold">גרר מפרץ אקספרס</strong> מבינים את המשמעות של מצב חירום. אנו מספקים מענה מהיר ומקצועי למגוון רחב של רכבים, כולל רכבים פרטיים, מסחריים וג'יפים, אך <strong className="font-semibold text-red-600">איננו מספקים שירותי גרירה לאופנועים</strong>.
+        </p>
+
+        <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm mb-6">
+          <h2 className="text-2xl font-bold mb-4 text-blue-800">למה לבחור בנו?</h2>
+          <ul className="list-disc list-inside space-y-3 text-gray-700">
+            <li><strong className="font-semibold">זמינות מלאה:</strong> אנחנו ערוכים לכל קריאה, 24 שעות ביממה, 7 ימים בשבוע.</li>
+            <li><strong className="font-semibold">מחירים הוגנים וזולים:</strong> אנו מבטיחים הצעת מחיר הוגנת ושקופה בטלפון, ללא הפתעות וטריקים מסחריים.</li>
+            <li><strong className="font-semibold">מקצועיות ואמינות:</strong> צוות גוררים מוסמך בעל ניסיון רב, שידאג לרכב שלכם בשיא העדינות והבטיחות של רישיון וביטוח מקיף.</li>
+            <li><strong className="font-semibold">הגעה מהירה:</strong> ממוקמים בלב חיפה ומגיעים במהירות לכל פינה בעיר ובקריות.</li>
+          </ul>
+        </div>
+        
+        <p className="text-lg leading-relaxed text-gray-800">
+          צרו קשר עוד היום בוואטסאפ או בשיחה ישירה, ונהג גרירה מקצועי יהיה בדרך אליכם!
+        </p>
+      </section>
+
       </main>
     </>
   );
