@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "גרירת חילוץ תאונות 24/7 צומת צ'ק פוסט חיפה - גרירת חילוץ חיפה",
-    description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!'ק פוסט בחיפה? אנו מספקים שירות 24/7, מהיר, מקצועי ומבוטח. התקשרו עכשיו!",
+    description: "גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!",
     url: "https://www.towingrescuehaifa.co.il/24-7-accident-recovery-towing-check-post-junction-haifa",
     siteName: "Towing Rescue Haifa",
     type: "website",
@@ -65,12 +65,12 @@ export default function Page() {
           <p className="mt-2 text-xl text-blue-100 max-w-2xl mx-auto mb-8">
             שירותי גרירה וחילוץ מקצועיים 24/7. הגעה מהירה, שירות אמין ומחירים הוגנים לכל תושבי חיפה והקריות.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-             <WhatsAppCTA cityName="אזור חיפה" />
-             <a href={`tel:+${BUSINESS_INFO.phone}`} className="flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white rounded-full px-7 py-3.5 font-semibold text-base border border-white/25 hover:bg-white/25 transition-colors w-full sm:w-auto justify-center">
-                📞 התקשרו עכשיו: 054-9174414
-             </a>
+            <WhatsAppCTA cityName="אזור חיפה" />
+            <a href={`tel:+${BUSINESS_INFO.phone}`} className="flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white rounded-full px-7 py-3.5 font-semibold text-base border border-white/25 hover:bg-white/25 transition-colors w-full sm:w-auto justify-center">
+              📞 התקשרו עכשיו: 054-9174414
+            </a>
           </div>
         </div>
       </section>
@@ -89,7 +89,7 @@ export default function Page() {
             <li><strong className="font-semibold">הגעה מהירה:</strong> ממוקמים בלב חיפה ומגיעים במהירות לכל פינה בעיר ובקריות.</li>
           </ul>
         </div>
-        
+
         <p className="text-lg leading-relaxed text-gray-800">
           צרו קשר עוד היום בוואטסאפ או בשיחה ישירה, ונהג גרירה מקצועי יהיה בדרך אליכם!
         </p>

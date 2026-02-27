@@ -10,13 +10,13 @@ const COMPANY_NAME = "חילוץ גרירה חיפה";
 
 export const metadata: Metadata = {
   title: H1_TITLE,
-  description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!'ק פוסט חיפה, חיפה והקריות. שירות חירום ללא עלות, רישיון וביטוח מלא. התקשרו ל-${PHONE_NUMBER}.`,
+  description: `גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו! צ'ק פוסט חיפה, חיפה והקריות. שירות חירום ללא עלות, רישיון וביטוח מלא. התקשרו ל-${PHONE_NUMBER}.`,
   alternates: {
     canonical: `https://www.yourdomain.com/${SLUG}`,
   },
   openGraph: {
     title: H1_TITLE,
-    description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!'ק פוסט חיפה, חיפה והקריות. שירות חירום ללא עלות, רישיון וביטוח מלא. התקשרו ל-${PHONE_NUMBER}.`,
+    description: `גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו! צ'ק פוסט חיפה, חיפה והקריות. שירות חירום ללא עלות, רישיון וביטוח מלא. התקשרו ל-${PHONE_NUMBER}.`,
     url: `https://www.yourdomain.com/${SLUG}`,
     siteName: COMPANY_NAME,
     locale: 'he_IL',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: H1_TITLE,
-    description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!'ק פוסט חיפה, חיפה והקריות. שירות חירום ללא עלות, רישיון וביטוח מלא. התקשרו ל-${PHONE_NUMBER}.`,
+    description: `גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו! צ'ק פוסט חיפה, חיפה והקריות. שירות חירום ללא עלות, רישיון וביטוח מלא. התקשרו ל-${PHONE_NUMBER}.`,
   },
 };
 
@@ -74,8 +74,8 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      
-      
+
+
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
@@ -84,12 +84,12 @@ export default function Page() {
           <p className="mt-2 text-xl text-blue-100 max-w-2xl mx-auto mb-8">
             שירותי גרירה וחילוץ מקצועיים 24/7. הגעה מהירה, שירות אמין ומחירים הוגנים לכל תושבי חיפה והקריות.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-             <WhatsAppCTA cityName="אזור חיפה" />
-             <a href={`tel:+${BUSINESS_INFO.phone}`} className="flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white rounded-full px-7 py-3.5 font-semibold text-base border border-white/25 hover:bg-white/25 transition-colors w-full sm:w-auto justify-center">
-                📞 התקשרו עכשיו: 054-9174414
-             </a>
+            <WhatsAppCTA cityName="אזור חיפה" />
+            <a href={`tel:+${BUSINESS_INFO.phone}`} className="flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white rounded-full px-7 py-3.5 font-semibold text-base border border-white/25 hover:bg-white/25 transition-colors w-full sm:w-auto justify-center">
+              📞 התקשרו עכשיו: 054-9174414
+            </a>
           </div>
         </div>
       </section>
@@ -108,7 +108,7 @@ export default function Page() {
             <li><strong className="font-semibold">הגעה מהירה:</strong> ממוקמים בלב חיפה ומגיעים במהירות לכל פינה בעיר ובקריות.</li>
           </ul>
         </div>
-        
+
         <p className="text-lg leading-relaxed text-gray-800">
           צרו קשר עוד היום בוואטסאפ או בשיחה ישירה, ונהג גרירה מקצועי יהיה בדרך אליכם!
         </p>
