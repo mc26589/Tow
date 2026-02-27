@@ -10,11 +10,13 @@ for (const f of files) {
         if (fs.existsSync(filePath)) {
             let content = fs.readFileSync(filePath, 'utf-8');
 
-            // 1. Translate metadata description
-            content = content.replace(/description:\s*'Towing Rescue Haifa provides 24\/7.*?Call 050-1234567.'/, "description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!'");
-            content = content.replace(/description:\s*"זקוקים לגרירת חילוץ תאונות.*?התקשרו עכשיו!"/, "description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!'");
+            // 1. Translate metadata and OpenGraph descriptions
+            content = content.replace(/description:\s*[`'"].*?[`'"]/g, "description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!'");
 
-            // 2. Translate JSON-LD fields
+            // 2. Translate keywords
+            content = content.replace(/keywords:\s*[`'"].*?[`'"]/g, "keywords: 'גרר, גרירה, חילוץ, חיפה, קריות, חילוץ 4x4, שירותי גרירה, גרר מפרץ אקספרס'");
+
+            // 3. Translate JSON-LD fields
             content = content.replace(/"name":\s*"Towing Rescue Haifa"/g, '"name": "גרר מפרץ אקספרס"');
             content = content.replace(/"description":\s*".*?"/g, (match) => {
                 if (match.includes('תאונות') || match.includes('שירותי')) return match; // Already Hebrew

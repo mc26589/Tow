@@ -40,13 +40,13 @@ const jsonLd = {
 
 export const metadata: Metadata = {
   title: 'מזומן עבור רכבי גרוטאות ופינוי רכבים לפירוק בקרית מוצקין | Towing Rescue Haifa',
-  description: 'Towing Rescue Haifa provides cash for junk cars and scrap vehicle removal in Kiryat Motzkin. Get competitive offers, licensed service, and hassle-free pickup. Call 050-1234567.',
+  description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!',
   alternates: {
     canonical: 'https://www.towingrescuehaifa.com/cash-for-junk-cars-scrap-vehicle-removal-kiryat-motzkin',
   },
   openGraph: {
     title: 'מזומן עבור רכבי גרוטאות ופינוי רכבים לפירוק בקרית מוצקין | Towing Rescue Haifa',
-    description: 'Towing Rescue Haifa provides cash for junk cars and scrap vehicle removal in Kiryat Motzkin. Get competitive offers, licensed service, and hassle-free pickup. Call 050-1234567.',
+    description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!',
     url: 'https://www.towingrescuehaifa.com/cash-for-junk-cars-scrap-vehicle-removal-kiryat-motzkin',
     type: 'website',
   },

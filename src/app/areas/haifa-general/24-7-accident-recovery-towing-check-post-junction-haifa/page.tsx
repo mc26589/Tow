@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "גרירת חילוץ תאונות 24/7 צומת צ'ק פוסט חיפה - גרירת חילוץ חיפה",
-    description: "זקוקים לגרירת חילוץ תאונות בצומת צ'ק פוסט בחיפה? אנו מספקים שירות 24/7, מהיר, מקצועי ומבוטח. התקשרו עכשיו!",
+    description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!'ק פוסט בחיפה? אנו מספקים שירות 24/7, מהיר, מקצועי ומבוטח. התקשרו עכשיו!",
     url: "https://www.towingrescuehaifa.co.il/24-7-accident-recovery-towing-check-post-junction-haifa",
     siteName: "Towing Rescue Haifa",
     type: "website",

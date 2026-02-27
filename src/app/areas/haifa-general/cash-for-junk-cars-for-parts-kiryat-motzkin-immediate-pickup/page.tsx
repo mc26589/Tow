@@ -107,13 +107,13 @@ const jsonLd = {
 
 export const metadata: Metadata = {
   title: "גרירת רכבי גרוטאות לחלפים בקריית מוצקין: פתרונות איסוף מיידי | Towing Rescue Haifa",
-  description: "מחפשים איסוף מיידי לרכב גרוטאה לחלפים בקריית מוצקין? Towing Rescue Haifa מספקת שירותי גרירה מקצועיים 24/7. התקשרו עכשיו לפתרון מהיר ויעיל.",
+  description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!',
   alternates: {
     canonical: "https://www.towingrescuehaifa.co.il/cash-for-junk-cars-for-parts-kiryat-motzkin-immediate-pickup",
   },
   openGraph: {
     title: "גרירת רכבי גרוטאות לחלפים בקריית מוצקין: פתרונות איסוף מיידי | Towing Rescue Haifa",
-    description: "מחפשים איסוף מיידי לרכב גרוטאה לחלפים בקריית מוצקין? Towing Rescue Haifa מספקת שירותי גרירה מקצועיים 24/7. התקשרו עכשיו לפתרון מהיר ויעיל.",
+    description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!',
     url: "https://www.towingrescuehaifa.co.il/cash-for-junk-cars-for-parts-kiryat-motzkin-immediate-pickup",
     siteName: "Towing Rescue Haifa",
     images: [
@@ -130,7 +130,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "גרירת רכבי גרוטאות לחלפים בקריית מוצקין: פתרונות איסוף מיידי | Towing Rescue Haifa",
-    description: "מחפשים איסוף מיידי לרכב גרוטאה לחלפים בקריית מוצקין? Towing Rescue Haifa מספקת שירותי גרירה מקצועיים 24/7. התקשרו עכשיו לפתרון מהיר ויעיל.",
+    description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!',
     images: ["https://www.towingrescuehaifa.co.il/images/twitter-image.jpg"],
   },
 };

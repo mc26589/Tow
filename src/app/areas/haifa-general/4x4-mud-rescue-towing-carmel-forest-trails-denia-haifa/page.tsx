@@ -6,13 +6,13 @@ import { BUSINESS_INFO } from '@/lib/data';
 export const metadata: Metadata = {
   title: 'שירותי חילוץ 4x4 מבוץ וגרירה בשבילי יער הכרמל ליד דניה חיפה | Towing Rescue Haifa',
   description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!',
-  keywords: 'חילוץ 4x4, גרירה 4x4, בוץ, יער הכרמל, דניה חיפה, חילוץ רכב שטח, גרירת רכב שטח, שירותי גרירה חיפה, חילוץ חיפה, Towing Rescue Haifa',
+  keywords: 'גרר, גרירה, חילוץ, חיפה, קריות, חילוץ 4x4, שירותי גרירה, גרר מפרץ אקספרס',
   alternates: {
     canonical: 'https://www.towingrescuehaifa.co.il/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa',
   },
   openGraph: {
     title: 'שירותי חילוץ 4x4 מבוץ וגרירה בשבילי יער הכרמל ליד דניה חיפה | Towing Rescue Haifa',
-    description: 'Towing Rescue Haifa provides 24/7 4x4 mud rescue and towing services for vehicles stuck on Carmel forest trails near Denia, Haifa. Starting from 250 ILS. Fully licensed and insured. Call 050-1234567.',
+    description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!',
     url: 'https://www.towingrescuehaifa.co.il/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa',
     images: [
       {
