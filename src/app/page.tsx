@@ -3,11 +3,15 @@ import { CityVehicleGrid } from "@/components/city-vehicle-grid";
 import { ReviewsSection } from "@/components/reviews-section";
 import { JsonLd } from "@/components/json-ld";
 import { getWhatsAppLink, BUSINESS_INFO } from "@/lib/data";
+import { FAQSection } from "@/components/faq-section";
+import { generateFAQs } from "@/lib/seo-content";
 
 export default function HomePage() {
+    const homeFaqs = generateFAQs("חיפה", "רכבים");
+
     return (
         <>
-            <JsonLd isHomePage={true} />
+            <JsonLd isHomePage={true} faqs={homeFaqs} />
 
             {/* ============================================
           HERO SECTION
@@ -103,6 +107,11 @@ export default function HomePage() {
           ABOUT / VALUE PROPOSITIONS
           ============================================ */}
             <AboutSection />
+
+            {/* ============================================
+          DYNAMIC FAQS (SEO)
+          ============================================ */}
+            <FAQSection faqs={homeFaqs} city="חיפה" vehicle="רכבים" />
 
             {/* ============================================
           REVIEWS

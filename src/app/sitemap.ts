@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { supabase } from '@/lib/supabase';
 import { CITIES, VEHICLES } from '@/lib/data';
+import { GUIDES } from '@/lib/guides';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 3600; // Revalidate every hour
@@ -38,7 +39,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         }
     }
 
-    // 3. Define core static routes
+    // 3. Guides - Index and Individual Articles
+    const guideUrls: MetadataRoute.Sitemap = [
+        {
+            url: `${baseUrl}/guides`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.7,
+        },
+        ...GUIDES.map((guide) => ({
+            url: `${baseUrl}/guides/${guide.slug}`,
+            lastModified: new Date(guide.publishDate),
+            changeFrequency: 'monthly' as const,
+            priority: 0.6,
+        }))
+    ];
+
+    // 4. Define core static routes
     const staticRoutes: MetadataRoute.Sitemap = [
         {
             url: baseUrl,
@@ -46,7 +63,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: 'daily',
             priority: 1,
         },
+        {
+            url: `${baseUrl}/about`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.5,
+        },
     ];
 
-    return [...staticRoutes, ...cityVehicleUrls, ...dynamicUrls];
+    return [...staticRoutes, ...cityVehicleUrls, ...guideUrls, ...dynamicUrls];
 }

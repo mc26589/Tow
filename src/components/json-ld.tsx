@@ -19,7 +19,7 @@ interface JsonLdProps {
 }
 
 export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isHomePage, guide }: JsonLdProps) {
-    const baseUrl = "https://grar-haifa.vercel.app";
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://grar-haifa.vercel.app";
 
     const person = {
         "@context": "https://schema.org",
