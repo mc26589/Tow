@@ -2,31 +2,6 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 import Script from "next/script";
 
-// Mock imports for demonstration purposes, in a real app these would be defined elsewhere
-// Ensure these match the actual structure of your imported components/data
-const BUSINESS_INFO = {
-  phone: "0501234567", // Example phone number
-  name: "גרר חיפה והקריות",
-  email: "info@example.com",
-  address: "חיפה, ישראל",
-  // Add any other relevant business information here
-};
-
-const WhatsAppCTA = ({ cityName }) => (
-  <a
-    href={`https://wa.me/${BUSINESS_INFO.phone}?text=אני%20צריך%20שירות%20גרירה%20ב${cityName}`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out flex items-center justify-center gap-2"
-  >
-    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-      {/* WhatsApp icon SVG path */}
-      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.2 22.04L7.59 20.6C9.06 21.47 10.77 21.91 12.5 21.91C17.96 21.91 22.41 17.46 22.41 12C22.41 6.54 17.96 2 12.04 2ZM17.15 16.45C16.92 16.86 15.72 17.44 15.35 17.5C14.98 17.57 14.75 17.6 12.1 16.5C9.46 15.4 7.73 12.6 7.6 12.4C7.47 12.2 7.36 12.07 7.6 11.8C7.84 11.53 8.13 11.44 8.29 11.27C8.46 11.1 8.56 10.97 8.69 10.7C8.83 10.43 8.89 10.3 8.98 10.1C9.07 9.9 9.16 9.8 9.29 9.53C9.42 9.26 9.36 9.13 9.26 9.03C9.16 8.93 8.92 8.86 8.79 8.8C8.66 8.73 8.53 8.7 8.4 8.7C8.27 8.7 8.07 8.7 7.87 8.7C7.67 8.7 7.4 8.77 7.16 9.03C6.92 9.29 6.2 9.97 6.2 11.3C6.2 12.63 7.19 13.9 7.33 14.1C7.47 14.3 9.2 17.03 11.9 18.13C14.1 19.03 14.5 18.9 15.03 18.87C15.56 18.84 16.63 18.2 16.86 17.5C17.09 16.8 17.09 16.6 17.03 16.5C16.98 16.4 17.15 16.45 17.15 16.45Z" />
-    </svg>
-    <span>שלח הודעה בוואטסאפ</span>
-  </a>
-);
-// End mock imports
 
 export default function Page() {
   // JSON-LD schema
