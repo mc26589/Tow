@@ -1,6 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { createClient } from "@supabase/supabase-js";
 import nodemailer from "nodemailer";
+import { chromium } from "playwright";
 import * as dotenv from 'dotenv';
 
 dotenv.config({ path: '.env.local' });
@@ -22,7 +23,7 @@ if (!GEMINI_API_KEY || !SUPABASE_URL || !SUPABASE_KEY) {
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-// Default nodemailer transporter (you'll need to configure this with real credentials in production)
+// Default nodemailer transporter
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -75,8 +76,9 @@ async function findLocalGarages(previouslyContacted: string[]) {
   Your goal is to find exactly 5 real auto repair shops (מוסכים) located in the Haifa and Krayot area (חיפה והקריות).
   ${skipCondition}
   
-  For each garage, try your best to find a valid public email address and phone number.
-  If you cannot find an email, try to guess or leave it empty, but prioritize garages that have visible contact info online.
+  For each garage, try your best to find a valid public email address, phone number, and a WEBSITE URL (אתר אינטרנט).
+  If you cannot find an email or website, try to guess or leave it empty, but prioritize garages that have visible contact info online.
+  IMPORTANT: The website must be a valid http/https URL if it exists, otherwise leave it empty.
   
   Please return a JSON array (no markdown block, just raw JSON) containing exactly 5 objects with this format:
   [
@@ -85,6 +87,7 @@ async function findLocalGarages(previouslyContacted: string[]) {
       "email": "email@example.com",
       "phone": "04-1234567",
       "address": "כתובת המוסך בחיפה/קריות",
+      "website": "https://www.example.co.il",
       "reason": "Why this garage is a good fit"
     }
   ]
@@ -103,6 +106,56 @@ async function findLocalGarages(previouslyContacted: string[]) {
         console.error("Error generating garages from Gemini:", error);
         return [];
     }
+}
+
+async function sendWebsiteMessage(url: string, garageName: string): Promise<boolean> {
+    if (!url || !url.startsWith("http")) return false;
+
+    console.log(`Attempting to send message via website for ${garageName} at ${url}...`);
+    const browser = await chromium.launch({ headless: true });
+    const context = await browser.newContext();
+    const page = await context.newPage();
+
+    let success = false;
+    try {
+        await page.goto(url, { waitUntil: 'load', timeout: 30000 });
+
+        // Basic heuristic to find contact page if we are not on one
+        const contactLinks = await page.$$("a:has-text('צור קשר'), a:has-text('contact'), a[href*='contact']");
+        if (contactLinks.length > 0) {
+            await contactLinks[0].click();
+            await page.waitForLoadState('load');
+        }
+
+        const message = "שלום מצוות תכנון מוסכים (הודעה אוטומטית לבדיקה).\nאני מאיר מגרר חיפה.\nאנו מציעים שירותי גרירה אמינים, זמינים וזולים באזור חיפה והקריות. נשמח לשתף פעולה ולספק שירותי גרירה ללקוחות המוסך שלכם כשנדרש.\nלשמירת קשר והזמנות מהירות: 054-9174414 | grar-haifa.vercel.app\nנשמח לשמוע מכם!";
+
+        // Attempt to fill forms
+        const nameInputs = await page.$$("input[name*='name'], input[placeholder*='שם'], input[id*='name']");
+        const phoneInputs = await page.$$("input[name*='phone'], input[name*='tel'], input[placeholder*='טלפון'], input[id*='phone']");
+        const emailInputs = await page.$$("input[name*='email'], input[placeholder*='מייל'], input[placeholder*='דוא\"ל'], input[type='email']");
+        const messageInputs = await page.$$("textarea, input[name*='message'], input[placeholder*='הודעה']");
+        const submitButtons = await page.$$("button[type='submit'], input[type='submit'], button:has-text('שלח'), button:has-text('send')");
+
+        if (nameInputs.length > 0 && messageInputs.length > 0 && submitButtons.length > 0) {
+            if (nameInputs[0]) await nameInputs[0].fill("מאיר - גרר חיפה");
+            if (phoneInputs.length > 0 && phoneInputs[0]) await phoneInputs[0].fill("054-9174414");
+            if (emailInputs.length > 0 && emailInputs[0]) await emailInputs[0].fill(EMAIL_USER || "mocohen2025@gmail.com");
+            if (messageInputs[0]) await messageInputs[0].fill(message);
+
+            // Uncomment the next line to actually click submit!
+            // await submitButtons[0].click();
+            console.log(`[DRY RUN] Would click submit on ${url} for ${garageName}`);
+            success = true;
+        } else {
+            console.log(`Could not find a valid contact form on ${url}`);
+        }
+    } catch (error) {
+        console.error(`Failed to automate website for ${garageName}:`, error);
+    } finally {
+        await browser.close();
+    }
+
+    return success;
 }
 
 async function sendEmailOffer(garage: { name: string; email: string }) {
@@ -163,19 +216,31 @@ async function runGarageMarketing() {
 
     console.log(`Found ${newGarages.length} new garages to contact:`);
 
-    for (const garage of newGarages) {
-        console.log(`- ${garage.name} (${garage.email || 'No email'})`);
+    for (const garage of newGarages as any[]) {
+        console.log(`- ${garage.name} (Email: ${garage.email || 'None'}, Web: ${garage.website || 'None'})`);
 
-        // 3. Send email 
-        let emailSent = false;
-        if (garage.email && garage.email !== "null" && garage.email !== "undefined" && garage.email !== "לא ידוע" && garage.email !== "אין") {
-            emailSent = await sendEmailOffer(garage);
-        } else {
-            console.log(`Skipping email for ${garage.name} (No valid email found). Attempting to log anyway as contacted.`);
+        let contacted = false;
+        let method = "";
+
+        // 3a. Try Website Contact Form first
+        if (garage.website && garage.website !== "null" && garage.website !== "undefined") {
+            contacted = await sendWebsiteMessage(garage.website, garage.name);
+            if (contacted) method = "Website Form";
+        }
+
+        // 3b. Fallback to Email if website form failed or didn't exist
+        if (!contacted && garage.email && garage.email !== "null" && garage.email !== "undefined" && garage.email !== "לא ידוע" && garage.email !== "אין") {
+            contacted = await sendEmailOffer(garage);
+            if (contacted) method = "Email";
+        }
+
+        if (!contacted) {
+            console.log(`Could not contact ${garage.name} via website or email. Logging anyway.`);
+            method = "None / Manual";
         }
 
         // 4. Log to Supabase
-        garage.notes = emailSent ? "Automated email sent successfully." : "Contacted via another method or missing email.";
+        garage.notes = `Contacted via: ${method}`;
         await logContactedGarage(garage);
     }
 
