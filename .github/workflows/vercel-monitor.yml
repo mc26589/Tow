@@ -1,0 +1,29 @@
+name: Daily Vercel Monitor
+
+on:
+  schedule:
+    - cron: '0 5 * * *' # Runs daily at 05:00 UTC (~07:00 Israel time)
+  workflow_dispatch:
+
+jobs:
+  run-monitor-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Vercel Monitor Agent
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: npx tsx scripts/agent-monitor.ts
