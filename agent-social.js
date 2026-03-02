@@ -1,0 +1,1 @@
+const fs = require('fs'); const env = fs.readFileSync('.env.local', 'utf8').split('\n').forEach(line => { const parts = line.split('='); if(parts.length >= 2) process.env[parts[0].trim()] = parts.slice(1).join('=').trim(); }); require('child_process').execSync('npx tsx scripts/agent-social.ts', {stdio: 'inherit'});
