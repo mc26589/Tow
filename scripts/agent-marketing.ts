@@ -142,9 +142,9 @@ async function sendWebsiteMessage(url: string, garageName: string): Promise<bool
             if (emailInputs.length > 0 && emailInputs[0]) await emailInputs[0].fill(EMAIL_USER || "mocohen2025@gmail.com");
             if (messageInputs[0]) await messageInputs[0].fill(message);
 
-            // Uncomment the next line to actually click submit!
-            // await submitButtons[0].click();
-            console.log(`[DRY RUN] Would click submit on ${url} for ${garageName}`);
+            // Click the submit button on the form
+            await submitButtons[0].click();
+            console.log(`Successfully submitted form on ${url} for ${garageName}`);
             success = true;
         } else {
             console.log(`Could not find a valid contact form on ${url}`);
