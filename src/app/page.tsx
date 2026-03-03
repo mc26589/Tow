@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/json-ld";
 import { getWhatsAppLink, BUSINESS_INFO } from "@/lib/data";
 import { FAQSection } from "@/components/faq-section";
 import { generateFAQs } from "@/lib/seo-content";
+import TowingCalculator from "@/components/TowingCalculator";
 
 export default function HomePage() {
     const homeFaqs = generateFAQs("חיפה", "רכבים");
@@ -12,6 +13,38 @@ export default function HomePage() {
     return (
         <>
             <JsonLd isHomePage={true} faqs={homeFaqs} />
+
+            {/* Calculator SEO — WebApplication structured data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebApplication",
+                        "name": "מחשבון מחיר גרירה - גרר מפרץ אקספרס",
+                        "description": "מחשבון אונליין חינמי להערכת מחיר גרירת רכב בישראל. מבוסס על בינה מלאכותית (AI) עם חישוב מרחק, סוג רכב, ומורכבות הגרירה.",
+                        "url": "https://grar-haifa.vercel.app/#calculator",
+                        "applicationCategory": "UtilityApplication",
+                        "operatingSystem": "All",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "0",
+                            "priceCurrency": "ILS",
+                            "description": "שימוש חינמי במחשבון"
+                        },
+                        "provider": {
+                            "@type": "LocalBusiness",
+                            "name": "גרר מפרץ אקספרס",
+                            "telephone": "+972533391788",
+                            "areaServed": {
+                                "@type": "City",
+                                "name": "חיפה"
+                            }
+                        },
+                        "inLanguage": "he"
+                    }),
+                }}
+            />
 
             {/* ============================================
           HERO SECTION
@@ -95,6 +128,15 @@ export default function HomePage() {
                             <span>⚡</span> 30 דקות ממוצע
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* ============================================
+          TOWING CALCULATOR SECTION
+          ============================================ */}
+            <section id="calculator" className="py-16 bg-slate-50 scroll-mt-20">
+                <div className="max-w-4xl mx-auto px-4">
+                    <TowingCalculator />
                 </div>
             </section>
 

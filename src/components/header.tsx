@@ -27,6 +27,9 @@ export function Header() {
                     <Link href="/about" className="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
                         אודות
                     </Link>
+                    <Link href="/#calculator" className="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
+                        🧮 מחשבון גרירה
+                    </Link>
                     <Link href="/guides" className="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
                         מדריכים וטיפים
                     </Link>
