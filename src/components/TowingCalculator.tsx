@@ -65,15 +65,32 @@ export default function TowingCalculator() {
 
     const handleWhatsAppOrder = () => {
         const vehicleLabel = vehicleTypeLabels[vehicleType] || vehicleType;
-        const message =
-            `שלום, אשמח להזמין שירות גרר 🚛\n` +
-            `מאיפה: ${fromLocation}\n` +
-            `לאן: ${toLocation}\n` +
-            `סוג רכב: ${vehicleLabel}\n` +
-            `הערכת מחיר מהמחשבון: ${estimatedPrice}\n\n` +
-            `https://grar-haifa.vercel.app/`;
+        const locationLabels: Record<string, string> = {
+            open: "שטח פתוח / רחוב",
+            underground: "חניון מקורה / תת-קרקעי",
+            highway: "כביש מהיר",
+            offroad: "שטח חולי / בוץ (חילוץ)",
+        };
+        const locationLabel = locationLabels[locationType] || locationType;
+        const accessLabel = access === "true" ? "גישה נוחה" : "גישה חסומה / בעייתית";
+        const frontLabel = frontWheels === "true" ? "מסתובבים" : "נעולים / חסרים";
+        const rearLabel = rearWheels === "true" ? "מסתובבים" : "נעולים / חסרים";
 
-        const whatsappUrl = `https://wa.me/972533391788?text=${encodeURIComponent(message)}`;
+        const message =
+            `שלום, אשמח לקבל הצעת מחיר לגרירה 🚛\n` +
+            `━━━━━━━━━━━━━━━\n` +
+            `📍 מאיפה: ${fromLocation}\n` +
+            `📍 לאן: ${toLocation}\n` +
+            `🚗 סוג רכב: ${vehicleLabel}\n` +
+            `📌 סוג מקום: ${locationLabel}\n` +
+            `🔑 גישה לגרר: ${accessLabel}\n` +
+            `⚙️ גלגלים קדמיים: ${frontLabel}\n` +
+            `⚙️ גלגלים אחוריים: ${rearLabel}\n` +
+            `━━━━━━━━━━━━━━━\n` +
+            `💰 הערכת מחיר מהמחשבון: ${estimatedPrice}\n\n` +
+            `🔗 https://grar-haifa.vercel.app/`;
+
+        const whatsappUrl = `https://wa.me/972549174414?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, "_blank");
     };
 
