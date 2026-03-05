@@ -1,24 +1,7 @@
 import { Metadata } from 'next';
 
-// --- Placeholder for external components/data for RSC validity ---
-// In a real project, these would be imported from their respective paths.
-const BUSINESS_INFO = {
-  phone: "0501234567",
-  email: "info@example.com",
-  whatsappNumber: "972501234567"
-};
-
-const WhatsAppCTA = ({ cityName }: { cityName: string }) => (
-  <a
-    href={`https://wa.me/${BUSINESS_INFO.whatsappNumber}`}
-    className="bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors shadow-lg"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    שלחו וואטסאפ ל{cityName}
-  </a>
-);
-// --- End of Placeholder ---
+import { BUSINESS_INFO } from "@/lib/data";
+import { WhatsAppCTA } from "@/components/whatsapp-cta";
 
 export const metadata: Metadata = {
   title: "גרירת חירום רכב תקוע בצ'ק פוסט חיפה (כביש 22) במחיר זול 24/7",

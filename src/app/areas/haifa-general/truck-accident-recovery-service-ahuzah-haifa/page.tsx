@@ -1,26 +1,7 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
-// Mock BUSINESS_INFO and WhatsAppCTA for demonstration purposes.
-// In a real Next.js app, these would be imported from your actual project structure.
-const BUSINESS_INFO = {
-  phone: "972501234567", // Example phone number
-  whatsapp: "972501234567", // Example WhatsApp number
-};
 
-const WhatsAppCTA = ({ cityName }: { cityName: string }) => (
-  <a
-    href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-green-500 text-white hover:bg-green-600 transition-colors duration-300 font-semibold py-3 px-8 rounded-full shadow-lg text-lg flex items-center justify-center"
-  >
-    <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12.04 2C7.34 2 3.58 5.76 3.58 10.46c0 1.95.62 3.76 1.68 5.2l-1.1 4.03 4.14-1.09c1.38.75 2.97 1.16 4.74 1.16 4.7 0 8.46-3.76 8.46-8.46S16.74 2 12.04 2zm4.56 12.45c-.19.3-.74.54-1.06.58-.32.04-.6-.07-.85-.15-.25-.08-1.47-.68-1.7-.76-.23-.08-.4-.12-.56.12-.16.24-.64.76-.78.92-.14.16-.29.18-.54.08-.25-.1-.99-.36-1.89-1.16-.7-.62-1.17-1.39-1.31-1.64-.14-.25-.02-.38.1-.5-.12-.16.27-.42.39-.59.12-.16.16-.3.24-.46.08-.16.04-.3-.02-.42-.06-.12-.56-1.34-.77-1.83-.2-.48-.4-.42-.56-.43-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.33-.26.26-.99.96-.99 2.34 0 1.38 1.02 2.71 1.16 2.9 0 .02 1.99 3.06 4.93 4.34 2.31.99 2.76.88 3.25.83.49-.05 1.2-.49 1.38-.98.19-.49.19-.9.13-.98-.06-.08-.2-.13-.42-.24z"/>
-    </svg>
-    וואטסאפ: {cityName}
-  </a>
-);
 
 export default function Page() {
   const jsonLd = {

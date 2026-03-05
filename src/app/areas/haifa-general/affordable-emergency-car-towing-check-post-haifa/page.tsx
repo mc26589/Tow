@@ -3,13 +3,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Script from "next/script";
 
 export default function Page() {
-  // Placeholder for BUSINESS_INFO. In a real app, this would be imported from '@/lib/data'
-  // For demonstration, we'll define a mock BUSINESS_INFO here.
-  // In your actual project, ensure '@/lib/data' exports these values.
-  const BUSINESS_INFO = {
-    phone: "972501234567", // Example phone number
-    displayPhone: "050-123-4567", // Example display phone number
-  };
+
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -68,7 +62,7 @@ export default function Page() {
               href={`tel:+${BUSINESS_INFO.phone}`}
               className="bg-white text-gray-900 hover:bg-gray-200 transition-colors duration-300 font-semibold py-3 px-8 rounded-full shadow-lg text-lg"
             >
-              התקשרו עכשיו: {BUSINESS_INFO.displayPhone}
+              התקשרו עכשיו: {BUSINESS_INFO.phone}
             </a>
           </div>
         </div>
@@ -145,7 +139,7 @@ export default function Page() {
               href={`tel:+${BUSINESS_INFO.phone}`}
               className="bg-white text-gray-900 hover:bg-gray-200 transition-colors duration-300 font-semibold py-3 px-8 rounded-full shadow-lg text-lg"
             >
-              התקשרו עכשיו: {BUSINESS_INFO.displayPhone}
+              התקשרו עכשיו: {BUSINESS_INFO.phone}
             </a>
           </div>
         </div>
