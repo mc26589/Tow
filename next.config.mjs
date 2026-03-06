@@ -10,6 +10,11 @@ const nextConfig = {
                 destination: '/sitemap.xml',
                 permanent: true,
             },
+            {
+                source: '/sitemaps.xml',
+                destination: '/sitemap.xml',
+                permanent: true,
+            },
         ];
     },
 };
