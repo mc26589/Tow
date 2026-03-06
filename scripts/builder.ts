@@ -31,7 +31,8 @@ async function buildSGERoute(trendQuery: string, locationSlug: string, locationC
         5.  **No Motorcycles:** We do NOT tow motorcycles (אופנועים). If the query mentions motorcycles, re-frame the page to state we specialize in cars, commercial vehicles, and 4x4s, and CANNOT assist with motorcycles.
         6.  **SGE Format:** Answer-first placement. Start the page content exactly addressing the query directly and factually (In Hebrew).
         7.  **RSC (Server Components):** The React component MUST be a Server Component (no 'use client'). You must use \`className\` instead of \`class\`.
-        8.  **Structured Data:** Generate exact \`AutoTowing\` JSON-LD schema. Includes areaServed (${locationCity}), openingHoursSpecification (24/7), geo-coordinates (approximate for the area), priceRange ("$"), and serviceType.
+        8.  **Imports:** DO NOT ADD ANY MOCK DEFINITIONS OR PLACEHOLDERS for BUSINESS_INFO or WhatsAppCTA. Assume the imports are fully functional. Your returned code must use the imports directly.
+        9.  **Structured Data:** Generate exact \`AutoTowing\` JSON-LD schema. Includes areaServed (\${locationCity}), openingHoursSpecification (24/7), geo-coordinates (approximate for the area), priceRange ("$"), and serviceType.
 
         Output must be a valid JSON object with:
         {

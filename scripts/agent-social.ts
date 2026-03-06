@@ -12,9 +12,9 @@ const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 async function runSocialSEOAgency() {
   const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
-  
+
   console.log("Analyzing existing content for new social-style article...");
-  
+
   // Read existing pSEO areas to know what's there
   let areasContent = "";
   try {
@@ -45,7 +45,7 @@ async function runSocialSEOAgency() {
   try {
     const result = await model.generateContent(prompt);
     const responseText = result.response.text().replace(/\`\`\`json/g, "").replace(/\`\`\`/g, "").trim();
-    
+
     const newGuide = JSON.parse(responseText);
     const date = new Date().toISOString().split("T")[0];
     newGuide.publishDate = date;
@@ -55,28 +55,25 @@ async function runSocialSEOAgency() {
     let guidesFileContent = fs.readFileSync(guidesPath, "utf-8");
 
     // Extract the array, append the new object
-    const newGuideCode = `
-    {
-        slug: "${newGuide.slug}",
-        title: "${newGuide.title}",
-        description: "${newGuide.description}",
-        category: "${newGuide.category}",
-        publishDate: "${newGuide.publishDate}",
-        readTime: "${newGuide.readTime}",
-        author: "${newGuide.author}",
-        content: \`
-            ${newGuide.content}
-        \`
-    }`;
+    const newGuideCode = JSON.stringify({
+      slug: newGuide.slug,
+      title: newGuide.title,
+      description: newGuide.description,
+      category: newGuide.category,
+      publishDate: newGuide.publishDate,
+      readTime: newGuide.readTime,
+      author: newGuide.author,
+      content: newGuide.content
+    }, null, 4);
 
     // Simple append before the last "];"
     const insertIndex = guidesFileContent.lastIndexOf("];");
     if (insertIndex !== -1) {
-      guidesFileContent = 
-        guidesFileContent.slice(0, insertIndex) + 
-        ",\n" + newGuideCode + "\n" + 
+      guidesFileContent =
+        guidesFileContent.slice(0, insertIndex) +
+        ",\n" + newGuideCode + "\n" +
         guidesFileContent.slice(insertIndex);
-      
+
       fs.writeFileSync(guidesPath, guidesFileContent);
       console.log(`Added new guide: ${newGuide.title} to src/lib/guides.ts`);
     } else {
