@@ -17,6 +17,7 @@ export default function TowingCalculator() {
     const [rearWheels, setRearWheels] = useState("true");
     const [locationType, setLocationType] = useState("");
     const [access, setAccess] = useState("true");
+    const [timeOfDay, setTimeOfDay] = useState("regular");
 
     const [isLoading, setIsLoading] = useState(false);
     const [estimatedPrice, setEstimatedPrice] = useState<string | null>(null);
@@ -46,6 +47,7 @@ export default function TowingCalculator() {
                     rearWheels: rearWheels === "true",
                     locationType,
                     access: access === "true",
+                    timeOfDay,
                 }),
             });
 
@@ -76,6 +78,13 @@ export default function TowingCalculator() {
         const frontLabel = frontWheels === "true" ? "מסתובבים" : "נעולים / חסרים";
         const rearLabel = rearWheels === "true" ? "מסתובבים" : "נעולים / חסרים";
 
+        const timeLabels: Record<string, string> = {
+            regular: "שעות עבודה (07:00 - 17:00)",
+            evening: "ערב (17:00 - 20:00)",
+            night: "לילה (20:00 - 07:00)",
+        };
+        const timeLabel = timeLabels[timeOfDay] || timeOfDay;
+
         const message =
             `שלום, אשמח לקבל הצעת מחיר לגרירה 🚛\n` +
             `━━━━━━━━━━━━━━━\n` +
@@ -86,6 +95,7 @@ export default function TowingCalculator() {
             `🔑 גישה לגרר: ${accessLabel}\n` +
             `⚙️ גלגלים קדמיים: ${frontLabel}\n` +
             `⚙️ גלגלים אחוריים: ${rearLabel}\n` +
+            `🕒 שעת הגרירה: ${timeLabel}\n` +
             `━━━━━━━━━━━━━━━\n` +
             `💰 הערכת מחיר מהמחשבון: ${estimatedPrice}\n\n` +
             `🔗 https://grar-haifa.vercel.app/`;
@@ -165,6 +175,20 @@ export default function TowingCalculator() {
                                 <SelectContent>
                                     <SelectItem value="true">יש גישה נוחה לגרר</SelectItem>
                                     <SelectItem value="false">גישה חסומה / בעייתית</SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </div>
+
+                        <div className="space-y-1.5">
+                            <Label className="text-xs sm:text-sm">זמן הגרירה</Label>
+                            <Select onValueChange={setTimeOfDay} value={timeOfDay}>
+                                <SelectTrigger className="bg-slate-50 border-slate-200 h-11 text-base">
+                                    <SelectValue placeholder="בחר זמן גרירה" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="regular">שעות עבודה (07:00 עד 17:00)</SelectItem>
+                                    <SelectItem value="evening">שעות ערב (17:00 עד 20:00)</SelectItem>
+                                    <SelectItem value="night">שעות לילה (20:00 עד 07:00)</SelectItem>
                                 </SelectContent>
                             </Select>
                         </div>

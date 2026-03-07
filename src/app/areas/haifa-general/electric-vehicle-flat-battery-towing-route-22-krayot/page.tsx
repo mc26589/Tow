@@ -86,7 +86,7 @@ export default function Page() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-gray-900 hover:bg-gray-200 font-bold py-3 px-8 rounded-full transition duration-300 text-lg">
-              התקשרו עכשיו: {BUSINESS_INFO.displayPhone}
+              התקשרו עכשיו: 054-917-4414
             </a>
             <WhatsAppCTA cityName="Haifa and Krayot" />
           </div>
@@ -158,8 +158,8 @@ export default function Page() {
               </div>
             </div>
             <div className="mt-10 p-6 bg-red-800 rounded-lg shadow-lg text-center">
-                <h3 className="text-2xl font-bold mb-3">שימו לב: אנו לא מספקים שירותי גרירה לאופנועים.</h3>
-                <p className="text-lg">התמחותנו היא ברכבים פרטיים, מסחריים ורכבי שטח בלבד.</p>
+              <h3 className="text-2xl font-bold mb-3">שימו לב: אנו לא מספקים שירותי גרירה לאופנועים.</h3>
+              <p className="text-lg">התמחותנו היא ברכבים פרטיים, מסחריים ורכבי שטח בלבד.</p>
             </div>
           </section>
 
@@ -193,7 +193,7 @@ export default function Page() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-blue-600 text-white hover:bg-blue-700 font-bold py-3 px-8 rounded-full transition duration-300 text-lg">
-                התקשרו עכשיו: {BUSINESS_INFO.displayPhone}
+                התקשרו עכשיו: 054-917-4414
               </a>
               <WhatsAppCTA cityName="Haifa and Krayot" />
             </div>
