@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 import { BUSINESS_INFO } from "@/lib/data";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
@@ -106,7 +107,7 @@ export default function Page() {
               </div>
             </div>
             <div className="hidden md:block">
-              <img src="/images/towing-truck-haifa.webp" alt="גרר חירום בצ'ק פוסט חיפה" width="600" height="400" className="rounded-lg shadow-xl object-cover w-full h-auto" />
+              <Image src="/images/towing-truck-haifa.webp" alt="גרר חירום בצ'ק פוסט חיפה" width={600} height={400} className="rounded-lg shadow-xl object-cover w-full h-auto" priority />
             </div>
           </div>
         </div>

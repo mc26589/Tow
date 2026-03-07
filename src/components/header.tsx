@@ -10,7 +10,7 @@ export function Header() {
                 <Link href="/" className="flex items-center gap-2 group focus-ring rounded-lg p-1 -ml-1">
                     <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-md relative overflow-hidden
                           group-hover:shadow-lg transition-shadow">
-                        <Image src="/logo.png" alt="לוגו גרר מפרץ אקספרס" fill className="object-cover" />
+                        <Image src="/logo.png" alt="לוגו גרר מפרץ אקספרס" fill className="object-cover" priority />
                     </div>
                     <div className="flex flex-col">
                         <span className="font-rubik font-black text-xl text-slate-900 leading-tight">

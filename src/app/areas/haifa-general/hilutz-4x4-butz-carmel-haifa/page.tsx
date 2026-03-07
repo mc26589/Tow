@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BUSINESS_INFO } from "@/lib/data";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 
@@ -103,7 +104,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex justify-center">
-              <img src="/images/4x4-mud-rescue.jpg" alt="רכב 4x4 תקוע בבוץ ביער הכרמל" className="rounded-lg shadow-xl max-w-full h-auto" />
+              <Image src="/images/4x4-mud-rescue.jpg" alt="רכב 4x4 תקוע בבוץ ביער הכרמל" width={600} height={400} className="rounded-lg shadow-xl max-w-full h-auto" priority={false} />
             </div>
           </div>
         </div>
