@@ -1,6 +1,7 @@
 import { BUSINESS_INFO } from "./data";
 
 export const NEIGHBORHOODS = [
+    // Haifa
     { slug: "romema", name_he: "רוממה", city_slug: "haifa" },
     { slug: "denya", name_he: "דניה", city_slug: "haifa" },
     { slug: "merkaz-hakarmel", name_he: "מרכז הכרמל", city_slug: "haifa" },
@@ -8,11 +9,73 @@ export const NEIGHBORHOODS = [
     { slug: "ahuza", name_he: "אחוזה", city_slug: "haifa" },
     { slug: "moshava-germanit", name_he: "מושבה גרמנית", city_slug: "haifa" },
     { slug: "hadar-elyon", name_he: "הדר עליון", city_slug: "haifa" },
-    { slug: "merkazit-hof-hacarmel", name_he: "התחנה המרכזית (חוף הכרמל)", city_slug: "haifa" },
+    { slug: "bat-galim", name_he: "בת גלים", city_slug: "haifa" },
+    { slug: "sderot-moriah", name_he: "שדרות מוריה", city_slug: "haifa" },
+    { slug: "karmeliya", name_he: "כרמליה", city_slug: "haifa" },
+    { slug: "stella-maris", name_he: "סטלה מאריס", city_slug: "haifa" },
+
+    // Kiryat Ata
     { slug: "givat-alonim", name_he: "גבעת אלונים", city_slug: "kiryat-ata" },
+    { slug: "kiryat-binyamin", name_he: "קרית בנימין", city_slug: "kiryat-ata" },
+    { slug: "kiryat-nahum", name_he: "קרית נחום", city_slug: "kiryat-ata" },
+    { slug: "kiryat-frostig", name_he: "קרית פרוסטיג", city_slug: "kiryat-ata" },
+    { slug: "zvolun-street", name_he: "רחוב זבולון", city_slug: "kiryat-ata" },
+
+    // Kiryat Motzkin
     { slug: "mishkenot-omanim", name_he: "משכנות אמנים", city_slug: "kiryat-motzkin" },
+    { slug: "neve-ganim", name_he: "נווה גנים", city_slug: "kiryat-motzkin" },
+    { slug: "sderot-goshen", name_he: "שדרות גושן", city_slug: "kiryat-motzkin" },
+    { slug: "motzkin-vatika", name_he: "מוצקין הוותיקה", city_slug: "kiryat-motzkin" },
+
+    // Kiryat Bialik
     { slug: "savyoney-yam", name_he: "סביוני ים", city_slug: "kiryat-bialik" },
-    { slug: "psagot-yam", name_he: "פסגות ים", city_slug: "kiryat-yam" }
+    { slug: "tzur-shalom", name_he: "צור שלום", city_slug: "kiryat-bialik" },
+    { slug: "afek", name_he: "אפק", city_slug: "kiryat-bialik" },
+    { slug: "keren-hayesod", name_he: "רחוב קרן היסוד", city_slug: "kiryat-bialik" },
+
+    // Kiryat Yam
+    { slug: "psagot-yam", name_he: "פסגות ים", city_slug: "kiryat-yam" },
+    { slug: "kiryat-yam-a", name_he: "קרית ים א'", city_slug: "kiryat-yam" },
+    { slug: "kiryat-yam-b", name_he: "קרית ים ב'", city_slug: "kiryat-yam" },
+    { slug: "almogim", name_he: "אלמוגים", city_slug: "kiryat-yam" },
+    { slug: "sderot-pinhas-lavon", name_he: "שדרות פנחס לבון", city_slug: "kiryat-yam" },
+
+    // Kiryat Haim
+    { slug: "ma'aravit", name_he: "מערבית", city_slug: "kiryat-haim" },
+    { slug: "mizrahit", name_he: "מזרחית", city_slug: "kiryat-haim" },
+    { slug: "achi-eilat", name_he: "רחוב אח\"י אילת", city_slug: "kiryat-haim" },
+
+    // Kiryat Shmuel
+    { slug: "merkaz-hakirya", name_he: "מרכז הקריה", city_slug: "kiryat-shmuel" },
+
+    // Yokneam
+    { slug: "yokneam-illit", name_he: "יקנעם עילית", city_slug: "yokneam" },
+    { slug: "ramat-haemek", name_he: "רמת העמק", city_slug: "yokneam" },
+    { slug: "givat-yaara", name_he: "גבעת יערה", city_slug: "yokneam" },
+
+    // Kiryat Tivon
+    { slug: "kiryat-haroshet", name_he: "קרית חרושת", city_slug: "kiryat-tivon" },
+    { slug: "elroai", name_he: "אלרואי", city_slug: "kiryat-tivon" },
+    { slug: "ramat-tivon", name_he: "רמת טבעון", city_slug: "kiryat-tivon" },
+    { slug: "merkaz-tivon", name_he: "מרכז טבעון", city_slug: "kiryat-tivon" },
+
+    // Rekhasim
+    { slug: "hesed-leavraham", name_he: "שכונת חסד לאברהם", city_slug: "rekhasim" },
+    { slug: "givat-hareichman", name_he: "שכונת גבעת הרייכמן", city_slug: "rekhasim" },
+    { slug: "shikun-sela", name_he: "שיכון סלע", city_slug: "rekhasim" },
+
+    // Akko
+    { slug: "old-city", name_he: "העיר העתיקה", city_slug: "akko" },
+    { slug: "ben-ami", name_he: "רחוב בן עמי", city_slug: "akko" },
+    { slug: "ben-gurion", name_he: "שכונת בן גוריון", city_slug: "akko" },
+    { slug: "shikun-3", name_he: "שיכון 3", city_slug: "akko" },
+
+    // Nesher
+    { slug: "tel-hanan", name_he: "תל חנן", city_slug: "nesher" },
+    { slug: "ben-dor", name_he: "בן דור", city_slug: "nesher" },
+    { slug: "ramot-yitzhak", name_he: "רמות יצחק", city_slug: "nesher" },
+    { slug: "givat-amos", name_he: "גבעת עמוס", city_slug: "nesher" },
+    { slug: "givat-nesher", name_he: "גבעת נשר", city_slug: "nesher" }
 ];
 
 export const ROADS = [
@@ -27,6 +90,7 @@ export const ROADS = [
 ];
 
 export const WARNING_LIGHTS = [
+    // Standard lights
     { slug: "red-engine-light", name_he: "נורת מנוע אדומה", severity: "red", description: "עצור מיד! נזק למנוע אפשרי." },
     { slug: "battery-light", name_he: "נורת מצבר (אלטרנטור)", severity: "red", description: "בעיה בטעינת המצבר או באלטרנטור." },
     { slug: "oil-pressure", name_he: "נורת לחץ שמן", severity: "red", description: "לחץ שמן נמוך - סכנת הרס מוחלט למנוע." },
@@ -34,7 +98,14 @@ export const WARNING_LIGHTS = [
     { slug: "brakes-warning", name_he: "נורת בלמים אדומה", severity: "red", description: "בעיה במערכת הבלמים - מסוכן להמשיך לנסוע." },
     { slug: "power-steering", name_he: "נורת הגה כוח", severity: "red", description: "כשל בהגה כוח, הופך את השליטה ברכב למסוכנת וקשה." },
     { slug: "transmission-warning", name_he: "נורת תיבת הילוכים אדומה", severity: "red", description: "התחממות או כשל בגיר. המשך נסיעה יכול להרוס את הגיר כליל." },
-    { slug: "yellow-engine-light", name_he: "נורת מנוע צהובה (Check Engine)", severity: "yellow", description: "תקלה כללית במנוע או פליטה. בטוח לנסוע למוסך קרוב, אבל אל תתעלמו." }
+    { slug: "yellow-engine-light", name_he: "נורת מנוע צהובה (Check Engine)", severity: "yellow", description: "תקלה כללית במנוע או פליטה. בטוח לנסוע למוסך קרוב, אבל אל תתעלמו." },
+
+    // Car-specific common breakdowns
+    { slug: "toyota-hybrid-battery", name_he: "תקלת סוללה היברידית קורולה/יאריס", severity: "red", description: "תקלת מערכת היברידית בטויוטה שורפת את מחשב הרכב אם ממשיכים לנסוע. נדרשת גרירה למוסך מורשה טויוטה." },
+    { slug: "hyundai-kia-dct-overheat", name_he: "התחממות גיר רובוטי יונדאי/קיה", severity: "red", description: "התחממות גיר DCT בדגמי יונדאי טוסון או קיה ספורטאז'. חובה לעצור ולהזמין גרר למניעת הרס המצמדים." },
+    { slug: "vag-dsg-mechatronic", name_he: "תקלת מחשב גיר DSG סקודה/סיאט", severity: "red", description: "תקלה במכטרוניקס של גיר DSG בדגמי סקודה אוקטביה או סיאט לאון. הרכב נתקע בהילוך או לא משלב הילוכים." },
+    { slug: "tesla-12v-dead", name_he: "מצבר 12V מת בטסלה", severity: "yellow", description: "מצבר 12V פרק לחלטין או תקול בטסלה. הרכב מושבת ולא ניתן לפתוח דלתות או לנסוע. נדרש חילוץ יצירתי והחלפת מצבר במרכז שירות." },
+    { slug: "chevrolet-cruze-overheat", name_he: "התחממות מנוע משאבת מים שברולט", severity: "red", description: "תקלה נפוצה של נזילת מים/התחממות מנוע בשברולט קרוז או טראקס. גרירה דחופה למניעת שריפת אטם ראש מנוע." }
 ];
 
 export const HAZARDS = [

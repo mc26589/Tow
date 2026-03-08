@@ -15,6 +15,7 @@ export const CITIES = [
     { slug: "kiryat-tivon", name_he: "קרית טבעון" },
     { slug: "rekhasim", name_he: "רכסים" },
     { slug: "akko", name_he: "עכו" },
+    { slug: "nesher", name_he: "נשר" },
 ] as const;
 
 export const VEHICLES = [
@@ -47,7 +48,7 @@ export const BUSINESS_INFO = {
     phone: "972549174414",
     whatsappBase: "https://wa.me/972549174414",
     description: "שירותי גרירה מהירים ומקצועיים בצפון הארץ. הגעה מהירה, מחירים הוגנים, 24/7.",
-    areas: "חיפה והקריות, עכו, יקנעם, קרית טבעון, רכסים",
+    areas: "חיפה והקריות, עכו, יקנעם, קרית טבעון, רכסים, נשר",
 } as const;
 
 export const OWNER_INFO = {
