@@ -1,0 +1,51 @@
+name: Daily Google Indexer Sync
+
+on:
+  schedule:
+    # Runs at 08:30 UTC every day.
+    # Google's indexing API quota resets at midnight Pacific Time (08:00 UTC).
+    - cron: '30 8 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  index-pages:
+    runs-setup: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        working-directory: ./google-indexer
+        run: npm ci
+
+      - name: Recreate Service Account Key
+        working-directory: ./google-indexer
+        run: |
+          echo '${{ secrets.GOOGLE_INDEXING_SERVICE_ACCOUNT }}' > service-account-keys.json
+
+      - name: Run Indexing Sync
+        working-directory: ./google-indexer
+        run: node sync.js
+
+      - name: Commit and push updated cache
+        run: |
+          # Configure Git
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # Check if there are changes to the cache
+          if git diff --quiet google-indexer/indexed_cache.json; then
+            echo "No new pages indexed. Cache is up to date."
+          else
+            git add google-indexer/indexed_cache.json
+            git commit -m "chore: update google indexing cache [skip ci]"
+            git push
+          fi

@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { supabase } from '@/lib/supabase';
 import { CITIES, VEHICLES } from '@/lib/data';
 import { GUIDES } from '@/lib/guides';
+import { B2B_INDUSTRIES, DESTINATIONS, HAZARDS, NEIGHBORHOODS, ROADS, WARNING_LIGHTS } from '@/lib/data-pseo';
 import fs from 'fs';
 import path from 'path';
 
@@ -36,6 +37,77 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 priority: 0.9,
             });
         }
+    }
+
+    // 1.5. Gen other dynamic pSEO routes
+    const additionalPSEOUrls: MetadataRoute.Sitemap = [];
+
+    // Hazards per city
+    for (const city of CITIES) {
+        for (const hazard of HAZARDS) {
+            additionalPSEOUrls.push({
+                url: `${baseUrl}/hazards/${hazard.slug}/${city.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.8,
+            });
+        }
+    }
+
+    // B2B per city
+    for (const city of CITIES) {
+        for (const industry of B2B_INDUSTRIES) {
+            additionalPSEOUrls.push({
+                url: `${baseUrl}/b2b/${industry.slug}/${city.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.8,
+            });
+        }
+    }
+
+    // Destinations
+    for (const city of CITIES) {
+        for (const destination of DESTINATIONS) {
+            additionalPSEOUrls.push({
+                url: `${baseUrl}/destination/${city.slug}/${destination.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.8,
+            });
+        }
+    }
+
+    // Warning Lights
+    for (const city of CITIES) {
+        for (const light of WARNING_LIGHTS) {
+            additionalPSEOUrls.push({
+                url: `${baseUrl}/warning-lights/${light.slug}/${city.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.8,
+            });
+        }
+    }
+
+    // Neighborhoods
+    for (const neighborhood of NEIGHBORHOODS) {
+        additionalPSEOUrls.push({
+            url: `${baseUrl}/locations/${neighborhood.city_slug}/${neighborhood.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        });
+    }
+
+    // Roads
+    for (const road of ROADS) {
+        additionalPSEOUrls.push({
+            url: `${baseUrl}/roads/${road.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        });
     }
 
     // 2. Gen Guides
@@ -76,7 +148,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         console.error('Failed to connect to Supabase for sitemap:', err);
     }
 
-    // 4. Scan physical file system for AI generated pSEO pages
+    // 4. Scan physical file system for AI generated pSEO pages (areas)
     const fsUrls: MetadataRoute.Sitemap = [];
     try {
         const areasDir = path.join(process.cwd(), 'src', 'app', 'areas');
@@ -109,7 +181,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Merge and deduplicate URLs
     const allUrlsMap = new Map<string, MetadataRoute.Sitemap[number]>();
 
-    [...staticRoutes, ...cityVehicleUrls, ...guideUrls, ...dynamicUrls, ...fsUrls].forEach(item => {
+    [...staticRoutes, ...cityVehicleUrls, ...additionalPSEOUrls, ...guideUrls, ...dynamicUrls, ...fsUrls].forEach(item => {
         if (!allUrlsMap.has(item.url)) {
             allUrlsMap.set(item.url, item);
         }
