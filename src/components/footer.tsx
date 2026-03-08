@@ -59,6 +59,11 @@ export function Footer() {
                         <h3 className="font-rubik font-bold text-white mb-3">מידע וקישורים</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
+                                <Link href="/areas" className="text-alert-400 font-semibold hover:text-alert-300 transition-colors">
+                                    → פריסת אזורי שירות יחודיים
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/about" className="text-slate-400 hover:text-white transition-colors">
                                     אודות החברה והצוות
                                 </Link>

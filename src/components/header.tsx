@@ -24,6 +24,9 @@ export function Header() {
 
                 {/* Navigation Links */}
                 <nav className="hidden md:flex items-center gap-6">
+                    <Link href="/areas" className="text-sm font-bold text-trust-blue-600 hover:text-blue-800 transition-colors">
+                        📍 אזורי שירות מלאים
+                    </Link>
                     <Link href="/about" className="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
                         אודות
                     </Link>
