@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BUSINESS_INFO, CITIES, findCity } from "@/lib/data";
 import { HAZARDS, findHazard, getPseoWhatsAppLink } from "@/lib/data-pseo";
+import { generateFAQs } from "@/lib/seo-content";
 import { JsonLd } from "@/components/json-ld";
 
 export async function generateStaticParams() {
@@ -46,10 +47,11 @@ export default async function HazardPage({ params }: PageProps) {
 
     const whatsappMessage = `מבקש עזרה דחופה - ${hazard.name_he} ב${city.name_he}. יש לכם ציוד מתאים?`;
     const whatsappLink = getPseoWhatsAppLink(whatsappMessage);
+    const faqs = generateFAQs(city.name_he, "רכב");
 
     return (
         <>
-            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName="רכב" vehicleSlug="private-car" faqs={[]} />
+            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName="רכב" vehicleSlug="private-car" faqs={faqs} />
 
             <section className="bg-slate-50 py-14 md:py-24">
                 <div className="max-w-4xl mx-auto px-4 text-center">

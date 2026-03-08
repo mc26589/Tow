@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CITIES, findCity, BUSINESS_INFO } from "@/lib/data";
 import { NEIGHBORHOODS, findNeighborhood, getPseoWhatsAppLink } from "@/lib/data-pseo";
+import { generateFAQs } from "@/lib/seo-content";
 import { JsonLd } from "@/components/json-ld";
 
 export async function generateStaticParams() {
@@ -47,10 +48,11 @@ export default async function NeighborhoodPage({ params }: PageProps) {
 
     const whatsappMessage = `היי, נתקעתי ב${neighborhood.name_he} (${city.name_he}), אפשר חילוץ/גרר?`;
     const whatsappLink = getPseoWhatsAppLink(whatsappMessage);
+    const faqs = generateFAQs(neighborhood.name_he, "רכב");
 
     return (
         <>
-            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName="רכב" vehicleSlug="private-car" faqs={[]} />
+            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName="רכב" vehicleSlug="private-car" faqs={faqs} />
 
             <section className="gradient-trust text-white py-14 md:py-20">
                 <div className="max-w-4xl mx-auto px-4 text-center">

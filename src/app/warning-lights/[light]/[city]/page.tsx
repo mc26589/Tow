@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BUSINESS_INFO, CITIES, findCity } from "@/lib/data";
 import { WARNING_LIGHTS, findWarningLight, getPseoWhatsAppLink } from "@/lib/data-pseo";
+import { generateFAQs } from "@/lib/seo-content";
 import { JsonLd } from "@/components/json-ld";
 import { DiagnosticTool } from "@/components/diagnostic-tool";
 
@@ -51,10 +52,11 @@ export default async function WarningLightPage({ params }: PageProps) {
 
     const whatsappMessage = `שלום, נדלקה לי ${light.name_he} ברכב ב${city.name_he}. מה לעשות? צריך חילוץ?`;
     const whatsappLink = getPseoWhatsAppLink(whatsappMessage);
+    const faqs = generateFAQs(city.name_he, "רכב");
 
     return (
         <>
-            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName="רכב" vehicleSlug="private-car" faqs={[]} />
+            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName="רכב" vehicleSlug="private-car" faqs={faqs} />
 
             <section className="bg-white py-14 md:py-24">
                 <div className="max-w-3xl mx-auto px-4 text-center">

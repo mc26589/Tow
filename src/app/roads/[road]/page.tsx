@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BUSINESS_INFO } from "@/lib/data";
 import { ROADS, findRoad, getPseoWhatsAppLink } from "@/lib/data-pseo";
+import { generateFAQs } from "@/lib/seo-content";
 import { JsonLd } from "@/components/json-ld";
 
 export async function generateStaticParams() {
@@ -40,10 +41,11 @@ export default async function RoadPage({ params }: PageProps) {
 
     const whatsappMessage = `היי, נתקעתי על ${road.name_he}, צריך גרר דחוף. תכוונו אותי?`;
     const whatsappLink = getPseoWhatsAppLink(whatsappMessage);
+    const faqs = generateFAQs(road.name_he, "רכב");
 
     return (
         <>
-            <JsonLd cityName="צפון" citySlug="north" vehicleName="רכב" vehicleSlug="private-car" faqs={[]} />
+            <JsonLd cityName="צפון" citySlug="north" vehicleName="רכב" vehicleSlug="private-car" faqs={faqs} />
 
             <section className="bg-slate-900 text-white py-14 md:py-24 border-b-4 border-alert-500">
                 <div className="max-w-4xl mx-auto px-4 text-center">

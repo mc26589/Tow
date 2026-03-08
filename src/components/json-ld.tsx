@@ -87,19 +87,44 @@ export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isH
         },
         hasOfferCatalog: {
             "@type": "OfferCatalog",
-            name: "שירותי גרירה",
+            name: "שירותי גרירה מקצועיים לחילוץ מהיר",
             itemListElement: [
                 {
                     "@type": "Offer",
                     itemOffered: {
                         "@type": "Service",
                         name: vehicleName
-                            ? `גרירת ${vehicleName}`
+                            ? `גרירת ${vehicleName} ב${cityName || "צפון"}`
                             : "שירותי גרירה כלליים",
+                        serviceType: "Vehicle Towing and Recovery",
+                        areaServed: cityName ? { "@type": "City", name: cityName } : undefined,
                     },
                 },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "חילוץ רכבים חשמליים",
+                        description: "שירות גרירה מותאם בהרמה מלאה (Flatbed) למניעת נזק לסוללה ומערכת ההנעה החשמלית",
+                    }
+                }
             ],
         },
+        potentialAction: {
+            "@type": "ReserveAction",
+            target: {
+                "@type": "EntryPoint",
+                urlTemplate: `${baseUrl}/#contact`,
+                actionPlatform: [
+                    "http://schema.org/DesktopWebPlatform",
+                    "http://schema.org/MobileWebPlatform"
+                ]
+            },
+            result: {
+                "@type": "Reservation",
+                name: "הזמנת שירותי גרירה וחילוץ"
+            }
+        }
     };
 
     const schemas: any[] = [person, localBusiness];
