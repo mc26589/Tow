@@ -1,8 +1,11 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { createClient } from '@supabase/supabase-js';
+import * as dotenv from 'dotenv';
+
+dotenv.config({ path: '.env.local' });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
-const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
+const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
 
 const OTHERS_INTENTS = ['vehicle', 'situation', 'price', 'complementary'];
 
@@ -26,8 +29,8 @@ async function getMissingMicroLocations(): Promise<any[]> {
 async function runLocalResearcher() {
     console.log("Starting Local Researcher...");
 
-    // Setup Gemini 2.0 Flash with low temperature for factual trend extraction
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    // Setup Gemini 3.1 Flash Lite with low temperature for factual trend extraction
+    const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
     const weather = await fetchWeatherStatus("Haifa");
 
     let systemPrompt = `

@@ -1,6 +1,9 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import * as fs from "fs";
 import * as path from "path";
+import * as dotenv from 'dotenv';
+
+dotenv.config({ path: '.env.local' });
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 if (!GEMINI_API_KEY) {
@@ -11,7 +14,7 @@ if (!GEMINI_API_KEY) {
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 async function runSocialSEOAgency() {
-  const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
+  const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
 
   console.log("Analyzing existing content for new social-style article...");
 

@@ -12,6 +12,9 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
+import * as dotenv from 'dotenv';
+
+dotenv.config({ path: '.env.local' });
 
 // ============================================
 // Configuration
@@ -24,7 +27,7 @@ if (!GEMINI_API_KEY) {
 }
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
 
 const GUIDES_FILE = path.join(__dirname, "..", "src", "lib", "guides.ts");
 

@@ -1,9 +1,12 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { createClient } from '@supabase/supabase-js';
 import fetch from 'node-fetch'; // Requires node-fetch
+import * as dotenv from 'dotenv';
+
+dotenv.config({ path: '.env.local' });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
-const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
+const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
 const VERCEL_TOKEN = process.env.VERCEL_TOKEN;
 
 // --- Main Agent Action 3: The Core Web Vitals Analytics Loop ---
@@ -15,8 +18,8 @@ async function fetchVercelAnalytics() {
 
     // For this demonstration, we mock the daily metrics returned by Vercel
     const mockMetrics = [
-        { path: "/areas/haifa/motorcycle-towing", lcp: 2800, inp: 150, cls: 0.05, bounce: 65 }, // High LCP
-        { path: "/areas/krayot/mud-rescue", lcp: 1400, inp: 350, cls: 0.15, bounce: 70 }      // High INP & CLS
+        { path: "/locations/haifa/denia", lcp: 2800, inp: 150, cls: 0.05, bounce: 65 },
+        { path: "/about", lcp: 1400, inp: 350, cls: 0.15, bounce: 70 }
     ];
     return mockMetrics;
 }
@@ -50,7 +53,7 @@ async function runAnalyticsLoop() {
         return;
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash", generationConfig: { responseMimeType: "application/json" } });
+    const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview", generationConfig: { responseMimeType: "application/json" } });
 
     for (const page of poorPages) {
         const prompt = `

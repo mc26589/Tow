@@ -1,5 +1,8 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { execSync } from "child_process";
+import * as dotenv from 'dotenv';
+
+dotenv.config({ path: '.env.local' });
 
 // Environmental Variables
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
@@ -32,7 +35,7 @@ async function runExecutiveReporter() {
     `;
 
         // 3. Process the data using Gemini
-        const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
+        const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
         const prompt = `
 You are an expert Executive Assistant Agent for an auto-towing company's technical SEO operations.
 You need to write a professional Weekly Executive Summary report in Hebrew. 

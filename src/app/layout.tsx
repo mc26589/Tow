@@ -22,11 +22,12 @@ const rubik = Rubik({
 export const metadata: Metadata = {
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://grar-haifa.vercel.app'),
     title: {
-        default: "גרר בחיפה ובקריות - גרר מפרץ אקספרס | הגעה מהירה 24/7 🚀",
+        default: "גרר מפרץ אקספרס - שירותי גרירה וחילוץ בחיפה והסביבה 24/7",
         template: "%s | גרר מפרץ אקספרס",
     },
     description:
         "נתקעתם עם הרכב? מחפשים גרר בחיפה או גרר בקריות? שירותי גרירה מקצועיים ואמינים באזור הצפון. התחייבות להגעה מהירה תוך 30 דקות וזמינות מלאה 24/7. התקשרו! ✓",
+
     openGraph: {
         type: "website",
         locale: "he_IL",

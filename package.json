@@ -14,7 +14,8 @@
         "agent:social": "npx tsx scripts/agent-social.ts",
         "agent:monitor": "npx tsx scripts/agent-monitor.ts",
         "agent:reporter": "npx tsx scripts/agent-reporter.ts",
-        "agent:blog": "npx tsx scripts/agent-blog.ts"
+        "agent:blog": "npx tsx scripts/agent-blog.ts",
+        "agent:fixer": "npx tsx scripts/agent-fixer.ts"
     },
     "dependencies": {
         "@google/generative-ai": "^0.24.1",

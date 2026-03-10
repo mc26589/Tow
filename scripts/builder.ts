@@ -1,10 +1,13 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { createClient } from '@supabase/supabase-js';
-import * as fs from 'fs';
-import * as path from 'path';
+import fs from 'fs';
+import path from 'path';
+import * as dotenv from 'dotenv';
+
+dotenv.config({ path: '.env.local' });
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
-const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
+const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
 
 const APP_DIR = path.join(process.cwd(), 'src', 'app', 'areas');
 
@@ -12,7 +15,7 @@ const APP_DIR = path.join(process.cwd(), 'src', 'app', 'areas');
 
 async function buildSGERoute(trendQuery: string, locationSlug: string, locationCity: string) {
     console.log(`Building Route for: ${trendQuery} in ${locationCity}...`);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash", generationConfig: { responseMimeType: "application/json" } });
+    const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview", generationConfig: { responseMimeType: "application/json" } });
 
     // Enforce 10/10 E-E-A-T and SGE formatting with strict business rules
     const systemPrompt = `
