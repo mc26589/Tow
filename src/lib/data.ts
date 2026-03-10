@@ -46,6 +46,7 @@ export const VEHICLES = [
 export const BUSINESS_INFO = {
     name: "גרר מפרץ אקספרס - שירותי גרירה",
     phone: "972549174414",
+    displayPhone: "054-917-4414",
     whatsappBase: "https://wa.me/972549174414",
     description: "שירותי גרירה מהירים ומקצועיים בצפון הארץ. הגעה מהירה, מחירים הוגנים, 24/7.",
     areas: "חיפה והקריות, עכו, יקנעם, קרית טבעון, רכסים, נשר",
