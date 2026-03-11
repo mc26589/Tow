@@ -22,7 +22,7 @@ jobs:
           node-version: '20'
 
       - name: Install Dependencies
-        run: npm install --no-progress --no-audit --no-fund --loglevel=error
+        run: npm ci --no-progress --no-audit --no-fund --loglevel=error
 
       - name: Run Blog Agent
         env:

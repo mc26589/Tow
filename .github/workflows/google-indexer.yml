@@ -9,7 +9,7 @@ on:
 
 jobs:
   index-pages:
-    runs-setup: ubuntu-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
 
