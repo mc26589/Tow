@@ -27,4 +27,4 @@ jobs:
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_FACEBOOK }}
           # FACEBOOK_USER_ACCESS_TOKEN if needed for group discovery
-        run: npx ts-node --esm scripts/agent-social.ts
+        run: npm run agent:social
