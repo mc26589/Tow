@@ -14,6 +14,12 @@ if (!GEMINI_API_KEY) {
   process.exit(1);
 }
 
+console.log("Environment check:");
+console.log("- GEMINI_API_KEY:", GEMINI_API_KEY ? "Present (masked)" : "MISSING");
+console.log("- FACEBOOK_PAGE_ID:", FB_PAGE_ID ? FB_PAGE_ID : "MISSING");
+console.log("- FACEBOOK_PAGE_ACCESS_TOKEN:", FB_PAGE_ACCESS_TOKEN ? "Present (masked)" : "MISSING");
+console.log("- IS_DRY_RUN:", process.argv.includes('--dry-run'));
+
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 const IS_DRY_RUN = process.argv.includes('--dry-run');
 
