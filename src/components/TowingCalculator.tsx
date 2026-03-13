@@ -35,20 +35,49 @@ export default function TowingCalculator() {
         setError(null);
         setEstimatedPrice(null);
 
+        const currentInput = {
+            fromLocation,
+            toLocation,
+            vehicleType,
+            frontWheels: frontWheels === "true",
+            rearWheels: rearWheels === "true",
+            locationType,
+            access: access === "true",
+            timeOfDay,
+        };
+
+        const inputKey = JSON.stringify(currentInput);
+
         try {
+            // 1. Check Cache
+            const cacheRaw = localStorage.getItem("towing_calcs_cache");
+            let cache: { inputKey: string; price: string; timestamp: number }[] = cacheRaw
+                ? JSON.parse(cacheRaw)
+                : [];
+
+            // Clean up cache (remove items older than 24h)
+            const now = Date.now();
+            const oneDayMs = 24 * 60 * 60 * 1000;
+            cache = cache.filter((item) => now - item.timestamp < oneDayMs);
+
+            // 2. Check for identical previous calculation
+            const cachedResult = cache.find((item) => item.inputKey === inputKey);
+            if (cachedResult) {
+                setEstimatedPrice(cachedResult.price);
+                setIsLoading(false);
+                return;
+            }
+
+            // 3. Check Rate Limit (max 3 distinct in 24h)
+            if (cache.length >= 3) {
+                throw new Error("הגעת למכסת החישובים היומית (מקסימום 3 חישובים שונים ב-24 שעות).");
+            }
+
+            // 4. API Call
             const response = await fetch("/api/calculator", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    fromLocation,
-                    toLocation,
-                    vehicleType,
-                    frontWheels: frontWheels === "true",
-                    rearWheels: rearWheels === "true",
-                    locationType,
-                    access: access === "true",
-                    timeOfDay,
-                }),
+                body: JSON.stringify(currentInput),
             });
 
             if (!response.ok) {
@@ -57,7 +86,16 @@ export default function TowingCalculator() {
             }
 
             const data = await response.json();
-            setEstimatedPrice(data.estimatedPrice);
+            const newPrice = data.estimatedPrice;
+            setEstimatedPrice(newPrice);
+
+            // 5. Update Cache
+            cache.push({
+                inputKey,
+                price: newPrice,
+                timestamp: now,
+            });
+            localStorage.setItem("towing_calcs_cache", JSON.stringify(cache));
         } catch (err: any) {
             setError(err.message || "אירעה שגיאה. נסו שוב.");
         } finally {

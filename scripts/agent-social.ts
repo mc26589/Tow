@@ -69,17 +69,20 @@ async function runSocialSEOAgency() {
       content: newGuide.content
     }, null, 4);
 
-    // Simple append before the last "];"
-    const insertIndex = guidesFileContent.lastIndexOf("];");
-    if (insertIndex !== -1) {
-      guidesFileContent =
-        guidesFileContent.slice(0, insertIndex) +
-        ",\n" + newGuideCode + "\n" +
-        guidesFileContent.slice(insertIndex);
+      // More robust replacement logic - find the last "];" in the file
+      const insertIndex = guidesFileContent.lastIndexOf("];");
+      if (insertIndex !== -1) {
+        // Build the new code block with a leading comma if the array isn't empty
+        const prefix = guidesFileContent.trim().endsWith("[];") ? "" : ",";
+        
+        guidesFileContent =
+          guidesFileContent.slice(0, insertIndex) +
+          prefix + "\n" + newGuideCode + "\n" +
+          guidesFileContent.slice(insertIndex);
 
-      fs.writeFileSync(guidesPath, guidesFileContent);
-      console.log(`Added new guide: ${newGuide.title} to src/lib/guides.ts`);
-    } else {
+        fs.writeFileSync(guidesPath, guidesFileContent);
+        console.log(`Added new guide: ${newGuide.title} to src/lib/guides.ts`);
+      } else {
       console.error("Could not find the guides array in src/lib/guides.ts");
     }
 

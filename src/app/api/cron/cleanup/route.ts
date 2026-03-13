@@ -4,8 +4,14 @@ import { sendMessage } from "@/lib/whatsapp";
 
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(req: Request) {
     try {
+        // Security check for Cron Secret
+        const authHeader = req.headers.get("authorization");
+        if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+            return new Response("Unauthorized", { status: 401 });
+        }
+
         // Fetch jobs older than 15 minutes that are still 'open'
         const fifteenMinsAgo = new Date(Date.now() - 15 * 60 * 1000).toISOString();
 
