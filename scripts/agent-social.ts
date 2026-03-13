@@ -36,6 +36,12 @@ async function postToFacebook(message: string, link: string) {
     return;
   }
 
+  // Basic validation: Page tokens usually start with EAA...
+  if (!FB_PAGE_ACCESS_TOKEN.startsWith('EAA') && !FB_PAGE_ACCESS_TOKEN.startsWith('EA')) {
+    console.warn("Warning: FACEBOOK_PAGE_ACCESS_TOKEN does not look like a standard Page Access Token (usually starts with EAA..).");
+    console.log(`Token starts with: ${FB_PAGE_ACCESS_TOKEN.substring(0, 4)}... (Length: ${FB_PAGE_ACCESS_TOKEN.length})`);
+  }
+
   try {
     const url = `https://graph.facebook.com/v19.0/${FB_PAGE_ID}/feed`;
     const response = await fetch(url, {
@@ -50,9 +56,19 @@ async function postToFacebook(message: string, link: string) {
 
     const result = await response.json();
     if (result.error) {
-      console.error("Facebook API Error:", result.error);
+      console.error("Facebook API Error Details:");
+      console.error("- Message:", result.error.message);
+      console.error("- Type:", result.error.type);
+      console.error("- Code:", result.error.code);
+      console.error("- Trace ID:", result.error.fbtrace_id);
+      
+      if (result.error.code === 190) {
+        console.warn("\n[Hint] Error 190 usually means the token is invalid, expired, or malformed.");
+        console.warn("Please ensure you copied the 'Page Access Token' from the Meta for Developers dashboard, NOT the App Secret or a Client Token.");
+        console.warn("A valid Page Access Token usually starts with 'EAA...'.");
+      }
     } else {
-      console.log("Successfully posted to Facebook Page!");
+      console.log("Successfully posted to Facebook Page! Post ID:", result.id);
     }
   } catch (error) {
     console.error("Failed to post to Facebook:", error);
@@ -82,7 +98,12 @@ async function runSocialSEOAgency() {
 אלה הנושאים הקיימים: ${areasContent}
 
 המאמר צריך להיות עד 350 מילים, בסגנון אנושי, מועיל ואמפתי לנהגים שנתקעו.
-הפוסט לפייסבוק צריך להיות קליל, לכלול אימוג'ים, ולהזמין אנשים לקרוא את המדריך המלא.
+
+דגשים חשובים לפוסט בפייסבוק:
+- הפוסט צריך להיות קליל, לכלול אימוג'ים.
+- חובה לכלול הנעה לפעולה (CTA) חזקה שקוראת לאנשים להיכנס לאתר.
+- חובה להשתמש במחרוזת [LINK] במקום שבו אתה רוצה שהקישור למאמר יופיע.
+- אסור בהחלט לכלול מספרי טלפון בפוסט. אנחנו רוצים שאנשים יכנסו לאתר.
 
 הפק מבנה JSON (ללא Markdown) המכיל:
 {
@@ -91,7 +112,7 @@ async function runSocialSEOAgency() {
   "description": "תיאור SEO קצר",
   "category": "טיפים לנהגים",
   "article_content": "תוכן המאמר ב-HTML (h2, h3, p)",
-  "fb_post_message": "תוכן הפוסט לפייסבוק",
+  "fb_post_message": "תוכן הפוסט לפייסבוק הכולל את [LINK]",
   "author": "המוסכניק הוירטואלי - גרר חיפה"
 }
 `;
@@ -135,9 +156,13 @@ async function runSocialSEOAgency() {
       console.log("[Dry Run] Would add guide:", newGuide.title);
     }
 
-    // Post to Facebook
-    const articleLink = `https://grar-haifa.com/guides/${newGuide.slug}`;
-    await postToFacebook(data.fb_post_message, articleLink);
+        // Post to Facebook
+        const articleLink = `https://grar-haifa.vercel.app/guides/${newGuide.slug}`;
+        const finalMessage = data.fb_post_message.includes("[LINK]") 
+            ? data.fb_post_message.replace("[LINK]", articleLink)
+            : `${data.fb_post_message}\n\nלמדריך המלא היכנסו עכשיו: ${articleLink}`;
+
+        await postToFacebook(finalMessage, articleLink);
 
   } catch (error) {
     console.error("Operation failed:", error);
