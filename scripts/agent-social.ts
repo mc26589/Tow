@@ -105,7 +105,7 @@ async function runSocialSEOAgency() {
 דגשים חשובים לפוסט בפייסבוק:
 - הפוסט צריך להיות קליל, לכלול אימוג'ים.
 - חובה לכלול הנעה לפעולה (CTA) חזקה שקוראת לאנשים להיכנס לאתר.
-- חובה להשתמש במחרוזת [LINK] במקום שבו אתה רוצה שהקישור למאמר יופיע.
+- חובה להשתמש במחרוזת [LINK] במקום שבו אתה רוצה שהקישור לאתר יופיע.
 - אסור בהחלט לכלול מספרי טלפון בפוסט. אנחנו רוצים שאנשים יכנסו לאתר.
 
 הפק מבנה JSON (ללא Markdown) המכיל:
@@ -158,7 +158,7 @@ async function runSocialSEOAgency() {
       content: data.article_content
     };
 
-    const articleLink = `https://grar-haifa.vercel.app/guides/${newGuide.slug}`;
+    const articleLink = `https://grar-haifa.vercel.app`;
     const fbMessage = data.fb_post_message.replace(/\[LINK\]/g, articleLink);
 
     console.log("\nGenerated Content:");
