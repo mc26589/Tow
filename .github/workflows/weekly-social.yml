@@ -9,8 +9,13 @@ on:
 jobs:
   run-agent:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -19,12 +24,24 @@ jobs:
           cache: 'npm'
           
       - name: Install dependencies
-        run: npm install --no-progress --no-audit --no-fund --loglevel=error
+        run: npm ci --no-audit --no-fund --loglevel=error
         
-      - name: Run social media agent
+      - name: Run Social Media Agent
         env:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_FACEBOOK }}
           # FACEBOOK_USER_ACCESS_TOKEN if needed for group discovery
         run: npm run agent:social
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/lib/guides.ts
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "docs: add new weekly social blog guide [skip ci]"
+            git push origin main
+          fi
