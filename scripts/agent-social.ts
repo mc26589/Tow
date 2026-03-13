@@ -76,7 +76,10 @@ async function postToFacebook(message: string, link: string) {
 }
 
 async function runSocialSEOAgency() {
-  const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" }); 
+  const model = genAI.getGenerativeModel({ 
+    model: "gemini-3.1-flash-lite-preview",
+    generationConfig: { responseMimeType: "application/json" }
+  }); 
 
   console.log("Analyzing existing content...");
 
@@ -119,9 +122,29 @@ async function runSocialSEOAgency() {
 
   try {
     const result = await model.generateContent(prompt);
-    const responseText = result.response.text().replace(/\`\`\`json/g, "").replace(/\`\`\`/g, "").trim();
+    const responseText = result.response.text();
 
-    const data = JSON.parse(responseText);
+    let data;
+    try {
+      data = JSON.parse(responseText);
+    } catch (parseError) {
+      console.warn("Standard JSON.parse failed, attempting robust extraction...");
+      const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        try {
+          data = JSON.parse(jsonMatch[0]);
+        } catch (innerError) {
+          console.error("Robust extraction also failed.");
+          console.error("Raw Response:", responseText);
+          throw innerError;
+        }
+      } else {
+        console.error("No JSON-like structure found in response.");
+        console.error("Raw Response:", responseText);
+        throw parseError;
+      }
+    }
+
     const date = new Date().toISOString().split("T")[0];
     
     const newGuide = {
@@ -134,6 +157,15 @@ async function runSocialSEOAgency() {
       author: data.author,
       content: data.article_content
     };
+
+    const articleLink = `https://grar-haifa.vercel.app/guides/${newGuide.slug}`;
+    const fbMessage = data.fb_post_message.replace(/\[LINK\]/g, articleLink);
+
+    console.log("\nGenerated Content:");
+    console.log("- Title:", newGuide.title);
+    console.log("- Slug:", newGuide.slug);
+    console.log("- Link:", articleLink);
+    console.log("- FB Message:", fbMessage);
 
     if (!IS_DRY_RUN) {
       const guidesPath = path.join(process.cwd(), "src", "lib", "guides.ts");
@@ -157,12 +189,7 @@ async function runSocialSEOAgency() {
     }
 
         // Post to Facebook
-        const articleLink = `https://grar-haifa.vercel.app/guides/${newGuide.slug}`;
-        const finalMessage = data.fb_post_message.includes("[LINK]") 
-            ? data.fb_post_message.replace("[LINK]", articleLink)
-            : `${data.fb_post_message}\n\nלמדריך המלא היכנסו עכשיו: ${articleLink}`;
-
-        await postToFacebook(finalMessage, articleLink);
+        await postToFacebook(fbMessage, articleLink);
 
   } catch (error) {
     console.error("Operation failed:", error);
