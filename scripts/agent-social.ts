@@ -6,41 +6,86 @@ import * as dotenv from 'dotenv';
 dotenv.config({ path: '.env.local' });
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const FB_PAGE_ACCESS_TOKEN = process.env.FACEBOOK_PAGE_ACCESS_TOKEN;
+const FB_PAGE_ID = process.env.FACEBOOK_PAGE_ID;
+
 if (!GEMINI_API_KEY) {
   console.error("Missing GEMINI_API_KEY environment variable. Exiting.");
   process.exit(1);
 }
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+const IS_DRY_RUN = process.argv.includes('--dry-run');
+
+async function postToFacebook(message: string, link: string) {
+  if (IS_DRY_RUN) {
+    console.log("[Dry Run] Would post to Facebook:");
+    console.log(`Message: ${message}`);
+    console.log(`Link: ${link}`);
+    return;
+  }
+
+  if (!FB_PAGE_ACCESS_TOKEN || !FB_PAGE_ID) {
+    console.warn("Missing Facebook credentials. Skipping post.");
+    return;
+  }
+
+  try {
+    const url = `https://graph.facebook.com/v19.0/${FB_PAGE_ID}/feed`;
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message,
+        link,
+        access_token: FB_PAGE_ACCESS_TOKEN
+      })
+    });
+
+    const result = await response.json();
+    if (result.error) {
+      console.error("Facebook API Error:", result.error);
+    } else {
+      console.log("Successfully posted to Facebook Page!");
+    }
+  } catch (error) {
+    console.error("Failed to post to Facebook:", error);
+  }
+}
 
 async function runSocialSEOAgency() {
-  const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
+  const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" }); 
 
-  console.log("Analyzing existing content for new social-style article...");
+  console.log("Analyzing existing content...");
 
-  // Read existing pSEO areas to know what's there
   let areasContent = "";
   try {
     const areasPath = path.join(process.cwd(), "src", "app", "areas", "haifa-general");
     const files = fs.readdirSync(areasPath);
     areasContent = files.slice(0, 10).join(", ");
   } catch (e) {
-    console.warn("Could not read areas directory, continuing without it.");
+    console.warn("Could not read areas directory.");
   }
 
   const prompt = `
-אתה סוכן SEO בעל אופי אנושי, קליל, ונעים, כמו בן אדם אמיתי שכותב פוסט ברשת חברתית או בלוג קליל.
-המטרה שלך היא לעבור על נושאי הגרירה שכבר כיסינו באתר (גרירה בחיפה, חילוץ מבוץ, כביש 22 וכו') 
+אתה סוכן SEO ומומחה תוכן לגרר מפרץ אקספרס בחיפה. 
+המטרה שלך היא להפיק שני דברים:
+1. מאמר SEO חדש לבלוג באתר.
+2. פוסט שיווקי ומניע לפעולה לדף הפייסבוק שלנו שיקשר למאמר.
+
 אלה הנושאים הקיימים: ${areasContent}
 
-תפיק מאמר קצר (עד 350 מילים) בסגנון בלוג/פוסט זורם ומעניין ששווה לקרוא, המיועד לנהגים באזור חיפה והקריות. המאמר צריך לדבר בגובה העיניים, עם קצת הומור/אמפתיה לגבי להיתקע עם הרכב.
+המאמר צריך להיות עד 350 מילים, בסגנון אנושי, מועיל ואמפתי לנהגים שנתקעו.
+הפוסט לפייסבוק צריך להיות קליל, לכלול אימוג'ים, ולהזמין אנשים לקרוא את המדריך המלא.
+
 הפק מבנה JSON (ללא Markdown) המכיל:
 {
-  "slug": "url-friendly-slug-in-english",
-  "title": "כותרת קלילה ומושכת",
-  "description": "תיאור קצר ומעניין מיועד ל-SEO מאחורי הקלעים",
+  "slug": "english-url-slug",
+  "title": "כותרת המאמר",
+  "description": "תיאור SEO קצר",
   "category": "טיפים לנהגים",
-  "content": "תוכן המאמר מעוצב ב-HTML, כולל כותרות (h2, h3) ופסקאות. התוכן חייב להיות נעים לקריאה וקליל.",
+  "article_content": "תוכן המאמר ב-HTML (h2, h3, p)",
+  "fb_post_message": "תוכן הפוסט לפייסבוק",
   "author": "המוסכניק הוירטואלי - גרר חיפה"
 }
 `;
@@ -49,31 +94,28 @@ async function runSocialSEOAgency() {
     const result = await model.generateContent(prompt);
     const responseText = result.response.text().replace(/\`\`\`json/g, "").replace(/\`\`\`/g, "").trim();
 
-    const newGuide = JSON.parse(responseText);
+    const data = JSON.parse(responseText);
     const date = new Date().toISOString().split("T")[0];
-    newGuide.publishDate = date;
-    newGuide.readTime = "2 דקות";
+    
+    const newGuide = {
+      slug: data.slug,
+      title: data.title,
+      description: data.description,
+      category: data.category,
+      publishDate: date,
+      readTime: "3 דקות",
+      author: data.author,
+      content: data.article_content
+    };
 
-    const guidesPath = path.join(process.cwd(), "src", "lib", "guides.ts");
-    let guidesFileContent = fs.readFileSync(guidesPath, "utf-8");
+    if (!IS_DRY_RUN) {
+      const guidesPath = path.join(process.cwd(), "src", "lib", "guides.ts");
+      let guidesFileContent = fs.readFileSync(guidesPath, "utf-8");
 
-    // Extract the array, append the new object
-    const newGuideCode = JSON.stringify({
-      slug: newGuide.slug,
-      title: newGuide.title,
-      description: newGuide.description,
-      category: newGuide.category,
-      publishDate: newGuide.publishDate,
-      readTime: newGuide.readTime,
-      author: newGuide.author,
-      content: newGuide.content
-    }, null, 4);
-
-      // More robust replacement logic - find the last "];" in the file
       const insertIndex = guidesFileContent.lastIndexOf("];");
       if (insertIndex !== -1) {
-        // Build the new code block with a leading comma if the array isn't empty
         const prefix = guidesFileContent.trim().endsWith("[];") ? "" : ",";
+        const newGuideCode = JSON.stringify(newGuide, null, 4);
         
         guidesFileContent =
           guidesFileContent.slice(0, insertIndex) +
@@ -81,14 +123,20 @@ async function runSocialSEOAgency() {
           guidesFileContent.slice(insertIndex);
 
         fs.writeFileSync(guidesPath, guidesFileContent);
-        console.log(`Added new guide: ${newGuide.title} to src/lib/guides.ts`);
-      } else {
-      console.error("Could not find the guides array in src/lib/guides.ts");
+        console.log(`Added new guide: ${newGuide.title}`);
+      }
+    } else {
+      console.log("[Dry Run] Would add guide:", newGuide.title);
     }
 
+    // Post to Facebook
+    const articleLink = `https://grar-haifa.com/guides/${newGuide.slug}`;
+    await postToFacebook(data.fb_post_message, articleLink);
+
   } catch (error) {
-    console.error("Failed to generate or parse social SEO content.", error);
+    console.error("Operation failed:", error);
   }
 }
 
 runSocialSEOAgency();
+

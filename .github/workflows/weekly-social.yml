@@ -1,0 +1,30 @@
+name: Weekly Social Media Agent
+
+on:
+  schedule:
+    # Runs at 09:00 UTC (11:00 or 12:00 Israel time) every Tuesday
+    - cron: '0 9 * * 2'
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm install --no-progress --no-audit --no-fund --loglevel=error
+        
+      - name: Run social media agent
+        env:
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_FACEBOOK }}
+          # FACEBOOK_USER_ACCESS_TOKEN if needed for group discovery
+        run: npx ts-node --esm scripts/agent-social.ts
