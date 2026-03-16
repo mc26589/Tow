@@ -1,6 +1,9 @@
 
-./src/components/reviews-section.tsx
-36:81  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
-36:95  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+> grar-towing-seo@0.1.0 lint
+> next lint
+
+
+./src/lib/guides.ts
+Error: Parsing error: Merge conflict marker encountered.
 
 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
