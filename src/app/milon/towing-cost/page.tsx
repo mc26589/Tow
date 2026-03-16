@@ -4,8 +4,8 @@ import TowingCalculator from '@/components/TowingCalculator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 export const metadata: Metadata = {
-    title: 'מחירון גרירה וחילוץ 2024 | מחשבון עלות גרירת רכב | גרר מפרץ אקספרס',
-    description: 'מחירון גרירה מעודכן לשנת 2024. כמה עולה לגרור רכב? חשבו אונליין את עלות הגרירה המשוערת לפי סוג הרכב, זמן השירות, ומרחק הנסיעה.',
+    title: 'מחירון גרירה וחילוץ 2026 | מחשבון עלות גרירת רכב | גרר מפרץ אקספרס',
+    description: 'מחירון גרירה מעודכן לשנת 2026. כמה עולה לגרור רכב? חשבו אונליין את עלות הגרירה המשוערת לפי סוג הרכב, זמן השירות, ומרחק הנסיעה.',
     alternates: {
         canonical: 'https://grar-haifa.vercel.app/milon/towing-cost',
     },
@@ -50,13 +50,13 @@ export default function TowingCostPage() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                         </span>
-                        מחירון גרירה לשנת 2024
+                        מחירון גרירה לשנת 2026
                     </div>
                     
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-[1.15]">
                         מחשבון עלות גרירת רכב{' '}
                         <span className="text-transparent bg-clip-text bg-gradient-to-l from-primary to-primary/70">
-                            מחירון 2024
+                            מחירון 2026
                         </span>
                     </h1>
                     
