@@ -41,7 +41,21 @@ jobs:
           git add src/lib/guides.ts
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "docs: add new weekly social blog guide [skip ci]"
-            git push origin main
+            exit 0
           fi
+          git commit -m "docs: add new weekly social blog guide [skip ci]"
+          # Pull latest changes from remote before pushing (prevents conflicts)
+          for i in 1 2 3; do
+            git pull --rebase origin main || {
+              echo "Rebase failed — checking for conflict markers..."
+              if grep -rn '<<<<<<< ' src/lib/guides.ts 2>/dev/null; then
+                echo "ERROR: Conflict markers detected in guides.ts. Aborting."
+                git rebase --abort 2>/dev/null || true
+                exit 1
+              fi
+            }
+            git push origin main && break
+            echo "Push attempt $i failed, retrying in 5s..."
+            sleep 5
+          done
+

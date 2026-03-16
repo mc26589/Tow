@@ -175,6 +175,15 @@ async function runSocialSEOAgency() {
 
       const insertIndex = guidesFileContent.lastIndexOf("];");
       if (insertIndex !== -1) {
+        // Prevent duplicate slugs
+        const existingSlugs = guidesFileContent.match(/"slug":\s*"([^"]+)"/g) || [];
+        const slugSet = new Set(existingSlugs.map(s => s.replace(/"slug":\s*"/, '').replace(/"$/, '')));
+        if (slugSet.has(newGuide.slug)) {
+          const suffix = Date.now().toString().slice(-6);
+          console.warn(`Slug "${newGuide.slug}" already exists, appending suffix: ${suffix}`);
+          newGuide.slug = `${newGuide.slug}-${suffix}`;
+        }
+
         const prefix = guidesFileContent.trim().endsWith("[];") ? "" : ",";
         const newGuideCode = JSON.stringify(newGuide, null, 4);
         

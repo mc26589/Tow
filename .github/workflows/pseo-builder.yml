@@ -39,5 +39,19 @@ jobs:
           git config --global user.email "agent@towing.haifa.ai"
           mkdir -p src/app/areas/
           git add src/app/areas/ || true
-          git commit -m "Auto-generate pSEO pages: E-E-A-T & SGE [skip ci]" || echo "No changes to commit"
-          git push
+          git diff --staged --quiet && { echo "No changes to commit"; exit 0; }
+          git commit -m "Auto-generate pSEO pages: E-E-A-T & SGE [skip ci]"
+          # Pull latest changes from remote before pushing (prevents conflicts)
+          for i in 1 2 3; do
+            git pull --rebase origin main || {
+              echo "Rebase failed — checking for conflict markers..."
+              if grep -rn '<<<<<<< ' -- . 2>/dev/null; then
+                echo "ERROR: Conflict markers detected. Aborting."
+                git rebase --abort 2>/dev/null || true
+                exit 1
+              fi
+            }
+            git push && break
+            echo "Push attempt $i failed, retrying in 5s..."
+            sleep 5
+          done
