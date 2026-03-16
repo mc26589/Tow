@@ -64,6 +64,11 @@ export function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/milon/towing-cost" className="text-slate-400 hover:text-white transition-colors">
+                                    מחשבון עלויות גרירה
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/about" className="text-slate-400 hover:text-white transition-colors">
                                     אודות החברה והצוות
                                 </Link>
