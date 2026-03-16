@@ -116,6 +116,7 @@ async function runSocialSEOAgency() {
   "category": "טיפים לנהגים",
   "article_content": "תוכן המאמר ב-HTML (h2, h3, p)",
   "fb_post_message": "תוכן הפוסט לפייסבוק הכולל את [LINK]",
+  "fb_image_prompt": "מתאר תמונה ריאליסטי ודרמטי לפוסט בפייסבוק (באנגלית)",
   "author": "המוסכניק הוירטואלי - גרר חיפה"
 }
 `;
@@ -166,6 +167,7 @@ async function runSocialSEOAgency() {
     console.log("- Slug:", newGuide.slug);
     console.log("- Link:", articleLink);
     console.log("- FB Message:", fbMessage);
+    console.log("- FB Image Prompt:", data.fb_image_prompt);
 
     if (!IS_DRY_RUN) {
       const guidesPath = path.join(process.cwd(), "src", "lib", "guides.ts");
