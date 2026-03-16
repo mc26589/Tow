@@ -2,6 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import * as fs from "fs";
 import * as path from "path";
 import * as dotenv from 'dotenv';
+import { getTrendingTopicForArticle } from './lib/trends-fetcher';
 
 dotenv.config({ path: '.env.local' });
 
@@ -77,30 +78,51 @@ async function postToFacebook(message: string, link: string) {
 
 async function runSocialSEOAgency() {
   const model = genAI.getGenerativeModel({ 
-    model: "gemini-3.1-flash-lite-preview",
+    model: "gemini-2.5-flash",
     generationConfig: { responseMimeType: "application/json" }
   }); 
 
   console.log("Analyzing existing content...");
 
-  let areasContent = "";
+  // Read existing guides to avoid duplicate topics
+  const guidesPath = path.join(process.cwd(), "src", "lib", "guides.ts");
+  let existingTitles: string[] = [];
   try {
-    const areasPath = path.join(process.cwd(), "src", "app", "areas", "haifa-general");
-    const files = fs.readdirSync(areasPath);
-    areasContent = files.slice(0, 10).join(", ");
+    const guidesContent = fs.readFileSync(guidesPath, "utf-8");
+    existingTitles = Array.from(guidesContent.matchAll(/title:\s*"([^"]+)"/g)).map(m => m[1]);
   } catch (e) {
-    console.warn("Could not read areas directory.");
+    console.warn("Could not read guides.ts for existing titles.");
   }
+
+  // Fetch Google Trends for topic inspiration
+  console.log("📈 Fetching Google Trends for topic inspiration...");
+  const trendResult = await getTrendingTopicForArticle(existingTitles);
+  const trendHint = trendResult
+    ? `\n\nטרנד חם מגוגל שכדאי לכתוב עליו: "${trendResult.topic}" (מילות מפתח: ${trendResult.keywords.join(', ')})`
+    : '';
+
+  const existingTitlesList = existingTitles.slice(-10).join('\n- ');
+
+  const categories = [
+    "טיפים לנהגים", "אבחון תקלות", "תחזוקה",
+    "בטיחות בדרכים", "רכב חשמלי", "שירותי גרירה"
+  ];
 
   const prompt = `
 אתה סוכן SEO ומומחה תוכן לגרר מפרץ אקספרס בחיפה. 
 המטרה שלך היא להפיק שני דברים:
 1. מאמר SEO חדש לבלוג באתר.
 2. פוסט שיווקי ומניע לפעולה לדף הפייסבוק שלנו שיקשר למאמר.
+${trendHint}
 
-אלה הנושאים הקיימים: ${areasContent}
+נושאים שכבר כתובים באתר (אסור לחזור עליהם!):
+- ${existingTitlesList}
+
+קטגוריות אפשריות: ${categories.join(', ')}
+(בחר קטגוריה שלא חזרה הרבה פעמים)
 
 המאמר צריך להיות עד 350 מילים, בסגנון אנושי, מועיל ואמפתי לנהגים שנתקעו.
+הוסף הקשר מקומי — שכונות בחיפה, כבישים מוכרים, מזג אוויר.
 
 דגשים חשובים לפוסט בפייסבוק:
 - הפוסט צריך להיות קליל, לכלול אימוג'ים.
@@ -113,7 +135,7 @@ async function runSocialSEOAgency() {
   "slug": "english-url-slug",
   "title": "כותרת המאמר",
   "description": "תיאור SEO קצר",
-  "category": "טיפים לנהגים",
+  "category": "אחת מהקטגוריות למעלה",
   "article_content": "תוכן המאמר ב-HTML (h2, h3, p)",
   "fb_post_message": "תוכן הפוסט לפייסבוק הכולל את [LINK]",
   "fb_image_prompt": "מתאר תמונה ריאליסטי ודרמטי לפוסט בפייסבוק (באנגלית)",
@@ -159,7 +181,7 @@ async function runSocialSEOAgency() {
       content: data.article_content
     };
 
-    const articleLink = `https://grar-haifa.vercel.app`;
+    const articleLink = `https://grar-haifa.vercel.app/guides/${newGuide.slug}`;
     const fbMessage = data.fb_post_message.replace(/\[LINK\]/g, articleLink);
 
     console.log("\nGenerated Content:");

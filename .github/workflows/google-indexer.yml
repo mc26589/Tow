@@ -24,7 +24,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: ./google-indexer
-        run: npm ci
+        run: npm ci --no-progress --no-audit --no-fund --loglevel=error
 
       - name: Recreate Service Account Key
         working-directory: ./google-indexer

@@ -63,7 +63,7 @@ async function logContactedGarage(garage: { name: string; email: string; phone: 
 }
 
 async function findLocalGarages(previouslyContacted: string[]) {
-    const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     console.log("Locating 5 new garages in the Haifa/Krayot area...");
 

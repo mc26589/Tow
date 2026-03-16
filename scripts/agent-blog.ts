@@ -1,18 +1,24 @@
 /**
  * Blog Agent — Automated article generator for GRAR towing website
  * 
- * Uses Gemini AI to generate high-quality Hebrew articles about car problems
- * that people search for before they need a tow truck.
+ * Uses Google Trends + Gemini AI to generate high-quality Hebrew articles
+ * about trending car problems people search for.
+ * 
+ * Topic strategy (3 tiers):
+ *   1. Google Trends daily automotive trends (Israel)
+ *   2. Related queries from seed keywords
+ *   3. Gemini AI fallback — ask for a new topic dynamically
  * 
  * Run: npm run agent:blog
+ * Dry run: npm run agent:blog -- --dry-run
  * Scheduled: Twice per week via GitHub Actions
  */
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import fs from "fs";
 import path from "path";
-import { execSync } from "child_process";
 import * as dotenv from 'dotenv';
+import { getTrendingTopicForArticle } from './lib/trends-fetcher';
 
 dotenv.config({ path: '.env.local' });
 
@@ -26,118 +32,11 @@ if (!GEMINI_API_KEY) {
     process.exit(1);
 }
 
+const IS_DRY_RUN = process.argv.includes('--dry-run');
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 const GUIDES_FILE = path.join(__dirname, "..", "src", "lib", "guides.ts");
-
-// ============================================
-// Topic Pool — Pre-tow search intent topics
-// ============================================
-
-const TOPIC_POOL = [
-    {
-        topic: "מה לעשות כשהרכב לא עובר בטסט (מבחן רישוי)",
-        keywords: "טסט, מבחן רישוי, רכב לא עובר טסט",
-        category: "טיפים לנהגים"
-    },
-    {
-        topic: "איך לבדוק רכב משומש לפני קנייה — צ'ק ליסט מלא",
-        keywords: "בדיקת רכב משומש, קניית רכב יד שנייה",
-        category: "טיפים לנהגים"
-    },
-    {
-        topic: "הגה רוטט בזמן נסיעה? הסיבות ומה לעשות",
-        keywords: "הגה רוטט, וויברציה הגה, רעידות נסיעה",
-        category: "אבחון תקלות"
-    },
-    {
-        topic: "ריחות מוזרים מהרכב — מדריך לזיהוי תקלות לפי ריח",
-        keywords: "ריח שריפה מרכב, ריח מתוק מרכב, ריח בנזין",
-        category: "אבחון תקלות"
-    },
-    {
-        topic: "בלמים לא מגיבים כמו פעם? מתי זה מסוכן",
-        keywords: "בלמים חלשים, בעיית בלמים, רפדות בלמים",
-        category: "אבחון תקלות"
-    },
-    {
-        topic: "גיר אוטומטי מתנהג מוזר — סימנים לתקלה",
-        keywords: "תקלת גיר, גיר אוטומטי, הרכב קופץ בהילוכים",
-        category: "אבחון תקלות"
-    },
-    {
-        topic: "סוללת רכב חשמלי — כל מה שצריך לדעת על טווח ותקלות",
-        keywords: "רכב חשמלי, סוללת רכב חשמלי, טווח רכב חשמלי",
-        category: "רכב חשמלי"
-    },
-    {
-        topic: "מה לעשות אחרי תאונת דרכים — צעד אחרי צעד",
-        keywords: "תאונת דרכים, מה לעשות אחרי תאונה, דיווח תאונה",
-        category: "בטיחות בדרכים"
-    },
-    {
-        topic: "נסיעה בגשם: 10 טיפים שיכולים להציל חיים",
-        keywords: "נסיעה בגשם, החלקת רכב, כביש רטוב",
-        category: "בטיחות בדרכים"
-    },
-    {
-        topic: "מערכת מיזוג לא מקררת? הסיבות הנפוצות ביותר",
-        keywords: "מזגן לא עובד, מזגן רכב, מזגן לא מקרר",
-        category: "אבחון תקלות"
-    },
-    {
-        topic: "רכב עושה בעיות בעלייה — תקלות נפוצות בכבישים תלולים",
-        keywords: "רכב לא עולה, עלייה כרמל, רכב חלש בעלייה",
-        category: "אבחון תקלות"
-    },
-    {
-        topic: "מתי מחליפים תזמון (רצועת טיימינג) ולמה זה קריטי",
-        keywords: "רצועת טיימינג, תזמון מנוע, החלפת טיימינג",
-        category: "תחזוקה"
-    },
-    {
-        topic: "חורף בחיפה: איך הגשמים פוגעים ברכב ומה אפשר לעשות",
-        keywords: "נזקי חורף רכב, חלודה, מים ברכב",
-        category: "תחזוקה"
-    },
-    {
-        topic: "איך להתניע רכב עם כבלים — מדריך נכון ובטוח",
-        keywords: "התנעה עם כבלים, ג'אמפ לרכב, מצבר מת",
-        category: "טיפים לנהגים"
-    },
-    {
-        topic: "מה ההבדל בין גרירה רגילה לגרירה על מגש ומתי צריכים מה",
-        keywords: "סוגי גרירה, גרר מגש, גרירת רכב",
-        category: "טיפים לנהגים"
-    },
-    {
-        topic: "הרכב מוציא עשן — מה הצבע אומר על התקלה",
-        keywords: "עשן מרכב, עשן לבן מהאגזוז, עשן כחול",
-        category: "אבחון תקלות"
-    },
-    {
-        topic: "דליפת שמן מהמנוע — כמה זה רציני?",
-        keywords: "דליפת שמן, כתם שמן מתחת לרכב, שמן מנוע",
-        category: "אבחון תקלות"
-    },
-    {
-        topic: "תחזוקת רכב בסיסית — 10 דברים שכל נהג חייב לבדוק",
-        keywords: "תחזוקת רכב, טיפול שוטף, בדיקת רכב",
-        category: "תחזוקה"
-    },
-    {
-        topic: "רכב לא ננעל או לא נפתח? בעיות שלט רחוק ומנעול",
-        keywords: "שלט רחוק רכב, מפתח רכב לא עובד, מנעול רכב",
-        category: "אבחון תקלות"
-    },
-    {
-        topic: "קניתם רכב חשמלי? 8 דברים שכדאי לדעת על גרירת רכב חשמלי",
-        keywords: "גרירת רכב חשמלי, גרר לרכב חשמלי, טסלה גרירה",
-        category: "רכב חשמלי"
-    },
-];
-
 
 // ============================================
 // Main Logic
@@ -149,48 +48,104 @@ async function main() {
     // 1. Read existing guides to find used slugs/topics
     const guidesContent = fs.readFileSync(GUIDES_FILE, "utf-8");
     const existingSlugs = Array.from(guidesContent.matchAll(/slug:\s*"([^"]+)"/g)).map(m => m[1]);
+    const existingTitles = Array.from(guidesContent.matchAll(/title:\s*"([^"]+)"/g)).map(m => m[1]);
     console.log(`📚 Found ${existingSlugs.length} existing articles`);
 
-    // 2. Filter out already-used topics (by checking if keywords appear in existing content)
-    const availableTopics = TOPIC_POOL.filter(t => {
-        const topicSlug = slugify(t.topic);
-        return !existingSlugs.some(s => s === topicSlug) &&
-               !guidesContent.includes(t.topic);
-    });
+    // 2. Get a trending topic from Google Trends
+    console.log("📈 Fetching Google Trends...");
+    const trendResult = await getTrendingTopicForArticle(existingTitles);
 
-    if (availableTopics.length === 0) {
-        console.log("✅ All topics have been covered! No new article needed.");
-        return;
+    let topicText: string;
+    let keywordsText: string;
+    let topicSource: string;
+
+    if (trendResult) {
+        topicText = trendResult.topic;
+        keywordsText = trendResult.keywords.join(', ');
+        topicSource = trendResult.source;
+        console.log(`🔥 Trend found (${topicSource}): "${topicText}"`);
+        console.log(`   Keywords: ${keywordsText}`);
+    } else {
+        // Fallback: Ask Gemini to suggest a new topic
+        console.log("🤖 No trends found. Asking Gemini to suggest a topic...");
+        const suggestion = await suggestTopicWithGemini(existingTitles);
+        if (!suggestion) {
+            console.error("❌ Could not generate a topic. Exiting.");
+            return;
+        }
+        topicText = suggestion.topic;
+        keywordsText = suggestion.keywords;
+        topicSource = 'gemini-suggestion';
+        console.log(`💡 Gemini suggested: "${topicText}"`);
     }
 
-    // 3. Pick a random topic
-    const topic = availableTopics[Math.floor(Math.random() * availableTopics.length)];
-    console.log(`✍️  Generating article: "${topic.topic}"`);
-
-    // 4. Generate article with Gemini
-    const article = await generateArticle(topic);
+    // 3. Generate article with Gemini
+    console.log(`\n✍️  Generating article about: "${topicText}"`);
+    const article = await generateArticle(topicText, keywordsText);
     if (!article) {
         console.error("❌ Failed to generate article");
         return;
     }
 
-    console.log(`📝 Generated: "${article.title}" (${article.readTime})`);
+    // Ensure unique slug
+    let slug = article.slug;
+    if (existingSlugs.includes(slug)) {
+        slug = `${slug}-${Date.now().toString(36)}`;
+        console.log(`⚠️  Slug collision detected, using: ${slug}`);
+    }
+    article.slug = slug;
 
-    // 5. Append to guides.ts
-    appendArticle(article);
-    console.log("✅ Article appended to guides.ts");
+    console.log(`📝 Generated: "${article.title}" (slug: ${article.slug})`);
 
-    // 6. Git commit & push
-    try {
-        execSync("git add src/lib/guides.ts", { stdio: "pipe" });
-        execSync(`git commit -m "blog: ${article.title}"`, { stdio: "pipe" });
-        execSync("git push", { stdio: "pipe" });
-        console.log("🚀 Pushed to GitHub — Vercel will deploy automatically");
-    } catch (err) {
-        console.log("⚠️  Git push skipped (may need manual push)");
+    if (IS_DRY_RUN) {
+        console.log("\n🧪 [DRY RUN] Would append article to guides.ts:");
+        console.log(JSON.stringify(article, null, 2));
+        console.log("\n🧪 [DRY RUN] No files modified.");
+        return;
     }
 
-    console.log("\n🎉 Blog Agent finished successfully!");
+    // 4. Append to guides.ts
+    appendArticle(article);
+    console.log("✅ Article appended to guides.ts");
+    console.log(`📊 Topic source: ${topicSource}`);
+
+    // Git operations are handled by the GitHub Actions workflow
+    // (not in-script) to prevent rebase conflicts
+    console.log("\n🎉 Blog Agent finished. Workflow will commit & push.");
+}
+
+// ============================================
+// Gemini Topic Suggestion (Fallback)
+// ============================================
+
+async function suggestTopicWithGemini(existingTitles: string[]): Promise<{ topic: string; keywords: string } | null> {
+    const titlesList = existingTitles.slice(-15).join('\n- ');
+
+    const prompt = `אתה מומחה SEO לאתר של חברת גרירת רכבים "גרר מפרץ אקספרס" בחיפה והקריות.
+
+הנה כותרות המאמרים שכבר קיימים באתר:
+- ${titlesList}
+
+תציע נושא חדש למאמר שעדיין לא כתוב, שיהיה רלוונטי לנהגים בישראל ובמיוחד באזור חיפה.
+תבחר נושא שאנשים מחפשים בגוגל לפני שהם צריכים גרר (תקלות רכב, בטיחות, תחזוקה, אירועי חירום).
+
+החזר JSON בלבד (בלי markdown):
+{
+    "topic": "הנושא המוצע",
+    "keywords": "מילות מפתח מופרדות בפסיקים"
+}`;
+
+    try {
+        const result = await model.generateContent(prompt);
+        const text = result.response.text()
+            .replace(/```json\s*/gi, "")
+            .replace(/```\s*/g, "")
+            .trim();
+        return JSON.parse(text);
+    } catch (err) {
+        console.error("Error getting topic suggestion:", err);
+        return null;
+    }
 }
 
 // ============================================
@@ -208,14 +163,19 @@ interface GeneratedArticle {
     content: string;
 }
 
-async function generateArticle(topic: { topic: string; keywords: string; category: string }): Promise<GeneratedArticle | null> {
+async function generateArticle(topic: string, keywords: string): Promise<GeneratedArticle | null> {
     const today = new Date().toISOString().split("T")[0];
+
+    const categories = [
+        "טיפים לנהגים", "אבחון תקלות", "תחזוקה",
+        "בטיחות בדרכים", "רכב חשמלי", "שירותי גרירה"
+    ];
 
     const prompt = `אתה כותב תוכן לבלוג של חברת גרירת רכבים בחיפה והקריות בשם "גרר מפרץ אקספרס". 
 
-הנושא למאמר: ${topic.topic}
-מילות מפתח: ${topic.keywords}
-קטגוריה: ${topic.category}
+הנושא למאמר: ${topic}
+מילות מפתח: ${keywords}
+קטגוריות אפשריות: ${categories.join(', ')}
 
 הנחיות כתיבה:
 1. כתוב בעברית עממית, ידידותית, חמה ואנושית — כאילו חבר טוב שמבין ברכבים מדבר איתך
@@ -225,13 +185,16 @@ async function generateArticle(topic: { topic: string; keywords: string; categor
 5. התוכן חייב להיות מועיל ואיכותי באמת — לא סתם מאמר שיווקי, אלא מידע אמיתי שעוזר לאנשים
 6. בסוף המאמר, הוסף CTA עדין ונחמד (לא אגרסיבי) לגרר מפרץ אקספרס שזמינים 24/7 בחיפה והקריות
 7. אל תשתמש במילים כמו "לסיכום" או "בסופו של דבר" — סיים בצורה טבעית
-8. הוסף הקשר מקומי — רחובות בחיפה, כבישים ידועים, מזג אוויר מקומי
+8. הוסף הקשר מקומי — רחובות/שכונות בחיפה, כבישים ידועים (כביש 22, עוקף קריות, סטלה מאריס), מזג אוויר מקומי
 9. הפוך את המאמר למשהו שאנשים ישתפו עם חברים שיש להם בעיה ברכב
+10. בחר את הקטגוריה המתאימה ביותר מהרשימה
 
 החזר את התשובה בפורמט JSON בלבד (בלי markdown, בלי backticks):
 {
+    "slug": "english-url-slug-in-kebab-case",
     "title": "כותרת מושכת בעברית (עד 70 תווים)",
     "description": "תיאור מטא של 150-160 תווים בעברית",
+    "category": "קטגוריה מהרשימה",
     "readTime": "X דקות",
     "content": "תוכן HTML מלא עם h2, h3, p, ul, ol, strong"
 }`;
@@ -239,7 +202,7 @@ async function generateArticle(topic: { topic: string; keywords: string; categor
     try {
         const result = await model.generateContent(prompt);
         const text = result.response.text();
-        
+
         // Clean up the response — remove markdown code blocks if present
         const cleaned = text
             .replace(/```json\s*/gi, "")
@@ -249,10 +212,10 @@ async function generateArticle(topic: { topic: string; keywords: string; categor
         const parsed = JSON.parse(cleaned);
 
         return {
-            slug: slugify(topic.topic),
+            slug: parsed.slug || `blog-${Date.now()}`,
             title: parsed.title,
             description: parsed.description,
-            category: topic.category,
+            category: parsed.category || "טיפים לנהגים",
             publishDate: today,
             readTime: parsed.readTime || "5 דקות",
             author: "המוסכניק הוירטואלי - גרר חיפה",
@@ -304,28 +267,10 @@ function appendArticle(article: GeneratedArticle) {
 
     // Check if last char before ]; is } — we need a comma
     const needsComma = before.trimEnd().endsWith("}");
-    
+
     content = before + (needsComma ? "," : "") + "\n" + newEntry + "\n" + after;
 
     fs.writeFileSync(GUIDES_FILE, content, "utf-8");
-}
-
-// ============================================
-// Utilities
-// ============================================
-
-function slugify(text: string): string {
-    return text
-        .replace(/[^\w\s-]/g, "")  // Remove non-word chars (keeps Hebrew too)
-        .replace(/[\s_]+/g, "-")    // Replace spaces with hyphens
-        .replace(/-+/g, "-")        // Remove duplicate hyphens
-        .toLowerCase()
-        .substring(0, 80)           // Limit length
-        // For Hebrew text, create a transliterated slug
-        .replace(/[א-ת]/g, "")     // Remove Hebrew chars for slug
-        .replace(/-+/g, "-")
-        .replace(/^-|-$/g, "")
-        || `blog-${Date.now()}`;    // Fallback
 }
 
 // ============================================
