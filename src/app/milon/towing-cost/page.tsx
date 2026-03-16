@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { JsonLd } from '@/components/json-ld';
-import { TowingCostCalculator } from '@/components/towing-cost-calculator';
+import TowingCalculator from '@/components/TowingCalculator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 export const metadata: Metadata = {
@@ -67,7 +67,7 @@ export default function TowingCostPage() {
 
                 <div className="max-w-5xl mx-auto">
                     {/* The Interactive Calculator Widget */}
-                    <TowingCostCalculator />
+                    <TowingCalculator />
                 </div>
 
                 <section className="max-w-3xl mx-auto mt-16 space-y-8 bg-white p-8 md:p-10 rounded-3xl border border-slate-200/60 shadow-sm">
