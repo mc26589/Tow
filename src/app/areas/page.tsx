@@ -46,7 +46,7 @@ export default function AreasHubPage() {
                                                 כללי - {city.name_he}
                                             </Link>
                                         </li>
-                                        {NEIGHBORHOODS.map(hood => (
+                                        {NEIGHBORHOODS.filter(hood => hood.city_slug === city.slug).map(hood => (
                                             <li key={hood.slug}>
                                                 <Link href={`/locations/${city.slug}/${hood.slug}`} className="text-slate-600 hover:text-blue-600 hover:underline">
                                                     {hood.name_he}
