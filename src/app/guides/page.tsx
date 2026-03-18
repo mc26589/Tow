@@ -23,7 +23,7 @@ export default function GuidesPage() {
             <section className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        {GUIDES.map((guide) => (
+                        {[...GUIDES].sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()).map((guide) => (
                             <Link
                                 href={`/guides/${guide.slug}`}
                                 key={guide.slug}

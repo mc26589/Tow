@@ -58,12 +58,28 @@ export async function fetchDailyTrends(): Promise<TrendTopic[]> {
             'גשם', 'שטף', 'הצפה',
         ];
 
+        // Cities/areas to EXCLUDE — only Haifa/Krayot content is relevant
+        const excludedCities = [
+            'תל אביב', 'ירושלים', 'באר שבע', 'אילת', 'נתניה', 'רמת גן',
+            'פתח תקווה', 'ראשון לציון', 'אשדוד', 'אשקלון', 'רחובות',
+            'בני ברק', 'הרצליה', 'חולון', 'בת ים', 'רעננה', 'כפר סבא',
+            'הוד השרון', 'לוד', 'רמלה', 'מודיעין', 'נהריה', 'עכו',
+            'טבריה', 'צפת', 'נצרת', 'דימונה', 'אופקים', 'שדרות',
+        ];
+
         const autoTrends: TrendTopic[] = trendingSearches
             .filter((t: any) => {
                 const title = (t.title?.query || '').toLowerCase();
                 const articles = (t.articles || []).map((a: any) => (a.title || '').toLowerCase()).join(' ');
                 const combined = `${title} ${articles}`;
-                return autoKeywords.some(kw => combined.includes(kw));
+
+                // Must match automotive keywords
+                const isAutomotive = autoKeywords.some(kw => combined.includes(kw));
+
+                // Must NOT mention excluded cities
+                const mentionsExcludedCity = excludedCities.some(city => combined.includes(city));
+
+                return isAutomotive && !mentionsExcludedCity;
             })
             .slice(0, 5)
             .map((t: any) => ({
