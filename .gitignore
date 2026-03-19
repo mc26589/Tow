@@ -35,6 +35,7 @@ next-env.d.ts
 
 # MCP Configuration
 mcp_config.json
+.kilocode/
 
 # Google Indexer - exclude secrets and deps only
 google-indexer/service-account-keys.json
