@@ -1,6 +1,14 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 
+// Simple in-memory cache for price estimates
+const priceCache = new Map<string, { price: string; timestamp: number }>();
+const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+
+function getCacheKey(params: Record<string, any>): string {
+    return JSON.stringify(params);
+}
+
 export async function POST(req: Request) {
     const apiKey = process.env.GEMINI_API_KEY;
 
@@ -32,7 +40,25 @@ export async function POST(req: Request) {
             );
         }
 
-        console.log("[Calculator API] Calling Gemini with params:", {
+        // Check cache before calling Gemini
+        const cacheKey = getCacheKey({
+            fromLocation,
+            toLocation,
+            vehicleType,
+            frontWheels,
+            rearWheels,
+            locationType,
+            access,
+            timeOfDay,
+        });
+
+        const cached = priceCache.get(cacheKey);
+        if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
+            console.log("[Calculator API] Cache hit for key:", cacheKey);
+            return NextResponse.json({ estimatedPrice: cached.price });
+        }
+
+        console.log("[Calculator API] Cache miss. Calling Gemini with params:", {
             fromLocation,
             toLocation,
             vehicleType,
@@ -95,6 +121,13 @@ Response:`;
 
         console.log("[Calculator API] Gemini response:", responseText);
 
+        // Store result in cache
+        priceCache.set(cacheKey, {
+            price: responseText,
+            timestamp: Date.now(),
+        });
+        console.log("[Calculator API] Cached result for key:", cacheKey);
+
         return NextResponse.json({ estimatedPrice: responseText });
     } catch (error: any) {
         console.error("[Calculator API] Error:", error?.message || error);
@@ -105,3 +138,101 @@ Response:`;
         );
     }
 }
+- Access: ${access ? "Easy" : "Difficult"}
+- Time: ${timeOfDay}
+
+STRICT OUTPUT RULES:
+- Provide ONLY the final estimate in this format: "כ-X,XXX ₪" (or "כ-XXX ₪").
+- NO explanations. NO ranges. NO text other than the price.
+- Be consistent: the same inputs MUST result in the same price every time.
+
+Response:`;
+
+        const result = await model.generateContent(prompt);
+        const responseText = result.response.text().trim();
+
+        console.log("[Calculator API] Gemini response:", responseText);
+
+        // Store result in cache
+        priceCache.set(cacheKey, {
+            price: responseText,
+            timestamp: Date.now(),
+        });
+        console.log("[Calculator API] Cached result for key:", cacheKey);
+
+        return NextResponse.json({ estimatedPrice: responseText });
+    } catch (error: any) {
+        console.error("[Calculator API] Error:", error?.message || error);
+        console.error("[Calculator API] Full error:", JSON.stringify(error, null, 2));
+        return NextResponse.json(
+            { error: "Failed to calculate estimate" },
+            { status: 500 }
+        );
+    }
+}
+
+- Access: ${access ? "Easy" : "Difficult"}
+- Time: ${timeOfDay}
+
+STRICT OUTPUT RULES:
+- Provide ONLY the final estimate in this format: "כ-X,XXX ₪" (or "כ-XXX ₪").
+- NO explanations. NO ranges. NO text other than the price.
+- Be consistent: the same inputs MUST result in the same price every time.
+
+Response:`;
+
+        const result = await model.generateContent(prompt);
+        const responseText = result.response.text().trim();
+
+        console.log("[Calculator API] Gemini response:", responseText);
+
+        // Store result in cache
+        priceCache.set(cacheKey, {
+            price: responseText,
+            timestamp: Date.now(),
+        });
+        console.log("[Calculator API] Cached result for key:", cacheKey);
+
+        return NextResponse.json({ estimatedPrice: responseText });
+    } catch (error: any) {
+        console.error("[Calculator API] Error:", error?.message || error);
+        console.error("[Calculator API] Full error:", JSON.stringify(error, null, 2));
+        return NextResponse.json(
+            { error: "Failed to calculate estimate" },
+            { status: 500 }
+        );
+    }
+}
+
+
+
+STRICT OUTPUT RULES:
+- Provide ONLY the final estimate in this format: "כ-X,XXX ₪" (or "כ-XXX ₪").
+- NO explanations. NO ranges. NO text other than the price.
+- Be consistent: the same inputs MUST result in the same price every time.
+
+Response:`;
+
+        const result = await model.generateContent(prompt);
+        const responseText = result.response.text().trim();
+
+        console.log("[Calculator API] Gemini response:", responseText);
+
+        // Store result in cache
+        priceCache.set(cacheKey, {
+            price: responseText,
+            timestamp: Date.now(),
+        });
+        console.log("[Calculator API] Cached result for key:", cacheKey);
+
+        return NextResponse.json({ estimatedPrice: responseText });
+    } catch (error: any) {
+        console.error("[Calculator API] Error:", error?.message || error);
+        console.error("[Calculator API] Full error:", JSON.stringify(error, null, 2));
+        return NextResponse.json(
+            { error: "Failed to calculate estimate" },
+            { status: 500 }
+        );
+    }
+}
+

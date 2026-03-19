@@ -5,6 +5,20 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export const dynamic = "force-dynamic";
 
+// ============================================
+// Security: Input Sanitization
+// ============================================
+function sanitizeInput(input: string): string {
+    if (!input || typeof input !== 'string') return '';
+    
+    return input
+        .replace(/[<>]/g, '') // מניעת XSS
+        .replace(/javascript:/gi, '') // מניעת JavaScript injection
+        .replace(/on\w+=/gi, '') // מניעת event handlers
+        .substring(0, 500) // הגבלת אורך
+        .trim();
+}
+
 export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const mode = searchParams.get("hub.mode");
@@ -47,11 +61,11 @@ export async function POST(request: NextRequest) {
 
         let userInput = "";
         if (msg.type === "text") {
-            userInput = msg.text.body;
+            userInput = sanitizeInput(msg.text.body);
         } else if (msg.type === "interactive" && msg.interactive?.type === "list_reply") {
-            userInput = msg.interactive.list_reply.title;
+            userInput = sanitizeInput(msg.interactive.list_reply.title);
         } else if (msg.type === "interactive" && msg.interactive?.type === "button_reply") {
-            userInput = msg.interactive.button_reply.title;
+            userInput = sanitizeInput(msg.interactive.button_reply.title);
         }
 
         if (!userInput) return NextResponse.json({ success: true });
@@ -329,3 +343,212 @@ async function handleDriverTakeJob(driverPhone: string, jobId: string) {
         await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
     }
 }
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+
+
+
+
+
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+
+
+
+
+
+
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+
+
+
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+
+    for (const dPhone of drivers) {
+        await sendInteractiveButtons(dPhone, alertMessage, buttons);
+    }
+}
+
+async function handleDriverTakeJob(driverPhone: string, jobId: string) {
+    // ATOMIC UPDATE to avoid race conditions
+    const { data, error } = await supabase
+        .from("jobs")
+        .update({ status: "taken", taken_by_driver: driverPhone })
+        .eq("id", jobId)
+        .eq("status", "open")
+        .select();
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+    if (data && data.length > 0) {
+        // Race condition won!
+        const successMessage = `✅ העבודה שלך!\n\n📞 פרטי הלקוח:\nטלפון: ${data[0].customer_phone}\n\nנא ליצור איתו קשר בהקדם.`;
+        await sendMessage(driverPhone, successMessage);
+
+        // Notify the customer that their towing driver is on the way
+        await sendMessage(data[0].customer_phone, "נהג פנוי אישר את הקריאה שלך, והוא ייצור איתך קשר בדקות הקרובות!");
+    } else {
+        // Race condition lost
+        await sendMessage(driverPhone, "❌ מצטערים, נהג אחר כבר תפס את העבודה או שהיא לא זמינה יותר.");
+    }
+}
+
+
