@@ -5,9 +5,8 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי חילוץ רכב חיפה והקריות",
+    "name": "שירותי חילוץ רכב שטח חיפה והקריות",
     "areaServed": "Haifa and Krayot",
-    "priceRange": "$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -16,9 +15,10 @@ export default function Page() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "32.7625",
-      "longitude": "35.0150"
+      "latitude": 32.762,
+      "longitude": 35.015
     },
+    "priceRange": "$",
     "serviceType": "Off-road vehicle recovery and towing"
   };
 
@@ -31,18 +31,17 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב שטח בוץ ושביל יער כרמל סמוך לאוניברסיטת חיפה</h1>
-          <p className="text-lg md:text-xl mb-8">
-            נתקעתם בבוץ או בשטח טרשי באזור יערות הכרמל ליד אוניברסיטת חיפה? אנו מתמחים בחילוצי שטח מקצועיים לרכבי 4x4 ורכבים פרטיים. 
-            הצוות שלנו זמין 24/7 להגעה מהירה לכל נקודה בשבילי הכרמל.
+          <h1 className="text-4xl font-bold mb-6">חילוץ רכב שטח מבוץ ביער הכרמל סמוך לאוניברסיטת חיפה</h1>
+          <p className="text-xl mb-8 leading-relaxed">
+            נתקעתם עם רכב השטח בבוץ העמוק של יער הכרמל? אנו מתמחים בחילוץ רכבי 4x4, רכבי שטח ורכבים פרטיים באזור אוניברסיטת חיפה. הצוות שלנו זמין 24/7 ומגיע מצויד בכל הציוד הנדרש לחילוץ בטוח בתנאי שטח מאתגרים.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-wrap gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
               className="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
-              חיוג מהיר למוקד החילוץ
+              התקשרו עכשיו לחילוץ מהיר
             </a>
           </div>
         </div>
@@ -50,15 +49,15 @@ export default function Page() {
 
       <section className="py-12 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ בשטח?</h2>
-          <ul className="space-y-4 text-gray-300">
-            <li>✓ מומחיות בחילוצי שטח, בוץ וחול באזור הכרמל.</li>
-            <li>✓ ציוד חילוץ מתקדם המתאים לרכבי שטח ורכבים פרטיים.</li>
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ ביער הכרמל?</h2>
+          <ul className="space-y-4 text-lg">
             <li>✓ זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
-            <li>✓ מחירים הוגנים ושירות אדיב ומקצועי.</li>
+            <li>✓ מומחיות בחילוץ רכבי שטח מבוץ, חול ותנאי שטח קשים.</li>
+            <li>✓ הגעה מהירה לאזור אוניברסיטת חיפה והכרמל.</li>
+            <li>✓ מחירים הוגנים ושירות מקצועי ללא פשרות.</li>
           </ul>
           <p className="mt-8 text-sm text-gray-400">
-            *הערה: השירות ניתן לרכבים פרטיים, מסחריים ורכבי שטח בלבד. איננו מספקים שירותי חילוץ או גרירה לאופנועים.
+            *שימו לב: אנו מתמחים בחילוץ רכבי שטח, רכבים פרטיים ומסחריים. איננו מספקים שירותי חילוץ או גרירה לאופנועים.
           </p>
         </div>
       </section>
