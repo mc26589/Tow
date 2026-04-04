@@ -45,7 +45,7 @@ export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isH
         image: `${baseUrl}/logo.png`,
         priceRange: "$$",
         founder: { "@id": `${baseUrl}/#owner` },
-        knowsAbout: ["גרירה", "חילוץ רכב", "שירותי דרך"],
+        knowsAbout: ["גרירה", "חילוץ רכב", "שירותי דרכים", "שגריר", "גרר", "פנצ'ר", "מנהרות הכרמל", "איתוראן"],
         openingHoursSpecification: {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: [

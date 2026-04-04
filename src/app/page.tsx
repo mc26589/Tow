@@ -14,6 +14,11 @@ export default function HomePage() {
         <>
             <JsonLd isHomePage={true} faqs={homeFaqs} />
 
+            {/* Hidden semantic text for Googlebot/Screen readers (Long-tail keywords) */}
+            <div className="sr-only" aria-hidden="true">
+                גרר מפרץ אקספרס — שירותי דרכים מקצועיים בחיפה והצפון. שגריר מהיר לחילוץ רכבים, פנצ'ר בדרך, תקלות במנהרות הכרמל, שירות גרירה PRO. חלופה מהירה ואמינה לאיתוראן. גרר בשיטת KSP — מחיר שקוף ושירות מיידי 24/7.
+            </div>
+
             {/* Calculator SEO — WebApplication structured data */}
             <script
                 type="application/ld+json"
@@ -65,9 +70,9 @@ export default function HomePage() {
                     </h1>
 
                     <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-                        נתקעתם בדרך? אנחנו מגיעים תוך 30 דקות לכל מקום בחיפה, הקריות, עכו ויקנעם.
+                        נתקעתם בדרך? צריכים שגריר או גרר דחוף? אנחנו מגיעים תוך 30 דקות לכל מקום בחיפה, הקריות, עכו ויקנעם.
                         <br className="hidden md:block" />
-                        מחירים שקופים, בלי הפתעות.
+                        שירותי דרכים מקצועיים — פנצ'ר, תקלות מכניות, מנהרות הכרמל. מחירי PRO שקופים, בלי הפתעות.
                     </p>
 
                     {/* Hero CTAs */}
