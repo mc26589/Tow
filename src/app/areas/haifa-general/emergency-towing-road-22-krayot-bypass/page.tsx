@@ -20,34 +20,42 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      <section className="gradient-trust text-white py-14 md:py-20 px-6">
-        <div className="max-w-4xl mx-auto">
+      <section className="gradient-trust text-white py-14 md:py-20">
+        <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה דחופים כביש 22 עוקף קריות</h1>
-          <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            זקוקים לחילוץ דחוף בכביש 22? אנו מתמחים במתן מענה מהיר לרכבים פרטיים, רכבים מסחריים ורכבי 4x4. 
-            חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים. 
-            הצוות שלנו ערוך להגיע לכל נקודה לאורך עוקף קריות בכל שעה, במחירים הוגנים ושירות ללא פשרות.
+          <p className="text-xl mb-8 max-w-2xl">
+            נתקעתם עם הרכב בכביש 22? אנו מציעים שירותי גרירה וחילוץ מקצועיים, מהירים ובטוחים. 
+            אנו מתמחים ברכבים פרטיים, מסחריים ורכבי 4x4. 
+            חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+            <WhatsAppCTA cityName="חיפה והקריות" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors text-center"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
-              חיוג מהיר למוקד החירום
+              חיוג מהיר למוקד
             </a>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בכביש 22?</h2>
-          <ul className="space-y-4 text-gray-700">
-            <li>✓ הגעה מהירה לכל נקודה בכביש עוקף קריות.</li>
-            <li>✓ זמינות מלאה 24/7, כולל שבתות וחגים.</li>
-            <li>✓ צוות מיומן ומקצועי לטיפול ברכבים פרטיים ומסחריים.</li>
-            <li>✓ שקיפות מלאה ומחירים הוגנים ללא הפתעות.</li>
+          <ul className="grid md:grid-cols-3 gap-8">
+            <li className="p-6 bg-white rounded-xl shadow-sm">
+              <h3 className="font-bold text-xl mb-2">זמינות 24/7</h3>
+              <p>אנחנו כאן בשבילכם בכל שעה, גם בלילה ובסופי שבוע, כדי שלא תשארו תקועים על עוקף קריות.</p>
+            </li>
+            <li className="p-6 bg-white rounded-xl shadow-sm">
+              <h3 className="font-bold text-xl mb-2">מחירים הוגנים</h3>
+              <p>שירות מקצועי במחיר משתלם. קבלו הצעת מחיר שקופה בטלפון ללא הפתעות.</p>
+            </li>
+            <li className="p-6 bg-white rounded-xl shadow-sm">
+              <h3 className="font-bold text-xl mb-2">ציוד חדיש</h3>
+              <p>צי גוררים מתקדם המבטיח גרירה בטוחה ושמירה על הרכב שלכם לאורך כל הדרך.</p>
+            </li>
           </ul>
         </div>
       </section>
