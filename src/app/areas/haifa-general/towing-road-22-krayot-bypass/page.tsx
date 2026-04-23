@@ -16,8 +16,8 @@ export default function Page() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "32.8191",
-      "longitude": "35.0633"
+      "latitude": "32.8156",
+      "longitude": "35.0653"
     },
     "serviceType": "Emergency Roadside Assistance and Towing"
   };
@@ -31,11 +31,11 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6">גרר רכבים תקועים בכביש 22 עוקף קריות – שירות מהיר ומקצועי 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם בכביש 22? הצוות שלנו בדרך אליכם.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר רכבים תקועים בכביש 22 עוקף קריות</h1>
+          <p className="text-xl mb-8">נתקעתם בכביש 22? אנחנו בדרך אליכם עם שירות גרירה מהיר ומקצועי.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-4 rounded-lg font-bold text-lg">
-              התקשרו עכשיו להזמנת גרר
+              התקשרו עכשיו לחילוץ
             </a>
             <WhatsAppCTA cityName="Haifa and Krayot" />
           </div>
@@ -43,23 +43,10 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-4">שירותי חילוץ וגרירה בכביש 22</h2>
-        <p className="mb-4">
-          אם נתקעתם עם הרכב בכביש 22 (עוקף קריות), אנו כאן כדי להעניק לכם מענה מהיר ובטוח. אנו מתמחים בחילוץ וגרירת רכבים פרטיים, מסחריים ורכבי 4x4. 
-          הצוות שלנו מכיר היטב את צירי התנועה בחיפה והקריות ומבטיח הגעה מהירה לכל נקודה בכביש.
-        </p>
-        <p className="font-semibold text-red-600">
-          חשוב: אנו לא מספקים שירותי גרירה לאופנועים.
-        </p>
-        <div className="mt-8">
-          <h3 className="text-xl font-bold mb-2">למה לבחור בנו?</h3>
-          <ul className="list-disc pr-5 space-y-2">
-            <li>זמינות מלאה 24/7 לכל מקרה חירום.</li>
-            <li>מחירים הוגנים ושקיפות מלאה.</li>
-            <li>ציוד גרירה חדיש ומקצועי.</li>
-            <li>ניסיון רב בחילוץ בכבישים מהירים.</li>
-          </ul>
-        </div>
+        <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים בציר עוקף קריות</h2>
+        <p className="mb-4">אנו מספקים מענה מיידי לכל סוגי הרכבים התקועים בכביש 22. הצוות שלנו מיומן בחילוץ בטוח ומהיר, תוך שמירה על כללי הבטיחות בכביש מהיר.</p>
+        <p className="mb-4"><strong>שימו לב:</strong> אנו מתמחים בגרירת רכבים פרטיים, מסחריים ורכבי 4x4. איננו מספקים שירותי גרירה לאופנועים.</p>
+        <p>המחירים שלנו הוגנים ושקופים. צרו קשר לקבלת הצעת מחיר בטלפון.</p>
       </section>
     </main>
   );
