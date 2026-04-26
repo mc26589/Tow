@@ -1,20 +1,14 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "שירותי גרירה זולים בצומת צ'ק פוסט | זמינות 24/7",
-  description: "זקוקים לגרר בצומת צ'ק פוסט? שירותי גרירה מקצועיים, מהירים ובמחירים הוגנים. אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. צרו קשר עכשיו."
-};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה בצפון",
+    "name": "שירותי גרירה צ'ק פוסט",
     "areaServed": { "@type": "City", "name": "Haifa and Krayot" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
-    "geo": { "@type": "GeoCoordinates", "latitude": "32.7885", "longitude": "35.0253" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "32.7936", "longitude": "35.0236" },
     "priceRange": "$",
     "serviceType": "Towing and Roadside Assistance"
   };
@@ -27,17 +21,17 @@ export default function Page() {
       />
       
       <section className="gradient-trust text-white py-14 md:py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה זולים בצומת צ'ק פוסט</h1>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl">
-            נתקעתם עם הרכב באזור צומת צ'ק פוסט? אנו כאן כדי לסייע. אנו מציעים שירותי גרירה וחילוץ מקצועיים לרכבים פרטיים, רכבים מסחריים ורכבי 4x4 במחירים הוגנים. 
-            חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים.
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            נתקעתם בצומת צ'ק פוסט? אנו מציעים שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי 4x4 במחירים הוגנים. 
+            שימו לב: איננו מספקים שירותי גרירה לאופנועים.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <WhatsAppCTA cityName="חיפה והקריות" />
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
             >
               התקשרו עכשיו לקבלת הצעת מחיר
             </a>
@@ -45,14 +39,22 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לשירותי גרירה בצ'ק פוסט?</h2>
-          <ul className="space-y-4 text-gray-700">
-            <li>✓ זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
-            <li>✓ הגעה מהירה לכל נקודה בצומת צ'ק פוסט והסביבה.</li>
-            <li>✓ שירות אמין, מקצועי ובמחיר זול ללא הפתעות.</li>
-            <li>✓ צוות מיומן המצויד בציוד גרירה מתקדם.</li>
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">למה לבחור בנו בצומת צ'ק פוסט?</h2>
+          <ul className="grid md:grid-cols-3 gap-8">
+            <li className="p-6 border border-gray-700 rounded-xl">
+              <h3 className="text-xl font-semibold mb-2">זמינות 24/7</h3>
+              <p>אנחנו כאן בשבילכם בכל שעה, גם בסופי שבוע וחגים.</p>
+            </li>
+            <li className="p-6 border border-gray-700 rounded-xl">
+              <h3 className="text-xl font-semibold mb-2">מחירים הוגנים</h3>
+              <p>שירות מקצועי במחיר זול ומשתלם ללא הפתעות.</p>
+            </li>
+            <li className="p-6 border border-gray-700 rounded-xl">
+              <h3 className="text-xl font-semibold mb-2">מומחיות ברכבים</h3>
+              <p>ניסיון רב בגרירת רכבים פרטיים, מסחריים ורכבי שטח.</p>
+            </li>
           </ul>
         </div>
       </section>
