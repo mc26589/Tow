@@ -1,12 +1,19 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי | שירות 24/7",
+  description: "מחפשים קונה רכבים לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי, שירות מקצועי ומחירים הוגנים לכל סוגי הרכבים (למעט אופנועים). צרו קשר עכשיו!",
+};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי פינוי וקניית רכבים לפירוק חיפה והקריות",
-    "areaServed": ["חיפה", "קרית אתא", "קרית ביאליק", "קרית מוצקין", "קרית ים"],
+    "name": "שירותי גרירה ופירוק רכבים חיפה והקריות",
+    "areaServed": ["Haifa", "Krayot"],
+    "priceRange": "$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -18,42 +25,45 @@ export default function Page() {
       "latitude": "32.7940",
       "longitude": "34.9896"
     },
-    "priceRange": "$",
-    "serviceType": "קניית רכבים לפירוק ופינוי רכבים"
+    "serviceType": "Car Scrap Removal"
   };
 
   return (
-    <main>
+    <main className="bg-neutral-950 text-neutral-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      <section className="gradient-trust text-white py-14 md:py-20 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי</h1>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          אנו מתמחים בקניית רכבים לפירוק, רכבים לברזל ורכבים לאחר תאונה. השירות כולל פינוי מיידי באמצעות גרר מקצועי בכל אזור חיפה והקריות. 
-          חשוב לציין: אנו מטפלים ברכבים פרטיים, מסחריים ורכבי 4x4 בלבד. איננו מספקים שירותי פינוי לאופנועים.
-        </p>
-        <div className="flex flex-col md:flex-row gap-4 justify-center">
-          <WhatsAppCTA cityName="חיפה והקריות" />
-          <a 
-            href={`tel:+${BUSINESS_INFO.phone}`} 
-            className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
-          >
-            התקשרו עכשיו להצעת מחיר
-          </a>
+      <section className="gradient-trust text-white py-14 md:py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי</h1>
+          <p className="text-xl mb-8">זקוקים לפינוי רכב ישן או תקול? אנו כאן בשבילכם 24/7.</p>
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <WhatsAppCTA cityName="Haifa and Krayot" />
+            <a 
+              href={`tel:+${BUSINESS_INFO.phone}`} 
+              className="bg-white text-neutral-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition"
+            >
+              התקשרו עכשיו לשיחת ייעוץ
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="py-16 px-6 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי הרכב שלכם?</h2>
-        <ul className="space-y-4 text-lg">
-          <li>✅ <strong>פינוי מיידי:</strong> מגיעים לכל נקודה בחיפה והקריות במהירות.</li>
-          <li>✅ <strong>מחירים הוגנים:</strong> הערכת שווי הוגנת לרכב שלכם בהתאם למצבו.</li>
-          <li>✅ <strong>שירות מקצועי:</strong> צוות מיומן בפינוי רכבים ללא נזק לסביבה.</li>
-          <li>✅ <strong>זמינות מלאה:</strong> שירות 24/7 לכל צורך בפינוי רכב.</li>
-        </ul>
+      <section className="py-16 container mx-auto px-4">
+        <div className="max-w-3xl mx-auto prose prose-invert">
+          <h2>שירות קניית רכבים לפירוק בחיפה והקריות – פינוי מהיר ומקצועי</h2>
+          <p>אנו מתמחים בקניית רכבים לפירוק בחיפה, הקריות והסביבה, ומציעים שירות פינוי מיידי ללא עלות. אם הרכב שלכם עומד ללא שימוש, עבר תאונה או שאינו עובר טסט, אנו כאן כדי להעניק לכם פתרון מהיר, הוגן ומקצועי. אנו קונים רכבים פרטיים, רכבים מסחריים ורכבי 4x4. <strong>חשוב לציין: אנו לא מטפלים באופנועים.</strong></p>
+          
+          <h3>למה לבחור בנו לפינוי הרכב שלכם?</h3>
+          <ul>
+            <li><strong>פינוי מיידי:</strong> צוות הגרירה שלנו זמין בחיפה ובקריות להגעה מהירה לכל נקודה.</li>
+            <li><strong>מחירים הוגנים:</strong> אנו מעריכים את הרכב שלכם ומציעים הצעת מחיר הוגנת בטלפון.</li>
+            <li><strong>שירות ללא עלות:</strong> הפינוי והגרירה מתבצעים על ידינו ללא עלות נוספת ללקוח.</li>
+            <li><strong>ניסיון ומוניטין:</strong> צוות מיומן שמכיר את כל אזורי חיפה והקריות ומבצע את העבודה בבטיחות מרבית.</li>
+          </ul>
+        </div>
       </section>
     </main>
   );
