@@ -1,16 +1,22 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "שירותי גרירה זולים בצומת צ'ק פוסט | זמינות 24/7",
+  description: "נתקעתם בצומת צ'ק פוסט? שירותי גרירה מהירים, אמינים ובמחיר הוגן. חילוץ רכבים פרטיים ומסחריים בכל שעות היממה."
+};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
     "name": "שירותי גרירה צ'ק פוסט",
-    "areaServed": { "@type": "City", "name": "Haifa and Krayot" },
+    "areaServed": { "@type": "Place", "name": "צומת צ'ק פוסט, חיפה" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
-    "geo": { "@type": "GeoCoordinates", "latitude": "32.7936", "longitude": "35.0236" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "32.7858", "longitude": "35.0236" },
     "priceRange": "$",
-    "serviceType": "Towing and Roadside Assistance"
+    "serviceType": "Towing Service"
   };
 
   return (
@@ -21,42 +27,32 @@ export default function Page() {
       />
       
       <section className="gradient-trust text-white py-14 md:py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה זולים בצומת צ'ק פוסט</h1>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            נתקעתם בצומת צ'ק פוסט? אנו מציעים שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי 4x4 במחירים הוגנים. 
-            שימו לב: איננו מספקים שירותי גרירה לאופנועים.
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-6">שירותי גרירה זולים בצומת צ'ק פוסט</h1>
+          <p className="text-lg mb-8 max-w-2xl">
+            נתקעתם עם הרכב באזור צומת צ'ק פוסט? אנו מציעים שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי 4x4. 
+            חשוב לציין: איננו מספקים שירותי גרירה לאופנועים. אנו מתחייבים למחירים הוגנים, שירות מהיר וזמינות מלאה 24/7.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
+              className="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
-              התקשרו עכשיו לקבלת הצעת מחיר
+              חיוג מהיר למוקד
             </a>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6 text-center">למה לבחור בנו בצומת צ'ק פוסט?</h2>
-          <ul className="grid md:grid-cols-3 gap-8">
-            <li className="p-6 border border-gray-700 rounded-xl">
-              <h3 className="text-xl font-semibold mb-2">זמינות 24/7</h3>
-              <p>אנחנו כאן בשבילכם בכל שעה, גם בסופי שבוע וחגים.</p>
-            </li>
-            <li className="p-6 border border-gray-700 rounded-xl">
-              <h3 className="text-xl font-semibold mb-2">מחירים הוגנים</h3>
-              <p>שירות מקצועי במחיר זול ומשתלם ללא הפתעות.</p>
-            </li>
-            <li className="p-6 border border-gray-700 rounded-xl">
-              <h3 className="text-xl font-semibold mb-2">מומחיות ברכבים</h3>
-              <p>ניסיון רב בגרירת רכבים פרטיים, מסחריים ורכבי שטח.</p>
-            </li>
-          </ul>
-        </div>
+      <section className="py-12 container mx-auto px-4">
+        <h2 className="text-2xl font-bold mb-4">למה לבחור בנו בצומת צ'ק פוסט?</h2>
+        <ul className="list-disc list-inside space-y-2">
+          <li>זמינות מיידית לכל אזור הצ'ק פוסט והסביבה.</li>
+          <li>מחירים הוגנים ושקופים ללא הפתעות.</li>
+          <li>צוות מיומן ומקצועי עם ציוד גרירה חדיש.</li>
+          <li>שירות אדיב ומהיר 24 שעות ביממה.</li>
+        </ul>
       </section>
     </main>
   );
