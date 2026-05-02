@@ -3,8 +3,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "קונה רכבים לפירוק בחיפה והקריות | שירות מהיר 24/7",
-  description: "מחפשים מי קונה רכבים לפירוק בחיפה והקריות? אנו מציעים שירות מקצועי, פינוי מהיר ותשלום הוגן עבור רכבים ישנים, מושבתים או לאחר תאונה."
+  title: "קונה רכבים לפירוק בחיפה והקריות | שירות מהיר ומקצועי",
+  description: "מחפשים מי קונה רכבים לפירוק בחיפה והקריות? אנו מציעים שירות פינוי רכבים לפירוק במחירים הוגנים. שירות מהיר, אמין ומקצועי לכל סוגי הרכבים.",
 };
 
 export default function Page() {
@@ -14,13 +14,13 @@ export default function Page() {
     "name": "שירותי גרירה ופירוק רכבים חיפה והקריות",
     "areaServed": { "@type": "City", "name": "Haifa and Krayot" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "34.9896" },
     "priceRange": "$",
-    "serviceType": "Car Scrap and Towing",
-    "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "34.9896" }
+    "serviceType": "Car Scrap and Towing"
   };
 
   return (
-    <main className="bg-neutral-950 text-neutral-100">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -28,24 +28,32 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות</h1>
-          <p className="text-xl md:text-2xl mb-8">שירות מקצועי, מהיר ואמין לפינוי רכבים מכל סוג. הצעת מחיר הוגנת בטלפון.</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות</h1>
+          <p className="text-xl mb-8">זקוקים לפינוי רכב ישן או תקול? אנו כאן בשבילכם עם שירות מהיר, אמין ומחירים הוגנים.</p>
+          <div className="flex flex-col md:flex-row justify-center gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-neutral-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition-colors"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
-              חייגו עכשיו לשיחת ייעוץ
+              התקשרו עכשיו לקבלת הצעת מחיר
             </a>
           </div>
         </div>
       </section>
 
-      <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפירוק רכבים?</h2>
-        <p className="mb-4">אנו מתמחים ברכישת רכבים לפירוק בחיפה והקריות. אם הרכב שלכם ישן, תקול, או עבר תאונה, אנו הכתובת שלכם. אנו מספקים שירות גרירה ללא עלות ומטפלים בכל הבירוקרטיה מול משרד התחבורה.</p>
-        <p className="text-red-400 font-semibold">חשוב להבהיר: השירות שלנו מיועד לרכבים פרטיים, מסחריים ורכבי שטח בלבד. איננו מטפלים באופנועים או דו-גלגלי.</p>
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפירוק רכבים?</h2>
+          <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק בחיפה והקריות ומעניקים שירות מקצועי ללא כאב ראש. בין אם הרכב עבר תאונה, סובל מתקלה מכנית קשה או פשוט ישן מדי, אנו נדאג לפינויו המהיר.</p>
+          <ul className="list-disc pr-6 mb-6">
+            <li>שירות מהיר בכל אזור חיפה והקריות.</li>
+            <li>מחירים הוגנים עבור הרכב שלכם.</li>
+            <li>פינוי מקצועי ללא עלות נוספת.</li>
+            <li>טיפול בכל סוגי הרכבים הפרטיים, המסחריים ורכבי 4x4.</li>
+          </ul>
+          <p className="text-sm text-gray-600 italic">*הערה: אנו לא מטפלים באופנועים. השירות מיועד לרכבים בלבד.</p>
+        </div>
       </section>
     </main>
   );
