@@ -37,7 +37,7 @@ export default function Page() {
             אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. 
             חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-wrap gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
@@ -54,9 +54,9 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בצ'ק פוסט?</h2>
           <ul className="space-y-4 text-lg">
             <li>✓ זמינות מלאה 24/7 לכל קריאה באזור הצומת.</li>
+            <li>✓ הגעה מהירה לכל נקודה בציר הראשי.</li>
             <li>✓ מחירים הוגנים ושקופים ללא הפתעות.</li>
-            <li>✓ צוות מיומן המכיר את צירי התנועה בחיפה והקריות.</li>
-            <li>✓ מענה מהיר לכל סוגי הרכבים (למעט אופנועים).</li>
+            <li>✓ צוות מיומן ומקצועי לטיפול בטוח ברכבכם.</li>
           </ul>
         </div>
       </section>
