@@ -4,28 +4,19 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "קונה רכבים לפירוק בחיפה והקריות | שירות מהיר ומקצועי",
-  description: "מחפשים מי קונה רכבים לפירוק בחיפה והקריות? אנו מציעים שירות פינוי רכבים לפירוק, רכבים לאחר תאונה ורכבים ללא טסט. שירות אמין, מהיר ומקצועי."
+  description: "מחפשים מי קונה רכבים לפירוק בחיפה והקריות? אנו קונים רכבים ישנים, תקולים ולאחר תאונה במחירים הוגנים. שירות מהיר, אמין ומקצועי. צרו קשר עוד היום."
 };
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה ופירוק רכבים חיפה והקריות",
-    "areaServed": ["Haifa", "Krayot"],
+    "name": "שירותי פינוי וקניית רכבים לפירוק חיפה והקריות",
+    "areaServed": { "@type": "City", "name": "Haifa and Krayot" },
+    "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "34.9896" },
     "priceRange": "$",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "32.7940",
-      "longitude": "34.9896"
-    },
-    "serviceType": "Car Scrap and Towing"
+    "serviceType": "Car Scrap and Removal"
   };
 
   return (
@@ -38,7 +29,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות</h1>
-          <p className="text-xl mb-8">שירות מקצועי לפינוי וקניית רכבים לפירוק. אנו מגיעים לכל נקודה בחיפה ובקריות במהירות.</p>
+          <p className="text-xl mb-8">שירות מקצועי לפינוי וקניית רכבים לפירוק. אנו קונים רכבים פרטיים, מסחריים ורכבי 4x4 במחירים הוגנים.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
@@ -52,17 +43,14 @@ export default function Page() {
       </section>
 
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפירוק הרכב שלכם?</h2>
-        <p className="mb-4">אנו מתמחים ברכישת רכבים לפירוק מכל הסוגים: רכבים ישנים, רכבים מושבתים, רכבים לאחר תאונות קשות או רכבים ללא טסט. השירות שלנו מותאם לתושבי חיפה והקריות ומבטיח פינוי מהיר ללא עלות נוספת.</p>
-        <ul className="list-disc pr-6 space-y-2">
-          <li>קניית רכבים לפירוק במחירים הוגנים.</li>
-          <li>פינוי מהיר מהשטח ללא עלות גרירה.</li>
-          <li>טיפול מלא בכל הבירוקרטיה מול משרד התחבורה.</li>
-          <li>שירות אמין, שקוף ומקצועי.</li>
+        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לקניית הרכב שלכם?</h2>
+        <p className="mb-4">אנו מתמחים בפינוי רכבים לפירוק בחיפה והקריות ומציעים שירות מהיר ללא כאב ראש. אנו מטפלים בכל סוגי הרכבים (פרטיים, מסחריים, 4x4). שימו לב: איננו מטפלים באופנועים.</p>
+        <ul className="list-disc list-inside space-y-2">
+          <li>הצעת מחיר הוגנת בטלפון</li>
+          <li>פינוי מהיר מהשטח</li>
+          <li>טיפול מלא בבירוקרטיה</li>
+          <li>שירות אמין ומקצועי לתושבי הצפון</li>
         </ul>
-        <p className="mt-6 text-sm text-gray-600">
-          *הערה: אנו מתמחים ברכבים פרטיים, מסחריים ורכבי שטח בלבד. איננו מספקים שירותי פירוק או גרירה לאופנועים.
-        </p>
       </section>
     </main>
   );
