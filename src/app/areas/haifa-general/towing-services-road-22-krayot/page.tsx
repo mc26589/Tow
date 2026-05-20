@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "גרר רכבים תקועים בכביש 22 קריות | שירות 24/7",
-  description: "זקוקים לגרר בכביש 22? שירות גרירה מהיר ומקצועי לרכבים פרטיים ומסחריים באזור הקריות. זמינות מלאה 24/7."
+  description: "זקוקים לגרר בכביש 22? שירות גרירה מקצועי ומהיר לרכבים פרטיים ומסחריים באזור הקריות. זמינות מלאה 24/7."
 };
 
 export default function Page() {
@@ -38,7 +38,7 @@ export default function Page() {
               href={`tel:+${BUSINESS_INFO.phone}`} 
               className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
-              חיוג מהיר למוקד
+              התקשרו עכשיו להצעת מחיר
             </a>
           </div>
         </div>
@@ -47,9 +47,9 @@ export default function Page() {
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בכביש 22?</h2>
         <ul className="space-y-4 text-lg">
-          <li>✓ זמינות מלאה 24/7 לכל קריאה בכביש 22.</li>
-          <li>✓ הגעה מהירה לכל נקודה לאורך עוקף קריות.</li>
-          <li>✓ צוות מיומן ומקצועי לטיפול בטוח ברכבכם.</li>
+          <li>✓ זמינות מלאה 24/7 לכל קריאות החירום בכביש 22.</li>
+          <li>✓ ציוד גרירה מתקדם המותאם לרכבים פרטיים ומסחריים.</li>
+          <li>✓ הגעה מהירה לכל נקודה לאורך ציר עוקף קריות.</li>
           <li>✓ שקיפות מלאה ומחירים הוגנים ללא הפתעות.</li>
         </ul>
       </section>
