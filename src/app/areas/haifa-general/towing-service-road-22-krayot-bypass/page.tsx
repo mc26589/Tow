@@ -1,25 +1,22 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "גרירת רכב תקוע בכביש 22 עוקף קריות | שירות 24/7",
+  description: "נתקעתם בכביש 22 עוקף קריות? שירותי גרירה וחילוץ רכב מהירים ומקצועיים. זמינות 24/7, מחירים הוגנים. התקשרו עכשיו לסיוע מיידי."
+};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
     "name": "שירותי גרירה חיפה והקריות",
-    "areaServed": "Haifa and Krayot",
+    "areaServed": { "@type": "Place", "name": "כביש 22 עוקף קריות" },
+    "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "priceRange": "$",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "32.8156",
-      "longitude": "35.0653"
-    },
-    "serviceType": "Emergency Roadside Assistance and Towing"
+    "serviceType": "גרירת רכב וחילוץ דרך",
+    "geo": { "@type": "GeoCoordinates", "latitude": "32.8156", "longitude": "35.0650" }
   };
 
   return (
@@ -30,35 +27,25 @@ export default function Page() {
       />
       
       <section className="gradient-trust text-white py-14 md:py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר רכבים תקועים בכביש 22 עוקף קריות – שירות מהיר ומקצועי</h1>
-          <p className="text-xl mb-8">נתקעתם בדרך? צוות הגרירה שלנו בדרך אליכם עם מענה מהיר ומחירים הוגנים.</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרירת רכב תקוע בכביש 22 עוקף קריות</h1>
+          <p className="text-xl mb-8">נתקעתם בדרך? הצוות שלנו זמין עבורכם 24/7 לחילוץ מהיר ומקצועי בכביש 22.</p>
+          <div className="flex flex-wrap gap-4">
+            <WhatsAppCTA cityName="חיפה והקריות" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
-              חיוג מהיר למוקד
+              התקשרו עכשיו לחילוץ
             </a>
           </div>
         </div>
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים בכביש 22</h2>
-        <p className="mb-4">אם נתקעתם עם הרכב בכביש 22 (עוקף קריות), אנו מספקים שירותי גרירה וחילוץ מהירים ומקצועיים לכל סוגי הרכבים הפרטיים, המסחריים ורכבי 4x4. הצוות שלנו מכיר היטב את צירי התנועה באזור חיפה והקריות ומגיע לנקודת התקיעה בזמן קצר כדי להעניק לכם שקט נפשי.</p>
-        
-        <h3 className="text-2xl font-semibold mt-8 mb-4">למה לבחור בנו?</h3>
-        <ul className="list-disc pr-6 space-y-2">
-          <li>זמינות מלאה: שירות 24/7 לכל אורך כביש עוקף קריות.</li>
-          <li>מקצועיות: ציוד גרירה מתקדם המבטיח שמירה על הרכב שלכם.</li>
-          <li>מחירים הוגנים: שקיפות מלאה והצעת מחיר הוגנת ללא הפתעות.</li>
-        </ul>
-
-        <div className="mt-8 p-6 bg-gray-100 rounded-lg">
-          <p className="font-bold">חשוב לציין: אנו מתמחים בגרירת רכבים פרטיים ומסחריים בלבד. איננו מספקים שירותי גרירה לאופנועים.</p>
-        </div>
+        <h2 className="text-2xl font-bold mb-4">שירותי גרירה מקצועיים באזור הקריות</h2>
+        <p className="mb-4">אנו מתמחים במתן מענה מהיר לרכבים תקועים בכביש 22. אנו מציעים מחירים הוגנים ושירות אדיב לכל סוגי הרכבים הפרטיים, המסחריים ורכבי 4x4.</p>
+        <p className="text-red-600 font-semibold">שימו לב: איננו מספקים שירותי גרירה לאופנועים.</p>
       </section>
     </main>
   );
