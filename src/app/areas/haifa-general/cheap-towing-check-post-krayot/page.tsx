@@ -1,19 +1,12 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "גרר זול בצומת צ'ק פוסט קריות | שירות 24/7",
-  description: "מחפשים גרר זול בצומת צ'ק פוסט? שירות גרירה מקצועי, מהיר ובמחיר הוגן לכל סוגי הרכבים באזור חיפה והקריות. זמינים 24/7."
-};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
     "name": "שירותי גרירה חיפה והקריות",
-    "areaServed": "Haifa and Krayot",
-    "priceRange": "$",
+    "areaServed": ["צ'ק פוסט", "חיפה", "קריות"],
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -23,8 +16,9 @@ export default function Page() {
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "32.7940",
-      "longitude": "35.0250"
+      "longitude": "35.0230"
     },
+    "priceRange": "$",
     "serviceType": "Towing Service"
   };
 
@@ -37,26 +31,25 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר זול בצומת צ'ק פוסט קריות</h1>
-          <p className="text-xl mb-8">נתקעתם בצומת צ'ק פוסט? אנו כאן בשבילכם עם שירות גרירה מהיר, אמין ובמחיר הוגן.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר זול באזור צ'ק פוסט והקריות – שירות מהיר ומקצועי 24/7</h1>
+          <p className="text-xl mb-8">נתקעתם בדרך? אנו כאן כדי לחלץ אתכם במהירות ובמחיר הוגן.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
               className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
             >
-              חיוג מהיר לגרר
+              התקשרו עכשיו להצעת מחיר
             </a>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים באזור הצ'ק פוסט</h2>
-          <p className="mb-4">אנו מתמחים בחילוץ וגרירת רכבים פרטיים, רכבים מסחריים ורכבי 4x4. הצוות שלנו מכיר היטב את עומסי התנועה בצומת צ'ק פוסט ויודע להגיע אליכם בזמן הקצר ביותר.</p>
-          <p className="font-semibold text-red-600">חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים.</p>
-          <p className="mt-4">אנו מתחייבים למחיר הוגן ושקוף. לקבלת הצעת מחיר מדויקת, צרו איתנו קשר טלפוני ונשמח לסייע לכם לחזור לשגרה במהירות.</p>
+      <section className="py-12 bg-gray-900 text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו?</h2>
+          <p className="mb-4">אנו מתמחים במתן שירותי גרירה מהירים באזור צ'ק פוסט והקריות. השירות שלנו כולל גרירת רכבים פרטיים, רכבים מסחריים ורכבי 4x4. אנו מתחייבים למחירים הוגנים ושירות אדיב.</p>
+          <p className="text-sm text-gray-400 italic">* שימו לב: איננו מספקים שירותי גרירה לאופנועים.</p>
         </div>
       </section>
     </main>
