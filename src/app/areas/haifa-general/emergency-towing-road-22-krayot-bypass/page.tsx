@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "גרר דחוף לכביש 22 עוקף קריות | שירות 24/7",
-  description: "זקוקים לגרר בכביש 22 עוקף קריות? שירות גרירה וחילוץ מהיר, מקצועי ובמחירים הוגנים. זמינים 24 שעות ביממה לכל סוגי הרכבים (למעט אופנועים).",
+  description: "נתקעתם בכביש 22 עוקף קריות? גרר דחוף זמין עבורכם 24/7. שירות מקצועי לרכבים פרטיים ומסחריים. התקשרו עכשיו לסיוע מהיר.",
 };
 
 export default function Page() {
@@ -12,11 +12,20 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
     "name": "שירותי גרירה חיפה והקריות",
-    "areaServed": { "@type": "Place", "name": "כביש 22 עוקף קריות" },
-    "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday-Sunday", "opens": "00:00", "closes": "23:59" },
-    "geo": { "@type": "GeoCoordinates", "latitude": "32.8156", "longitude": "35.0653" },
+    "areaServed": "Haifa and Krayot",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "32.8191",
+      "longitude": "35.0567"
+    },
     "priceRange": "$",
-    "serviceType": "Emergency Towing and Roadside Assistance"
+    "serviceType": "Emergency Roadside Assistance and Towing"
   };
 
   return (
@@ -25,34 +34,25 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      
       <section className="gradient-trust text-white py-14 md:py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר דחוף לכביש 22 עוקף קריות</h1>
-          <p className="text-xl mb-8 max-w-2xl">
-            נתקעתם בכביש 22? אנו כאן עבורכם. שירות גרירה וחילוץ מהיר ומקצועי לכל סוגי הרכבים הפרטיים, המסחריים ורכבי ה-4x4. 
-            אנו מבינים את הדחיפות שבחילוץ מהכביש המהיר ומגיעים במהירות האפשרית. 
-            חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <WhatsAppCTA cityName="חיפה והקריות" />
-            <a 
-              href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition text-center"
-            >
-              חיוג מהיר למוקד
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">גרר דחוף לכביש 22 עוקף קריות</h1>
+          <p className="text-xl mb-8">נתקעתם בדרך? צוות החילוץ שלנו בדרך אליכם. שירות מהיר, אמין ומקצועי 24/7.</p>
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-200 transition">
+              התקשרו עכשיו לסיוע
             </a>
+            <WhatsAppCTA cityName="Haifa and Krayot" />
           </div>
         </div>
       </section>
-      
+
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לשירות גרירה בכביש 22?</h2>
-        <ul className="list-disc list-inside space-y-4 text-lg">
-          <li>זמינות מלאה 24/7 לכל קריאה דחופה.</li>
-          <li>הגעה מהירה לכל נקודה לאורך כביש עוקף קריות.</li>
-          <li>צוות מיומן ומקצועי עם ציוד גרירה מתקדם.</li>
-          <li>מחירים הוגנים ושירות אדיב ללא הפתעות.</li>
-        </ul>
+        <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים בכביש 22</h2>
+        <p className="mb-4">אנו מבינים את הדחיפות שבחילוץ רכב בכביש מהיר כמו כביש 22. הצוות שלנו ערוך להגעה מהירה לכל נקודה לאורך עוקף קריות.</p>
+        <p className="mb-4"><strong>חשוב לדעת:</strong> אנו מתמחים בגרירת רכבים פרטיים, רכבי שטח ורכבים מסחריים. איננו מספקים שירותי גרירה לאופנועים.</p>
+        <p>אנו מציעים מחירים הוגנים ושירות ללא פשרות. לקבלת הצעת מחיר מדויקת וזמן הגעה משוער, צרו איתנו קשר טלפוני כעת.</p>
       </section>
     </main>
   );
