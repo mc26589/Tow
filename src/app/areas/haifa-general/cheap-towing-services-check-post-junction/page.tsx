@@ -5,7 +5,7 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה צ'ק פוסט",
+    "name": "שירותי גרירה בצומת צ'ק פוסט",
     "areaServed": "Haifa and Krayot",
     "priceRange": "$",
     "openingHoursSpecification": {
@@ -16,10 +16,10 @@ export default function Page() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "32.7885",
-      "longitude": "35.0253"
+      "latitude": "32.7858",
+      "longitude": "35.0233"
     },
-    "serviceType": ["Towing Service", "Roadside Assistance"]
+    "serviceType": ["Towing", "Roadside Assistance"]
   };
 
   return (
@@ -31,14 +31,14 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-6">שירותי גרירה זולים בצומת צ'ק פוסט – זמינות מיידית 24/7</h1>
-          <p className="text-lg mb-8 max-w-2xl">
-            נתקעתם עם הרכב באזור צומת צ'ק פוסט? אנו מציעים שירותי גרירה מקצועיים, מהירים ובמחירים הוגנים. 
-            אנו מתמחים בחילוץ וגרירת רכבים פרטיים, רכבים מסחריים ורכבי 4x4. 
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה זולים בצומת צ'ק פוסט</h1>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl">
+            נתקעתם עם הרכב בצומת צ'ק פוסט? אנו מציעים שירותי גרירה מהירים, אמינים ובמחירים הוגנים. 
+            אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. 
             חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+          <div className="flex flex-col sm:flex-row gap-4">
+            <WhatsAppCTA cityName="צומת צ'ק פוסט" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
               className="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
@@ -51,12 +51,12 @@ export default function Page() {
 
       <section className="py-12 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-semibold mb-4">למה לבחור בנו בצומת צ'ק פוסט?</h2>
-          <ul className="list-disc list-inside space-y-2">
-            <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
-            <li>מחירים הוגנים ושקופים ללא הפתעות.</li>
-            <li>צוות מיומן המכיר היטב את עומסי התנועה באזור הצ'ק פוסט.</li>
-            <li>ציוד גרירה חדיש המבטיח שמירה על הרכב שלכם.</li>
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בצומת צ'ק פוסט?</h2>
+          <ul className="space-y-4 text-gray-300">
+            <li>✓ זמינות מלאה 24/7 לכל קריאה באזור חיפה והקריות.</li>
+            <li>✓ מחירים הוגנים ושקופים ללא הפתעות.</li>
+            <li>✓ צוות מקצועי ומיומן המכיר היטב את עומסי התנועה בצומת.</li>
+            <li>✓ ציוד גרירה מתקדם המבטיח שמירה על הרכב שלכם.</li>
           </ul>
         </div>
       </section>
