@@ -66,11 +66,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         }
     }
 
-    // Destinations
-    for (const city of CITIES) {
-        for (const destination of DESTINATIONS) {
+    // Destinations — route is /destination/[destination]/[city]
+    for (const destination of DESTINATIONS) {
+        for (const city of CITIES) {
             additionalPSEOUrls.push({
-                url: `${baseUrl}/destination/${city.slug}/${destination.slug}`,
+                url: `${baseUrl}/destination/${destination.slug}/${city.slug}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly',
                 priority: 0.8,
