@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי | שירות 24/7",
-  description: "מחפשים קונה רכבים לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי, הצעת מחיר הוגנת ושירות מקצועי לרכבים פרטיים ומסחריים. צרו קשר עכשיו."
+  description: "מחפשים קונה רכבים לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי, שירות מקצועי ומחירים הוגנים לכל סוגי הרכבים. צרו קשר עוד היום!",
 };
 
 export default function Page() {
@@ -25,11 +25,11 @@ export default function Page() {
       "latitude": "32.7940",
       "longitude": "34.9896"
     },
-    "serviceType": "Car Scrap and Removal"
+    "serviceType": "Car Scrap Removal"
   };
 
   return (
-    <main className="bg-neutral-950 text-neutral-100">
+    <main className="bg-slate-950 text-slate-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -43,7 +43,7 @@ export default function Page() {
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-neutral-900 px-8 py-3 rounded-lg font-bold hover:bg-neutral-200 transition"
+              className="bg-white text-slate-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-200 transition"
             >
               התקשרו עכשיו לקבלת הצעת מחיר
             </a>
@@ -53,22 +53,16 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירות מקצועי לפינוי רכבים</h2>
-        <p className="mb-4">אנו מתמחים בפינוי רכבים לפירוק בכל אזור חיפה והקריות. השירות שלנו מהיר, יעיל ומבוצע על ידי צוות מנוסה.</p>
-        <p className="mb-4"><strong>שים לב:</strong> אנו מטפלים ברכבים פרטיים, מסחריים ורכבי 4x4 בלבד. איננו מספקים שירות לאופנועים.</p>
-        
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
-          <div className="p-6 border border-neutral-800 rounded-xl">
-            <h3 className="text-xl font-bold mb-3">פינוי מיידי</h3>
-            <p>מגיעים אליכם במהירות לכל נקודה בחיפה והקריות.</p>
-          </div>
-          <div className="p-6 border border-neutral-800 rounded-xl">
-            <h3 className="text-xl font-bold mb-3">מחיר הוגן</h3>
-            <p>הצעת מחיר הוגנת ומקצועית עבור הרכב שלכם בטלפון.</p>
-          </div>
-          <div className="p-6 border border-neutral-800 rounded-xl">
-            <h3 className="text-xl font-bold mb-3">שירות אמין</h3>
-            <p>פינוי מסודר ללא כאבי ראש וללא עלויות נסתרות.</p>
-          </div>
+        <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק בחיפה והקריות. אם הרכב שלכם אינו נוסע, עבר תאונה או שפשוט הגיע הזמן להיפרד ממנו, אנו נגיע עד אליכם לפינוי מיידי.</p>
+        <p className="mb-4"><strong>שימו לב:</strong> אנו מטפלים ברכבים פרטיים, מסחריים ורכבי 4x4 בלבד. איננו מספקים שירותי פינוי או גרירה לאופנועים.</p>
+        <div className="bg-slate-900 p-8 rounded-xl border border-slate-800 mt-8">
+          <h3 className="text-2xl font-semibold mb-4">למה לבחור בנו?</h3>
+          <ul className="list-disc list-inside space-y-2">
+            <li>פינוי מהיר ומיידי באזור חיפה והקריות</li>
+            <li>הצעת מחיר הוגנת ומשתלמת</li>
+            <li>שירות אדיב ומקצועי ללא כאב ראש</li>
+            <li>טיפול בכל סוגי הרכבים (למעט אופנועים)</li>
+          </ul>
         </div>
       </section>
     </main>
