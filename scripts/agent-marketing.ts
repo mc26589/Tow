@@ -201,6 +201,8 @@ async function sendEmailOffer(garage: { name: string; email: string }) {
 }
 
 async function runGarageMarketing() {
+    console.log("Garage Marketing Agent is currently disabled.");
+    return;
     console.log("Starting Garage Marketing Agent...");
 
     // 1. Fetch previously contacted to avoid duplicates

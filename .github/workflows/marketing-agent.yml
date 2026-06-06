@@ -1,9 +1,9 @@
 name: Daily Garage Marketing Agent
 
 on:
-  schedule:
-    # Runs at 10:00 AM Israel Time (08:00 UTC) every day
-    - cron: '0 8 * * *'
+#   schedule:
+#     # Runs at 10:00 AM Israel Time (08:00 UTC) every day
+#     - cron: '0 8 * * *'
   workflow_dispatch: # Allows manual trigger from the GitHub Actions tab
 
 jobs:

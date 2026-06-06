@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "גרירת רכב חשמלי באחוזה חיפה 24/7 | חילוץ מהיר ומקצועי",
+  description: "נתקעת עם רכב חשמלי באחוזה? שירות גרירה 24/7 לרכבים חשמליים ומצבר פרוק. הגעה מהירה, טיפול מקצועי ומחיר הוגן. התקשרו עכשיו לחילוץ!",
+  alternates: {
+    canonical: "/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -35,7 +45,7 @@ export default function Page() {
             גרירה 24/7 לרכב חשמלי עם מצבר פרוק בשכונת אחוזה, חיפה
           </h1>
           <p className="text-lg md:text-xl mb-8">
-            נתקעת עם הרכב החשמלי באחוזה? אנו מספקים שירותי חילוץ וגרירה מקצועיים לרכבים חשמליים, רכבים פרטיים ורכבי 4x4. שירות מהיר, אמין ובמחירים הוגנים.
+            נתקעת עם הרכב החשמלי באחוזה? אנו מספקים שירותי חילוץ וגרירה מקצועיים לרכבים חשמליים, פרטיים ורכבי 4x4. הגעה מהירה לכל נקודה בשכונה.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -56,8 +66,23 @@ export default function Page() {
           <li>מומחיות בטיפול ברכבים חשמליים ומערכות מתח גבוה.</li>
           <li>ציוד גרירה מתקדם המבטיח שמירה על הרכב.</li>
           <li>הגעה מהירה לכל נקודה בשכונה.</li>
-          <li>שירות אדיב ומקצועי במחירים הוגנים.</li>
+          <li>מחפש שירות נוסף? בדוק את <Link href="/areas/haifa-general/cheap-private-car-towing-ahuza-haifa" className="text-blue-600 font-semibold underline">שירותי הגרירה הזולים שלנו באחוזה</Link>.</li>
         </ul>
+        
+        <div className="mt-10">
+            <h3 className="text-xl font-bold mb-4">שאלות נפוצות (FAQ)</h3>
+            <div className="space-y-4">
+                <div>
+                    <p className="font-bold">האם אתם גוררים רכבים חשמליים בלבד?</p>
+                    <p className="text-gray-700">אנחנו מטפלים בכל סוגי הרכבים הפרטיים והמסחריים, ומתמחים במיוחד בחילוץ רכב חשמלי. שים לב כי איננו גוררים אופנועים.</p>
+                </div>
+                <div>
+                    <p className="font-bold">מהו טווח המחירים לחילוץ באחוזה?</p>
+                    <p className="text-gray-700">אנחנו מציעים מחירים הוגנים ותחרותיים. למידע נוסף ניתן להתרשם גם משירותי <Link href="/areas/haifa-general/cheap-car-towing-service-neve-shaanan-haifa" className="text-blue-600 underline">גרירה בנאות שאנן</Link> הסמוכה.</p>
+                </div>
+            </div>
+        </div>
+
         <p className="mt-6 text-sm text-gray-600">
           *שימו לב: אנו מתמחים בגרירת רכבים פרטיים, מסחריים ו-4x4. איננו מספקים שירותי גרירה לאופנועים.
         </p>

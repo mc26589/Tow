@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 import Script from "next/script";
+
+export const metadata: Metadata = {
+  title: "גרר תאונה כביש 22 צ'ק פוסט קריות | הגעה מהירה 24/7",
+  description: "נתקעתם בכביש 22 או בצ'ק פוסט? שירותי גרירה וחילוץ מקצועיים לאחר תאונה זמינים עבורכם 24/7. מחיר הוגן ושירות מהיר. התקשרו עכשיו!",
+  alternates: {
+    canonical: "/areas/haifa-general/accident-towing-road-22-check-post-krayot"
+  }
+};
 
 export default function Page() {
   const jsonLd = {
@@ -33,7 +43,11 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים לאחר תאונה</h2>
-        <p className="mb-4">אנו מספקים שירותי גרירה וחילוץ מקצועיים ומיידיים לכל סוגי הרכבים הפרטיים, המסחריים ורכבי 4x4 שנתקעו באזור כביש עוקף קריות (כביש 22) וצומת צ'ק פוסט. הצוות שלנו ערוך להגעה מהירה לזירת האירוע.</p>
+        <p className="mb-4">
+          אנו מספקים שירותי גרירה וחילוץ לכל סוגי הרכבים הפרטיים והמסחריים שנתקעו באזור כביש עוקף קריות (כביש 22) וצומת צ'ק פוסט. 
+          למי שמחפש פתרונות נוספים באזור, ניתן לבדוק גם <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-400 underline">שירותי גרירה בחיפה</Link> או 
+          <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-400 underline"> גרירה וחילוץ מהצ'ק פוסט</Link>.
+        </p>
         
         <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800 my-8">
           <h3 className="text-2xl font-semibold mb-4">חשוב לדעת</h3>
@@ -44,6 +58,20 @@ export default function Page() {
             <li><strong>הערה:</strong> איננו מספקים שירותי גרירה לאופנועים.</li>
           </ul>
         </div>
+
+        <section className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">שאלות נפוצות על גרירה בכביש 22</h2>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-bold text-lg">תוך כמה זמן תגיעו לצ'ק פוסט?</h4>
+              <p>הצוות שלנו פרוס באזור חיפה והקריות ומבצע הגעה מהירה ככל הניתן בהתאם לעומסי התנועה בציר 22.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-lg">האם אתם גוררים רכבים מסחריים?</h4>
+              <p>כן, אנו מספקים פתרונות גרירה גם לרכבים מסחריים ופרטיים, למעט אופנועים.</p>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
   );
