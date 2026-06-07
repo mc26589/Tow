@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "גרירה בצ'ק פוסט חיפה - שירות מהיר 24/7 | מחיר הוגן",
+  description: "נתקעתם בצומת צ'ק פוסט בחיפה? גרירה מהירה, מקצועית ובמחיר הוגן לכל סוגי הרכבים. הגעה מהירה, זמינות מלאה 24/7. התקשרו עכשיו לפתרון מיידי!",
+  alternates: {
+    canonical: "/areas/haifa-general/affordable-towing-check-post-haifa",
+  },
+};
 
 export default function Page() {
   return (
@@ -29,15 +39,29 @@ export default function Page() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="p-6 border border-neutral-800 rounded-xl">
             <h3 className="text-xl font-semibold mb-3 text-white">זמינות מלאה</h3>
-            <p>אנו פועלים 24 שעות ביממה, 7 ימים בשבוע, כדי להבטיח שלא תישאר תקוע בכביש סואן.</p>
+            <p>אנו פועלים 24 שעות ביממה, 7 ימים בשבוע, כדי להבטיח שלא תישאר תקוע בכביש סואן. אנו מציעים גם <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-400 hover:underline">שירותי גרירה זולים בצ'ק פוסט</Link>.</p>
           </div>
           <div className="p-6 border border-neutral-800 rounded-xl">
             <h3 className="text-xl font-semibold mb-3 text-white">מחירים הוגנים</h3>
-            <p>אנו מאמינים בשקיפות מלאה ומציעים הצעת מחיר הוגנת ומשתלמת ללא הפתעות מיותרות.</p>
+            <p>אנו מאמינים בשקיפות מלאה ומציעים הצעת מחיר הוגנת ומשתלמת. זקוקים לפתרון גרירה דחוף? בדקו גם <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-400 hover:underline">גרירה וחילוץ לאחר תאונה בצומת צ'ק פוסט</Link>.</p>
           </div>
           <div className="p-6 border border-neutral-800 rounded-xl">
             <h3 className="text-xl font-semibold mb-3 text-white">מומחיות בחילוץ</h3>
-            <p>צוות מיומן המכיר את אזור חיפה והצ'ק פוסט, עם ציוד מתקדם לטיפול ברכבים לאחר תאונה.</p>
+            <p>צוות מיומן המכיר את אזור חיפה והצ'ק פוסט. אם הרכב במצב גרוטאה, ניתן לבצע גם <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="text-blue-400 hover:underline">קניית רכבים לפירוק בצ'ק פוסט</Link>.</p>
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold mb-8 text-white">שאלות נפוצות</h2>
+          <div className="space-y-6">
+            <div className="border-b border-neutral-800 pb-4">
+              <h3 className="text-xl font-semibold text-white">האם אתם גוררים רכבים חשמליים?</h3>
+              <p>כן, אנו מספקים פתרונות מתקדמים, למידע נוסף ראו <Link href="/areas/haifa-general/affordable-electric-car-towing-check-post-krayot" className="text-blue-400">גרירת רכב חשמלי בצ'ק פוסט והקריות</Link>.</p>
+            </div>
+            <div className="border-b border-neutral-800 pb-4">
+              <h3 className="text-xl font-semibold text-white">האם השירות כולל פינוי רכבים לפירוק?</h3>
+              <p>בהחלט, אנו עוסקים בפינוי גרוטאות רכב ומציעים <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-towing-included" className="text-blue-400">קניית רכבים לפירוק בחיפה עם גרירה כלולה</Link>.</p>
+            </div>
           </div>
         </div>
         

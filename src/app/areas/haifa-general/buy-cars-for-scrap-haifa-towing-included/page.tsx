@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "קונה רכבים לפירוק בחיפה - שירות גרירה חינם | מחיר הוגן",
+  description: "רוצים למכור רכב לפירוק בחיפה? אנו קונים את כל סוגי הרכבים עם שירות גרירה כלול במחיר. תשלום מהיר והוגן במקום. התקשרו עכשיו להצעת מחיר!",
+  alternates: {
+    canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-towing-included"
+  }
+};
 
 export default function Page() {
   const jsonLd = {
@@ -41,7 +51,28 @@ export default function Page() {
             <li>✓ תשלום הוגן ומיידי במקום עבור הרכב שלכם.</li>
             <li>✓ טיפול מקצועי בכל סוגי הרכבים (פרטי, מסחרי, 4x4).</li>
             <li>✓ זמינות גבוהה ושירות מהיר ללא עיכובים.</li>
+            <li>✓ נותנים שירות גם באזורים סמוכים כמו <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="underline">צ'ק פוסט</Link> ו-<Link href="/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-rothschild" className="underline">קרית ים</Link>.</li>
           </ul>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white text-gray-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות (FAQ)</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-bold text-xl">האם אתם קונים כל רכב?</h3>
+              <p>אנו קונים רכבים לפירוק מכל הסוגים: פרטיים, מסחריים, רכבים לאחר תאונה או רכבים ללא טסט. איננו מטפלים באופנועים.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">האם הגרירה באמת בחינם?</h3>
+              <p>כן, שירות הגרירה כלול במחיר העסקה בכל רחבי חיפה והקריות, ללא עלויות נסתרות.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">תוך כמה זמן תגיעו לפנות את הרכב?</h3>
+              <p>אנו משתדלים להגיע בהקדם האפשרי, לעיתים אף באותו יום, בהתאם לעומס ומיקום הרכב.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
