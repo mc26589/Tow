@@ -5,25 +5,16 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה וחילוץ חיפה והקריות",
-    "areaServed": "Haifa and Krayot",
+    "name": "שירותי חילוץ וגרירה חיפה והקריות",
+    "areaServed": { "@type": "Place", "name": "אזור הכרמל, חיפה והקריות" },
+    "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "34.9896" },
     "priceRange": "$",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "32.7940",
-      "longitude": "34.9896"
-    },
-    "serviceType": "Car recovery from mud and off-road towing"
+    "serviceType": "חילוץ רכב תקוע בבוץ"
   };
 
   return (
-    <main>
+    <main className="bg-neutral-950 text-neutral-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -32,12 +23,12 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב תקוע בבוץ באזור הכרמל – שירות מהיר ומקצועי 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם בבוץ? הצוות המקצועי שלנו בדרך אליכם עם ציוד חילוץ מתקדם.</p>
+          <p className="text-xl mb-8">נתקעתם בבוץ? הצוות שלנו בדרך אליכם עם הציוד המתאים ביותר.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
+              className="bg-white text-neutral-900 px-8 py-3 rounded-lg font-bold hover:bg-neutral-200 transition"
             >
               התקשרו עכשיו לחילוץ מהיר
             </a>
@@ -45,16 +36,17 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ מהבוץ?</h2>
-        <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, רכבי שטח ורכבים מסחריים שנתקעו בבוץ באזור הכרמל. חשוב לציין: אנו לא מספקים שירותי גרירה או חילוץ לאופנועים.</p>
-        <ul className="list-disc pr-6 space-y-2">
-          <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
-          <li>ציוד חילוץ מקצועי המותאם לתנאי שטח מורכבים.</li>
-          <li>צוות מיומן בעל ניסיון רב בחילוצי שטח באזור הכרמל.</li>
-          <li>מחירים הוגנים ושירות אדיב ללא הפתעות.</li>
+      <section className="container mx-auto px-4 py-12">
+        <h2 className="text-3xl font-bold mb-6">חילוץ מקצועי בתנאי שטח</h2>
+        <p className="mb-4">אנו מתמחים בחילוץ רכבים ששקעו בבוץ באזור הכרמל. הניסיון שלנו מאפשר לנו לתת מענה מהיר ובטוח לכל סוגי הרכבים הפרטיים, המסחריים ורכבי ה-4x4.</p>
+        <p className="mb-4"><strong>חשוב:</strong> אנו לא מספקים שירותי חילוץ או גרירה לאופנועים.</p>
+        <h3 className="text-2xl font-semibold mt-8 mb-4">למה לבחור בנו?</h3>
+        <ul className="list-disc list-inside space-y-2">
+          <li>זמינות מלאה 24 שעות ביממה.</li>
+          <li>ציוד חילוץ מתקדם המונע נזקים לרכב.</li>
+          <li>הגעה מהירה לכל נקודה באזור הכרמל.</li>
+          <li>מחירים הוגנים ושירות אדיב.</li>
         </ul>
-        <p className="mt-6 font-semibold">צריכים הצעת מחיר? התקשרו אלינו וקבלו מענה מיידי.</p>
       </section>
     </main>
   );

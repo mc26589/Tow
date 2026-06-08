@@ -21,17 +21,42 @@ export default function Page() {
       </section>
 
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירותי גרירה באחוזה והסביבה</h2>
+        <h2 className="text-3xl font-bold mb-6">שירותי גרירה וחילוץ באחוזה</h2>
         <p className="mb-4">
-          אנו מבינים את החשיבות של מענה מהיר בעת תקלה בדרך. למרות שאיננו מטפלים באופנועים, אנו הכתובת המקצועית שלך לכל צורך בגרירת רכבים פרטיים ומסחריים באזור אחוזה בחיפה.
+          אנו מבינים את החשיבות של מענה מהיר כאשר הרכב נתקע. למרות שאיננו מטפלים באופנועים, אנו הכתובת המובילה לכל צורך בגרירת רכבים פרטיים ומסחריים באזור אחוזה והסביבה.
         </p>
         <ul className="list-disc list-inside space-y-2 mb-8">
-          <li>זמינות 24/7 לכל אזור חיפה והקריות</li>
+          <li>זמינות 24/7 לכל קריאה</li>
           <li>ציוד גרירה מתקדם לרכבים ורכבי 4x4</li>
           <li>צוות מיומן ומקצועי</li>
-          <li>מחירים הוגנים ושקיפות מלאה</li>
+          <li>מחירים הוגנים ושקופים</li>
         </ul>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AutoTowing",
+            "name": "שירותי גרירה חיפה והקריות",
+            "areaServed": "Haifa and Krayot",
+            "priceRange": "$",
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "00:00",
+              "closes": "23:59"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "32.7940",
+              "longitude": "34.9896"
+            },
+            "serviceType": "Car Towing and Roadside Assistance"
+          }),
+        }}
+      />
     </main>
   );
 }
