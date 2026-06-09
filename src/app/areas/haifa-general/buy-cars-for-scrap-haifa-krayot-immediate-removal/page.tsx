@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי | שירות 24/7",
-  description: "מחפשים קונה רכבים לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי, שירות מקצועי ומחירים הוגנים לכל סוגי הרכבים. צרו קשר עוד היום!",
+  description: "מחפשים קונה רכבים לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי, הצעת מחיר הוגנת ושירות מקצועי לרכבים פרטיים, מסחריים ו-4x4. צרו קשר עכשיו!",
 };
 
 export default function Page() {
@@ -29,7 +29,7 @@ export default function Page() {
   };
 
   return (
-    <main className="bg-slate-950 text-slate-100">
+    <main className="flex flex-col w-full">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -37,13 +37,13 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי</h1>
-          <p className="text-xl mb-8">זקוקים לפינוי רכב ישן או תקול? אנו כאן בשבילכם 24/7.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי</h1>
+          <p className="text-xl mb-8">זקוקים לפינוי רכב ישן או תקול? אנו כאן בשבילכם 24/7 עם שירות מהיר ומקצועי.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-slate-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-200 transition"
+              className="bg-white text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-200 transition-colors"
             >
               התקשרו עכשיו לקבלת הצעת מחיר
             </a>
@@ -51,19 +51,17 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירות מקצועי לפינוי רכבים</h2>
-        <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק בחיפה והקריות. אם הרכב שלכם אינו נוסע, עבר תאונה או שפשוט הגיע הזמן להיפרד ממנו, אנו נגיע עד אליכם לפינוי מיידי.</p>
-        <p className="mb-4"><strong>שימו לב:</strong> אנו מטפלים ברכבים פרטיים, מסחריים ורכבי 4x4 בלבד. איננו מספקים שירותי פינוי או גרירה לאופנועים.</p>
-        <div className="bg-slate-900 p-8 rounded-xl border border-slate-800 mt-8">
-          <h3 className="text-2xl font-semibold mb-4">למה לבחור בנו?</h3>
-          <ul className="list-disc list-inside space-y-2">
-            <li>פינוי מהיר ומיידי באזור חיפה והקריות</li>
-            <li>הצעת מחיר הוגנת ומשתלמת</li>
-            <li>שירות אדיב ומקצועי ללא כאב ראש</li>
-            <li>טיפול בכל סוגי הרכבים (למעט אופנועים)</li>
-          </ul>
-        </div>
+      <section className="py-12 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6">שירות קניית רכבים לפירוק בחיפה והקריות – פינוי מהיר ומקצועי</h2>
+        <p className="mb-4">אנו מספקים שירות מקצועי ואמין לקניית רכבים לפירוק בחיפה, הקריות והסביבה, עם דגש על פינוי מיידי מהשטח. אם הרכב שלכם אינו תקין, עבר תאונה או שפשוט אינכם זקוקים לו עוד, אנו כאן כדי להעניק לכם פתרון מהיר, הוגן ונוח. אנו מתמחים ברכבים פרטיים, רכבים מסחריים ורכבי 4x4. <strong>חשוב לציין: איננו מטפלים בפינוי או קנייה של אופנועים.</strong></p>
+        
+        <h3 className="text-2xl font-bold mt-8 mb-4">למה לבחור בנו לפינוי הרכב שלכם?</h3>
+        <ul className="list-disc pr-6 space-y-2">
+          <li><strong>פינוי מיידי:</strong> צוות הפינוי שלנו זמין להגיע לכל נקודה בחיפה ובקריות בזמן הקצר ביותר.</li>
+          <li><strong>הצעת מחיר הוגנת:</strong> אנו מעריכים את הרכב שלכם ומציעים מחיר הוגן בהתאם למצבו.</li>
+          <li><strong>שירות ללא עלות:</strong> השירות שלנו כולל פינוי וגרירה ללא עלויות נסתרות.</li>
+          <li><strong>ניסיון ומומחיות:</strong> צוות מיומן שמכיר את כל אזורי הצפון ומבצע את העבודה בבטיחות מרבית.</li>
+        </ul>
       </section>
     </main>
   );
