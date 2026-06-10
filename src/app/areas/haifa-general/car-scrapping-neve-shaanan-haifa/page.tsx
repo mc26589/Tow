@@ -1,5 +1,15 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "פינוי רכב לפירוק בנווה שאנן חיפה | מחיר הוגן ושירות מהיר 24/7",
+  description: "צריכים פינוי רכב לפירוק בנווה שאנן, חיפה? אנו מציעים שירות מקצועי, הגעה מהירה ומחיר הוגן לכל סוגי הרכבים. התקשרו עכשיו להצעת מחיר משתלמת!",
+  alternates: {
+    canonical: "/areas/haifa-general/car-scrapping-neve-shaanan-haifa",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -32,7 +42,7 @@ export default function Page() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">פינוי רכב לפירוק בנווה שאנן חיפה</h1>
           <p className="text-xl mb-8 leading-relaxed">
-            מחפשים שירות אמין לפינוי רכב לפירוק בשכונת נווה שאנן בחיפה? אנו מציעים פתרון מהיר ומקצועי לכל סוגי הרכבים: רכבים פרטיים, רכבים מסחריים ורכבי 4x4. אנו מתחייבים לשירות אדיב, עמידה בלוחות זמנים ומחירים הוגנים עבור הרכב שלכם.
+            מחפשים שירות אמין לפינוי רכב לפירוק בשכונת נווה שאנן בחיפה? אנו מציעים פתרון מהיר ומקצועי לכל סוגי הרכבים: רכבים פרטיים, רכבים מסחריים ורכבי 4x4. אם נתקעתם באזורים סמוכים, אנו מציעים גם פתרונות כגון <Link href="/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing" className="underline font-semibold">שירותי גרירה זולים באחוזה</Link> או <Link href="/areas/haifa-general/24-7-towing-electric-car-battery-dead-technion-haifa" className="underline font-semibold">סיוע בקרבת הטכניון</Link>. אנו מתחייבים לשירות אדיב, עמידה בלוחות זמנים ומחירים הוגנים עבור הרכב שלכם.
           </p>
           <div className="bg-black/20 p-6 rounded-xl mb-8">
             <h2 className="text-2xl font-semibold mb-4">למה לבחור בנו?</h2>
@@ -53,6 +63,20 @@ export default function Page() {
             >
               התקשרו עכשיו להצעת מחיר
             </a>
+          </div>
+        </div>
+      </section>
+      
+      <section className="max-w-4xl mx-auto py-12 px-6">
+        <h2 className="text-3xl font-bold mb-6">שאלות נפוצות על פינוי רכבים בחיפה</h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-xl font-semibold">תוך כמה זמן תגיעו לפנות את הרכב בנווה שאנן?</h3>
+            <p>אנו משתדלים להגיע בהקדם האפשרי. בזכות המיקום המרכזי שלנו בחיפה, אנו מבצעים פינוי יעיל ומהיר לכל רחובות השכונה.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">האם אתם קונים גם רכבים שלא נוסעים?</h3>
+            <p>כן, אנו מתמחים ברכישת רכבים לפירוק, גם אם הם אינם מניעים או סובלים מתקלות מכניות קשות. למידע נוסף על שירותינו באזור, ניתן לעיין גם בקישור <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-600">פינוי רכבים לפירוק בחיפה והקריות</Link>.</p>
           </div>
         </div>
       </section>

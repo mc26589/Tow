@@ -1,44 +1,30 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "חילוץ רכב מהבוץ ביער הכרמל חיפה | 24/7 שירות מהיר ומקצועי",
+  description: "נתקעתם עם הרכב בבוץ ביער הכרמל? שירותי חילוץ רכב מבוץ בחיפה והסביבה. צוות מיומן, הגעה מהירה, מחיר הוגן וזמינות 24/7. התקשרו עכשיו!",
+  alternates: {
+    canonical: "/areas/haifa-general/car-stuck-in-mud-rescue-carmel-forest-haifa",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
     "name": "שירותי גרירה וחילוץ חיפה והקריות",
-    "description": "שירותי חילוץ רכבים ששקעו בבוץ ביער הכרמל חיפה, גרירה וחילוץ 24/7 בחיפה והקריות. חילוץ רכבים פרטיים, רכבי שטח 4X4 ורכבים מסחריים קלים.",
-    "url": "https://yourdomain.com/car-stuck-in-mud-rescue-carmel-forest-haifa", // Replace with your actual domain
+    "description": "שירותי חילוץ רכבים ששקעו בבוץ ביער הכרמל חיפה, גרירה וחילוץ 24/7 בחיפה והקריות.",
+    "url": "https://yourdomain.com/areas/haifa-general/car-stuck-in-mud-rescue-carmel-forest-haifa",
     "telephone": `+${BUSINESS_INFO.phone}`,
     "priceRange": "$",
     "areaServed": {
       "@type": "Place",
-      "name": "חיפה והקריות",
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 32.8183, // Approximate center of Haifa
-        "longitude": 34.9905
-      }
+      "name": "חיפה והקריות"
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-      ],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 32.8183,
-      "longitude": 34.9905
-    },
-    "serviceType": [
-      "חילוץ רכב מבוץ",
-      "גרירת רכב",
-      "שירותי דרך",
-      "חילוץ רכב שטח",
-      "חילוץ רכב פרטי"
-    ]
+    "serviceType": ["חילוץ רכב מבוץ", "גרירת רכב", "שירותי דרך"]
   };
 
   return (
@@ -51,7 +37,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">חילוץ רכב שקוע בבוץ ביער הכרמל חיפה</h1>
-          <p className="text-xl md:text-2xl mb-6">נתקעתם עם הרכב בבוץ ביער הכרמל בחיפה? אל דאגה! אנו כאן כדי לחלץ אתכם במהירות ובמקצועיות.</p>
+          <p className="text-xl md:text-2xl mb-6">נתקעתם עם הרכב בבוץ ביער הכרמל? אנחנו בדרך לחלץ אתכם במהירות ובמקצועיות.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out text-lg">
@@ -65,51 +51,27 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">שירותי חילוץ רכבים מבוץ ביער הכרמל - זמינות 24/7</h2>
           <p className="mb-6 text-lg leading-relaxed">
-            יער הכרמל, על נופיו המרהיבים, מושך אליו מטיילים רבים, אך לעיתים השטח הופך מאתגר ורכבים עלולים לשקוע בבוץ, במיוחד לאחר גשמים.
-            אם נקלעתם למצב כזה בלב יער הכרמל בחיפה, צוות החילוץ המקצועי שלנו עומד לרשותכם 24 שעות ביממה, 7 ימים בשבוע.
-            אנו מגיעים במהירות לכל נקודה באזור חיפה והקריות, מצוידים בציוד המתאים ביותר לחילוץ בטוח ויעיל של רכבכם מכל מצב.
+            יער הכרמל מושך מטיילים רבים, אך השטח הבוצי מאתגר. אם הרכב שקע, אל תנסו לצאת בכוח וליצור נזק. אנו מציעים שירותי <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-400 hover:underline">חילוץ רכב מבוץ באזור הכרמל</Link> מקצועיים 24/7.
           </p>
 
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 mt-10 text-center">למה לבחור בנו לחילוץ רכבכם מהבוץ?</h3>
-          <ul className="list-disc list-inside space-y-3 mb-8 text-lg leading-relaxed">
-            <li><strong>זמינות מיידית:</strong> שירות חילוץ 24/7, כולל שבתות וחגים.</li>
-            <li><strong>מקצועיות וניסיון:</strong> צוות מיומן עם ניסיון רב בחילוצי שטח מורכבים.</li>
-            <li><strong>ציוד מתקדם:</strong> רכבי חילוץ וציוד ייעודי לטיפול בכל סוגי הרכבים והשטחים.</li>
-            <li><strong>מענה מהיר:</strong> אנו מבינים את הדחיפות ומגיעים אליכם בזמן הקצר ביותר.</li>
-            <li><strong>מחירים הוגנים:</strong> שקיפות מלאה והצעת מחיר בטלפון, ללא הפתעות.</li>
-            <li><strong>בטיחות מעל הכל:</strong> חילוץ הרכב תוך שמירה על בטיחותכם ושלמות רכבכם.</li>
+          <h3 className="text-2xl font-bold mb-6 mt-10">למה לבחור בנו?</h3>
+          <ul className="list-disc list-inside space-y-3 mb-8 text-lg">
+            <li>זמינות מיידית: שירות 24/7, כולל שבתות וחגים.</li>
+            <li>ציוד מתקדם: גרירה וחילוץ לכל סוגי הרכבים.</li>
+            <li>ניסיון רב: פתרונות מהירים גם במקרים מורכבים ב<Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-blue-400 hover:underline">אזור הכרמל</Link>.</li>
           </ul>
 
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 mt-10 text-center">אילו רכבים אנו מחלצים?</h3>
-          <p className="mb-4 text-lg leading-relaxed">
-            אנו מתמחים בחילוץ וגרירה של מגוון רחב של כלי רכב:
-          </p>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-lg leading-relaxed">
-            <li><strong>רכבים פרטיים:</strong> כולל רכבי סדאן, האצ'בק, סטיישן ומיניוואנים.</li>
-            <li><strong>רכבי שטח (4X4):</strong> ג'יפים, טנדרים ורכבי שטח אחרים שנתקעו.</li>
-            <li><strong>רכבים מסחריים קלים:</strong> טנדרונים, ואנים ורכבים מסחריים קטנים.</li>
-          </ul>
-          <p className="mb-6 text-lg leading-relaxed font-bold text-red-400">
-            שימו לב: אנו לא מספקים שירותי חילוץ או גרירה לאופנועים.
-          </p>
-
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 mt-10 text-center">אזורי שירות עיקריים</h3>
-          <p className="mb-6 text-lg leading-relaxed">
-            אנו מספקים שירותי חילוץ וגרירה בפריסה רחבה באזור הצפון, בדגש על:
-          </p>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-lg leading-relaxed">
-            <li><strong>חיפה:</strong> כולל יער הכרמל, שכונות העיר והסביבה.</li>
-            <li><strong>הקריות:</strong> קרית ים, קרית מוצקין, קרית ביאליק, קרית אתא.</li>
-            <li><strong>ישובים נוספים:</strong> נשר, טירת כרמל, עתלית, ויישובי חוף הכרמל.</li>
-          </ul>
-
-          <div className="text-center mt-12">
-            <p className="text-2xl font-bold mb-6">נתקעתם? אל תחכו! צרו קשר עכשיו לקבלת עזרה מיידית:</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <WhatsAppCTA cityName="Haifa and Krayot" />
-              <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out text-lg">
-                התקשרו אלינו
-              </a>
+          <div className="mt-16 border-t border-gray-700 pt-10">
+            <h3 className="text-3xl font-bold mb-6">שאלות נפוצות</h3>
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-xl font-bold">כמה זמן לוקח לכם להגיע ליער הכרמל?</h4>
+                <p className="text-gray-300">אנו פרוסים בחיפה והקריות ומגיעים בדרך כלל תוך זמן קצר מאוד, בהתאם לעומסי התנועה.</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold">האם אתם גוררים רכבים למוסך?</h4>
+                <p className="text-gray-300">בהחלט, אנו מספקים גם שירותי גרירה מקצועיים אם הרכב לא מניע לאחר החילוץ, בדומה לשירותי <Link href="/areas/haifa-general/cheap-towing-services-check-post" className="text-blue-400 hover:underline">גרירה בצומת הצ'ק פוסט</Link>.</p>
+              </div>
             </div>
           </div>
         </div>

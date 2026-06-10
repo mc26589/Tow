@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "קניית רכבים לפירוק בצ'ק פוסט חיפה – שירות מהיר ומקצועי",
+  description: "רוצים למכור רכב ישן לפירוק בצומת צ'ק פוסט? קונים את כל סוגי הרכבים במחיר הוגן ושירות מהיר 24/7. הגעה מיידית לאזור חיפה והקריות. התקשרו עכשיו!",
+  alternates: {
+    canonical: "/areas/haifa-general/cash-for-junk-cars-check-post-haifa",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -45,13 +55,35 @@ export default function Page() {
       <section className="py-12 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי רכבים בצ'ק פוסט?</h2>
-          <p className="mb-4">אנו מתמחים בפינוי רכבים לפירוק מכל סוגי הרכבים הפרטיים, המסחריים ורכבי 4x4. השירות שלנו מהיר, יעיל ומבוצע על ידי צוות מיומן. שימו לב: אנו לא מספקים שירותי גרירה או פינוי לאופנועים.</p>
+          <p className="mb-4">
+            אנו מתמחים בפינוי רכבים לפירוק מכל סוגי הרכבים הפרטיים והמסחריים. במידה ואתם זקוקים גם ל-<Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="underline">שירותי גרירה בצ'ק פוסט</Link> או מחפשים <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="underline">קניית רכבים לפירוק באזור חיפה והקריות</Link>, הצוות שלנו עומד לרשותכם. אנו מבטיחים טיפול מהיר ויעיל. שימו לב: אנו לא מספקים שירותי גרירה או פינוי לאופנועים.
+          </p>
           <ul className="list-disc list-inside space-y-2">
             <li>זמינות מלאה 24/7 באזור חיפה והקריות</li>
             <li>פינוי מהיר מצומת צ'ק פוסט והסביבה</li>
             <li>הצעת מחיר הוגנת ומשתלמת</li>
             <li>טיפול מקצועי בכל סוגי הרכבים (למעט אופנועים)</li>
           </ul>
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">שאלות נפוצות</h2>
+          <div className="space-y-6 max-w-2xl mx-auto">
+            <div>
+              <h3 className="font-bold text-xl">האם אתם מפנים רכבים מכל נקודה בצ'ק פוסט?</h3>
+              <p>כן, אנו מגיעים לכל האזור, כולל עסקים, חניות פרטיות ומבני תעשייה בקרבת הצומת.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">כיצד נקבע המחיר לפירוק הרכב?</h3>
+              <p>המחיר נקבע בהתאם למצב הרכב, סוגו והיכולת שלנו לפרק ממנו חלקי חילוף. נשמח לתת הצעת מחיר הוגנת בטלפון.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">האם אתם גוררים גם רכבים שלא מיועדים לפירוק?</h3>
+              <p>כן, אנו מספקים מגוון פתרונות. למידע נוסף ניתן לבדוק גם את שירותי ה-<Link href="/areas/haifa-general/cheap-towing-services-check-post" className="text-blue-600">גרירה הזולה בצ'ק פוסט</Link> שאנו מציעים.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

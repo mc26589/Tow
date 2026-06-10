@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "רכב תקוע בבוץ ליד אוניברסיטת חיפה? חילוץ מהיר 24/7 | מחיר הוגן",
+  description: "נתקעתם בדרכי העפר ליד אוניברסיטת חיפה או ביערות הכרמל? שירות חילוץ רכב תקוע בבוץ 24/7. הגעה מהירה, מחיר הוגן ושירות מקצועי. התקשרו עכשיו!",
+  alternates: {
+    canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university"
+  }
+};
 
 export default function Page() {
   const jsonLd = {
@@ -47,9 +57,29 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-4">שירותי חילוץ מקצועיים בכרמל</h2>
-        <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, רכבי שטח ורכבים מסחריים שנתקעו בבוץ או בדרכים משובשות. הניסיון הרב שלנו בתוואי השטח של חיפה והכרמל מבטיח טיפול מהיר, בטוח ומקצועי.</p>
-        <p className="text-red-600 font-bold">חשוב להבהיר: איננו מספקים שירותי חילוץ או גרירה לאופנועים.</p>
-        <p className="mt-4">אנו מציעים מחירים הוגנים ושירות אדיב לכל תושבי האזור והמטיילים.</p>
+        <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, רכבי שטח ורכבים מסחריים שנתקעו בבוץ או בדרכים משובשות. הניסיון הרב שלנו בתוואי השטח של חיפה והכרמל מבטיח טיפול מהיר, בטוח ומקצועי. אנו מספקים מענה גם באזורים סמוכים, כגון <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-area" className="text-blue-600 underline">חילוץ רכבים ששקעו בבוץ בכל אזור הכרמל</Link> או <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-600 underline">סיוע מקצועי בחילוץ רכב תקוע בבוץ באזור הכרמל</Link>.</p>
+        <p className="text-red-600 font-bold mb-4">חשוב להבהיר: איננו מספקים שירותי חילוץ או גרירה לאופנועים.</p>
+        <p className="mb-4">אנו מציעים מחירים הוגנים ושירות אדיב לכל תושבי האזור והמטיילים. אם נדרש שירות משלים באזורים כמו אחוזה, תוכלו להיעזר ב<Link href="/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing" className="text-blue-600 underline">שירותי גרירה זולים באחוזה חיפה עם מחיר שקוף</Link>.</p>
+      </section>
+
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על חילוץ רכב בחיפה</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-bold text-lg">תוך כמה זמן תגיעו לחלץ אותי באוניברסיטת חיפה?</h3>
+              <p>אנו עושים את מירב המאמצים להגיע תוך זמן קצר מרגע הקריאה, בהתאם לעומסי התנועה ותנאי השטח בכרמל.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">האם אתם מחלצים רכבי שטח ששקעו עמוק בבוץ?</h3>
+              <p>כן, הצוות שלנו מצויד באמצעי חילוץ ייעודיים לרכבי שטח ורכבים פרטיים שנתקעו בתוואי שטח מאתגרים ביערות הכרמל.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">מהו מחיר חילוץ רכב תקוע?</h3>
+              <p>המחיר משתנה בהתאם לרמת הקושי של החילוץ ומיקום הרכב. אנו מקפידים על מחיר הוגן ותחרותי בשוק החילוצים בחיפה.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
