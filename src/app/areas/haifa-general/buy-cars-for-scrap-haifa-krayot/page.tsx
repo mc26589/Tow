@@ -1,11 +1,5 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "קונה רכבים לפירוק בחיפה והקריות | שירות מהיר ומקצועי",
-  description: "מחפשים מי קונה רכבים לפירוק בחיפה והקריות? אנו מציעים שירות פינוי רכבים לפירוק, רכבים לאחר תאונה ורכבים ישנים במחירים הוגנים. שירות 24/7."
-};
 
 export default function Page() {
   const jsonLd = {
@@ -29,7 +23,7 @@ export default function Page() {
   };
 
   return (
-    <main className="bg-neutral-950 min-h-screen">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -37,13 +31,13 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות</h1>
-          <p className="text-xl md:text-2xl mb-8">שירות מקצועי, מהיר ואמין לפינוי רכבים לפירוק מכל הסוגים.</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות</h1>
+          <p className="text-xl mb-8">זקוקים לפינוי רכב ישן או תקול? אנחנו כאן בשבילכם 24/7 עם שירות מקצועי, מהיר והוגן.</p>
+          <div className="flex flex-col md:flex-row justify-center gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-neutral-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition-colors"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
             >
               התקשרו עכשיו לקבלת הצעת מחיר
             </a>
@@ -51,16 +45,18 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-16 container mx-auto px-4 text-neutral-100">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפירוק רכבים?</h2>
-        <p className="mb-4">אנו קונים רכבים לפירוק בחיפה והקריות ומציעים פתרון מלא לכל סוגי הרכבים: רכבים ישנים, רכבים ללא טסט, רכבים לאחר תאונה או רכבים תקולים. אנו מתחייבים למחירים הוגנים ושירות מהיר.</p>
-        <p className="mb-4">חשוב להדגיש: אנו מתמחים ברכבים פרטיים, מסחריים ורכבי 4x4. איננו מטפלים באופנועים מכל סוג שהוא.</p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>פינוי מהיר מהשטח ללא עלות גרירה</li>
-          <li>טיפול מלא בניירת מול משרד התחבורה</li>
-          <li>תשלום הוגן במקום</li>
-          <li>זמינות 24/7 בכל אזור חיפה והקריות</li>
-        </ul>
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפירוק רכבים?</h2>
+          <p className="mb-4">אנו מציעים שירות אמין ומהיר לתושבי חיפה והקריות. אנו קונים רכבים לפירוק במחירים הוגנים, ומפנים את הרכב מהשטח ללא עלות נוספת.</p>
+          <ul className="list-disc list-inside space-y-2 mb-6">
+            <li>פינוי רכבים מכל סוג: פרטיים, מסחריים ו-4x4.</li>
+            <li>טיפול מלא בביטול רישוי מול משרד התחבורה.</li>
+            <li>זמינות מלאה 24 שעות ביממה.</li>
+            <li>תשלום הוגן במקום.</li>
+          </ul>
+          <p className="text-sm text-gray-400 italic">* שים לב: השירות אינו כולל פינוי או קנייה של אופנועים.</p>
+        </div>
       </section>
     </main>
   );
