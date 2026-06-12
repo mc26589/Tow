@@ -1,16 +1,31 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "גרר דחוף לכביש 22 עוקף קריות | שירות 24/7",
+  description: "נתקעתם בכביש 22 עוקף קריות? גרר דחוף זמין עבורכם 24/7. שירות מקצועי, מהיר ובמחירים הוגנים לרכבים פרטיים ומסחריים.",
+};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
     "name": "שירותי גרירה חיפה והקריות",
-    "areaServed": { "@type": "Place", "name": "כביש 22 עוקף קריות" },
-    "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
+    "areaServed": "Haifa and Krayot",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "32.8191",
+      "longitude": "35.0567"
+    },
     "priceRange": "$",
-    "serviceType": "Emergency Towing and Roadside Assistance",
-    "geo": { "@type": "GeoCoordinates", "latitude": "32.8156", "longitude": "35.0567" }
+    "serviceType": "Emergency Towing and Roadside Assistance"
   };
 
   return (
@@ -23,10 +38,13 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר דחוף לכביש 22 עוקף קריות – שירות מהיר ומקצועי 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם בכביש 22? הצוות שלנו בדרך אליכם.</p>
+          <p className="text-xl mb-8">נתקעתם בדרך? הצוות שלנו בדרך אליכם.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
-            <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition">
+            <a 
+              href={`tel:+${BUSINESS_INFO.phone}`} 
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
+            >
               חיוג מהיר למוקד
             </a>
           </div>
@@ -34,18 +52,9 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירותי גרירה וחילוץ מקצועיים</h2>
-        <p className="mb-4">אנו מספקים שירותי גרירה דחופים לכל סוגי הרכבים הפרטיים, רכבי שטח ומסחריים קלים לאורך כביש 22. הצוות שלנו מיומן בטיפול מהיר ובטוח במצבי חירום בכבישים מהירים.</p>
-        <div className="bg-red-50 border-r-4 border-red-500 p-4 my-6">
-          <p className="font-bold text-red-800">הערה חשובה: איננו מספקים שירותי גרירה לאופנועים.</p>
-        </div>
-        <h3 className="text-2xl font-semibold mb-4">למה לבחור בנו?</h3>
-        <ul className="list-disc pr-6 space-y-2">
-          <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
-          <li>הגעה מהירה לכל מחלפי כביש 22.</li>
-          <li>מחירים הוגנים ושקיפות מלאה מול הלקוח.</li>
-          <li>ציוד גרירה חדיש ומתוחזק.</li>
-        </ul>
+        <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים בכביש 22</h2>
+        <p className="mb-4">אנו מבינים את הלחץ שבתקיעת רכב בכביש מהיר. לכן, אנו מציעים מענה מיידי לכל קריאה בכביש 22 עוקף קריות. אנו מתחייבים למחירים הוגנים ושירות אדיב.</p>
+        <p className="mb-4"><strong>שימו לב:</strong> השירות מיועד לרכבים פרטיים, מסחריים ורכבי 4x4 בלבד. איננו מספקים שירותי גרירה לאופנועים.</p>
       </section>
     </main>
   );

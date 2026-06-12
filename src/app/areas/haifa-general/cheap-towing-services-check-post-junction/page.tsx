@@ -5,7 +5,7 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה חיפה והקריות",
+    "name": "שירותי גרירה צ'ק פוסט",
     "areaServed": "Haifa and Krayot",
     "priceRange": "$",
     "openingHoursSpecification": {
@@ -32,9 +32,10 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה זולים בצומת צ'ק פוסט</h1>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl">
-            זקוקים לחילוץ מהיר בצומת צ'ק פוסט? אנו מציעים שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי שטח במחירים הוגנים. 
-            חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים. הצוות שלנו זמין 24/7 לכל קריאה באזור חיפה והקריות.
+          <p className="text-xl mb-8 max-w-2xl">
+            נתקעתם באזור צומת צ'ק פוסט? אנו מציעים שירותי גרירה מהירים, אמינים ובמחירים הוגנים. 
+            אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. 
+            חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -50,12 +51,12 @@ export default function Page() {
 
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בצומת צ'ק פוסט?</h2>
-          <ul className="space-y-4 text-gray-300">
-            <li>✓ זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
-            <li>✓ הגעה מהירה לכל נקודה בצומת צ'ק פוסט והסביבה.</li>
-            <li>✓ מחירים הוגנים ושקופים ללא הפתעות.</li>
-            <li>✓ צוות מיומן ומקצועי לטיפול ברכבים פרטיים, מסחריים ו-4x4.</li>
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בצ'ק פוסט?</h2>
+          <ul className="space-y-4 text-lg">
+            <li>✓ זמינות מלאה 24/7 לכל קריאה באזור הצומת.</li>
+            <li>✓ הגעה מהירה לכל נקודה בציר צ'ק פוסט והסביבה.</li>
+            <li>✓ שירות מקצועי במחירים הוגנים ללא הפתעות.</li>
+            <li>✓ צוות מיומן המכיר את עומסי התנועה באזור.</li>
           </ul>
         </div>
       </section>
