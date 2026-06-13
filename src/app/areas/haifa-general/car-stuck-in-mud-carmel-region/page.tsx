@@ -14,7 +14,7 @@ export default function Page() {
   };
 
   return (
-    <main className="bg-neutral-950 min-h-screen text-neutral-100">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -28,33 +28,28 @@ export default function Page() {
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-neutral-900 px-8 py-3 rounded-lg font-bold hover:bg-neutral-200 transition-colors"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
             >
-              חיוג מהיר למוקד החילוץ
+              התקשרו עכשיו לחילוץ מהיר
             </a>
           </div>
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-12">
-        <div className="prose prose-invert max-w-3xl mx-auto">
-          <h2>זקוקים לחילוץ רכב שנתקע בבוץ באזור הכרמל?</h2>
-          <p>אם הרכב שלכם שקע בבוץ בדרכי העפר או בשטחים הפתוחים של הכרמל, אתם זקוקים למענה מיידי ומקצועי. אנו מתמחים בחילוצי שטח מורכבים לרכבים פרטיים, רכבי 4x4 ורכבים מסחריים. הצוות שלנו מצויד בציוד גרירה וחילוץ מתקדם המאפשר לנו להוציא את הרכב שלכם בבטחה, ללא נזקים מיותרים, גם בתנאי שטח קשים.</p>
-          
-          <h3>למה לבחור בנו לחילוץ בבוץ?</h3>
-          <ul>
-            <li><strong>זמינות מלאה:</strong> שירות 24/7 בכל אזור חיפה והכרמל.</li>
-            <li><strong>מומחיות בשטח:</strong> ניסיון רב בחילוץ רכבים ששקעו בבוץ עמוק.</li>
-            <li><strong>ציוד מקצועי:</strong> שימוש בכננות וציוד גרירה ייעודי לרכבים תקועים.</li>
-            <li><strong>מחירים הוגנים:</strong> שירות מקצועי במחיר משתלם ללא הפתעות.</li>
-          </ul>
-
-          <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800 mt-8">
-            <p className="text-sm text-neutral-400">
-              <strong>הערה חשובה:</strong> אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח. איננו מספקים שירותי חילוץ או גרירה לאופנועים.
-            </p>
-          </div>
-        </div>
+      <section className="py-12 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6">זקוקים לחילוץ רכב שנתקע בבוץ באזור הכרמל?</h2>
+        <p className="mb-4">אם הרכב שלכם שקע בבוץ בדרכי העפר או בשטחים הפתוחים של הכרמל, אתם זקוקים למענה מיידי ומקצועי. אנו מתמחים בחילוצי שטח מורכבים לרכבים פרטיים, רכבי 4x4 ורכבים מסחריים. הצוות שלנו מצויד בציוד גרירה וחילוץ מתקדם המאפשר לנו להוציא את הרכב שלכם בבטחה, ללא נזקים מיותרים, גם בתנאי שטח קשים.</p>
+        
+        <h3 className="text-2xl font-semibold mt-8 mb-4">למה לבחור בנו לחילוץ בבוץ?</h3>
+        <ul className="list-disc pr-6 space-y-2">
+          <li>זמינות מלאה: שירות 24/7 בכל אזור חיפה והכרמל.</li>
+          <li>מומחיות בשטח: ניסיון רב בחילוץ רכבים ששקעו בבוץ עמוק.</li>
+          <li>ציוד מקצועי: שימוש בכננות וציוד גרירה המותאם לרכבים שאינם יכולים לצאת בכוחות עצמם.</li>
+          <li>מחירים הוגנים: שירות מקצועי במחיר משתלם ללא הפתעות.</li>
+        </ul>
+        <p className="mt-6 text-sm text-gray-600">
+          חשוב לציין: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח. איננו מספקים שירותי חילוץ או גרירה לאופנועים.
+        </p>
       </section>
     </main>
   );
