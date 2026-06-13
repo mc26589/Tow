@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "חילוץ רכב תקוע בבוץ בכרמל | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם בבוץ באזור הכרמל? אנחנו כאן לחלץ אתכם בבטחה. צוות מקצועי, ציוד חילוץ מתקדם ושירות 24/7. התקשרו עכשיו לחילוץ מהיר!",
+  alternates: {
+    canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-region"
+  }
+};
 
 export default function Page() {
   const jsonLd = {
@@ -38,7 +48,7 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">זקוקים לחילוץ רכב שנתקע בבוץ באזור הכרמל?</h2>
-        <p className="mb-4">אם הרכב שלכם שקע בבוץ בדרכי העפר או בשטחים הפתוחים של הכרמל, אתם זקוקים למענה מיידי ומקצועי. אנו מתמחים בחילוצי שטח מורכבים לרכבים פרטיים, רכבי 4x4 ורכבים מסחריים. הצוות שלנו מצויד בציוד גרירה וחילוץ מתקדם המאפשר לנו להוציא את הרכב שלכם בבטחה, ללא נזקים מיותרים, גם בתנאי שטח קשים.</p>
+        <p className="mb-4">אם הרכב שלכם שקע בבוץ בדרכי העפר או בשטחים הפתוחים של הכרמל, אתם זקוקים למענה מיידי ומקצועי. אנו מתמחים בחילוצי שטח מורכבים לרכבים פרטיים, רכבי 4x4 ורכבים מסחריים. במידה ואתם זקוקים לעזרה בדרכים בקרבת מקום, תוכלו להיעזר גם בשירותי <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-600 underline">חילוץ שטח באזור יערות הכרמל</Link> או במיקומים ספציפיים כמו <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university" className="text-blue-600 underline">אוניברסיטת חיפה</Link>.</p>
         
         <h3 className="text-2xl font-semibold mt-8 mb-4">למה לבחור בנו לחילוץ בבוץ?</h3>
         <ul className="list-disc pr-6 space-y-2">
@@ -47,6 +57,21 @@ export default function Page() {
           <li>ציוד מקצועי: שימוש בכננות וציוד גרירה המותאם לרכבים שאינם יכולים לצאת בכוחות עצמם.</li>
           <li>מחירים הוגנים: שירות מקצועי במחיר משתלם ללא הפתעות.</li>
         </ul>
+
+        <div className="mt-12 bg-gray-50 p-6 rounded-lg">
+          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות על חילוץ רכב בבוץ</h3>
+          <div className="space-y-4">
+            <div>
+              <h4 className="font-bold">כמה זמן לוקח לכם להגיע לחילוץ בכרמל?</h4>
+              <p>אנו עושים את מירב המאמצים להגיע תוך 30-60 דקות, בהתאם לעומסי התנועה ותנאי השטח.</p>
+            </div>
+            <div>
+              <h4 className="font-bold">האם אתם מחלצים גם רכבים ששקעו עמוק בבוץ?</h4>
+              <p>כן, אנו מצוידים בציוד כננות מתקדם המיועד למצבי שקיעה מורכבים, גם בתנאי שטח קשים.</p>
+            </div>
+          </div>
+        </div>
+
         <p className="mt-6 text-sm text-gray-600">
           חשוב לציין: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח. איננו מספקים שירותי חילוץ או גרירה לאופנועים.
         </p>

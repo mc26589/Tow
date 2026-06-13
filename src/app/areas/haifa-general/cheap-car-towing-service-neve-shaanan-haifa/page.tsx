@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "גרירת רכב בנווה שאנן חיפה | שירות זול ומהיר 24/7",
+  description: "נתקעתם עם הרכב בנווה שאנן? שירות גרירת רכבים מקצועי, הגעה מהירה ומחיר הוגן ללא תחרות. זמינים עבורכם 24/7 לכל תקלה. התקשרו עכשיו!",
+  alternates: {
+    canonical: "/areas/haifa-general/cheap-car-towing-service-neve-shaanan-haifa",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -25,7 +35,7 @@ export default function Page() {
           <p className="text-xl mb-8 max-w-2xl">
             נתקעתם עם הרכב בנווה שאנן? אנו מספקים שירותי גרירה מקצועיים, מהירים ובמחירים הוגנים ללא תחרות. 
             הצוות שלנו זמין 24 שעות ביממה, 7 ימים בשבוע, כדי להבטיח שתחזרו לשגרה במהירות. 
-            אנו מתמחים בגרירת רכבים פרטיים, רכבים מסחריים ורכבי 4x4. 
+            אנו מתמחים בגרירת רכבים פרטיים, רכבים מסחריים ורכבי 4x4. אם הרכב שלכם ישן ואינו נוסע, ייתכן שתרצו לבדוק גם שירותי <Link href="/areas/haifa-general/car-scrapping-neve-shaanan-haifa" className="underline font-semibold">פירוק רכבים בנווה שאנן</Link>.
             חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex flex-col md:flex-row gap-4">
@@ -57,6 +67,22 @@ export default function Page() {
               <p>צוות מיומן המכיר היטב את כל רחובות נווה שאנן והסביבה.</p>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על שירותי גרירה</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-bold">תוך כמה זמן תגיעו אלי בנווה שאנן?</h3>
+              <p>הצוות שלנו פרוס באזור חיפה, אנו שואפים להגעה מהירה ככל האפשר לכל נקודה בשכונה.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold">האם אתם גוררים רכבים למוסכים מחוץ לחיפה?</h3>
+              <p>כן, אנו מספקים שירותי גרירה למרחקים משתנים, כולל <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-700 underline">גרירה לצ'ק פוסט</Link> או לכל יעד אחר שתבחרו.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

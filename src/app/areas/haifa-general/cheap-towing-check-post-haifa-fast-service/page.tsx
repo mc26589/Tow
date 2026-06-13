@@ -1,11 +1,21 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "גרר בצ'ק פוסט חיפה – 24/7 שירות מהיר ומחיר הוגן",
+  description: "נתקעתם עם הרכב בצ'ק פוסט חיפה? הגעתם למקום הנכון. שירות גרירה מקצועי, הגעה מהירה ומחיר הוגן לכל סוגי הרכבים. התקשרו עכשיו לגרר זמין!",
+  alternates: {
+    canonical: "/areas/haifa-general/cheap-towing-check-post-haifa-fast-service"
+  }
+};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה חיפה והקריות",
+    "name": "שירותי גרירה בצ'ק פוסט חיפה",
     "areaServed": { "@type": "City", "name": "Haifa" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "35.0230" },
@@ -46,15 +56,30 @@ export default function Page() {
             </div>
             <div className="p-6 border border-gray-700 rounded-xl">
               <h3 className="text-xl font-semibold mb-3">מחירים הוגנים</h3>
-              <p>אנו מאמינים בשקיפות ומציעים מחיר זול והוגן ללא הפתעות מיותרות.</p>
+              <p>אנו מאמינים בשקיפות ומציעים מחיר זול והוגן ללא הפתעות מיותרות. זקוקים לשירותי גרירה נוספים באזור? ניתן לבדוק גם <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-400 underline">שירות גרירה משתלם בצ'ק פוסט</Link>.</p>
             </div>
             <div className="p-6 border border-gray-700 rounded-xl">
               <h3 className="text-xl font-semibold mb-3">מקצועיות ללא פשרות</h3>
-              <p>צוות מיומן המטפל ברכבים פרטיים, מסחריים ורכבי 4x4 בזהירות מרבית.</p>
+              <p>צוות מיומן המטפל ברכבים פרטיים ומסחריים בזהירות מרבית. אנו מנוסים בחילוץ רכבים מכל סוג, כולל עזרה בצירים מרכזיים כגון <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-400 underline">כביש 22 עוקף קריות</Link>.</p>
             </div>
           </div>
+          
+          <div className="mt-16 p-8 bg-gray-800 rounded-2xl">
+            <h2 className="text-2xl font-bold mb-6">שאלות נפוצות (FAQ)</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-bold text-lg">תוך כמה זמן הגרר מגיע לצ'ק פוסט?</h3>
+                <p className="text-gray-300">בדרך כלל אנו מגיעים למוקד הצ'ק פוסט תוך 30-45 דקות מרגע הקריאה, בהתאם לעומסי התנועה.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-lg">האם אתם גוררים רכבים לכל חלקי הארץ?</h3>
+                <p className="text-gray-300">כן, אנו מספקים שירותי גרירה מחיפה והקריות לכל יעד שתבחרו במחיר הוגן.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="mt-12 p-6 bg-red-900/20 border border-red-800 rounded-xl">
-            <p className="text-red-200"><strong>הערה חשובה:</strong> השירות שלנו מיועד לרכבים פרטיים, מסחריים ורכבי שטח בלבד. איננו מספקים שירותי גרירה לאופנועים.</p>
+            <p className="text-red-200"><strong>הערה חשובה:</strong> השירות שלנו מיועד לרכבים פרטיים ומסחריים בלבד. איננו מספקים שירותי גרירה לאופנועים.</p>
           </div>
         </div>
       </section>
