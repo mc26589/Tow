@@ -41,7 +41,7 @@ export default function Page() {
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
             >
               חיוג מהיר למוקד
             </a>
@@ -49,17 +49,19 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-4">שירותי גרירה וחילוץ באחוזה</h2>
-        <p className="mb-4">
-          אנו מבינים את החשיבות של מענה מהיר כאשר הרכב נתקע. למרות שאיננו מטפלים באופנועים, הצוות שלנו ערוך לתת מענה מקצועי לכל סוגי הרכבים באזור אחוזה והסביבה.
-        </p>
-        <ul className="list-disc pr-6 space-y-2">
-          <li>זמינות 24/7 לכל קריאה</li>
-          <li>ציוד גרירה מתקדם לרכבים פרטיים ומסחריים</li>
-          <li>מחירים הוגנים ושקיפות מלאה</li>
-          <li>צוות מיומן ומקצועי</li>
-        </ul>
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-2xl font-bold mb-4">שירותי גרירה וחילוץ באחוזה</h2>
+          <p className="mb-4">
+            אנו מבינים את החשיבות של מענה מהיר כאשר הרכב נתקע. למרות שאיננו מטפלים באופנועים, הצוות שלנו ערוך לתת מענה מקצועי לכל סוגי הרכבים האחרים באזור אחוזה והסביבה.
+          </p>
+          <ul className="list-disc pr-6 space-y-2">
+            <li>זמינות 24/7 לכל קריאה</li>
+            <li>ציוד גרירה מתקדם לרכבים פרטיים ומסחריים</li>
+            <li>מחירים הוגנים ושקיפות מלאה</li>
+            <li>צוות מיומן ומנוסה באזור חיפה והקריות</li>
+          </ul>
+        </div>
       </section>
     </main>
   );
