@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "גרר דחוף לכביש 22 עוקף קריות | שירות 24/7",
-  description: "נתקעתם בכביש 22 עוקף קריות? גרר דחוף זמין עבורכם 24/7. שירות מקצועי, מהיר ובמחירים הוגנים לרכבים פרטיים ומסחריים.",
+  description: "זקוקים לגרר דחוף בכביש 22 עוקף קריות? הגענו למקום הנכון. שירות גרירה מקצועי, מהיר ובמחיר הוגן לכל סוגי הרכבים (למעט אופנועים)."
 };
 
 export default function Page() {
@@ -13,6 +13,7 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי גרירה חיפה והקריות",
     "areaServed": "Haifa and Krayot",
+    "priceRange": "$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -22,10 +23,9 @@ export default function Page() {
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "32.8191",
-      "longitude": "35.0567"
+      "longitude": "35.0633"
     },
-    "priceRange": "$",
-    "serviceType": "Emergency Towing and Roadside Assistance"
+    "serviceType": "Emergency Towing"
   };
 
   return (
@@ -36,14 +36,17 @@ export default function Page() {
       />
       
       <section className="gradient-trust text-white py-14 md:py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר דחוף לכביש 22 עוקף קריות – שירות מהיר ומקצועי 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם בדרך? הצוות שלנו בדרך אליכם.</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר דחוף לכביש 22 עוקף קריות</h1>
+          <p className="text-xl mb-8 max-w-2xl">
+            נתקעתם בכביש 22? אנו מספקים שירותי גרירה וחילוץ דחופים לכל אורך כביש עוקף קריות. 
+            הצוות המקצועי שלנו זמין 24/7 כדי להגיע אליכם במהירות, לחלץ את הרכב ולהעביר אותו בבטחה.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <WhatsAppCTA cityName="חיפה והקריות" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
               חיוג מהיר למוקד
             </a>
@@ -51,10 +54,17 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים בכביש 22</h2>
-        <p className="mb-4">אנו מבינים את הלחץ שבתקיעת רכב בכביש מהיר. לכן, אנו מציעים מענה מיידי לכל קריאה בכביש 22 עוקף קריות. אנו מתחייבים למחירים הוגנים ושירות אדיב.</p>
-        <p className="mb-4"><strong>שימו לב:</strong> השירות מיועד לרכבים פרטיים, מסחריים ורכבי 4x4 בלבד. איננו מספקים שירותי גרירה לאופנועים.</p>
+      <section className="py-16 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לשירותי גרירה בכביש 22?</h2>
+        <ul className="space-y-4 text-lg">
+          <li>✓ זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
+          <li>✓ הגעה מהירה לכל נקודה בכביש עוקף קריות.</li>
+          <li>✓ שירות מקצועי לרכבים פרטיים, מסחריים ורכבי 4x4.</li>
+          <li>✓ מחירים הוגנים ושירות אדיב.</li>
+        </ul>
+        <p className="mt-8 text-sm text-gray-600">
+          *הערה: אנו מתמחים בגרירת רכבים פרטיים ומסחריים. איננו מספקים שירותי גרירה לאופנועים.
+        </p>
       </section>
     </main>
   );
