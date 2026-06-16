@@ -35,7 +35,7 @@ export default function Page() {
             גרר לאופנוע כבד באחוזה חיפה - שירותי גרירה מקצועיים לרכבים
           </h1>
           <p className="text-lg md:text-xl mb-8 opacity-90">
-            חשוב לדעת: אנו מתמחים בגרירת רכבים פרטיים, מסחריים ו-4x4. איננו מספקים שירותי גרירה לאופנועים.
+            חשוב לציין: אנו מתמחים בגרירת רכבים פרטיים, מסחריים ו-4x4. איננו מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -49,17 +49,17 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-2xl font-bold mb-4">שירותי גרירה וחילוץ באחוזה</h2>
+      <section className="py-12 bg-gray-900 text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-4">שירותי גרירה וחילוץ בחיפה</h2>
           <p className="mb-4">
-            אנו מבינים את החשיבות של מענה מהיר כאשר הרכב נתקע. למרות שאיננו מטפלים באופנועים, הצוות שלנו ערוך לתת מענה מקצועי לכל סוגי הרכבים האחרים באזור אחוזה והסביבה.
+            אנו מבינים את החשיבות של מענה מהיר כאשר הרכב נתקע. למרות שאיננו מטפלים באופנועים, הצי שלנו ערוך ומוכן לכל קריאה עבור רכבים פרטיים ומסחריים באזור אחוזה והסביבה.
           </p>
-          <ul className="list-disc pr-6 space-y-2">
-            <li>זמינות 24/7 לכל קריאה</li>
-            <li>ציוד גרירה מתקדם לרכבים פרטיים ומסחריים</li>
-            <li>מחירים הוגנים ושקיפות מלאה</li>
-            <li>צוות מיומן ומנוסה באזור חיפה והקריות</li>
+          <ul className="list-disc list-inside space-y-2">
+            <li>זמינות 24/7 לכל אזור חיפה והקריות</li>
+            <li>ציוד גרירה מתקדם לרכבים פרטיים ורכבי שטח</li>
+            <li>מחירים הוגנים ושירות אדיב</li>
+            <li>צוות מיומן ומקצועי</li>
           </ul>
         </div>
       </section>
