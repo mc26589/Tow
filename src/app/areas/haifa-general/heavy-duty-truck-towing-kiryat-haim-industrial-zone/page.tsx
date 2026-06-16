@@ -1,5 +1,15 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "גרירת משאיות כבדות באזור התעשייה קריית חיים | שירות 24/7",
+  description: "נתקעתם עם משאית באזור התעשייה קריית חיים? שירות גרירה מקצועי למשאיות ורכבים כבדים, הגעה מהירה, מחיר הוגן וזמינות 24/7. התקשרו עכשיו לפתרון מיידי!",
+  alternates: {
+    canonical: "/areas/haifa-general/heavy-duty-truck-towing-kiryat-haim-industrial-zone",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -18,7 +28,7 @@ export default function Page() {
       "latitude": "32.8150",
       "longitude": "35.0650"
     },
-    "priceRange": "$",
+    "priceRange": "$$, $$$",
     "serviceType": "Heavy Duty Truck Towing"
   };
 
@@ -32,12 +42,12 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירות גרירת משאיות כבדות באזור התעשייה קריית חיים</h1>
-          <p className="text-lg mb-8">זקוקים לחילוץ דחוף? אנו מתמחים בגרירת משאיות, רכבים מסחריים ורכבי 4x4. שירות מקצועי, מהיר ובטוח 24/7.</p>
+          <p className="text-lg mb-8">זקוקים לחילוץ דחוף? אנו מתמחים בגרירת משאיות, רכבים מסחריים ורכבי 4x4. שירות מקצועי, מהיר ובטוח 24/7. פועלים בכל אזורי הצפון וקרובים לצירים מרכזיים כמו <Link href="/areas/haifa-general/accident-towing-road-22-check-post-krayot" className="underline">כביש 22</Link>.</p>
           <div className="flex gap-4">
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-black px-6 py-3 rounded-lg font-bold">
               התקשרו עכשיו
             </a>
-            <WhatsAppCTA cityName="חיפה והקריות" />
+            <WhatsAppCTA cityName="קריית חיים" />
           </div>
         </div>
       </section>
@@ -46,12 +56,26 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-4">למה לבחור בנו?</h2>
           <p className="mb-4">אנו מבינים את החשיבות של זמן השבתה עבור משאיות ורכבים כבדים. הצוות שלנו מיומן בטיפול במצבים מורכבים באזור התעשייה של קריית חיים.</p>
-          <ul className="list-disc pl-5 space-y-2">
+          <ul className="list-disc pl-5 space-y-2 mb-8">
             <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
             <li>ציוד גרירה ייעודי למשקלים כבדים.</li>
             <li>מחירים הוגנים ושקיפות מלאה.</li>
-            <li>שימו לב: איננו מספקים שירותי גרירה לאופנועים.</li>
+            <li>ניסיון רב בחילוצי שטח ודרך, כולל שירותים דומים ל- <Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="underline">מחלף קריית אתא</Link>.</li>
           </ul>
+
+          <div className="mt-10 border-t border-gray-700 pt-8">
+            <h3 className="text-xl font-bold mb-4">שאלות נפוצות על גרירת משאיות באזורנו</h3>
+            <div className="space-y-4">
+                <div>
+                    <p className="font-bold">מהו זמן ההגעה המשוער לאזור התעשייה בקריית חיים?</p>
+                    <p className="text-gray-300">אנו שואפים להגיע לכל קריאה באזור התעשייה תוך זמן קצר מרגע הקריאה, בהתאם לעומסי התנועה בצירים המובילים.</p>
+                </div>
+                <div>
+                    <p className="font-bold">האם אתם גוררים רכבים מסחריים מכל סוג?</p>
+                    <p className="text-gray-300">כן, אנו ערוכים לגרירת רוב סוגי המשאיות והרכבים המסחריים. במידה ואתם זקוקים גם לשירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-check-post-haifa" className="underline">קניית רכבים לפירוק</Link> לרכבים ישנים שאינם נוסעים, נשמח לסייע.</p>
+                </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

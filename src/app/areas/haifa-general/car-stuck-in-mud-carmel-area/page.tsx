@@ -1,5 +1,15 @@
+import { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "חילוץ רכב תקוע בבוץ בכרמל | שירות מהיר 24/7 | מחיר הוגן",
+  description: "נתקעתם בבוץ באזור הכרמל? אנחנו כאן לחילוץ רכבים מקצועי ומהיר 24/7. הגעה מהירה, ציוד שטח מתקדם ומחירים הוגנים. התקשרו עכשיו לחילוץ!",
+  alternates: {
+    canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-area",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -47,17 +57,25 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">חילוץ רכב תקוע בבוץ באזור הכרמל</h2>
-        <p className="mb-4">אם הרכב שלכם שקע בבוץ בדרכי העפר או בשטחים הפתוחים של הכרמל, אנחנו כאן כדי לסייע לכם באופן מיידי. אנו מתמחים בחילוצי שטח, רכבי 4x4, ורכבים פרטיים שנתקעו בתנאי שטח קשים.</p>
+        <p className="mb-4">אם הרכב שלכם שקע בבוץ בדרכי העפר או בשטחים הפתוחים של הכרמל, אנחנו כאן כדי לסייע לכם באופן מיידי. אנו מתמחים בחילוצי שטח, רכבי 4x4, ורכבים פרטיים שנתקעו בתנאי שטח קשים. אם אתם זקוקים לחילוץ מורכב יותר, ראו גם את השירות שלנו ל- <Link href="/areas/haifa-general/suv-stuck-in-mud-rescue-haifa-university" className="text-blue-400 underline">חילוץ רכבי שטח באזור אוניברסיטת חיפה</Link> או <Link href="/areas/haifa-general/emergency-mud-rescue-carmel-forest-haifa" className="text-blue-400 underline">חילוץ דחוף ביערות הכרמל</Link>.</p>
         <p className="mb-4"><strong>חשוב לציין:</strong> אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח. איננו מספקים שירותי חילוץ או גרירה לאופנועים.</p>
         
         <div className="bg-neutral-900 p-8 rounded-xl border border-neutral-800 mt-8">
-          <h3 className="text-2xl font-semibold mb-4">למה לבחור בנו?</h3>
-          <ul className="list-disc list-inside space-y-2">
-            <li>זמינות מלאה 24/7 לכל אזור חיפה והכרמל.</li>
-            <li>ציוד חילוץ מתקדם המותאם לקרקע בוצית.</li>
-            <li>מחירים הוגנים ושקיפות מלאה.</li>
-            <li>צוות מיומן ומקצועי עם ניסיון רב בשטח.</li>
-          </ul>
+          <h3 className="text-2xl font-semibold mb-4">שאלות נפוצות</h3>
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">כמה זמן לוקח לכם להגיע לחילוץ בכרמל?</p>
+              <p className="text-neutral-400">אנו ערוכים לזמני הגעה מהירים במיוחד לכל חלקי הכרמל והסביבה.</p>
+            </div>
+            <div>
+              <p className="font-bold">האם אתם מחלצים רכבים ששקעו עמוק בבוץ?</p>
+              <p className="text-neutral-400">כן, ברשותנו ציוד חילוץ כבד ומקצועי המותאם בדיוק למצבים של רכבים ששקעו בבוץ עמוק.</p>
+            </div>
+            <div>
+              <p className="font-bold">מהו טווח המחירים לשירותי חילוץ?</p>
+              <p className="text-neutral-400">אנו מספקים הצעת מחיר הוגנת ושקופה בטלפון, בהתאם למיקום ומורכבות החילוץ.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
