@@ -9,12 +9,12 @@ export default function Page() {
     "areaServed": { "@type": "Place", "name": "כביש 22 עוקף קריות" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "priceRange": "$",
-    "serviceType": "Towing Service",
-    "geo": { "@type": "GeoCoordinates", "latitude": "32.8156", "longitude": "35.0653" }
+    "serviceType": "Towing and Roadside Assistance",
+    "geo": { "@type": "GeoCoordinates", "latitude": "32.8190", "longitude": "35.0630" }
   };
 
   return (
-    <main>
+    <main className="bg-neutral-950 text-neutral-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -22,21 +22,31 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר רכבים תקועים בכביש 22 עוקף קריות</h1>
-          <p className="text-xl mb-8">נתקעתם בדרך? אנחנו בדרך אליכם עם שירות גרירה מהיר ומקצועי לכל סוגי הרכבים.</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">גרר רכבים תקועים בכביש 22 עוקף קריות</h1>
+          <p className="text-xl mb-8">נתקעתם בדרך? אנחנו בדרך אליכם עם שירות גרירה מהיר ומקצועי.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-4 rounded-lg font-bold text-lg">
-              התקשרו עכשיו לחילוץ
-            </a>
             <WhatsAppCTA cityName="Haifa and Krayot" />
+            <a 
+              href={`tel:+${BUSINESS_INFO.phone}`} 
+              className="bg-white text-neutral-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition"
+            >
+              חיוג מהיר לגרר
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים בכביש 22</h2>
-        <p className="mb-4">אם הרכב שלכם נתקע בכביש 22 (עוקף קריות), אנו כאן כדי להעניק לכם מענה מהיר ובטוח. אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. שימו לב: איננו מספקים שירותי גרירה לאופנועים.</p>
-        <p>אנו מציעים מחירים הוגנים ושירות אדיב 24/7. אל תמתינו בכביש המהיר – צרו קשר וצוות הגרר שלנו יגיע אליכם בהקדם האפשרי.</p>
+      <section className="py-16 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6">שירותי חילוץ וגרירה בכביש 22</h2>
+        <p className="mb-4">אם הרכב שלכם שבק חיים בכביש 22, אל תמתינו שעות. אנו מספקים מענה מהיר לכל סוגי הרכבים הפרטיים, המסחריים ורכבי ה-4x4. אנו מבינים את הדחיפות שבחילוץ מהיר בכביש מהיר ועמוס.</p>
+        <p className="text-red-400 font-semibold mb-4">חשוב להבהיר: אנו מתמחים ברכבים בלבד ואיננו מספקים שירותי גרירה לאופנועים.</p>
+        <h3 className="text-2xl font-bold mt-8 mb-4">למה לבחור בנו?</h3>
+        <ul className="list-disc list-inside space-y-2">
+          <li>זמינות מלאה 24/7 לכל אורך כביש עוקף קריות.</li>
+          <li>מחירים הוגנים ושקופים ללא הפתעות.</li>
+          <li>ציוד גרירה מתקדם המבטיח שמירה על הרכב שלכם.</li>
+          <li>צוות מנוסה שמכיר את צירי התנועה בחיפה והקריות היטב.</li>
+        </ul>
       </section>
     </main>
   );
