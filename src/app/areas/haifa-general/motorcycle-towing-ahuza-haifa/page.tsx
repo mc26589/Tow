@@ -34,14 +34,14 @@ export default function Page() {
           <h1 className="text-3xl md:text-5xl font-bold mb-6">
             גרר לאופנוע כבד באחוזה חיפה - שירותי גרירה מקצועיים לרכבים
           </h1>
-          <p className="text-lg md:text-xl mb-8 opacity-90">
-            חשוב לציין: אנו מתמחים בגרירת רכבים פרטיים, מסחריים ו-4x4. איננו מספקים שירותי גרירה לאופנועים.
+          <p className="text-lg md:text-xl mb-8">
+            אנו מתמחים בגרירת רכבים פרטיים, מסחריים ו-4x4. שירות מהיר 24/7 באזור אחוזה והסביבה.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
             >
               חיוג מהיר למוקד
             </a>
@@ -49,19 +49,14 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-4">שירותי גרירה וחילוץ בחיפה</h2>
-          <p className="mb-4">
-            אנו מבינים את החשיבות של מענה מהיר כאשר הרכב נתקע. למרות שאיננו מטפלים באופנועים, הצי שלנו ערוך ומוכן לכל קריאה עבור רכבים פרטיים ומסחריים באזור אחוזה והסביבה.
-          </p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>זמינות 24/7 לכל אזור חיפה והקריות</li>
-            <li>ציוד גרירה מתקדם לרכבים פרטיים ורכבי שטח</li>
-            <li>מחירים הוגנים ושירות אדיב</li>
-            <li>צוות מיומן ומקצועי</li>
-          </ul>
-        </div>
+      <section className="py-12 container mx-auto px-4">
+        <h2 className="text-2xl font-bold mb-4">חשוב לדעת לגבי שירותי גרירה באחוזה</h2>
+        <p className="mb-4">
+          אנו מבינים את הצורך בשירותי גרירה מהירים באזור אחוזה בחיפה. עם זאת, חשוב להדגיש כי <strong>איננו מספקים שירותי גרירה לאופנועים או אופנועים כבדים</strong>. ההתמחות שלנו מתמקדת ברכבים פרטיים, רכבים מסחריים ורכבי שטח.
+        </p>
+        <p>
+          אם נתקעת עם הרכב שלך, הצוות שלנו עומד לרשותך עם ציוד גרירה מתקדם, מחירים הוגנים ושירות אדיב מסביב לשעון. צרו קשר לקבלת הצעת מחיר בטלפון.
+        </p>
       </section>
     </main>
   );

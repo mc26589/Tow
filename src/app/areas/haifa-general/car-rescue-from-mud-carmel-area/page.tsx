@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "חילוץ רכב מבוץ באזור הכרמל | שירות מהיר 24/7",
-  description: "נתקעתם בבוץ בכרמל? אנו מציעים שירותי חילוץ רכב מקצועיים, מהירים ובטוחים. זמינים 24/7 לכל סוגי הרכבים (למעט אופנועים). התקשרו עכשיו."
+  description: "נתקעתם בבוץ בכרמל? אנו מציעים שירותי חילוץ רכב מקצועיים לרכבים פרטיים ו-4x4. זמינות 24/7, מחירים הוגנים וציוד חילוץ מתקדם.",
 };
 
 export default function Page() {
@@ -37,37 +37,32 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב מבוץ באזור הכרמל</h1>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl">
-            נתקעתם בבוץ באזור הכרמל? אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 ששקעו בתנאי שטח. 
-            הצוות שלנו זמין 24/7 ומגיע במהירות לכל נקודה בכרמל עם ציוד חילוץ מקצועי.
+          <h1 className="text-4xl font-bold mb-6">חילוץ רכב מבוץ באזור הכרמל</h1>
+          <p className="text-xl mb-8 max-w-2xl">
+            נתקעתם עם הרכב בבוץ באזור הכרמל? אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 ששקעו בתנאי שטח. 
+            הצוות שלנו מגיע במהירות לכל נקודה באזור הכרמל עם ציוד חילוץ מקצועי. 
+            חשוב לציין: אנו לא מספקים שירותי חילוץ לאופנועים.
           </p>
           <div className="flex flex-wrap gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
+              className="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
             >
-              התקשרו עכשיו לחילוץ
+              התקשרו עכשיו לחילוץ מהיר
             </a>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">שירותי חילוץ מקצועיים בכרמל</h2>
-          <p className="mb-4">אנו מבינים את הקושי והלחץ הכרוכים בשקיעה בבוץ. הניסיון הרב שלנו בדרכי הכרמל מאפשר לנו להעניק פתרון מהיר, בטוח ומשתלם.</p>
-          <ul className="list-disc list-inside space-y-2 mb-6">
-            <li>חילוץ רכבים פרטיים ורכבי שטח (4x4)</li>
-            <li>ציוד חילוץ מתקדם למניעת נזקים</li>
-            <li>זמינות מלאה 24 שעות ביממה</li>
-            <li>מחירים הוגנים ושקופים</li>
-          </ul>
-          <p className="text-sm text-gray-600 italic">
-            *שימו לב: אנו מתמחים בחילוץ רכבים, רכבים מסחריים ורכבי שטח בלבד. איננו מספקים שירותי חילוץ או גרירה לאופנועים.
-          </p>
-        </div>
+      <section className="py-16 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ בכרמל?</h2>
+        <ul className="space-y-4 text-lg">
+          <li>✓ זמינות מלאה 24/7 לכל קריאת חילוץ באזור הכרמל.</li>
+          <li>✓ ציוד חילוץ מתקדם המותאם לדרכי עפר ובוץ.</li>
+          <li>✓ מחירים הוגנים ושקיפות מלאה מול הלקוח.</li>
+          <li>✓ צוות מיומן ומקצועי עם ניסיון רב בחילוצי שטח.</li>
+        </ul>
       </section>
     </main>
   );
