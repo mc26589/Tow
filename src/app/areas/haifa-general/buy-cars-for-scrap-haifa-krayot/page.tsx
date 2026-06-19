@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "קונה רכבים לפירוק בחיפה והקריות | שירות מהיר ומחיר הוגן 24/7",
+  description: "רוצים למכור רכב לפירוק בחיפה והקריות? אנו קונים את כל סוגי הרכבים במחיר הוגן, כולל פינוי וגרירה ללא עלות! שירות אמין ומהיר. התקשרו עכשיו לקבלת הצעה!",
+  alternates: {
+    canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-krayot",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -48,9 +58,27 @@ export default function Page() {
       <section className="py-16 container mx-auto px-4 text-white">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפירוק רכבים?</h2>
         <div className="prose prose-invert max-w-none">
-          <p>אנו קונים רכבים לפירוק בחיפה והקריות במחירים הוגנים ובתהליך מהיר. אם ברשותך רכב ישן, תקול, לאחר תאונה או רכב שאינו עובר טסט, אנו מציעים שירות פינוי מקצועי ללא עלות גרירה.</p>
-          <p>אנו מתמחים ברכישת רכבים פרטיים, מסחריים ורכבי שטח (4x4). <strong>חשוב לציין: אנו לא מטפלים באופנועים.</strong></p>
-          <p>השירות שלנו כולל פינוי מיידי מהשטח, טיפול בכל הניירת הנדרשת מול משרד הרישוי, ותשלום הוגן במקום. הצוות שלנו זמין 24/7 לכל קריאה באזור חיפה, הקריות והסביבה.</p>
+          <p>אנו קונים רכבים לפירוק בחיפה והקריות במחירים הוגנים ובתהליך מהיר. השירות שלנו זמין לתושבי האזור, לרבות אלו המחפשים <Link href="/areas/haifa-general/car-scrapping-neve-shaanan-haifa">פירוק רכבים בנווה שאנן</Link> או <Link href="/areas/haifa-general/buying-cars-for-scrap-ahoza-haifa">רכישת רכבים לפירוק באחוזה</Link>.</p>
+          <p>אם ברשותך רכב ישן, תקול, לאחר תאונה או רכב שאינו עובר טסט, אנו מציעים שירות פינוי מקצועי ללא עלות גרירה. אנו מתמחים ברכישת רכבים פרטיים, מסחריים ורכבי שטח (4x4). <strong>חשוב לציין: אנו לא מטפלים באופנועים.</strong></p>
+          <p>כמו כן, אנו מציעים פתרונות אזוריים נוספים כגון <Link href="/areas/haifa-general/cash-for-scrap-cars-kiryat-motzkin">קניית רכבים לפירוק בקריית מוצקין</Link> וכן <Link href="/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik">פירוק רכבים באזור התעשייה קריית ביאליק</Link>.</p>
+        </div>
+      </section>
+
+      <section className="py-16 container mx-auto px-4 text-white">
+        <h2 className="text-3xl font-bold mb-6">שאלות נפוצות על פירוק רכבים</h2>
+        <div className="space-y-4">
+          <div>
+            <h3 className="font-bold text-xl">האם אתם קונים כל סוג רכב?</h3>
+            <p>אנו קונים רכבים פרטיים, רכבים מסחריים ורכבי 4x4. איננו עוסקים בפירוק אופנועים.</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-xl">האם השירות כולל גרירה?</h3>
+            <p>כן, אנו מבצעים פינוי וגרירה של הרכב ללא עלות נוספת מכל נקודה בחיפה והקריות.</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-xl">תוך כמה זמן תגיעו לפנות את הרכב?</h3>
+            <p>אנו שואפים להגעה מהירה ומקצועית בהתאם לעומס, בדרך כלל באותו היום. צרו קשר לתיאום מועד נוח.</p>
+          </div>
         </div>
       </section>
     </main>
