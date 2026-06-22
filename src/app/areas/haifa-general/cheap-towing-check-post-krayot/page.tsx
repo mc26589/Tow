@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "גרר זול בצ'ק פוסט והקריות | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם עם הרכב באזור צ'ק פוסט או הקריות? אנו מספקים שירותי גרירה מקצועיים, מהירים ובמחיר זול במיוחד. שירות 24/7 לכל סוגי הרכבים. חייגו עכשיו לשירות גרירה!",
+  alternates: {
+    canonical: "/areas/haifa-general/cheap-towing-check-post-krayot",
+  },
+};
 
 export default function Page() {
   return (
@@ -24,12 +34,27 @@ export default function Page() {
         <h2 className="text-2xl font-bold mb-4">שירותי גרירה אמינים בצפון</h2>
         <p className="mb-4">
           אנו מבינים כמה מתסכל להיתקע עם הרכב. לכן, אנו מציעים שירות גרירה מהיר באזור צ'ק פוסט, הקריות וחיפה. 
+          בין אם אתם זקוקים ל-<Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה דחופים בצ'ק פוסט</Link> או עזרה בדרכים, הצוות שלנו זמין עבורכם.
           השירות שלנו מתמקד ברכבים פרטיים, רכבים מסחריים ורכבי 4x4. 
           שימו לב: איננו מספקים שירותי גרירה לאופנועים.
         </p>
         <p>
-          אנו מקפידים על מחיר זול והוגן לכל לקוח, תוך מתן שירות אדיב ומקצועי בכל שעות היממה.
+          אנו מקפידים על מחיר זול והוגן לכל לקוח, תוך מתן שירות אדיב ומקצועי בכל שעות היממה. אם נתקעתם בדרך צפונה, אנו ערוכים לסייע גם בתאונות ב-<Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-600 underline">צומת צ'ק פוסט</Link>.
         </p>
+      </section>
+
+      <section className="py-12 container mx-auto px-4 bg-gray-50">
+        <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על שירותי גרירה בצ'ק פוסט והקריות</h2>
+        <div className="space-y-4">
+          <div>
+            <h3 className="font-bold">מהו זמן ההגעה הממוצע לצ'ק פוסט?</h3>
+            <p>אנו משתדלים להגיע לכל קריאה באזור צ'ק פוסט והקריות תוך 30-45 דקות, בהתאם לעומסי התנועה.</p>
+          </div>
+          <div>
+            <h3 className="font-bold">האם אתם גוררים רכבים מסחריים?</h3>
+            <p>כן, אנו מספקים שירותי גרירה לרכבים פרטיים, רכבים מסחריים ורכבי 4x4. איננו מספקים שירות לאופנועים.</p>
+          </div>
+        </div>
       </section>
 
       <script

@@ -1,5 +1,15 @@
+import { Metadata } from "next";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "גרר רכבים באחוזה חיפה 24/7 | הגעה מהירה ומחיר הוגן",
+  description: "נתקעת באחוזה חיפה? אנו מספקים שירותי גרירה וחילוץ לרכבים פרטיים ומסחריים 24/7. הגעה מהירה, שירות אמין ומחיר הוגן. התקשרו עכשיו לקבלת סיוע!",
+  alternates: {
+    canonical: "/areas/haifa-general/heavy-motorcycle-towing-ahuza-haifa",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -31,12 +41,12 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר לאופנועים כבדים באחוזה חיפה - שירות מקצועי לרכבים ורכבי שטח</h1>
-          <p className="text-xl mb-8">זקוקים לחילוץ רכב באחוזה? אנו כאן לשירותכם 24/7</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה וחילוץ לרכבים באחוזה חיפה</h1>
+          <p className="text-xl mb-8">נתקעתם עם הרכב באחוזה? צוות מקצועי זמין עבורכם 24/7 למתן פתרון מהיר</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+            <WhatsAppCTA cityName="אחוזה חיפה" />
             <a 
-              href={`tel:+${BUSINESS_INFO.phone}`} 
+              href={`tel:${BUSINESS_INFO.phone}`} 
               className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
               חיוג מהיר למוקד
@@ -49,9 +59,27 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-3xl font-bold mb-6">מידע חשוב בנוגע לשירותי גרירה באחוזה</h2>
           <div className="prose prose-invert">
-            <p>חשוב להבהיר: אנו מתמחים בשירותי גרירה וחילוץ לרכבים פרטיים, רכבים מסחריים ורכבי 4x4 באזור אחוזה וחיפה. <strong>איננו מספקים שירותי גרירה לאופנועים או אופנועים כבדים.</strong></p>
-            <p>אם נתקעת עם הרכב שלך באזור אחוזה, הצוות המקצועי שלנו זמין עבורך 24/7 עם ציוד חילוץ מתקדם ומחירים הוגנים. אנו מבינים את החשיבות של מענה מהיר באזור חיפה והקריות ומבטיחים הגעה מהירה לכל קריאה.</p>
-            <p>אנו מציעים שירות אמין, מקצועי ומהיר לכל סוגי הרכבים (למעט אופנועים). לקבלת הצעת מחיר בטלפון, צרו איתנו קשר כעת.</p>
+            <p>אנו מתמחים בשירותי גרירה וחילוץ לרכבים פרטיים, רכבים מסחריים ורכבי 4x4 באזור אחוזה וחיפה. <strong>חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.</strong></p>
+            <p>בין אם אתם זקוקים ל- <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-400">שירותי גרירה דחופים בצ'ק פוסט</Link> או <Link href="/areas/haifa-general/emergency-mud-rescue-carmel-forest-haifa" className="text-blue-400">חילוץ מהבוץ בכרמל</Link>, הצוות שלנו ערוך להגיע לכל נקודה באזור חיפה והקריות במהירות המקסימלית.</p>
+            <p>למי שמחפש פתרונות לרכבים שאינם בנסיעה, ניתן גם לבדוק אפשרות ל- <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="text-blue-400">מכירת רכב לפירוק בחיפה</Link>.</p>
+          </div>
+
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold mb-4">שאלות נפוצות</h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-bold">מהו אזור הפעילות שלכם בחיפה?</h4>
+                <p>אנו פעילים בכל העיר חיפה, כולל שכונות הכרמל, אחוזה, מרכז הכרמל, נווה שאנן ועד לקריות.</p>
+              </div>
+              <div>
+                <h4 className="font-bold">האם אתם גוררים אופנועים?</h4>
+                <p>לא, שירותי הגרירה שלנו מיועדים לרכבים פרטיים, מסחריים ורכבי 4x4 בלבד.</p>
+              </div>
+              <div>
+                <h4 className="font-bold">כמה זמן לוקח לכם להגיע לאחוזה?</h4>
+                <p>אנו שואפים להגיע לכל קריאה באחוזה ובסביבתה תוך זמן קצר ככל הניתן, בהתאם לעומסי התנועה.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
