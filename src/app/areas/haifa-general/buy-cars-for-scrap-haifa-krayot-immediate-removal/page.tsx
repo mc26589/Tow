@@ -1,14 +1,10 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import type { Metadata } from "next";
-import Link from "next/link";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "קונה רכבים לפירוק בחיפה והקריות | פינוי מיידי ומזומן",
-  description: "נתקעתם עם רכב ישן? קונה רכבים לפירוק בחיפה והקריות עם פינוי מהיר מהשטח. מחיר הוגן, שירות אמין ומקצועי. התקשרו עכשיו להצעת מחיר!",
-  alternates: {
-    canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal"
-  }
+  title: "קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי | שירות 24/7",
+  description: "מחפשים קונה רכבים לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי, מחירים הוגנים ושירות מקצועי לרכבים, רכבי שטח ורכבים מסחריים. צרו קשר עכשיו!"
 };
 
 export default function Page() {
@@ -17,7 +13,6 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי גרירה ופירוק רכבים חיפה והקריות",
     "areaServed": ["Haifa", "Krayot"],
-    "priceRange": "$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -29,11 +24,12 @@ export default function Page() {
       "latitude": "32.7940",
       "longitude": "34.9896"
     },
-    "serviceType": ["Car Scrap", "Towing Service", "Vehicle Removal"]
+    "priceRange": "$",
+    "serviceType": "Car Scrap Removal"
   };
 
   return (
-    <main className="min-h-screen bg-neutral-950">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -41,42 +37,29 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי</h1>
-          <p className="text-xl mb-8">נתקעתם עם רכב ישן או מושבת? אנו קונים רכבים לפירוק ומפנים אותם מהשטח באופן מיידי.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי</h1>
+          <p className="text-xl mb-8">זקוקים לפינוי רכב ישן או תקול? אנו כאן בשבילכם עם שירות מהיר, אמין ומקצועי בכל אזור חיפה והקריות.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-neutral-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition-colors"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
             >
-              חייגו עכשיו להצעת מחיר
+              התקשרו עכשיו לקבלת הצעת מחיר
             </a>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-neutral-900 text-neutral-100">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold mb-6">שירות מקצועי לפינוי רכבים</h2>
-          <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק בחיפה, הקריות והסביבה. אנו מספקים שירותים משלימים כמו <Link href="/areas/haifa-general/cash-for-scrap-cars-kiryat-motzkin" className="text-blue-400 underline">קניית רכבים לפירוק בקריית מוצקין</Link> וכן <Link href="/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik" className="text-blue-400 underline">פינוי רכבים לפירוק באזור התעשייה קריית ביאליק</Link>. השירות שלנו מותאם ללקוחות פרטיים ועסקיים הזקוקים לפתרון מהיר.</p>
-          
-          <div className="bg-neutral-800 p-6 rounded-xl border-l-4 border-red-600 mb-8">
-            <p className="font-bold text-red-400">הערה חשובה: איננו מטפלים באופנועים.</p>
-            <p>השירות שלנו מיועד לרכבים בעלי 4 גלגלים בלבד (פרטיות, מסחריות, 4x4).</p>
-          </div>
-
-          <h2 className="text-2xl font-bold mb-4">שאלות נפוצות</h2>
-          <div className="space-y-4">
-            <div>
-              <h3 className="font-bold text-lg">תוך כמה זמן תפנו את הרכב?</h3>
-              <p>אנו מציעים שירות פינוי מיידי באזור חיפה והקריות. ברוב המקרים הגעה תוך שעות בודדות.</p>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg">באילו אזורים אתם פעילים?</h3>
-              <p>אנו פרוסים בכל אזור חיפה, הקריות, נווה שאנן, אחוזה והסביבה. למידע נוסף ניתן לבדוק גם את שירותי ה-<Link href="/areas/haifa-general/car-scrapping-neve-shaanan-haifa" className="text-blue-400 underline">פירוק רכבים בנווה שאנן</Link>.</p>
-            </div>
-          </div>
-        </div>
+      <section className="py-16 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי הרכב שלכם?</h2>
+        <p className="mb-4">אנו מתמחים בפינוי רכבים לפירוק מכל סוגי הרכבים הפרטיים, המסחריים ורכבי ה-4x4. השירות שלנו מתאפיין במקצועיות ללא פשרות ובפינוי מהיר מהשטח.</p>
+        <ul className="list-disc pr-6 space-y-2">
+          <li>פינוי מיידי ללא עיכובים מיותרים.</li>
+          <li>מחירים הוגנים ומשתלמים עבור הרכב שלכם.</li>
+          <li>שירות אדיב ומקצועי בכל אזור חיפה והקריות.</li>
+          <li>טיפול בכל סוגי הרכבים (למעט אופנועים).</li>
+        </ul>
       </section>
     </main>
   );
