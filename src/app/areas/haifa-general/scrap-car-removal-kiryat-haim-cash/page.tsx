@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "פינוי רכב לפירוק בקריית חיים | מזומן במקום | שירות מהיר 24/7",
+  description: "צריכים פינוי רכב לפירוק בקריית חיים? משלמים מזומן במקום, גרירה מהירה לכל סוגי הרכבים. שירות אמין ומקצועי. התקשרו עכשיו לקבלת הצעת מחיר!",
+  alternates: {
+    canonical: "/areas/haifa-general/scrap-car-removal-kiryat-haim-cash",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -47,14 +57,33 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-semibold mb-6">למה לבחור בנו לפינוי הרכב שלכם?</h2>
-        <p className="mb-4">אנו מתמחים בפינוי רכבים לפירוק בקריית חיים ובכל אזור הקריות. אנו מספקים מענה מהיר לרכבים שאינם בנסיעה, רכבים לאחר תאונה או רכבים ישנים שצברו אבק.</p>
+        <p className="mb-4">אנו מתמחים בפינוי רכבים לפירוק בקריית חיים ובכל אזור הקריות. בנוסף, אנו מספקים שירותי פינוי רכבים לפירוק גם לתושבי <Link href="/areas/haifa-general/buy-old-cars-for-scrap-kiryat-yam" className="text-blue-400 hover:underline">קרית ים</Link> והסביבה. אנו מספקים מענה מהיר לרכבים שאינם בנסיעה, רכבים לאחר תאונה או רכבים ישנים שצברו אבק.</p>
         <ul className="list-disc list-inside space-y-2 mb-8">
           <li>פינוי מהיר ומקצועי ללא עלות גרירה.</li>
           <li>הצעת מחיר הוגנת במזומן במקום.</li>
           <li>שירות אדיב וזמינות 24/7.</li>
           <li>טיפול בכל סוגי הרכבים הפרטיים, המסחריים ורכבי 4x4.</li>
         </ul>
-        <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800">
+        
+        <div className="mt-12 bg-neutral-900 p-8 rounded-xl border border-neutral-800">
+          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות על פינוי רכבים</h3>
+          <div className="space-y-4">
+            <div>
+              <h4 className="font-bold">באילו סוגי רכבים אתם מטפלים?</h4>
+              <p className="text-neutral-300">אנו מפנים רכבים פרטיים, רכבים מסחריים ורכבי 4x4. שימו לב: איננו מפנים אופנועים מכל סוג שהוא.</p>
+            </div>
+            <div>
+              <h4 className="font-bold">האם אתם משלמים עבור הרכב?</h4>
+              <p className="text-neutral-300">כן, אנו נותנים הצעת מחיר הוגנת ומשלמים במזומן במעמד הפינוי.</p>
+            </div>
+            <div>
+              <h4 className="font-bold">תוך כמה זמן תגיעו לפנות את הרכב?</h4>
+              <p className="text-neutral-300">אנו משתדלים לספק מענה מהיר בתוך שעות ספורות בתוך קריית חיים והקריות.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 p-6 rounded-xl border border-neutral-800">
           <p className="text-sm text-neutral-400">
             *הערה חשובה: אנו מתמחים ברכבים בעלי ארבעה גלגלים ומעלה. איננו מספקים שירותי פינוי או גרירה לאופנועים מכל סוג שהוא.
           </p>

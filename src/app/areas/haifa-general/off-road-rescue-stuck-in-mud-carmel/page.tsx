@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "חילוץ רכב מהבוץ בכרמל | 24/7 הגעה מהירה | מחיר הוגן",
+  description: "נתקעתם בבוץ בכרמל? צוות חילוץ שטח מקצועי בדרך אליכם! הגעה מהירה, מחיר הוגן ושירות בטוח לכל סוגי הרכבים. התקשרו עכשיו לחילוץ מיידי!",
+  alternates: { canonical: "/areas/haifa-general/off-road-rescue-stuck-in-mud-carmel" },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -38,8 +46,24 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירותי חילוץ שטח מקצועיים</h2>
-        <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, רכבי 4x4 ורכבים מסחריים ששקעו בבוץ באזור הכרמל. חשוב להדגיש: אנו לא נותנים שירות לאופנועים.</p>
+        <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, רכבי 4x4 ורכבים מסחריים ששקעו בבוץ באזור הכרמל. למידע נוסף על חילוץ ספציפי ניתן לבדוק גם <Link href="/areas/haifa-general/car-extraction-from-mud-carmel-reserve-haifa">חילוץ רכב משמורת הכרמל</Link> או לבצע <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7">חילוץ שטח בנשר 24/7</Link>. חשוב להדגיש: אנו לא נותנים שירות לאופנועים.</p>
         <p>הצוות שלנו מגיע מצויד בכל הציוד הנדרש כדי להוציא את הרכב שלכם מהבוץ ללא נזקים מיותרים. אנו מציעים מחירים הוגנים ושירות ללא פשרות.</p>
+      </section>
+
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על חילוץ בבוץ</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-bold text-xl">כמה זמן לוקח לכם להגיע לחילוץ בכרמל?</h3>
+              <p>אנו משתדלים להגיע לכל נקודה באזור הכרמל תוך זמן קצר מרגע הקריאה, בהתאם לתנאי הדרך ועומסי התנועה.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">האם אתם מחלצים רכבים בכל סוגי הבוץ?</h3>
+              <p>כן, אנו ערוכים לחילוצי שטח מורכבים. אם נתקעתם בדרכי עפר או בשמורות הטבע, אל תהססו ליצור קשר.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "שירותי גרירה בכביש 22 עוקף קריות | הגעה מהירה 24/7",
+  description: "נתקעתם בכביש 22 עוקף קריות? אנו מספקים שירותי גרירה מקצועיים ואמינים 24/7 במחיר הוגן. צוות מיומן בדרך אליכם. התקשרו עכשיו לחילוץ מהיר!",
+  alternates: {
+    canonical: "/areas/haifa-general/emergency-towing-road-22-krayot-bypass",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -35,9 +45,23 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים בכביש 22</h2>
-        <p className="mb-4">אנו מספקים שירותי גרירה דחופים לכל סוגי הרכבים הפרטיים, המסחריים ורכבי 4x4 לאורך כביש 22. אנו מבינים את הדחיפות שבחילוץ מציר תנועה מרכזי ומבטיחים הגעה מהירה.</p>
+        <p className="mb-4">אנו מספקים שירותי גרירה דחופים לכל סוגי הרכבים הפרטיים והמסחריים לאורך כביש 22. אנו מבינים את הדחיפות שבחילוץ מציר תנועה מרכזי כמו עוקף קריות ומבטיחים הגעה מהירה. במידה ואתם זקוקים לשירותי גרירה משלימים באזור, אנו זמינים גם בקרבת <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-600 underline">צומת צ'ק פוסט</Link>.</p>
         <p className="text-red-600 font-bold mb-4">חשוב: איננו מספקים שירותי גרירה לאופנועים.</p>
-        <p>אנו מציעים מחירים הוגנים ושירות אדיב 24 שעות ביממה, 7 ימים בשבוע.</p>
+        <p>אנו מציעים מחירים הוגנים ושירות אדיב 24 שעות ביממה. למידע נוסף על שירותי חילוץ ספציפיים באזור, ניתן לבדוק גם <Link href="/areas/haifa-general/affordable-24-7-towing-kiryat-bialik-flat-tire" className="text-blue-600 underline">שירותי גרירה בקרית ביאליק</Link>.</p>
+      </section>
+
+      <section className="py-12 container mx-auto px-4 bg-gray-50">
+        <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על גרירה בכביש 22</h2>
+        <div className="space-y-4">
+          <div>
+            <h3 className="font-bold">תוך כמה זמן תגיעו לחילוץ בכביש 22?</h3>
+            <p>אנו ממוקמים בפריסה רחבה בחיפה והקריות, מה שמאפשר לנו להגיע לנקודות מרכזיות בכביש 22 בזמן מהיר.</p>
+          </div>
+          <div>
+            <h3 className="font-bold">האם אתם מפנים רכבים ישנים לגריטה?</h3>
+            <p>כן, אנו מספקים גם שירותי גרירה לפירוק. ניתן לראות מידע נוסף על <Link href="/areas/haifa-general/towing-for-scrap-kiryat-bialik" className="text-blue-600 underline">גרירה לפירוק בקרית ביאליק</Link>.</p>
+          </div>
+        </div>
       </section>
     </main>
   );

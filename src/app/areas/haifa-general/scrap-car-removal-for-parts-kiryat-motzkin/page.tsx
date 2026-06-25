@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "פינוי רכבים לפירוק בקרית מוצקין | שירות מהיר 24/7 | מחיר הוגן",
+  description: "נתקעתם עם רכב ישן? שירות פינוי רכבים לפירוק בקרית מוצקין והסביבה. פינוי רכב ללא תשלום, שירות אמין ומקצועי. התקשרו עכשיו לקבלת הצעה משתלמת!",
+  alternates: {
+    canonical: "/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -34,7 +44,7 @@ export default function Page() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">פינוי רכבים לפירוק בקרית מוצקין – שירות מהיר ומקצועי</h1>
           <p className="text-xl mb-8">זקוקים לפינוי רכב ישן? אנו כאן בשבילכם 24/7 עם שירות אמין ומחירים הוגנים.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+            <WhatsAppCTA cityName="Kiryat Motzkin" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
               className="bg-white text-neutral-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition"
@@ -48,6 +58,7 @@ export default function Page() {
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">פינוי רכבים לפירוק בקרית מוצקין – מענה מיידי</h2>
         <p className="mb-4">אם ברשותכם רכב ישן, תקול או רכב שאינו נוסע ואתם מחפשים שירות פינוי רכבים לפירוק בקרית מוצקין, הגעתם למקום הנכון. אנו מתמחים בפינוי רכבים מכל סוג – רכבים פרטיים, מסחריים ורכבי 4x4 – ומעניקים שירות מקצועי, אמין ומהיר לתושבי הקריות.</p>
+        <p className="mb-4">אנו מציעים מענה רחב הכולל גם <Link href="/areas/haifa-general/towing-for-scrap-kiryat-bialik" className="text-blue-400 underline">גרירה לפירוק בקרית ביאליק</Link> ושירותי רכב נוספים באזור. אם אתם זקוקים לטיפול דחוף במקרה של תאונה, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/commercial-truck-accident-recovery-kiryat-motzkin-24-7" className="text-blue-400 underline">חילוץ רכבים מסחריים בקרית מוצקין</Link> שלנו.</p>
         <p className="mb-4 font-semibold text-red-400">חשוב לציין: אנו לא מטפלים בפינוי אופנועים, אלא מתמקדים אך ורק ברכבים בעלי ארבעה גלגלים ומעלה.</p>
         
         <h3 className="text-2xl font-bold mt-8 mb-4">למה לבחור בנו לפינוי הרכב שלכם?</h3>
@@ -57,6 +68,20 @@ export default function Page() {
           <li>הוגנות: הצעת מחיר הוגנת ומשתלמת בהתאם למצב הרכב.</li>
           <li>שירות מקומי: היכרות מעמיקה עם כל השכונות בקרית מוצקין.</li>
         </ul>
+
+        <div className="mt-12 bg-neutral-900 p-6 rounded-lg">
+          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות</h3>
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">האם אתם מפנים רכבים ללא טסט או רכבים שלא נוסעים?</p>
+              <p>כן, אנו מתמחים בפינוי רכבים שאינם במצב נסיעה מכל חלקי קרית מוצקין.</p>
+            </div>
+            <div>
+              <p className="font-bold">כמה זמן לוקח לכם להגיע לקרית מוצקין?</p>
+              <p>ברוב המקרים נגיע אליכם תוך זמן קצר מרגע הקריאה, בהתאם לעומסי התנועה באזור הקריות.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
