@@ -22,41 +22,40 @@ export default function Page() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "32.7940",
-      "longitude": "35.0350"
+      "latitude": "32.7936",
+      "longitude": "35.0353"
     },
-    "serviceType": "Towing Service"
+    "serviceType": "Emergency Towing"
   };
 
   return (
-    <main>
+    <main className="bg-neutral-950 min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      <section className="gradient-trust text-white py-14 md:py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר זול בצומת צ'ק פוסט קרית אתא – שירות מהיר ומקצועי 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם בדרך? הצוות שלנו בדרך אליכם עם שירות גרירה אמין ומחירים הוגנים.</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-4 rounded-lg font-bold text-lg">
-              התקשרו עכשיו להצעת מחיר
-            </a>
-            <WhatsAppCTA cityName="Haifa and Krayot" />
-          </div>
+      <section className="gradient-trust text-white py-14 md:py-20 px-4 text-center">
+        <h1 className="text-3xl md:text-5xl font-bold mb-6">גרר זול בצומת צ'ק פוסט קרית אתא – שירות מהיר ומקצועי 24/7</h1>
+        <p className="text-lg md:text-xl mb-8">נתקעתם בדרך? הצוות שלנו מחכה לכם באזור צ'ק פוסט למתן שירות גרירה מהיר ובטוח.</p>
+        <div className="flex flex-col md:flex-row gap-4 justify-center">
+          <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition">
+            התקשרו עכשיו להצעת מחיר
+          </a>
+          <WhatsAppCTA cityName="Haifa and Krayot" />
         </div>
       </section>
 
-      <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לשירותי גרירה בצ'ק פוסט?</h2>
-        <p className="mb-4">אנו מבינים את החשיבות של הגעה מהירה כאשר הרכב נתקע בצומת עמוס כמו צ'ק פוסט. הניסיון הרב שלנו מאפשר לנו לתת מענה מקצועי לכל סוגי הרכבים הפרטיים, המסחריים ורכבי 4x4.</p>
-        <p className="font-semibold text-red-600">שימו לב: אנו לא מספקים שירותי גרירה לאופנועים.</p>
-        <div className="mt-8">
-          <a href={`tel:+${BUSINESS_INFO.phone}`} className="text-blue-600 font-bold underline">
-            צרו קשר לקבלת הצעת מחיר בטלפון
-          </a>
-        </div>
+      <section className="max-w-4xl mx-auto py-12 px-6 text-white">
+        <h2 className="text-2xl font-bold mb-4">שירותי גרירה מקצועיים בצומת צ'ק פוסט</h2>
+        <p className="mb-4">אנו מבינים את החשיבות של הגעה מהירה כאשר הרכב נתקע. השירות שלנו מתמקד במתן פתרון מיידי לנהגים באזור צומת צ'ק פוסט וקרית אתא.</p>
+        <p className="mb-4"><strong>חשוב לדעת:</strong> אנו מתמחים בגרירת רכבים פרטיים, מסחריים ורכבי 4x4. איננו מספקים שירותי גרירה לאופנועים.</p>
+        <h3 className="text-xl font-semibold mt-6 mb-2">למה לבחור בנו?</h3>
+        <ul className="list-disc list-inside space-y-2">
+          <li>זמינות מלאה 24/7 לכל אזור הקריות וחיפה.</li>
+          <li>מחירים הוגנים ושקופים ללא הפתעות.</li>
+          <li>ציוד גרירה מתקדם המבטיח שמירה על הרכב שלכם.</li>
+        </ul>
       </section>
     </main>
   );
