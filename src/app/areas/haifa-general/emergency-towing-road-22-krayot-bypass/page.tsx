@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "גרירה בכביש 22 עוקף קריות | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם בכביש 22 עוקף קריות? צוות הגרירה שלנו זמין 24/7 לחילוץ מהיר ומקצועי. מחירים הוגנים ושירות אדיב לכל סוגי הרכבים. התקשרו עכשיו!",
+  alternates: {
+    canonical: "/areas/haifa-general/emergency-towing-road-22-krayot-bypass",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -52,15 +62,33 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ בכביש 22?</h2>
         <p className="mb-4">
-          כביש 22 הוא ציר תנועה מרכזי ומהיר. אנו מבינים את הסכנה בעצירה בשולי הדרך ומגיעים במהירות האפשרית כדי לפנות אתכם ואת רכבכם למקום מבטחים.
+          כביש 22 הוא ציר תנועה מרכזי ומהיר. אנו מבינים את הסכנה בעצירה בשולי הדרך ומגיעים במהירות האפשרית כדי לפנות אתכם ואת רכבכם למקום מבטחים. אם אתם זקוקים לפתרון משלים באזור, אנו ממליצים גם על שירותי <Link href="/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7" className="text-blue-600 underline">גרירה בקרית מוצקין</Link> או <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-600 underline">גרירה בצומת צ'ק פוסט</Link>.
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc list-inside space-y-2 mb-8">
           <li>זמינות 24/7 לכל אורך עוקף קריות</li>
           <li>ציוד גרירה מתקדם לרכבים פרטיים, מסחריים ו-4x4</li>
           <li>שירות אדיב ומקצועי במחיר הוגן</li>
         </ul>
+        
+        <div className="bg-gray-50 p-6 rounded-lg mt-10">
+          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות על גרירה בכביש 22</h3>
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">תוך כמה זמן תגיעו אלי?</p>
+              <p>אנו עושים את מירב המאמצים להגיע תוך 30-45 דקות, בהתאם לעומסי התנועה בציר עוקף קריות.</p>
+            </div>
+            <div>
+              <p className="font-bold">האם אתם גוררים אופנועים?</p>
+              <p>לא, השירות שלנו מיועד לרכבים פרטיים ומסחריים בלבד. אנו לא מספקים שירותי גרירה לאופנועים.</p>
+            </div>
+            <div>
+              <p className="font-bold">באילו אזורים נוספים אתם פעילים?</p>
+              <p>אנו מספקים פתרונות גרירה בכל רחבי חיפה והקריות, כולל שירותים ייעודיים כמו <Link href="/areas/haifa-general/cheap-towing-check-post-haifa-fast-service" className="text-blue-600 underline">גרירת רכבים בצ'ק פוסט</Link>.</p>
+            </div>
+          </div>
+        </div>
         <p className="mt-6 text-sm text-gray-600">
-          *הערה: השירות מיועד לרכבים בלבד. איננו מספקים שירותי גרירה לאופנועים.
+          *הערה: השירות מיועד לרכבים בלבד.
         </p>
       </section>
     </main>

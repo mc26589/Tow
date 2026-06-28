@@ -1,71 +1,32 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import type { Metadata } from "next";
+import Link from "next/link";
 
-
+export const metadata: Metadata = {
+  title: "חילוץ תאונות משאיות באחוזה, חיפה | שירות מהיר 24/7 | מחיר הוגן",
+  description: "נתקעתם עם המשאית באחוזה? שירות חילוץ תאונות מקצועי ומהיר 24/7. הגעה מיידית למשאיות, רכבים מסחריים ו-4X4. התקשרו עכשיו למחיר הוגן!",
+  alternates: {
+    canonical: "/areas/haifa-general/truck-accident-recovery-service-ahuzah-haifa",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
     "name": "שירותי גרירה וחילוץ 24/7 באחוזה חיפה והקריות",
-    "description": "שירותי גרירה וחילוץ מהירים ומקצועיים למשאיות, רכבים פרטיים, מסחריים ורכבי שטח באחוזה, חיפה והקריות, 24 שעות ביממה, 7 ימים בשבוע. מענה מיידי לתאונות ותקלות.",
-    "url": "https://yourdomain.com/truck-accident-recovery-service-ahuzah-haifa",
+    "description": "שירותי גרירה וחילוץ מהירים ומקצועיים למשאיות, רכבים פרטיים, מסחריים ורכבי שטח באחוזה, חיפה והקריות, 24 שעות ביממה, 7 ימים בשבוע.",
+    "url": "https://yourdomain.com/areas/haifa-general/truck-accident-recovery-service-ahuzah-haifa",
     "telephone": `+${BUSINESS_INFO.phone}`,
     "priceRange": "$",
-    "areaServed": [
-      {
-        "@type": "Place",
-        "name": "חיפה"
-      },
-      {
-        "@type": "Place",
-        "name": "הקריות"
-      },
-      {
-        "@type": "Place",
-        "name": "אחוזה, חיפה"
-      }
-    ],
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
-    ],
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 32.7940,
-      "longitude": 34.9896
-    },
-    "serviceType": [
-      "שירותי גרירה",
-      "חילוץ רכבים",
-      "גרירת משאיות",
-      "חילוץ משאיות",
-      "גרירת רכבים מסחריים",
-      "חילוץ רכבים מסחריים",
-      "גרירת רכבי שטח",
-      "חילוץ רכבי שטח",
-      "שירותי דרך"
-    ]
+    "areaServed": [{ "@type": "Place", "name": "חיפה" }, { "@type": "Place", "name": "הקריות" }, { "@type": "Place", "name": "אחוזה, חיפה" }],
+    "serviceType": ["שירותי גרירה", "חילוץ משאיות", "גרירת רכבים מסחריים", "חילוץ רכבי שטח"]
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
@@ -73,14 +34,11 @@ export default function Page() {
             שירות חילוץ תאונות משאיות באחוזה חיפה – זמינות 24/7
           </h1>
           <p className="text-xl md:text-2xl mb-8">
-            מענה מהיר ומקצועי 24/7 לגרירה וחילוץ משאיות, רכבים מסחריים ורכבי שטח באזור אחוזה, חיפה והקריות.
+            מענה מהיר ומקצועי 24/7 לגרירה וחילוץ משאיות ורכבים מסחריים באזור אחוזה, חיפה והקריות.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
-            <a
-              href={`tel:+${BUSINESS_INFO.phone}`}
-              className="bg-white text-gray-900 hover:bg-gray-200 transition-colors duration-300 font-semibold py-3 px-8 rounded-full shadow-lg text-lg"
-            >
+            <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-gray-900 hover:bg-gray-200 transition-colors py-3 px-8 rounded-full shadow-lg text-lg">
               התקשרו עכשיו: {BUSINESS_INFO.phone}
             </a>
           </div>
@@ -90,68 +48,23 @@ export default function Page() {
       <main className="bg-gray-900 text-gray-100 py-12 md:py-16">
         <div className="container mx-auto px-4">
           <section className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-blue-400">
-              מחפשים שירות חילוץ תאונות משאיות מקצועי ומהיר באחוזה, חיפה?
-            </h2>
-            <p className="text-lg md:text-xl leading-relaxed text-center max-w-3xl mx-auto">
-              אנו מספקים מענה מיידי 24 שעות ביממה, 7 ימים בשבוע, לכל צורך בגרירה וחילוץ משאיות, רכבים מסחריים ורכבי שטח באזור אחוזה, חיפה והקריות. צוות המומחים שלנו מצויד בציוד המתקדם ביותר ומגיע אליכם במהירות לטפל בכל תקלה או תאונה, תוך הקפדה על בטיחות ויעילות מרבית. אנו מבינים את הדחיפות שבמצבי חירום ומחויבים להעניק לכם שירות אמין ומהיר במחירים הוגנים.
+            <h2 className="text-3xl font-bold text-center mb-8 text-blue-400">מחפשים חילוץ משאיות מקצועי באחוזה?</h2>
+            <p className="text-lg leading-relaxed text-center max-w-3xl mx-auto">
+              אנו מספקים מענה מיידי לכל צורך בגרירה וחילוץ משאיות באזור אחוזה. אם אתם זקוקים גם ל-<Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa" className="text-blue-300 underline">שירותי רכב חשמלי באחוזה</Link> או נתקעתם בדרכים סמוכות כמו ב-<Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-300 underline">כביש 22</Link>, אנו כאן לשירותכם.
             </p>
           </section>
 
-          <section className="mb-12 bg-gray-800 p-8 rounded-lg shadow-xl">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-blue-300">למה לבחור בנו לחילוץ משאית באחוזה?</h2>
-            <ul className="list-disc list-inside space-y-3 text-lg">
-              <li><strong className="text-blue-200">זמינות 24/7:</strong> אנו זמינים עבורכם בכל שעה, ביום ובלילה, כולל סופי שבוע וחגים.</li>
-              <li><strong className="text-blue-200">מענה מהיר:</strong> צוותי החילוץ שלנו פרוסים באזור ומגיעים במהירות לכל נקודה באחוזה, חיפה והקריות.</li>
-              <li><strong className="text-blue-200">ציוד מתקדם:</strong> אנו משתמשים בגוררים וציוד חילוץ ייעודי וחדיש המתאים למשאיות כבדות, רכבים מסחריים ורכבי שטח.</li>
-              <li><strong className="text-blue-200">צוות מנוסה:</strong> נהגים מיומנים ומקצועיים בעלי ניסיון רב בטיפול במגוון רחב של תקלות ותאונות.</li>
-              <li><strong className="text-blue-200">מחירים הוגנים:</strong> אנו מציעים שקיפות מלאה והצעת מחיר אטרקטיבית בטלפון, ללא הפתעות.</li>
-              <li><strong className="text-blue-200">שירות אדיב ומקצועי:</strong> יחס אישי ותמיכה מלאה לאורך כל תהליך החילוץ.</li>
-            </ul>
-          </section>
-
-          <section className="mb-12 bg-gray-800 p-8 rounded-lg shadow-xl">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-blue-300">שירותי הגרירה והחילוץ שלנו באחוזה, חיפה:</h2>
-            <p className="text-lg mb-4">אנו מתמחים במגוון רחב של שירותי גרירה וחילוץ, ואיננו מספקים שירות לאופנועים:</p>
-            <ul className="list-disc list-inside space-y-3 text-lg">
-              <li><strong className="text-blue-200">גרירת משאיות:</strong> לאחר תאונה, תקלה מכנית או כל מצב חירום אחר.</li>
-              <li><strong className="text-blue-200">חילוץ רכבים מסחריים:</strong> כולל טנדרים, ואנים ורכבים מסחריים קלים וכבדים.</li>
-              <li><strong className="text-blue-200">גרירת רכבי שטח 4X4:</strong> חילוץ מכל תוואי שטח, בוץ, חול או מכשולים.</li>
-              <li><strong className="text-blue-200">הוצאת רכבים:</strong> מבוץ, חול, תעלה או כל מצב שבו הרכב נתקע.</li>
-              <li><strong className="text-blue-200">שירותי דרך קלים:</strong> החלפת גלגל, התנעת רכב, אספקת דלק (במידת הצורך).</li>
-              <li><strong className="text-blue-200">הובלת רכבים:</strong> העברת רכבים תקינים ממקום למקום.</li>
-            </ul>
-          </section>
-
-          <section className="mb-12 bg-gray-800 p-8 rounded-lg shadow-xl">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-blue-300">אזורי שירות עיקריים באחוזה וחיפה:</h2>
-            <p className="text-lg mb-4">אנו מספקים שירות מהיר ויעיל לכל שכונות אחוזה, חיפה והקריות, כולל:</p>
-            <ul className="list-disc list-inside space-y-3 text-lg grid grid-cols-1 md:grid-cols-2 gap-x-6">
-              <li>אחוזה</li>
-              <li>כרמל צרפתי</li>
-              <li>מרכז הכרמל</li>
-              <li>נווה שאנן</li>
-              <li>רמת אשכול</li>
-              <li>בת גלים</li>
-              <li>הדר הכרמל</li>
-              <li>קריית אליעזר</li>
-              <li>וכל שאר שכונות חיפה והקריות.</li>
-            </ul>
-          </section>
-
-          <section className="text-center bg-blue-600 p-8 rounded-lg shadow-xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">צריכים חילוץ דחוף באחוזה, חיפה?</h2>
-            <p className="text-xl md:text-2xl mb-8 text-white">
-              אל תחכו! צרו קשר עכשיו וצוות מקצועי בדרך אליכם.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <WhatsAppCTA cityName="Haifa and Krayot" />
-              <a
-                href={`tel:+${BUSINESS_INFO.phone}`}
-                className="bg-white text-blue-700 hover:bg-gray-200 transition-colors duration-300 font-semibold py-3 px-8 rounded-full shadow-lg text-lg"
-              >
-                התקשרו עכשיו: {BUSINESS_INFO.phone}
-              </a>
+          <section className="mb-12 bg-gray-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold mb-6 text-blue-300">שאלות נפוצות</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-bold text-xl">האם אתם מחלצים רכבים שנתקעו בבוץ?</h3>
+                <p>כן, אנו מתמחים בחילוצי שטח, למידע נוסף ראו <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-blue-300 underline">חילוץ בוץ באזור הכרמל</Link>.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-xl">האם אתם גוררים אופנועים?</h3>
+                <p>לא, איננו מספקים שירותי גרירה לאופנועים, אנו מתמקדים במשאיות, רכבים מסחריים ורכבים פרטיים.</p>
+              </div>
             </div>
           </section>
         </div>

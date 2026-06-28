@@ -1,5 +1,15 @@
+import { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "חילוץ שטח 4x4 בבוץ ביערות הכרמל | זמינות 24/7 בחיפה",
+  description: "נתקעתם בבוץ בדרכי הכרמל? שירות חילוץ 4x4 מקצועי, מהיר וזמין 24/7 באזור חיפה והסביבה. מחיר הוגן וחילוץ ללא נזק לרכב. התקשרו עכשיו!",
+  alternates: {
+    canonical: "/areas/haifa-general/urgent-mud-rescue-4x4-towing-carmel-forest-trails-haifa",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -47,7 +57,7 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">זקוקים לחילוץ דחוף בבוץ בדרכי יערות הכרמל?</h2>
-        <p className="mb-4">אנו מספקים מענה מיידי ומקצועי לחילוץ רכבי 4x4 שנתקעו בבוץ עמוק, בשבילי יערות הכרמל ובאזורי השטח של חיפה והקריות. הצוות שלנו מצויד בציוד חילוץ מתקדם המותאם במיוחד לתנאי שטח קשים, ומבטיח חילוץ בטוח ללא נזק לרכבכם.</p>
+        <p className="mb-4">אנו מספקים מענה מיידי ומקצועי לחילוץ רכבי 4x4 שנתקעו בבוץ עמוק, בשבילי יערות הכרמל ובאזורי השטח של חיפה והקריות. לחילוצים נוספים באזור, ניתן לעיין גם ב- <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-blue-600 underline">שירותי חילוץ רכב בבוץ באזור הכרמל</Link> או <Link href="/areas/haifa-general/4x4-rescue-mud-carmel-forest-haifa-university" className="text-blue-600 underline">חילוץ 4x4 ליד אוניברסיטת חיפה</Link>.</p>
         
         <h3 className="text-2xl font-semibold mt-8 mb-4">למה לבחור בנו לחילוץ שטח?</h3>
         <ul className="list-disc pr-6 space-y-2">
@@ -56,6 +66,20 @@ export default function Page() {
           <li>ציוד מקצועי: כננות וציוד גרירה ייעודי.</li>
           <li>מחירים הוגנים: שירות מקצועי במחיר הוגן.</li>
         </ul>
+
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות על חילוץ שטח</h3>
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">האם אתם מחלצים רכבים שנתקעו עמוק בבוץ בסטלה מאריס?</p>
+              <p>כן, אנו נותנים מענה גם באזור <Link href="/areas/haifa-general/4x4-stuck-in-mud-stella-maris-haifa" className="text-blue-600">סטלה מאריס</Link> וסביבתה.</p>
+            </div>
+            <div>
+              <p className="font-bold">מהו טווח המחירים לחילוץ?</p>
+              <p>המחיר נקבע לפי מורכבות החילוץ והמרחק. אנו מתחייבים למחיר הוגן ושקוף ללא הפתעות.</p>
+            </div>
+          </div>
+        </div>
 
         <div className="mt-8 p-6 bg-gray-100 rounded-lg">
           <p className="font-bold">חשוב לציין: אנו מתמחים בחילוץ וגרירת רכבים פרטיים, מסחריים ורכבי 4x4. איננו מספקים שירותי חילוץ או גרירה לאופנועים.</p>
