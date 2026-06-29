@@ -1,28 +1,43 @@
-import type { Metadata } from "next";
-import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "גרירת רכבים באחוזה חיפה | שירות 24/7 - מחיר הוגן",
-  description: "נתקעתם עם הרכב באחוזה חיפה? אנו מספקים שירותי גרירה וחילוץ רכבים מקצועיים ומהירים 24/7. הגעה מהירה, מחיר הוגן ושירות אדיב. התקשרו עכשיו!",
-  alternates: {
-    canonical: "/areas/haifa-general/motorcycle-towing-ahuza-haifa",
-  },
-};
-
 export default function Page() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AutoTowing",
+    "name": "שירותי גרירה חיפה והקריות",
+    "areaServed": "Haifa and Krayot",
+    "priceRange": "$",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "32.7940",
+      "longitude": "34.9896"
+    },
+    "serviceType": "Car Towing and Roadside Assistance"
+  };
+
   return (
-    <main className="bg-neutral-950 min-h-screen">
+    <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירת רכבים באחוזה חיפה - זמינות 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם עם הרכב? הצוות שלנו בדרך אליכם. שימו לב: אנו מתמחים בגרירת רכבים פרטיים, מסחריים ו-4x4. איננו מספקים שירותי גרירה לאופנועים.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר לאופנוע כבד באחוזה חיפה - שירותי גרירה מקצועיים לרכבים</h1>
+          <p className="text-xl mb-8">אנו מתמחים בגרירת רכבים, רכבי שטח ומסחריות. שימו לב: איננו מספקים שירותי גרירה לאופנועים.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-neutral-900 px-8 py-3 rounded-lg font-bold hover:bg-neutral-200 transition-colors"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
             >
               חיוג מהיר למוקד
             </a>
@@ -30,29 +45,24 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-16 container mx-auto px-4 text-white">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בשירותי הגרירה שלנו באחוזה?</h2>
-        <div className="prose prose-invert max-w-3xl">
-          <p>זקוקים לחילוץ רכב באחוזה? אנו מספקים מענה מהיר לכל סוגי הרכבים. למי שמחפש פתרונות נוספים, ניתן לבדוק גם <Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles">שירותי גרירת רכבים נוספים באזור אחוזה</Link>.</p>
-          <p>אם הרכב נתקע בשל בעיות חשמל או מצבר, מומלץ לבחון את השירות שלנו עבור <Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa">תקלות מצבר ורכב חשמלי באחוזה</Link>.</p>
-          <p><strong>הבהרה חשובה:</strong> השירות שלנו ממוקד ברכבים פרטיים ורכבי שטח. איננו מטפלים בשינוע דו-גלגלי. אם אתם זקוקים לחילוץ רכב שטח בשטח פתוח, אנו ממליצים על <Link href="/areas/haifa-general/4x4-stuck-mud-rescue-carmel-forest-haifa-university">חילוץ 4x4 ביערות הכרמל</Link>.</p>
-        </div>
-      </section>
-
-      <section className="py-12 container mx-auto px-4 text-white">
-        <h2 className="text-2xl font-bold mb-6">שאלות נפוצות</h2>
-        <div className="space-y-4 max-w-3xl">
-          <div>
-            <h3 className="font-bold text-lg">האם אתם גוררים אופנועים באחוזה?</h3>
-            <p className="text-neutral-300">לא, השירות שלנו מתמקד ברכבים פרטיים, רכבים מסחריים ורכבי שטח בלבד.</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">מהו טווח המחירים לגרירת רכב באחוזה?</h3>
-            <p className="text-neutral-300">המחיר נקבע לפי סוג הרכב, המרחק מהיעד ומורכבות החילוץ. צרו קשר עם המוקד לקבלת הצעת מחיר הוגנת ומדויקת.</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">האם אתם פעילים בשבתות ובחגים?</h3>
-            <p className="text-neutral-300">אנו מספקים שירותי גרירה 24/7, בפריסה ארצית ובאזור חיפה והכרמל בפרט, בהתאם לזמינות הצוותים.</p>
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-3xl font-bold mb-6">שירותי גרירה וחילוץ באחוזה</h2>
+          <p className="mb-4">
+            נתקעת עם הרכב באזור אחוזה? הצוות שלנו ערוך ומוכן להעניק לך שירות מקצועי, מהיר ואמין 24 שעות ביממה. 
+            אנו מבינים את החשיבות של הגעה מהירה ללקוח ומציעים פתרונות גרירה מתקדמים לכל סוגי הרכבים הפרטיים והמסחריים.
+          </p>
+          <p className="font-semibold text-red-600">
+            הערה חשובה: השירות שלנו מיועד לרכבים בלבד. איננו ערוכים לשינוע אופנועים או אופנועים כבדים.
+          </p>
+          <div className="mt-8 p-6 bg-white rounded-xl shadow-sm">
+            <h3 className="text-xl font-bold mb-4">למה לבחור בנו?</h3>
+            <ul className="list-disc list-inside space-y-2">
+              <li>זמינות מלאה 24/7 בכל אזור חיפה והקריות</li>
+              <li>ציוד גרירה חדיש ומתוחזק</li>
+              <li>צוות מיומן ומקצועי</li>
+              <li>מחירים הוגנים ושקופים</li>
+            </ul>
           </div>
         </div>
       </section>
