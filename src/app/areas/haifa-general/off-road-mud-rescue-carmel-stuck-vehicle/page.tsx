@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "חילוץ שטח ובוץ בכרמל | רכב תקוע? חילוץ מהיר 24/7",
+  description: "נתקעתם בבוץ בכרמל? צוות חילוץ שטח מקצועי בדרך אליכם! הגעה מהירה, מחיר הוגן ושירות 24/7. התקשרו עכשיו לחילוץ בטוח ומקצועי.",
+  alternates: {
+    canonical: "/areas/haifa-general/off-road-mud-rescue-carmel-stuck-vehicle",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -7,7 +17,7 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי חילוץ וגרירה כרמל וקריות",
     "areaServed": { "@type": "City", "name": "Haifa and Krayot" },
-    "priceRange": "$",
+    "priceRange": "$$,$",
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "34.9896" },
     "serviceType": "Off-road vehicle recovery and mud extraction"
@@ -38,8 +48,26 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירותי חילוץ שטח מקצועיים</h2>
-        <p className="mb-4">השטח של הכרמל יכול להיות בוגדני, במיוחד לאחר גשמים. אם הרכב שלך שקע בבוץ, אל תנסה להמשיך ללחוץ על הגז - זה עלול להחמיר את המצב. הצוות שלנו מגיע עם ציוד ייעודי לחילוץ רכבים ששקעו.</p>
-        <p className="mb-4">אנו מציעים מחירים הוגנים ושירות אדיב לכל תושבי האזור. אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. <strong>חשוב להדגיש: איננו מספקים שירותי חילוץ לאופנועים.</strong></p>
+        <p className="mb-4">השטח של הכרמל יכול להיות בוגדני, במיוחד לאחר גשמים. אם הרכב שלך שקע בבוץ, אל תנסה להמשיך ללחוץ על הגז - זה עלול להחמיר את המצב. אם אתם זקוקים לעזרה, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-600 font-bold">חילוץ שטח מבוץ באזור נשר והכרמל</Link>. הצוות שלנו מגיע עם ציוד ייעודי לחילוץ רכבים ששקעו.</p>
+        <p className="mb-4">אנו מציעים מחירים הוגנים ושירות אדיב לכל תושבי האזור. אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. אם נתקעתם ליד אוניברסיטת חיפה, ראו גם: <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university" className="text-blue-600 font-bold">חילוץ רכב שקוע בבוץ ליד אוניברסיטת חיפה</Link>. <strong>חשוב להדגיש: איננו מספקים שירותי חילוץ לאופנועים.</strong></p>
+      </section>
+
+      <section className="py-10 bg-gray-50 container mx-auto px-4">
+        <h3 className="text-2xl font-bold mb-6">שאלות נפוצות על חילוץ שטח בכרמל</h3>
+        <div className="space-y-4">
+          <div>
+            <p className="font-bold">כמה זמן לוקח לצוות להגיע?</p>
+            <p>אנו משתדלים להגיע לכל נקודה בכרמל ובסביבה תוך זמן קצר ככל הניתן בהתאם לעומסי התנועה ותנאי השטח.</p>
+          </div>
+          <div>
+            <p className="font-bold">מה עושים אם הרכב שקוע עמוק?</p>
+            <p>אל תנסו להוציא את הרכב בכוח שכן הדבר עלול לגרום לנזק למנוע או לשילדה. הזמינו שירות חילוץ מקצועי המצויד בכננת ובציוד גרירה מתאים.</p>
+          </div>
+          <div>
+            <p className="font-bold">האם אתם נותנים שירות גם מחוץ לכרמל?</p>
+            <p>כן, אנו מספקים שירותים גם באזורי הקריות, כפי שניתן לראות בקישור ל- <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-600">שירותי גרירה וחילוץ באזור עוקף קריות</Link>.</p>
+          </div>
+        </div>
       </section>
     </main>
   );

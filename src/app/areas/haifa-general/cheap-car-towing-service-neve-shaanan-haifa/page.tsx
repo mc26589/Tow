@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב בנווה שאנן חיפה | שירות זול ומהיר 24/7",
-  description: "נתקעתם עם הרכב בנווה שאנן? שירות גרירת רכבים מקצועי, הגעה מהירה ומחיר הוגן ללא תחרות. זמינים עבורכם 24/7 לכל תקלה. התקשרו עכשיו!",
+  title: "גרירת רכב בנווה שאנן חיפה | מחיר הוגן, הגעה מהירה 24/7",
+  description: "נתקעתם עם הרכב בנווה שאנן? שירות גרירה מקצועי, הגעה תוך 30-45 דקות ומחיר ללא תחרות. זמינים 24/7 לכל תקלה. התקשרו עכשיו לקבלת שירות מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/cheap-car-towing-service-neve-shaanan-haifa",
   },
@@ -33,10 +33,9 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירות גרירת רכב זול בנווה שאנן חיפה 24/7</h1>
           <p className="text-xl mb-8 max-w-2xl">
-            נתקעתם עם הרכב בנווה שאנן? אנו מספקים שירותי גרירה מקצועיים, מהירים ובמחירים הוגנים ללא תחרות. 
-            הצוות שלנו זמין 24 שעות ביממה, 7 ימים בשבוע, כדי להבטיח שתחזרו לשגרה במהירות. 
-            אנו מתמחים בגרירת רכבים פרטיים, רכבים מסחריים ורכבי 4x4. אם הרכב שלכם ישן ואינו נוסע, ייתכן שתרצו לבדוק גם שירותי <Link href="/areas/haifa-general/car-scrapping-neve-shaanan-haifa" className="underline font-semibold">פירוק רכבים בנווה שאנן</Link>.
-            חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.
+            נתקעתם עם הרכב באזור נווה שאנן? הצוות שלנו מספק שירותי גרירה מקצועיים, מהירים ובמחירים הוגנים. 
+            אנו ערוכים לכל תקלה וזמינים 24 שעות ביממה, 7 ימים בשבוע. אם נתקעתם בדרכים משובשות ליד <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="underline font-semibold">אזור יערות הכרמל ונשר</Link>, אנו כאן לעזור. 
+            אנו מתמחים בגרירת רכבים פרטיים ומסחריים. במידה והרכב במצב גרוטאה, ניתן לבדוק גם שירותי <Link href="/areas/haifa-general/car-scrapping-neve-shaanan-haifa" className="underline font-semibold">פירוק רכבים בנווה שאנן</Link>.
           </p>
           <div className="flex flex-col md:flex-row gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -55,16 +54,16 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לשירות גרירה בנווה שאנן?</h2>
           <ul className="grid md:grid-cols-3 gap-8">
             <li className="p-6 bg-white rounded-xl shadow-sm">
-              <h3 className="font-bold text-xl mb-2">זמינות מלאה</h3>
-              <p>שירות 24/7 לכל תרחיש, גם בשעות הקטנות של הלילה ובסופי שבוע.</p>
+              <h3 className="font-bold text-xl mb-2">זמינות מלאה 24/7</h3>
+              <p>שירות אמין לכל תרחיש, גם בשעות הלילה המאוחרות ובסופי שבוע.</p>
             </li>
             <li className="p-6 bg-white rounded-xl shadow-sm">
               <h3 className="font-bold text-xl mb-2">מחירים הוגנים</h3>
-              <p>אנו מאמינים בשקיפות מלאה ומציעים הצעת מחיר משתלמת בטלפון.</p>
+              <p>שקיפות מלאה ללא הפתעות, הצעת מחיר משתלמת בטלפון.</p>
             </li>
             <li className="p-6 bg-white rounded-xl shadow-sm">
-              <h3 className="font-bold text-xl mb-2">מקצועיות וניסיון</h3>
-              <p>צוות מיומן המכיר היטב את כל רחובות נווה שאנן והסביבה.</p>
+              <h3 className="font-bold text-xl mb-2">הגעה מהירה לשכונה</h3>
+              <p>הצוות שלנו מכיר היטב את כל רחובות נווה שאנן ומגיע במהירות האפשרית.</p>
             </li>
           </ul>
         </div>
@@ -72,15 +71,19 @@ export default function Page() {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על שירותי גרירה</h2>
+          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות (FAQ)</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl font-bold">תוך כמה זמן תגיעו אלי בנווה שאנן?</h3>
-              <p>הצוות שלנו פרוס באזור חיפה, אנו שואפים להגעה מהירה ככל האפשר לכל נקודה בשכונה.</p>
+              <h3 className="text-xl font-bold">האם אתם גוררים רכבים מתוך האוניברסיטה או מהכרמל?</h3>
+              <p>כן, אנו מספקים חילוץ גם למקרים מורכבים יותר כגון <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university" className="text-blue-700 underline">חילוץ רכב תקוע בבוץ ליד אוניברסיטת חיפה</Link>.</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold">האם אתם גוררים רכבים למוסכים מחוץ לחיפה?</h3>
-              <p>כן, אנו מספקים שירותי גרירה למרחקים משתנים, כולל <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-700 underline">גרירה לצ'ק פוסט</Link> או לכל יעד אחר שתבחרו.</p>
+              <h3 className="text-xl font-bold">האם אתם גוררים למוסכים מחוץ לחיפה?</h3>
+              <p>אנו מבצעים גרירה לכל חלקי הארץ, כולל שירותים ייעודיים כמו <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-700 underline">גרירה לצ'ק פוסט</Link> או למוסכים באזור הקריות.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold">מה עושים אם הרכב נתקע עם מצבר ריק?</h3>
+              <p>אנו מעניקים שירותי התנעה וגרירה 24/7 לכל סוגי הרכבים הפרטיים. חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.</p>
             </div>
           </div>
         </div>

@@ -1,12 +1,22 @@
+import type { Metadata } from "next";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "גרר באחוזה חיפה 24/7 | שירותי גרירה מקצועיים - הגעה מהירה",
+  description: "נתקעתם עם הרכב באחוזה חיפה? שירותי גרירה וחילוץ 24/7 במחיר הוגן. צוות מיומן, הגעה מהירה לכל אזור הכרמל. התקשרו עכשיו לקבלת שירות!",
+  alternates: {
+    canonical: "/areas/haifa-general/motorcycle-towing-ahuza-haifa",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
     "name": "שירותי גרירה חיפה והקריות",
-    "areaServed": "Haifa and Krayot",
+    "areaServed": "Haifa",
     "priceRange": "$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -31,10 +41,10 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר לאופנוע כבד באחוזה חיפה - שירותי גרירה מקצועיים לרכבים</h1>
-          <p className="text-xl mb-8">אנו מתמחים בגרירת רכבים, רכבי שטח ומסחריות. שימו לב: איננו מספקים שירותי גרירה לאופנועים.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה וחילוץ רכבים באחוזה, חיפה</h1>
+          <p className="text-xl mb-8">זקוקים לגרר באזור אחוזה? אנו מעניקים שירותי גרירה לרכבים פרטיים ומסחריים 24 שעות ביממה.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+            <WhatsAppCTA cityName="חיפה אחוזה" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
               className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
@@ -47,22 +57,27 @@ export default function Page() {
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-bold mb-6">שירותי גרירה וחילוץ באחוזה</h2>
+          <h2 className="text-3xl font-bold mb-6">שירותי גרירה וחילוץ זמינים באחוזה</h2>
           <p className="mb-4">
-            נתקעת עם הרכב באזור אחוזה? הצוות שלנו ערוך ומוכן להעניק לך שירות מקצועי, מהיר ואמין 24 שעות ביממה. 
-            אנו מבינים את החשיבות של הגעה מהירה ללקוח ומציעים פתרונות גרירה מתקדמים לכל סוגי הרכבים הפרטיים והמסחריים.
+            נתקעת עם הרכב באזור אחוזה? הצוות שלנו ערוך ומוכן להעניק לך שירות מקצועי, מהיר ואמין 24/7. 
+            אנו מתמחים בחילוץ ושינוע רכבים מכל סוג. למידע נוסף על שירותים באזור, ניתן לעיין ב<Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-600 underline">חילוץ רכבים מבוץ באזור הכרמל</Link>.
           </p>
-          <p className="font-semibold text-red-600">
+          <p className="font-semibold text-red-600 mb-6">
             הערה חשובה: השירות שלנו מיועד לרכבים בלבד. איננו ערוכים לשינוע אופנועים או אופנועים כבדים.
           </p>
+
           <div className="mt-8 p-6 bg-white rounded-xl shadow-sm">
-            <h3 className="text-xl font-bold mb-4">למה לבחור בנו?</h3>
-            <ul className="list-disc list-inside space-y-2">
-              <li>זמינות מלאה 24/7 בכל אזור חיפה והקריות</li>
-              <li>ציוד גרירה חדיש ומתוחזק</li>
-              <li>צוות מיומן ומקצועי</li>
-              <li>מחירים הוגנים ושקופים</li>
-            </ul>
+            <h3 className="text-xl font-bold mb-4">שאלות נפוצות (FAQ)</h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-bold">כמה זמן לוקח לגרר להגיע לאחוזה?</h4>
+                <p>אנו משתדלים להגיע לכל נקודה באחוזה ובסביבתה תוך זמן קצר ככל הניתן בהתאם לתנועה.</p>
+              </div>
+              <div>
+                <h4 className="font-bold">האם אתם גוררים רכבים שנתקעו בשטח?</h4>
+                <p>כן, אנו מספקים שירותי חילוץ למגוון מקרים. למידע על מקרים מורכבים ראו: <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-600 underline">חילוץ רכבים ביערות הכרמל</Link>.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

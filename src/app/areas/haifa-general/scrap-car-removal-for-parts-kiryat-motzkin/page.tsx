@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "פינוי רכבים לפירוק בקרית מוצקין | שירות מהיר 24/7 | מחיר הוגן",
-  description: "נתקעתם עם רכב ישן? שירות פינוי רכבים לפירוק בקרית מוצקין והסביבה. פינוי רכב ללא תשלום, שירות אמין ומקצועי. התקשרו עכשיו לקבלת הצעה משתלמת!",
+  title: "פינוי רכבים לפירוק בקרית מוצקין | הגעה תוך 30 דקות | 24/7",
+  description: "נתקעתם עם רכב ישן? שירות פינוי רכבים לפירוק בקרית מוצקין והסביבה. פינוי מהיר, שירות אמין ומחיר הוגן במזומן. התקשרו עכשיו לקבלת הצעה!",
   alternates: {
     canonical: "/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin",
   },
@@ -17,7 +17,7 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי גרירה ופינוי רכבים חיפה והקריות",
     "areaServed": "Kiryat Motzkin",
-    "priceRange": "$",
+    "priceRange": "₪₪",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -42,7 +42,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">פינוי רכבים לפירוק בקרית מוצקין – שירות מהיר ומקצועי</h1>
-          <p className="text-xl mb-8">זקוקים לפינוי רכב ישן? אנו כאן בשבילכם 24/7 עם שירות אמין ומחירים הוגנים.</p>
+          <p className="text-xl mb-8">נפטרים מהרכב הישן במינימום מאמץ. פינוי רכבים לפירוק בקרית מוצקין 24/7 במחיר הוגן.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Kiryat Motzkin" />
             <a 
@@ -56,29 +56,32 @@ export default function Page() {
       </section>
 
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">פינוי רכבים לפירוק בקרית מוצקין – מענה מיידי</h2>
-        <p className="mb-4">אם ברשותכם רכב ישן, תקול או רכב שאינו נוסע ואתם מחפשים שירות פינוי רכבים לפירוק בקרית מוצקין, הגעתם למקום הנכון. אנו מתמחים בפינוי רכבים מכל סוג – רכבים פרטיים, מסחריים ורכבי 4x4 – ומעניקים שירות מקצועי, אמין ומהיר לתושבי הקריות.</p>
-        <p className="mb-4">אנו מציעים מענה רחב הכולל גם <Link href="/areas/haifa-general/towing-for-scrap-kiryat-bialik" className="text-blue-400 underline">גרירה לפירוק בקרית ביאליק</Link> ושירותי רכב נוספים באזור. אם אתם זקוקים לטיפול דחוף במקרה של תאונה, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/commercial-truck-accident-recovery-kiryat-motzkin-24-7" className="text-blue-400 underline">חילוץ רכבים מסחריים בקרית מוצקין</Link> שלנו.</p>
-        <p className="mb-4 font-semibold text-red-400">חשוב לציין: אנו לא מטפלים בפינוי אופנועים, אלא מתמקדים אך ורק ברכבים בעלי ארבעה גלגלים ומעלה.</p>
+        <h2 className="text-3xl font-bold mb-6">פינוי רכבים לפירוק בקרית מוצקין – מענה מיידי לכל סוגי הרכבים</h2>
+        <p className="mb-4">אם ברשותכם רכב ישן או תקול, אנו מספקים מענה מהיר. מלבד פינוי לרכבים, אנו מציעים שירותי <Link href="/areas/haifa-general/cheap-towing-kiryat-motzkin-fair-price" className="text-blue-400 underline">גרירה זולה בקרית מוצקין במחיר הוגן</Link>. זקוקים לפינוי מהיר גם מהקריות הסמוכות? אנו מבצעים <Link href="/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal" className="text-blue-400 underline">קניית רכבים לפירוק בקרית ביאליק</Link> עם פינוי מיידי.</p>
+        <p className="mb-4">השירות שלנו מתאים לכל רכב שאינו כשיר לנסיעה, בין אם מדובר ברכב פרטי או מסחרי. לקוחות רבים מחפשים גם <Link href="/areas/haifa-general/cash-for-junk-cars-scrap-vehicle-removal-kiryat-motzkin" className="text-blue-400 underline">מזומן עבור רכבים לפירוק בקרית מוצקין</Link> - אנו הכתובת הנכונה.</p>
         
-        <h3 className="text-2xl font-bold mt-8 mb-4">למה לבחור בנו לפינוי הרכב שלכם?</h3>
-        <ul className="list-disc list-inside space-y-2">
-          <li>זמינות מלאה: שירות 24/7 לכל אזור חיפה והקריות.</li>
-          <li>מקצועיות: פינוי בטוח ללא נזק לסביבה.</li>
-          <li>הוגנות: הצעת מחיר הוגנת ומשתלמת בהתאם למצב הרכב.</li>
-          <li>שירות מקומי: היכרות מעמיקה עם כל השכונות בקרית מוצקין.</li>
+        <h3 className="text-2xl font-bold mt-8 mb-4">למה לבחור בנו?</h3>
+        <ul className="list-disc list-inside space-y-2 mb-8">
+          <li>זמינות מלאה 24/7 באזור חיפה והקריות.</li>
+          <li>פינוי בטוח, מהיר ושמירה על סביבה נקייה.</li>
+          <li>מחירים הוגנים ותשלום במקום על רכבים לפירוק.</li>
+          <li>ניסיון מקצועי רב בטיפול בכל סוגי הרכבים (למעט אופנועים).</li>
         </ul>
 
         <div className="mt-12 bg-neutral-900 p-6 rounded-lg">
-          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות</h3>
-          <div className="space-y-4">
+          <h3 className="text-2xl font-bold mb-6">שאלות נפוצות על פינוי רכבים בקרית מוצקין</h3>
+          <div className="space-y-6">
             <div>
-              <p className="font-bold">האם אתם מפנים רכבים ללא טסט או רכבים שלא נוסעים?</p>
-              <p>כן, אנו מתמחים בפינוי רכבים שאינם במצב נסיעה מכל חלקי קרית מוצקין.</p>
+              <p className="font-bold">האם אתם קונים רכבים ללא טסט?</p>
+              <p>כן, אנו קונים ומפנים רכבים לפירוק בקרית מוצקין מכל מצב - ללא טסט, לאחר תאונה או רכבים שעמדו שנים.</p>
             </div>
             <div>
-              <p className="font-bold">כמה זמן לוקח לכם להגיע לקרית מוצקין?</p>
-              <p>ברוב המקרים נגיע אליכם תוך זמן קצר מרגע הקריאה, בהתאם לעומסי התנועה באזור הקריות.</p>
+              <p className="font-bold">מהו טווח המחירים לרכב לפירוק?</p>
+              <p>המחיר משתנה בהתאם למשקל הרכב, חלקי החילוף שניתן להפיק ממנו ודגם הרכב. אנו מתחייבים למחיר הוגן בשוק.</p>
+            </div>
+            <div>
+              <p className="font-bold">תוך כמה זמן תגיעו לפנות את הרכב?</p>
+              <p>אנו מבינים את הדחיפות ופועלים להגעה מהירה בכל רחבי קרית מוצקין והסביבה. <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-400 underline">צרו קשר לקבלת הערכת זמן מדויקת</Link>.</p>
             </div>
           </div>
         </div>

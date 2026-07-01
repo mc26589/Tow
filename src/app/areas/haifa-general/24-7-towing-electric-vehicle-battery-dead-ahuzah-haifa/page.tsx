@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי באחוזה חיפה 24/7 | חילוץ מהיר ומקצועי",
-  description: "נתקעת עם רכב חשמלי באחוזה? שירות גרירה 24/7 לרכבים חשמליים ומצבר פרוק. הגעה מהירה, טיפול מקצועי ומחיר הוגן. התקשרו עכשיו לחילוץ!",
+  title: "גרירת רכב חשמלי באחוזה, חיפה 24/7 | חילוץ מהיר ומקצועי",
+  description: "נתקעת עם רכב חשמלי באחוזה? שירות גרירה 24/7 לרכבים חשמליים ומצבר פרוק. הגעה תוך 30 דקות, טיפול מיומן ומחיר הוגן. התקשרו עכשיו לחילוץ!",
   alternates: {
     canonical: "/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa",
   },
@@ -45,7 +45,7 @@ export default function Page() {
             גרירה 24/7 לרכב חשמלי עם מצבר פרוק בשכונת אחוזה, חיפה
           </h1>
           <p className="text-lg md:text-xl mb-8">
-            נתקעת עם הרכב החשמלי באחוזה? אנו מספקים שירותי חילוץ וגרירה מקצועיים לרכבים חשמליים, פרטיים ורכבי 4x4. הגעה מהירה לכל נקודה בשכונה.
+            נתקעת עם הרכב החשמלי באחוזה? אנו מספקים שירותי חילוץ וגרירה מקצועיים לרכבים חשמליים ופרטיים. הגעה מהירה לכל נקודה בשכונה ובסביבת הכרמל.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -61,15 +61,15 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-4">למה לבחור בנו לחילוץ הרכב החשמלי שלך?</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li>זמינות מלאה 24/7 בכל אזור אחוזה וחיפה.</li>
+        <ul className="list-disc list-inside space-y-2 mb-8">
+          <li>זמינות מלאה 24/7 לכל שכונות אחוזה ומרכז הכרמל.</li>
           <li>מומחיות בטיפול ברכבים חשמליים ומערכות מתח גבוה.</li>
-          <li>ציוד גרירה מתקדם המבטיח שמירה על הרכב.</li>
-          <li>הגעה מהירה לכל נקודה בשכונה.</li>
-          <li>מחפש שירות נוסף? בדוק את <Link href="/areas/haifa-general/cheap-private-car-towing-ahuza-haifa" className="text-blue-600 font-semibold underline">שירותי הגרירה הזולים שלנו באחוזה</Link>.</li>
+          <li>ציוד גרירה מתקדם ומפוקח לשמירה מלאה על הרכב.</li>
+          <li>חילוץ מהיר במקרים של רכב שקוע בבוץ באזור הכרמל - <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-600 font-semibold underline">שירותי חילוץ בשטח</Link>.</li>
+          <li>שירות מקצועי לכל אזורי חיפה והסביבה.</li>
         </ul>
         
-        <div className="mt-10">
+        <div className="mt-10 bg-gray-50 p-6 rounded-lg">
             <h3 className="text-xl font-bold mb-4">שאלות נפוצות (FAQ)</h3>
             <div className="space-y-4">
                 <div>
@@ -78,7 +78,7 @@ export default function Page() {
                 </div>
                 <div>
                     <p className="font-bold">מהו טווח המחירים לחילוץ באחוזה?</p>
-                    <p className="text-gray-700">אנחנו מציעים מחירים הוגנים ותחרותיים. למידע נוסף ניתן להתרשם גם משירותי <Link href="/areas/haifa-general/cheap-car-towing-service-neve-shaanan-haifa" className="text-blue-600 underline">גרירה בנאות שאנן</Link> הסמוכה.</p>
+                    <p className="text-gray-700">אנו מציעים מחירים הוגנים ותחרותיים. במידה ואתם זקוקים לחילוץ דחוף באזור סטלה מאריס, בדקו גם את שירותי <Link href="/areas/haifa-general/emergency-tow-stuck-car-stella-maris-haifa-hills" className="text-blue-600 underline">החילוץ החירום בסטלה מאריס</Link>.</p>
                 </div>
             </div>
         </div>

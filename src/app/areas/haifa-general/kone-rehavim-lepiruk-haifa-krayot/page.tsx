@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "קונה רכבים לפירוק בחיפה והקריות | פינוי מהיר ומזומן - שירות 24/7",
-  description: "רוצים למכור רכב ישן או פגום? אנו קונים רכבים לפירוק בחיפה והקריות במחיר הוגן! פינוי מהיר ומקצועי לכל סוגי הרכבים. התקשרו עכשיו לקבלת הצעה!",
+  title: "קונה רכבים לפירוק בחיפה והקריות | מזומן ופינוי מהיר 24/7",
+  description: "רוצים למכור רכב לפירוק? אנו קונים רכבים בחיפה והקריות במחיר הוגן! פינוי מהיר, שירות 24/7 לכל סוגי הרכבים. התקשרו עכשיו לקבלת הצעה משתלמת!",
   alternates: {
     canonical: "/areas/haifa-general/kone-rehavim-lepiruk-haifa-krayot"
   }
@@ -15,7 +15,7 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה ופירוק רכבים חיפה והקריות",
+    "name": "שירותי קניית רכבים לפירוק וגרירה חיפה והקריות",
     "areaServed": ["Haifa", "Krayot"],
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -29,7 +29,7 @@ export default function Page() {
       "longitude": "34.9896"
     },
     "priceRange": "$",
-    "serviceType": "Car Recycling and Towing"
+    "serviceType": "Car Scrap and Removal"
   };
 
   return (
@@ -43,7 +43,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות</h1>
           <p className="text-xl mb-8 max-w-3xl">
-            אנו מציעים שירות מקצועי ומהיר לקניית רכבים לפירוק בחיפה ובכל אזור הקריות. אם ברשותכם רכב ישן, רכב שאינו נוסע, רכב לאחר תאונה או רכב שפשוט תופס מקום, אנו כאן כדי לפנות אותו עבורכם. אנו מתמחים ברכבים פרטיים, מסחריים ורכבי 4x4. מחפשים גם <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-towing-included" className="underline font-semibold">קניית רכבים לפירוק בחיפה</Link> עם שירות גרירה כלול? הגעתם למקום הנכון.
+            זקוקים לשירות מקצועי של פינוי רכבים? אנו קונים רכבים לפירוק בחיפה והקריות ומציעים תשלום הוגן במזומן. אם הרכב ישן, תקול או פגוע, נדאג לפינוי מהיר מהשטח. אנו מתמחים ברכבים פרטיים ומסחריים, ומציעים מענה מיידי לכל תושבי האזור.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -62,16 +62,16 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-8 text-center">למה לבחור בנו?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 bg-white rounded-xl shadow-sm">
-              <h3 className="text-xl font-bold mb-3">שירות מהיר באזורכם</h3>
-              <p>פריסה רחבה בחיפה והקריות, כולל שירותים מיוחדים כגון <Link href="/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik" className="text-blue-600">פירוק רכבים באזור התעשייה קריית ביאליק</Link> ואזור נווה שאנן.</p>
+              <h3 className="text-xl font-bold mb-3">שירות פריסה רחב</h3>
+              <p>פינוי רכבים בחיפה ובקריות. אם אתם מחפשים <Link href="/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal" className="text-blue-600">קניית רכבים לפירוק בקרית ביאליק</Link> או באזור הקריות, אנו מגיעים אליכם במהירות.</p>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm">
-              <h3 className="text-xl font-bold mb-3">מחירים הוגנים</h3>
-              <p>אנו מעריכים את הרכב שלכם ומציעים הצעת מחיר הוגנת ומשתלמת. לתושבי האזור, אנו מציעים גם <Link href="/areas/haifa-general/buy-old-cars-for-scrap-kiryat-yam" className="text-blue-600">קניית רכבים לפירוק בקרית ים</Link> במחירים ללא תחרות.</p>
+              <h3 className="text-xl font-bold mb-3">תשלום הוגן ומיידי</h3>
+              <p>אנו מעריכים את הרכב שלכם נכון. מחפשים גם <Link href="/areas/haifa-general/cash-for-junk-cars-scrap-vehicle-removal-kiryat-motzkin" className="text-blue-600">פירוק רכבים בקרית מוצקין</Link>? השירות שלנו מבטיח לכם ראש שקט ופינוי תקין של הרכב.</p>
             </div>
             <div className="p-6 bg-white rounded-xl shadow-sm">
-              <h3 className="text-xl font-bold mb-3">פינוי מקצועי</h3>
-              <p>טיפול בכל הניירת הנדרשת ופינוי בטוח. במידה ואתם זקוקים גם לגרירה באזור, ניתן לבדוק שירותי <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-600">גרירה בצומת צ'ק פוסט</Link>.</p>
+              <h3 className="text-xl font-bold mb-3">פתרון כולל לכל מצב</h3>
+              <p>זקוקים גם לגרירה? אנו מציעים מענה לכל צורך, כולל <Link href="/areas/haifa-general/accident-towing-road-22-check-post-krayot" className="text-blue-600">גרירה בציר 22 והצ'ק פוסט</Link> במקרה של תקלה בדרך.</p>
             </div>
           </div>
         </div>
@@ -82,16 +82,16 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-6">שאלות נפוצות</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-lg">אילו סוגי רכבים אתם קונים?</h3>
-              <p>אנו קונים רכבים פרטיים, רכבים מסחריים ורכבי 4x4 במצב נסיעה, לאחר תאונה או רכבים ישנים. שימו לב: איננו קונים אופנועים.</p>
+              <h3 className="font-bold text-lg">באילו אזורים אתם פועלים?</h3>
+              <p>אנו פועלים בכל אזור חיפה והקריות, כולל פינוי מהיר ממרכזים עירוניים ואזורי תעשייה. במידה ונתקעתם בדרכים, תוכלו להיעזר גם בשירותי <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-600">גרירה 24/7 בעוקף קריות</Link>.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">תוך כמה זמן תגיעו לפנות את הרכב?</h3>
-              <p>אנו שואפים להגיע ביום הפנייה. השירות שלנו מכסה את כל חיפה והקריות בפריסה ארצית מהירה.</p>
+              <h3 className="font-bold text-lg">האם ניתן למכור רכב תקול או לאחר תאונה?</h3>
+              <p>בהחלט. אנו קונים רכבים לפירוק בכל מצב - רכבים שאינם נוסעים, רכבים לאחר תאונה או רכבים ישנים. ניתן לבדוק גם אפשרויות ל-<Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-immediate-removal" className="text-blue-600">קניית רכבים לפירוק בחיפה</Link> עם פינוי מיידי.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">האם אתם מטפלים גם במקרים דחופים?</h3>
-              <p>בהחלט. אם נתקעתם או שהרכב מהווה מפגע, אנו מציעים שירותי עזר וגרירה באזור, כגון <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-600">גרירת רכבים לאחר תאונה בצ'ק פוסט</Link>.</p>
+              <h3 className="font-bold text-lg">תוך כמה זמן מתבצע הפינוי?</h3>
+              <p>ברוב המקרים, אנו מתאמים פינוי תוך זמן קצר מרגע הפנייה. השירות מותאם אישית ללקוח כדי לחסוך לכם זמן יקר.</p>
             </div>
           </div>
         </div>
