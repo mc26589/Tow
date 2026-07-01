@@ -1,22 +1,16 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "חילוץ שטח בוץ בכרמל רכב תקוע | שירות 24/7",
-  description: "נתקעתם בבוץ בכרמל? שירות חילוץ שטח מקצועי לרכבים ו-4x4. זמינות מיידית, מחירים הוגנים וציוד חילוץ מתקדם. התקשרו עכשיו."
-};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי חילוץ וגרירה חיפה והקריות",
+    "name": "שירותי חילוץ וגרירה כרמל וקריות",
     "areaServed": { "@type": "City", "name": "Haifa and Krayot" },
+    "priceRange": "$",
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "34.9896" },
-    "priceRange": "$",
-    "serviceType": "Off-road mud rescue and vehicle towing"
+    "serviceType": "Off-road vehicle recovery and mud extraction"
   };
 
   return (
@@ -28,13 +22,13 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ שטח בוץ בכרמל: רכב תקוע? אנחנו בדרך אליך</h1>
-          <p className="text-xl mb-8">חילוץ מקצועי לרכבי שטח ופרטיים ששקעו בבוץ. זמינות מלאה 24/7 באזור הכרמל.</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">חילוץ שטח בוץ בכרמל: רכב תקוע? אנחנו בדרך אליך</h1>
+          <p className="text-xl mb-8">נתקעת בבוץ? צוות החילוץ שלנו זמין 24/7 לחילוץ מקצועי, מהיר ובטוח בכרמל ובקריות.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
+              className="bg-white text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-200 transition-colors"
             >
               חיוג מהיר לחילוץ
             </a>
@@ -42,21 +36,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">זקוקים לחילוץ שטח מהיר בבוץ של הכרמל?</h2>
-        <p className="mb-4">אם הרכב שלכם נתקע בבוץ באזורי השטח של הכרמל, אתם זקוקים למענה מקצועי ומיידי. אנו מתמחים בחילוצי שטח מורכבים לרכבי 4x4, רכבים פרטיים ורכבים מסחריים שנתקעו בתנאי שטח קשים.</p>
-        <p className="mb-4">הצוות שלנו מכיר את נתיבי הכרמל היטב ומגיע מצויד בציוד חילוץ מתקדם כדי להוציא אתכם בבטחה ובמינימום נזק לרכב.</p>
-        
-        <h3 className="text-2xl font-bold mt-8 mb-4">למה לבחור בנו לחילוץ בכרמל?</h3>
-        <ul className="list-disc pl-6 mb-6">
-          <li>זמינות 24/7: אנחנו מבינים שבוץ לא מחכה לשעות העבודה.</li>
-          <li>מומחיות בשטח: ניסיון רב בחילוץ רכבים ששקעו בבוץ עמוק או בדרכי עפר משובשות.</li>
-          <li>מחירים הוגנים: שירות מקצועי במחיר משתלם ללא הפתעות.</li>
-        </ul>
-        
-        <div className="bg-gray-100 p-6 rounded-lg border-r-4 border-red-600">
-          <p className="font-bold">חשוב לציין: אנו מתמחים בחילוץ רכבים, רכבי שטח ורכבים מסחריים בלבד. איננו מספקים שירותי חילוץ או גרירה לאופנועים.</p>
-        </div>
+      <section className="py-16 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6">שירותי חילוץ שטח מקצועיים</h2>
+        <p className="mb-4">השטח של הכרמל יכול להיות בוגדני, במיוחד לאחר גשמים. אם הרכב שלך שקע בבוץ, אל תנסה להמשיך ללחוץ על הגז - זה עלול להחמיר את המצב. הצוות שלנו מגיע עם ציוד ייעודי לחילוץ רכבים ששקעו.</p>
+        <p className="mb-4">אנו מציעים מחירים הוגנים ושירות אדיב לכל תושבי האזור. אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. <strong>חשוב להדגיש: איננו מספקים שירותי חילוץ לאופנועים.</strong></p>
       </section>
     </main>
   );
