@@ -1,48 +1,17 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "גרר רכבים לפירוק בקריית ביאליק | שירות 24/7",
-  description: "זקוקים לגרר לרכב לפירוק בקריית ביאליק? שירות מקצועי, מהיר ובמחיר הוגן. פינוי רכבים פרטיים, מסחריים ו-4x4. צרו קשר עכשיו."
-};
 
 export default function Page() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "AutoTowing",
-    "name": "שירותי גרירה ופינוי רכבים",
-    "areaServed": "קריית ביאליק",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "32.8285",
-      "longitude": "35.0715"
-    },
-    "priceRange": "$",
-    "serviceType": "Towing for scrap vehicles"
-  };
-
   return (
-    <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      
+    <main className="bg-neutral-950 min-h-screen">
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר רכבים לפירוק בקריית ביאליק</h1>
-          <p className="text-xl mb-8">פינוי מקצועי ומהיר של רכבים לפירוק. שירות אמין לכל סוגי הרכבים (למעט אופנועים).</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">גרר רכבים לפירוק בקריית ביאליק</h1>
+          <p className="text-xl mb-8">פינוי רכבים לפירוק בקריית ביאליק והסביבה – שירות מהיר, אמין ומקצועי לכל סוגי הרכבים.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-200 transition"
+              className="bg-white text-neutral-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition"
             >
               התקשרו עכשיו להצעת מחיר
             </a>
@@ -51,16 +20,27 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירות גרירה אמין בקריית ביאליק</h2>
-        <p className="mb-4">אנו מתמחים בפינוי רכבים המיועדים לפירוק. אם הרכב שלכם אינו נוסע או שאתם זקוקים לפינוי מהיר מהחניה, הצוות שלנו כאן עבורכם.</p>
-        <p className="mb-4"><strong>חשוב לדעת:</strong> אנו מספקים שירות לרכבים פרטיים, מסחריים ורכבי 4x4 בלבד. איננו מספקים שירותי גרירה לאופנועים.</p>
-        <h3 className="text-2xl font-semibold mt-8 mb-4">למה לבחור בנו?</h3>
-        <ul className="list-disc list-inside space-y-2">
-          <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
-          <li>מחירים הוגנים ושקופים ללא הפתעות.</li>
-          <li>צוות מיומן המכיר היטב את אזור קריית ביאליק והקריות.</li>
-        </ul>
+      <section className="py-16 container mx-auto px-4 text-white">
+        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי רכב לפירוק?</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="p-6 bg-neutral-900 rounded-xl border border-neutral-800">
+            <h3 className="text-xl font-semibold mb-3">זמינות מלאה</h3>
+            <p>אנו זמינים עבורכם 24/7 לכל קריאה בקריית ביאליק והקריות.</p>
+          </div>
+          <div className="p-6 bg-neutral-900 rounded-xl border border-neutral-800">
+            <h3 className="text-xl font-semibold mb-3">שירות מקצועי</h3>
+            <p>צוות מיומן המבצע פינוי בטוח של רכבים פרטיים, מסחריים ורכבי 4x4.</p>
+          </div>
+          <div className="p-6 bg-neutral-900 rounded-xl border border-neutral-800">
+            <h3 className="text-xl font-semibold mb-3">מחירים הוגנים</h3>
+            <p>אנו מציעים מחיר הוגן ומשתלם עבור פינוי הרכב שלכם. צרו קשר לקבלת הצעת מחיר.</p>
+          </div>
+        </div>
+        
+        <div className="mt-12 p-8 bg-neutral-900 rounded-xl border border-red-900/30">
+          <h3 className="text-2xl font-bold text-red-500 mb-4">הערה חשובה</h3>
+          <p>אנו מתמחים בפינוי רכבים, רכבים מסחריים ורכבי 4x4 בלבד. שירותינו אינם כוללים גרירה או פינוי של אופנועים מכל סוג שהוא.</p>
+        </div>
       </section>
     </main>
   );

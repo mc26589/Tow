@@ -1,69 +1,58 @@
-import type { Metadata } from "next";
-import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "גרר בכביש 22 עוקף קריות | שירות מהיר 24/7 | מחיר הוגן",
-  description: "נתקעתם עם הרכב בכביש 22 עוקף קריות? גרר מקצועי זמין 24/7 להגעה מהירה לכל נקודה בדרך. שירות אמין במחיר הוגן ללא הפתעות. התקשרו עכשיו!",
-  alternates: {
-    canonical: "/areas/haifa-general/towing-service-road-22-krayot-bypass",
-  },
+  title: "חילוץ רכב תקוע בכביש 22 עוקף קריות | שירות 24/7",
+  description: "נתקעתם בכביש 22 עוקף קריות? צוות חילוץ מקצועי בדרך אליכם. שירות מהיר לרכבים פרטיים ומסחריים. זמינות מלאה 24/7."
 };
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה חיפה והקריות",
+    "name": "שירותי חילוץ רכב חיפה והקריות",
     "areaServed": { "@type": "Place", "name": "כביש 22 עוקף קריות" },
-    "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "priceRange": "$",
-    "serviceType": "Towing and Roadside Assistance",
-    "geo": { "@type": "GeoCoordinates", "latitude": "32.8190", "longitude": "35.0630" }
+    "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "32.8156", "longitude": "35.0653" },
+    "serviceType": "חילוץ רכב תקוע"
   };
 
   return (
-    <main className="bg-neutral-950 text-neutral-100">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
       <section className="gradient-trust text-white py-14 md:py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">גרר רכבים תקועים בכביש 22 עוקף קריות</h1>
-          <p className="text-xl mb-8">נתקעתם בדרך? אנחנו בדרך אליכם עם שירות גרירה מהיר ומקצועי.</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב תקוע בכביש 22 עוקף קריות</h1>
+          <p className="text-xl mb-8 max-w-2xl">
+            נתקעתם עם הרכב בכביש 22? אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. 
+            חשוב לציין: איננו מספקים שירותי חילוץ לאופנועים. 
+            אנו מציעים מחירים הוגנים ושירות מהיר לכל אורך עוקף קריות.
+          </p>
+          <div className="flex flex-col md:flex-row gap-4">
+            <WhatsAppCTA cityName="חיפה והקריות" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-neutral-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition"
+              className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold text-lg text-center hover:bg-gray-100 transition-colors"
             >
-              חיוג מהיר לגרר
+              חיוג מהיר למוקד החילוץ
             </a>
           </div>
         </div>
       </section>
-
-      <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירותי חילוץ וגרירה בכביש 22</h2>
-        <p className="mb-4">אם הרכב שלכם שבק חיים בכביש 22, אל תמתינו שעות. אנו מספקים מענה מהיר לכל סוגי הרכבים הפרטיים והמסחריים. למי שמחפש פתרונות נוספים, ניתן לבדוק גם <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-400 underline">שירותי חירום בכביש 22</Link> או <Link href="/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7" className="text-blue-400 underline">גרירה בקריות</Link>. אנו מבינים את הדחיפות שבחילוץ מהיר בכביש מהיר ועמוס.</p>
-        <p className="text-red-400 font-semibold mb-4">חשוב להבהיר: אנו מתמחים ברכבים בלבד ואיננו מספקים שירותי גרירה לאופנועים.</p>
-        
-        <div className="mt-12 bg-neutral-900 p-8 rounded-xl">
-          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על גרירה בכביש 22</h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-bold text-lg">כמה זמן לוקח לגרר להגיע לכביש 22?</h3>
-              <p>אנו משתדלים להגיע לכל נקודה לאורך עוקף קריות בזמן מהיר ככל הניתן בהתאם לעומסי התנועה.</p>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg">האם אתם גוררים גם רכבי שטח?</h3>
-              <p>כן, אנו נותנים מענה לרכבים פרטיים, מסחריים ורכבי 4x4. אם נתקעתם מחוץ לכביש, תוכלו לראות גם מידע על <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-blue-400 underline">חילוצי שטח באזור הכרמל</Link>.</p>
-            </div>
-          </div>
-        </div>
+      
+      <section className="py-12 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ בכביש 22?</h2>
+        <ul className="space-y-4 text-lg">
+          <li>✓ זמינות מלאה 24/7 לכל קריאה בכביש 22.</li>
+          <li>✓ הגעה מהירה לכל נקודה לאורך עוקף קריות.</li>
+          <li>✓ צוות מיומן ומקצועי עם ציוד חילוץ מתקדם.</li>
+          <li>✓ שקיפות מלאה ומחירים הוגנים ללא הפתעות.</li>
+        </ul>
       </section>
     </main>
   );
