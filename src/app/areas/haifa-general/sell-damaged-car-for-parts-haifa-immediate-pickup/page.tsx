@@ -1,10 +1,14 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "מכירת רכב תקול לפירוק בחיפה | פינוי מיידי",
-  description: "מעוניינים למכור רכב תקול לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי, שירות מקצועי ומחירים הוגנים. צרו קשר עכשיו."
+  title: "מכירת רכב תקול לפירוק בחיפה | פינוי מיידי - מחיר הוגן",
+  description: "מעוניינים למכור רכב תקול לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי מהשטח, מחיר הוגן ושירות מקצועי 24/7. התקשרו עכשיו לקבלת הצעת מחיר!",
+  alternates: {
+    canonical: "/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup"
+  }
 };
 
 export default function Page() {
@@ -44,16 +48,22 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">פינוי רכבים לפירוק בחיפה – שירות מהיר</h2>
-        <p className="mb-4">אם הרכב שלכם אינו נוסע, עבר תאונה או שפשוט הגיע הזמן להיפרד ממנו, אנו הכתובת שלכם. אנו מתמחים בפינוי רכבים פרטיים, מסחריים ורכבי 4x4.</p>
-        <p className="mb-4"><strong>חשוב להבהיר:</strong> אנו מתמקדים בפינוי רכבים בלבד ואיננו מספקים שירותי גרירה או פינוי לאופנועים.</p>
+        <p className="mb-4">אם הרכב שלכם אינו נוסע, עבר תאונה או שפשוט הגיע הזמן להיפרד ממנו, אנו הכתובת שלכם. אנו מתמחים בפינוי רכבים פרטיים, מסחריים ורכבי 4x4. אם נתקעתם באזור הצפון, אנו מציעים גם פתרונות כגון <Link href="/areas/haifa-general/pinui-rechev-grotah-grira-check-post-haifa-krayot-lechalafim" className="text-blue-600 font-bold">פינוי רכב גרוטאה באזור הצ'ק פוסט</Link> המאפשר פתרון מהיר.
+        </p>
+        <p className="mb-4"><strong>חשוב להבהיר:</strong> אנו מתמקדים בפינוי רכבים בלבד. איננו מטפלים באופנועים, אך נשמח לסייע לבעלי רכבים אחרים הזקוקים לשירותי <Link href="/areas/haifa-general/towing-for-scrap-kiryat-ata-road-22" className="text-blue-600 font-bold">גרירה לפירוק על כביש 22</Link>.</p>
+        
         <div className="bg-gray-100 p-6 rounded-xl mt-8">
-          <h3 className="text-2xl font-semibold mb-4">למה לבחור בנו?</h3>
-          <ul className="list-disc list-inside space-y-2">
-            <li>פינוי מיידי מהשטח בחיפה והקריות.</li>
-            <li>טיפול בכל סוגי הרכבים (למעט אופנועים).</li>
-            <li>הצעת מחיר הוגנת ומשתלמת.</li>
-            <li>שירות אדיב ומקצועי 24/7.</li>
-          </ul>
+          <h3 className="text-2xl font-semibold mb-4">שאלות נפוצות</h3>
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">האם אתם קונים רכבים ללא טסט?</p>
+              <p>כן, אנו רוכשים ומפנים רכבים מושבתים, רכבים שעברו תאונות או רכבים ללא טסט בתהליך מהיר ומסודר.</p>
+            </div>
+            <div>
+              <p className="font-bold">מהו טווח המחירים לרכב לפירוק?</p>
+              <p>המחיר נקבע בהתאם למצב הרכב, סוגו והיכולת שלנו להפיק ממנו חלפים. אנו מציעים מחירים הוגנים ומזומן במקום.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

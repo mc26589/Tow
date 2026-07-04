@@ -1,31 +1,38 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בטכניון חיפה | שירות 24/7",
-  description: "נתקעתם עם רכב חשמלי בטכניון? שירות גרירה מקצועי 24/7 לרכבים חשמליים בחיפה והקריות. מחירים הוגנים ושירות מהיר."
+  title: "גרירת רכב חשמלי בטכניון חיפה | חילוץ מצבר 24/7 | מחיר הוגן",
+  description: "נתקעתם עם רכב חשמלי בטכניון? מציעים שירות גרירה וחילוץ מקצועי 24/7 בחיפה. הגעה מהירה, מחיר הוגן ושירות לכל סוגי הרכבים. התקשרו עכשיו!",
+  alternates: {
+    canonical: "/areas/haifa-general/24-7-towing-electric-car-battery-dead-technion-haifa"
+  }
 };
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "AutoTowing",
-    "name": "שירותי גרירה חיפה והקריות",
-    "areaServed": "Haifa and Krayot",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "32.7775",
-      "longitude": "35.0217"
-    },
-    "priceRange": "$",
-    "serviceType": "Electric Vehicle Towing and Battery Assistance"
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "כמה זמן לוקח לגרר להגיע לטכניון?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "אנו מפעילים צי גרריסטים בפריסה ארצית בחיפה, מה שמאפשר לנו להגיע לטכניון תוך זמן קצר מרגע הקריאה, בהתאם לעומסי התנועה."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם אתם גוררים רכבים חשמליים?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כן, אנו מתמחים בגרירת רכבים חשמליים ומצוידים בציוד המתאים למניעת נזק למערכות הרכב והסוללה."
+        }
+      }
+    ]
   };
 
   return (
@@ -37,10 +44,10 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">שירות גרירה 24/7 לרכב חשמלי עם מצבר פרוק בטכניון חיפה</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">שירות גרירה 24/7 לרכב חשמלי בטכניון חיפה - חילוץ מהיר</h1>
           <p className="text-lg md:text-xl mb-8">
-            נתקעתם בטכניון עם רכב חשמלי שהמצבר שלו התרוקן? אנו מתמחים בחילוץ וגרירת רכבים חשמליים, רכבים פרטיים ורכבי 4x4. 
-            שימו לב: איננו מספקים שירותי גרירה לאופנועים.
+            נתקעתם בטכניון עם רכב חשמלי שהמצבר שלו התרוקן? אנו מתמחים בחילוץ וגרירת רכבים חשמליים. 
+            זקוקים לעזרה נוספת? אנו מציעים גם שירותי <Link href="/areas/haifa-general/suv-stuck-in-mud-rescue-haifa-university" className="underline">חילוץ רכבי שטח באוניברסיטה</Link> ובסביבת הכרמל.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -55,13 +62,19 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו?</h2>
-        <ul className="space-y-4 text-lg">
-          <li>✅ זמינות מלאה 24/7 בכל אזור חיפה והטכניון.</li>
-          <li>✅ מומחיות בטיפול ברכבים חשמליים ומערכות מצברים.</li>
+        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בטכניון?</h2>
+        <ul className="space-y-4 text-lg mb-8">
+          <li>✅ זמינות מלאה 24/7 לסטודנטים ואנשי סגל בכל אזור הטכניון.</li>
+          <li>✅ מומחיות בטיפול במערכות רכב חשמלי.</li>
+          <li>✅ שירות מהיר הכולל אפשרות ל<Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600">גרירה דחופה בצירים ראשיים</Link>.</li>
           <li>✅ מחירים הוגנים ושקופים ללא הפתעות.</li>
-          <li>✅ ציוד גרירה מתקדם המותאם לרכבים מודרניים.</li>
         </ul>
+
+        <div className="mt-12 bg-gray-50 p-6 rounded-lg">
+          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות</h3>
+          <p><strong>האם אתם גוררים אופנועים?</strong> לצערנו לא, השירות ניתן לרכבים פרטיים ומסחריים בלבד.</p>
+          <p className="mt-2"><strong>איך מזמינים גרירה?</strong> פשוט לחצו על כפתור הוואטסאפ או התקשרו למספר המופיע באתר.</p>
+        </div>
       </section>
     </main>
   );

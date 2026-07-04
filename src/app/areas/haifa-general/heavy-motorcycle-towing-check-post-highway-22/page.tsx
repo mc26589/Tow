@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בצ'ק פוסט כביש 22 | שירות גרירה 24/7 מהיר ומקצועי",
-  description: "נתקעתם עם הרכב באזור צ'ק פוסט או כביש 22? שירותי גרירה מקצועיים, מחיר הוגן והגעה מהירה לכל אזור חיפה והקריות. התקשרו עכשיו לחילוץ!",
+  title: "גרר בצ'ק פוסט כביש 22 | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם עם הרכב בצ'ק פוסט או בכביש 22? שירותי גרירה מקצועיים 24/7. מחיר הוגן, הגעה מהירה לכל אזור חיפה והקריות. התקשרו עכשיו לחילוץ!",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-check-post-highway-22"
   }
@@ -62,24 +62,28 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-4">שירותי גרירה מקצועיים באזור חיפה והקריות</h2>
         <p className="mb-4">
-          נתקעת עם הרכב באזור מחלף צ'ק פוסט? אנו מציעים <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-600 underline">שירותי גרירה זולים באזור צ'ק פוסט</Link> מהירים, אמינים ובמחירים הוגנים לכל סוגי הרכבים.
+          נתקעת עם הרכב באזור מחלף צ'ק פוסט? אנו מציעים <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">שירותי גרירה זולים באזור צ'ק פוסט</Link> מהירים, אמינים ובמחירים הוגנים לכל סוגי הרכבים.
         </p>
         <p className="mb-4">
-          אנו מבינים את הדחיפות בעת תקלה בדרך, במיוחד על צירים עמוסים כמו <Link href="/areas/haifa-general/electric-vehicle-breakdown-towing-route-22-krayot-bypass" className="text-blue-600 underline">כביש 22 עוקף קריות</Link>. הצוות שלנו זמין 24/7 כדי להבטיח מענה מהיר. במידה ומדובר בנזק כתוצאה מתאונה, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/towing-after-accident-check-post-haifa" className="text-blue-600 underline">גרירה לאחר תאונה בצ'ק פוסט</Link>.
+          אנו מבינים את הדחיפות בעת תקלה בדרך, במיוחד על צירים עמוסים כמו <Link href="/areas/haifa-general/fast-towing-services-road-22-krayot-bypass" className="text-blue-600 underline">כביש 22 עוקף קריות</Link>. הצוות שלנו זמין 24/7 כדי להבטיח מענה מהיר. במידה ומדובר בנזק כתוצאה מתאונה, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/pinui-rechev-grotah-grira-check-post-haifa-krayot-lechalafim" className="text-blue-600 underline">פינוי רכב גרוטה בצ'ק פוסט</Link> או <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירת רכב מסחרי קל בכביש 22</Link>.
         </p>
       </section>
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על גרירה באזור חיפה</h2>
-          <div className="space-y-4">
+          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על גרירה באזור חיפה והצ'ק פוסט</h2>
+          <div className="space-y-6">
             <div>
               <h3 className="font-bold">האם אתם גוררים אופנועים?</h3>
-              <p>לא, איננו מספקים שירותי גרירה לאופנועים, השירות מיועד לרכבים פרטיים, מסחריים ורכבי 4x4 בלבד.</p>
+              <p>לא, השירות שלנו מיועד לרכבים פרטיים, מסחריים ו-4x4. אם נתקעת בשטח עם רכב השטח שלך, אנו ממליצים לבדוק שירותי <Link href="/areas/haifa-general/hilutz-4x4-butz-carmel-haifa" className="text-blue-600 underline">חילוץ 4x4 בבוץ בכרמל</Link>.</p>
             </div>
             <div>
               <h3 className="font-bold">מהו זמן ההגעה הממוצע לצ'ק פוסט?</h3>
-              <p>אנו משתדלים להגיע לכל קריאה באזור צ'ק פוסט בזמן הקצר ביותר, בהתאם לעומסי התנועה בציר כביש 22.</p>
+              <p>אנו משתדלים להגיע לכל קריאה באזור צ'ק פוסט בזמן הקצר ביותר, בדרך כלל תוך דקות ספורות, בהתאם לעומסי התנועה בציר כביש 22 והקריות.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">איך נקבע מחיר הגרירה?</h3>
+              <p>מחיר הגרירה נקבע בהתאם למרחק הגרירה, סוג הרכב ושעת הקריאה. אנו מתחייבים למחיר הוגן ושקוף לכל לקוחותינו.</p>
             </div>
           </div>
         </div>
