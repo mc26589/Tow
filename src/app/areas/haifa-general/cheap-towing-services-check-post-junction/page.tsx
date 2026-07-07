@@ -1,5 +1,15 @@
+import { Metadata } from "next";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "שירותי גרירה בצומת צ'ק פוסט | 24/7 מחיר הוגן | הגעה מהירה",
+  description: "נתקעתם בצומת צ'ק פוסט? אנו מספקים שירותי גרירה מקצועיים ומהירים 24/7. מחירים נוחים ללא הפתעות. התקשרו עכשיו להגעה מהירה!",
+  alternates: {
+    canonical: "/areas/haifa-general/cheap-towing-services-check-post-junction",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -26,6 +36,7 @@ export default function Page() {
           <p className="text-lg mb-8">
             נתקעתם עם הרכב באזור צומת צ'ק פוסט? אנו מציעים שירותי גרירה מהירים ומקצועיים במחירים הוגנים. 
             אנו מתמחים בחילוץ וגרירת רכבים פרטיים, מסחריים ורכבי 4x4. 
+            אם אתם זקוקים לשירותי עזר נוספים, ניתן לבדוק גם <Link href="/areas/haifa-general/towing-service-road-22-krayot-bypass" className="underline">שירותי גרירה בכביש 22 עוקף קריות</Link>. 
             חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -42,12 +53,30 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-4">למה לבחור בנו בצומת צ'ק פוסט?</h2>
-        <ul className="list-disc pr-6 space-y-2">
-          <li>זמינות מלאה 24/7 לכל קריאה.</li>
-          <li>מחירים הוגנים ושקופים ללא הפתעות.</li>
+        <ul className="list-disc pr-6 space-y-2 mb-8">
+          <li>זמינות מלאה 24/7 לכל קריאה באזור הצ'ק פוסט והסביבה.</li>
+          <li>מחירים הוגנים ושקופים ללא הפתעות או עלויות נסתרות.</li>
           <li>צוות מיומן המכיר היטב את עומסי התנועה באזור הצ'ק פוסט.</li>
-          <li>ציוד גרירה מתקדם המבטיח שמירה על הרכב שלכם.</li>
+          <li>ציוד גרירה מתקדם המבטיח שמירה מקסימלית על הרכב שלכם.</li>
         </ul>
+
+        <div className="bg-gray-50 p-6 rounded-lg">
+          <h2 className="text-2xl font-bold mb-4">שאלות נפוצות על גרירה בצ'ק פוסט</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-bold">כמה זמן לוקח לגרר להגיע לצומת צ'ק פוסט?</h3>
+              <p>ברוב המקרים אנו מגיעים תוך 30-45 דקות, בהתאם לעומסי התנועה בציר העמוס הזה.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">האם אתם גוררים גם רכבים שנתקעו בכביש 22?</h3>
+              <p>כן, אנו נותנים מענה מלא לכל אזור הצ'ק פוסט כולל הכניסות והיציאות <Link href="/areas/haifa-general/emergency-towing-road-22-krayot-bypass" className="text-blue-600">לכביש 22 עוקף קריות</Link>.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">האם השירות כולל חילוץ 4x4?</h3>
+              <p>כן, אנו מציעים שירותי חילוץ מורכבים לרכבי שטח. למידע נוסף על חילוצי בוץ, ראו <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-600">חילוץ 4x4 ביערות הכרמל</Link>.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

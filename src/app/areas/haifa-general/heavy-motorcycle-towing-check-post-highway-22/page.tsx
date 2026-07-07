@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בצ'ק פוסט כביש 22 | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם עם הרכב בצ'ק פוסט או בכביש 22? שירותי גרירה מקצועיים 24/7. מחיר הוגן, הגעה מהירה לכל אזור חיפה והקריות. התקשרו עכשיו לחילוץ!",
+  title: "גרירת רכב בצ'ק פוסט וכביש 22 | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעת עם הרכב בצ'ק פוסט או בכביש 22? שירותי גרירה מקצועיים 24/7. הגעה תוך 30 דקות, מחיר הוגן ושירות אדיב לכל סוגי הרכבים. התקשרו עכשיו לחילוץ!",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-check-post-highway-22"
   }
@@ -45,7 +45,7 @@ export default function Page() {
             שירותי גרירה וחילוץ באזור מחלף צ'ק פוסט וכביש 22
           </h1>
           <p className="text-lg md:text-xl mb-8">
-            חשוב לציין: אנו מתמחים בגרירת רכבים פרטיים, מסחריים ו-4x4. איננו מספקים שירותי גרירה לאופנועים.
+            נתקעת בדרך? הצוות שלנו זמין 24/7 לחילוץ מהיר של רכבים פרטיים, מסחריים ורכבי 4x4. (לא מספקים גרירת אופנועים).
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a 
@@ -60,30 +60,30 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-4">שירותי גרירה מקצועיים באזור חיפה והקריות</h2>
+        <h2 className="text-2xl font-bold mb-4">שירותי גרירה מהירים בחיפה והקריות</h2>
         <p className="mb-4">
-          נתקעת עם הרכב באזור מחלף צ'ק פוסט? אנו מציעים <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">שירותי גרירה זולים באזור צ'ק פוסט</Link> מהירים, אמינים ובמחירים הוגנים לכל סוגי הרכבים.
+          אם נתקעת באזור הצ'ק פוסט, אל תחכה זמן רב. אנו מציעים <Link href="/areas/haifa-general/emergency-towing-road-22-krayot-bypass" className="text-blue-600 underline">שירותי גרירה מהירים בכביש 22 ועוקף קריות</Link> תוך הקפדה על מחיר הוגן ושקיפות. 
         </p>
         <p className="mb-4">
-          אנו מבינים את הדחיפות בעת תקלה בדרך, במיוחד על צירים עמוסים כמו <Link href="/areas/haifa-general/fast-towing-services-road-22-krayot-bypass" className="text-blue-600 underline">כביש 22 עוקף קריות</Link>. הצוות שלנו זמין 24/7 כדי להבטיח מענה מהיר. במידה ומדובר בנזק כתוצאה מתאונה, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/pinui-rechev-grotah-grira-check-post-haifa-krayot-lechalafim" className="text-blue-600 underline">פינוי רכב גרוטה בצ'ק פוסט</Link> או <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירת רכב מסחרי קל בכביש 22</Link>.
+          הצוות שלנו מומחה במתן מענה דחוף בצירים עמוסים. אנו מספקים גם <Link href="/areas/haifa-general/towing-service-road-22-krayot-bypass" className="text-blue-600 underline">שירותי גרירה מקיפים בכביש 22</Link> לכל סוגי הרכבים התקולים. במקרה של רכב ישן, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik" className="text-blue-600 underline">פינוי רכבים באזור התעשייה של קרית ביאליק</Link>.
         </p>
       </section>
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על גרירה באזור חיפה והצ'ק פוסט</h2>
+          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על גרירה בצ'ק פוסט</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold">האם אתם גוררים אופנועים?</h3>
-              <p>לא, השירות שלנו מיועד לרכבים פרטיים, מסחריים ו-4x4. אם נתקעת בשטח עם רכב השטח שלך, אנו ממליצים לבדוק שירותי <Link href="/areas/haifa-general/hilutz-4x4-butz-carmel-haifa" className="text-blue-600 underline">חילוץ 4x4 בבוץ בכרמל</Link>.</p>
+              <h3 className="font-bold text-lg">האם אתם מספקים חילוץ שטח במידת הצורך?</h3>
+              <p>כן, אנו מציעים שירותי <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-600 underline">חילוץ 4x4 ביערות הכרמל</Link> וסביבת חיפה עבור רכבי שטח שנתקעו בבוץ או בדרכים משובשות.</p>
             </div>
             <div>
-              <h3 className="font-bold">מהו זמן ההגעה הממוצע לצ'ק פוסט?</h3>
-              <p>אנו משתדלים להגיע לכל קריאה באזור צ'ק פוסט בזמן הקצר ביותר, בדרך כלל תוך דקות ספורות, בהתאם לעומסי התנועה בציר כביש 22 והקריות.</p>
+              <h3 className="font-bold text-lg">מה זמן ההגעה הממוצע לצ'ק פוסט?</h3>
+              <p>ברוב המקרים אנו מגיעים תוך 30 דקות, בהתאם לעומסי התנועה בציר 22. אנו זמינים 24/7 כדי להבטיח שלא תישארו תקועים.</p>
             </div>
             <div>
-              <h3 className="font-bold">איך נקבע מחיר הגרירה?</h3>
-              <p>מחיר הגרירה נקבע בהתאם למרחק הגרירה, סוג הרכב ושעת הקריאה. אנו מתחייבים למחיר הוגן ושקוף לכל לקוחותינו.</p>
+              <h3 className="font-bold text-lg">האם אתם מבצעים גרירת אופנועים?</h3>
+              <p>לא, השירות שלנו ממוקד ברכבים פרטיים ומסחריים. במידה ואתה מחפש גרירה לאופנוע באזור אחר, מומלץ לוודא זאת מראש.</p>
             </div>
           </div>
         </div>
