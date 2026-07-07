@@ -19,49 +19,44 @@ export default function Page() {
       "latitude": "32.8190",
       "longitude": "35.0550"
     },
-    "serviceType": "Emergency Roadside Assistance and Towing"
+    "serviceType": ["Emergency Towing", "Roadside Assistance"]
   };
 
   return (
-    <main className="bg-neutral-950 text-neutral-100">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
       <section className="gradient-trust text-white py-14 md:py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">גרר דחוף לכביש 22 עוקף קריות – שירות מהיר ומקצועי 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם בכביש 22? הצוות שלנו בדרך אליכם.</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר דחוף לכביש 22 עוקף קריות</h1>
+          <p className="text-xl mb-8 leading-relaxed">
+            נתקעתם עם הרכב בכביש 22? אנו כאן עבורכם. אנו מתמחים בחילוץ וגרירת רכבים פרטיים, מסחריים ורכבי 4x4. 
+            חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים. 
+            הצוות שלנו מגיע במהירות לכל נקודה בכביש עוקף קריות ומעניק שירות אדיב במחירים הוגנים.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <WhatsAppCTA cityName="חיפה והקריות" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-neutral-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition-colors"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors text-center"
             >
-              חיוג מהיר למוקד החירום
+              חיוג מהיר למוקד
             </a>
           </div>
         </div>
       </section>
 
       <section className="py-16 container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">זקוקים לגרר דחוף בכביש 22? אנחנו כאן בשבילכם.</h2>
-          <p className="mb-6 text-lg">
-            אם נתקעתם עם הרכב בכביש עוקף קריות (כביש 22), צוות המומחים שלנו זמין להגעה מהירה לכל נקודה לאורך הציר. 
-            אנו מתמחים בחילוץ רכבים פרטיים, רכבי שטח ומסחריות קלות, ומבטיחים מענה מקצועי, בטוח ומהיר כדי להחזיר אתכם לשגרה. 
-            <strong>חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.</strong>
-          </p>
-
-          <h3 className="text-2xl font-semibold mb-4">למה לבחור בנו לחילוץ בכביש 22?</h3>
-          <ul className="list-disc list-inside space-y-3 mb-8">
-            <li>זמינות מלאה: שירות 24/7, גם בשעות הלילה ובסופי שבוע.</li>
-            <li>הגעה מהירה: היכרות מעמיקה עם כל מחלפי כביש 22 לקיצור זמני המתנה.</li>
-            <li>מחירים הוגנים: שקיפות מלאה והצעת מחיר הוגנת בטלפון ללא הפתעות.</li>
-            <li>מקצועיות: ציוד גרירה חדיש המבטיח שמירה על הרכב שלכם.</li>
-          </ul>
-        </div>
+        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בכביש 22?</h2>
+        <ul className="space-y-4 text-lg">
+          <li>✓ זמינות מלאה 24/7 לכל קריאת חירום.</li>
+          <li>✓ הגעה מהירה לכל נקודה בציר עוקף קריות.</li>
+          <li>✓ שירות מקצועי לרכבים פרטיים, מסחריים ו-4x4.</li>
+          <li>✓ מחירים הוגנים ושקיפות מלאה מול הלקוח.</li>
+        </ul>
       </section>
     </main>
   );
