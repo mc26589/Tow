@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "קונה רכבים לפירוק בקרית ים - פינוי מיידי ומזומן במקום",
-  description: "מעוניינים למכור רכב לפירוק בקרית ים? אנו קונים את כל סוגי הרכבים, פינוי מהיר ומזומן במקום. שירות אמין ומקצועי. התקשרו עכשיו להצעת מחיר הוגנת!",
+  title: "קונה רכבים לפירוק בקרית ים | פינוי מיידי ומזומן במקום",
+  description: "מעוניינים למכור רכב לפירוק בקרית ים? אנו קונים את כל סוגי הרכבים לפירוק, פינוי מהיר, מזומן במקום ומחיר הוגן. התקשרו עכשיו לפינוי הרכב מהיום להיום!",
   alternates: {
     canonical: "/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-immediate-removal"
   }
@@ -15,9 +15,9 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה ופינוי רכבים לפירוק",
+    "name": "שירותי פינוי רכבים לפירוק בקרית ים",
     "areaServed": "קרית ים",
-    "priceRange": "$",
+    "priceRange": "הוגן",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -29,7 +29,7 @@ export default function Page() {
       "latitude": "32.8285",
       "longitude": "35.0715"
     },
-    "serviceType": "פינוי רכבים לפירוק"
+    "serviceType": "פינוי וקניית רכבים לפירוק"
   };
 
   return (
@@ -41,10 +41,9 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בקרית ים – פינוי מיידי</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בקרית ים – פינוי מיידי ומזומן</h1>
           <p className="text-xl mb-8 max-w-2xl">
-            אנו קונים את כל סוגי הרכבים לפירוק בקרית ים. אם הרכב שלכם עומד ללא שימוש, עבר תאונה או סובל מתקלות מכניות קשות, אנו כאן כדי לפנות אותו עבורכם באופן מיידי.
-            אנו מתמחים ברכבים פרטיים, רכבים מסחריים ורכבי שטח (4x4). זקוקים גם לשירותי גרירה באזור? בדקו את הצעות ה- <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="underline font-bold">גרירה 24 7 עוקף קריות מחיר הוגן</Link> שלנו.
+            נתקעתם עם רכב ישן? אנו קונים את כל סוגי הרכבים לפירוק בקרית ים. פינוי מהיר מהשטח, ללא כאב ראש, במזומן ובמחיר הוגן. אנו מתמחים ברכבים פרטיים ומסחריים. זקוקים לגרר דחוף? בדקו גם שירותי <Link href="/areas/haifa-general/grar-zol-lerchev-takua-bekiryat-yam" className="underline font-bold">grar zol lerchev takua bekiryat yam</Link> לכל תקלה.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="קרית ים" />
@@ -60,32 +59,31 @@ export default function Page() {
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי רכב לפירוק?</h2>
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בשירות פינוי רכבים שלנו?</h2>
           <ul className="space-y-4 text-lg mb-8">
-            <li>✓ פינוי מיידי מהשטח בקרית ים והסביבה.</li>
-            <li>✓ שירות מקצועי ואמין ללא עלויות נסתרות.</li>
-            <li>✓ הצעת מחיר הוגנת עבור הרכב שלכם.</li>
-            <li>✓ טיפול בכל סוגי הרכבים (פרטי, מסחרי, 4x4).</li>
+            <li>✓ פינוי מיידי של רכבים ללא טסט או רכבים עומדים בקרית ים.</li>
+            <li>✓ תשלום הוגן ומזומן במקום – ללא בירוקרטיה.</li>
+            <li>✓ שירות מיומן המכסה את כל אזורי הקריות והסביבה.</li>
+            <li>✓ עבודה מקצועית גם במצבי חירום, כולל שירותי <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">affordable car breakdown towing check post haifa krayot</Link>.</li>
           </ul>
-          <p>זקוקים לשירותי גרירה מקבילים? ראו <Link href="/areas/haifa-general/affordable-flatbed-towing-kiryat-yam-disabled-vehicle" className="text-blue-600 underline">affordable flatbed towing kiryat yam disabled vehicle</Link> לפתרונות גרירה מתקדמים.</p>
         </div>
       </section>
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות</h2>
+          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על פירוק רכבים</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl font-bold">אילו סוגי רכבים אתם מפנים?</h3>
-              <p>אנחנו מפנים רכבים פרטיים, מסחריים ושטח. שימו לב: איננו מטפלים באופנועים.</p>
+              <h3 className="text-xl font-bold">באילו סוגי רכבים אתם מטפלים?</h3>
+              <p>אנו קונים רכבים פרטיים, מסחריים ושטח. לידיעתכם, איננו מפנים אופנועים.</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold">האם אתם מגיעים לכל האזורים בקרית ים?</h3>
-              <p>כן, אנו נותנים שירות מלא בכל שכונות קרית ים, כולל אזורים קרובים כמו <Link href="/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-rothschild" className="text-blue-600">buy cars for scrap kiryat yam rothschild</Link>.</p>
+              <h3 className="text-xl font-bold">האם אתם מגיעים לכל שכונות קרית ים?</h3>
+              <p>כן, אנו נותנים מענה לכל השכונות בעיר, כולל קרבה לאזורים כמו <Link href="/areas/haifa-general/scrap-car-removal-kiryat-haim-cash" className="text-blue-600">scrap car removal kiryat haim cash</Link>.</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold">תוך כמה זמן מתבצע הפינוי?</h3>
-              <p>השירות שלנו מבוסס על פינוי מהיר, לרוב תוך מספר שעות מהקריאה, במחירים הוגנים ותחרותיים.</p>
+              <h3 className="text-xl font-bold">תוך כמה זמן הרכב יפונה?</h3>
+              <p>המטרה שלנו היא פינוי מיידי. ברוב המקרים נגיע עוד באותו היום, בהתאם לזמינות ולמיקום הרכב.</p>
             </div>
           </div>
         </div>

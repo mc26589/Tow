@@ -1,10 +1,14 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב מבוץ באזור הכרמל | שירות מהיר 24/7",
-  description: "נתקעתם בבוץ בכרמל? אנו מציעים שירותי חילוץ רכב מקצועיים לרכבים פרטיים ו-4x4. זמינות 24/7, מחירים הוגנים וציוד חילוץ מתקדם.",
+  title: "חילוץ רכב מבוץ בכרמל | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם בבוץ באזור הכרמל? אנו מציעים חילוץ רכב מקצועי ומהיר לכל סוגי הרכבים. מחירים נוחים, ציוד מתקדם וזמינות מלאה מסביב לשעון. התקשרו עכשיו!",
+  alternates: {
+    canonical: "/areas/haifa-general/car-rescue-from-mud-carmel-area",
+  },
 };
 
 export default function Page() {
@@ -13,7 +17,7 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי חילוץ וגרירה חיפה והקריות",
     "areaServed": "Haifa and Krayot",
-    "priceRange": "$",
+    "priceRange": "$ - $$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -39,9 +43,9 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">חילוץ רכב מבוץ באזור הכרמל</h1>
           <p className="text-xl mb-8 max-w-2xl">
-            נתקעתם עם הרכב בבוץ באזור הכרמל? אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 ששקעו בתנאי שטח. 
-            הצוות שלנו מגיע במהירות לכל נקודה באזור הכרמל עם ציוד חילוץ מקצועי. 
-            חשוב לציין: אנו לא מספקים שירותי חילוץ לאופנועים.
+            נתקעתם עם הרכב בבוץ באזור הכרמל? הצוות שלנו מתמחה בחילוץ רכבים פרטיים ו-4x4 ששקעו בדרכי עפר ובשטח. 
+            אנו מציעים חילוץ מקצועי לכל מי שזקוק לפתרון מהיר של <Link href="/areas/haifa-general/car-extraction-from-mud-carmel-reserve-haifa" className="underline">חילוץ מרכבי בוץ בשמורת הכרמל</Link> והסביבה.
+            חשוב להבהיר: השירות מיועד לרכבים בלבד (איננו מספקים חילוץ לאופנועים).
           </p>
           <div className="flex flex-wrap gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -63,6 +67,22 @@ export default function Page() {
           <li>✓ מחירים הוגנים ושקיפות מלאה מול הלקוח.</li>
           <li>✓ צוות מיומן ומקצועי עם ניסיון רב בחילוצי שטח.</li>
         </ul>
+      </section>
+
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על חילוץ רכב מבוץ</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold">כמה זמן לוקח לכם להגיע לחילוץ בכרמל?</h3>
+              <p>אנו שואפים להגיע לכל נקודה באזור הכרמל בזמן הקצר ביותר. למידע על אזורים מרוחקים יותר כמו <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot">אזור צומת הצ'ק פוסט</Link>, ניתן להתעדכן מול המוקד הטלפוני שלנו.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">האם אתם מחלצים רכבים ששקעו בבוץ כבד?</h3>
+              <p>כן, אנו ערוכים לכל סוגי החילוץ. אם רכבכם נתקע בתנאי קיצון, הצוות המיומן שלנו יגיע עם הציוד המתאים כדי לחלץ את הרכב בבטחה ולמנוע נזקים מיותרים.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

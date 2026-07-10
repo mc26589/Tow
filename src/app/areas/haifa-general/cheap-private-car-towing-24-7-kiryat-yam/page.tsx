@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר בקרית ים 24/7 | שירות מהיר ומחיר הוגן | הגעה מהירה",
-  description: "נתקעתם עם הרכב בקרית ים? שירותי גרירה מקצועיים 24/7 לרכב פרטי ומסחרי. מחירים נוחים, שקיפות מלאה ושירות מהיר. התקשרו עכשיו להצעת מחיר!",
+  title: "גרר בקרית ים 24/7 | הגעה תוך 30 דקות | מחיר הוגן",
+  description: "נתקעתם עם הרכב בקרית יום? גרר 24/7 לרכבים פרטיים ומסחריים. שירות אמין, מהיר ומקצועי במחיר ללא תחרות. התקשרו עכשיו להצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/cheap-private-car-towing-24-7-kiryat-yam",
   },
@@ -43,8 +43,9 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר רכב פרטי זול 24/7 בקרית ים</h1>
           <p className="text-xl mb-8 max-w-2xl">
-            נתקעתם עם הרכב בקרית ים? אנו כאן בשבילכם. אנו מתמחים בגרירת רכבים פרטיים, רכבים מסחריים ורכבי 4x4 במחירים הוגנים וזמינות מלאה מסביב לשעון. 
-            שימו לב: במידה והרכב במצב גרוטאה שאינו ראוי לנסיעה, ניתן גם לבדוק אפשרות של <Link href="/areas/haifa-general/buy-old-cars-for-scrap-kiryat-yam" className="underline font-bold">מכירת רכב לפירוק בקרית ים</Link>. חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים.
+            נתקעתם עם הרכב בקרית ים? אנו כאן בשבילכם עם שירות גרירה מהיר ומקצועי. אנו מתמחים בגרירת רכבים פרטיים, רכבים מסחריים ורכבי 4x4 במחירים הוגנים. 
+            צריכים עזרה דחופה באזור? אנו מספקים מענה מהיר גם באזורים סמוכים כמו <Link href="/areas/haifa-general/cheap-towing-check-post-krayot" className="underline font-bold">שירותי גרירה בצומת צ'ק פוסט והקריות</Link>. 
+            במידה והרכב במצב גרוטאה שאינו ראוי לנסיעה, ניתן גם לבדוק אפשרות של <Link href="/areas/haifa-general/buy-old-cars-for-scrap-kiryat-yam" className="underline font-bold">מכירת רכב לפירוק בקרית ים</Link>. חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="קרית ים" />
@@ -67,8 +68,16 @@ export default function Page() {
               <p>אנו משתדלים להגיע לכל נקודה בקרית ים בזמן קצר ככל הניתן, בדרך כלל תוך 30-45 דקות בהתאם לעומסי התנועה.</p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="font-bold text-lg mb-2">האם אתם גוררים רכבים מהקריות?</h3>
-              <p>כן, אנו נותנים מענה מקיף לכל אזור הקריות, כולל שירותי גרירה מהירים וסיוע בדרכים.</p>
+              <h3 className="font-bold text-lg mb-2">האם אתם נותנים שירות גם מחוץ לקרית ים?</h3>
+              <p>כן, אנו פעילים בכל אזור הקריות וחיפה. במידה ואתם זקוקים לשירות באזורים סמוכים, מומלץ לבדוק את השירות שלנו ל<Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600">גרירת רכבים בצומת צ'ק פוסט</Link>.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-bold text-lg mb-2">מהו טווח המחירים לגרירה?</h3>
+              <p>מחיר הגרירה נקבע לפי המרחק וסוג הרכב. אנו מתחייבים למחירים הוגנים ושקיפות מלאה ללא הפתעות.</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <h3 className="font-bold text-lg mb-2">האם אתם גוררים רכבים מסחריים?</h3>
+              <p>כן, אנו מספקים מענה לרכבים מסחריים קלים ופרטיים. לצרכים כבדים יותר באזור הקריות, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-600">גרירת משאיות קלות</Link>.</p>
             </div>
           </div>
         </div>
