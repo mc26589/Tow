@@ -1,11 +1,5 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "קונה רכבים לפירוק בחיפה והקריות | שירות מהיר ומקצועי",
-  description: "מחפשים מי קונה רכבים לפירוק בחיפה והקריות? אנו מציעים שירות פינוי רכבים לפירוק, רכבים לאחר תאונה או רכבים ללא טסט. מחירים הוגנים ושירות 24/7."
-};
 
 export default function Page() {
   const jsonLd = {
@@ -29,7 +23,7 @@ export default function Page() {
   };
 
   return (
-    <main className="bg-neutral-950 text-neutral-100">
+    <main className="min-h-screen bg-neutral-950">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -45,22 +39,24 @@ export default function Page() {
               href={`tel:+${BUSINESS_INFO.phone}`} 
               className="bg-white text-neutral-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition-colors"
             >
-              חיוג מהיר למוקד
+              חייגו עכשיו לשיחת ייעוץ
             </a>
           </div>
         </div>
       </section>
 
-      <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפירוק רכבים?</h2>
-        <p className="mb-4">אנו קונים רכבים לפירוק בחיפה והקריות ומעניקים שירות מלא הכולל גרירה ופינוי ללא עלות נוספת. אנו מטפלים ברכבים פרטיים, מסחריים ורכבי 4x4 במצבם הנוכחי.</p>
-        <ul className="list-disc list-inside space-y-2 mb-8">
-          <li>שירות מהיר בכל אזור חיפה והקריות</li>
-          <li>מחירים הוגנים עבור הרכב שלך</li>
-          <li>טיפול מקצועי בכל סוגי הרכבים (למעט אופנועים)</li>
-          <li>זמינות 24/7 לכל קריאה</li>
-        </ul>
-        <p className="text-sm text-neutral-400">*הערה: השירות אינו כולל אופנועים. אנו מתמקדים ברכבים בעלי 4 גלגלים ומעלה בלבד.</p>
+      <section className="py-16 bg-neutral-900 text-neutral-100">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפירוק רכבים?</h2>
+          <p className="mb-4">אנו מציעים פתרון מלא לכל מי שמחפש קונה רכבים לפירוק בחיפה והקריות. השירות שלנו כולל פינוי מהיר של רכבים ללא טסט, רכבים מושבתים או רכבים לאחר תאונה.</p>
+          <ul className="list-disc list-inside space-y-2 mb-6">
+            <li>פינוי רכבים ללא עלות גרירה</li>
+            <li>טיפול מקצועי בכל סוגי הרכבים הפרטיים והמסחריים</li>
+            <li>הצעת מחיר הוגנת ומהירה</li>
+            <li>שירות זמין 24/7 בכל אזור חיפה והקריות</li>
+          </ul>
+          <p className="text-sm text-neutral-400 italic">הערה: אנו מתמחים ברכבים פרטיים, מסחריים ורכבי שטח בלבד. איננו מטפלים באופנועים.</p>
+        </div>
       </section>
     </main>
   );
