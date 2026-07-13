@@ -5,7 +5,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "גרירת רכב בקרית מוצקין 24/7 | הגעה מהירה ומחיר הוגן",
-  description: "נתקעתם בקרית מוצקין? גרר מקצועי זמין 24/7 לכל סוגי הרכבים. הגעה מהירה, שירות אמין ומחיר הוגן ללא הפתעות. התקשרו עכשיו לפתרון מיידי!",
+  description: "נתקעתם בקרית מוצקין? גרר מקצועי זמין 24/7 לכל סוגי הרכבים. הגעה תוך 30 דקות, מחיר הוגן ושירות אמין ללא הפתעות. התקשרו עכשיו לפתרון מיידי!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7",
   },
@@ -41,9 +41,9 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירת רכב בקרית מוצקין 24/7 במחיר הוגן</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירת רכב בקרית מוצקין 24/7 - הגעה מהירה!</h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            נתקעתם עם הרכב בקרית מוצקין? צוות המומחים שלנו זמין 24/7 לכל תקלה. אנו מציעים גרירה מקצועית, אמינה ובמחיר הוגן לכל סוגי הרכבים הפרטיים והמסחריים הקלים. למידע על אזורים נוספים באזור, ניתן לבדוק גם <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="underline font-semibold">גרירת חירום בכביש 22 עוקף קריות</Link>. שימו לב: השירות אינו כולל גרירת אופנועים.
+            נתקעתם עם הרכב? צוות המומחים שלנו זמין 24/7 לכל תקלה באזור הקריות. אנו מציעים גרירה מקצועית, אמינה ובמחיר הוגן לכל סוגי הרכבים הפרטיים והמסחריים הקלים. זקוקים לסיוע נוסף באזור? בדקו גם <Link href="/areas/haifa-general/electric-vehicle-accident-towing-route-22-krayot-bypass" className="underline font-semibold">גרירת רכב בכביש 22 עוקף קריות</Link>. שימו לב: השירות אינו כולל גרירת אופנועים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="קרית מוצקין" />
@@ -67,11 +67,11 @@ export default function Page() {
             </div>
             <div className="p-6 border border-gray-700 rounded-xl">
               <h3 className="text-xl font-semibold mb-3">מחירים הוגנים ושקופים</h3>
-              <p>ללא "הפתעות" בדרך. הצעת המחיר ניתנת מראש בצורה הוגנת ומקצועית.</p>
+              <p>ללא "הפתעות" בדרך. הצעת המחיר ניתנת מראש בצורה הוגנת ומקצועית לכל סוגי התקלות.</p>
             </div>
             <div className="p-6 border border-gray-700 rounded-xl">
-              <h3 className="text-xl font-semibold mb-3">שירות רב-תחומי</h3>
-              <p>מציעים גם שירותי <Link href="/areas/haifa-general/cheap-off-road-vehicle-towing-kiryat-motzkin" className="text-blue-400">גרירת רכבי שטח בקרית מוצקין</Link> ופתרונות גרירה מתקדמים לכל סוגי הרכבים.</p>
+              <h3 className="text-xl font-semibold mb-3">פריסה אזורית רחבה</h3>
+              <p>מספקים מענה גם בערים סמוכות. זקוקים לשירות בערים השכנות? ראו <Link href="/areas/haifa-general/affordable-24-7-towing-kiryat-bialik-flat-tire" className="text-blue-400">גרירה בקרית ביאליק</Link> או <Link href="/areas/haifa-general/cheap-towing-check-post-kiryat-ata" className="text-blue-400">שירותי גרירה בקרית אתא</Link>.</p>
             </div>
           </div>
         </div>
@@ -90,8 +90,8 @@ export default function Page() {
               <p className="text-gray-700">המחיר משתנה לפי מרחק הגרירה, שעת הקריאה וסוג הרכב. אנו מתחייבים למחירים הוגנים ותחרותיים בשוק הגרירה המקומי.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">האם אתם גוררים גם באזורים סמוכים?</h3>
-              <p className="text-gray-700">בהחלט. אנו מספקים שירותים גם בערים הסמוכות, כגון <Link href="/areas/haifa-general/affordable-flatbed-towing-kiryat-yam-disabled-vehicle" className="text-blue-600 hover:underline">גרירה בקרית ים</Link> וכן מענה מהיר בנקודות מרכזיות כמו <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-600 hover:underline">גרירה בצומת צ'ק פוסט</Link>.</p>
+              <h3 className="font-bold text-lg">האם אתם גוררים רכבים מהצומת הקרובה?</h3>
+              <p className="text-gray-700">בהחלט. אנו נותנים מענה מהיר גם בנקודות תנועה עמוסות כמו <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-600 hover:underline">גרירת רכב בצומת צ'ק פוסט</Link> ובכל אזור מפרץ חיפה והקריות.</p>
             </div>
           </div>
         </div>

@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בכביש 22 (עוקף קריות) | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעת בכביש 22 עוקף קריות? שירותי גרירה מקצועיים לרכבים 24/7. הגעה מהירה, מחיר הוגן ושירות אמין לכל סוגי הרכבים. התקשרו עכשיו לחילוץ!",
+  title: "גרר בכביש 22 (עוקף קריות) | הגעה תוך 30 דקות | 24/7",
+  description: "נתקעת בכביש 22 עוקף קריות? שירותי גרירה מקצועיים לרכבים 24/7. הגעה מהירה, מחיר הוגן ושירות אמין. התקשרו עכשיו לחילוץ מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/motorcycle-towing-road-22-krayot"
   }
@@ -20,7 +20,7 @@ export default function Page() {
             שירותי גרירה וחילוץ רכבים בכביש 22 (עוקף קריות)
           </h1>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            נתקעת עם הרכב בכביש 22? אנו מעניקים שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי שטח. שירות מהיר, אמין וזמין 24/7 לכל אורך עוקף קריות.
+            נתקעת עם הרכב בכביש 22? אנו מעניקים שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי שטח. שירות מהיר, אמין וזמין 24/7 לאורך עוקף קריות.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a 
@@ -37,7 +37,9 @@ export default function Page() {
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים באזור הקריות וחיפה</h2>
         <p className="text-lg leading-relaxed mb-6">
-          תקיעת רכב בצירי תנועה מרכזיים דורשת מענה מיידי. אנו מספקים מעטפת שירות מלאה לנהגים בצפון. אם אתם זקוקים לפתרון זמין, ניתן להתרשם משירותינו כגון <Link href="/areas/haifa-general/fast-towing-services-road-22-krayot-bypass" className="text-blue-400 hover:underline">גרירה מהירה בכביש 22</Link>, או פתרונות מתקדמים עבור <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-400 hover:underline">גרירת רכב מסחרי קל בכביש 22</Link>. במקרים של רכבים ישנים, אנו מציעים גם פתרונות עבור <Link href="/areas/haifa-general/towing-for-scrap-kiryat-ata-road-22" className="text-blue-400 hover:underline">גרירת רכבים לפירוק באזור קרית אתא</Link>.
+          תקיעת רכב בצירי תנועה מרכזיים דורשת מענה מיידי. אנו מספקים מעטפת שירות מלאה לנהגים בצפון. אם אתם זקוקים לפתרון זמין, ניתן להתרשם משירותינו כגון גרירה מהירה בכביש 22, או פתרונות מתקדמים עבור 
+          <Link href="/areas/haifa-general/electric-vehicle-accident-towing-route-22-krayot-bypass" className="text-blue-400 hover:underline"> גרירת רכב חשמלי תקול בכביש 22</Link>. 
+          למי שזקוק לשירות באזורים סמוכים, אנו ממליצים על <Link href="/areas/haifa-general/affordable-24-7-towing-kiryat-bialik-flat-tire" className="text-blue-400 hover:underline">גרירה בקריית ביאליק</Link> או <Link href="/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7" className="text-blue-400 hover:underline">גרירה בקריית מוצקין</Link>.
         </p>
 
         <div className="bg-neutral-900 p-8 rounded-xl border border-neutral-800">
@@ -49,11 +51,11 @@ export default function Page() {
             </div>
             <div>
               <h4 className="font-bold text-lg">מהו זמן ההגעה הממוצע לאחר קריאה?</h4>
-              <p>זמן ההגעה תלוי בעומסי התנועה בכביש 22, אך אנו עושים כל מאמץ להגיע במהירות המקסימלית לכל קריאה באזור הקריות, קרית ים, קרית חיים וקרית אתא.</p>
+              <p>זמן ההגעה תלוי בעומסי התנועה בכביש 22, אך אנו עושים כל מאמץ להגיע במהירות המקסימלית לכל קריאה בקרית ים, קרית חיים וקרית אתא.</p>
             </div>
             <div>
-              <h4 className="font-bold text-lg">האם אתם נותנים שירות גם לרכבים שאינם נוסעים לצורך גריטה?</h4>
-              <p>בהחלט. אנו מספקים שירותי פינוי מסודרים, כולל <Link href="/areas/haifa-general/pinui-rechev-grotah-grira-check-post-haifa-krayot-lechalafim" className="text-blue-400 hover:underline">פינוי רכבים לפירוק באזור צ'ק פוסט והקריות</Link>.</p>
+              <h4 className="font-bold text-lg">אילו סוגי רכבים אתם גוררים?</h4>
+              <p>אנו נותנים מענה לרכבים פרטיים, רכבים מסחריים ורכבי שטח. לבירור על <Link href="/areas/haifa-general/cheap-towing-check-post-kiryat-ata" className="text-blue-400 hover:underline">גרירה זולה בצ'ק פוסט וקרית אתא</Link> ניתן לפנות אלינו בכל עת.</p>
             </div>
           </div>
         </div>
