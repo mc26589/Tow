@@ -3,8 +3,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי | שירות 24/7",
-  description: "מחפשים קונה רכבים לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי, שירות אמין ומחירים הוגנים לכל סוגי הרכבים. צרו קשר עכשיו!"
+  title: "קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי | שירות מהיר",
+  description: "מחפשים קונה רכבים לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי, הצעת מחיר הוגנת ושירות מקצועי לרכבים פרטיים, מסחריים ו-4x4. צרו קשר עכשיו."
 };
 
 export default function Page() {
@@ -13,6 +13,7 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי גרירה ופירוק רכבים חיפה והקריות",
     "areaServed": ["Haifa", "Krayot"],
+    "priceRange": "$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -24,12 +25,11 @@ export default function Page() {
       "latitude": "32.7940",
       "longitude": "34.9896"
     },
-    "priceRange": "$",
-    "serviceType": "Car Scrap and Removal"
+    "serviceType": "Car Scrap Removal"
   };
 
   return (
-    <main>
+    <main className="bg-neutral-950 text-neutral-100">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -37,31 +37,36 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי</h1>
-          <p className="text-xl mb-8">נתקעתם עם רכב ישן או מושבת? אנו קונים רכבים לפירוק ומפנים אותם מהשטח באופן מיידי.</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות עם פינוי מיידי</h1>
+          <p className="text-xl mb-8">זקוקים לפינוי רכב ישן או תקול? אנו כאן בשבילכם 24/7.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
+              className="bg-white text-neutral-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-neutral-200 transition-colors"
             >
-              התקשרו עכשיו לקבלת הצעת מחיר
+              חיוג מהיר למוקד
             </a>
           </div>
         </div>
       </section>
 
-      <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי רכבים?</h2>
-        <ul className="space-y-4 text-lg">
-          <li>✓ פינוי מיידי מהשטח בחיפה ובכל אזור הקריות.</li>
-          <li>✓ שירות אמין, מקצועי ומהיר ללא עיכובים.</li>
-          <li>✓ קניית רכבים פרטיים, מסחריים ורכבי 4x4 במחירים הוגנים.</li>
-          <li>✓ שירות זמין 24/7 לכל צורך.</li>
-        </ul>
-        <p className="mt-6 text-gray-600">
-          *הערה: אנו מתמחים ברכבים בלבד ואיננו מספקים שירותי פינוי או גרירה לאופנועים.
-        </p>
+      <section className="py-16 container mx-auto px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6">שירות מקצועי לפינוי רכבים</h2>
+          <p className="mb-4">אנו מתמחים בפינוי רכבים לפירוק בכל אזור חיפה והקריות. השירות שלנו כולל גרירה מהירה, טיפול בניירת והצעת מחיר הוגנת במקום.</p>
+          <p className="mb-4"><strong>שימו לב:</strong> אנו מטפלים ברכבים פרטיים, מסחריים ורכבי 4x4 בלבד. איננו מספקים שירותי פינוי או גרירה לאופנועים.</p>
+          
+          <div className="bg-neutral-900 p-8 rounded-xl border border-neutral-800 mt-8">
+            <h3 className="text-2xl font-bold mb-4">למה לבחור בנו?</h3>
+            <ul className="list-disc list-inside space-y-2">
+              <li>פינוי מיידי מהשטח</li>
+              <li>שירות אמין ומקצועי</li>
+              <li>הצעת מחיר הוגנת בטלפון</li>
+              <li>זמינות מלאה באזור חיפה והקריות</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
   );
