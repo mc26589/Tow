@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "קניית רכבים לפירוק באזור התעשייה הישן קרית ביאליק - פינוי מהיר",
-  description: "רוצים למכור רכב ישן? קונה רכבים לפירוק באזור התעשייה הישן של קרית ביאליק. תשלום במזומן, פינוי מהיר ושירות אמין. התקשרו עכשיו לקבלת הצעה משתלמת!",
+  title: "קניית רכבים לפירוק בקרית ביאליק - פינוי מהיר, תשלום במזומן!",
+  description: "רוצים למכור רכב ישן? אנו קונים רכבים לפירוק באזור התעשייה הישן של קרית ביאליק. שירות מהיר, תשלום הוגן במזומן ופינוי מהיר מהשטח. התקשרו עכשיו לקבלת הצעה!",
   alternates: {
     canonical: "/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik"
   }
@@ -38,13 +38,13 @@ export default function Page() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "תוך כמה זמן אתם מפנים רכב לפירוק בקרית ביאליק?",
-        "acceptedAnswer": { "@type": "Answer", "text": "אנו מספקים פינוי מהיר באזור התעשייה הישן של קרית ביאליק, לרוב תוך זמן קצר מרגע השיחה." }
+        "name": "תוך כמה זמן אתם מפנים רכב לפירוק באזור התעשייה בקרית ביאליק?",
+        "acceptedAnswer": { "@type": "Answer", "text": "אנו מספקים פינוי מהיר באזור התעשייה הישן של קרית ביאליק, לרוב תוך זמן קצר מרגע השיחה ותיאום מול הלקוח." }
       },
       {
         "@type": "Question",
-        "name": "האם אתם קונים כל רכב?",
-        "acceptedAnswer": { "@type": "Answer", "text": "אנו קונים רכבים פרטיים ומסחריים. חשוב לציין: איננו מטפלים באופנועים." }
+        "name": "האם אתם קונים רכבים ללא טסט או רכבים מושבתים?",
+        "acceptedAnswer": { "@type": "Answer", "text": "כן, אנו קונים רכבים ישנים, מושבתים, לאחר תאונה או רכבים המיועדים לפירוק לברזל, ומשלמים במזומן במקום." }
       }
     ]
   };
@@ -56,11 +56,11 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק וברזל באזור התעשייה הישן של קרית ביאליק</h1>
-          <p className="text-lg md:text-xl mb-8">פינוי מהיר, שירות אמין ותשלום הוגן במקום. אנו כאן לכל צורך ברכב מושבת או ישן.</p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">קניית רכבים לפירוק באזור התעשייה הישן של קרית ביאליק</h1>
+          <p className="text-lg md:text-xl mb-8">פינוי מהיר, תשלום הוגן במקום וגרירה ללא עלות. אנו מומחים בפינוי רכבים ישנים ומושבתים.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="קרית ביאליק" />
-            <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-neutral-900 px-8 py-3 rounded-lg font-bold hover:bg-neutral-200 transition">
+            <a href={`tel:${BUSINESS_INFO.phone}`} className="bg-white text-neutral-900 px-8 py-3 rounded-lg font-bold hover:bg-neutral-200 transition">
               חייגו עכשיו לבירור מחיר
             </a>
           </div>
@@ -69,14 +69,24 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-6">למה לבחור בנו לפירוק רכבים בקרית ביאליק?</h2>
-        <p className="mb-4">אנו מציעים שירות מקצועי באזור התעשייה הישן של קרית ביאליק. אנו קונים רכבים פרטיים, מסחריים ורכבי 4x4 במצבם הנוכחי. השירות כולל גרירה ופינוי מהיר ללא עלות נוספת. אם אתם זקוקים לשירותים נוספים באזור, ניתן לבדוק גם <Link href="/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal" className="text-blue-400">שירותי פירוק נוספים בקרית ביאליק</Link> או <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-400">קניית רכבים לפירוק בחיפה והקריות</Link>.</p>
+        <p className="mb-4">
+          אנו מציעים שירות מקצועי ומקיף באזור התעשייה הישן. אם אתם זקוקים לפתרון פינוי מהיר, אנו כאן עבורכם. 
+          ניתן להתרשם גם משירותי <Link href="/areas/haifa-general/affordable-flatbed-towing-kiryat-bialik-industrial-zone" className="text-blue-400">גרירת רכבים באזור התעשייה קרית ביאליק</Link> או לבדוק אפשרויות ל-<Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="text-blue-400">קניית רכבים לפירוק בכל אזור חיפה והקריות</Link>. 
+          השירות שלנו כולל פינוי מקצועי של רכבים פרטיים, מסחריים ורכבי 4x4. 
+        </p>
         <p className="text-red-400 font-semibold mb-8">חשוב להבהיר: איננו מטפלים באופנועים או בכל סוג של כלי רכב דו-גלגלי.</p>
         
         <div className="mt-12 bg-neutral-900 p-8 rounded-lg">
-          <h3 className="text-xl font-bold mb-4">שאלות נפוצות על פירוק רכבים</h3>
+          <h3 className="text-xl font-bold mb-4">שאלות נפוצות</h3>
           <div className="space-y-4">
-            <p><strong>תוך כמה זמן אתם מפנים את הרכב?</strong> פינוי מהיר ותשלום במזומן במעמד הפינוי.</p>
-            <p><strong>אילו רכבים אתם קונים?</strong> רכבים ישנים, מושבתים, לאחר תאונה או רכבים לברזל (לא כולל אופנועים).</p>
+            <div>
+              <p className="font-bold">באילו אזורים נוספים אתם פעילים?</p>
+              <p>אנו מעניקים שירותי פינוי גם ב-<Link href="/areas/haifa-general/cash-for-junk-cars-scrap-vehicle-removal-kiryat-motzkin" className="text-blue-400">קרית מוצקין</Link> ובכל אזור הצפון.</p>
+            </div>
+            <div>
+              <p className="font-bold">מה כולל השירות?</p>
+              <p>פינוי הרכב באמצעות גרר, תשלום מיידי במזומן והסדרת הניירת הנדרשת מול הרשויות.</p>
+            </div>
           </div>
         </div>
       </section>
