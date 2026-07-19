@@ -1,10 +1,14 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "חילוץ בוץ דחוף ביערות הכרמל חיפה | שירות 24/7",
-  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ רכבים מקצועי ומהיר בחיפה. זמינות 24/7 לרכבים פרטיים ורכבי שטח."
+  title: "חילוץ בוץ דחוף ביערות הכרמל חיפה | הגעה מהירה 24/7",
+  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ רכבים מקצועי בחיפה והסביבה. מחיר הוגן, צוות מנוסה וזמינות 24/7. לחילוץ מיידי התקשרו עכשיו!",
+  alternates: {
+    canonical: "/areas/haifa-general/emergency-mud-recovery-service-carmel-forest-haifa"
+  }
 };
 
 export default function Page() {
@@ -38,7 +42,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">שירות חילוץ בוץ דחוף ביערות הכרמל חיפה</h1>
-          <p className="text-xl mb-8">נתקעתם בבוץ? הצוות שלנו בדרך אליכם.</p>
+          <p className="text-xl mb-8">נתקעתם בבוץ בדרכי העפר? המומחים שלנו בדרך לחלץ אתכם בבטחה.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
@@ -54,17 +58,24 @@ export default function Page() {
       <section className="container mx-auto px-4 py-16">
         <div className="prose prose-invert max-w-3xl mx-auto">
           <h2>חילוץ רכבים תקועים בבוץ ביערות הכרמל</h2>
-          <p>נתקעתם בבוץ בדרכי העפר של יערות הכרמל? אנו מספקים שירות חילוץ מקצועי, מהיר ובטוח לרכבים פרטיים, רכבי שטח ורכבים מסחריים ששקעו בבוץ. הצוות שלנו מכיר היטב את תוואי השטח של אזור חיפה והכרמל ומגיע אליכם במהירות שיא כדי להחזיר אתכם לכביש.</p>
+          <p>נתקעתם בבוץ בדרכי העפר של יערות הכרמל? אנו מספקים שירותי <Link href="/areas/haifa-general/mud-rescue-4x4-carmel-forest-haifa">חילוץ שטח מקצועי</Link>, מהיר ובטוח לרכבים פרטיים ורכבי 4x4 ששקעו בבוץ העמוק. הצוות שלנו מכיר היטב את תוואי השטח של אזור חיפה והכרמל ומגיע אליכם במהירות שיא.</p>
           
           <h3>למה לבחור בנו לחילוץ בשטח?</h3>
           <ul>
             <li><strong>זמינות 24/7:</strong> אנחנו כאן בשבילכם בכל שעה, גם בתנאי מזג אוויר קשים.</li>
-            <li><strong>ציוד מקצועי:</strong> שימוש בכננות וציוד חילוץ מתקדם המותאם לשטח בוצי.</li>
-            <li><strong>מומחיות מקומית:</strong> היכרות מעמיקה עם דרכי הגישה ביערות הכרמל.</li>
+            <li><strong>ציוד מקצועי:</strong> שימוש בכננות וציוד חילוץ מתקדם לשטח.</li>
+            <li><strong>מומחיות מקומית:</strong> הכרה מעמיקה של אזורים כמו <Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa">יערות הכרמל ודניה</Link>.</li>
             <li><strong>שירות אמין:</strong> מחירים הוגנים ושירות אדיב ללא הפתעות.</li>
           </ul>
           
-          <p><em>חשוב לציין: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. איננו מספקים שירותי חילוץ או גרירה לאופנועים.</em></p>
+          <div className="mt-12">
+            <h3>שאלות נפוצות על חילוץ בחיפה</h3>
+            <p><strong>כמה זמן לוקח לכם להגיע ליערות הכרמל?</strong> בזכות זמינות מסביב לשעון באזור חיפה, אנו שואפים להגעה מהירה ככל הניתן בהתאם לתנאי השטח.</p>
+            <p><strong>האם אתם מחלצים רכבים ששקעו עמוק בבוץ?</strong> כן, אנו מצוידים בכלי עבודה המיועדים לחילוץ כלי רכב מרמת שקיעה קלה ועד קשה, למעט אופנועים.</p>
+            <p><strong>האם אתם מציעים גם שירותי גרירה לאחר החילוץ?</strong> בהחלט. אם הרכב זקוק לתיקון, נוכל לסייע בגרירה למוסך הקרוב. למידע נוסף על שירותים אחרים, ניתן לעיין בדף <Link href="/areas/haifa-general/cheap-car-towing-service-neve-shaanan-haifa">גרירת רכבים בחיפה</Link>.</p>
+          </div>
+
+          <p><em>חשוב לציין: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 בלבד. איננו מספקים שירותי חילוץ או גרירה לאופנועים.</em></p>
         </div>
       </section>
     </main>
