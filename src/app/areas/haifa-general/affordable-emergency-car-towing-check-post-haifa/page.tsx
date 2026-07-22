@@ -5,8 +5,8 @@ import Script from "next/script";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב בצ'ק פוסט חיפה 24/7 | מחיר הוגן ושירות מהיר",
-  description: "נתקעתם בצומת צ'ק פוסט בחיפה? גרירת רכב חירום 24/7 במחיר הוגן. צוות מקצועי עם ציוד מתקדם להגעה מהירה לכל קריאה. התקשרו עכשיו לקבלת שירות!",
+  title: "גרירת רכב בצ'ק פוסט חיפה 24/7 | מחיר הוגן, הגעה מהירה",
+  description: "נתקעתם בצומת צ'ק פוסט? גרירת רכב חירום 24/7 במחיר הוגן. שירות מהיר, מקצועי ואמין לכל סוגי הרכבים. התקשרו עכשיו להגעה מיידית!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa",
   },
@@ -20,7 +20,7 @@ export default function Page() {
     "description": "שירותי גרירת רכב חירום מהירים בצומת צ'ק פוסט חיפה. זמינות 24/7 לכל סוגי הרכבים במחירים נוחים.",
     "url": "https://www.yourdomain.com/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa",
     "telephone": `+${BUSINESS_INFO.phone}`,
-    "priceRange": "$",
+    "priceRange": "$$,$",
     "areaServed": {
       "@type": "Place",
       "name": "חיפה והקריות",
@@ -55,7 +55,7 @@ export default function Page() {
             נתקעתם עם הרכב בצומת צ'ק פוסט בחיפה? אנו מציעים שירותי גרירה מקצועיים, מהירים ובמחיר הוגן ללא הפתעות. הצוות שלנו זמין לסייע לכם 24/7.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+            <WhatsAppCTA cityName="חיפה והקריות" />
             <a
               href={`tel:+${BUSINESS_INFO.phone}`}
               className="bg-white text-gray-900 hover:bg-gray-200 transition-colors duration-300 font-semibold py-3 px-8 rounded-full shadow-lg text-lg"
@@ -68,19 +68,19 @@ export default function Page() {
 
       <section className="py-12 md:py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">למה לבחור בנו לגרירה באזור?</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">למה לבחור בנו לגרירה בצ'ק פוסט?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-800 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-3 text-primary-400">מהירות תגובה</h3>
               <p>הצוות שלנו מכיר את עומסי התנועה בצ'ק פוסט ויודע להגיע אליכם בזמן הקצר ביותר.</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-primary-400">שירותים משלימים</h3>
-              <p>מעבר לגרירה, אנו מציעים גם <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="underline">שירותי גרירה זולים בצומת</Link> ותמיכה במקרי תאונות דרכים קשים.</p>
+              <h3 className="text-xl font-semibold mb-3 text-primary-400">מומחיות בתקלות</h3>
+              <p>בין אם מדובר בתקלה מכנית או צורך ב-<Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="underline text-blue-400">שירותי גרירה לאחר תאונה</Link>, אנו כאן לעזור.</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-primary-400">פינוי גרוטאות</h3>
-              <p>אם הרכב הושבת לחלוטין, אנו מבצעים גם <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="underline">קניית רכבים לפירוק בצ'ק פוסט</Link> במחיר הוגן.</p>
+              <h3 className="text-xl font-semibold mb-3 text-primary-400">מגוון פתרונות</h3>
+              <p>אנו מציעים גם <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="underline text-blue-400">גרירת רכבים תקולים</Link> וקניית רכבים לפירוק במחיר הוגן.</p>
             </div>
           </div>
         </div>
@@ -92,15 +92,19 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold text-xl">כמה זמן לוקח לכם להגיע לצומת צ'ק פוסט?</h3>
-              <p>בדרך כלל אנו מגיעים תוך זמן קצר מאוד, בהתאם לעומסי התנועה בצומת והשעה ביום.</p>
+              <p>בזכות מיקום הציוד שלנו באזור חיפה והקריות, אנו מגיעים לרוב תוך דקות ספורות לקריאה באזור הצומת.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם אתם גוררים רכבים מכל סוג?</h3>
-              <p>אנו גוררים רכבים פרטיים, רכבים מסחריים ורכבי שטח. איננו מספקים שירותי גרירה לאופנועים.</p>
+              <h3 className="font-bold text-xl">האם אתם גוררים רכבים פרטיים ומסחריים?</h3>
+              <p>כן, אנו נותנים שירות לרוב סוגי הרכבים הפרטיים והמסחריים הקלים. איננו מטפלים באופנועים.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם השירות שלכם זמין בחגים?</h3>
-              <p>כן, אנו עובדים 24/7 ללא הפסקה, כולל חגים, סופי שבוע ולילות.</p>
+              <h3 className="font-bold text-xl">איך מתבצע התשלום על הגרירה?</h3>
+              <p>התשלום נקבע מראש בצורה שקופה. אנו מקפידים על מחירים נוחים ללא "הפתעות" של הרגע האחרון.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">מה לעשות אם נתקעתי בדרך לעבודה?</h3>
+              <p>ראשית, ודאו שאתם נמצאים בנקודה בטוחה, הדליקו אורות מצוקה והתקשרו אלינו. במידת הצורך, נבצע <Link href="/areas/haifa-general/emergency-roadside-assistance-flat-tire-route-22-kiryat-bialik" className="underline text-blue-600">חילוץ דרך מהיר</Link> כדי להחזיר אתכם לכביש.</p>
             </div>
           </div>
         </div>
