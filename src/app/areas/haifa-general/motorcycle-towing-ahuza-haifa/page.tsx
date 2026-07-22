@@ -23,7 +23,7 @@ export default function Page() {
   };
 
   return (
-    <main>
+    <main className="bg-neutral-950 text-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -31,17 +31,13 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6">
-            גרר לאופנוע כבד באחוזה חיפה - שירותי גרירה מקצועיים לרכבים
-          </h1>
-          <p className="text-lg md:text-xl mb-8 opacity-90">
-            חשוב לדעת: אנו מתמחים בגרירת רכבים פרטיים, מסחריים ו-4x4. איננו מספקים שירותי גרירה לאופנועים.
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר לאופנוע כבד באחוזה חיפה - שירותי גרירה מקצועיים לרכבים</h1>
+          <p className="text-xl mb-8">אנו מתמחים בגרירת רכבים, רכבי שטח ומסחריות. שימו לב: איננו מספקים שירותי גרירה לאופנועים.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition"
+              className="bg-white text-neutral-900 px-8 py-3 rounded-lg font-bold hover:bg-neutral-200 transition"
             >
               חיוג מהיר למוקד
             </a>
@@ -49,15 +45,15 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-4">שירותי גרירה וחילוץ באחוזה</h2>
-        <p className="mb-4">
-          אנו מבינים את החשיבות של מענה מהיר כאשר הרכב נתקע. למרות שאיננו מטפלים באופנועים, הצוות שלנו ערוך לתת מענה מקצועי לכל סוגי הרכבים באזור אחוזה והסביבה.
+      <section className="py-16 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6">שירותי גרירה באחוזה - מידע חשוב</h2>
+        <p className="text-lg leading-relaxed mb-4">
+          אנו מבינים את הצורך בשירות מהיר באזור אחוזה והסביבה. בעוד שאיננו מטפלים באופנועים, אנו ערוכים לתת מענה מיידי לכל סוגי הרכבים האחרים.
         </p>
-        <ul className="list-disc pr-6 space-y-2">
+        <ul className="list-disc list-inside space-y-2 text-neutral-300">
           <li>זמינות 24/7 לכל קריאה</li>
           <li>ציוד גרירה מתקדם לרכבים פרטיים ומסחריים</li>
-          <li>מחירים הוגנים ושקיפות מלאה</li>
+          <li>מחירים הוגנים ושקופים</li>
           <li>צוות מיומן ומקצועי</li>
         </ul>
       </section>
