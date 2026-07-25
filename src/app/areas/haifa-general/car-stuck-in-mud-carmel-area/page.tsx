@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "חילוץ רכב תקוע בבוץ בכרמל | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם בבוץ באזור הכרמל? אנחנו כאן לחילוץ מהיר ומקצועי. צוות מנוסה עם ציוד שטח מתקדם. פועלים 24/7 לחילוץ רכבים פרטיים ו-4x4. התקשרו עכשיו!",
+  alternates: {
+    canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-area",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -38,7 +48,9 @@ export default function Page() {
 
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-6">זקוקים לחילוץ רכב שנתקע בבוץ באזור הכרמל?</h2>
-        <p className="mb-4">אם הרכב שלכם שקע בבוץ באזורי השטח של הכרמל, אל תנסו להמשיך ללחוץ על הגז – זה עלול להחמיר את המצב. אנו מתמחים בחילוצי שטח, רכבי 4x4 ורכבים פרטיים שנתקעו בדרכי עפר או בבוץ עמוק באזור חיפה והכרמל.</p>
+        <p className="mb-4">
+          אם הרכב שלכם שקע בבוץ באזורי השטח של הכרמל, אל תנסו להמשיך ללחוץ על הגז – זה עלול להחמיר את המצב. אנו מתמחים בחילוצי שטח, רכבי 4x4 ורכבים פרטיים שנתקעו בדרכי עפר או בבוץ עמוק באזור חיפה והכרמל. לעיתים קרובות אנו מסייעים גם ב- <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-400 underline">4x4 mud recovery carmel forest haifa</Link> עבור מטיילים שנתקעו בדרכים צדדיות.
+        </p>
         
         <h3 className="text-2xl font-semibold mt-8 mb-4">למה לבחור בנו?</h3>
         <ul className="list-disc list-inside space-y-2 mb-6">
@@ -49,6 +61,20 @@ export default function Page() {
         </ul>
 
         <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800">
+          <h3 className="text-xl font-bold mb-4">שאלות נפוצות (FAQ)</h3>
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">תוך כמה זמן תגיעו לחלץ אותי בכרמל?</p>
+              <p className="text-neutral-400">אנו שואפים להגיע לכל נקודה בכרמל תוך זמן קצר ככל האפשר, בהתאם לעומסי התנועה ותנאי השטח.</p>
+            </div>
+            <div>
+              <p className="font-bold">האם אתם מחלצים גם רכבים שאינם 4x4?</p>
+              <p className="text-neutral-400">כן, אנו מחלצים רכבים פרטיים ומסחריים שנתקעו בדרכי עפר בוציות. למידע נוסף על סוגי חילוץ ספציפיים, ראו <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-400 underline">car rescue from mud carmel area</Link>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 p-6 rounded-xl border border-neutral-800">
           <p className="text-sm text-neutral-400">
             <strong>הערה חשובה:</strong> אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. איננו מספקים שירותי חילוץ או גרירה לאופנועים.
           </p>

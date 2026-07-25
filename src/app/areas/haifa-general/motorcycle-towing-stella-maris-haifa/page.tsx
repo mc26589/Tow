@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "גרירת רכב בסטלה מאריס חיפה | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם עם הרכב באזור סטלה מאריס בחיפה? אנו מספקים שירותי גרירה מקצועיים לרכבים פרטיים ומסחריים. הגעה מהירה, שירות 24/7 ומחיר הוגן. התקשרו עכשיו לחילוץ!",
+  description: "נתקעתם עם הרכב בסטלה מאריס? אנו מספקים שירותי גרירה וחילוץ מקצועיים בחיפה 24/7. הגעה מהירה, מחיר הוגן ושירות לכל סוגי הרכבים. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/motorcycle-towing-stella-maris-haifa",
   },
@@ -19,7 +19,7 @@ export default function Page() {
           <h1 className="text-3xl md:text-5xl font-bold mb-6">
             שירותי גרירה וחילוץ רכב בסטלה מאריס חיפה
           </h1>
-          <p className="text-xl mb-8">נתקעתם בסטלה מאריס? אנו כאן עם מענה מהיר לרכב תקוע, 24/7</p>
+          <p className="text-xl mb-8">נתקעתם באזור סטלה מאריס? צוות החילוץ שלנו בחיפה כאן בשבילכם, 24/7</p>
         </div>
       </section>
 
@@ -27,10 +27,10 @@ export default function Page() {
         <div className="max-w-3xl mx-auto bg-neutral-900 p-8 rounded-lg border border-neutral-800">
           <h2 className="text-2xl font-semibold mb-4">שירות גרירה מקצועי בסטלה מאריס והסביבה</h2>
           <p className="mb-6 text-neutral-300">
-            העלייה התלולה לסטלה מאריס והדרכים המתפתלות בכרמל מהוות אתגר לרכבים רבים. אנו מתמחים בחילוץ וגרירת רכבים פרטיים, מסחריים ורכבי 4x4. אם נתקעתם בדרכים, חשוב לפנות לבעל מקצוע מנוסה שמכיר את האזור.
+            הנסיעה בדרכים המתפתלות של אזור סטלה מאריס והכרמל עלולה להיות מאתגרת. אנו מתמחים בחילוץ וגרירת רכבים פרטיים, מסחריים ורכבי 4x4. אם נתקעתם באזור, חשוב לפנות לבעל מקצוע מנוסה שמכיר היטב את נתיבי חיפה.
           </p>
           <p className="mb-6 text-neutral-300">
-            צריכים שירות נוסף באזור? אנו מציעים גם <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-400 hover:underline">חילוץ רכב תקוע בבוץ בכרמל</Link> או <Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa" className="text-blue-400 hover:underline">שירותי גרירה לרכב חשמלי באחוזה</Link>.
+            זקוקים לחילוץ מורכב? אנו מציעים שירותי <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-400 hover:underline">חילוץ רכב תקוע בבוץ בכרמל</Link> או <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-400 hover:underline">חילוץ שטח 4x4 ביערות הכרמל</Link>. במידה ומדובר בתקלה ברכב חשמלי, ניתן להזמין <Link href="/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing" className="text-blue-400 hover:underline">גרירת רכב במחיר הוגן באזור אחוזה</Link>.
           </p>
           
           <div className="flex flex-col gap-4 mt-8">
@@ -50,15 +50,15 @@ export default function Page() {
         <div className="space-y-6 text-neutral-300">
           <div>
             <h3 className="font-bold text-white">תוך כמה זמן תגיעו לחילוץ בסטלה מאריס?</h3>
-            <p>אנו משתדלים להגיע לכל נקודה בחיפה תוך זמן קצר ככל הניתן, בהתאם לעומסי התנועה באזור סטלה מאריס והכרמל.</p>
+            <p>אנו משתדלים להגיע לכל נקודה בסטלה מאריס ובחיפה תוך זמן קצר, בהתאם לעומסי התנועה בצירים המובילים לכרמל.</p>
           </div>
           <div>
-            <h3 className="font-bold text-white">האם אתם נותנים שירות גם באזורים נוספים בחיפה?</h3>
-            <p>כן, אנו פעילים בכל אזורי חיפה והקריות. אם אתם זקוקים לשירות באזור הצ'ק פוסט, תוכלו להיעזר בשירותי <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-400">גרירה במחיר הוגן בצומת הצ'ק פוסט</Link>.</p>
+            <h3 className="font-bold text-white">אילו סוגי רכבים אתם גוררים?</h3>
+            <p>אנו נותנים שירות לכל סוגי הרכבים הפרטיים והמסחריים הקלים. למידע על שירותים נוספים באזור הצ'ק פוסט, תוכלו לבדוק את שירותי <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-400">גרירה לאחר תאונה בצומת הצ'ק פוסט</Link>.</p>
           </div>
           <div>
-            <h3 className="font-bold text-white">האם אתם גוררים רכבים שיצאו מכלל שימוש?</h3>
-            <p>בהחלט. אנו מספקים מענה לרכבים תקועים וגם מבצעים <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="text-blue-400">קניית רכבים לפירוק בחיפה והקריות</Link>.</p>
+            <h3 className="font-bold text-white">מה עושים אם הרכב לא ניתן לתיקון?</h3>
+            <p>במקרים בהם הרכב הוגדר כאובדן להלכה או שאינו ראוי לנסיעה, אנו מספקים שירותי <Link href="/areas/haifa-general/buying-cars-for-scrap-ahoza-haifa" className="text-blue-400">קניית רכבים לפירוק באזור אחוזה</Link> והסביבה.</p>
           </div>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default function Page() {
             "@type": "AutoTowing",
             "name": "שירותי גרירה וחילוץ חיפה והקריות",
             "areaServed": "Haifa",
-            "priceRange": "$",
+            "priceRange": "$$,$",
             "serviceType": "Towing and Roadside Assistance"
           })
         }}

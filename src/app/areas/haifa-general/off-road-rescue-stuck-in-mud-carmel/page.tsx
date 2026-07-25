@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב מהבוץ בכרמל | 24/7 הגעה מהירה | מחיר הוגן",
-  description: "נתקעתם בבוץ בכרמל? צוות חילוץ שטח מקצועי בדרך אליכם! הגעה מהירה, מחיר הוגן ושירות בטוח לכל סוגי הרכבים. התקשרו עכשיו לחילוץ מיידי!",
+  title: "חילוץ רכב מהבוץ בכרמל | חילוץ שטח 24/7 | הגעה מהירה",
+  description: "נתקעתם בבוץ בכרמל? צוות חילוץ שטח מקצועי בדרך אליכם! שירות 24/7 לרכבים פרטיים ו-4x4 במחיר הוגן. הגעה מהירה לכל אזור הכרמל. התקשרו עכשיו!",
   alternates: { canonical: "/areas/haifa-general/off-road-rescue-stuck-in-mud-carmel" },
 };
 
@@ -31,7 +31,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ שטח לרכב תקוע בבוץ בכרמל</h1>
-          <p className="text-xl mb-8">נתקעתם בבוץ? הצוות שלנו בדרך אליכם. שירות מקצועי, מהיר ובטוח.</p>
+          <p className="text-xl mb-8">נתקעתם בשטח? צוות חילוץ מיומן עם ציוד ייעודי בדרך אליכם. פתרון מהיר, מקצועי ובטוח לכל רכב ששקע.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
@@ -45,22 +45,26 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירותי חילוץ שטח מקצועיים</h2>
-        <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, רכבי 4x4 ורכבים מסחריים ששקעו בבוץ באזור הכרמל. למידע נוסף על חילוץ ספציפי ניתן לבדוק גם <Link href="/areas/haifa-general/car-extraction-from-mud-carmel-reserve-haifa">חילוץ רכב משמורת הכרמל</Link> או לבצע <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7">חילוץ שטח בנשר 24/7</Link>. חשוב להדגיש: אנו לא נותנים שירות לאופנועים.</p>
-        <p>הצוות שלנו מגיע מצויד בכל הציוד הנדרש כדי להוציא את הרכב שלכם מהבוץ ללא נזקים מיותרים. אנו מציעים מחירים הוגנים ושירות ללא פשרות.</p>
+        <h2 className="text-3xl font-bold mb-6">שירותי חילוץ שטח מקצועיים בכרמל</h2>
+        <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, ג'יפים ורכבי 4x4 ששקעו בבוץ בדרכי עפר באזור הכרמל. בין אם מדובר ב-<Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-600 font-semibold">חילוץ 4x4 ביער הכרמל</Link> או בחיפוש אחר <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-600 font-semibold">חילוץ רכב מהבוץ בכרמל</Link>, אנחנו הכתובת שלכם. הניסיון שלנו מאפשר לנו לבצע חילוץ בטוח ללא נזקים לשלדת הרכב.</p>
+        <p>צוות החילוץ שלנו ערוך לכל סוגי השטח ומגיע עם ציוד חילוץ מתקדם. שימו לב: אנו לא נותנים שירות לאופנועים.</p>
       </section>
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על חילוץ בבוץ</h2>
+          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על חילוץ בבוץ בכרמל</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-xl">כמה זמן לוקח לכם להגיע לחילוץ בכרמל?</h3>
-              <p>אנו משתדלים להגיע לכל נקודה באזור הכרמל תוך זמן קצר מרגע הקריאה, בהתאם לתנאי הדרך ועומסי התנועה.</p>
+              <h3 className="font-bold text-xl">תוך כמה זמן צוות החילוץ מגיע לכרמל?</h3>
+              <p>אנו פרוסים בחיפה והסביבה ומשתדלים להגיע לכל נקודה בכרמל תוך זמן קצר מרגע הקריאה, בהתאם לתנאי השטח.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם אתם מחלצים רכבים בכל סוגי הבוץ?</h3>
-              <p>כן, אנו ערוכים לחילוצי שטח מורכבים. אם נתקעתם בדרכי עפר או בשמורות הטבע, אל תהססו ליצור קשר.</p>
+              <h3 className="font-bold text-xl">האם המחיר לחילוץ בבוץ משתנה?</h3>
+              <p>אנו מקפידים על מחיר הוגן ושקוף. עלות החילוץ נקבעת לפי מורכבות השקיעה, הציוד הנדרש ומיקום הרכב בשטח.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">באילו אזורים בכרמל אתם מספקים חילוץ שטח?</h3>
+              <p>אנו מכסים את כל שמורת הכרמל, יערות הכרמל, דרכי העפר ליד אזורי מגורים וצירים מורכבים. לצורך שירותים נוספים באזור, ניתן לבדוק גם <Link href="/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing" className="text-blue-600 font-semibold">שירותי גרירה באחוזה</Link>.</p>
             </div>
           </div>
         </div>
