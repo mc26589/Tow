@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "קניית רכבים לפירוק באזור התעשייה קרית ביאליק | תשלום מזומן 24/7",
-  description: "מוכרים רכב ישן? קונים רכבים לפירוק באזור התעשייה הישן של קרית ביאליק. תשלום הוגן במזומן, פינוי מהיר וגרירה ללא עלות. התקשרו עכשיו להצעה משתלמת!",
+  title: "קניית רכבים לפירוק באזור התעשייה קרית ביאליק | תשלום מזומן במקום",
+  description: "רוצים למכור רכב ישן? קונים רכבים לפירוק באזור התעשייה קרית ביאליק. תשלום הוגן במזומן, פינוי מהיר וגרירה חינם. התקשרו עכשיו להצעה משתלמת!",
   alternates: {
     canonical: "/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik"
   }
@@ -17,17 +17,6 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי גרירה ופירוק רכבים חיפה והקריות",
     "areaServed": "קרית ביאליק",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "32.8285",
-      "longitude": "35.0715"
-    },
     "priceRange": "$",
     "serviceType": "קניית רכבים לפירוק וברזל"
   };
@@ -56,12 +45,12 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6">קניית רכבים לפירוק באזור התעשייה הישן של קרית ביאליק</h1>
-          <p className="text-lg md:text-xl mb-8">פינוי מהיר, תשלום הוגן במקום וגרירה ללא עלות. אנו מומחים בפינוי רכבים ישנים ומושבתים.</p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">קניית רכבים לפירוק באזור התעשייה קרית ביאליק</h1>
+          <p className="text-lg md:text-xl mb-8">פינוי מהיר, תשלום הוגן במזומן וגרירה ללא עלות. המומחים לפינוי רכבים ישנים ומושבתים בקריות.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="קרית ביאליק" />
             <a href={`tel:${BUSINESS_INFO.phone}`} className="bg-white text-neutral-900 px-8 py-3 rounded-lg font-bold hover:bg-neutral-200 transition">
-              חייגו עכשיו לבירור מחיר
+              חייגו עכשיו להצעת מחיר
             </a>
           </div>
         </div>
@@ -70,22 +59,21 @@ export default function Page() {
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-6">למה לבחור בנו לפירוק רכבים בקרית ביאליק?</h2>
         <p className="mb-4">
-          אנו מציעים שירות מקצועי ומקיף באזור התעשייה הישן. אם אתם זקוקים לפתרון פינוי מהיר, אנו כאן עבורכם. 
-          ניתן להתרשם גם משירותי <Link href="/areas/haifa-general/affordable-flatbed-towing-kiryat-bialik-industrial-zone" className="text-blue-400">גרירת רכבים באזור התעשייה קרית ביאליק</Link> או לבדוק אפשרויות ל-<Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="text-blue-400">קניית רכבים לפירוק בכל אזור חיפה והקריות</Link>.
-          אנו גם מספקים פתרונות משלימים כגון <Link href="/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal" className="text-blue-400">פינוי מיידי לרכבים לפירוק בקרית ביאליק</Link>.
+          אנו מציעים שירות מקצועי ומקיף באזור התעשייה הישן. אם הרכב שלכם תקוע או שאתם מחפשים <Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="text-blue-400">פירוק רכבים בקרית מוצקין</Link> או ביאליק, אנו הכתובת. 
+          ניתן להתרשם גם משירותי <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-400">גרירה באזור צומת צ'ק פוסט</Link> או לבדוק שירותי <Link href="/areas/haifa-general/scrap-car-removal-kiryat-haim-cash" className="text-blue-400">פירוק רכבים בקרית חיים</Link> במזומן.
         </p>
-        <p className="text-red-400 font-semibold mb-8">חשוב להבהיר: איננו מטפלים באופנועים או בכל סוג של כלי רכב דו-גלגלי.</p>
+        <p className="text-red-400 font-semibold mb-8">חשוב להבהיר: אנו מתמחים ברכבים ורכבים מסחריים בלבד ואיננו מטפלים באופנועים.</p>
         
         <div className="mt-12 bg-neutral-900 p-8 rounded-lg">
-          <h3 className="text-xl font-bold mb-4">שאלות נפוצות</h3>
+          <h3 className="text-xl font-bold mb-4">שאלות נפוצות על פירוק רכבים</h3>
           <div className="space-y-4">
             <div>
-              <p className="font-bold">באילו אזורים נוספים אתם פעילים?</p>
-              <p>אנו מעניקים שירותי פינוי גם ב-<Link href="/areas/haifa-general/cash-for-junk-cars-scrap-vehicle-removal-kiryat-motzkin" className="text-blue-400">קרית מוצקין</Link>, <Link href="/areas/haifa-general/buying-old-cars-parts-kiryat-haim-krayot" className="text-blue-400">קרית חיים</Link> ובכל אזור הצפון.</p>
+              <p className="font-bold">האם אתם מגיעים לכל האזור?</p>
+              <p>כן, אנו פעילים בפריסה מלאה באזור הקריות, כולל שירותי גרירה מקצועיים כמו <Link href="/areas/haifa-general/towing-service-road-22-krayot-bypass" className="text-blue-400">גרירה בכביש 22 עוקף קריות</Link>.</p>
             </div>
             <div>
-              <p className="font-bold">מה כולל השירות?</p>
-              <p>פינוי הרכב באמצעות גרר, תשלום מיידי במזומן והסדרת הניירת הנדרשת מול הרשויות.</p>
+              <p className="font-bold">מהו תהליך העבודה?</p>
+              <p>התהליך פשוט: מתקשרים, מתאמים הגעה, מקבלים תשלום במזומן במקום ואנו דואגים לפינוי הרכב בגרר, כולל טיפול בכל הניירת הנדרשת.</p>
             </div>
           </div>
         </div>

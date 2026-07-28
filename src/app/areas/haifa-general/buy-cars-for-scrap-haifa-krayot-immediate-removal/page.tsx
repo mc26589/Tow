@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "קונה רכבים לפירוק בחיפה והקריות | פינוי מהיר ומזומן - שירות 24/7",
+  description: "רוצים למכור רכב לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי, הצעת מחיר הוגנת במזומן ושירות מהיר לכל סוגי הרכבים. התקשרו עכשיו להצעת מחיר!",
+  alternates: {
+    canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal"
+  }
+};
 
 export default function Page() {
   const jsonLd = {
@@ -48,15 +58,33 @@ export default function Page() {
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי הרכב שלכם?</h2>
-          <ul className="space-y-4 text-lg">
+          <ul className="space-y-4 text-lg mb-8">
             <li>✓ פינוי מיידי מהשטח בחיפה ובכל אזור הקריות.</li>
             <li>✓ הצעת מחיר הוגנת ומשתלמת עבור הרכב שלכם.</li>
-            <li>✓ שירות מקצועי לרכבים פרטיים, מסחריים ו-4x4.</li>
-            <li>✓ טיפול מהיר בכל הבירוקרטיה הנדרשת.</li>
+            <li>✓ שירות מומחה עבור <Link href="/areas/haifa-general/scrap-car-removal-kiryat-haim-cash" className="underline">scrap car removal kiryat haim cash</Link>.</li>
+            <li>✓ טיפול מקצועי ב-<Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="underline">scrap car removal for parts kiryat motzkin</Link>.</li>
           </ul>
-          <p className="mt-8 text-sm text-gray-400">
-            *הערה: השירות אינו כולל פינוי או קנייה של אופנועים או כלי רכב דו-גלגליים.
+          <p className="text-sm text-gray-400">
+            *הערה: השירות אינו כולל פינוי או קנייה של אופנועים.
           </p>
+        </div>
+      </section>
+
+      <section className="py-16 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על פינוי רכבים לפירוק</h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="font-bold text-xl">האם אתם קונים כל סוג של רכב?</h3>
+            <p>אנו קונים רכבים פרטיים, רכבים מסחריים ורכבי 4x4. איננו מטפלים באופנועים.</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-xl">תוך כמה זמן תגיעו לפנות את הרכב?</h3>
+            <p>אנו מציעים שירות מהיר בחיפה והקריות, לרוב בהגעה באותו היום או תוך זמן קצר בתיאום מראש.</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-xl">איך נקבע המחיר לפירוק?</h3>
+            <p>המחיר נקבע בהתאם לדגם הרכב, מצבו המכני והערך של חלקי החילוף הניתנים למחזור.</p>
+          </div>
         </div>
       </section>
     </main>
