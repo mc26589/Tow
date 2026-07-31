@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "גרר רכבים תקועים בכביש 22 קריות | שירות 24/7",
-  description: "זקוקים לגרר בכביש 22? שירות גרירה מקצועי ומהיר לרכבים פרטיים ומסחריים באזור הקריות. זמינות מלאה 24/7."
+  description: "זקוקים לגרר בכביש 22 בקריות? שירות גרירה מקצועי, מהיר ובמחיר הוגן. זמינים 24/7 לכל סוגי הרכבים.",
 };
 
 export default function Page() {
@@ -30,27 +30,27 @@ export default function Page() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר רכבים תקועים בכביש 22 קריות</h1>
           <p className="text-xl mb-8 max-w-2xl">
             נתקעתם עם הרכב בכביש 22? אנו כאן כדי לסייע. אנו מתמחים בחילוץ וגרירת רכבים פרטיים, מסחריים ורכבי 4x4. 
-            חשוב לציין: איננו מספקים שירותי גרירה לאופנועים. אנו מציעים מחירים הוגנים ושירות מהיר לכל תושבי האזור.
+            חשוב לציין: איננו מספקים שירותי גרירה לאופנועים. אנו מתחייבים למחירים הוגנים ושירות מהיר לכל תושבי האזור.
           </p>
           <div className="flex flex-wrap gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
             >
               התקשרו עכשיו להצעת מחיר
             </a>
           </div>
         </div>
       </section>
-
+      
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בכביש 22?</h2>
         <ul className="space-y-4 text-lg">
-          <li>✓ זמינות מלאה 24/7 לכל קריאות החירום בכביש 22.</li>
-          <li>✓ ציוד גרירה מתקדם המותאם לרכבים פרטיים ומסחריים.</li>
-          <li>✓ הגעה מהירה לכל נקודה לאורך ציר עוקף קריות.</li>
-          <li>✓ שקיפות מלאה ומחירים הוגנים ללא הפתעות.</li>
+          <li>✓ זמינות מלאה 24/7 לכל אורך כביש עוקף קריות.</li>
+          <li>✓ ציוד גרירה חדיש המתאים לרכבים פרטיים ומסחריים.</li>
+          <li>✓ הגעה מהירה לנקודת התקיעה.</li>
+          <li>✓ שירות אדיב ומקצועי במחירים הוגנים.</li>
         </ul>
       </section>
     </main>
