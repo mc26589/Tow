@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב בקרית מוצקין 24/7 | הגעה מהירה ומחיר הוגן",
-  description: "נתקעתם בקרית מוצקין? גרר מקצועי זמין 24/7 לכל סוגי הרכבים. הגעה תוך 30 דקות, מחיר הוגן ושירות אמין ללא הפתעות. התקשרו עכשיו לפתרון מיידי!",
+  title: "גרירת רכב בקרית מוצקין 24/7 | הגעה תוך 30 דקות - מחיר הוגן",
+  description: "נתקעתם בקרית מוצקין? גרר מקצועי זמין 24/7 לכל סוגי הרכבים. הגעה מהירה, שירות אמין ומחיר ללא הפתעות. לחיצה אחת להזמנת גרר - התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7",
   },
@@ -43,7 +43,7 @@ export default function Page() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירת רכב בקרית מוצקין 24/7 - הגעה מהירה!</h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            נתקעתם עם הרכב? צוות המומחים שלנו זמין 24/7 לכל תקלה באזור הקריות. אנו מציעים גרירה מקצועית, אמינה ובמחיר הוגן לכל סוגי הרכבים הפרטיים והמסחריים הקלים. זקוקים לסיוע נוסף באזור? בדקו גם <Link href="/areas/haifa-general/electric-vehicle-accident-towing-route-22-krayot-bypass" className="underline font-semibold">גרירת רכב בכביש 22 עוקף קריות</Link>. שימו לב: השירות אינו כולל גרירת אופנועים.
+            נתקעתם עם הרכב בקרית מוצקין? צוות המומחים שלנו זמין 24/7 לכל תקלה. אנו מציעים גרירה מקצועית, אמינה ובמחיר הוגן לכל סוגי הרכבים הפרטיים והמסחריים הקלים. זקוקים לסיוע בדרכים מהירות? בדקו גם <Link href="/areas/haifa-general/fast-towing-road-22-krayot" className="underline font-semibold">גרירת רכב מהירה בכביש 22 עוקף קריות</Link>. שימו לב: השירות אינו כולל גרירת אופנועים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="קרית מוצקין" />
@@ -63,15 +63,15 @@ export default function Page() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 border border-gray-700 rounded-xl">
               <h3 className="text-xl font-semibold mb-3">זמינות 24/7</h3>
-              <p>אנו פועלים מסביב לשעון, גם בסופי שבוע ובחגים, כדי להבטיח מענה מהיר בכל נקודה בקרית מוצקין.</p>
+              <p>אנו פועלים מסביב לשעון, גם בסופי שבוע ובחגים, כדי להבטיח מענה מהיר בכל נקודה בקרית מוצקין ובסביבתה.</p>
             </div>
             <div className="p-6 border border-gray-700 rounded-xl">
               <h3 className="text-xl font-semibold mb-3">מחירים הוגנים ושקופים</h3>
-              <p>ללא "הפתעות" בדרך. הצעת המחיר ניתנת מראש בצורה הוגנת ומקצועית לכל סוגי התקלות.</p>
+              <p>ללא "הפתעות" בדרך. הצעת המחיר ניתנת מראש בצורה הוגנת ומקצועית לכל סוגי התקלות בדרכים.</p>
             </div>
             <div className="p-6 border border-gray-700 rounded-xl">
               <h3 className="text-xl font-semibold mb-3">פריסה אזורית רחבה</h3>
-              <p>מספקים מענה גם בערים סמוכות. זקוקים לשירות בערים השכנות? ראו <Link href="/areas/haifa-general/affordable-24-7-towing-kiryat-bialik-flat-tire" className="text-blue-400">גרירה בקרית ביאליק</Link> או <Link href="/areas/haifa-general/cheap-towing-check-post-kiryat-ata" className="text-blue-400">שירותי גרירה בקרית אתא</Link>.</p>
+              <p>מספקים מענה מקצועי גם בערים סמוכות. אם נתקעתם באזור, אנו מציעים גם <Link href="/areas/haifa-general/cheap-private-car-towing-24-7-kiryat-yam" className="text-blue-400">שירותי גרירה זולים בקרית ים</Link>.</p>
             </div>
           </div>
         </div>
@@ -83,15 +83,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold text-lg">תוך כמה זמן תגיעו אלי בקרית מוצקין?</h3>
-              <p className="text-gray-700">הצוות שלנו פועל בפריסה אזורית ומגיע לרוב תוך 30-45 דקות מרגע הקריאה, בהתאם לעומסי התנועה בצירים המרכזיים בקריות.</p>
+              <p className="text-gray-700">הצוות שלנו פרוס בנקודות אסטרטגיות ומגיע לרוב תוך 30-45 דקות מרגע הקריאה, בכפוף לעומסי התנועה באזור.</p>
             </div>
             <div>
               <h3 className="font-bold text-lg">מהו טווח המחירים לגרירה?</h3>
-              <p className="text-gray-700">המחיר משתנה לפי מרחק הגרירה, שעת הקריאה וסוג הרכב. אנו מתחייבים למחירים הוגנים ותחרותיים בשוק הגרירה המקומי.</p>
+              <p className="text-gray-700">מחיר הגרירה נקבע לפי מרחק היעד, שעת הקריאה וסוג הרכב. אנו מתחייבים למחיר הוגן שקוף מראש ללא תוספות נסתרות.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">האם אתם גוררים רכבים מהצומת הקרובה?</h3>
-              <p className="text-gray-700">בהחלט. אנו נותנים מענה מהיר גם בנקודות תנועה עמוסות כמו <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-600 hover:underline">גרירת רכב בצומת צ'ק פוסט</Link> ובכל אזור מפרץ חיפה והקריות.</p>
+              <h3 className="font-bold text-lg">נתקעתי בצומת עמוס, מה עושים?</h3>
+              <p className="text-gray-700">אין בעיה, אנו מתמחים בחילוץ מהיר מאזורים עמוסים וצמתים. לחלופין, אם מדובר בצומת מרכזי בחיפה, זמין עבורכם גם <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="text-blue-600 hover:underline">שירות חילוץ מרכב שנפל לתעלה בצומת צ'ק פוסט</Link>.</p>
             </div>
           </div>
         </div>

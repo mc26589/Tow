@@ -5,7 +5,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "גרירה בכביש 22 חיפה-קריות: הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעת בכביש 22? שירותי גרירה וחילוץ מהירים לאחר תאונה בין חיפה לקריית אתא. הגעה תוך 30 דקות, שירות 24/7 ומחיר הוגן לכל סוגי הרכבים. התקשרו עכשיו!",
+  description: "נתקעת בכביש 22? שירותי גרירה וחילוץ מקצועיים לרכב לאחר תאונה בין חיפה לקריית אתא. הגעה מהירה תוך 30 דקות, זמינות 24/7 ומחיר הוגן. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata"
   }
@@ -32,10 +32,10 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-6">שירות גרירה לאחר תאונה בכביש 22 חיפה ליד מחלף קריית אתא</h1>
+          <h1 className="text-4xl font-bold mb-6">שירות גרירה לאחר תאונה בכביש 22 (עוקף קריות) - מענה מיידי</h1>
           <p className="text-xl mb-8">
-            נתקעתם בכביש 22? אנו כאן עבורכם. אנו מתמחים בחילוץ וגרירת רכבים פרטיים, מסחריים ורכבי 4x4 לאחר תאונות באזור מחלף קריית אתא. 
-            זקוקים למידע נוסף? ניתן לבדוק גם את שירות ה-<Link href="/areas/haifa-general/towing-service-road-22-krayot-bypass" className="underline font-semibold">towing service road 22 krayot bypass</Link> המקיף שלנו. 
+            נתקעתם בכביש 22? אנו כאן עבורכם. אנו מתמחים בחילוץ וגרירת רכבים פרטיים ומסחריים לאחר תאונות באזור מחלף קריית אתא והסביבה. 
+            זקוקים לפתרון מקצועי? ראו גם את שירות ה-<Link href="/areas/haifa-general/fast-towing-road-22-krayot" className="underline font-semibold">fast towing road 22 krayot</Link> הזמין לכם בכל עת. 
             שימו לב: איננו מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex gap-4">
@@ -55,11 +55,11 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ בכביש 22?</h2>
           <ul className="space-y-4 text-lg mb-8">
             <li>✓ הגעה מהירה לכל נקודה לאורך כביש עוקף קריות.</li>
-            <li>✓ צוות מיומן בטיפול ברכבים לאחר תאונה.</li>
-            <li>✓ מחירים הוגנים ושקיפות מלאה.</li>
-            <li>✓ זמינות 24/7 לכל קריאה.</li>
+            <li>✓ צוות מיומן בטיפול ברכבים לאחר תאונה ופינוי מהיר מהכביש.</li>
+            <li>✓ מחירים הוגנים ושקיפות מלאה - ללא הפתעות.</li>
+            <li>✓ זמינות 24/7 לכל קריאה, כולל שבתות וחגים.</li>
           </ul>
-          <p className="text-lg">זקוקים לעזרה נוספת? אנו מספקים גם <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-400">שירותי גרירה מקצועיים באזור צומת צ'ק פוסט</Link> לכל דורש.</p>
+          <p className="text-lg">זקוקים לשירותים נוספים? אנו מספקים גם <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-400">שירותי גרירה בצומת צ'ק פוסט</Link> ובסביבת הקריות, לצד פתרונות של <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-400">emergency light truck towing route 22 krayot bypass</Link>.</p>
         </div>
       </section>
 
@@ -73,11 +73,11 @@ export default function Page() {
             </div>
             <div>
               <h4 className="font-bold">האם אתם גוררים רכבים מהצומת הקרובה?</h4>
-              <p>כן, אנו נותנים מענה מקצועי גם ב-<Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-600">אזור צומת צ'ק פוסט</Link> ובכל הסביבה, עם זמינות גבוהה לכל סוגי הרכבים.</p>
+              <p>כן, אנו נותנים מענה מקצועי גם ב-<Link href="/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7" className="text-blue-600">אזור קריית מוצקין</Link> ובכל סביבת כביש 22, עם זמינות גבוהה לכל סוגי הרכבים.</p>
             </div>
             <div>
               <h4 className="font-bold">מה טווח המחירים לגרירה בכביש 22?</h4>
-              <p>מחיר הגרירה נקבע לפי מרחק וסוג הרכב. אנו מתחייבים למחיר הוגן ותחרותי בשוק הגרירה בחיפה והקריות.</p>
+              <p>מחיר הגרירה נקבע לפי מרחק וסוג הרכב. אנו מתחייבים למחיר הוגן ותחרותי בשוק הגרירה בחיפה והקריות, ומספקים גם שירותי <Link href="/areas/haifa-general/emergency-towing-electric-car-route-22-krayot" className="text-blue-600">emergency towing electric car route 22 krayot</Link>.</p>
             </div>
           </div>
         </div>
