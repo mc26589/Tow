@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בדרך בר יהודה חיפה | 24/7 שירות מהיר ומחיר הוגן",
-  description: "נתקעת בדרך בר יהודה בחיפה? אנו מספקים שירותי גרירה וחילוץ לרכב במחירים הוגנים ובזמינות מלאה 24/7. הגעה מהירה לכל אזור חיפה. התקשרו עכשיו!",
+  title: "גרר בדרך בר יהודה חיפה | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעת בדרך בר יהודה בחיפה? שירותי גרירה וחילוץ מקצועיים לרכב פרטי ומסחרי. הגעה מהירה, זמינות 24/7 ומחירים הוגנים. התקשרו עכשיו לחילוץ מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/towing-service-harley-davidson-derech-bar-yehuda-haifa",
   },
@@ -33,9 +33,10 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">שירות גרירה וחילוץ בדרך בר יהודה חיפה</h1>
           <p className="text-lg mb-8">
-            נתקעת בדרך בר יהודה בחיפה? אנו מספקים שירותי גרירה וחילוץ מקצועיים לרכבים פרטיים, רכבי שטח ורכבים מסחריים. 
-            במידה ואתם בקרבת <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="underline font-semibold">צומת צ'ק פוסט</Link>, נדע להגיע אליכם במהירות. 
-            חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים. הצוות שלנו זמין 24/7 לחילוץ מהיר במחירים הוגנים.
+            נתקעת בדרך בר יהודה בחיפה? אנו מספקים שירותי גרירה וחילוץ לרכבים פרטיים ומסחריים בכל אזור חיפה. 
+            במידה ואתם בקרבת <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="underline font-semibold">צומת צ'ק פוסט</Link>, נדע להגיע אליכם במהירות שיא. 
+            זקוקים לשירות נוסף באזור? אנו מציעים גם <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="underline">סיוע במקרי תקלות בדרכים בצ'ק פוסט</Link>. 
+            חשוב להבהיר: איננו מספקים שירותי גרירה לאופנועים. הצוות שלנו זמין 24/7 לכל תקלה.
           </p>
           <div className="flex gap-4">
             <a 
@@ -52,20 +53,24 @@ export default function Page() {
         <h2 className="text-2xl font-bold mb-4">למה לבחור בנו בחיפה?</h2>
         <ul className="list-disc pr-5 space-y-2 mb-10">
           <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
-          <li>הגעה מהירה לכל נקודה בדרך בר יהודה והסביבה.</li>
-          <li>שירות אדיב ומקצועי במחירים הוגנים.</li>
-          <li>ציוד חדיש המותאם לרכבים פרטיים ומסחריים.</li>
+          <li>זמני הגעה מהירים לדרך בר יהודה וצירים מרכזיים בחיפה.</li>
+          <li>שירות מקצועי לרכבים פרטיים, רכבי שטח ומסחריים קלים.</li>
+          <li>מחירים הוגנים ושקיפות מלאה מול הלקוח.</li>
         </ul>
         
         <h2 className="text-2xl font-bold mb-4">שאלות נפוצות על גרירה בחיפה</h2>
-        <div className="space-y-4">
+        <div className="space-y-6">
           <div>
-            <h3 className="font-bold">תוך כמה זמן אתם מגיעים לדרך בר יהודה?</h3>
-            <p>אנו שואפים להגיע לכל קריאה בחיפה תוך זמן קצר ככל הניתן בהתאם לעומסי התנועה.</p>
+            <h3 className="font-bold">תוך כמה זמן תגיעו לחלץ אותי בדרך בר יהודה?</h3>
+            <p>אנו פרוסים ברחבי חיפה ומגיעים לכל קריאה בדרך בר יהודה בזמן קצר, בהתאם לעומסי התנועה באזור הצ'ק פוסט.</p>
           </div>
           <div>
-            <h3 className="font-bold">האם אתם גוררים רכבים מסחריים?</h3>
-            <p>כן, אנו מספקים מענה לרכבים פרטיים, מסחריים ורכבי שטח (לא כולל אופנועים).</p>
+            <h3 className="font-bold">באילו רכבים אתם מטפלים?</h3>
+            <p>אנו מתמחים בגרירת רכבים פרטיים, מסחריים ורכבי שטח. אם נתקעת בדרכים מהירות, תוכלו להיעזר גם בשירות <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירה בטוחה בכביש 22</Link>.</p>
+          </div>
+          <div>
+            <h3 className="font-bold">האם אתם גוררים אופנועים?</h3>
+            <p>לא, איננו מספקים שירותי גרירה לאופנועים. אנו מתמקדים בפתרונות גרירה וחילוץ לרכבים.</p>
           </div>
         </div>
       </section>

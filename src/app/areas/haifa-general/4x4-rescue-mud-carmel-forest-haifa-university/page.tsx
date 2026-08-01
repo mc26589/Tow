@@ -1,10 +1,14 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב 4X4 שקוע בבוץ יערות הכרמל ליד אוניברסיטת חיפה",
-  description: "נתקעתם בבוץ ביערות הכרמל? צוות חילוץ 4X4 מקצועי זמין 24/7 באזור אוניברסיטת חיפה. שירות מהיר, אמין ומקצועי."
+  title: "חילוץ רכב 4X4 מהבוץ בכרמל (אוניברסיטת חיפה) | שירות מהיר 24/7",
+  description: "נתקעתם בבוץ ביערות הכרמל ליד אוניברסיטת חיפה? צוות חילוץ 4X4 מומחה בדרך אליכם! הגעה מהירה, ציוד מקצועי ומחיר הוגן. התקשרו עכשיו לחילוץ בטוח!",
+  alternates: {
+    canonical: "/areas/haifa-general/4x4-rescue-mud-carmel-forest-haifa-university"
+  }
 };
 
 export default function Page() {
@@ -37,12 +41,12 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב 4X4 שקוע בבוץ יערות הכרמל ליד אוניברסיטת חיפה</h1>
-          <p className="text-xl mb-8">נתקעתם בבוץ? אל תנסו להמשיך ללחוץ על הגז. צוות החילוץ שלנו מתמחה בחילוצי שטח 4X4 באזור הכרמל. אנו מגיעים במהירות לכל נקודה סביב אוניברסיטת חיפה והיערות הסמוכים.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב 4X4 שקוע בבוץ באזור אוניברסיטת חיפה ויערות הכרמל</h1>
+          <p className="text-xl mb-8">השטח הפך לבוצי? אל תילחצו. צוות המומחים שלנו לחילוצי 4X4 נמצא בקרבת מקום ומכיר כל שביל באזור האוניברסיטה. אנו מתחייבים למענה מהיר ושירות מקצועי ללא נזק לרכב.</p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+            <WhatsAppCTA cityName="חיפה והכרמל" />
             <a 
-              href={`tel:+${BUSINESS_INFO.phone}`} 
+              href={`tel:${BUSINESS_INFO.phone}`} 
               className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
               חיוג מהיר למוקד החילוץ
@@ -55,12 +59,27 @@ export default function Page() {
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ בשטח?</h2>
         <ul className="list-disc pr-6 space-y-4">
           <li>מומחיות בחילוץ רכבי 4X4 ורכבי שטח ששקעו בבוץ עמוק.</li>
-          <li>זמינות מלאה 24/7 באזור חיפה, הקריות ויערות הכרמל.</li>
-          <li>ציוד חילוץ מקצועי המותאם לתוואי שטח קשים.</li>
-          <li>מחירים הוגנים ושירות אדיב ללא הפתעות.</li>
+          <li>זמינות מלאה 24/7 באזור חיפה, <Link href="/areas/haifa-general/car-stuck-in-mud-rescue-carmel-forest-haifa" className="text-blue-600 underline">יערות הכרמל</Link> וסביבת האוניברסיטה.</li>
+          <li>ציוד חילוץ מקצועי המותאם לתוואי שטח קשים ללא נזקים לשלדת הרכב.</li>
+          <li>מחירים הוגנים ושירות אדיב ללא "הפתעות" בשטח.</li>
         </ul>
-        <p className="mt-6 text-gray-700">
-          חשוב לציין: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4X4. איננו מספקים שירותי חילוץ או גרירה לאופנועים.
+        
+        <div className="mt-10 p-6 bg-gray-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות על חילוצי 4X4 בחיפה</h3>
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">כמה זמן לוקח לכם להגיע ליערות הכרמל?</p>
+              <p>ברוב המקרים אנו מגיעים לנקודות הגישה המרכזיות סביב אוניברסיטת חיפה תוך זמן קצר, בהתאם לעומסי התנועה.</p>
+            </div>
+            <div>
+              <p className="font-bold">האם אתם מחלצים רכבים שאינם 4X4?</p>
+              <p>כן, אנו מספקים שירותי <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">גרירת רכבים רגילים</Link> שנתקעו בדרכי עפר או בצידי הדרכים.</p>
+            </div>
+          </div>
+        </div>
+
+        <p className="mt-6 text-gray-700 italic">
+          חשוב לציין: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4X4. איננו מספקים שירותי חילוץ או גרירה לאופנועים (במידה ואתם צריכים סיוע לאופנוע, מומלץ לבדוק <Link href="/areas/haifa-general/heavy-motorcycle-towing-ahuza-haifa" className="text-blue-600 underline">שירותי גרירת אופנועים מקצועיים</Link>).
         </p>
       </section>
     </main>

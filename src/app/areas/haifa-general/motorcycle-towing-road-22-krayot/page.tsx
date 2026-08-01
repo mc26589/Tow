@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בכביש 22 (עוקף קריות) | הגעה תוך 30 דקות | 24/7",
-  description: "נתקעת בכביש 22 עוקף קריות? שירותי גרירה מקצועיים לרכבים 24/7. הגעה מהירה, מחיר הוגן ושירות אמין. התקשרו עכשיו לחילוץ מהיר!",
+  title: "גרר בכביש 22 (עוקף קריות) - הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעת בכביש 22 עוקף קריות? שירותי גרירה מקצועיים לרכב 24/7. הגעה מהירה, מחיר הוגן ושירות אמין לכל סוגי הרכבים. התקשרו עכשיו לחילוץ מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/motorcycle-towing-road-22-krayot"
   }
@@ -20,7 +20,7 @@ export default function Page() {
             שירותי גרירה וחילוץ רכבים בכביש 22 (עוקף קריות)
           </h1>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            נתקעת עם הרכב בכביש 22? אנו מעניקים שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי שטח. שירות מהיר, אמין וזמין 24/7 לאורך עוקף קריות.
+            נתקעת עם הרכב בכביש 22? אנו מעניקים שירותי גרירה מקצועיים לרכבים פרטיים ומסחריים. הגעה מהירה, מחיר הוגן וזמינות 24/7 לאורך עוקף קריות.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a 
@@ -35,11 +35,9 @@ export default function Page() {
       </section>
 
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים באזור הקריות וחיפה</h2>
+        <h2 className="text-3xl font-bold mb-6">שירותי גרירה וחילוץ מקצועיים בצפון</h2>
         <p className="text-lg leading-relaxed mb-6">
-          תקיעת רכב בצירי תנועה מרכזיים דורשת מענה מיידי. אנו מספקים מעטפת שירות מלאה לנהגים בצפון. אם אתם זקוקים לפתרון זמין, ניתן להתרשם משירותינו כגון גרירה מהירה בכביש 22, או פתרונות מתקדמים עבור 
-          <Link href="/areas/haifa-general/electric-vehicle-accident-towing-route-22-krayot-bypass" className="text-blue-400 hover:underline"> גרירת רכב חשמלי תקול בכביש 22</Link>. 
-          למי שזקוק לשירות באזורים סמוכים, אנו ממליצים על <Link href="/areas/haifa-general/affordable-24-7-towing-kiryat-bialik-flat-tire" className="text-blue-400 hover:underline">גרירה בקריית ביאליק</Link> או <Link href="/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7" className="text-blue-400 hover:underline">גרירה בקריית מוצקין</Link>.
+          תקיעת רכב בצירי תנועה מרכזיים דורשת מענה מיידי. אנו מתמחים בחילוץ רכבים תקועים ומעניקים מעטפת שירות מלאה. אם אתם זקוקים לחילוץ לאחר תאונה, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-400 hover:underline">גרירה לאחר תאונה בכביש 22</Link>. אנו מציעים מענה מהיר גם במצבי חירום מורכבים דרך <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-400 hover:underline">גרירת חירום בעוקף קריות</Link>. למי שזקוק לשירות נוסף באזור, ניתן להתרשם מפתרונות <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-400 hover:underline">גרירת רכב תקול בצ'ק פוסט וקריות</Link>.
         </p>
 
         <div className="bg-neutral-900 p-8 rounded-xl border border-neutral-800">
@@ -47,15 +45,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h4 className="font-bold text-lg">האם אתם גוררים רכבים בכל שעות היממה בכביש 22?</h4>
-              <p>כן, אנו מפעילים מערך גרירה הפעיל 24/7 ומכיר היטב את צירי התנועה המרכזיים באזור הקריות, כולל עוקף קריות.</p>
+              <p>כן, אנו מפעילים מערך גרירה הפעיל 24/7 ומכיר היטב את כל המחלפים והיציאות של כביש 22 עוקף קריות.</p>
             </div>
             <div>
               <h4 className="font-bold text-lg">מהו זמן ההגעה הממוצע לאחר קריאה?</h4>
-              <p>זמן ההגעה תלוי בעומסי התנועה בכביש 22, אך אנו עושים כל מאמץ להגיע במהירות המקסימלית לכל קריאה בקרית ים, קרית חיים וקרית אתא.</p>
+              <p>זמן ההגעה תלוי בעומסי התנועה, אך בגלל הקרבה לצירים הראשיים, אנו שואפים להגיע במהירות המקסימלית לכל קריאה באזור קרית אתא, קרית ים וקרית ביאליק.</p>
             </div>
             <div>
-              <h4 className="font-bold text-lg">אילו סוגי רכבים אתם גוררים?</h4>
-              <p>אנו נותנים מענה לרכבים פרטיים, רכבים מסחריים ורכבי שטח. לבירור על <Link href="/areas/haifa-general/cheap-towing-check-post-kiryat-ata" className="text-blue-400 hover:underline">גרירה זולה בצ'ק פוסט וקרית אתא</Link> ניתן לפנות אלינו בכל עת.</p>
+              <h4 className="font-bold text-lg">באילו מקרים כדאי להזמין גרר?</h4>
+              <p>בין אם הרכב עבר תאונה, סובל מתקלה מכנית או שהמצבר התרוקן, אל תנסו לגרור את הרכב באמצעים לא בטיחותיים. למקרים של תאונות דרכים בכביש 22, מומלץ להיעזר בשירותי <Link href="/areas/haifa-general/motorcycle-towing-accident-road-22-kiryat-ata" className="text-blue-400 hover:underline">גרירה לאחר תאונה בקרית אתא</Link>.</p>
             </div>
           </div>
         </div>

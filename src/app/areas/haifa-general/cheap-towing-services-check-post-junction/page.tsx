@@ -1,10 +1,14 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "שירותי גרירה זולים בצומת צ'ק פוסט | זמינות 24/7",
-  description: "נתקעתם בצומת צ'ק פוסט? אנו מציעים שירותי גרירה זולים, מהירים ומקצועיים לרכבים פרטיים ומסחריים באזור חיפה והקריות. התקשרו עכשיו לסיוע מיידי."
+  title: "גרר בצומת צ'ק פוסט | שירות גרירה מהיר ומחיר הוגן 24/7",
+  description: "נתקעתם בצומת צ'ק פוסט? גרר זמין 24/7 להגעה מהירה. שירות מקצועי במחיר הוגן לכל סוגי הרכבים באזור חיפה והקריות. התקשרו עכשיו לסיוע!",
+  alternates: {
+    canonical: "/areas/haifa-general/cheap-towing-services-check-post-junction"
+  }
 };
 
 export default function Page() {
@@ -31,7 +35,7 @@ export default function Page() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה זולים בצומת צ'ק פוסט</h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl">
             נתקעתם עם הרכב בצומת צ'ק פוסט? אנו כאן כדי להעניק לכם שירות גרירה מהיר, אמין ובמחיר הוגן. 
-            אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. 
+            אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. אם נתקעתם בדרכים הסמוכות, אנו מציעים גם <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="underline font-semibold">שירותי גרירה דחופים בכביש 22</Link>. 
             שימו לב: איננו מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -60,9 +64,25 @@ export default function Page() {
             </li>
             <li className="p-6 bg-white rounded-xl shadow-sm">
               <h3 className="font-bold text-xl mb-2">מקצועיות בשטח</h3>
-              <p>צוות מיומן המכיר היטב את צירי התנועה בחיפה והקריות להגעה מהירה.</p>
+              <p>צוות מיומן המכיר היטב את צירי התנועה בחיפה והקריות להגעה מהירה. זקוקים לשירות מקביל? בדקו את <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">שירותי הגרירה שלנו לאזור חיפה והקריות</Link>.</p>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על שירותי גרירה בצ'ק פוסט</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold">תוך כמה זמן תגיעו לצומת צ'ק פוסט?</h3>
+              <p className="text-gray-600">בזכות מיקומנו האסטרטגי בחיפה, אנו שואפים להגיע לכל קריאה באזור הצומת במהירות המרבית, לרוב תוך דקות ספורות בהתאם לעומסי התנועה.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">האם אתם גוררים רכבים לכל חלקי הארץ?</h3>
+              <p className="text-gray-600">אנו מתמחים בפינוי מהצומת למוסכים באזור חיפה, הקריות והסביבה. לשינוע רחוק יותר, צרו איתנו קשר לתיאום מראש.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

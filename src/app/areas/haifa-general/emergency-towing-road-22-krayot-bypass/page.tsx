@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "גרירת רכב בכביש 22 עוקף קריות - שירות מהיר 24/7",
+  description: "נתקעתם על כביש 22? שירות גרירת רכבים מקצועי ומהיר לכל נקודה בעוקף קריות. מחיר הוגן, זמינות 24/7 והגעה מהירה. התקשרו עכשיו לפתרון מיידי!",
+  alternates: {
+    canonical: "/areas/haifa-general/emergency-towing-road-22-krayot-bypass",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -48,12 +58,29 @@ export default function Page() {
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ בכביש 22?</h2>
         <p className="mb-4">אנו מבינים את הדחיפות שבחילוץ רכב בכביש מהיר כמו כביש 22. אנו מציעים מחירים הוגנים ושירות אמין ללא הפתעות.</p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc list-inside space-y-2 mb-6">
           <li>זמינות 24/7 לכל אורך עוקף קריות.</li>
-          <li>ציוד גרירה חדיש המתאים לרכבים פרטיים, מסחריים ו-4x4.</li>
+          <li>ציוד גרירה חדיש המתאים לרכבים פרטיים ומסחריים.</li>
           <li>הגעה מהירה לכל נקודה בציר.</li>
         </ul>
+        <p className="text-neutral-300">
+           זקוקים לשירותי גרירה נוספים באזור? ניתן לבדוק גם <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-400 underline">גרירת רכב באזור הצ'ק פוסט</Link> או מידע על <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-400 underline">גרירה לאחר תאונה בכביש 22</Link>.
+        </p>
         <p className="mt-6 text-sm text-neutral-400">* שים לב: איננו מספקים שירותי גרירה לאופנועים.</p>
+      </section>
+
+      <section className="py-16 bg-neutral-900 container mx-auto px-4 rounded-xl">
+        <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על גרירה בעוקף קריות</h2>
+        <div className="space-y-6">
+           <div>
+             <h3 className="font-bold text-xl mb-2">תוך כמה זמן תגיעו לחלץ אותי בכביש 22?</h3>
+             <p>אנו מבינים את הסכנה בעצירה בכביש מהיר. לרוב אנו מגיעים לנקודות מרכזיות בעוקף קריות תוך 30 דקות מרגע הקריאה.</p>
+           </div>
+           <div>
+             <h3 className="font-bold text-xl mb-2">מה כולל המחיר של שירות גרירה?</h3>
+             <p>המחיר נקבע בהתאם למרחק הגרירה וסוג הרכב. אנו מקפידים על מחיר הוגן ושקוף ללא עלויות נסתרות.</p>
+           </div>
+        </div>
       </section>
     </main>
   );

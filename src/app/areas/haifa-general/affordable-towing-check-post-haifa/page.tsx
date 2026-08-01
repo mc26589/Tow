@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירה בצ'ק פוסט חיפה - הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם בצומת צ'ק פוסט חיפה? שירותי גרירה מקצועיים 24/7 לכל סוגי הרכבים במחיר הוגן. הגעה תוך 30 דקות לכל היותר. התקשרו עכשיו לפתרון מיידי!",
+  title: "גרר בצ'ק פוסט חיפה - שירות מהיר 24/7 | הגעה תוך 30 דק'",
+  description: "נתקעתם בצומת צ'ק פוסט? גרר מוסמך זמין 24/7 לכל סוגי הרכבים. מחיר הוגן ושירות מקצועי. התקשרו עכשיו להגעה מהירה תוך 30 דקות!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-towing-check-post-haifa",
   },
@@ -39,15 +39,15 @@ export default function Page() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="p-6 border border-neutral-800 rounded-xl">
             <h3 className="text-xl font-semibold mb-3 text-white">זמינות 24/7</h3>
-            <p>אנו מבינים שתקלות קורות בכל זמן. אם הרכב שלכם הושבת, אנו מציעים <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-400 hover:underline">שירות חילוץ וגרירה לאחר תאונה בצ'ק פוסט</Link> בכל שעות היממה.</p>
+            <p>אנו מבינים שתקלות קורות בכל זמן. אם אתם זקוקים לשירות מקצועי באזור הקריות, מומלץ לבדוק את <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-400 hover:underline">שירות גרירה בצ'ק פוסט וקריות</Link> שלנו למענה מהיר.</p>
           </div>
           <div className="p-6 border border-neutral-800 rounded-xl">
             <h3 className="text-xl font-semibold mb-3 text-white">ציוד חדיש</h3>
-            <p>אנו משתמשים בטכנולוגיית עגון מתקדמת. נתקעתם עם רכב חשמלי? בדקו את שירות <Link href="/areas/haifa-general/flatbed-towing-electric-car-dead-battery-check-post-haifa" className="text-blue-400 hover:underline">גרירת רכב חשמלי עם פלטה בצ'ק פוסט</Link> למניעת נזק למערכת ההנעה.</p>
+            <p>אנו משתמשים בטכנולוגיית עגון מתקדמת. נתקעתם בדרך עוקף קריות? אנו מספקים מענה מהיר ב-<Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-400 hover:underline">שירות גרירה בכביש 22 עוקף קריות</Link>.</p>
           </div>
           <div className="p-6 border border-neutral-800 rounded-xl">
             <h3 className="text-xl font-semibold mb-3 text-white">פתרונות מקיפים</h3>
-            <p>הצוות שלנו מוסמך למגוון משימות, כולל שירותי <Link href="/areas/haifa-general/affordable-electric-car-towing-check-post-krayot" className="text-blue-400 hover:underline">גרירה לרכבים חשמליים בצ'ק פוסט והקריות</Link> בבטחה מלאה.</p>
+            <p>הצוות שלנו מוסמך למגוון משימות, כולל סיוע לאחר תאונות דרכים עם <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-400 hover:underline">גרר לאחר תאונה בכביש 22 חיפה-קרית אתא</Link>.</p>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ export default function Page() {
           <div className="space-y-6">
             <div className="border-b border-neutral-800 pb-4">
               <h3 className="text-xl font-semibold text-white">מהו זמן ההגעה הממוצע בצומת צ'ק פוסט?</h3>
-              <p>בשל הקרבה שלנו לצירים המרכזיים בחיפה, אנו מגיעים לרוב תוך 30 דקות מרגע הקריאה, בהתאם לעומסי התנועה.</p>
+              <p>בשל הקרבה שלנו לצירים המרכזיים בחיפה, אנו מגיעים לרוב תוך 30 דקות מרגע הקריאה, בהתאם לעומסי התנועה באזור.</p>
             </div>
             <div className="border-b border-neutral-800 pb-4">
               <h3 className="text-xl font-semibold text-white">האם אתם גוררים רכבים לכל חלקי הארץ?</h3>
