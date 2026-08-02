@@ -4,14 +4,14 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "חילוץ רכב תקוע בבוץ באזור הכרמל | שירות 24/7",
-  description: "נתקעתם בבוץ באזור הכרמל? צוות חילוץ מקצועי בדרך אליכם. שירות מהיר, בטוח ובמחיר הוגן לרכבים פרטיים ו-4x4.",
+  description: "נתקעתם בבוץ באזור הכרמל? צוות חילוץ מקצועי זמין עבורכם 24/7. שירות מהיר לרכבים פרטיים, מסחריים ו-4x4. צרו קשר עכשיו."
 };
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי חילוץ וגרירה חיפה והקריות",
+    "name": "שירותי חילוץ רכב בחיפה והקריות",
     "areaServed": { "@type": "Place", "name": "אזור הכרמל, חיפה" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "34.9896" },
@@ -27,14 +27,18 @@ export default function Page() {
       />
       
       <section className="gradient-trust text-white py-14 md:py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב תקוע בבוץ באזור הכרמל – שירות מהיר ומקצועי 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם בבוץ? אל תנסו להמשיך ללחוץ על הגז. התקשרו אלינו לחילוץ מקצועי ובטוח.</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב תקוע בבוץ באזור הכרמל</h1>
+          <p className="text-xl mb-8 max-w-2xl">
+            נתקעתם בבוץ באזור הכרמל? אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח (4x4). 
+            הצוות שלנו זמין 24/7 עם ציוד חילוץ מתקדם כדי להחזיר אתכם לכביש בבטחה.
+            חשוב לציין: איננו מספקים שירותי חילוץ לאופנועים.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <WhatsAppCTA cityName="חיפה והקריות" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-200 transition-colors"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
               חיוג מהיר למוקד החילוץ
             </a>
@@ -42,11 +46,14 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירות חילוץ שטח מקצועי בכרמל</h2>
-        <p className="mb-4">אנו מבינים את התסכול שבתקיעה בבוץ, במיוחד באזורים מבודדים בכרמל. הצוות שלנו מגיע מצויד בכלים המתאימים ביותר כדי לחלץ את הרכב שלכם ללא נזקים מיותרים.</p>
-        <p className="mb-4"><strong>שים לב:</strong> אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח. איננו מספקים שירותי חילוץ לאופנועים.</p>
-        <p>אנו מציעים מחירים הוגנים ושירות אדיב לכל תושבי האזור והמטיילים.</p>
+      <section className="py-16 container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ באזור הכרמל?</h2>
+        <ul className="space-y-4 text-lg">
+          <li>✓ זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
+          <li>✓ הגעה מהירה לכל נקודה באזור הכרמל והסביבה.</li>
+          <li>✓ ציוד חילוץ מקצועי המותאם לתוואי שטח בוצי.</li>
+          <li>✓ שירות אדיב ומחירים הוגנים ללא הפתעות.</li>
+        </ul>
       </section>
     </main>
   );
