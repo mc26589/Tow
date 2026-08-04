@@ -28,28 +28,33 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-6">גרר לאופנוע כבד באחוזה חיפה - שירותי גרירה לרכבים ורכבי שטח</h1>
+          <h1 className="text-4xl font-bold mb-6">גרר לאופנוע כבד באחוזה חיפה</h1>
           <p className="text-lg mb-8">
-            חשוב להבהיר: אנו מתמחים בשירותי גרירה וחילוץ מקצועיים לרכבים פרטיים, רכבים מסחריים ורכבי 4x4 בלבד. 
-            נכון לעכשיו, איננו מספקים שירותי גרירה לאופנועים או אופנועים כבדים באזור אחוזה בחיפה. 
-            אנו ממליצים לפנות לבעל מקצוע המתמחה בשינוע דו-גלגלי כדי להבטיח את שלמות הכלי שלכם.
+            אנו מבינים את הצורך בשירותי גרירה מהירים באזור אחוזה בחיפה. עם זאת, חשוב לציין כי אנו מתמחים אך ורק בגרירת רכבים פרטיים, רכבים מסחריים ורכבי שטח (4x4). איננו מספקים שירותי גרירה לאופנועים או אופנועים כבדים. אם נתקעת עם רכבך, אנו כאן לספק לך מענה מקצועי, מהיר ובמחירים הוגנים בכל שעות היממה.
           </p>
           <div className="flex gap-4">
-            <WhatsAppCTA cityName="חיפה והקריות" />
+            <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
+              className="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
             >
-              חיוג מהיר למוקד
+              התקשר עכשיו
             </a>
           </div>
         </div>
       </section>
+
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-4">שירותי גרירה וחילוץ באזור חיפה</h2>
-        <p>אנו מציעים שירותי גרירה מקצועיים לרכבים תקועים, רכבי שטח ורכבים מסחריים. אנו מקפידים על מחירים הוגנים ושירות מהיר לכל תושבי אחוזה והסביבה.</p>
+        <h2 className="text-2xl font-bold mb-4">למה לבחור בנו לחילוץ רכבים באחוזה?</h2>
+        <ul className="list-disc pr-6 space-y-2">
+          <li>זמינות מלאה 24/7 לכל קריאה באזור חיפה והסביבה.</li>
+          <li>ציוד גרירה מתקדם המותאם לרכבים פרטיים ורכבי שטח.</li>
+          <li>שירות אדיב, מקצועי ומחירים הוגנים ללא הפתעות.</li>
+          <li>הגעה מהירה לכל נקודה בשכונת אחוזה והכרמל.</li>
+        </ul>
       </section>
     </main>
   );

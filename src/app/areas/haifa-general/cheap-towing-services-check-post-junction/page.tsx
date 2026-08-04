@@ -1,11 +1,5 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "שירותי גרירה זולים בצומת צ'ק פוסט | זמינות 24/7",
-  description: "זקוקים לגרר בצומת צ'ק פוסט? שירותי גרירה מהירים, מקצועיים ובמחירים הוגנים. זמינים לכל סוגי הרכבים. התקשרו עכשיו."
-};
 
 export default function Page() {
   const jsonLd = {
@@ -25,7 +19,7 @@ export default function Page() {
       "latitude": "32.7885",
       "longitude": "35.0253"
     },
-    "serviceType": ["גרירת רכבים", "חילוץ רכבים", "שירותי דרך"]
+    "serviceType": "Towing Service"
   };
 
   return (
@@ -39,7 +33,8 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">שירותי גרירה זולים בצומת צ'ק פוסט</h1>
           <p className="text-xl mb-8 max-w-2xl">
-            נתקעתם עם הרכב באזור צומת צ'ק פוסט? אנו כאן בשבילכם. אנו מתמחים בגרירת רכבים פרטיים, מסחריים ורכבי 4x4 במחירים הוגנים וזמינות מלאה מסביב לשעון. 
+            נתקעתם עם הרכב בצומת צ'ק פוסט? אנו מציעים שירותי גרירה מקצועיים, מהירים ובמחירים הוגנים. 
+            אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. 
             חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -48,20 +43,20 @@ export default function Page() {
               href={`tel:+${BUSINESS_INFO.phone}`} 
               className="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
-              התקשרו עכשיו להצעת מחיר
+              חיוג מהיר למוקד
             </a>
           </div>
         </div>
       </section>
 
-      <section className="py-12 bg-gray-900 text-white">
+      <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בצומת צ'ק פוסט?</h2>
           <ul className="space-y-4 text-lg">
-            <li>✓ מענה מהיר לכל קריאה באזור הצומת והסביבה.</li>
+            <li>✓ זמינות מלאה 24/7 לכל קריאה באזור הצ'ק פוסט.</li>
             <li>✓ מחירים הוגנים ושקופים ללא הפתעות.</li>
-            <li>✓ צוות מיומן ומקצועי עם ציוד גרירה חדיש.</li>
-            <li>✓ שירות 24/7, גם בסופי שבוע וחגים.</li>
+            <li>✓ צוות מיומן עם ציוד גרירה חדיש ובטוח.</li>
+            <li>✓ הגעה מהירה לכל נקודה בצומת ובסביבתה.</li>
           </ul>
         </div>
       </section>
