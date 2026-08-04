@@ -5,8 +5,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "גרירה 24/7 בכביש 22 עוקף קריות | הגעה מהירה ומחיר הוגן",
-  description: "נתקעתם בכביש 22 עוקף קריות? שירותי גרירה וחילוץ 24/7 לרכבים. הגעה מהירה תוך 30-45 דקות במחיר הוגן ושקוף. התקשרו עכשיו לסיוע מיידי!",
+  title: "גרירה 24/7 בכביש 22 עוקף קריות | הגעה תוך 30 דקות - מחיר הוגן",
+  description: "נתקעתם בכביש 22 עוקף קריות? גרר זמין 24/7 לכל סוגי הרכבים. הגעה מהירה, מחיר הוגן ושירות מקצועי. אל תחכו בכביש – התקשרו עכשיו לסיוע!",
   alternates: {
     canonical: "/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן",
   },
@@ -39,7 +39,7 @@ export default function Page() {
     <>
       <Script
         id="json-ld-auto-towing"
-        type="application/ld+json"
+        type="application/ld/json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
@@ -49,7 +49,7 @@ export default function Page() {
             גרירת רכב 24/7 בכביש 22 עוקף קריות במחיר הוגן
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-            נתקעתם באמצע הדרך? צוות הגרירה המקצועי שלנו זמין עבורכם 24/7. הגעה מהירה לרכבים פרטיים ומסחריים בכביש עוקף קריות.
+            נתקעתם באמצע הדרך? צוות הגרירה המקצועי שלנו זמין עבורכם 24/7. הגעה מהירה תוך דקות לרכבים פרטיים ומסחריים בעוקף קריות.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <WhatsAppCTA cityName="כביש 22 עוקף קריות" />
@@ -63,29 +63,29 @@ export default function Page() {
       <main className="bg-gray-900 text-gray-100 py-12">
         <div className="container mx-auto px-4">
           <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-blue-400">שירותי גרירה מקצועיים בכביש 22</h2>
+            <h2 className="text-2xl font-bold mb-6 text-blue-400">שירותי גרירה מקצועיים בכביש 22 עוקף קריות</h2>
             <p className="text-lg leading-relaxed mb-4">
-              כביש 22 עוקף קריות הוא עורק תחבורה מרכזי. במקרה של תקלה או תאונה, אתם צריכים <Link href="/areas/haifa-general/fast-towing-services-road-22-krayot-bypass" className="text-blue-300 underline">fast towing services road 22 krayot bypass</Link>. אנו מציעים מענה מיידי לרכבים רגילים וגם שירות ייעודי עבור <Link href="/areas/haifa-general/electric-vehicle-breakdown-towing-route-22-krayot-bypass" className="text-blue-300 underline">electric vehicle breakdown towing route 22 krayot bypass</Link>.
+              כביש 22 הוא עורק תחבורה ראשי. אנו מספקים <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-300 underline">affordable emergency car towing check post haifa</Link> לנהגים שנתקעו בדרכם לקריות. זקוקים לגרר פלטה? אנו מציעים גם <Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="text-blue-300 underline">affordable flatbed towing route 22 krayot area</Link> לכל סוגי הרכבים.
             </p>
             <p className="text-lg leading-relaxed">
-              זקוקים לסיוע משלים? אנו זמינים גם עבור <Link href="/areas/haifa-general/accident-towing-road-22-check-post-krayot" className="text-blue-300 underline">accident towing road 22 check post krayot</Link> וטיפול בפריקת מצברים לרכבים חשמליים דרך <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-300 underline">electric vehicle flat battery towing route 22 krayot</Link>.
+              נתקעתם עם רכב חשמלי? היעזרו בשירות <Link href="/areas/haifa-general/affordable-electric-car-towing-check-post-krayot" className="text-blue-300 underline">affordable electric car towing check post krayot</Link>. כמו כן, במידה והרכב במצב גרוע, אנו מספקים פתרונות <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-towing-included" className="text-blue-300 underline">buy cars for scrap haifa towing included</Link>.
             </p>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-blue-400">שאלות נפוצות</h2>
+            <h2 className="text-2xl font-bold mb-6 text-blue-400">שאלות נפוצות (FAQ)</h2>
             <div className="space-y-6">
               <div>
-                <h3 className="font-bold text-xl">תוך כמה זמן תגיעו אלי לעוקף קריות?</h3>
-                <p>הצוותים שלנו מפוזרים באזור חיפה והקריות, לכן אנו מתחייבים להגעה מהירה במיוחד לכביש 22, בדרך כלל תוך פחות מ-45 דקות.</p>
+                <h3 className="font-bold text-xl">מהו זמן ההגעה הממוצע לעוקף קריות?</h3>
+                <p>הצוותים שלנו פועלים בפריסה ארצית בחיפה ובצפון. אנו מגיעים לרוב הנקודות בכביש 22 עוקף קריות תוך 30-45 דקות מרגע הקריאה.</p>
               </div>
               <div>
-                <h3 className="font-bold text-xl">האם אתם גוררים רכבים חשמליים?</h3>
-                <p>כן, אנו ערוכים לטיפול וגרירה של רכבים חשמליים תוך שמירה על כללי הבטיחות הנדרשים ליצרן.</p>
+                <h3 className="font-bold text-xl">האם המחיר כולל גרירה לצ'ק פוסט?</h3>
+                <p>כן, אנו מבצעים גרירות מכל אזור עוקף קריות לכל יעד מבוקש כולל צומת צ'ק פוסט. ניתן לראות מידע נוסף על <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-300 underline">cheap towing check post haifa</Link>.</p>
               </div>
               <div>
-                <h3 className="font-bold text-xl">מהו אזור הפעילות המדויק שלכם?</h3>
-                <p>אנו מספקים שירותי גרירה בכל ציר עוקף קריות, כולל חיבורים לצומת צ'ק פוסט והסביבה הקרובה.</p>
+                <h3 className="font-bold text-xl">מה עושים אם הרכב לא מניע בעוקף קריות?</h3>
+                <p>במקרים של מצבר גמור או תקלה טכנית, אל תנסו להמשיך לנסוע. עצרו בבטחה בשול הדרך והתקשרו אלינו. אנו מתמחים בפתרונות סיוע מהירים בדרכים.</p>
               </div>
             </div>
           </section>
