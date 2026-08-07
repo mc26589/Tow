@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב מהבוץ ביערות הכרמל - חילוץ שטח 24/7 | הגעה מהירה",
-  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ רכב מהשטח 24/7. צוות מיומן לכל סוגי הרכבים במחיר הוגן. צריכים עזרה דחופה? התקשרו אלינו עכשיו!",
+  title: "חילוץ מהבוץ ביערות הכרמל | 24/7 הגעה מהירה ומחיר הוגן",
+  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ רכב מהשטח 24/7 לכל סוגי הרכבים. צוות מקצועי עם ציוד מתקדם יגיע אליכם תוך דקות. התקשרו עכשיו לחילוץ מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/emergency-mud-rescue-carmel-forest-haifa",
   },
@@ -41,11 +41,10 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב תקוע בבוץ ביערות הכרמל וחיפה – שירות מקצועי 24/7</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב תקוע בבוץ ביערות הכרמל - שירות 24/7</h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            נתקעתם בבוץ באזור יערות הכרמל? אנו כאן לסייע. אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח (4x4). 
-            לעיתים עדיף לבדוק גם שירותי גרירה אחרים כגון <Link href="/areas/haifa-general/suv-stuck-in-mud-rescue-haifa-university" className="underline font-bold">חילוץ רכבי שטח באוניברסיטת חיפה</Link> אם אתם באזור.
-            <strong>שימו לב: איננו מספקים שירותי חילוץ לאופנועים.</strong>
+            נתקעתם בבוץ באזור יערות הכרמל או בדרכי עפר? הצוות שלנו מתמחה בחילוץ רכבים פרטיים ורכבי 4x4. 
+            זקוקים לסיוע נוסף באזור? אנו מספקים גם <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="underline font-bold">שירותי גרירה בצ'ק פוסט חיפה</Link> במחירים נוחים.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -53,7 +52,7 @@ export default function Page() {
               href={`tel:+${BUSINESS_INFO.phone}`} 
               className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition"
             >
-              חיוג מהיר למוקד החילוץ
+              התקשרו עכשיו לחילוץ מיידי
             </a>
           </div>
         </div>
@@ -61,27 +60,31 @@ export default function Page() {
 
       <section className="py-12 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ מהשטח?</h2>
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ שטח?</h2>
           <ul className="space-y-4 text-gray-300">
-            <li>✓ זמינות מלאה 24/7 לכל אזור חיפה והקריות.</li>
-            <li>✓ ציוד חילוץ מתקדם לרכבים תקועים בבוץ ובשטח.</li>
-            <li>✓ צוות מיומן ומקצועי עם ניסיון רב בחילוצי שטח.</li>
-            <li>✓ מחירים הוגנים ושירות אדיב ללא הפתעות.</li>
+            <li>✓ זמינות מלאה 24/7 בכל אזור חיפה והצפון.</li>
+            <li>✓ מומחיות בחילוץ רכבים מכל סוגי השטחים והבוץ.</li>
+            <li>✓ הגעה מהירה לכל נקודה ביערות הכרמל.</li>
+            <li>✓ שקיפות מלאה ומחיר הוגן לפני תחילת העבודה.</li>
           </ul>
         </div>
       </section>
 
       <section className="py-12 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על חילוץ רכב באזור חיפה</h2>
-          <div className="space-y-4">
+          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על חילוץ בחיפה</h2>
+          <div className="space-y-6">
             <div>
-              <h3 className="font-bold">האם אתם מחלצים רכבים רק ביערות הכרמל?</h3>
-              <p>אנחנו מעניקים שירותי חילוץ בכל אזור חיפה והקריות. אם נתקעתם באזורים נוספים, אנו יכולים להפנות אתכם לשירותים כגון <Link href="/areas/haifa-general/emergency-towing-stella-maris-haifa" className="text-blue-600">גרירת רכב בסטלה מאריס</Link>.</p>
+              <h3 className="font-bold">האם אתם מספקים שירותים נוספים באזור חיפה?</h3>
+              <p>כן, אנו נותנים מענה רחב. במידה ואתם זקוקים גם ל<Link href="/areas/haifa-general/flat-tire-roadside-assistance-kiryat-yam-beach" className="text-blue-600">תיקון פנצ'ר בקרית ים</Link> או <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-600">גרירה זולה בקרית ביאליק</Link>, הצוות שלנו ערוך לכל מקרה.</p>
             </div>
             <div>
-              <h3 className="font-bold">מה טווח המחירים לחילוץ בבוץ?</h3>
-              <p>מחיר החילוץ נקבע לפי סוג הרכב, מידת השקיעה בבוץ ונגישות השטח. אנו מקפידים על מחיר הוגן ותחרותי בשוק.</p>
+              <h3 className="font-bold">איך מתמחרים חילוץ בבוץ?</h3>
+              <p>המחיר תלוי במידת השקיעה ובנגישות. אנו מחויבים למחיר הוגן ותחרותי. לבעלי רכבים ספורטיביים, נשמח להציע גם <Link href="/areas/haifa-general/affordable-low-clearance-sports-car-towing-ahuzah-haifa" className="text-blue-600">שירותי גרירה לרכב נמוך באחוזה</Link>.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">מה עושים אם הרכב מושבת לגמרי?</h3>
+              <p>במידה והרכב אינו בר תיקון בשטח, אנו מציעים שירותי פינוי או גרירה. אם מדובר ברכב ישן, נשמח לסייע ב<Link href="/areas/haifa-general/buying-cars-for-scrap-haifa-krayot" className="text-blue-600">קניית רכבים לפירוק בחיפה והקריות</Link>.</p>
             </div>
           </div>
         </div>
