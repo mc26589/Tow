@@ -32,10 +32,9 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">שירותי גרירה זולים בצומת צ'ק פוסט</h1>
-          <p className="text-xl mb-8 leading-relaxed">
-            זקוקים לשירותי גרירה בצומת צ'ק פוסט? אנו מתמחים בחילוץ וגרירת רכבים פרטיים, רכבים מסחריים ורכבי 4x4. 
-            חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים. 
-            אנו מציעים מחירים הוגנים ושירות מקצועי 24 שעות ביממה.
+          <p className="text-xl mb-8 max-w-2xl">
+            זקוקים לחילוץ מהיר בצומת צ'ק פוסט? אנו מתמחים במתן שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי שטח. אנו מציעים מחירים הוגנים ושירות זמין 24/7. 
+            חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -49,14 +48,16 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בצומת צ'ק פוסט?</h2>
-        <ul className="space-y-4 text-lg">
-          <li>✓ זמינות מלאה 24/7 לכל קריאה באזור הצ'ק פוסט.</li>
-          <li>✓ מחירים הוגנים ושקופים ללא הפתעות.</li>
-          <li>✓ ציוד גרירה מתקדם המותאם לרכבים פרטיים ומסחריים.</li>
-          <li>✓ הגעה מהירה למוקדי התנועה העמוסים ביותר בחיפה.</li>
-        </ul>
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בצומת צ'ק פוסט?</h2>
+          <ul className="space-y-4 text-lg">
+            <li>✓ זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
+            <li>✓ הגעה מהירה לכל נקודה בצומת צ'ק פוסט והסביבה.</li>
+            <li>✓ מחירים הוגנים ושקופים ללא הפתעות.</li>
+            <li>✓ צוות מיומן ומקצועי לטיפול בטוח ברכבכם.</li>
+          </ul>
+        </div>
       </section>
     </main>
   );
