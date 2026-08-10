@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בקרית ים 24/7 | שירות גרר משטח מהיר ומחיר הוגן",
-  description: "נתקעתם עם הרכב בקרית ים? גרר משטח מקצועי 24/7 לרכבים תקולים במחיר משתלם. הגעה מהירה לכל הקריות. התקשרו עכשיו להצעת מחיר אטרקטיבית!",
+  title: "גרר בקרית ים 24/7 | שירות גרר משטח מהיר | מחיר הוגן",
+  description: "נתקעתם עם הרכב בקרית ים? גרר משטח מקצועי 24/7 לכל סוגי הרכבים. הגעה מהירה, מחיר הוגן ושירות ללא תחרות. התקשרו עכשיו להצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-flatbed-towing-kiryat-yam-disabled-vehicle",
   },
@@ -41,10 +41,10 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6">גרירת רכב תקול בקרית ים: שירות גרר משטח מקצועי</h1>
-          <p className="text-lg md:text-xl mb-8">צריכים גרר בקרית ים? אנחנו כאן 24/7. שירות מהיר, אמין ומחיר הוגן לכל סוגי הרכבים.</p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">גרר בקרית ים: שירות גרירת משטח מהיר 24/7</h1>
+          <p className="text-lg md:text-xl mb-8">זקוקים לגרר בקרית ים? אנו זמינים בכל שעות היממה לחילוץ רכבים תקולים. שירות אמין, מהיר ומקצועי.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-3 rounded-lg font-bold text-lg">
+            <a href={`tel:${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-3 rounded-lg font-bold text-lg">
               התקשרו עכשיו: {BUSINESS_INFO.phone}
             </a>
             <WhatsAppCTA cityName="קרית ים" />
@@ -53,33 +53,33 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2>שירות גרירת רכב תקול בקרית ים – מענה מהיר ומקצועי</h2>
-        <p className="mb-4">אם נתקעתם עם הרכב, שירות גרירת המשטח שלנו מבטיח הובלה בטוחה לכל יעד. אנו נותנים מענה רחב לתושבי הקריות, כולל <Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="text-blue-600 underline">affordable flatbed towing route 22 krayot area</Link>. זקוקים לחילוץ דחוף מחוץ לקרית ים? אנו מספקים גם <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">affordable car breakdown towing check post haifa krayot</Link>.</p>
+        <h2>שירות גרירת רכב בקרית ים – מענה מהיר לכל תקלה</h2>
+        <p className="mb-4">אם הרכב נתקע, שירות גרר המשטח שלנו מבטיח הובלה בטוחה למוסך או לכל יעד אחר. אנו משרתים את כל אזור הצפון, כולל מתן מענה דרך <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">affordable car breakdown towing check post haifa krayot</Link>. זקוקים לעזרה בקרבת מקום? אנו מספקים פתרונות גם למי שמחפש <Link href="/areas/haifa-general/affordable-24-7-towing-kiryat-bialik-flat-tire" className="text-blue-600 underline">affordable 24 7 towing kiryat bialik flat tire</Link> עבור רכבים פרטיים.</p>
         
-        <h3>למה לבחור בנו?</h3>
+        <h3>למה לבחור בגרר שלנו?</h3>
         <ul className="list-disc ml-6 mb-6">
-          <li>זמינות מלאה 24/7 לכל תושבי קרית ים.</li>
-          <li>ציוד מתקדם: גרירת משטח השומרת על שלדת הרכב.</li>
-          <li>מחיר הוגן ושקיפות מלאה ללא הפתעות.</li>
-          <li>צוותים מקצועיים עם ניסיון רב בחילוץ רכבים תקולים.</li>
+          <li>זמינות 24/7: מגיעים לכל נקודה בקרית ים והסביבה.</li>
+          <li>ציוד מקצועי: משטח גרירה למניעת נזקים לרכב.</li>
+          <li>מחיר הוגן: ללא הפתעות, שקיפות מלאה.</li>
+          <li>ניסיון עשיר: צוות מיומן בטיפול ברכבים תקולים.</li>
         </ul>
 
-        <p><em>שים לב: השירות שלנו מתמקד ברכבים פרטיים ומסחריים. במידה והרכב שלכם ישן ואינו ראוי לנסיעה, ניתן לבדוק אפשרויות של <Link href="/areas/haifa-general/car-scrapping-haifa-krayot-towing" className="text-blue-600 underline">car scrapping haifa krayot towing</Link> או <Link href="/areas/haifa-general/פינוי-רכב-גרוטאה-לחלפים-קריית-מוצקין" className="text-blue-600 underline">פינוי רכב גרוטאה לחלפים קריית מוצקין</Link>.</em></p>
+        <p className="mb-6">במידה והרכב שלכם מושבת ולא ניתן לתיקון, אנו עובדים בשיתוף פעולה עם שירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-rothschild" className="text-blue-600 underline">buy cars for scrap kiryat yam rothschild</Link> כדי לפנות את הרכב בצורה מסודרת.</p>
 
         <section className="mt-12 bg-gray-50 p-6 rounded-lg">
-          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות על גרירת רכב בקרית ים</h3>
+          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות</h3>
           <dl className="space-y-4">
             <div>
-              <dt className="font-bold">האם אתם מספקים שירותי גרירה בקרבת ציר 22?</dt>
-              <dd>כן, אנו פעילים בפריסה רחבה לאורך כל הקריות ומספקים מענה מהיר בדרכים הראשיות.</dd>
+              <dt className="font-bold">מהו זמן ההגעה הממוצע בקרית ים?</dt>
+              <dd>אנו משתדלים להגיע לכל קריאה תוך זמן קצר מרגע הפנייה, בהתאם לעומסי התנועה באזור הקריות.</dd>
             </div>
             <div>
-              <dt className="font-bold">מה עושים אם נתקעתי עם הרכב בשבת?</dt>
-              <dd>אנו זמינים 24/7, כולל שבתות וחגים, כדי לתת לכם שקט נפשי בכל זמן.</dd>
+              <dt className="font-bold">האם אתם גוררים רכבים מהעליות לכיוון הכרמל?</dt>
+              <dd>בהחלט. אם נתקעתם באזורים מורכבים יותר, אנו מספקים שירותי <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-area" className="text-blue-600 underline">car stuck in mud carmel area</Link> מקיפים.</dd>
             </div>
             <div>
-              <dt className="font-bold">האם המחיר כולל מע״מ?</dt>
-              <dd>המחיר שניתן בטלפון הוא שקוף והוגן. התקשרו אלינו לקבלת הצעת מחיר מדויקת בהתאם למיקום וסוג הרכב.</dd>
+              <dt className="font-bold">האם השירות כולל גרירת רכבים ישנים לחלפים?</dt>
+              <dd>כן, אם החלטתם לוותר על הרכב, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="text-blue-600 underline">sell damaged car for parts haifa immediate pickup</Link>.</dd>
             </div>
           </dl>
         </section>

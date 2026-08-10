@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "קניית רכבים לפירוק בקריית ים - מזומן במקום | פינוי מיידי",
-  description: "נתקעתם עם רכב ישן? קניית רכבים לפירוק בקריית ים במזומן במקום. שירות פינוי רכבים מקצועי, הגעה מהירה לכל אזור בקריית ים. התקשרו עכשיו להצעת מחיר הוגנת!",
+  title: "קניית רכבים לפירוק בקריית ים - מזומן במקום | פינוי מיידי 24/7",
+  description: "רוצים למכור רכב לפירוק בקריית ים? מקבלים מזומן במקום! שירות מהיר, הוגן ומקצועי לכל סוגי הרכבים. התקשרו עכשיו לפינוי מיידי מהבית!",
   alternates: { canonical: "/areas/haifa-general/cash-for-junk-cars-kiryat-yam-immediate-pickup" },
 };
 
@@ -32,7 +32,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">קניית רכבים לפירוק בקריית ים – פינוי מיידי ומזומן במקום</h1>
           <p className="text-xl mb-8">
-            אנו מספקים שירות מקצועי של קניית רכבים לפירוק בקריית ים. אם ברשותכם רכב ישן, רכב מושבת או רכב לאחר תאונה, אנו נגיע לפנות אותו באופן מיידי. אנו מתמחים ברכבים פרטיים ומסחריים. במידה ואתם זקוקים גם לשירותי גרירה נוספים, ניתן לבדוק אפשרות ל-<Link href="/areas/haifa-general/cheap-towing-kiryat-yam-to-kiryat-motzkin" className="underline font-semibold">גרר זול מקריית ים לקריית מוצקין</Link>.
+            אנו מספקים שירות מקצועי של קניית רכבים לפירוק בקריית ים. אם ברשותכם רכב ישן, מושבת או לאחר תאונה, אנו נגיע לפנות אותו באופן מיידי ובמחיר הוגן. אנו מתמחים ברכבים פרטיים ומסחריים. במידה ואתם זקוקים גם לשירותי גרירה, ניתן לבדוק אפשרות ל-<Link href="/areas/haifa-general/cheap-towing-kiryat-yam-to-kiryat-motzkin" className="underline font-semibold">גרר זול מקריית ים לקריית מוצקין</Link>.
           </p>
           <div className="flex flex-col gap-4">
             <WhatsAppCTA cityName="קריית ים" />
@@ -52,18 +52,23 @@ export default function Page() {
           <li>פינוי מיידי מכל נקודה בקריית ים.</li>
           <li>תשלום הוגן במזומן במעמד הפינוי.</li>
           <li>שירות אדיב, מהיר ומקצועי לכל סוגי הרכבים.</li>
-          <li>סיוע מקצועי גם לתושבי האזור, כולל <Link href="/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal" className="text-blue-600 underline">קניית רכבים לפירוק בקריית ביאליק</Link>.</li>
+          <li>סיוע מקצועי גם בשכונות סמוכות, כולל <Link href="/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal" className="text-blue-600 underline">קניית רכבים לפירוק בקריית ביאליק</Link>.</li>
+          <li>שירותים ממוקדים לתושבי האזור כמו <Link href="/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-rothschild" className="text-blue-600 underline">קניית רכבים לפירוק באזור רוטשילד קריית ים</Link>.</li>
         </ul>
 
         <h2 className="text-3xl font-bold mb-6">שאלות נפוצות</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="font-bold text-xl">האם אתם מפנים גם רכבים ללא טסט?</h3>
-            <p>כן, אנו קונים ומפנים רכבים ללא טסט, רכבים עם תקלות מכניות או רכבים שעברו תאונה.</p>
+            <h3 className="font-bold text-xl">האם אתם קונים רכבים ללא טסט?</h3>
+            <p>כן, אנו רוכשים ומפנים רכבים ללא טסט, רכבים עם תקלות מכניות, או רכבים שלא ניתן להעביר בטסט, תמיד במחיר הוגן.</p>
           </div>
           <div>
-            <h3 className="font-bold text-xl">תוך כמה זמן תגיעו לפנות את הרכב?</h3>
-            <p>אנו מציעים שירות מהיר בקריית ים, לרוב הגעה תוך זמן קצר בתיאום מראש.</p>
+            <h3 className="font-bold text-xl">איך מתבצע תהליך הפינוי?</h3>
+            <p>התהליך פשוט: אתם מתקשרים, אנו מתאמים הגעה לכתובתכם בקריית ים, בוחנים את הרכב ומשלמים במזומן מיד במעמד הפינוי.</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-xl">האם ניתן לפנות רכב שנתקע בדרך?</h3>
+            <p>בוודאי. אנו מומחים במתן פתרונות לפינוי רכבים תקועים בדומה לשירותי <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">גרירה בחירום בחיפה והקריות</Link>.</p>
           </div>
         </div>
       </section>

@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ 4x4 מבוץ ביער הכרמל חיפה | הגעה מהירה 24/7',
-  description: 'נתקעתם עם רכב השטח בבוץ ביער הכרמל? שירות חילוץ 4x4 מקצועי בחיפה והסביבה. זמינות 24/7, הגעה מהירה ומחיר הוגן. התקשרו עכשיו!',
+  title: 'חילוץ 4x4 מבוץ ביער הכרמל חיפה | הגעה מהירה 24/7 במחיר הוגן',
+  description: 'נתקעתם עם רכב השטח בבוץ ביער הכרמל? שירות חילוץ 4x4 מקצועי בחיפה והסביבה. הגעה תוך זמן קצר, זמינות 24/7 ומחירים הוגנים. התקשרו עכשיו!',
   alternates: {
     canonical: 'https://yourdomain.com/areas/haifa-general/4x4-mud-recovery-carmel-haifa',
   },
@@ -46,22 +46,22 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">מומחים בחילוצי 4x4 ביער הכרמל</h2>
           <p className="text-lg mb-6 leading-relaxed">
-            מחפשים <Link href="/areas/haifa-general/off-road-rescue-stuck-in-mud-carmel" className="text-blue-400 underline">off road rescue stuck in mud carmel</Link>? אנחנו מתמחים במתן פתרונות בשטח סבוך. אם רכבכם נתקע, ניתן גם לבדוק את השירות שלנו עבור <Link href="/areas/haifa-general/car-stuck-in-mud-rescue-carmel-forest-haifa" className="text-blue-400 underline">car stuck in mud rescue carmel forest haifa</Link> לפתרונות מהירים.
+            זקוקים לשירות מקצועי של <Link href="/areas/haifa-general/4x4-vehicle-stuck-in-mud-carmel-forest" className="text-blue-400 underline">4x4 vehicle stuck in mud carmel forest</Link>? אנו מתמחים בחילוץ רכבים מכל סוג בדרכי עפר. אם הרכב שלכם שקע באזור השמורות, אנו מספקים גם שירות <Link href="/areas/haifa-general/car-extraction-from-mud-carmel-reserve-haifa" className="text-blue-400 underline">car extraction from mud carmel reserve haifa</Link> מקצועי ומהיר. במידה ואתם באזור האוניברסיטה, זמין עבורכם שירות <Link href="/areas/haifa-general/4x4-rescue-mud-carmel-forest-haifa-university" className="text-blue-400 underline">4x4 rescue mud carmel forest haifa university</Link>.
           </p>
           
           <h3 className="text-2xl font-bold mt-10 mb-6">שאלות נפוצות</h3>
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div>
               <h4 className="font-bold">כמה זמן לוקח לחילוץ להגיע ליער הכרמל?</h4>
-              <p>אנו משתדלים להגיע לכל נקודה ביער הכרמל בחיפה במינימום זמן בהתאם לתנאי השטח.</p>
+              <p>אנו משתדלים להגיע לכל נקודה ביער הכרמל בחיפה במינימום זמן בהתאם לתנאי השטח והתנועה.</p>
             </div>
             <div>
-              <h4 className="font-bold">האם אתם מחלצים גם רכבים פרטיים?</h4>
-              <p>כן, אנו נותנים מענה לחילוץ רכבים פרטיים ומסחריים שנתקעו בדרכי עפר.</p>
+              <h4 className="font-bold">האם אתם מחלצים רכבים שקעו בבוץ כבד?</h4>
+              <p>בהחלט. צוותי השטח שלנו מצוידים בציוד גרירה מתקדם המתאים בדיוק למקרים של <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-area" className="text-blue-400 underline">car stuck in mud carmel area</Link>.</p>
             </div>
             <div>
-              <h4 className="font-bold">האם אתם מבצעים גרירת אופנועים?</h4>
-              <p>חשוב להדגיש: אנו מתמקדים בחילוץ רכבים בלבד ואיננו מספקים שירותי גרירה לאופנועים.</p>
+              <h4 className="font-bold">האם השירות כולל גרירה אם הרכב לא מניע?</h4>
+              <p>כן, לאחר חילוץ הרכב מהבוץ במידת הצורך נבצע גרירה למוסך הקרוב, למעט אופנועים שאותם איננו גוררים.</p>
             </div>
           </div>
         </div>

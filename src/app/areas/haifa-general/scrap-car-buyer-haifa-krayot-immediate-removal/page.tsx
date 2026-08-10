@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "קונה רכבים לפירוק בחיפה והקריות | פינוי מיידי ומזומן",
+  description: "מוכרים רכב לפירוק בחיפה והקריות? אנו מציעים שירות פינוי רכבים מיידי, הצעת מחיר הוגנת במקום ושירות מקצועי 24/7. התקשרו עכשיו לקבלת הצעת מחיר!",
+  alternates: {
+    canonical: "/areas/haifa-general/scrap-car-buyer-haifa-krayot-immediate-removal"
+  }
+};
 
 export default function Page() {
   const jsonLd = {
@@ -35,9 +45,29 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירות פינוי רכבים לפירוק בחיפה והקריות</h2>
-        <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק מכל הסוגים: רכבים פרטיים, מסחריים ורכבי שטח (4x4). אנו מציעים שירות פינוי מיידי ללא עלות, תוך מתן הצעת מחיר הוגנת במקום.</p>
+        <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק מכל הסוגים: רכבים פרטיים, מסחריים ורכבי שטח (4x4). אנו מציעים שירות פינוי מיידי ללא עלות, תוך מתן הצעת מחיר הוגנת במקום. אם הרכב שלכם תקוע באזור <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="text-blue-600 underline">צ'ק פוסט</Link> או <Link href="/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-rothschild" className="text-blue-600 underline">קריית ים</Link>, אנו נגיע במהירות.</p>
         <p className="mb-4 font-semibold text-red-600">שים לב: איננו מספקים שירותי פינוי או קנייה לאופנועים.</p>
-        <p>הצוות שלנו מכיר היטב את אזור חיפה והקריות ומבטיח הגעה מהירה לכל כתובת, תוך עמידה בלוחות זמנים קפדניים.</p>
+        <p>הצוות שלנו מכיר היטב את אזור חיפה והקריות ומבטיח הגעה מהירה לכל כתובת, תוך עמידה בלוחות זמנים קפדניים. אנו מספקים פתרונות גם למי שזקוק לשירותי גרירה דחופים, כגון <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">גרירה בצ'ק פוסט</Link> או חילוץ רכב תקוע.</p>
+      </section>
+
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על פירוק רכבים באזור חיפה</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold">האם אתם קונים כל סוג רכב לפירוק?</h3>
+              <p>אנו קונים מגוון רחב של רכבים: רכבים שירדו מהכביש, רכבים עם תקלות מנוע, ורכבים ישנים. לצערנו, איננו עוסקים בפירוק אופנועים.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">תוך כמה זמן תגיעו לפנות את הרכב?</h3>
+              <p>השירות שלנו באזור חיפה והקריות הוא מיידי. אנו מתחייבים ללוחות זמנים מהירים כדי לפנות את המטרד מהשטח שלכם בהקדם האפשרי.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">מה קורה אם הרכב שלי תקוע במקום מרוחק?</h3>
+              <p>בין אם הרכב בבית או תקוע בדרך, אנו מנוסים בחילוץ וגרירה באזורים מורכבים. במידה ומדובר בתקלה ולא בפירוק, תוכלו לבדוק שירותים נוספים כגון <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-area" className="text-blue-600 underline">חילוץ רכב מהבוץ בכרמל</Link>.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

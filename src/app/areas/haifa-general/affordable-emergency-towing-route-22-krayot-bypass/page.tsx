@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "גרירה בכביש 22 עוקף קריות | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם בכביש 22? אנו מספקים שירותי גרירה מקצועיים ומהירים לעוקף קריות 24/7. הגעה מהירה, שירות אדיב ומחיר הוגן לכל סוגי הרכבים. התקשרו עכשיו!",
+  description: "נתקעתם בכביש 22? שירותי גרירה מקצועיים ומהירים לעוקף קריות 24/7. הגעה מהירה, שירות אדיב ומחיר הוגן לכל סוגי הרכבים. התקשרו עכשיו לקבלת סיוע!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass"
   }
@@ -15,9 +15,9 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה דחופים עוקף קריות",
+    "name": "שירותי גרירה דחופים עוקף קריות כביש 22",
     "areaServed": "Haifa and Krayot",
-    "priceRange": "$$,$",
+    "priceRange": "₪₪",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -33,12 +33,12 @@ export default function Page() {
       {
         "@type": "Question",
         "name": "תוך כמה זמן אתם מגיעים לעוקף קריות?",
-        "acceptedAnswer": { "@type": "Answer", "text": "אנו שואפים להגיע לכל קריאה בכביש 22 תוך זמן מינימלי, בהתאם לעומסי התנועה באזור." }
+        "acceptedAnswer": { "@type": "Answer", "text": "אנו שואפים להגיע לכל קריאה בכביש 22 תוך זמן מינימלי, בהתאם לעומסי התנועה באזור הקריות וצ'ק פוסט." }
       },
       {
         "@type": "Question",
-        "name": "מה לעשות במקרה של תאונה בכביש 22?",
-        "acceptedAnswer": { "@type": "Answer", "text": "במקרה של תאונה יש לפנות את הרכב מהנתיב במהירות ובבטחה. אנו מתמחים בפינוי מהיר." }
+        "name": "האם אתם נותנים שירות גרירה גם לאזור צ'ק פוסט?",
+        "acceptedAnswer": { "@type": "Answer", "text": "כן, אנו מספקים שירותי גרירה מקיפים גם באזור הצ'ק פוסט והחיבורים לכביש 22. למידע נוסף בקרו בדף גרירת רכבים תקיעים בצ'ק פוסט." }
       }
     ]
   };
@@ -55,7 +55,7 @@ export default function Page() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה דחופים ובמחיר הוגן בכביש 22 עוקף קריות</h1>
           <p className="text-lg md:text-xl mb-8">
             נתקעתם עם הרכב בכביש 22? אנו מציעים מענה מהיר ומקצועי לכל סוגי הרכבים הפרטיים והמסחריים. 
-            זקוקים לסיוע במקרה של תאונה? אנו מציעים שירות מיוחד של <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="underline font-semibold">גרירה לאחר תאונה בכביש 22</Link>.
+            זקוקים לסיוע באזור צ'ק פוסט והסביבה? אנו מציעים פתרונות מהירים גם עבור <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="underline font-semibold">שירותי גרירת רכבים תקיעים בצ'ק פוסט</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -75,9 +75,11 @@ export default function Page() {
           <ul className="space-y-4 text-gray-300">
             <li>✓ זמינות מלאה 24/7 לכל אורך עוקף קריות.</li>
             <li>✓ הגעה מהירה לנקודת התקיעה בבטחה.</li>
-            <li>✓ שירות אדיב ושקוף במחיר הוגן.</li>
-            <li>✓ מומחים לרכבים פרטיים, מסחריים ורכבי שטח.</li>
-            <li>✓ שירות ממוקד עבור <Link href="/areas/haifa-general/motorcycle-towing-accident-road-22-kiryat-ata" className="text-blue-400">גרירת אופנועים לאחר תאונה בכביש 22</Link>.</li>
+            <li>✓ שירות אדיב ושקוף במחיר הוגן.
+            </li>
+            <li>✓ מומחים לרכבים פרטיים ומסחריים כבדים.
+            </li>
+            <li>✓ שירות משלים עבור <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-400">גרירת רכבים תקועים בכביש 22 ובצ'ק פוסט</Link>.</li>
           </ul>
         </div>
       </section>
@@ -88,15 +90,15 @@ export default function Page() {
           <div className="bg-white p-6 rounded-lg shadow-sm space-y-6">
             <div>
               <h3 className="font-bold">באילו רכבים אתם מטפלים?</h3>
-              <p className="text-gray-600">אנו נותנים שירות לרכבים פרטיים, רכבים מסחריים ורכבי 4x4.</p>
+              <p className="text-gray-600">אנו נותנים שירות לרכבים פרטיים, מסחריים ורכבי 4x4. אם נתקעת בשטח, אנו מציעים גם פתרונות מקצועיים כמו <Link href="/areas/haifa-general/4x4-vehicle-stuck-in-mud-carmel-forest" className="text-blue-600 underline">חילוץ רכבי 4x4 שנתקעו בבוץ</Link>.</p>
             </div>
             <div>
               <h3 className="font-bold">מה טווח המחירים לגרירה בכביש 22?</h3>
-              <p className="text-gray-600">אנו מציעים מחירים הוגנים ותחרותיים. המחיר נקבע לפי מרחק הגרירה וסוג הרכב. צרו קשר לקבלת הצעת מחיר מדויקת.</p>
+              <p className="text-gray-600">אנו מציעים מחירים הוגנים ותחרותיים בהתאם למרחק הגרירה וסוג הרכב. המטרה שלנו היא לתת מענה משתלם לכל תקלה בדרך.</p>
             </div>
             <div>
-              <h3 className="font-bold">האם אתם גוררים גם לאחר תאונות?</h3>
-              <p className="text-gray-600">כן, אנו מספקים מענה מהיר במיוחד למקרים של רכבים תקועים או לאחר תאונות דרכים לאורך כביש 22.</p>
+              <h3 className="font-bold">האם אתם קונים רכבים תקועים ללא יכולת תיקון?</h3>
+              <p className="text-gray-600">כן, במידה והרכב במצב של אובדן גמור, ניתן לבדוק שירותי <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="text-blue-600 underline">מכירת רכב לפירוק בחיפה</Link> במקום לגרור לתיקון.</p>
             </div>
           </div>
         </div>
