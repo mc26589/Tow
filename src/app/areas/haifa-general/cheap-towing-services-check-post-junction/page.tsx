@@ -33,9 +33,8 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">שירותי גרירה זולים בצומת צ'ק פוסט</h1>
           <p className="text-xl mb-8 max-w-2xl">
-            זקוקים לחילוץ מהיר בצומת צ'ק פוסט? אנו מתמחים במתן שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי 4x4. 
-            אנו מציעים מחירים הוגנים ושירות זמין 24/7. 
-            חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.
+            זקוקים לחילוץ מהיר בצומת צ'ק פוסט? אנו מתמחים במתן שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי שטח. אנו מציעים מחירים הוגנים ושירות זמין 24/7. 
+            חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex flex-wrap gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -49,14 +48,16 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בצומת צ'ק פוסט?</h2>
-        <ul className="list-disc pr-6 space-y-4">
-          <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
-          <li>הגעה מהירה לכל נקודה בצומת צ'ק פוסט והסביבה.</li>
-          <li>צוות מיומן ומקצועי לטיפול בטוח ברכבכם.</li>
-          <li>מחירים הוגנים ושקופים ללא הפתעות.</li>
-        </ul>
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בצומת צ'ק פוסט?</h2>
+          <ul className="space-y-4 text-lg">
+            <li>✓ זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
+            <li>✓ הגעה מהירה לכל נקודה בצומת צ'ק פוסט והסביבה.</li>
+            <li>✓ מחירים הוגנים ושקופים ללא הפתעות.</li>
+            <li>✓ צוות מיומן ומקצועי לטיפול בטוח ברכבכם.</li>
+          </ul>
+        </div>
       </section>
     </main>
   );
