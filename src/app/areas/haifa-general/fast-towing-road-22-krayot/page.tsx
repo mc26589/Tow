@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בכביש 22 קריות | חילוץ מהיר 24/7 – מחיר הוגן",
-  description: "נתקעתם בכביש 22? גרר מהיר לקריות וחיפה, הגעה מהירה, שירות אדיב ומחירים נוחים. פתרונות גרירה וחילוץ לכל סוגי הרכבים 24/7. התקשרו עכשיו לקבלת סיוע!",
+  title: "גרר בכביש 22 קריות | הגעה מהירה 24/7 – מחיר הוגן",
+  description: "נתקעתם בכביש 22 עוקף קריות? גרר מהיר ומקצועי לרכבים פרטיים ומסחריים. הגעה מהירה לכל נקודה, מחיר הוגן ושירות אדיב 24/7. התקשרו עכשיו להצלת הרכב!",
   alternates: {
     canonical: "/areas/haifa-general/fast-towing-road-22-krayot"
   }
@@ -15,10 +15,10 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה חיפה והקריות",
+    "name": "שירותי גרירה בכביש 22 וקריות",
     "areaServed": { "@type": "Place", "name": "כביש 22, חיפה והקריות" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
-    "priceRange": "$$,$",
+    "priceRange": "מחיר הוגן ושקוף",
     "serviceType": "גרירת רכבים וחילוץ דרך",
     "geo": { "@type": "GeoCoordinates", "latitude": "32.8191", "longitude": "35.0553" }
   };
@@ -32,9 +32,9 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר מהיר לכביש 22 קריות – חילוץ מקצועי תוך זמן קצר</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר מהיר לכביש 22 קריות – חילוץ מקצועי לכל סוגי הרכבים</h1>
           <p className="text-xl mb-8 max-w-2xl">
-            נתקעתם עם הרכב בכביש עוקף קריות (כביש 22)? אנו מספקים מענה מקצועי לגרירה וחילוץ רכבים פרטיים, מסחריים ושטח. למידע נוסף על מקרים מורכבים, ניתן לעיין ב-<Link href="/areas/haifa-general/fast-towing-services-road-22-krayot-bypass" className="underline font-bold">שירותי גרר מהירים בכביש 22</Link>.
+            זקוקים לגרר בכביש עוקף קריות? אנו מספקים מענה חירום 24/7. אם אתם זקוקים לשירות מקצועי באזור צומת מרכזי, ניתן לראות את הפתרונות שלנו עבור <Link href="/areas/haifa-general/cheap-towing-check-post-haifa-fast-service" className="underline font-bold">גרירה מהירה בצ'ק פוסט</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -53,15 +53,15 @@ export default function Page() {
         <ul className="grid md:grid-cols-3 gap-8">
           <li className="p-6 border rounded-xl">
             <h3 className="font-bold text-xl mb-2">זמינות 24/7</h3>
-            <p>שירות גרירה מסביב לשעון, גם בסופי שבוע, כדי שלא תישאר תקוע בכביש מהיר.</p>
+            <p>שירות גרירה מסביב לשעון, גם בסופי שבוע וחגים, כדי שלא תישאר תקוע בכביש מהיר.</p>
           </li>
           <li className="p-6 border rounded-xl">
             <h3 className="font-bold text-xl mb-2">מומחיות בנתיבי עוקף קריות</h3>
-            <p>הכרות מעמיקה עם הדרכים, כולל <Link href="/areas/haifa-general/accident-towing-road-22-check-post-krayot" className="text-blue-600 underline">גרירה לאחר תאונה בצומת צ'ק פוסט</Link>.</p>
+            <p>ניסיון רב בחילוץ וגרירה באזור עמוס זה, כולל <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-600 underline">שירותי גרר זולים בצומת צ'ק פוסט</Link>.</p>
           </li>
           <li className="p-6 border rounded-xl">
             <h3 className="font-bold text-xl mb-2">מחירים הוגנים</h3>
-            <p>שקיפות מלאה והצעת מחיר הוגנת בטלפון לפני תחילת העבודה.</p>
+            <p>שקיפות מלאה והצעת מחיר הוגנת בטלפון לפני תחילת העבודה – ללא הפתעות.</p>
           </li>
         </ul>
       </section>
@@ -71,16 +71,16 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על גרירה בכביש 22</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-lg">תוך כמה זמן הגרר מגיע?</h3>
-              <p>אנו משתדלים להגיע לכל נקודה בכביש 22 בזמן הקצר ביותר, בהתאם לעומסי התנועה.</p>
+              <h3 className="font-bold text-lg">תוך כמה זמן הגרר מגיע לכביש 22?</h3>
+              <p>אנו משתדלים להגיע לכל נקודה על ציר כביש 22 בזמן הקצר ביותר, תוך התחשבות בעומסי התנועה באזור הקריות.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">האם אתם גוררים רכבים חשמליים?</h3>
-              <p>כן, אנו נותנים מענה מקצועי גם ל-<Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">גרירת רכב חשמלי עם מצבר ריק בכביש 22</Link>.</p>
+              <h3 className="font-bold text-lg">האם אתם גוררים רכבים חשמליים תקועים?</h3>
+              <p>כן, אנו מציעים שירות מיוחד עבור <Link href="/areas/haifa-general/electric-vehicle-breakdown-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירה בטוחה לרכבים חשמליים בכביש 22</Link>.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">האם השירות כולל פינוי רכבים לפירוק?</h3>
-              <p>כן, ניתן לפנות אלינו גם עבור <Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="text-blue-600 underline">פינוי רכבים לפירוק באזור הקריות</Link>.</p>
+              <h3 className="font-bold text-lg">האם אתם עוסקים בפינוי רכבים ישנים?</h3>
+              <p>כן, בנוסף לגרירה, אנו מבצעים <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-600 underline">פינוי רכבים לגריטה ופירוק באזור חיפה והקריות</Link>.</p>
             </div>
           </div>
         </div>
