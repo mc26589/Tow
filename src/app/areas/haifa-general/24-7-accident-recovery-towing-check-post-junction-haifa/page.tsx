@@ -4,13 +4,13 @@ import { WhatsAppCTA } from '@/components/whatsapp-cta';
 import { BUSINESS_INFO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: "גרר בצומת צ'ק פוסט חיפה 24/7 | הגעה תוך 30 דקות - שירות אמין",
-  description: "נתקעתם בצומת צ'ק פוסט? גרר מפרץ אקספרס מספק גרירה וחילוץ תאונות 24/7. הגעה מהירה, מחיר הוגן ומקצועיות ללא פשרות. לכל סוגי הרכבים התקשרו עכשיו!",
+  title: "גרר בצומת צ'ק פוסט חיפה 24/7 | הגעה מהירה ומחיר הוגן",
+  description: "נתקעתם בצומת צ'ק פוסט? גרר מפרץ אקספרס מציע שירותי גרירה וחילוץ תאונות 24/7. הגעה תוך 30 דקות למקום. התקשרו עכשיו לשירות מקצועי ואמין!",
   alternates: {
     canonical: "https://www.towingrescuehaifa.co.il/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa",
   },
   openGraph: {
-    title: "גרר בצומת צ'ק פוסט חיפה 24/7 | הגעה תוך 30 דקות",
+    title: "גרר בצומת צ'ק פוסט חיפה 24/7 | הגעה מהירה ומחיר הוגן",
     description: "צריכים גרר בצומת צ'ק פוסט? שירות גרירה וחילוץ תאונות 24/7 עם הגעה מהירה ומחיר הוגן. התקשרו עכשיו!",
     url: "https://www.towingrescuehaifa.co.il/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa",
     siteName: "Towing Rescue Haifa",
@@ -40,14 +40,14 @@ export default function Page() {
 
       <section className="container mx-auto p-4 py-12">
         <p className="text-lg mb-4 leading-relaxed font-rubik text-gray-800">
-          נתקעתם עם הרכב בצומת העמוס בחיפה? ב-<strong className="font-semibold">גרר מפרץ אקספרס</strong> אנו מספקים מענה מיידי למקרים של תאונות דרכים, תקלות מנוע או פנצ'רים. אם אתם זקוקים ל-<Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">שירות גרירה מהיר בצ'ק פוסט</Link> או נתקעתם בדרכים, הצוות שלנו ערוך לכל קריאה 24/7. אנו מנוסים מאוד בפינוי מהיר לאחר תאונות בכביש 4 ובצירי התנועה הראשיים. לתשומת לבכם, אנו מתמחים ברכבים פרטיים ומסחריים ואיננו מספקים שירותי גרירה לאופנועים.
+          נתקעתם עם הרכב בצומת העמוס בחיפה? ב-<strong className="font-semibold">גרר מפרץ אקספרס</strong> אנו מספקים מענה מיידי למקרים של תאונות דרכים, תקלות מנוע או פנצ'רים. אם אתם זקוקים ל-<Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה זולים בצ'ק פוסט</Link> או נתקעתם בדרכים, הצוות שלנו ערוך לכל קריאה 24/7. אנו מנוסים מאוד בפינוי מהיר לאחר תאונות בכביש 4 ובצירי התנועה הראשיים. לתשומת לבכם, אנו מתמחים ברכבים פרטיים ומסחריים ואיננו מספקים שירותי גרירה לאופנועים.
         </p>
 
         <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm mb-6">
           <h2 className="text-2xl font-bold mb-4 text-blue-800">למה לבחור בגרר מפרץ אקספרס?</h2>
           <ul className="list-disc list-inside space-y-3 text-gray-700">
-            <li><strong className="font-semibold">זמינות 24/7:</strong> פריסה רחבה בחיפה, כולל <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירה מהירה בכביש 22</Link>.</li>
-            <li><strong className="font-semibold">מחירים הוגנים:</strong> פתרונות גרירה משתלמים ושקופים לכל תקציב.</li>
+            <li><strong className="font-semibold">זמינות 24/7:</strong> פריסה רחבה בחיפה, כולל <Link href="/areas/haifa-general/emergency-towing-road-22-krayot-bypass" className="text-blue-600 underline">גרירה מהירה בכביש 22</Link>.</li>
+            <li><strong className="font-semibold">מחירים הוגנים:</strong> פתרונות גרירה משתלמים ושקופים לכל תקציב הכוללים <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-600 underline">שירותי גרירה במחיר משתלם</Link>.</li>
             <li><strong className="font-semibold">מקצועיות בטיחותית:</strong> חילוץ רכבים מכל סוג תוך שמירה על שלמות הרכב.</li>
             <li><strong className="font-semibold">ניסיון רב:</strong> מומחים בפינוי כלי רכב לאחר תאונות דרכים קשות.</li>
           </ul>
@@ -58,15 +58,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold text-lg">האם אתם נותנים שירות גם מחוץ לצומת צ'ק פוסט?</h3>
-              <p className="text-gray-700">בהחלט. אנו פעילים בכל אזור המפרץ, כולל <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 underline">גרירה בדרכים מרכזיות</Link> כמו כביש 22 וציר ההסתדרות.</p>
+              <p className="text-gray-700">בהחלט. אנו פעילים בכל אזור המפרץ, כולל <Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="text-blue-600 underline">גרירה בכביש 22</Link> ובכל אזור הקריות.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">מה עושים אם הרכב מושבת לגמרי?</h3>
-              <p className="text-gray-700">במקרים בהם הרכב אינו ראוי עוד לנסיעה, אנו מציעים שירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-immediate-removal" className="text-blue-600 underline">קניית רכבים לפירוק בחיפה</Link> במזומן ובפינוי מיידי.</p>
+              <h3 className="font-bold text-lg">מה עושים אם הרכב מושבת לגמרי לאחר תאונה?</h3>
+              <p className="text-gray-700">במקרים בהם הרכב אינו ראוי עוד לנסיעה, אנו מציעים שירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-towing-included" className="text-blue-600 underline">פינוי רכבים לפירוק בחיפה</Link> במזומן ובפינוי מיידי.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">האם אתם גוררים רכבים מהשטח?</h3>
-              <p className="text-gray-700">אנחנו לא מתמחים בחילוצי שטח מורכבים כמו <Link href="/areas/haifa-general/car-stuck-in-mud-rescue-carmel-forest-haifa" className="text-blue-600 underline">חילוצי רכב מבוץ ביערות הכרמל</Link>, אך ערוכים לכל תקלה בכבישים סלולים.</p>
+              <h3 className="font-bold text-lg">האם אתם גוררים רכבים מהשטח באזור חיפה?</h3>
+              <p className="text-gray-700">אנו לא מבצעים חילוצי שטח, אך אם נתקעתם באזורים הרריים ניתן לפנות למומחים עבור <Link href="/areas/haifa-general/emergency-car-rescue-mud-carmel-forest" className="text-blue-600 underline">חילוצי רכב מבוץ ביערות הכרמל</Link>.</p>
             </div>
           </div>
         </div>

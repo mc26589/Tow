@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב מהבוץ ביער הכרמל חיפה | הגעה תוך 30 דקות - 24/7",
-  description: "נתקעתם בבוץ ביער הכרמל? שירות חילוץ רכב מהיר ומקצועי בחיפה והסביבה. מחיר הוגן, ציוד מתקדם וזמינות 24/7. התקשרו עכשיו לחילוץ מהיר!",
+  title: "חילוץ רכב מהבוץ ביער הכרמל | הגעה מהירה 24/7 - מחיר הוגן",
+  description: "נתקעתם בבוץ ביער הכרמל? שירות חילוץ מקצועי, מהיר וזול. הגעה תוך 30 דקות לכל רכב ששקע בשטח. פועלים 24/7. התקשרו עכשיו לחילוץ בטוח!",
   alternates: {
     canonical: "/areas/haifa-general/car-stuck-in-mud-rescue-carmel-forest-haifa",
   },
@@ -51,26 +51,30 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">שירותי חילוץ רכבים מבוץ - זמינות מלאה</h2>
           <p className="mb-6 text-lg leading-relaxed">
-            יער הכרמל הוא אזור מרהיב, אך הבוץ יכול להפתיע גם נהגים מנוסים. אם הרכב שלכם שקע, הימנעו מניסיונות יציאה שיגרמו נזק לצמיגים או לגיר. אנו מציעים שירות <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-400 hover:underline">חילוץ רכב מהבוץ ביער הכרמל ובאזור נשר</Link> בצורה מקצועית. במידת הצורך, אנו מעניקים סיוע גם לסטודנטים ולמטיילים בקרבת מוסדות הלימוד באמצעות <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university" className="text-blue-400 hover:underline">שירות חילוץ מהיר ליד אוניברסיטת חיפה</Link>.
+            יער הכרמל הוא אזור מרהיב, אך הבוץ יכול להפתיע גם נהגים מנוסים. אם הרכב שלכם שקע, הימנעו מניסיונות יציאה שיגרמו נזק לצמיגים או לגיר. אנו מציעים שירות חילוץ מהיר באזור. במידה ואתם עם רכב 4x4, ראו גם את השירות הייעודי שלנו ל-<Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa" className="text-blue-400 hover:underline">חילוץ שטח ו-4x4 ביער הכרמל</Link>. למי שמחפש חילוץ מקיף יותר, אנו מספקים גם מענה מסוג <Link href="/areas/haifa-general/emergency-car-rescue-mud-carmel-forest" className="text-blue-400 hover:underline">חילוץ דחוף בבוץ</Link> לכל סוגי הרכבים.
           </p>
 
           <h3 className="text-2xl font-bold mb-6 mt-10">למה לבחור בשירות שלנו?</h3>
           <ul className="list-disc list-inside space-y-3 mb-8 text-lg">
             <li>זמינות מיידית: פועלים 24/7, כולל בסופי שבוע וחגים.</li>
-            <li>ציוד מקצועי: חילוץ באמצעות כננות מיוחדות לכל סוגי הרכבים הפרטיים.</li>
-            <li>פריסה רחבה: הגעה מהירה לכל נקודה בחיפה והקריות.</li>
+            <li>ציוד מקצועי: חילוץ באמצעות כננות מיוחדות לכל סוגי הרכבים.</li>
+            <li>פריסה רחבה: הגעה מהירה לכל נקודה בחיפה והכרמל.</li>
           </ul>
 
           <div className="mt-16 border-t border-gray-700 pt-10">
             <h3 className="text-3xl font-bold mb-6">שאלות נפוצות על חילוץ ביער הכרמל</h3>
             <div className="space-y-6">
               <div>
-                <h4 className="text-xl font-bold">כמה זמן לוקח לכם להגיע ליער הכרמל?</h4>
-                <p className="text-gray-300">ברוב המקרים, הצוות שלנו מגיע ליער הכרמל תוך פחות מ-30 דקות, בהתאם לתנאי הדרך ועומסי התנועה באזור.</p>
+                <h4 className="text-xl font-bold">תוך כמה זמן תגיעו לחילוץ ביער?</h4>
+                <p className="text-gray-300">ברוב המקרים, הצוות שלנו מגיע ליער הכרמל תוך פחות מ-30 דקות, בהתאם לעומסי התנועה.</p>
               </div>
               <div>
-                <h4 className="text-xl font-bold">מה עושים אם הרכב לא מניע לאחר החילוץ?</h4>
-                <p className="text-gray-300">אנו מספקים שירותי גרירה מקצועיים למוסך הקרוב. אם אתם זקוקים לשירותי עזר נוספים, אנו מציעים גם פתרונות כגון <Link href="/areas/haifa-general/24-7-towing-electric-car-battery-dead-technion-haifa" className="text-blue-400 hover:underline">גרירה והתנעת רכבים חשמליים בטכניון</Link>.</p>
+                <h4 className="text-xl font-bold">האם אתם מחלצים רכבי שטח כבדים?</h4>
+                <p className="text-gray-300">כן, אנו מומחים ב-<Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-400 hover:underline">חילוץ 4x4 ורכבי שטח ביער הכרמל</Link> עם ציוד מתקדם.</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold">מה טווח המחירים שלכם?</h4>
+                <p className="text-gray-300">אנו מתחייבים למחיר הוגן ושקוף. המחיר נקבע לפי מורכבות החילוץ והמרחק מהכביש הראשי.</p>
               </div>
             </div>
           </div>

@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "קניית רכבים לפירוק באזור התעשייה קרית ביאליק | תשלום מזומן במקום",
-  description: "רוצים למכור רכב ישן? קונים רכבים לפירוק באזור התעשייה קרית ביאליק. תשלום הוגן במזומן, פינוי מהיר וגרירה חינם. התקשרו עכשיו להצעה משתלמת!",
+  title: "פירוק רכבים באזור התעשייה קרית ביאליק | תשלום מזומן והגעה מהירה",
+  description: "מוכרים רכב לפירוק בקרית ביאליק? אנו קונים רכבים ישנים ומושבתים באזור התעשייה - תשלום הוגן במזומן, גרירה חינם ושירות מהיר. התקשרו עכשיו להצעה!",
   alternates: {
     canonical: "/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik"
   }
@@ -46,7 +46,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-6">קניית רכבים לפירוק באזור התעשייה קרית ביאליק</h1>
-          <p className="text-lg md:text-xl mb-8">פינוי מהיר, תשלום הוגן במזומן וגרירה ללא עלות. המומחים לפינוי רכבים ישנים ומושבתים בקריות.</p>
+          <p className="text-lg md:text-xl mb-8">פינוי מהיר, תשלום הוגן במזומן וגרירה ללא עלות. המומחים לפינוי רכבים ישנים ומושבתים בכל אזור הקריות.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="קרית ביאליק" />
             <a href={`tel:${BUSINESS_INFO.phone}`} className="bg-white text-neutral-900 px-8 py-3 rounded-lg font-bold hover:bg-neutral-200 transition">
@@ -59,8 +59,8 @@ export default function Page() {
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-6">למה לבחור בנו לפירוק רכבים בקרית ביאליק?</h2>
         <p className="mb-4">
-          אנו מציעים שירות מקצועי ומקיף באזור התעשייה הישן. אם הרכב שלכם תקוע או שאתם מחפשים <Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="text-blue-400">פירוק רכבים בקרית מוצקין</Link> או ביאליק, אנו הכתובת. 
-          ניתן להתרשם גם משירותי <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-400">גרירה באזור צומת צ'ק פוסט</Link> או לבדוק שירותי <Link href="/areas/haifa-general/scrap-car-removal-kiryat-haim-cash" className="text-blue-400">פירוק רכבים בקרית חיים</Link> במזומן.
+          אנו מציעים שירות מקצועי ומקיף באזור התעשייה הישן. אם הרכב שלכם תקוע או שאתם מחפשים <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="text-blue-400">פירוק רכבים במזומן</Link> או גרירה מקצועית, אנו הכתובת. 
+          ניתן להתרשם גם משירותי <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-400">גרירה בצומת צ'ק פוסט</Link> או לבדוק שירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-towing-included" className="text-blue-400">פירוק רכבים בחיפה והקריות</Link> כולל גרירה.
         </p>
         <p className="text-red-400 font-semibold mb-8">חשוב להבהיר: אנו מתמחים ברכבים ורכבים מסחריים בלבד ואיננו מטפלים באופנועים.</p>
         
@@ -69,11 +69,11 @@ export default function Page() {
           <div className="space-y-4">
             <div>
               <p className="font-bold">האם אתם מגיעים לכל האזור?</p>
-              <p>כן, אנו פעילים בפריסה מלאה באזור הקריות, כולל שירותי גרירה מקצועיים כמו <Link href="/areas/haifa-general/towing-service-road-22-krayot-bypass" className="text-blue-400">גרירה בכביש 22 עוקף קריות</Link>.</p>
+              <p>כן, אנו פעילים בפריסה מלאה באזור הקריות, כולל שירותי גרירה מקצועיים כמו <Link href="/areas/haifa-general/emergency-towing-road-22-krayot-bypass" className="text-blue-400">גרירה בכביש 22 עוקף קריות</Link>.</p>
             </div>
             <div>
               <p className="font-bold">מהו תהליך העבודה?</p>
-              <p>התהליך פשוט: מתקשרים, מתאמים הגעה, מקבלים תשלום במזומן במקום ואנו דואגים לפינוי הרכב בגרר, כולל טיפול בכל הניירת הנדרשת.</p>
+              <p>התהליך פשוט: מתקשרים, מתאמים הגעה, מקבלים תשלום במזומן במקום ואנו דואגים לפינוי הרכב בגרר. אם אתם זקוקים גם ל-<Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-400">גרירה דחופה בקרית ביאליק</Link>, אנו כאן לשירותכם.</p>
             </div>
           </div>
         </div>
