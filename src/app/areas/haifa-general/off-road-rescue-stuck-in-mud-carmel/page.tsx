@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב מהבוץ בכרמל | חילוץ שטח 24/7 | הגעה מהירה",
-  description: "נתקעתם בבוץ בכרמל? צוות חילוץ שטח מקצועי בדרך אליכם! חילוץ 4x4, ג'יפים ורכבים פרטיים 24/7 במחיר הוגן. הגעה מהירה לכל אזור הכרמל. התקשרו עכשיו!",
+  title: "חילוץ רכב מהבוץ בכרמל | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם בבוץ בכרמל? צוות חילוץ שטח 4x4 בדרך אליכם! חילוץ מקצועי, מהיר ובמחיר הוגן לכל סוגי הרכבים. התקשרו עכשיו לחילוץ מיידי!",
   alternates: { canonical: "/areas/haifa-general/off-road-rescue-stuck-in-mud-carmel" },
 };
 
@@ -46,8 +46,8 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">מדוע לבחור בנו לחילוץ בכרמל?</h2>
-        <p className="mb-4">אנו מתמחים בחילוץ רכבים ששקעו בבוץ בדרכי עפר ובשטחים טרשיים. בין אם אתם זקוקים ל- <Link href="/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing" className="text-blue-600 font-semibold underline">שירותי גרירה באחוזה</Link> לאחר השקיעה או לחילוץ מורכב בלב החורש, הניסיון שלנו מבטיח עבודה מקצועית ללא נזקים לשלדה. אנו ערוכים לכל עונות השנה, כולל חילוצי חורף מאתגרים.</p>
-        <p>זקוקים לעזרה בדרכים אחרות? אנו מציעים גם <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-600 font-semibold underline">שירותי גרירה בצ'ק פוסט</Link> לכל רכב תקוע.</p>
+        <p className="mb-4">אנו מתמחים בחילוץ רכבים ששקעו בבוץ בדרכי עפר ובשטחים טרשיים. בין אם אתם זקוקים ל-<Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-600 font-semibold underline">חילוץ רכב מבוץ ביערות הכרמל ליד נשר</Link> או לשירותי גרירה מקצועיים, הניסיון שלנו מבטיח עבודה בטוחה ללא נזקים. אנו ערוכים לכל חילוץ בדרכי העפר של <Link href="/areas/haifa-general/car-stuck-in-mud-rescue-carmel-forest-haifa" className="text-blue-600 font-semibold underline">יערות הכרמל</Link>.</p>
+        <p>זקוקים לחילוץ מורכב יותר? אנו מציעים גם <Link href="/areas/haifa-general/hilutz-4x4-butz-carmel-haifa" className="text-blue-600 font-semibold underline">שירותי חילוץ 4x4 בכרמל</Link> לכל רכב תקוע.</p>
       </section>
 
       <section className="py-12 bg-gray-50">
@@ -60,10 +60,10 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold text-xl">האם אתם מחלצים גם אופנועים?</h3>
-              <p>לא, אנו מתמקדים אך ורק בחילוץ וגרירה של רכבים פרטיים, ג'יפים ורכבי 4x4. אין ברשותנו ציוד לשינוע אופנועים.</p>
+              <p>אנו מתמקדים אך ורק בחילוץ וגרירה של רכבים פרטיים, ג'יפים ורכבי 4x4. אין ברשותנו ציוד לשינוע אופנועים.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">איך נקבע מחיר החילוץ?</h3>
+              <h3 className="font-bold text-xl">איך נקבע מחיר החילוץ בכרמל?</h3>
               <p>המחיר נקבע בהתאם למיקום הרכב (עומק השקיעה בשטח) וסוג הציוד הנדרש. אנו דוגלים בשקיפות מלאה ובמחירים הוגנים ללא הפתעות.</p>
             </div>
           </div>

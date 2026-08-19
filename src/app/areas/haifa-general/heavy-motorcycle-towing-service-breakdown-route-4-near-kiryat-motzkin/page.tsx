@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "גרירת רכב בכביש 4 ליד קריית מוצקין | הגעה מהירה 24/7",
-  description: "נתקעתם בכביש 4 ליד קריית מוצקין? שירותי גרירה מקצועיים, מחיר הוגן והגעה מהירה לרכבים פרטיים ומסחריים. התקשרו עכשיו לחילוץ מהיר!",
+  description: "נתקעתם בכביש 4 ליד קריית מוצקין? שירותי גרירה מקצועיים, מחיר הוגן והגעה תוך 30 דקות לרכבים פרטיים ומסחריים. התקשרו עכשיו לחילוץ מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-service-breakdown-route-4-near-kiryat-motzkin"
   }
@@ -43,8 +43,8 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירות גרירה וחילוץ רכב בכביש 4 ליד קריית מוצקין</h1>
           <p className="text-lg mb-8">
-            נתקעתם עם הרכב בכביש 4? אנו מספקים מענה מקצועי לכל תקלה בדרך. אנו מתמחים בחילוץ רכבים פרטיים, רכבים מסחריים ו-4x4.
-            אם אתם מחפשים <Link href="/areas/haifa-general/cheap-small-car-towing-kiryat-motzkin-nave-ganim" className="underline">גרירה במחיר הוגן בקריית מוצקין</Link>, הצוות שלנו זמין עבורכם. 
+            נתקעתם עם הרכב בכביש 4? אנו מספקים מענה מקצועי לכל תקלה בדרך. אנו מתמחים בחילוץ רכבים פרטיים, רכבים מסחריים ו-4x4. 
+            זקוקים לעזרה באזור? אולי תתעניינו בשירותי <Link href="/areas/haifa-general/affordable-flatbed-towing-kiryat-bialik-industrial-zone" className="underline">גרירה באזור התעשייה קריית ביאליק</Link> הסמוך. 
             <br /><strong>שימו לב: שירותינו מיועדים לרכבים בלבד ואיננו מספקים שירותי גרירה לאופנועים.</strong>
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -65,8 +65,8 @@ export default function Page() {
           <ul className="space-y-4">
             <li>✓ זמינות 24/7 לכל קריאה באזור הקריות וכביש 4</li>
             <li>✓ מחירים הוגנים ושקיפות מלאה ללא הפתעות</li>
-            <li>✓ ניסיון רב בחילוץ רכבים מורכב, כולל <Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="text-blue-400">גרירה בטוחה בשיטת גרר משטח</Link></li>
-            <li>✓ שירותים משלימים כגון <Link href="/areas/haifa-general/cheap-towing-check-post-kiryat-ata" className="text-blue-400">גרירה בקריית אתא</Link> וסביבתה</li>
+            <li>✓ ניסיון רב בחילוץ רכבים מורכב, כולל <Link href="/areas/haifa-general/emergency-breakdown-towing-route-22-krayot-bypass" className="text-blue-400">גרירת חירום בכביש עוקף קריות 22</Link></li>
+            <li>✓ מענה מהיר גם במצבי <Link href="/areas/haifa-general/cheap-private-car-towing-24-7-kiryat-yam" className="text-blue-400">גרירת רכב פרטי בקריית ים</Link></li>
           </ul>
         </div>
       </section>
@@ -77,15 +77,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold">מהו זמן ההגעה הממוצע בכביש 4 ליד מוצקין?</h3>
-              <p>אנו משתדלים להגיע לכל קריאה בזמן המהיר ביותר האפשרי, לרוב תוך דקות ספורות ממועד הקריאה, בהתאם לעומסי התנועה בציר.</p>
+              <p>אנו משתדלים להגיע לכל קריאה בזמן המהיר ביותר האפשרי, לרוב תוך 30 דקות, בהתאם לעומסי התנועה בציר הראשי.</p>
             </div>
             <div>
-              <h3 className="font-bold">האם אתם מטפלים ברכבים שאינם ניתנים לתיקון?</h3>
-              <p>כן, במידה והרכב הושבת לחלוטין, ניתן לקבל מידע על <Link href="/areas/haifa-general/פינוי-רכב-גרוטאה-לחלפים-קריית-מוצקין" className="text-blue-600">פינוי רכב גרוטאה לחלפים בקריית מוצקין</Link> ושירותי פינוי נלווים.</p>
+              <h3 className="font-bold">האם אתם מספקים גרירה לרכבים חשמליים שנתקעו ללא סוללה?</h3>
+              <p>כן, אנו מספקים מענה ייעודי לכל צורך של <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600">גרירת רכב חשמלי באזור הקריות</Link>.</p>
             </div>
             <div>
-              <h3 className="font-bold">האם השירות כולל חילוץ רכבים כבדים?</h3>
-              <p>אנו מצוידים בציוד המתאים לחילוץ רכבים פרטיים ומסחריים. למידע נוסף על שירותים רחבים, בקרו בעמוד <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600">גרירת רכבים באזור הקריות</Link>.</p>
+              <h3 className="font-bold">מה עושים עם רכב ישן שלא ניתן לתיקון?</h3>
+              <p>אנו מציעים שירותי <Link href="/areas/haifa-general/car-scrapping-haifa-krayot-immediate-removal" className="text-blue-600">פינוי רכב לפירוק בחיפה והקריות</Link> בצורה חוקית ומקצועית.</p>
             </div>
           </div>
         </div>
