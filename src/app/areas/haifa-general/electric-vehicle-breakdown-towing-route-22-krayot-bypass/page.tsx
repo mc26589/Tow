@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בכביש 22 עוקף קריות | הגעה מהירה 24/7",
-  description: "נתקעת בכביש 22 עם רכב חשמלי? שירות גרירה מיומן 24/7 לרכבי EV. הגעה מהירה, שמירה על הסוללה ומחיר הוגן. התקשרו עכשיו לחילוץ מקצועי!",
+  title: "גרירת רכב חשמלי בכביש 22 עוקף קריות | הגעה תוך 30 דקות",
+  description: "נתקעת בכביש 22 עם רכב חשמלי? שירות גרירה מומחה ל-EV עם שמירה על הסוללה. מחיר הוגן, זמינות 24/7 באזור הקריות. התקשרו עכשיו לחילוץ מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/electric-vehicle-breakdown-towing-route-22-krayot-bypass",
   },
@@ -33,7 +33,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">גרירת רכב חשמלי תקוע בכביש 22 עוקף קריות</h1>
           <p className="text-xl mb-8">
-            נתקעת עם הרכב החשמלי בדרך? אנו מספקים <Link href="/areas/haifa-general/emergency-towing-road-22-krayot-bypass" className="underline">שירותי גרירה בכביש 22 עוקף קריות</Link> מותאמים במיוחד לרכבים חשמליים. אנו דואגים לגרירה בטוחה ללא פגיעה בסוללה ובמערכות הרגישות. זקוקים גם ל-<Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="underline">גרירה דחופה בכביש 22</Link>? הצוות שלנו זמין עבורכם 24/7.
+            נתקעת עם הרכב החשמלי בדרך? אנו מספקים <Link href="/areas/haifa-general/sherutei-grira-hilutz-krayot-kavish-22" className="underline">שירותי גרירה בכביש 22 עוקף קריות</Link> מותאמים במיוחד לרכבים חשמליים. אנו דואגים לגרירה בטוחה ללא פגיעה בסוללה ובמערכות הרגישות. זקוקים גם ל-<Link href="/areas/haifa-general/towing-stuck-vehicle-road-22-haifa" className="underline">גרירה דחופה בכביש 22</Link>? הצוות שלנו זמין עבורכם 24/7.
           </p>
           <div className="flex flex-col gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -51,7 +51,7 @@ export default function Page() {
         <ul className="list-disc pr-6 space-y-2 mb-8">
           <li>זמינות 24/7 לאורך כל ציר עוקף קריות.</li>
           <li>ציוד עגלה מתקדם לגרירה בטוחה ללא נזק לרכבים חשמליים.</li>
-          <li>שירות מהיר ומקצועי גם עבור <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-600">גרירת רכבים זולה באזור צ'ק פוסט</Link>.</li>
+          <li>שירות מקצועי גם עבור <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-600">גרירת רכבים באזור צ'ק פוסט</Link>.</li>
           <li>מחירים הוגנים ושקופים - התחייבות לשירות מצוין.</li>
         </ul>
         
@@ -59,15 +59,15 @@ export default function Page() {
         <div className="space-y-4">
           <div>
             <h3 className="font-bold">כיצד גוררים רכב חשמלי ללא נזק לסוללה?</h3>
-            <p>אנו משתמשים בגרר במת הרמה או עגלה ייעודית, המונעת גלגול של הגלגלים המניעים ומבטיחה הגנה מלאה על מערכות החשמל והסוללה של הרכב.</p>
+            <p>אנו משתמשים בגרר במת הרמה או עגלה ייעודית המונעת גלגול של הגלגלים המניעים, מה שמבטיח הגנה מלאה על מערכות החשמל.</p>
           </div>
           <div>
-            <h3 className="font-bold">מה עושים במקרה של תקלה טכנית או תאונה בדרך?</h3>
-            <p>אנו מציעים מענה לכל סוגי התקלות. אם הרכב ניזוק קשות, אנו מספקים פתרונות מתקדמים כגון <Link href="/areas/haifa-general/sell-damaged-car-stuck-in-mud-carmel-area" className="text-blue-600">חילוץ רכבים תקועים</Link> ופינוי מהיר מהכביש.</p>
+            <h3 className="font-bold">האם אתם מבצעים חילוצים גם במקרה של תאונה?</h3>
+            <p>כן, אנו מספקים מענה מלא, כולל <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-600">חילוץ רכבים לאחר תאונה</Link> בבטחה ובמהירות.</p>
           </div>
           <div>
-            <h3 className="font-bold">האם אתם רוכשים רכבים ישנים לפירוק באזור?</h3>
-            <p>כן, אנו מספקים שירותי פינוי וקנייה של רכבים ישנים. ניתן לבדוק את עמוד <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-towing-included" className="text-blue-600">קניית רכבים לפירוק בחיפה והקריות</Link> לפרטים נוספים.</p>
+            <h3 className="font-bold">מה עושים עם רכב ישן שאינו נוסע?</h3>
+            <p>אנו מטפלים בפינוי רכבים. ניתן לבדוק את עמוד <Link href="/areas/haifa-general/buy-cars-for-scrap-krayot-immediate-removal" className="text-blue-600">קניית רכבים לפירוק בקריות</Link> לפרטים נוספים.</p>
           </div>
         </div>
       </section>

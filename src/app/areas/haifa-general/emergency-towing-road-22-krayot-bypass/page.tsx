@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "שירותי גרירה בכביש 22 עוקף קריות - מענה מהיר 24/7",
+  description: "נתקעתם בכביש 22 עוקף קריות? אנו מספקים שירותי גרירה וחילוץ מקצועיים במחיר הוגן, הגעה מהירה לכל נקודה בציר. התקשרו עכשיו לקבלת סיוע!",
+  alternates: {
+    canonical: "/areas/haifa-general/emergency-towing-road-22-krayot-bypass",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -47,9 +57,27 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירותי חילוץ וגרירה בכביש 22</h2>
-        <p className="mb-4">אנו מספקים מענה מהיר לכל נהג שנתקע בציר עוקף קריות. השירות שלנו כולל גרירת רכבים פרטיים, רכבי 4x4 ורכבים מסחריים קלים.</p>
+        <p className="mb-4">אנו מספקים מענה מהיר לכל נהג שנתקע בציר עוקף קריות. השירות שלנו כולל גרירת רכבים פרטיים, רכבי 4x4 ורכבים מסחריים קלים. אם נתקעתם בנקודות מרכזיות, ניתן לעיין גם בשירותים נוספים כגון <Link href="/areas/haifa-general/towing-stuck-vehicle-road-22-haifa" className="text-blue-600 underline">גרירת רכבים תקועים בכביש 22</Link> או <Link href="/areas/haifa-general/affordable-24-7-towing-kiryat-bialik-flat-tire" className="text-blue-600 underline">שירותי גרירה בקריות</Link>.</p>
         <p className="mb-4 font-semibold text-red-600">חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.</p>
         <p>אנו מתחייבים למחירים הוגנים ושירות אדיב בכל שעות היממה.</p>
+      </section>
+
+      <section className="py-12 container mx-auto px-4 bg-gray-50 rounded-xl">
+        <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על שירותי גרירה בכביש 22</h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="font-bold">תוך כמה זמן תגיעו לחילוץ בכביש 22?</h3>
+            <p>אנו משתדלים להגיע לכל קריאה בציר עוקף קריות בזמן המהיר ביותר האפשרי, לרוב תוך דקות ספורות מרגע הקריאה.</p>
+          </div>
+          <div>
+            <h3 className="font-bold">מה טווח המחירים לגרירת רכב באזור הקריות?</h3>
+            <p>מחיר הגרירה נקבע בהתאם למרחק הגרירה וסוג הרכב. אנו מקפידים על מחיר הוגן ושקוף לכל לקוח.</p>
+          </div>
+          <div>
+            <h3 className="font-bold">האם אתם מספקים שירות פינוי לרכבים ישנים?</h3>
+            <p>כן, אנו מספקים שירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-krayot-immediate-removal" className="text-blue-600 underline">פינוי רכבים לפירוק בקריות</Link> למי שזקוק לכך.</p>
+          </div>
+        </div>
       </section>
     </main>
   );
