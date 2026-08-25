@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "שירותי גרירה בצ'ק פוסט | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם עם הרכב בצ'ק פוסט? שירותי גרירה מקצועיים, אמינים ובמחיר הוגן. זמינות 24/7 לכל סוגי הרכבים. התקשרו עכשיו לחילוץ מהיר!",
+  alternates: {
+    canonical: "/areas/haifa-general/cheap-towing-services-check-post",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -44,13 +54,33 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לשירותי גרירה בצ'ק פוסט?</h2>
-        <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, רכבים מסחריים ורכבי 4x4. חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים.</p>
+        <p className="mb-4">
+          אנו מתמחים בחילוץ רכבים פרטיים, רכבים מסחריים ורכבי 4x4. אם אתם זקוקים גם לפתרונות נוספים, אנו מציעים שירותי 
+          <Link href="/areas/haifa-general/towing-service-road-22-krayot" className="text-blue-600 underline font-semibold"> גרירה בכביש 22 </Link> 
+          וכן סיוע ב-<Link href="/areas/haifa-general/affordable-electric-car-towing-check-post-krayot" className="text-blue-600 underline font-semibold"> גרירת רכבים חשמליים </Link>. חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים.
+        </p>
         <ul className="list-disc list-inside space-y-2">
           <li>זמינות מלאה 24/7 לכל אזור צ'ק פוסט והקריות.</li>
           <li>מחירים הוגנים ושקופים ללא הפתעות.</li>
           <li>צוות מקצועי ומנוסה בטיפול בדרכים.</li>
           <li>ציוד גרירה חדיש המבטיח שמירה על הרכב שלכם.</li>
         </ul>
+      </section>
+
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6">שאלות נפוצות על שירותי גרירה בצ'ק פוסט</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-bold">כמה זמן לוקח לגרר להגיע לצ'ק פוסט?</h3>
+              <p>בדרך כלל אנו מגיעים לכל נקודה באזור הצ'ק פוסט תוך זמן קצר מאוד, הודות לקרבה שלנו לצירי תנועה מרכזיים.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold">האם אתם קונים רכבים לפירוק באזור?</h3>
+              <p>כן, אנו מספקים שירותי <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="text-blue-600 underline">קניית רכבים לפירוק בצ'ק פוסט</Link> לכל מי שמעוניין להיפטר מרכב ישן.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

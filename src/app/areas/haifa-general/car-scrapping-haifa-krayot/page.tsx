@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "קונה רכבים לפירוק בחיפה והקריות - הגעה מהירה ומחיר הוגן",
+  description: "צריכים לפנות רכב ישן? קונה רכבים לפירוק בחיפה והקריות במחיר הוגן! שירות 24/7, הגעה מהירה לכל אזורי הצפון. התקשרו עכשיו לקבלת הצעה משתלמת!",
+  alternates: {
+    canonical: "/areas/haifa-general/car-scrapping-haifa-krayot"
+  }
+};
 
 export default function Page() {
   const jsonLd = {
@@ -35,8 +45,28 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירות קניית רכבים לפירוק באזור הצפון</h2>
-        <p className="mb-4">אנו מתמחים בפינוי רכבים מכל סוג: רכבים פרטיים, מסחריים ורכבי 4x4. אנו מציעים שירות אמין, מהיר ומקצועי לתושבי חיפה והקריות. חשוב להדגיש: אנו לא מטפלים באופנועים.</p>
-        <p>השירות שלנו כולל הגעה לבית הלקוח, פינוי הרכב ומתן הצעת מחיר הוגנת במקום. אל תתנו לרכב הישן לתפוס מקום – צרו קשר עוד היום.</p>
+        <p className="mb-4">אנו מתמחים בפינוי רכבים מכל סוג: רכבים פרטיים, מסחריים ורכבי 4x4. השירות שלנו זמין באזור הצפון, כולל <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="text-blue-600 underline">קניית רכבים לפירוק בצ'ק פוסט</Link> ובאזור <Link href="/areas/haifa-general/buying-cars-for-scrap-ahoza-haifa" className="text-blue-600 underline">קניית רכבים לפירוק באחוזה</Link>. חשוב להדגיש: אנו לא מטפלים באופנועים.</p>
+        <p>השירות כולל הגעה מהירה לבית הלקוח, פינוי הרכב ומתן הצעת מחיר הוגנת במקום. אם הרכב זקוק לגרירה מהירה, ניתן להיעזר בשירותינו גם ב-<Link href="/areas/haifa-general/towing-service-road-22-krayot" className="text-blue-600 underline">כביש 22</Link>.</p>
+      </section>
+
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על פירוק רכבים בחיפה</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-bold">האם אתם קונים רכבים ללא טסט?</h3>
+              <p>כן, אנו קונים רכבים בכל מצב, גם כאלו שאינם מניעים או ללא טסט.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">מהו אזור הפעילות שלכם?</h3>
+              <p>אנו פרוסים בכל אזור חיפה, הקריות, וכן בערים סמוכות כמו קרית ים וקרית ביאליק.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">האם אתם מפנים גם גרוטאות רכב?</h3>
+              <p>בהחלט, אנו מספקים שירותי <Link href="/areas/haifa-general/junk-car-removal-kiryat-yam-immediate-pickup" className="text-blue-600 underline">פינוי גרוטאות רכב בקרית ים</Link> באופן מיידי.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

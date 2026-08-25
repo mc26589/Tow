@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "קניית רכבים לפירוק בקריית ים - מזומן במקום | פינוי מיידי 24/7",
-  description: "רוצים למכור רכב לפירוק בקריית ים? מקבלים מזומן במקום! שירות מהיר, הוגן ומקצועי לכל סוגי הרכבים. התקשרו עכשיו לפינוי מיידי מהבית!",
+  description: "רוצים למכור רכב לפירוק בקריית ים? מקבלים מזומן במקום! שירות מהיר, הוגן ומקצועי לכל סוגי הרכבים. פינוי מהיר מהבית בכל שעה. התקשרו עכשיו לקבלת הצעה!",
   alternates: { canonical: "/areas/haifa-general/cash-for-junk-cars-kiryat-yam-immediate-pickup" },
 };
 
@@ -17,7 +17,7 @@ export default function Page() {
     "areaServed": { "@type": "City", "name": "Kiryat Yam" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "geo": { "@type": "GeoCoordinates", "latitude": "32.8356", "longitude": "35.0686" },
-    "priceRange": "$$,$",
+    "priceRange": "$$$",
     "serviceType": "Cash for junk cars, vehicle removal"
   };
 
@@ -32,7 +32,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">קניית רכבים לפירוק בקריית ים – פינוי מיידי ומזומן במקום</h1>
           <p className="text-xl mb-8">
-            אנו מספקים שירות מקצועי של קניית רכבים לפירוק בקריית ים. אם ברשותכם רכב ישן, מושבת או לאחר תאונה, אנו נגיע לפנות אותו באופן מיידי ובמחיר הוגן. אנו מתמחים ברכבים פרטיים ומסחריים. במידה ואתם זקוקים גם לשירותי גרירה, ניתן לבדוק אפשרות ל-<Link href="/areas/haifa-general/cheap-towing-kiryat-yam-to-kiryat-motzkin" className="underline font-semibold">גרר זול מקריית ים לקריית מוצקין</Link>.
+            אנו מספקים שירות מקצועי של קניית רכבים לפירוק בקריית ים והסביבה. אם ברשותכם רכב ישן, מושבת או רכב לאחר תאונה שזקוק לפינוי מהיר, אנו נגיע עד אליכם. למי שזקוק גם לשירותי עזר בדרך, אנו מציעים גם <Link href="/areas/haifa-general/flat-tire-roadside-assistance-kiryat-yam-beach" className="underline font-semibold">סיוע בתיקון תקר בחוף קריית ים</Link> או <Link href="/areas/haifa-general/towing-service-road-22-krayot" className="underline font-semibold">שירותי גרירה בכביש 22 לקריות</Link>.
           </p>
           <div className="flex flex-col gap-4">
             <WhatsAppCTA cityName="קריית ים" />
@@ -40,7 +40,7 @@ export default function Page() {
               href={`tel:+${BUSINESS_INFO.phone}`} 
               className="bg-white text-black font-bold py-3 px-6 rounded-lg text-center hover:bg-gray-200 transition"
             >
-              התקשרו עכשיו לקבלת הצעת מחיר
+              התקשרו עכשיו לפינוי הרכב שלכם
             </a>
           </div>
         </div>
@@ -49,26 +49,25 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי הרכב שלכם?</h2>
         <ul className="list-disc list-inside space-y-4 text-lg mb-8">
-          <li>פינוי מיידי מכל נקודה בקריית ים.</li>
-          <li>תשלום הוגן במזומן במעמד הפינוי.</li>
-          <li>שירות אדיב, מהיר ומקצועי לכל סוגי הרכבים.</li>
-          <li>סיוע מקצועי גם בשכונות סמוכות, כולל <Link href="/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal" className="text-blue-600 underline">קניית רכבים לפירוק בקריית ביאליק</Link>.</li>
-          <li>שירותים ממוקדים לתושבי האזור כמו <Link href="/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-rothschild" className="text-blue-600 underline">קניית רכבים לפירוק באזור רוטשילד קריית ים</Link>.</li>
+          <li>פינוי מיידי ומקצועי מכל רחוב בקריית ים.</li>
+          <li>תשלום הוגן ומיידי במזומן במועד איסוף הרכב.</li>
+          <li>מומחיות בפינוי גרוטאות רכב, כולל שירותים כמו <Link href="/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik" className="text-blue-600 underline">פירוק רכבים באזור התעשייה הישן בקריית ביאליק</Link>.</li>
+          <li>סיוע ופינוי לרכבים תקועים בקרבת צירים מרכזיים, בדומה לשירותי <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירה זולה בכביש 22</Link>.</li>
         </ul>
 
         <h2 className="text-3xl font-bold mb-6">שאלות נפוצות</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="font-bold text-xl">האם אתם קונים רכבים ללא טסט?</h3>
-            <p>כן, אנו רוכשים ומפנים רכבים ללא טסט, רכבים עם תקלות מכניות, או רכבים שלא ניתן להעביר בטסט, תמיד במחיר הוגן.</p>
+            <h3 className="font-bold text-xl">האם אתם קונים רכבים ללא טסט או עם תקלות?</h3>
+            <p>בהחלט. אנו רוכשים כל רכב, בין אם הוא תקול, מושבת, או ללא טסט, ומפנים אותו בצורה מסודרת.</p>
           </div>
           <div>
-            <h3 className="font-bold text-xl">איך מתבצע תהליך הפינוי?</h3>
-            <p>התהליך פשוט: אתם מתקשרים, אנו מתאמים הגעה לכתובתכם בקריית ים, בוחנים את הרכב ומשלמים במזומן מיד במעמד הפינוי.</p>
+            <h3 className="font-bold text-xl">מהו תהליך הפינוי?</h3>
+            <p>לאחר שיחת הטלפון, אנו מתאמים זמן הגעה נוח עבורכם. הצוות שלנו מגיע למקום, בוחן את הרכב ומשלם במזומן מיד במקום.</p>
           </div>
           <div>
-            <h3 className="font-bold text-xl">האם ניתן לפנות רכב שנתקע בדרך?</h3>
-            <p>בוודאי. אנו מומחים במתן פתרונות לפינוי רכבים תקועים בדומה לשירותי <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">גרירה בחירום בחיפה והקריות</Link>.</p>
+            <h3 className="font-bold text-xl">האם אתם מציעים שירותים מחוץ לקריית ים?</h3>
+            <p>כן, אנו מספקים שירותי פינוי וגרירה בכל אזור חיפה והקריות, כולל <Link href="/areas/haifa-general/buying-cars-for-scrap-ahoza-haifa" className="text-blue-600 underline">קניית רכבים לפירוק באחוזה חיפה</Link> ושירותי חילוץ במקרים מורכבים בדרכים ראשיות.</p>
           </div>
         </div>
       </section>

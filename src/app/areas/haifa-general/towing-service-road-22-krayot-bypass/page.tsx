@@ -1,13 +1,23 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "גרר בכביש 22 עוקף קריות | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם בכביש 22? שירות גרירה מקצועי ומהיר לכל סוגי הרכבים בציר עוקף קריות. זמינות 24/7, מחירים נוחים ושירות אדיב. התקשרו עכשיו!");",
+  alternates: {
+    canonical: "/areas/haifa-general/towing-service-road-22-krayot-bypass",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה חיפה והקריות",
+    "name": "שירותי גרירה בכביש 22 עוקף קריות",
     "areaServed": "Haifa and Krayot",
-    "priceRange": "$",
+    "priceRange": "$$,$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -55,7 +65,22 @@ export default function Page() {
           <li>ציוד גרירה מתקדם המתאים לרכבים פרטיים, מסחריים ו-4x4.</li>
           <li>הגעה מהירה לכל נקודה לאורך הציר.</li>
           <li>שירות אדיב ומקצועי במחירים הוגנים ללא הפתעות.</li>
+          <li>צריכים שירות משלים באזור? בדקו גם את <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-600 underline">השירות המהיר שלנו בכביש 22</Link>.</li>
         </ul>
+      </section>
+
+      <section className="py-12 container mx-auto px-4 bg-gray-50">
+        <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על גרירה בכביש 22</h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="font-bold text-lg">תוך כמה זמן הגרר מגיע לכביש 22?</h3>
+            <p>אנו משתדלים להגיע לכל נקודה בכביש עוקף קריות בזמן המהיר ביותר האפשרי, לרוב תוך דקות ספורות מרגע הקריאה.</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg">האם אתם גוררים גם משאיות קלות?</h3>
+            <p>כן, אנו מספקים שירותי גרירה לרכבים פרטיים, מסחריים ו-4x4. למידע נוסף ניתן להתרשם מ-<Link href="/areas/haifa-general/sherutei-grira-hilutz-krayot-kavish-22" className="text-blue-600">שירותי הגרירה והחילוץ שלנו בקריות</Link>.</p>
+          </div>
+        </div>
       </section>
     </main>
   );

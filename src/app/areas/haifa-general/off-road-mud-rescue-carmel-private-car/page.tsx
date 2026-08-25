@@ -1,11 +1,11 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "חילוץ שטח ובוץ בכרמל לרכב פרטי | הגעה מהירה 24/7",
-  description: "נתקעתם בבוץ בכרמל? שירות חילוץ מקצועי לרכבים פרטיים ורכבי שטח בחיפה והסביבה. מחיר הוגן, מענה מיידי, הגעה מהירה. התקשרו עכשיו!",
+  title: "חילוץ שטח ובוץ בכרמל לרכב פרטי | הגעה תוך 30 דקות 24/7",
+  description: "נתקעתם בבוץ בכרמל? שירות חילוץ מקצועי לרכב פרטי ושטח בחיפה. צוות מנוסה, ציוד מתקדם ומחיר הוגן. הגעה מהירה לכל נקודה בחיפה - התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/off-road-mud-rescue-carmel-private-car"
   }
@@ -32,8 +32,8 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ שטח בוץ בכרמל לרכב פרטי - מגיעים אליכם!</h1>
-          <p className="text-xl mb-8">נתקעתם בבוץ באזור הכרמל? הצוות המקצועי שלנו בדרך אליכם לחילוץ בטוח ומהיר.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ שטח ובוץ בכרמל לרכב פרטי - מגיעים אליכם בחיפה!</h1>
+          <p className="text-xl mb-8">נתקעתם בבוץ בדרכי הכרמל? אנו כאן לחלץ אתכם בבטחה עם ציוד מקצועי וניסיון רב בשטח.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa" />
             <a 
@@ -47,26 +47,30 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירות חילוץ שטח מקצועי בכרמל</h2>
-        <p className="mb-4">אנו מומחים בחילוץ רכבים פרטיים ששקעו בבוץ בדרכי עפר ובשטח בכרמל. אם אתם זקוקים לחילוץ מורכב יותר, תוכלו להיעזר בשירותי <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-600 underline">4x4 mud recovery carmel forest haifa</Link> שלנו, או אם מדובר בחילוץ דחוף בדרכי היער, ראו <Link href="/areas/haifa-general/urgent-mud-rescue-4x4-towing-carmel-forest-trails-haifa" className="text-blue-600 underline">urgent mud rescue 4x4 towing carmel forest trails haifa</Link>.</p>
-        <p>חשוב להדגיש: אנו מעניקים שירות לרכבים פרטיים, רכבי שטח ומסחריים. בטיחות הרכב שלכם היא בראש סדר העדיפויות שלנו במחיר הוגן.</p>
+        <h2 className="text-3xl font-bold mb-6">שירות חילוץ שטח מקצועי באזור הכרמל</h2>
+        <p className="mb-4">נתקעתם בדרכי עפר? אנו מומחים בחילוץ רכבים פרטיים ורכבי שטח ששקעו בבוץ בחיפה. לבעלי רכבי 4x4 הזקוקים לחילוץ מקצועי יותר, ניתן לקבל מידע נוסף בקישור <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-600 underline">4x4 mud recovery carmel forest haifa</Link>. אם אתם זקוקים לחילוץ דחוף באזור סטלה מאריס, תוכלו לבדוק את השירות הייעודי שלנו <Link href="/areas/haifa-general/emergency-tow-stuck-car-stella-maris-haifa-hills" className="text-blue-600 underline">emergency tow stuck car stella maris haifa hills</Link>.</p>
+        <p>אנו מבינים את הלחץ הכרוך בתקיעה בשטח. הצוות שלנו זמין 24/7, מקפיד על מחיר הוגן ומבטיח טיפול בטוח ברכבכם ללא נזקים מיותרים.</p>
       </section>
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">שאלות נפוצות על חילוץ שטח</h2>
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div>
-              <h3 className="font-bold">כמה זמן לוקח לכם להגיע?</h3>
-              <p>אנו משתדלים להגיע לכל נקודה בכרמל תוך זמן קצר מרגע הקריאה, בהתאם לתנאי השטח והמרחק.</p>
+              <h3 className="font-bold">מה זמן ההגעה הממוצע לחילוץ בכרמל?</h3>
+              <p>אנו ממוקמים בנקודות אסטרטגיות ומשתדלים להגיע לכל נקודה בחיפה תוך זמן קצר מרגע הקריאה, בהתאם לעומסי התנועה ותנאי השטח.</p>
             </div>
             <div>
-              <h3 className="font-bold">האם אתם מחלצים גם אופנועים?</h3>
-              <p>לא, אנו מתמחים בחילוץ רכבים פרטיים, רכבי שטח ומסחריים בלבד.</p>
+              <h3 className="font-bold">האם אתם מחלצים גם במקרים של רכב שהחליק לתעלה?</h3>
+              <p>כן, מעבר לחילוצי בוץ, אנו מספקים שירותי חילוץ מורכבים יותר כגון <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="text-blue-600 underline">emergency car recovery ditch route 4 check post</Link> לכל רכב שסטה מהדרך.</p>
             </div>
             <div>
-              <h3 className="font-bold">מה טווח המחירים?</h3>
-              <p>המחיר נקבע לפי מורכבות החילוץ ומיקום הרכב. אנו מקפידים על שקיפות ומחירים הוגנים לכל סוגי החילוצים.</p>
+              <h3 className="font-bold">איזה סוגי רכבים אתם מחלצים?</h3>
+              <p>אנו מתמחים בחילוץ רכבים פרטיים, רכבי פנאי (SUV) ורכבים מסחריים. שימו לב: איננו מחלצים אופנועים.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">מה טווח המחירים של חילוץ שטח?</h3>
+              <p>המחיר נקבע בהתאם למיקום המדויק, שעת הקריאה ורמת המורכבות של החילוץ. אנו מחויבים למתן מחיר הוגן ושקוף מראש ללא הפתעות.</p>
             </div>
           </div>
         </div>

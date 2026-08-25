@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "גרר רכבים לפירוק בקריית ביאליק כביש 22 | שירות מהיר ומקצועי",
+  description: "צריכים פינוי רכב לפירוק בכביש 22 בקריית ביאליק? אנו מציעים שירות גרירה אמין ומקצועי 24/7. הגעה מהירה ומחיר הוגן! התקשרו עכשיו לקבלת שירות.",
+  alternates: {
+    canonical: "/areas/haifa-general/towing-for-scrap-kiryat-bialik-road-22"
+  }
+};
 
 export default function Page() {
   const jsonLd = {
@@ -50,8 +60,8 @@ export default function Page() {
       <section className="py-12 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי רכב לפירוק?</h2>
-          <p className="mb-4">אנו מתמחים בפינוי רכבים לפירוק מכל סוגי הרכבים הפרטיים, המסחריים ורכבי 4x4. אם הרכב שלכם תקוע על כביש 22 או בכל נקודה בקריית ביאליק, הצוות שלנו יגיע במהירות.</p>
-          <p className="text-red-400 font-semibold">שים לב: אנו לא מספקים שירותי גרירה לאופנועים.</p>
+          <p className="mb-4">אנו מתמחים בפינוי רכבים לפירוק מכל סוגי הרכבים הפרטיים והמסחריים. אם הרכב שלכם תקוע על <Link href="/areas/haifa-general/towing-service-road-22-krayot" className="text-blue-400 hover:underline">כביש 22</Link> או בכל נקודה בקריית ביאליק, הצוות שלנו יגיע במהירות. מחפשים גם פתרונות נוספים באזור? ראו את שירותי ה-<Link href="/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik" className="text-blue-400 hover:underline">פירוק באזור התעשייה הישן</Link>.</p>
+          <p className="text-red-400 font-semibold mb-6">שים לב: אנו לא מספקים שירותי גרירה לאופנועים.</p>
           <div className="mt-8">
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
@@ -59,6 +69,26 @@ export default function Page() {
             >
               חייגו עכשיו לתיאום פינוי
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על פינוי רכבים לפירוק בכביש 22</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-bold">תוך כמה זמן תגיעו לפינוי בכביש 22?</h3>
+              <p>אנו משתדלים להגיע לכל קריאה בקריית ביאליק וכביש 22 תוך זמן קצר מרגע הקריאה.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">האם אתם קונים רכבים לפירוק במקום?</h3>
+              <p>כן, אנו מספקים הצעת מחיר הוגנת ומפנים את הרכב באופן מיידי ללא עיכובים.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">מה כולל שירות הגרירה שלכם?</h3>
+              <p>מעבר לפירוק רכבים, ניתן למצוא אצלנו מגוון פתרונות כגון <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-600 hover:underline">גרירה דחופה</Link> לכל רחבי הקריות.</p>
+            </div>
           </div>
         </div>
       </section>

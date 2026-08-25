@@ -4,14 +4,14 @@ import { WhatsAppCTA } from '@/components/whatsapp-cta';
 import { BUSINESS_INFO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: "גרר בצומת צ'ק פוסט חיפה 24/7 | הגעה מהירה ומחיר הוגן",
-  description: "נתקעתם בצומת צ'ק פוסט? גרר מפרץ אקספרס מציע שירותי גרירה וחילוץ תאונות 24/7. הגעה תוך 30 דקות למקום. התקשרו עכשיו לשירות מקצועי ואמין!",
+  title: "גרר בצומת צ'ק פוסט חיפה 24/7 | הגעה תוך 30 דקות - מחיר הוגן",
+  description: "נתקעתם בצומת צ'ק פוסט? גרר מפרץ אקספרס מספק שירותי גרירה וחילוץ תאונות 24/7. הגעה מהירה ומחיר הוגן לכל סוגי הרכבים. התקשרו עכשיו!",
   alternates: {
     canonical: "https://www.towingrescuehaifa.co.il/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa",
   },
   openGraph: {
-    title: "גרר בצומת צ'ק פוסט חיפה 24/7 | הגעה מהירה ומחיר הוגן",
-    description: "צריכים גרר בצומת צ'ק פוסט? שירות גרירה וחילוץ תאונות 24/7 עם הגעה מהירה ומחיר הוגן. התקשרו עכשיו!",
+    title: "גרר בצומת צ'ק פוסט חיפה 24/7 | שירות מהיר ומקצועי",
+    description: "צריכים גרר בצומת צ'ק פוסט? שירות גרירה וחילוץ תאונות 24/7. צוות מנוסה, הגעה מהירה ומחירים משתלמים. התקשרו עכשיו!",
     url: "https://www.towingrescuehaifa.co.il/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa",
     siteName: "Towing Rescue Haifa",
     type: "website",
@@ -27,7 +27,7 @@ export default function Page() {
             גרירת חילוץ תאונות 24/7 בצומת צ'ק פוסט חיפה
           </h1>
           <p className="mt-2 text-xl text-blue-100 max-w-2xl mx-auto mb-8">
-            שירותי גרירה וחילוץ מקצועיים בלב הצ'ק פוסט. הגעה מהירה לכל תאונה או תקלה, צוות מנוסה ומחירים ללא תחרות.
+            שירותי גרירה וחילוץ מקצועיים בלב הצ'ק פוסט. הגעה מהירה לאחר תאונות או תקלות בצירי התנועה הראשיים של חיפה.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <WhatsAppCTA cityName="צומת צ'ק פוסט" />
@@ -40,16 +40,16 @@ export default function Page() {
 
       <section className="container mx-auto p-4 py-12">
         <p className="text-lg mb-4 leading-relaxed font-rubik text-gray-800">
-          נתקעתם עם הרכב בצומת העמוס בחיפה? ב-<strong className="font-semibold">גרר מפרץ אקספרס</strong> אנו מספקים מענה מיידי למקרים של תאונות דרכים, תקלות מנוע או פנצ'רים. אם אתם זקוקים ל-<Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה זולים בצ'ק פוסט</Link> או נתקעתם בדרכים, הצוות שלנו ערוך לכל קריאה 24/7. אנו מנוסים מאוד בפינוי מהיר לאחר תאונות בכביש 4 ובצירי התנועה הראשיים. לתשומת לבכם, אנו מתמחים ברכבים פרטיים ומסחריים ואיננו מספקים שירותי גרירה לאופנועים.
+          נתקעתם עם הרכב בצומת העמוס בחיפה? ב-<strong className="font-semibold">גרר מפרץ אקספרס</strong> אנו מספקים מענה מיידי למקרים של תאונות דרכים בכביש 4, תקלות מנוע או פנצ'רים בצומת צ'ק פוסט. אם אתם זקוקים ל-<Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה משתלמים בצ'ק פוסט</Link> או נתקעתם בדרכים, הצוות שלנו ערוך לכל קריאה 24/7. אנו מנוסים מאוד בחילוץ רכבים מנתיבים עמוסים לאחר תאונות. לתשומת לבכם, אנו מתמחים ברכבים פרטיים ומסחריים ואיננו מספקים שירותי גרירה לאופנועים.
         </p>
 
         <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm mb-6">
-          <h2 className="text-2xl font-bold mb-4 text-blue-800">למה לבחור בגרר מפרץ אקספרס?</h2>
+          <h2 className="text-2xl font-bold mb-4 text-blue-800">למה לבחור בגרר מפרץ אקספרס בצ'ק פוסט?</h2>
           <ul className="list-disc list-inside space-y-3 text-gray-700">
-            <li><strong className="font-semibold">זמינות 24/7:</strong> פריסה רחבה בחיפה, כולל <Link href="/areas/haifa-general/emergency-towing-road-22-krayot-bypass" className="text-blue-600 underline">גרירה מהירה בכביש 22</Link>.</li>
-            <li><strong className="font-semibold">מחירים הוגנים:</strong> פתרונות גרירה משתלמים ושקופים לכל תקציב הכוללים <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-600 underline">שירותי גרירה במחיר משתלם</Link>.</li>
-            <li><strong className="font-semibold">מקצועיות בטיחותית:</strong> חילוץ רכבים מכל סוג תוך שמירה על שלמות הרכב.</li>
-            <li><strong className="font-semibold">ניסיון רב:</strong> מומחים בפינוי כלי רכב לאחר תאונות דרכים קשות.</li>
+            <li><strong className="font-semibold">זמינות 24/7:</strong> פריסה רחבה בחיפה, כולל <Link href="/areas/haifa-general/towing-service-road-22-krayot" className="text-blue-600 underline">שירות גרירה מהיר בכביש 22</Link>.</li>
+            <li><strong className="font-semibold">מחירים הוגנים:</strong> אנו מציעים את הפתרון המשתלם ביותר ל-<Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירת חירום בכביש 22</Link>.</li>
+            <li><strong className="font-semibold">חילוץ מורכב:</strong> מומחים ב-<Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="text-blue-600 underline">חילוץ רכב תקוע בצידי הדרך בצ'ק פוסט</Link> ובכביש 4.</li>
+            <li><strong className="font-semibold">ניסיון רב:</strong> אנו מספקים גם שירותי <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="text-blue-600 underline">פינוי רכבים לפירוק בצ'ק פוסט</Link> במזומן.</li>
           </ul>
         </div>
 
@@ -57,16 +57,12 @@ export default function Page() {
           <h2 className="text-2xl font-bold mb-6 text-gray-900">שאלות נפוצות</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-lg">האם אתם נותנים שירות גם מחוץ לצומת צ'ק פוסט?</h3>
-              <p className="text-gray-700">בהחלט. אנו פעילים בכל אזור המפרץ, כולל <Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="text-blue-600 underline">גרירה בכביש 22</Link> ובכל אזור הקריות.</p>
+              <h3 className="font-bold text-lg">מהו טווח הזמנים להגעה לצומת צ'ק פוסט?</h3>
+              <p className="text-gray-700">בזכות המיקום המרכזי שלנו בחיפה, אנו שואפים להגעה מהירה לכל קריאה באזור הצ'ק פוסט, לרוב תוך פחות מ-30 דקות (בהתאם לתנאי התנועה).</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">מה עושים אם הרכב מושבת לגמרי לאחר תאונה?</h3>
-              <p className="text-gray-700">במקרים בהם הרכב אינו ראוי עוד לנסיעה, אנו מציעים שירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-towing-included" className="text-blue-600 underline">פינוי רכבים לפירוק בחיפה</Link> במזומן ובפינוי מיידי.</p>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg">האם אתם גוררים רכבים מהשטח באזור חיפה?</h3>
-              <p className="text-gray-700">אנו לא מבצעים חילוצי שטח, אך אם נתקעתם באזורים הרריים ניתן לפנות למומחים עבור <Link href="/areas/haifa-general/emergency-car-rescue-mud-carmel-forest" className="text-blue-600 underline">חילוצי רכב מבוץ ביערות הכרמל</Link>.</p>
+              <h3 className="font-bold text-lg">האם אתם נותנים שירות גם במקרים של רכב מושבת לתיקון?</h3>
+              <p className="text-gray-700">בהחלט. אנו מבצעים גרירה למוסך לבחירתכם, ואם הרכב אינו ראוי עוד לנסיעה, ניתן להתעניין אצלנו בשירותי <Link href="/areas/haifa-general/buying-cars-for-scrap-ahoza-haifa" className="text-blue-600 underline">פינוי רכבים לפירוק</Link>.</p>
             </div>
           </div>
         </div>
