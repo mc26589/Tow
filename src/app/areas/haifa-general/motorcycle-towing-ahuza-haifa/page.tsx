@@ -7,7 +7,6 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי גרירה חיפה והקריות",
     "areaServed": "Haifa and Krayot",
-    "priceRange": "$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -19,7 +18,8 @@ export default function Page() {
       "latitude": "32.7940",
       "longitude": "34.9896"
     },
-    "serviceType": "Towing and Roadside Assistance for Cars and 4x4"
+    "priceRange": "$",
+    "serviceType": "Towing and Roadside Assistance for cars and commercial vehicles"
   };
 
   return (
@@ -28,26 +28,34 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-6">גרר לאופנוע כבד באחוזה חיפה</h1>
-          <p className="text-lg mb-4">
-            חשוב להבהיר: אנו מתמחים בשירותי גרירה וחילוץ לרכבים פרטיים, רכבים מסחריים ורכבי 4x4 באזור חיפה והקריות. 
-            נכון לעכשיו, איננו מספקים שירותי גרירה לאופנועים או אופנועים כבדים.
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר לאופנוע כבד באחוזה חיפה - שירותי גרירה לרכבים ורכבי שטח</h1>
+          <p className="text-xl mb-8">
+            חשוב לנו לעדכן: אנו מתמחים בגרירה וחילוץ של רכבים פרטיים, מסחריים ורכבי 4x4. 
+            איננו מספקים שירותי גרירה לאופנועים. אם נתקעת עם רכבך, אנו כאן לשירותך 24/7.
           </p>
-          <p className="text-lg mb-8">
-            אם נתקעת עם הרכב שלך באזור אחוזה, אנו כאן כדי לספק לך מענה מהיר, מקצועי ובטוח 24/7 במחירים הוגנים.
-          </p>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
-              className="bg-white text-black px-6 py-3 rounded-lg font-bold"
+              className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors"
             >
-              התקשר עכשיו
+              התקשר עכשיו לקבלת הצעת מחיר
             </a>
           </div>
         </div>
+      </section>
+
+      <section className="py-16 container mx-auto px-4">
+        <h2 className="text-2xl font-bold mb-4">למה לבחור בנו לגרירת רכבים באחוזה?</h2>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
+          <li>ציוד גרירה מתקדם המותאם לרכבים פרטיים ומסחריים.</li>
+          <li>מחירים הוגנים ושקיפות מלאה מול הלקוח.</li>
+          <li>צוות מיומן המכיר היטב את אזור חיפה והכרמל.</li>
+        </ul>
       </section>
     </main>
   );
