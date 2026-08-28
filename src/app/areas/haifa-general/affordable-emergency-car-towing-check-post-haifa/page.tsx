@@ -5,8 +5,8 @@ import Script from "next/script";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב בצ'ק פוסט חיפה 24/7 | מחיר הוגן, הגעה מהירה",
-  description: "נתקעתם בצומת צ'ק פוסט? גרירת רכב חירום 24/7 במחיר הוגן. שירות מהיר, מקצועי ואמין לכל סוגי הרכבים. התקשרו עכשיו להגעה מיידית!",
+  title: "גרירת רכב בצ'ק פוסט חיפה 24/7 | הגעה מהירה ומחיר הוגן",
+  description: "נתקעתם בצומת צ'ק פוסט? גרירת רכב מקצועית 24/7 לכל סוגי הרכבים. הגעה מהירה, מחיר הוגן ושירות ללא הפתעות. התקשרו עכשיו להגעה מיידית!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa",
   },
@@ -20,7 +20,7 @@ export default function Page() {
     "description": "שירותי גרירת רכב חירום מהירים בצומת צ'ק פוסט חיפה. זמינות 24/7 לכל סוגי הרכבים במחירים נוחים.",
     "url": "https://www.yourdomain.com/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa",
     "telephone": `+${BUSINESS_INFO.phone}`,
-    "priceRange": "$$,$",
+    "priceRange": "$$",
     "areaServed": {
       "@type": "Place",
       "name": "חיפה והקריות",
@@ -52,7 +52,7 @@ export default function Page() {
             גרירת רכב חירום בצומת צ'ק פוסט חיפה – זמינות 24/7
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-            נתקעתם עם הרכב בצומת צ'ק פוסט בחיפה? אנו מציעים שירותי גרירה מקצועיים, מהירים ובמחיר הוגן ללא הפתעות. הצוות שלנו זמין לסייע לכם 24/7.
+            נתקעתם עם הרכב בצומת צ'ק פוסט בחיפה? הצוות שלנו זמין עבורכם 24/7 עם ציוד חדיש למתן פתרון מהיר במחיר הוגן.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -71,16 +71,16 @@ export default function Page() {
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">למה לבחור בנו לגרירה בצ'ק פוסט?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-primary-400">מהירות תגובה</h3>
-              <p>הצוות שלנו מכיר את עומסי התנועה בצ'ק פוסט ויודע להגיע אליכם בזמן הקצר ביותר.</p>
+              <h3 className="text-xl font-semibold mb-3 text-primary-400">מענה מהיר לצ'ק פוסט</h3>
+              <p>הצוות שלנו מכיר את עומסי התנועה בצ'ק פוסט ומגיע אליכם במהירות. זקוקים גם לסיוע בכביש 22? ניתן לבדוק <Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="underline text-blue-400">גרירה בכביש 22 וצומת קרית אתא</Link>.</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-primary-400">מומחיות בתקלות</h3>
-              <p>בין אם מדובר בתקלה מכנית או צורך ב-<Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="underline text-blue-400">שירותי גרירה לאחר תאונה</Link>, אנו כאן לעזור.</p>
+              <h3 className="text-xl font-semibold mb-3 text-primary-400">גרירה לאחר תאונה</h3>
+              <p>טיפול מקצועי במקרים מורכבים. אם קרתה תאונה, אנחנו מציעים <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="underline text-blue-400">שירותי גרירה לאחר תאונה</Link> בבטחה מלאה.</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-primary-400">מגוון פתרונות</h3>
-              <p>אנו מציעים גם <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="underline text-blue-400">גרירת רכבים תקולים</Link> וקניית רכבים לפירוק במחיר הוגן.</p>
+              <h3 className="text-xl font-semibold mb-3 text-primary-400">פתרונות לרכבים ישנים</h3>
+              <p>הרכב לא מניע ולא משתלם לתקן? אנו מבצעים גם <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="underline text-blue-400">פינוי רכבים לפירוק באזור חיפה</Link> במחיר הוגן.</p>
             </div>
           </div>
         </div>
@@ -91,20 +91,16 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-8 text-center">שאלות נפוצות על גרירת רכב בצ'ק פוסט</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-xl">כמה זמן לוקח לכם להגיע לצומת צ'ק פוסט?</h3>
-              <p>בזכות מיקום הציוד שלנו באזור חיפה והקריות, אנו מגיעים לרוב תוך דקות ספורות לקריאה באזור הצומת.</p>
+              <h3 className="font-bold text-xl">האם אתם מגיעים לכל אזור הצ'ק פוסט?</h3>
+              <p>כן, אנו נותנים מענה מלא לכל אזור התעשייה והצמתים המרכזיים בצ'ק פוסט ובחיבור לכביש עוקף קריות. למידע נוסף ראו <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="underline text-blue-600">גרירה 24/7 בעוקף קריות</Link>.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם אתם גוררים רכבים פרטיים ומסחריים?</h3>
-              <p>כן, אנו נותנים שירות לרוב סוגי הרכבים הפרטיים והמסחריים הקלים. איננו מטפלים באופנועים.</p>
+              <h3 className="font-bold text-xl">האם אתם גוררים רכבים מסחריים?</h3>
+              <p>אנו מציעים שירות גרירה לרכבים פרטיים ומסחריים קלים. שירותינו אינם כוללים אופנועים.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">איך מתבצע התשלום על הגרירה?</h3>
-              <p>התשלום נקבע מראש בצורה שקופה. אנו מקפידים על מחירים נוחים ללא "הפתעות" של הרגע האחרון.</p>
-            </div>
-            <div>
-              <h3 className="font-bold text-xl">מה לעשות אם נתקעתי בדרך לעבודה?</h3>
-              <p>ראשית, ודאו שאתם נמצאים בנקודה בטוחה, הדליקו אורות מצוקה והתקשרו אלינו. במידת הצורך, נבצע <Link href="/areas/haifa-general/emergency-roadside-assistance-flat-tire-route-22-kiryat-bialik" className="underline text-blue-600">חילוץ דרך מהיר</Link> כדי להחזיר אתכם לכביש.</p>
+              <h3 className="font-bold text-xl">איך מתבצע התשלום?</h3>
+              <p>התשלום שקוף וקבוע מראש ללא הפתעות. אנו מאמינים בשירות הוגן ואמין לכל לקוח.</p>
             </div>
           </div>
         </div>

@@ -5,8 +5,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי כביש 22 הקריות | הגעה ב-30 דקות | 24/7",
-  description: "נתקעתם ללא סוללה בכביש 22? שירות גרירה לרכב חשמלי בקריות עם ציוד ייעודי. הגעה מהירה, מחיר הוגן ושירות בטוח 24/7. התקשרו עכשיו לחילוץ!",
+  title: "גרירת רכב חשמלי כביש 22 | חילוץ מהיר 30 דקות | 24/7",
+  description: "נתקעתם ללא סוללה בכביש 22? שירות גרירת רכב חשמלי מקצועי באזור הקריות עם פלטפורמה ייעודית. מחיר הוגן ושירות מהיר 24/7. התקשרו עכשיו לחילוץ!",
   alternates: {
     canonical: "/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot"
   }
@@ -16,11 +16,11 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה לרכבים חשמליים כביש 22",
-    "description": "שירותי חילוץ וגרירה מקצועיים לרכבים חשמליים שנתקעו ללא סוללה בכביש 22 ובאזור הקריות, 24/7.",
-    "url": "https://yourdomain.com/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot",
+    "name": "גרירת רכב חשמלי כביש 22 עוקף קריות",
+    "description": "שירותי חילוץ וגרירה לרכבים חשמליים שנתקעו ללא סוללה בכביש 22 והקריות, 24/7 עם ציוד מתאים.",
+    "url": `https://yourdomain.com/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot`,
     "telephone": `+${BUSINESS_INFO.phone}`,
-    "areaServed": { "@type": "Place", "name": "כביש 22, קריות, חיפה" }
+    "areaServed": { "@type": "Place", "name": "כביש 22, הקריות, חיפה" }
   };
 
   return (
@@ -30,7 +30,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">גרירת רכב חשמלי כביש 22 (עוקף קריות) - 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם ללא סוללה? זקוקים לחילוץ מהיר? מומחים בגרירת רכבים חשמליים עם פלטפורמה ייעודית באזור הקריות.</p>
+          <p className="text-xl mb-8">נתקעתם ללא סוללה בכביש 22? זקוקים לחילוץ מקצועי? אנו מומחים בגרירת רכבים חשמליים עם פלטפורמה ייעודית בכל אזור הקריות.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-gray-900 font-bold py-3 px-8 rounded-full">התקשרו עכשיו לחילוץ: {BUSINESS_INFO.phone}</a>
             <WhatsAppCTA cityName="הקריות" />
@@ -43,7 +43,7 @@ export default function Page() {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-6 text-blue-400">שירותי גרירה לרכב חשמלי באזור הקריות</h2>
             <p className="mb-4">
-              התקעו ללא סוללה בכביש 22? אנו מעניקים שירותי <Link href="/areas/haifa-general/towing-service-road-22-krayot" className="text-blue-300 underline">towing service road 22 krayot</Link> מקצועיים. הצוות שלנו מיומן במתן <Link href="/areas/haifa-general/affordable-electric-car-towing-check-post-krayot" className="text-blue-300 underline">affordable electric car towing check post krayot</Link> תוך הקפדה על נהלי יצרן לרכב חשמלי. אנו פועלים גם בנתיבי <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-300 underline">affordable emergency towing route 22 krayot bypass</Link> לזמינות מרבית בכל שעות היממה.
+              התקעתם ללא סוללה בכביש 22? אנו מספקים <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-300 underline">גרירה דחופה בכביש 22</Link> לכל דגמי הרכבים החשמליים. אנו מקפידים על גרירה באמצעות פלטפורמה בלבד כדי לשמור על בטיחות המצבר והמערכות האלקטרוניות. לשירותים משלימים באזור ניתן להיעזר ב-<Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="text-blue-300 underline">שירותי גרירה במחלף קרית אתא</Link>.
             </p>
           </section>
 
@@ -52,15 +52,15 @@ export default function Page() {
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-bold">איך מתבצעת גרירה בטוחה לרכב חשמלי?</h3>
-                <p>רכב חשמלי דורש הובלה על פלטפורמה (גרר) בלבד למניעת נזק למערכת ההנעה החשמלית. הציוד שלנו מותאם בדיוק למטרה זו.</p>
+                <p>רכב חשמלי דורש הובלה על פלטפורמה (גרר) בלבד למניעת נזק למערכת ההנעה החשמלית. אנו מצוידים בציוד המתקדם ביותר לחילוץ רכבי EV.</p>
               </div>
               <div>
-                <h3 className="text-xl font-bold">האם אתם מספקים שירותי חילוץ נוספים בקריות?</h3>
-                <p>בהחלט. אנו מבצעים <Link href="/areas/haifa-general/sherutei-grira-hilutz-krayot-kavish-22" className="text-blue-300 underline">sherutei grira hilutz krayot kavish 22</Link> לכל סוגי הרכבים ומספקים סיוע ראשוני בדרכים.</p>
+                <h3 className="text-xl font-bold">האם אתם מציעים גרירת רכב במחיר הוגן?</h3>
+                <p>כן, אנו דוגלים בשירות <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-300 underline">גרירה 24 7 עוקף קריות במחיר הוגן</Link> ושקוף ללא הפתעות, גם בשעות לילה וסופי שבוע.</p>
               </div>
               <div>
                 <h3 className="text-xl font-bold">מהו זמן ההגעה הממוצע לאזור צ'ק פוסט וקריות?</h3>
-                <p>הצוותים שלנו פרוסים לאורך ציר כביש 22 והצ'ק פוסט ומבטיחים הגעה תוך 30-45 דקות מרגע הקריאה, גם בשעות עומס.</p>
+                <p>בזכות פריסה נרחבת של צוותים, אנו מבטיחים הגעה תוך 30-45 דקות מרגע הקריאה. למידע נוסף על אזורי שירות נוספים, בקרו ב-<Link href="/areas/page.tsx" className="text-blue-300 underline">עמוד אזורי השירות שלנו</Link>.</p>
               </div>
             </div>
           </section>

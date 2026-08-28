@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "קניית רכבים לפירוק בחיפה והקריות | גרירה חינם 24/7 | שירות מהיר",
-  description: "מעוניינים למכור רכב לפירוק בחיפה והקריות? אנו קונים את כל סוגי הרכבים במחיר הוגן כולל גרירה בחינם. מענה מהיר בכל אזור הצפון 24/7. התקשרו עכשיו לקבלת הצעה!",
+  title: "קניית רכבים לפירוק בחיפה והקריות | גרירה חינם | מחיר הוגן 24/7",
+  description: "רוצים למכור רכב לפירוק? אנו קונים את כל סוגי הרכבים בחיפה והקריות במחיר הוגן, כולל גרירה בחינם. מענה מהיר בכל אזור הצפון 24/7. התקשרו עכשיו להצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-towing-included"
   }
@@ -57,7 +57,7 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירות מקצועי לפינוי רכבים לפירוק</h2>
-        <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק מכל הסוגים: רכבים פרטיים, רכבים מסחריים וג'יפונים. השירות שלנו כולל גרירה מקצועית בפריסה ארצית רחבה, בין היתר ב<Link href="/areas/haifa-general/scrap-car-removal-kiryat-haim-cash" className="text-blue-400 underline">קרית חיים</Link> ובכל אזור הקריות. למידע נוסף על פינוי מאזור הצ'ק פוסט, ניתן לבקר גם בדף <Link href="/areas/haifa-general/cheap-towing-check-post-krayot" className="text-blue-400 underline">גרירה זולה בצ'ק פוסט</Link>.</p>
+        <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק מכל הסוגים: רכבים פרטיים, רכבים מסחריים וג'יפונים. אנו מציעים שירות <Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="text-blue-400 underline">פירוק רכבים לחלפים בקרית מוצקין</Link> ופריסה רחבה בכל הקריות. לתושבי אזור הצ'ק פוסט, אנו מציעים גם <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-400 underline">גרירה זולה בצ'ק פוסט</Link>.</p>
         <p className="mb-4"><strong>הערה חשובה:</strong> השירות מיועד לרכבים בעלי 4 גלגלים ומעלה בלבד. איננו מספקים שירותי פירוק לאופנועים.</p>
         
         <div className="mt-12">
@@ -65,15 +65,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold text-xl">האם אתם מגיעים לכל אזור חיפה והקריות?</h3>
-              <p>כן, אנו פעילים בכל רחבי חיפה והקריות. אם אתם זקוקים לעזרה בדרכים עוקפות, מומלץ לבדוק גם <Link href="/areas/haifa-general/towing-service-road-22-krayot-bypass" className="text-blue-400 underline">שירותי גרירה בכביש 22 עוקף קריות</Link>.</p>
+              <p>כן, אנו פעילים בכל רחבי חיפה והקריות, כולל סיוע בדרכים כמו <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-400 underline">גרירה 24/7 עוקף קריות</Link>.</p>
             </div>
             <div>
               <h3 className="font-bold text-xl">האם ניתן לפנות רכב תקוע לאחר תאונה?</h3>
-              <p>בוודאי. אנו מנוסים מאוד בפינוי רכבים לאחר תאונה או רכבים שלא מניעים. לתושבי הקריות, אנו מציעים גם <Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="text-blue-400 underline">פירוק רכבים לחלפים בקרית מוצקין</Link> בשירות מהיר.</p>
+              <p>בוודאי. אנו מנוסים בפינוי רכבים לאחר תאונה. זקוקים לפינוי דחוף? אנו מציעים שירות <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-400 underline">גרירה לאחר תאונה בכביש 22</Link> במחיר תחרותי.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם שירות הגרירה כלול במחיר הפירוק?</h3>
-              <p>בהחלט. אנו מאמינים בשקיפות מלאה ומציעים פינוי רכב הכולל גרירה ללא עלות נוספת ללקוח.</p>
+              <h3 className="font-bold text-xl">מה היתרון במכירה לכם על פני גריטה?</h3>
+              <p>אנו מציעים הערכת מחיר הוגנת מיידית במזומן, בעוד שגריטה רגילה דורשת בירוקרטיה. זקוקים למידע נוסף? בדקו גם את שירותי ה<Link href="/areas/haifa-general/cash-for-scrap-cars-kiryat-motzkin" className="text-blue-400 underline">קניית רכבים במזומן בקרית מוצקין</Link> שלנו.</p>
             </div>
           </div>
         </div>

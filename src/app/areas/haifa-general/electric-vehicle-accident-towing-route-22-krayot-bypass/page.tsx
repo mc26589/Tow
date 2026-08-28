@@ -4,8 +4,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'גרירת רכב חשמלי בכביש 22 (עוקף קריות) | שירות 24/7 מהיר',
-  description: 'נתקעתם עם רכב חשמלי בכביש 22? שירות גרירה מקצועי לרכבים חשמליים 24/7. הגעה מהירה, מחיר הוגן ושמירה על הרכב. התקשרו עכשיו!',
+  title: 'גרירת רכב חשמלי בכביש 22 (עוקף קריות) - הגעה תוך 30 דקות | 24/7',
+  description: 'נתקעתם עם רכב חשמלי בכביש 22? שירות גרירה מקצועי ומהיר לכל סוגי הרכבים החשמליים. מחיר הוגן, ציוד מתקדם ושירות 24/7. התקשרו עכשיו להגעה מיידית!',
   alternates: {
     canonical: '/areas/haifa-general/electric-vehicle-accident-towing-route-22-krayot-bypass',
   },
@@ -15,21 +15,21 @@ export default function Page() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'AutoTowing',
-    name: 'שירותי גרירה חיפה והקריות',
-    areaServed: 'Haifa and Krayot',
-    openingHoursSpecification: {
+    'name': 'שירותי גרירה חיפה והקריות - רכבים חשמליים',
+    'areaServed': 'Haifa and Krayot',
+    'openingHoursSpecification': {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59',
+      'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      'opens': '00:00',
+      'closes': '23:59',
     },
-    geo: {
+    'geo': {
       '@type': 'GeoCoordinates',
-      latitude: '32.8156',
-      longitude: '35.0567',
+      'latitude': '32.8156',
+      'longitude': '35.0567',
     },
-    priceRange: '$$',
-    serviceType: 'Electric Vehicle Accident Towing',
+    'priceRange': '$$',
+    'serviceType': 'Electric Vehicle Accident Towing',
   };
 
   return (
@@ -42,7 +42,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">גרירת רכב חשמלי לאחר תאונה בכביש 22 עוקף קריות</h1>
-          <p className="text-xl mb-8">נתקעתם בכביש 22? הצוות המקצועי שלנו זמין עבורכם 24/7 עם ציוד מתקדם וייעודי לגרירת רכבים חשמליים והיברידיים בבטחה.</p>
+          <p className="text-xl mb-8">נתקעתם בכביש 22? הצוות המקצועי שלנו זמין עבורכם 24/7 עם ציוד מתקדם וייעודי לגרירת רכבים חשמליים והיברידיים בבטחה מלאה.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="הקריות" />
             <a
@@ -56,11 +56,10 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">מענה מקצועי ובטוח לרכבים חשמליים</h2>
+        <h2 className="text-3xl font-bold mb-6">שירות מקצועי לרכבים חשמליים בכביש 22</h2>
         <p className="mb-4">
-          גרירת רכב חשמלי דורשת מיומנות וציוד מתאים למניעת נזק למערכות הסוללה וההנעה. אנו מתמחים בחילוץ וגרירה לאחר תאונות או תקלות בדרכים מהירות. אם אתם זקוקים לפתרונות נוספים באזור, תוכלו להיעזר בשירותי 
-          <Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="text-blue-600 font-bold underline px-1">גרר פלטה בכביש 22</Link> או 
-          <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 font-bold underline px-1">שירות גרירה אמין בצומת צ'ק פוסט</Link>. חשוב להדגיש כי אנו מתמקדים ברכבים פרטיים ומסחריים ולא מספקים שירותי גרירה לאופנועים.
+          רכב חשמלי זקוק לטיפול שונה מרכב רגיל בעת גרירה, במיוחד לאחר תאונה. אנו מבינים את חשיבות השמירה על מערכות הסוללה. אם אתם זקוקים לסיוע, ניתן להסתייע בשירותי 
+          <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-600 font-bold underline px-1">גרירה 24/7 עוקף קריות במחיר הוגן</Link> או לבדוק אפשרויות נוספות עבור <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 font-bold underline px-1">גרירה לאחר תאונה בכביש 22</Link>. צוות הגרר שלנו מיומן בחילוץ מהיר גם בצמתים המרכזיים.
         </p>
       </section>
 
@@ -70,15 +69,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold text-xl">האם אתם גוררים רכבים חשמליים לאחר תאונה בכביש 22?</h3>
-              <p>כן, אנו ערוכים להגעה מהירה לכל נקודה בכביש עוקף קריות, כולל מחלפי כביש 22, ומציעים שירות מיומן לשמירה על רכבכם החשמלי.</p>
+              <p>כן, אנו ערוכים להגעה מהירה לכל נקודה בכביש עוקף קריות. לרשותכם גם <Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="text-blue-600 underline">גרירת חירום במחלף קרית אתא</Link> וסביבתה.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">איך מזמינים שירותי גרירה מהירים באזור?</h3>
-              <p>ניתן ליצור קשר דרך כפתור הוואטסאפ או החיוג המהיר בעמוד. אנו מספקים מענה רחב הכולל גם <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-600 underline">גרירה לאחר תאונה בצומת צ'ק פוסט</Link>.</p>
+              <h3 className="font-bold text-xl">מה לעשות אם הרכב החשמלי הושבת כליל?</h3>
+              <p>אם הרכב במצב טוטאל-לוס, אנו מספקים מענה כולל. ניתן להיעזר בשירותי <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="text-blue-600 underline">מכירת רכב תקול לחלפים בחיפה</Link> בצורה מסודרת ומהירה.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">מהי רמת הזמינות שלכם בשעות הלילה?</h3>
-              <p>הצוות שלנו פועל 24/7, כולל שבתות וחגים, כדי להעניק לכם שקט נפשי בכל שעה ביום או בלילה.</p>
+              <h3 className="font-bold text-xl">האם השירות כולל גרירה גם לאזורים קרובים?</h3>
+              <p>בהחלט. אנו פעילים בחיפה, קרית אתא, קרית מוצקין וסביבת כביש 22. למידע נוסף, בקרו ב-<Link href="/areas/page" className="text-blue-600 underline">אזורי השירות שלנו</Link>.</p>
             </div>
           </div>
         </div>
