@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "חילוץ רכב תקוע בבוץ בכרמל | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעת בבוץ באזור הכרמל? אנו מתמחים בחילוץ רכבי שטח ופרטיים בדרכי עפר ובשטח. שירות מקצועי, זמין 24/7. לחצו לקבלת עזרה מיידית!",
+  alternates: {
+    canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-region",
+  },
+};
 
 export default function Page() {
   const jsonLd = {
@@ -25,7 +35,7 @@ export default function Page() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב תקוע בבוץ באזור הכרמל</h1>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             נתקעתם בבוץ? אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח (4x4) באזור הכרמל. 
-            שירות מהיר, מקצועי ובטוח 24/7. שימו לב: איננו מספקים שירותי חילוץ לאופנועים.
+            שירות מהיר, מקצועי ובטוח 24/7. ניתן להיעזר גם בשירותי <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-danya" className="underline font-semibold">חילוץ שטח באזור דניה והיער</Link>. שימו לב: איננו מספקים שירותי חילוץ לאופנועים.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -41,21 +51,17 @@ export default function Page() {
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6 text-center">למה לבחור בנו לחילוץ בכרמל?</h2>
-          <ul className="grid md:grid-cols-3 gap-8">
-            <li className="p-6 bg-white shadow-md rounded-lg">
-              <h3 className="font-bold text-xl mb-2">זמינות מלאה</h3>
-              <p>אנו זמינים 24 שעות ביממה, 7 ימים בשבוע, לכל קריאת חילוץ באזור חיפה והכרמל.</p>
-            </li>
-            <li className="p-6 bg-white shadow-md rounded-lg">
-              <h3 className="font-bold text-xl mb-2">ציוד מקצועי</h3>
-              <p>שימוש בציוד חילוץ מתקדם המותאם במיוחד לרכבים שנתקעו בבוץ ובדרכי עפר קשות.</p>
-            </li>
-            <li className="p-6 bg-white shadow-md rounded-lg">
-              <h3 className="font-bold text-xl mb-2">מחירים הוגנים</h3>
-              <p>אנו מציעים שירות מקצועי במחירים הוגנים ושקופים. צרו קשר לקבלת הצעת מחיר בטלפון.</p>
-            </li>
-          </ul>
+          <h2 className="text-3xl font-bold mb-12 text-center">שאלות נפוצות על חילוץ בכרמל</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="font-bold mb-2">כמה זמן לוקח לכם להגיע?</h3>
+              <p>באזור הכרמל והסביבה אנו משתדלים להגיע לכל קריאת חילוץ בזמן קצר ככל הניתן בהתאם לתנאי השטח.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h3 className="font-bold mb-2">האם אתם מחלצים רכבים שננעלו בשטח?</h3>
+              <p>כן, אנו מתמחים בחילוצי שטח ובוץ. לבעיות אחרות בכרמל, ניתן לבדוק גם <Link href="/areas/haifa-general/emergency-towing-horev-ahuza-haifa" className="text-blue-600 underline">גרירת חירום באזור חורב-אחוזה</Link>.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "חילוץ שטח ובוץ בכרמל | חילוץ 4x4 חיפה והסביבה 24/7",
+  description: "נתקעתם בבוץ בדרכי העפר של הכרמל? מומחי חילוץ רכבי 4x4 זמינים 24/7. הגעה מהירה, ציוד מקצועי ומחיר הוגן. אל תחכו, התקשרו עכשיו לחילוץ מהיר!",
+  alternates: {
+    canonical: "/areas/haifa-general/4x4-mud-rescue-carmel"
+  }
+};
 
 export default function Page() {
   const jsonLd = {
@@ -42,12 +52,25 @@ export default function Page() {
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ שטח?</h2>
-          <ul className="space-y-4 text-lg">
+          <ul className="space-y-4 text-lg mb-8">
             <li>✓ מומחיות בחילוץ רכבי 4x4 ורכבי שטח בתנאי בוץ קשים.</li>
             <li>✓ זמינות מלאה 24/7 בכל אזור הכרמל וחיפה.</li>
             <li>✓ ציוד חילוץ מתקדם המבטיח שמירה על שלמות הרכב.</li>
-            <li>✓ מחירים הוגנים ושירות אדיב ומקצועי.</li>
+            <li>✓ שירותים משלימים זמינים כמו <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-danya" className="text-blue-400 underline">חילוץ שטח ביערות הכרמל ודניה</Link>.</li>
           </ul>
+          
+          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות</h3>
+          <div className="space-y-6">
+            <div>
+              <p className="font-bold">תוך כמה זמן תגיעו לחלץ אותי בכרמל?</p>
+              <p className="text-gray-300">זמני ההגעה תלויים בעומסי התנועה ובמיקום המדויק, אך אנו משתדלים להגיע לכל נקודה בכרמל בהקדם האפשרי.</p>
+            </div>
+            <div>
+              <p className="font-bold">האם אתם מחלצים רכבים שאינם 4x4?</p>
+              <p className="text-gray-300">אנו מתמחים בחילוץ מגוון רכבים שנתקעו בדרכי עפר. במידה ואתם זקוקים לשירות אחר, ניתן לבדוק אפשרויות נוספות כמו <Link href="/areas/haifa-general/emergency-towing-horev-ahuza-haifa" className="text-blue-400 underline">שירותי גרירה באחוזה ומרכז הכרמל</Link>.</p>
+            </div>
+          </div>
+
           <p className="mt-8 text-sm text-gray-400">
             *שימו לב: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. איננו מספקים שירותי חילוץ או גרירה לאופנועים.
           </p>

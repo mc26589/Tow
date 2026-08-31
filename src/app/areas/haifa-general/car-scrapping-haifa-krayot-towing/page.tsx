@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "קונה רכבים לפירוק בחיפה והקריות | שירות מהיר ומחיר הוגן",
-  description: "צריכים לפנות רכב ישן? אנו קונים רכבים לפירוק בחיפה והקריות עם שירות גרירה מהיר ומחיר הוגן במקום. צרו קשר לקבלת הצעת מחיר משתלמת עוד היום!",
+  title: "קונה רכבים לפירוק בחיפה והקריות | שירות מהיר במקום 24/7",
+  description: "צריכים לפנות רכב ישן? אנו קונים רכבים לפירוק בחיפה והקריות עם שירות גרירה מהיר ומחיר הוגן במזומן. פינוי רכב ללא כאב ראש – התקשרו עכשיו לקבלת הצעה!",
   alternates: {
     canonical: "/areas/haifa-general/car-scrapping-haifa-krayot-towing"
   }
@@ -41,8 +41,8 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות עם שירות גרירה</h1>
-          <p className="text-xl mb-8">זקוקים לפינוי רכב ישן? אנו קונים רכבים לפירוק ומספקים שירות גרירה מהיר בחיפה והקריות.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בחיפה והקריות | שירות גרירה ופינוי מהיר</h1>
+          <p className="text-xl mb-8">נתקעתם עם רכב ישן שתופס מקום? אנו קונים רכבים לפירוק מכל הסוגים ומספקים שירות גרירה מקצועי בחיפה והקריות.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
@@ -56,27 +56,27 @@ export default function Page() {
       </section>
 
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירות מקצועי לפינוי רכבים</h2>
-        <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק מכל הסוגים: רכבים פרטיים, מסחריים ורכבי 4x4. אם נתקעתם בדרכים, ניתן לבדוק גם את שירותי ה- <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-600 underline">גרירה שלנו בצ'ק פוסט חיפה</Link>. השירות כולל גרירה מהירה ללא עלות נוספת.</p>
+        <h2 className="text-3xl font-bold mb-6">קניית רכבים לפירוק וגרירה באזור חיפה והקריות</h2>
+        <p className="mb-4">אנו מציעים פתרון כולל לבעלי רכבים ישנים, תקולים או כאלו לאחר תאונה. אם אתם זקוקים ל- <Link href="/areas/haifa-general/scrap-car-buyer-haifa-krayot-immediate-removal" className="text-blue-600 underline">קונה רכבים לפירוק באזור חיפה והקריות</Link>, הגעתם למקום הנכון. השירות כולל פינוי מהיר עם גרר.</p>
+        <p className="mb-4">צריכים עזרה נוספת בדרכים? אנו מספקים מענה למגוון מקרים, כולל <Link href="/areas/haifa-general/towing-service-road-22-krayot-bypass" className="text-blue-600 underline">שירותי גרירה בכביש 22 עוקף קריות</Link>. לתושבי הקריות, אנו מבצעים גם <Link href="/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik" className="text-blue-600 underline">פירוק רכבים באזור התעשייה של קרית ביאליק</Link> ובסביבת <Link href="/areas/haifa-general/junk-car-removal-kiryat-yam-beach" className="text-blue-600 underline">קרית ים</Link>.</p>
         <p className="mb-4 font-semibold text-red-600">חשוב להבהיר: איננו מספקים שירותי גרירה או פירוק לאופנועים.</p>
-        <p>אנו מציעים מחירים הוגנים עבור הרכב שלך ומבצעים את כל התהליך בצורה חוקית ומסודרת. למידע נוסף על אפשרויות פינוי באזור הקריות, ניתן לבקר בעמוד ה- <Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="text-blue-600 underline">פירוק רכבים בקרית מוצקין</Link>. צרו קשר עוד היום לקבלת הצעת מחיר בטלפון.</p>
       </section>
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על פירוק רכבים בחיפה</h2>
-          <div className="space-y-4">
+          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על פירוק רכבים בחיפה והסביבה</h2>
+          <div className="space-y-6">
             <div>
-              <h3 className="font-bold">באילו אזורים אתם פועלים?</h3>
-              <p>אנו מעניקים שירות פינוי וגרירה בכל אזור חיפה, הקריות, וצירי התנועה המרכזיים כמו כביש 22.</p>
+              <h3 className="font-bold">באילו רכבים אתם מטפלים?</h3>
+              <p>אנו קונים רכבים פרטיים, רכבים מסחריים ורכבי 4x4. אם נתקעתם באחוזה, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/buying-cars-for-scrap-ahoza-haifa" className="text-blue-600 underline">קניית רכבים לפירוק באחוזה</Link>.</p>
             </div>
             <div>
-              <h3 className="font-bold">האם אתם קונים רכבים ללא טסט?</h3>
-              <p>כן, אנו קונים רכבים במגוון מצבים, כולל רכבים ישנים, רכבים אחרי תאונה או רכבים ללא טסט.</p>
+              <h3 className="font-bold">האם אתם מפנים רכבים ללא טסט?</h3>
+              <p>כן, אנו קונים רכבים ללא טסט, רכבים מושבתים או רכבים שלא עוברים מכון רישוי. התשלום במזומן במעמד הפינוי.</p>
             </div>
             <div>
-              <h3 className="font-bold">תוך כמה זמן תגיעו לפנות את הרכב?</h3>
-              <p>השירות שלנו מבוסס על הגעה מהירה, בדרך כלל תוך מספר שעות מרגע הקריאה, בהתאם לעומס בכבישי חיפה.</p>
+              <h3 className="font-bold">האם השירות כולל גרירה?</h3>
+              <p>בהחלט. אנו מספקים שירותי גרירה מהירים לכל נקודה בחיפה והקריות, גם במקרי חירום כגון <Link href="/areas/haifa-general/grar-zol-lerchev-takua-bekiryat-yam" className="text-blue-600 underline">גרר זול לרכב תקוע בקרית ים</Link>.</p>
             </div>
           </div>
         </div>

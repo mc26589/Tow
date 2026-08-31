@@ -1,20 +1,32 @@
-import { WhatsAppCTA } from "@/components/whatsapp-cta";
-import { BUSINESS_INFO } from "@/lib/data";
+import { WhatsAppCTA } from '@/components/whatsapp-cta';
+import { BUSINESS_INFO } from '@/lib/data';
+import { Metadata } from 'next';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'קונה רכבים לפירוק בחיפה והקריות | פינוי מיידי 24/7',
+  description: 'נתקעתם עם רכב ישן? קונה רכבים לפירוק בחיפה והקריות עם שירות פינוי מהיר, הוגן ומקצועי. זמינות 24/7 לכל סוגי הרכבים. התקשרו עכשיו לקבלת הצעת מחיר!',
+  alternates: {
+    canonical: '/areas/haifa-general/scrap-car-buyer-haifa-krayot-immediate-removal',
+  },
+};
 
 export default function Page() {
   const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "AutoTowing",
-    "name": "שירותי פינוי וקניית רכבים לפירוק חיפה והקריות",
-    "areaServed": ["Haifa", "Kiryat Ata", "Kiryat Bialik", "Kiryat Motzkin", "Kiryat Yam"],
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
-    "priceRange": "$",
-    "serviceType": "Scrap Car Removal"
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
+      {
+        '@type': 'Question',
+        'name': 'האם אתם מפנים רכבים לפירוק גם באזור הקריות?',
+        'acceptedAnswer': { '@type': 'Answer', 'text': 'כן, אנו מספקים שירותי פינוי רכבים מהירים לכל אזור הקריות, כולל חיפה, קרית ביאליק, קרית אתא, קרית מוצקין וקרית ים.' }
+      },
+      {
+        '@type': 'Question',
+        'name': 'האם אתם קונים גם אופנועים?',
+        'acceptedAnswer': { '@type': 'Answer', 'text': 'לא, אנו מתמקדים בפינוי וקניית רכבים בעלי 4 גלגלים ומעלה בלבד. איננו מטפלים באופנועים.' }
+      }
+    ]
   };
 
   return (
@@ -40,13 +52,27 @@ export default function Page() {
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-bold mb-6">שירות פינוי רכבים לפירוק ללא תחרות</h2>
-          <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק בחיפה והקריות ומציעים פתרון מיידי לכל סוגי הרכבים הפרטיים, המסחריים ורכבי 4x4. אנו מבינים את הצורך בפינוי מהיר ומציעים שירות אדיב ומחירים הוגנים.</p>
-          <p className="mb-4"><strong>הערה חשובה:</strong> אנו לא מטפלים באופנועים. השירות שלנו מיועד לרכבים בעלי 4 גלגלים ומעלה בלבד.</p>
+          <p className="mb-4">
+            אנו מתמחים בקניית רכבים לפירוק בחיפה והקריות. בין אם אתם זקוקים ל-<Link href="/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik" className="underline">פינוי באזור התעשייה בקרית ביאליק</Link> או לשירותי <Link href="/areas/haifa-general/buying-cars-for-scrap-ahoza-haifa" className="underline">רכבים לפירוק באחוזה חיפה</Link>, אנו מציעים מענה מיידי.
+          </p>
+          <p className="mb-4"><strong>הערה חשובה:</strong> השירות שלנו מיועד לרכבים בעלי 4 גלגלים ומעלה בלבד. אנו לא מטפלים באופנועים.</p>
           <ul className="list-disc list-inside space-y-2 mt-6">
             <li>פינוי מיידי מהשטח</li>
             <li>הצעת מחיר הוגנת בטלפון</li>
             <li>זמינות מלאה 24/7 באזור חיפה והקריות</li>
           </ul>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-2xl font-bold mb-4">שאלות נפוצות על פינוי רכבים</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-bold">מהו תהליך פינוי הרכב?</h3>
+              <p>התהליך פשוט: אתם מתקשרים, מקבלים הצעת מחיר הוגנת, ואנו מגיעים עם גרר לפנות את הרכב בבטחה.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
