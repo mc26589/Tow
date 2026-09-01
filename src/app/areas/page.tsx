@@ -8,8 +8,8 @@ import {
 } from "@/lib/data-pseo";
 
 export const metadata: Metadata = {
-    title: "גרר בחיפה והצפון 24/7 | חילוץ מהיר תוך 30 דקות | מחיר הוגן",
-    description: "זקוקים לגרר בחיפה והצפון? גרר מפרץ אקספרס מספק שירותי חילוץ רכב מהירים 24/7, הגעה תוך 30 דקות ומחירים ללא תחרות. לכל סוגי הרכבים - התקשרו עכשיו!",
+    title: "גרר בחיפה והצפון 24/7 | הגעה מהירה ב-30 דקות | מחיר הוגן",
+    description: "צריכים גרר בחיפה והצפון? חילוץ רכב מהיר 24/7 במחיר הוגן. הגעה תוך 30 דקות לכל העיר והקריות. לחילוץ רכב תקוע, תאונה או פינוי רכב - התקשרו עכשיו!",
     alternates: {
         canonical: "/areas"
     }
@@ -24,7 +24,7 @@ export default function AreasHubPage() {
                         אזורי שירות ושירותי חילוץ בחיפה והצפון
                     </h1>
                     <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                        אנחנו מגיעים לכל נקודה בצפון, משירותי <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 font-bold hover:underline">גרר בצ'ק פוסט</Link> ועד חילוצי שטח מורכבים. צוות המומחים שלנו עומד לרשותכם 24/7.
+                        אנחנו מגיעים לכל נקודה בצפון, משירותי <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 font-bold hover:underline">גרר בצ'ק פוסט</Link> ועד <Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa" className="text-blue-600 font-bold hover:underline">חילוצי שטח בחיפה</Link>. צוות המומחים שלנו עומד לרשותכם 24/7.
                     </p>
                 </div>
 
@@ -60,7 +60,8 @@ export default function AreasHubPage() {
                                     </Link>
                                 </li>
                             ))}
-                            <li><Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-600 hover:underline">גרר חירום בכביש 22</Link></li>
+                            <li><Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 hover:underline">גרר חירום בכביש 22</Link></li>
+                            <li><Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-600 hover:underline">טיפול בפנצ'ר בצ'ק פוסט</Link></li>
                         </ul>
                     </div>
 
@@ -82,18 +83,18 @@ export default function AreasHubPage() {
                     
                     <div className="col-span-1 md:col-span-2 lg:col-span-3 bg-white p-8 rounded-2xl border border-slate-100 mt-8">
                         <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על שירותי גרירה בחיפה והצפון</h2>
-                        <div className="space-y-4 text-slate-700">
+                        <div className="space-y-6 text-slate-700">
                             <div>
                                 <h3 className="font-bold text-lg">תוך כמה זמן מגיע גרר?</h3>
-                                <p>אנו מבינים את הדחיפות ומבטיחים הגעה לכל אזור חיפה והקריות בטווח של 30 דקות. בין אם מדובר ב<Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 underline">תאונה בכביש 22</Link> או תקלה טכנית.</p>
+                                <p>אנו מבטיחים הגעה מהירה לכל אזור חיפה, הקריות והצפון תוך 30 דקות. במקרה של תאונה בכביש 22, אנו זמינים ל<Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="text-blue-600 underline">גרר דחוף במחלף קרית אתא</Link>.</p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-lg">מה עושים אם הרכב נתקע בשטח?</h3>
-                                <p>לרשותנו ציוד חילוץ מתקדם. אנחנו מומחים ב<Link href="/areas/haifa-general/car-stuck-in-mud-rescue-carmel-forest-haifa" className="text-blue-600 underline">חילוץ רכב תקוע בבוץ בכרמל</Link> ובדרכי עפר באזור חיפה והסביבה.</p>
+                                <h3 className="font-bold text-lg">מהו טווח המחירים לשירותי גרר?</h3>
+                                <p>המחיר שלנו הוגן ונקבע לפי מרחק וסוג החילוץ. אם מדובר ברכב חשמלי שנתקע עם סוללה ריקה, אנו מציעים <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">שירות גרירה לרכב חשמלי</Link> מותאם.</p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-lg">האם אתם קונים רכבים לפירוק?</h3>
-                                <p>כן, אנו מספקים גם שירותי פינוי רכבים. ניתן ליצור קשר לבירור על <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-immediate-removal" className="text-blue-600 underline">פינוי רכבים לפירוק בחיפה</Link> במחיר הוגן.</p>
+                                <p>כן, אנו מספקים פתרון כולל. ניתן להתרשם משירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-600 underline">פינוי רכבים לפירוק בחיפה והקריות</Link> או לבצע <Link href="/areas/haifa-general/cash-for-junk-cars-scrap-vehicle-removal-kiryat-motzkin" className="text-blue-600 underline">פינוי רכב גרוטאה בקרית מוצקין</Link> באופן מיידי.</p>
                             </div>
                         </div>
                     </div>

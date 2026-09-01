@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "חילוץ רכב בדרכים תלולות בחיפה | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעת בעלייה תלולה בחיפה? הצוות שלנו מתמחה בחילוץ רכבים פרטיים ומסחריים בדרכים המאתגרות של העיר. מענה מהיר, מקצועיות ושירות 24/7. התקשרו עכשיו!",
+  description: "נתקעת בעלייה תלולה בחיפה? אנו מומחים בחילוץ רכבים בדרכים המאתגרות של הכרמל והסביבה. מענה מהיר, ציוד מתקדם ומחיר הוגן 24/7. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/towing-steep-roads-haifa",
   },
@@ -42,7 +42,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב תקוע בדרכים תלולות בחיפה</h1>
-          <p className="text-xl mb-8">נתקעתם בעלייה תלולה? הצוות המקצועי שלנו מתמחה בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 בדרכים המאתגרות של חיפה. אנו לא מטפלים באופנועים.</p>
+          <p className="text-xl mb-8">נתקעתם בעלייה תלולה? הצוות המקצועי שלנו מתמחה בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 בדרכים המאתגרות של העיר. מענה מהיר בחיפה והקריות, 24/7.</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
@@ -56,32 +56,33 @@ export default function Page() {
       </section>
 
       <section className="py-12 px-6 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold mb-4">למה לבחור בנו לחילוץ בחיפה?</h2>
+        <h2 className="text-2xl font-bold mb-4">מדוע לבחור בנו לחילוץ בדרכים המאתגרות של חיפה?</h2>
         <ul className="list-disc list-inside space-y-3 text-lg mb-6">
-          <li>מענה מהיר 24/7 לכל שכונות חיפה והקריות.</li>
-          <li>מומחיות בחילוץ בשיפועים חדים ודרכים תלולות, כולל סיוע ל-<Link href="/areas/haifa-general/mud-rescue-4x4-carmel-forest-haifa" className="text-blue-600 underline">רכבי 4x4 באזור הכרמל</Link>.</li>
-          <li>ציוד גרירה מתקדם המבטיח שמירה על הרכב שלכם.</li>
-          <li>מחירים הוגנים ושירות אדיב ומקצועי.</li>
+          <li>זמינות מלאה 24/7 לכל שכונות חיפה והציר הראשי.</li>
+          <li>מומחיות מיוחדת בחילוץ בשיפועים חדים ודרכים תלולות.</li>
+          <li>סיוע מקצועי גם ל-<Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa" className="text-blue-600 underline">רכבי 4x4 באזור הכרמל והדניה</Link>.</li>
+          <li>שירות מהיר ל-<Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-600 underline">נהגים הזקוקים לחילוץ בצומת הצ'ק פוסט</Link> והסביבה.</li>
+          <li>ציוד גרירה מתקדם המגן על הרכב שלכם מפני נזקים בדרכים משופעות.</li>
         </ul>
         <p className="text-gray-600">
-          אנו מעניקים שירות מקיף גם לנהגים הזקוקים ל-<Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">חילוץ בצירים מרכזיים</Link> או לשירותי <Link href="/areas/haifa-general/pinui-rechev-grotah-grira-check-post-haifa-krayot-lechalafim" className="text-blue-600 underline">פינוי רכב תקוע</Link>. חשוב לציין: אנו מתמחים ברכבים פרטיים ומסחריים בלבד ואיננו מספקים שירותי גרירה לאופנועים.
+          אנו מספקים שירותי חילוץ מקיפים לרכב פרטי ומסחרי. נתקעתם בדרך עקב תקלה טכנית? ייתכן שתרצו להציץ בשירותי <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">גרירת רכב תקוע בצ'ק פוסט</Link> שלנו או לבדוק אפשרות ל-<Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-600 underline">פינוי רכב לפירוק</Link> במידה והרכב אינו שמיש. שירות זה מיועד לרכבים בלבד, אנו לא מחלצים אופנועים.
         </p>
       </section>
 
       <section className="py-12 px-6 max-w-4xl mx-auto bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על חילוץ בחיפה</h2>
+        <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על חילוץ בדרכים תלולות</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="font-bold text-xl">האם אתם מחלצים רכבים בדרכים בוציות בכרמל?</h3>
-            <p>כן, אנו מספקים שירותי חילוץ ייעודיים לרכבי שטח שנתקעו, כולל סיוע מורכב בדרכי עפר.</p>
+            <h3 className="font-bold text-xl">האם אתם מחלצים רכבים בדרכי עפר בכרמל?</h3>
+            <p>כן, אנו מספקים שירותי חילוץ ייעודיים לרכבי שטח שנתקעו בדרכים בוציות או תלולות באזור הכרמל וסביבת חיפה.</p>
           </div>
           <div>
             <h3 className="font-bold text-xl">כמה זמן לוקח לכם להגיע לחילוץ בחיפה?</h3>
-            <p>אנו משתדלים להגיע לכל נקודה בחיפה והקריות בזמן המהיר ביותר האפשרי, בהתאם לעומסי התנועה.</p>
+            <p>זמן ההגעה משתנה בהתאם לעומסי התנועה, אך אנו עושים כל מאמץ להגיע במהירות המרבית לכל שכונות העיר והצירים המרכזיים.</p>
           </div>
           <div>
-            <h3 className="font-bold text-xl">האם השירות כולל גרירה במידת הצורך?</h3>
-            <p>בוודאי. אם לא ניתן להניע את הרכב בשטח, נגרור אותו למוסך המבוקש במחיר הוגן.</p>
+            <h3 className="font-bold text-xl">מה לעשות אם נתקעתי עם רכב חשמלי?</h3>
+            <p>במקרה של רכב חשמלי, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">גרירת רכב חשמלי וטעינה</Link> שלנו.</p>
           </div>
         </div>
       </section>

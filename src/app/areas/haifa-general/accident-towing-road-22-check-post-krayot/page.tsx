@@ -5,8 +5,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "גרר תאונה כביש 22 צ'ק פוסט קריות | הגעה מהירה 24/7",
-  description: "נתקעתם בכביש 22 או בצ'ק פוסט? שירותי גרירה וחילוץ מקצועיים לאחר תאונה זמינים 24/7. מחיר הוגן, הגעה מהירה לכל אזור הקריות והסביבה. התקשרו עכשיו לחילוץ!",
+  title: "גרר תאונה כביש 22 וצ'ק פוסט | הגעה מהירה 24/7 - מחיר הוגן",
+  description: "נתקעתם בכביש 22 או בצ'ק פוסט לאחר תאונה? שירות גרירה מקצועי זמין 24/7. הגעה מהירה, מחיר הוגן ושירות אמין. התקשרו עכשיו לחילוץ המהיר ביותר באזור!",
   alternates: {
     canonical: "/areas/haifa-general/accident-towing-road-22-check-post-krayot"
   }
@@ -42,36 +42,36 @@ export default function Page() {
       </section>
 
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירותי גרירה מקצועיים לאחר תאונה</h2>
+        <h2 className="text-3xl font-bold mb-6">שירותי גרירה וחילוץ מקצועיים לאחר תאונה</h2>
         <p className="mb-4">
-          אנו מתמחים בפינוי רכבים לאחר תאונות באזור כביש עוקף קריות (כביש 22) וצומת צ'ק פוסט. אם אתם מחפשים <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-400 underline">שירותי גרירה זולים באזור הצ'ק פוסט</Link> או זקוקים לפתרון מהיר של <Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="text-blue-400 underline">גרירת חירום בכביש 22</Link>, אנו כאן לעזור. 
-          במידה והרכב ניזוק קשות בתאונה, ייתכן שתתעניינו גם באפשרות של <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="text-blue-400 underline">מכירת רכב מושבת לחלפים</Link> עם פינוי מיידי.
+          אנו מתמחים בפינוי רכבים לאחר תאונות באזור כביש עוקף קריות (כביש 22) וצומת צ'ק פוסט. בין אם מדובר בתאונה קלה או חמורה, אנו מציעים <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-400 underline">שירותי גרירה דחופים בכביש 22</Link> ובצמתים המרכזיים. זקוקים לפתרון משלים? אנו מספקים גם <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-400 underline">גרירת חירום בצ'ק פוסט ובחיפה</Link> במחיר הוגן.
+          במידה והרכב ניזוק קשות, ניתן לפנות אלינו גם לבירור לגבי <Link href="/areas/haifa-general/buy-cars-for-scrap-check-post-haifa" className="text-blue-400 underline">פינוי רכבים לפירוק בצ'ק פוסט</Link>.
         </p>
         
         <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800 my-8">
           <h3 className="text-2xl font-semibold mb-4">למה לבחור בנו?</h3>
           <ul className="list-disc pr-5 space-y-2">
             <li>זמינות מלאה 24/7 לכל אזור חיפה והקריות.</li>
-            <li>התמחות בפינוי רכבים לאחר תאונות בצירים מהירים.</li>
+            <li>מומחיות בפינוי מהיר מצירים מהירים כגון כביש 22.</li>
             <li>שקיפות מלאה ומחיר הוגן ללא הפתעות.</li>
-            <li>שירות מקצועי לרכבים פרטיים ומסחריים (איננו מספקים שירותי גרירה לאופנועים).</li>
+            <li>טיפול מקצועי ברכבים פרטיים ומסחריים (איננו גוררים אופנועים).</li>
           </ul>
         </div>
 
         <section className="mt-12">
-          <h2 className="text-3xl font-bold mb-6">שאלות נפוצות על גרירה בציר 22 וקריות</h2>
+          <h2 className="text-3xl font-bold mb-6">שאלות נפוצות על גרירה בציר 22 וצ'ק פוסט</h2>
           <div className="space-y-6">
             <div>
               <h4 className="font-bold text-lg">כמה זמן לוקח לגרר להגיע לצ'ק פוסט?</h4>
-              <p>הצוות שלנו מכיר היטב את צירי התנועה באזור חיפה והקריות. אנו משתדלים להגיע לכל קריאה בכביש 22 בזמן המהיר ביותר האפשרי בהתאם לעומסי התנועה.</p>
+              <p>הצוות שלנו מכיר היטב את צירי התנועה באזור חיפה והקריות. אנו משתדלים להגיע לכל קריאה ב<Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-400 underline">גרירת רכב בכביש 22</Link> בזמן המהיר ביותר האפשרי.</p>
             </div>
             <div>
               <h4 className="font-bold text-lg">האם אתם מציעים שירות גרירה זול באזור?</h4>
-              <p>כן, אנו מציעים <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-400 underline">שירותי גרירה במחיר משתלם בצ'ק פוסט ובחיפה</Link>, תוך שמירה על רמת שירות גבוהה.</p>
+              <p>בהחלט. אנו מציעים <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-400 underline">שירותי גרירה משתלמים בצ'ק פוסט ובקריות</Link>, תוך דגש על איכות עבודה גבוהה.</p>
             </div>
             <div>
-              <h4 className="font-bold text-lg">מה עושים אם הרכב מושבת לחלוטין?</h4>
-              <p>במידה והרכב אינו בר תיקון לאחר תאונה, אנו יכולים לסייע בפינוי הרכב לפירוק. ניתן לקרוא עוד על <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-towing-included" className="text-blue-400 underline">קניית רכבים לפירוק עם גרירה כלולה</Link>.</p>
+              <h4 className="font-bold text-lg">מה עושים אם הרכב מושבת לחלוטין לאחר התאונה?</h4>
+              <p>אם הרכב לא ניתן לתיקון, אנו מציעים שירות של <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-400 underline">פירוק רכבים באזור חיפה והקריות</Link> עם פינוי מהיר מהשטח.</p>
             </div>
           </div>
         </section>
