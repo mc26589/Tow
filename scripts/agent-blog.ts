@@ -18,6 +18,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import fs from "fs";
 import path from "path";
 import * as dotenv from 'dotenv';
+import { assertSafeToWrite } from "./lib/validate-code";
 import { getTrendingTopicForArticle } from './lib/trends-fetcher';
 
 dotenv.config({ path: '.env.local' });
@@ -277,6 +278,18 @@ function appendArticle(article: GeneratedArticle) {
     const needsComma = before.trimEnd().endsWith("}");
 
     content = before + (needsComma ? "," : "") + "\n" + newEntry + "\n" + after;
+
+    // Guardrail: validate the whole guides.ts file compiles as valid
+    // TS/TSX before overwriting it. Even though title/description are
+    // already quote-escaped above, this is a last line of defense against
+    // any other field (category, author, slug) or future code paths
+    // introducing the same unescaped-גרשיים bug that broke production
+    // on 2026-09-03.
+    const check = assertSafeToWrite(content, GUIDES_FILE);
+    if (!check.ok) {
+        console.error(`❌ Refusing to write unsafe code to ${GUIDES_FILE}:\n${check.reason}`);
+        return;
+    }
 
     fs.writeFileSync(GUIDES_FILE, content, "utf-8");
 }

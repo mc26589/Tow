@@ -34,6 +34,11 @@ jobs:
           # FACEBOOK_USER_ACCESS_TOKEN if needed for group discovery
         run: npm run agent:social
 
+      # Safety net: never push code that fails the exact same build Vercel
+      # runs in production, even if the agent's own guardrail was bypassed.
+      - name: Verify production build before committing
+        run: npm run build
+
       - name: Commit and Push changes
         run: |
           git config --global user.name "github-actions[bot]"

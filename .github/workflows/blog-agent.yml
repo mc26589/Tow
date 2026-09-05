@@ -32,6 +32,11 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: npm run agent:blog
 
+      # Safety net: never push code that fails the exact same build Vercel
+      # runs in production, even if the agent's own guardrail was bypassed.
+      - name: Verify production build before committing
+        run: npm run build
+
       - name: Push Changes
         run: |
           git config user.name "Blog Agent Bot"

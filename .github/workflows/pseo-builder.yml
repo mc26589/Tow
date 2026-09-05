@@ -31,7 +31,15 @@ jobs:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
         run: npm run agent:builder
-        
+
+      # Safety net: if the agent's per-file guardrail was somehow bypassed
+      # (or any other bug slipped through), this makes sure we NEVER commit
+      # code that fails the exact same build Vercel runs in production.
+      # This is what would have caught the 2026-09-03 outage even if the
+      # in-agent validation hadn't.
+      - name: Verify production build before committing
+        run: npm run build
+
       # Commit changes to Next.js App Router -> triggers Vercel deployment
       - name: Commit & Push New Pages to Main
         run: |

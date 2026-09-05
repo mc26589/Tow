@@ -3,6 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 import fs from 'fs';
 import path from 'path';
 import * as dotenv from 'dotenv';
+import { assertSafeToWrite } from './lib/validate-code';
 
 dotenv.config({ path: '.env.local' });
 
@@ -36,6 +37,7 @@ async function buildSGERoute(trendQuery: string, locationSlug: string, locationC
         7.  **RSC (Server Components):** The React component MUST be a Server Component (no 'use client'). You must use \`className\` instead of \`class\`.
         8.  **Imports:** DO NOT ADD ANY MOCK DEFINITIONS OR PLACEHOLDERS for BUSINESS_INFO or WhatsAppCTA. Assume the imports are fully functional. Your returned code must use the imports directly.
         9.  **Structured Data:** Generate exact \`AutoTowing\` JSON-LD schema. Includes areaServed (\${locationCity}), openingHoursSpecification (24/7), geo-coordinates (approximate for the area), priceRange ("$"), and serviceType.
+        10. **CRITICAL - Quote Escaping:** \`rsc_code\` will be written to disk verbatim as a .tsx file, so it MUST be syntactically valid TypeScript/JSX. Hebrew text often contains גרשיים (a double-quote mark used mid-word for abbreviations, e.g. סופ"ש, בע"מ, ק"מ, סל"ד, ת"א, צה"ל, ח"כ, מת"ם, בג"ץ). NEVER write one of these raw inside a double-quoted JS string literal (e.g. \`"...הלילה והסופ"ש."\`) — the bare \`"\` will terminate the string early and break compilation. For every such abbreviation inside a double-quoted string, you MUST either: (a) escape it as \\" (e.g. \`"...הלילה והסופ\\"ש."\`), or (b) rewrite that specific string using backticks instead of double quotes, or (c) avoid the abbreviation entirely (e.g. write "סוף השבוע" instead of "סופ"ש"). This applies to every string field you output, including "h1_title", "sge_html", "json_ld" values, and especially "rsc_code". Before finalizing your answer, re-scan every double-quoted string you wrote for a bare " next to a Hebrew letter and fix it.
 
         Output must be a valid JSON object with:
         {
@@ -63,11 +65,22 @@ async function buildSGERoute(trendQuery: string, locationSlug: string, locationC
         }
 
         const targetDir = path.join(APP_DIR, locationSlug, output.slug);
+        const targetFile = path.join(targetDir, 'page.tsx');
+
+        // Guardrail: never write AI-generated code that is syntactically
+        // broken or contains an unescaped Hebrew גרשיים inside a
+        // double-quoted string — this is exactly what broke every
+        // deployment on 2026-09-03. Fail loudly instead of committing it.
+        const check = assertSafeToWrite(output.rsc_code, targetFile);
+        if (!check.ok) {
+            console.error(`Builder produced unsafe code for ${targetFile}, refusing to write it.\n${check.reason}`);
+            return false;
+        }
 
         // 1. Write the physical page.tsx
         fs.mkdirSync(targetDir, { recursive: true });
-        fs.writeFileSync(path.join(targetDir, 'page.tsx'), output.rsc_code);
-        console.log(`Created route: ${targetDir}/page.tsx`);
+        fs.writeFileSync(targetFile, output.rsc_code);
+        console.log(`Created route: ${targetFile}`);
 
         // 2. Save state to Supabase Spoke Pages
         const { error } = await supabase.from('spoke_pages').insert({

@@ -3,6 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import * as dotenv from 'dotenv';
 import { getTrendingTopicForArticle } from './lib/trends-fetcher';
+import { assertSafeToWrite } from './lib/validate-code';
 
 dotenv.config({ path: '.env.local' });
 
@@ -214,8 +215,17 @@ ${trendHint}
           prefix + "\n" + newGuideCode + "\n" +
           guidesFileContent.slice(insertIndex);
 
-        fs.writeFileSync(guidesPath, guidesFileContent);
-        console.log(`Added new guide: ${newGuide.title}`);
+        // Guardrail: JSON.stringify above already escapes quotes safely,
+        // but validate the full file anyway as a last line of defense
+        // against the unescaped-גרשיים bug that broke production on
+        // 2026-09-03 (in case this code path changes in the future).
+        const check = assertSafeToWrite(guidesFileContent, guidesPath);
+        if (!check.ok) {
+          console.error(`Refusing to write unsafe code to ${guidesPath}:\n${check.reason}`);
+        } else {
+          fs.writeFileSync(guidesPath, guidesFileContent);
+          console.log(`Added new guide: ${newGuide.title}`);
+        }
       }
     } else {
       console.log("[Dry Run] Would add guide:", newGuide.title);

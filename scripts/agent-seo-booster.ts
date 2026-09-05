@@ -2,6 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import * as fs from "fs";
 import * as path from "path";
 import * as dotenv from "dotenv";
+import { assertSafeToWrite } from "./lib/validate-code";
 
 dotenv.config({ path: ".env.local" });
 
@@ -125,6 +126,7 @@ async function main() {
            - Do not change any business logic, existing layout structure, or component functionality.
            - Ensure the output is a valid React Server Component (no 'use client', no class instead of className).
            - The returned code must compile with absolutely zero syntax or TypeScript errors.
+           - **Quote Escaping (CRITICAL):** Hebrew גרשיים (a double-quote used mid-word for abbreviations like סופ"ש, בע"מ, ק"מ, סל"ד, ת"א, צה"ל, ח"כ) MUST NEVER appear unescaped inside a double-quoted JS string literal — it terminates the string early and breaks compilation. Either escape it as \\" , move that text into a backtick string, or spell the word out in full (e.g. "סוף השבוע"). Re-check every double-quoted string you output for a bare " next to a Hebrew letter before returning.
 
         Return a JSON response with this exact structure:
         {
@@ -150,7 +152,10 @@ async function main() {
                 console.log(`✅ AI Optimized page: ${page.route}`);
                 console.log(`Reasoning: ${result.reasoning}`);
                 
-                if (IS_DRY_RUN) {
+                const check = assertSafeToWrite(result.optimizedCode, page.filePath);
+                if (!check.ok) {
+                    console.error(`❌ Refusing to write unsafe code for ${page.filePath}:\n${check.reason}`);
+                } else if (IS_DRY_RUN) {
                     console.log(`🧪 [DRY RUN] Would write optimized code back to ${page.filePath}`);
                 } else {
                     fs.writeFileSync(page.filePath, result.optimizedCode, "utf-8");
