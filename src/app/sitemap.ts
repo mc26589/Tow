@@ -127,6 +127,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ];
 
     // 3. Fetch from Supabase (Spoke pages)
+    //
+    // IMPORTANT: builder.ts inserts a spoke_pages row as soon as it writes
+    // page.tsx to the CI runner's local disk — but that write only becomes
+    // "real" if the subsequent `git commit` + `git push` (and, since
+    // 2026-09-08, the build-verification step) also succeed. If the push
+    // fails for any reason (merge conflict, failed build, workflow crash,
+    // API quota, etc.) the Supabase row still exists and still says
+    // is_published: true, but the file was never actually deployed. Left
+    // unchecked, that row goes straight into the sitemap and Google gets a
+    // 404 for a URL that never had a real page — which is exactly the
+    // "Not Found (404)" issue Search Console flagged on 2026-09-06.
+    //
+    // Fix: treat the DB as an index of *candidate* routes, not a source of
+    // truth on its own — only include a spoke_pages URL in the sitemap if
+    // its page.tsx file actually exists in the currently deployed build.
     let dynamicUrls: MetadataRoute.Sitemap = [];
     try {
         const { data: spokePages, error } = await supabase
@@ -135,12 +150,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             .eq('is_published', true);
 
         if (!error && spokePages) {
-            dynamicUrls = spokePages.map((page) => ({
-                url: `${baseUrl}${page.route_path}`,
-                lastModified: new Date(),
-                changeFrequency: 'weekly',
-                priority: 0.8,
-            }));
+            dynamicUrls = spokePages
+                .filter((page) => {
+                    // route_path looks like "/areas/haifa-general/some-slug"
+                    // which maps 1:1 to src/app/areas/haifa-general/some-slug/page.tsx
+                    const relativePath = page.route_path.replace(/^\//, '');
+                    const pageFilePath = path.join(process.cwd(), 'src', 'app', relativePath, 'page.tsx');
+                    const exists = fs.existsSync(pageFilePath);
+                    if (!exists) {
+                        console.warn(
+                            `sitemap: skipping ${page.route_path} — spoke_pages row exists but page.tsx was never deployed (likely a failed CI push).`
+                        );
+                    }
+                    return exists;
+                })
+                .map((page) => ({
+                    url: `${baseUrl}${page.route_path}`,
+                    lastModified: new Date(),
+                    changeFrequency: 'weekly',
+                    priority: 0.8,
+                }));
         } else {
             console.error('Error fetching spoke pages for sitemap:', error);
         }
