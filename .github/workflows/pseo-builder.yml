@@ -38,6 +38,9 @@ jobs:
       # This is what would have caught the 2026-09-03 outage even if the
       # in-agent validation hadn't.
       - name: Verify production build before committing
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
         run: npm run build
 
       # Commit changes to Next.js App Router -> triggers Vercel deployment
