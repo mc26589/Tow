@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בגרנד קניון חיפה | חילוץ 24/7 - מחיר הוגן",
-  description: "נתקעתם עם רכב חשמלי ללא סוללה בגרנד קניון חיפה? שירות גרירה מהיר ומקצועי 24/7. הגעה מהירה, מחיר הוגן וטיפול מיומן ברכבים חשמליים. התקשרו עכשיו לחילוץ!",
+  title: "גרירת רכב חשמלי בגרנד קניון חיפה | חילוץ 24/7 - הגעה מהירה",
+  description: "נתקעתם עם רכב חשמלי ללא סוללה בגרנד קניון חיפה? צוות מומחה לרכבים חשמליים זמין עבורכם 24/7. מחיר הוגן, שירות אמין והגעה מהירה. התקשרו עכשיו לחילוץ!",
   alternates: {
     canonical: "/areas/haifa-general/electric-car-dead-battery-towing-grand-canyon-haifa"
   }
@@ -41,8 +41,10 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרירת רכב חשמלי עם סוללה ריקה בקניון גרנד קניון חיפה</h1>
-          <p className="text-lg mb-8">נתקעתם עם רכב חשמלי ללא סוללה בגרנד קניון חיפה? אנו כאן עבורכם 24/7. אנו מתמחים בחילוץ רכבים חשמליים, רכבים פרטיים ורכבים מסחריים. במידה ואתם זקוקים גם לשירותים באזורים סמוכים כמו <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="underline font-semibold">גרירה בצ'ק פוסט</Link>, אנו זמינים לכל קריאה.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרירת רכב חשמלי עם סוללה ריקה בגרנד קניון חיפה</h1>
+          <p className="text-lg mb-8">
+            נתקעתם עם רכב חשמלי ללא סוללה בגרנד קניון חיפה? אנו כאן עבורכם בכל שעה. אנו מתמחים בחילוץ רכבים חשמליים, רכבים פרטיים ורכבים מסחריים. זקוקים לשירות באזורים אחרים? אנו מציעים גם <Link href="/areas/haifa-general/emergency-towing-road-22-krayot-bypass" className="underline font-semibold">שירותי גרירה בכביש 22 עוקף קריות</Link>.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
@@ -60,9 +62,9 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו?</h2>
           <ul className="space-y-4">
             <li>✓ זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
-            <li>✓ מומחיות בטיפול ברכבים חשמליים והיברידיים (לא כולל אופנועים).</li>
-            <li>✓ הגעה מהירה לכל נקודה בגרנד קניון ובאזור חיפה.</li>
-            <li>✓ שירות מקצועי גם למי שזקוק ל-<Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university" className="text-blue-400">חילוץ רכב תקוע באזור הכרמל</Link>.</li>
+            <li>✓ מומחיות בטיפול בטוח ומקצועי ברכבים חשמליים והיברידיים.</li>
+            <li>✓ הגעה מהירה לכל נקודה בגרנד קניון ובסביבת חיפה.</li>
+            <li>✓ שירות מקצועי גם למי שזקוק ל-<Link href="/areas/haifa-general/urgent-mud-rescue-4x4-towing-carmel-forest-trails-haifa" className="text-blue-400">חילוץ שטח 4x4 באזור הכרמל</Link>.</li>
           </ul>
         </div>
       </section>
@@ -76,8 +78,8 @@ export default function Page() {
               <p>אנו פרוסים בחיפה והסביבה ושואפים להגעה מהירה ככל הניתן, בדרך כלל תוך דקות ספורות בהתאם לעומסי התנועה באזור הקניון.</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold">האם אתם גוררים רכבים חשמליים עם מערכת הנעה 4x4?</h3>
-              <p>כן, אנו ערוכים לחילוץ רכבים מכל הסוגים. אם נתקעתם בחול או בבוץ, ייתכן שתצטרכו <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-600 underline">חילוץ 4x4 מקצועי</Link>.</p>
+              <h3 className="text-xl font-bold">האם אתם גוררים רכבים חשמליים בעלי הנעה כפולה?</h3>
+              <p>כן, אנו ערוכים לחילוץ רכבים מכל הסוגים, כולל רכבים חשמליים מודרניים. אם אתם זקוקים לעזרה בדרכים ראשיות, אנו מספקים גם <Link href="/areas/haifa-general/towing-services-road-22-krayot-private-car" className="text-blue-600 underline">שירותי גרירה לרכב פרטי בכביש 22</Link>.</p>
             </div>
           </div>
         </div>

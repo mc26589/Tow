@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "רכב תקוע בבוץ באוניברסיטת חיפה? חילוץ מהיר 24/7 | מחיר הוגן",
-  description: "נתקעתם בבוץ ליד אוניברסיטת חיפה או ביערות הכרמל? שירות חילוץ רכב תקוע 24/7. הגעה מהירה, צוות מקצועי ומחיר הוגן. צריכים עזרה? התקשרו עכשיו!",
+  title: "חילוץ רכב תקוע בבוץ ליד אוניברסיטת חיפה | הגעה מהירה 24/7",
+  description: "נתקעתם בבוץ באוניברסיטת חיפה או ביערות הכרמל? שירות חילוץ מקצועי, מחיר הוגן, הגעה מהירה לכל נקודה בשטח. צריכים עזרה? התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university"
   }
@@ -41,8 +41,8 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">רכב תקוע בבוץ באזור יערות הכרמל ליד אוניברסיטת חיפה? חילוץ שטח מיידי</h1>
-          <p className="text-xl mb-6">נתקעתם בבוץ בדרכי העפר סביב אוניברסיטת חיפה? אנו זמינים 24/7 עם ציוד חילוץ מתקדם לחילוץ מהיר ובטוח של הרכב שלכם.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">רכב תקוע בבוץ באוניברסיטת חיפה? חילוץ מהיר ליערות הכרמל</h1>
+          <p className="text-xl mb-6">נתקעתם בדרכי העפר סביב אוניברסיטת חיפה? צוות המומחים שלנו זמין 24/7 עם ציוד חילוץ מתקדם לחילוץ מהיר ובטוח של הרכב שלכם מהבוץ.</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
             <a 
@@ -56,27 +56,27 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-4">שירותי חילוץ מקצועיים בכרמל</h2>
-        <p className="mb-4">הצוות שלנו מתמחה בטיפול במצבי <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-blue-600 underline">חילוץ רכב תקוע בבוץ בכל אזור הכרמל</Link> וביערות הסמוכים לאוניברסיטת חיפה. אם מדובר בשטח מאתגר יותר, אנו מספקים גם <Link href="/areas/haifa-general/car-extraction-from-mud-carmel-reserve-haifa" className="text-blue-600 underline">חילוץ רכבים מקצועי משמורת הכרמל</Link> בצורה בטוחה ושקופה.</p>
-        <p className="text-red-600 font-bold mb-4">לתשומת לבכם: השירות מיועד לרכבים פרטיים ומסחריים בלבד, איננו מחלצים אופנועים.</p>
-        <p className="mb-4">אנו מקפידים על מחיר הוגן ללא הפתעות. במידה ואתם זקוקים לשירותים נוספים באזור אחוזה והסביבה, אנו מציעים מענה כולל לכל דרישה בשטח.</p>
+        <h2 className="text-2xl font-bold mb-4">שירותי חילוץ שטח מתקדמים בכרמל</h2>
+        <p className="mb-4">הצוות שלנו מתמחה בטיפול במצבי <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-blue-600 underline">חילוץ רכב תקוע בבוץ בכל אזור הכרמל</Link> והיערות הסמוכים. אם הרכב שקע עמוק, אנו מציעים גם <Link href="/areas/haifa-general/suv-stuck-in-mud-rescue-haifa-university" className="text-blue-600 underline">suv stuck in mud rescue haifa university</Link> מקצועי ומדויק. עבור מקרים מורכבים יותר, אנו זמינים עם <Link href="/areas/haifa-general/urgent-mud-rescue-4x4-towing-carmel-forest-trails-haifa" className="text-blue-600 underline">urgent mud rescue 4x4 towing carmel forest trails haifa</Link> לכל סוגי הרכבים.</p>
+        <p className="text-red-600 font-bold mb-4">לתשומת לבכם: השירות מיועד לרכבים פרטיים ומסחריים בלבד. איננו מחלצים אופנועים.</p>
+        <p className="mb-4">אנו מקפידים על מחיר הוגן ושקיפות מלאה. אם אתם זקוקים לחילוץ דחוף, צרו קשר לקבלת הערכת מחיר הוגנת ומהירה.</p>
       </section>
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על חילוץ בחיפה והכרמל</h2>
+          <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על חילוץ רכב באזור הכרמל</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-lg">כמה זמן לוקח לכם להגיע לאוניברסיטת חיפה?</h3>
-              <p>ברוב המקרים אנו מגיעים תוך זמן קצר, שכן אנו ערוכים לחילוצים מהירים בחיפה ובאזור יערות הכרמל.</p>
+              <h3 className="font-bold text-lg">תוך כמה זמן תגיעו לאזור אוניברסיטת חיפה?</h3>
+              <p>ברוב המקרים אנו מגיעים תוך זמן קצר, שכן הצוותים שלנו ערוכים ופרוסים לחילוץ מהיר בחיפה ובסביבת יערות הכרמל.</p>
             </div>
             <div>
               <h3 className="font-bold text-lg">האם אתם מחלצים רכבים ששקעו עמוק בבוץ?</h3>
-              <p>כן, אנו ערוכים עם ציוד ייעודי לחילוצי שטח ובוץ, גם עבור רכבים פרטיים וגם לרכבי שטח כבדים יותר.</p>
+              <p>כן, אנו ערוכים עם ציוד חילוץ כבד וייעודי המותאם גם לרכבים פרטיים ששקעו בבוץ עמוק בשטח.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">האם המחיר שקוף?</h3>
-              <p>בהחלט. אנו מאמינים בשירות הוגן, נקיוב מחיר ברור לפני תחילת העבודה כדי שתוכלו להיות רגועים גם ברגעים מלחיצים.</p>
+              <h3 className="font-bold text-lg">האם ניתן לקבל הצעת מחיר בטלפון?</h3>
+              <p>בהחלט. אנו מקפידים על מחיר הוגן וברור עוד לפני תחילת העבודה כדי שתוכלו לקבל שירות רגוע ללא הפתעות.</p>
             </div>
           </div>
         </div>

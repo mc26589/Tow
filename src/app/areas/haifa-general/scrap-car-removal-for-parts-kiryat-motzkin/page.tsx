@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "פינוי רכבים לפירוק בקרית מוצקין | הגעה תוך 30 דקות | 24/7",
-  description: "נתקעתם עם רכב ישן? שירות פינוי רכבים לפירוק בקרית מוצקין והסביבה. פינוי מהיר, שירות אמין ומחיר הוגן במזומן. התקשרו עכשיו לקבלת הצעה!",
+  title: "פינוי רכבים לפירוק בקרית מוצקין | תשלום במזומן | הגעה תוך 30 דקות",
+  description: "רוצים להיפטר מהרכב הישן? שירות פינוי רכבים לפירוק בקרית מוצקין 24/7. שירות אמין, תשלום הוגן במזומן ופינוי מיידי לכל סוגי הרכבים. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin",
   },
@@ -41,8 +41,8 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">פינוי רכבים לפירוק בקרית מוצקין – שירות מהיר ומקצועי</h1>
-          <p className="text-xl mb-8">נפטרים מהרכב הישן במינימום מאמץ. פינוי רכבים לפירוק בקרית מוצקין 24/7 במחיר הוגן.</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">פינוי רכבים לפירוק בקרית מוצקין – שירות מקצועי ב-30 דקות</h1>
+          <p className="text-xl mb-8">נפטרים מהרכב הישן במינימום מאמץ. פינוי רכבים לפירוק בקרית מוצקין 24/7 במחיר הוגן ומזומן במקום.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Kiryat Motzkin" />
             <a 
@@ -57,15 +57,16 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">פינוי רכבים לפירוק בקרית מוצקין – מענה מיידי לכל סוגי הרכבים</h2>
-        <p className="mb-4">אם ברשותכם רכב ישן או תקול, אנו מספקים מענה מהיר. מלבד פינוי לרכבים, אנו מציעים שירותי <Link href="/areas/haifa-general/cheap-towing-kiryat-motzkin-fair-price" className="text-blue-400 underline">גרירה זולה בקרית מוצקין במחיר הוגן</Link>. זקוקים לפינוי מהיר גם מהקריות הסמוכות? אנו מבצעים <Link href="/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal" className="text-blue-400 underline">קניית רכבים לפירוק בקרית ביאליק</Link> עם פינוי מיידי.</p>
-        <p className="mb-4">השירות שלנו מתאים לכל רכב שאינו כשיר לנסיעה, בין אם מדובר ברכב פרטי או מסחרי. לקוחות רבים מחפשים גם <Link href="/areas/haifa-general/cash-for-junk-cars-scrap-vehicle-removal-kiryat-motzkin" className="text-blue-400 underline">מזומן עבור רכבים לפירוק בקרית מוצקין</Link> - אנו הכתובת הנכונה.</p>
+        <p className="mb-4">אם ברשותכם רכב ישן או תקול, אנו מספקים מענה מהיר. אם נתקעתם בדרך, אנו מציעים שירותי <Link href="/areas/haifa-general/towing-services-road-22-krayot-private-car" className="text-blue-400 underline">גרירה בטוחה בכביש 22 עוקף קריות</Link>. זקוקים לפינוי מהיר גם מהקריות הסמוכות? אנו מבצעים <Link href="/areas/haifa-general/towing-for-scrap-kiryat-bialik" className="text-blue-400 underline">קניית רכבים לפירוק בקרית ביאליק</Link> עם פינוי מיידי.
+        </p>
+        <p className="mb-4">השירות שלנו מתאים לכל רכב שאינו כשיר לנסיעה, בין אם מדובר ברכב פרטי או מסחרי. לקוחות רבים מחפשים גם <Link href="/areas/haifa-general/fast-towing-services-road-22-krayot-bypass" className="text-blue-400 underline">פינוי מהיר מרכב לפירוק בקרית מוצקין</Link> - אנו הכתובת הנכונה.</p>
         
         <h3 className="text-2xl font-bold mt-8 mb-4">למה לבחור בנו?</h3>
         <ul className="list-disc list-inside space-y-2 mb-8">
           <li>זמינות מלאה 24/7 באזור חיפה והקריות.</li>
           <li>פינוי בטוח, מהיר ושמירה על סביבה נקייה.</li>
           <li>מחירים הוגנים ותשלום במקום על רכבים לפירוק.</li>
-          <li>ניסיון מקצועי רב בטיפול בכל סוגי הרכבים (למעט אופנועים).</li>
+          <li>ניסיון מקצועי רב בטיפול בכל סוגי הרכבים הפרטיים והמסחריים (איננו מפנים אופנועים).</li>
         </ul>
 
         <div className="mt-12 bg-neutral-900 p-6 rounded-lg">
@@ -73,15 +74,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <p className="font-bold">האם אתם קונים רכבים ללא טסט?</p>
-              <p>כן, אנו קונים ומפנים רכבים לפירוק בקרית מוצקין מכל מצב - ללא טסט, לאחר תאונה או רכבים שעמדו שנים.</p>
+              <p>כן, אנו קונים ומפנים רכבים לפירוק בקרית מוצקין מכל מצב - ללא טסט, לאחר תאונה או רכבים שעמדו שנים ללא תזוזה.</p>
             </div>
             <div>
               <p className="font-bold">מהו טווח המחירים לרכב לפירוק?</p>
-              <p>המחיר משתנה בהתאם למשקל הרכב, חלקי החילוף שניתן להפיק ממנו ודגם הרכב. אנו מתחייבים למחיר הוגן בשוק.</p>
+              <p>המחיר משתנה בהתאם למשקל הרכב, חלקי החילוף שניתן להפיק ממנו ודגם הרכב. אנו מתחייבים למחיר הוגן ותחרותי בשוק.</p>
             </div>
             <div>
               <p className="font-bold">תוך כמה זמן תגיעו לפנות את הרכב?</p>
-              <p>אנו מבינים את הדחיפות ופועלים להגעה מהירה בכל רחבי קרית מוצקין והסביבה. <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-400 underline">צרו קשר לקבלת הערכת זמן מדויקת</Link>.</p>
+              <p>אנו מבינים את הדחיפות ופועלים להגעה מהירה בכל רחבי קרית מוצקין והסביבה. <Link href="/areas/haifa-general/emergency-towing-road-22-krayot-bypass" className="text-blue-400 underline">צרו קשר לקבלת הערכת זמן מדויקת להגעה</Link>.</p>
             </div>
           </div>
         </div>

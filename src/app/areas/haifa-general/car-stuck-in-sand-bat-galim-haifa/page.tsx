@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב מהחול בבת גלים חיפה | הגעה מהירה עד 30 דקות",
-  description: "נתקעתם בחולות חוף בת גלים? אל תסתכנו! שירות חילוץ רכב מהיר, מקצועי ובמחיר הוגן 24/7. הגעה מיידית לכל נקודה בחוף. התקשרו עכשיו לחילוץ בטוח!",
+  title: "חילוץ רכב מהחול בבת גלים חיפה | הגעה עד 30 דקות | 24/7",
+  description: "נתקעתם בחולות חוף בת גלים? אל תסתכנו! שירות חילוץ מקצועי, מהיר ובמחיר הוגן 24/7. הגעה מיידית לכל נקודה בחוף. התקשרו עכשיו לחילוץ בטוח!",
   alternates: {
     canonical: "/areas/haifa-general/car-stuck-in-sand-bat-galim-haifa"
   }
@@ -59,7 +59,7 @@ export default function Page() {
             <li>✓ מחירים הוגנים ושקיפות מלאה ללא הפתעות בחוף.</li>
           </ul>
           <p className="mt-6 text-gray-600">
-            זקוקים לעזרה נוספת? אנו מספקים שירותי חילוץ מקיפים, כגון <Link href="/areas/haifa-general/emergency-towing-stella-maris-haifa" className="text-blue-600 underline">גרירת חירום באזור סטלה מאריס</Link> או <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-danya" className="text-blue-600 underline">חילוץ שטח ביערות הכרמל</Link>.
+            זקוקים לעזרה נוספת באזורים סמוכים? אנו מספקים שירותי חילוץ מקיפים, כגון <Link href="/areas/haifa-general/urgent-mud-rescue-4x4-towing-carmel-forest-trails-haifa" className="text-blue-600 underline">חילוץ שטח וגרירת 4x4 ביערות הכרמל</Link> או <Link href="/areas/haifa-general/suv-stuck-in-mud-rescue-haifa-university" className="text-blue-600 underline">חילוץ רכבי שטח ליד אוניברסיטת חיפה</Link>. במקרה של תקלות בכבישים המהירים באזור, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/emergency-towing-road-22-krayot-bypass" className="text-blue-600 underline">גרירת חירום בכביש 22 עוקף קריות</Link>.
           </p>
         </div>
       </section>
@@ -73,7 +73,7 @@ export default function Page() {
               <p className="text-gray-700">ברוב המקרים, הצוות שלנו מגיע לחוף בתוך כ-30 עד 45 דקות מרגע הקריאה, בהתאם לעומסי התנועה באזור הטיילת והרחובות הראשיים.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם אתם מחלצים גם רכבים כבדים או מסחריים?</h3>
+              <h3 className="font-bold text-xl">האם אתם מחלצים גם רכבים מסחריים?</h3>
               <p className="text-gray-700">כן, אנו ערוכים לחילוץ מגוון רחב של רכבים, כולל רכבים פרטיים, רכבי שטח ורכבים מסחריים קלים ששקעו בבוץ או בחול.</p>
             </div>
             <div>
