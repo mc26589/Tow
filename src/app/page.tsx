@@ -39,8 +39,8 @@ export default function HomePage() {
                         },
                         "provider": {
                             "@type": "LocalBusiness",
-                            "name": "גרר מפרץ אקספרס",
-                            "telephone": "+972533391788",
+                            "name": BUSINESS_INFO.name,
+                            "telephone": `+${BUSINESS_INFO.phone}`,
                             "areaServed": {
                                 "@type": "City",
                                 "name": "חיפה"

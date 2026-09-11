@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CITIES } from "@/lib/data";
 import {
+    HAZARDS,
     NEIGHBORHOODS,
     ROADS,
     WARNING_LIGHTS
@@ -62,6 +63,20 @@ export default function AreasHubPage() {
                             ))}
                             <li><Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 hover:underline">גרר חירום בכביש 22</Link></li>
                             <li><Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-600 hover:underline">טיפול בפנצ'ר בצ'ק פוסט</Link></li>
+                        </ul>
+                    </div>
+
+                    <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
+                        <h2 className="font-bold text-2xl text-emerald-800 mb-6 border-b pb-4">מה קרה לכם? — מצא את הפתרון</h2>
+                        <ul className="space-y-4">
+                            {HAZARDS.map((hazard) => (
+                                <li key={hazard.slug} className="border-b border-slate-50 pb-3 last:border-0 last:pb-0">
+                                    <Link href={`/hazards/${hazard.slug}/haifa`} className="text-slate-800 font-semibold hover:text-emerald-600 hover:underline block">
+                                        {hazard.name_he}
+                                    </Link>
+                                    <p className="text-sm text-slate-500 mt-1">{hazard.description}</p>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 

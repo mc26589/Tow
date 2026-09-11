@@ -50,6 +50,18 @@ export const BUSINESS_INFO = {
     whatsappBase: "https://wa.me/972549174414",
     description: "שירותי גרירה מהירים ומקצועיים בצפון הארץ. הגעה מהירה, מחירים הוגנים, 24/7.",
     areas: "חיפה והקריות, עכו, יקנעם, קרית טבעון, רכסים, נשר",
+    // Entity-triangulation links (GEO / Local SEO): AI answer engines and Google cross-check
+    // these profiles against the on-site NAP (Name, Address, Phone) to verify the business is
+    // real and trustworthy before citing it. Fill in the real URLs once available — an empty
+    // or placeholder URL here is worse than omitting it, so leave an entry blank/commented out
+    // until you have the actual link.
+    sameAs: [
+        // "https://www.google.com/maps/place/YOUR_GOOGLE_BUSINESS_PROFILE_ID",
+        // "https://www.facebook.com/YOUR_PAGE",
+        // "https://www.instagram.com/YOUR_HANDLE",
+        // "https://www.waze.com/he/live-map/directions/YOUR_WAZE_PIN",
+        // "https://www.d144.co.il/YOUR_LISTING",
+    ] as string[],
 } as const;
 
 export const OWNER_INFO = {

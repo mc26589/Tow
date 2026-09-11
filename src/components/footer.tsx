@@ -78,6 +78,16 @@ export function Footer() {
                                     מרכז המידע: מדריכים וטיפים לבטיחות
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/emergency-guide" className="text-slate-400 hover:text-white transition-colors">
+                                    נתקעתי עכשיו — מדריך חירום
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/facts" className="text-slate-400 hover:text-white transition-colors">
+                                    עובדות מהירות על השירות
+                                </Link>
+                            </li>
                             <li className="pt-2 border-t border-slate-800">
                                 <span className="text-green-400">✓</span> זמינות 24 שעות, 7 ימים בשבוע
                             </li>

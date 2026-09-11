@@ -34,16 +34,19 @@ export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isH
 
     const localBusiness = {
         "@context": "https://schema.org",
-        "@type": ["LocalBusiness", "AutoRepair"],
+        // EmergencyService added alongside AutoRepair so AI engines matching "דחוף/חירום" (urgent/emergency)
+        // queries can resolve this entity correctly, per the 24/7 emergency-dispatch nature of the service.
+        "@type": ["LocalBusiness", "AutoRepair", "EmergencyService"],
         "@id": `${baseUrl}/#business`,
         name: "גרר מפרץ אקספרס - שירותי גרירה",
         description: vehicleName && cityName
             ? `שירותי גרירה מקצועיים ל${vehicleName} ב${cityName}. הגעה מהירה תוך 30 דקות, מחירים הוגנים, 24/7.`
             : "שירותי גרירה מהירים ומקצועיים בחיפה, הקריות ואזור הצפון. 24/7.",
-        telephone: "+972-54-917-4414",
+        telephone: `+${BUSINESS_INFO.phone}`,
         url: baseUrl,
         image: `${baseUrl}/logo.png`,
         priceRange: "$$",
+        ...(BUSINESS_INFO.sameAs && BUSINESS_INFO.sameAs.length > 0 ? { sameAs: BUSINESS_INFO.sameAs } : {}),
         founder: { "@id": `${baseUrl}/#owner` },
         knowsAbout: ["גרירה", "חילוץ רכב", "שירותי דרכים", "שגריר", "גרר", "פנצ'ר", "מנהרות הכרמל", "איתוראן"],
         openingHoursSpecification: {
@@ -107,7 +110,39 @@ export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isH
                         name: "חילוץ רכבים חשמליים",
                         description: "שירות גרירה מותאם בהרמה מלאה (Flatbed) למניעת נזק לסוללה ומערכת ההנעה החשמלית",
                     }
-                }
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "גרירת רכב פרטי",
+                        serviceType: "Private Car Towing",
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "חילוץ דרך וחילוץ רכב תקוע",
+                        serviceType: "Roadside Recovery",
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "טיפול בפנצ'ר בדרך",
+                        serviceType: "Flat Tire Assistance",
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    itemOffered: {
+                        "@type": "Service",
+                        name: "גרירת אופנועים",
+                        serviceType: "Motorcycle Towing",
+                    }
+                },
             ],
         },
         potentialAction: {
