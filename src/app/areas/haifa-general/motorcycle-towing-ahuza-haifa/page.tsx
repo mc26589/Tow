@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "שירותי גרירה וחילוץ רכב באחוזה חיפה | הגעה מהירה 24/7",
-  description: "נתקעת עם הרכב באזור אחוזה בחיפה? אנו מעניקים שירותי גרירה וחילוץ מקצועיים לרכבים פרטיים ומסחריים בכל אזור הכרמל. מחיר הוגן, זמינות 24/7. התקשרו עכשיו!",
+  title: "גרר באחוזה חיפה | שירות גרירה וחילוץ 24/7 - מחיר הוגן",
+  description: "נתקעתם עם הרכב באחוזה חיפה? אנו מספקים שירותי גרירה וחילוץ מקצועיים לרכבים פרטיים ומסחריים 24/7. הגעה מהירה, מחיר הוגן ושירות אדיב. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/motorcycle-towing-ahuza-haifa",
   },
@@ -42,11 +42,12 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">שירותי גרירה וחילוץ לרכב באחוזה חיפה</h1>
           <p className="text-lg mb-4">
-            מחפשים גרר אמין באחוזה? חשוב להבהיר כי אנו מתמחים בשירותי גרירה וחילוץ לרכבים פרטיים, רכבים מסחריים ורכבי שטח (4x4) בחיפה. 
+            מחפשים גרר אמין באחוזה? אנו מתמחים בשירותי גרירה וחילוץ לרכבים פרטיים, רכבים מסחריים ורכבי שטח (4x4) בחיפה. 
+            במידה ונתקעתם עם רכב חשמלי ללא טעינה, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa" className="underline font-bold">גרירה לרכב חשמלי באחוזה</Link>. 
             שימו לב שאיננו מספקים שירותי גרירה לאופנועים. אם אתם זקוקים לחילוץ רכב באזור, אנחנו כאן עבורכם 24/7.
           </p>
           <p className="text-lg mb-8">
-            צריכים עזרה דחופה? בדקו גם את שירותי ה-<Link href="/areas/haifa-general/truck-accident-recovery-service-ahuzah-haifa" className="underline font-bold">חילוץ לאחר תאונה באחוזה</Link> או פנו אלינו בכל תקלה מכנית.
+            צריכים עזרה דחופה? בדקו גם את שירותי ה-<Link href="/areas/haifa-general/car-rescue-carmel-tunnels-haifa" className="underline font-bold">חילוץ בתוך מנהרות הכרמל</Link> או פנו אלינו בכל תקלה מכנית.
           </p>
           <div className="flex gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -73,7 +74,11 @@ export default function Page() {
           </div>
           <div>
             <h3 className="text-xl font-semibold">אילו סוגי רכבים אתם גוררים?</h3>
-            <p>אנו מציעים שירותי גרירה לרכבים פרטיים, רכבים מסחריים ורכבי 4x4. למידע נוסף על חילוצים מורכבים, ראו גם <Link href="/areas/haifa-general/urgent-mud-rescue-4x4-towing-carmel-forest-trails-haifa" className="text-blue-600 underline">חילוץ 4x4 ביערות הכרמל</Link>.</p>
+            <p>אנו מציעים שירותי גרירה לרכבים פרטיים, רכבים מסחריים ורכבי 4x4. למידע נוסף על חילוצים מורכבים בדרכי עפר, ראו גם <Link href="/areas/haifa-general/emergency-mud-rescue-carmel-forest-haifa" className="text-blue-600 underline">חילוץ רכב בבוץ ביערות הכרמל</Link>.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">מה עושים במקרה של רכב חשמלי שנתקע ללא טעינה?</h3>
+            <p>אנו מציעים פתרונות ייעודיים הכוללים פינוי לנקודת טעינה קרובה, למידע נוסף בקרו בעמוד <Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa" className="text-blue-600 underline">גרירת רכב חשמלי</Link> באזורנו.</p>
           </div>
         </div>
       </section>

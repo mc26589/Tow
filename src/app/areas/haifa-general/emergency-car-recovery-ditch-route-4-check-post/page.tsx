@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ רכב מתעלה בצומת צ\'ק פוסט | הגעה מהירה 30 דקות | 24/7',
-  description: 'נתקעתם בתעלה בכביש 4 צ\'ק פוסט? צוות חילוץ מקצועי יחלץ אתכם במהירות ובמחיר הוגן. זמינות 24/7 באזור חיפה והקריות. התקשרו עכשיו!',
+  title: 'חילוץ רכב מתעלה בצומת צ\'ק פוסט | הגעה תוך 30 דקות | 24/7',
+  description: 'נתקעתם בתעלה בכביש 4 צ\'ק פוסט? צוות מקצועי יחלץ אתכם במהירות ובמחיר הוגן. זמינות 24/7 באזור חיפה והקריות. התקשרו עכשיו!',
   alternates: {
     canonical: '/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post',
   },
@@ -17,7 +17,7 @@ export default function Page() {
     '@type': 'AutoTowing',
     'name': 'שירותי חילוץ וגרירה קריות וחיפה',
     'areaServed': 'Haifa and Krayot',
-    'priceRange': 'הוגן',
+    'priceRange': 'מחיר הוגן',
     'openingHoursSpecification': {
       '@type': 'OpeningHoursSpecification',
       'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
@@ -41,8 +41,8 @@ export default function Page() {
 
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב מתעלה בכביש 4 ליד צומת צ'ק פוסט</h1>
-          <p className="text-xl mb-8">זקוקים לחילוץ דחוף? הרכב נפל לתעלה? אנו כאן בשבילכם 24/7. הגעה מהירה לאזור הצ'ק פוסט, הקריות וציר התנועה המרכזי.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב מתעלה בכביש 4 ליד צומת צ\'ק פוסט</h1>
+          <p className="text-xl mb-8">זקוקים לחילוץ דחוף? הרכב נפל לתעלה? אנו כאן בשבילכם 24/7. הגעה מהירה לאזור הצ\'ק פוסט, הקריות וציר התנועה המרכזי.</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
             <a
@@ -57,9 +57,9 @@ export default function Page() {
 
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">שירותי חילוץ מקצועיים בצומת צ'ק פוסט</h2>
-          <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 שסטו מהכביש. אם אתם זקוקים גם ל<Link href="/areas/haifa-general/towing-service-road-22-krayot-bypass" className="text-blue-400 underline">שירותי גרירה בכביש 22 עוקף קריות</Link> או לשירותי גרירה זולים באזור, הצוות שלנו זמין עבורכם 24/7. חשוב לציין: אנו לא מספקים שירותי חילוץ לאופנועים.</p>
-          <p>הצוות שלנו מגיע מצויד בכלים המתאימים כדי להבטיח שהרכב שלכם יחולץ במינימום נזק. במידה והרכב ישן או מושבת, אנו מציעים גם פתרונות <Link href="/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik" className="text-blue-400 underline">פינוי רכבים לגריטה באזור התעשייה</Link>.</p>
+          <h2 className="text-3xl font-bold mb-6">שירותי חילוץ מקצועיים בצומת צ\'ק פוסט</h2>
+          <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 שסטו מהכביש. אם אתם זקוקים גם ל<Link href="/areas/haifa-general/fast-towing-services-road-22-krayot-bypass" className="text-blue-400 underline">שירותי גרירה מהירים בכביש 22 עוקף קריות</Link> או לשירותי חילוץ מקצועיים, הצוות שלנו זמין עבורכם 24/7. חשוב לציין: אנו לא מספקים שירותי חילוץ לאופנועים.</p>
+          <p>הצוות שלנו מגיע מצויד בכלים המתאימים כדי להבטיח שהרכב יחולץ במינימום נזק. במידה והרכב ישן או מושבת, אנו מציעים גם פתרונות <Link href="/areas/haifa-general/kaniyat-rekhavim-yeshanim-lehalafim-kiryat-yam-pinui-meyadi" className="text-blue-400 underline">פינוי רכבים ישנים לגריטה באזור הקריות</Link>.</p>
         </div>
       </section>
 
@@ -68,16 +68,16 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-8">שאלות נפוצות (FAQ)</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-xl">כמה זמן לוקח לכם להגיע לצומת צ'ק פוסט?</h3>
-              <p>בדרך כלל אנו מגיעים לכל נקודה באזור הצ'ק פוסט, כביש 4 וכביש 22 תוך 30 דקות, בהתאם לעומסי התנועה.</p>
+              <h3 className="font-bold text-xl">כמה זמן לוקח לכם להגיע לצומת צ\'ק פוסט?</h3>
+              <p>בדרך כלל אנו מגיעים לכל נקודה באזור הצ\'ק פוסט, כביש 4 וכביש 22 תוך 30 דקות, בהתאם לעומסי התנועה.</p>
             </div>
             <div>
               <h3 className="font-bold text-xl">האם אתם מחלצים רכבים שנפלו לתעלה עמוקה?</h3>
-              <p>כן, אנו ערוכים לביצוע חילוצים מורכבים. במידה והתעלה נמצאת בשטח קשה, אנו משתמשים בטכניקות דומות ל<Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-600 underline">חילוצי 4x4 ביערות הכרמל</Link>.</p>
+              <p>כן, אנו ערוכים לביצוע חילוצים מורכבים. במידה והתעלה נמצאת בשטח קשה, אנו משתמשים בטכניקות דומות ל<Link href="/areas/haifa-general/emergency-mud-rescue-carmel-forest-haifa" className="text-blue-600 underline">חילוצי בוץ מהכרמל</Link>.</p>
             </div>
             <div>
               <h3 className="font-bold text-xl">מה טווח המחירים לחילוץ?</h3>
-              <p>אנו מציעים מחיר הוגן ושקוף. המחיר נקבע לפי מורכבות החילוץ מהתעלה והמרחק ליעד. אנו מציעים גם פתרונות משתלמים כמו <Link href="/areas/haifa-general/cheap-towing-check-post-haifa-fast-service" className="text-blue-600 underline">גרירה זולה בצ'ק פוסט</Link>.</p>
+              <p>אנו מציעים מחיר הוגן ושקוף. המחיר נקבע לפי מורכבות החילוץ מהתעלה והמרחק ליעד. אנו מציעים גם פתרונות משתלמים כמו <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-600 underline">גרירה במחיר הוגן בצ\'ק פוסט</Link>.</p>
             </div>
           </div>
         </div>

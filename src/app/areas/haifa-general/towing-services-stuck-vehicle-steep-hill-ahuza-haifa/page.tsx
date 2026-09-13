@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב תקוע בעלייה תלולה באחוזה, חיפה | הגעה תוך 30 דק'",
-  description: "נתקעתם עם הרכב בעלייה תלולה באחוזה, חיפה? חילוץ מקצועי בשיפועים חדים, מחיר הוגן ושירות 24/7. הגעה מהירה לכל שכונות הכרמל. התקשרו עכשיו!",
+  title: "חילוץ רכב תקוע בעלייה תלולה באחוזה, חיפה | הגעה תוך 30 דקות",
+  description: "נתקעתם עם הרכב בשיפוע חזק באחוזה? חילוץ מקצועי לרכבים תקועים בעליות של הכרמל. שירות מהיר, אמין ומחיר הוגן. התקשרו עכשיו לקבלת סיוע!",
   alternates: {
     canonical: "/areas/haifa-general/towing-services-stuck-vehicle-steep-hill-ahuza-haifa"
   }
@@ -19,7 +19,7 @@ export default function Page() {
     "areaServed": { "@type": "City", "name": "Haifa" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "34.9896" },
-    "priceRange": "$$,$",
+    "priceRange": "מחירי שוק הוגנים",
     "serviceType": "Emergency Vehicle Towing and Recovery"
   };
 
@@ -48,24 +48,24 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">חילוץ רכבים בשיפועים חדים באחוזה והכרמל</h2>
-        <p className="mb-4">שכונת אחוזה ידועה בעליות התלולות והשיפועים המאתגרים שלה. אם הרכב שלכם נתקע, אל תנסו "לשרוף" את הגיר. אנו מציעים שירות <Link href="/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing" className="text-blue-600 underline font-semibold">גרירה זול ושקוף באחוזה</Link> ומגיעים מצוידים במערכות המותאמות לעבודה בשיפועים חדים.</p>
+        <p className="mb-4">שכונת אחוזה ידועה בעליות התלולות והשיפועים המאתגרים שלה. אם הרכב שלכם נתקע, אל תנסו לאמץ את הגיר. אנו מציעים שירות גרירה מקצועי ומגיעים מצוידים במערכות המותאמות לעבודה בשיפועים חדים.</p>
         <p className="mb-4">
-            נתקעתם בגלל תנאי שטח או בוץ בחורף? אנו מספקים מענה מקצועי גם עבור <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-area" className="text-blue-600 underline font-semibold">חילוץ רכב תקוע בבוץ באזור הכרמל</Link>. במידה והרכב ישן ואינו ראוי לתיקון, ניתן גם להתעניין בשירות <Link href="/areas/haifa-general/buying-cars-for-scrap-ahoza-haifa" className="text-blue-600 underline font-semibold">קניית רכבים לפירוק באחוזה</Link>.
+            נתקעתם בגלל תנאי שטח או בוץ בחורף? אנו מספקים מענה מקצועי גם עבור <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-600 underline font-semibold">חילוץ רכב מבוץ באזור הכרמל</Link>. במידה והרכב שלכם חשמלי, אנו מציעים שירות מיוחד עבור <Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa" className="text-blue-600 underline font-semibold">חילוץ רכבים חשמליים באחוזה</Link> במקרה של פריקת סוללה.
         </p>
         
-        <h3 className="text-2xl font-semibold mt-8 mb-4">שאלות נפוצות (FAQ)</h3>
+        <h3 className="text-2xl font-semibold mt-8 mb-4">שאלות נפוצות</h3>
         <div className="space-y-4">
             <div>
                 <h4 className="font-bold">האם אתם מחלצים רכבים שנתקעו באמצע עלייה תלולה?</h4>
-                <p>בהחלט. הציוד שלנו כולל רצועות ומנופי גרירה המותאמים לעבודה בשיפועים חדים, האופייניים מאוד לרחובות שכונת אחוזה וציר מוריה בכרמל.</p>
+                <p>בהחלט. הציוד שלנו כולל רצועות ומנופי גרירה המותאמים לעבודה בשיפועים חדים, האופייניים מאוד לרחובות שכונת אחוזה וציר מוריה.</p>
             </div>
             <div>
-                <h4 className="font-bold">מהו זמן ההגעה הממוצע באזור הכרמל ואחוזה?</h4>
-                <p>הצוותים שלנו פרוסים בנקודות אסטרטגיות בחיפה, מה שמאפשר לנו להגיע לכל קריאה באחוזה תוך 30-45 דקות, בהתאם לעומסי התנועה.</p>
+                <h4 className="font-bold">מהו זמן ההגעה הממוצע באזור הכרמל?</h4>
+                <p>הצוותים שלנו פרוסים בנקודות אסטרטגיות בחיפה, מה שמאפשר לנו להגיע לכל קריאה באחוזה תוך 30 עד 45 דקות, בהתאם לעומסי התנועה.</p>
             </div>
             <div>
-                <h4 className="font-bold">האם אתם מטפלים גם ברכבים חשמליים?</h4>
-                <p>כן, אנו נותנים מענה גם לרכבים חשמליים שנתקעו בשל פריקת סוללה או תקלה טכנית. ניתן לתאם מראש גרירה מותאמת.</p>
+                <h4 className="font-bold">האם אתם מטפלים ברכבים חשמליים?</h4>
+                <p>כן, אנו נותנים מענה לרכבים חשמליים שנתקעו בשל פריקת סוללה או תקלה טכנית. מומלץ לציין את סוג הרכב בשיחה כדי שנתאים את הציוד המתאים ביותר.</p>
             </div>
         </div>
       </section>
