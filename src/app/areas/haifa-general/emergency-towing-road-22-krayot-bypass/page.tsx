@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר דחוף בכביש 22 עוקף קריות - הגעה מהירה 24/7",
-  description: "נתקעת בכביש 22 עוקף קריות? צוות גרר מקצועי זמין עבורך 24/7 עם הגעה מהירה ומחיר הוגן לכל סוגי הרכבים. חייגו עכשיו לשירות אמין!",
+  title: "גרר דחוף בכביש 22 עוקף קריות | הגעה מהירה 24/7 - מחיר הוגן",
+  description: "נתקעת בכביש 22 עוקף קריות? גרר זמין 24/7 להגעה מהירה תוך דקות. שירות מקצועי לרכבים פרטיים ומסחריים במחיר הוגן. התקשרו עכשיו לגרר מוסמך!",
   alternates: {
     canonical: "/areas/haifa-general/emergency-towing-road-22-krayot-bypass",
   },
@@ -62,7 +62,7 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-4">למה לבחור בנו לשירותי גרירה בכביש 22?</h2>
         <p className="mb-4">
-          אנו מתמחים בחילוץ וגרירת רכבים פרטיים, ורכבים מסחריים קלים. חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים. אם אתם זקוקים למידע נוסף, ניתן לבדוק את עמוד הבית שלנו עבור <Link href="/areas/haifa-general/fast-towing-services-road-22-krayot-bypass" className="text-blue-600 underline">שירותי גרירה מהירים בכביש 22</Link> או לבחון פתרונות עבור <Link href="/areas/haifa-general/towing-services-road-22-krayot-private-car" className="text-blue-600 underline">גרירת רכבים פרטיים בכביש 22</Link>.
+          אנו מתמחים בחילוץ וגרירת רכבים פרטיים, ורכבים מסחריים קלים. אם אתם זקוקים לטיפול ברכב חשמלי תקוע, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/emergency-towing-electric-car-route-22-krayot" className="text-blue-600 underline">גרירת רכב חשמלי בכביש 22</Link> המותאמים במיוחד. במידה ואתם באזור מחלף קריית אתא, אנו מציעים גם <Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="text-blue-600 underline">גרירה דחופה במחלף קריית אתא</Link>. חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים.
         </p>
         <ul className="list-disc pr-6 space-y-2">
           <li>זמינות מלאה בכל שעות היממה, כולל סוף השבוע וחגים.</li>
@@ -73,7 +73,7 @@ export default function Page() {
       </section>
 
       <section className="py-12 bg-gray-50 container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על שירותי גרירה באזור הקריות</h2>
+        <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על שירותי גרירה בכביש 22</h2>
         <div className="space-y-4">
           <div>
             <h3 className="font-bold">תוך כמה זמן הגרר מגיע לכביש 22?</h3>
@@ -82,6 +82,10 @@ export default function Page() {
           <div>
             <h3 className="font-bold">האם אתם גוררים רכבים מסחריים?</h3>
             <p>כן, אנו מספקים שירותי גרירה למגוון רכבים פרטיים ומסחריים קלים, אך איננו מספקים שירות לאופנועים.</p>
+          </div>
+          <div>
+            <h3 className="font-bold">מה עושים אם הסוללה ברכב החשמלי התרוקנה בכביש 22?</h3>
+            <p>ניתן להזמין שירות <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">גרירת רכב חשמלי עם סוללה ריקה בכביש 22</Link> ונגיע לחלץ אתכם בבטחה לעמדת הטעינה הקרובה.</p>
           </div>
         </div>
       </section>

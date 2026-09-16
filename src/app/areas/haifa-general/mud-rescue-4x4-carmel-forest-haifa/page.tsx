@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ בוץ 4x4 ביערות הכרמל | חילוץ מהיר וזול 24/7",
-  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ 4x4 מקצועי, הגעה מהירה לכל נקודה באזור אוניברסיטת חיפה והכרמל. מחיר הוגן, צוות מיומן וזמינות 24/7. התקשרו עכשיו!",
+  title: "חילוץ בוץ 4x4 ביערות הכרמל | הגעה מהירה 24/7",
+  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ 4x4 מקצועי, הגעה מהירה לכל נקודה ליד אוניברסיטת חיפה והכרמל. מחיר הוגן וצוות מיומן זמין 24/7. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/mud-rescue-4x4-carmel-forest-haifa"
   }
@@ -42,7 +42,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">חילוץ בוץ לרכב 4x4 ביערות הכרמל ליד אוניברסיטת חיפה</h1>
-          <p className="text-xl mb-8">נתקעתם בשטח? צוות החילוץ המקצועי שלנו בדרך אליכם.</p>
+          <p className="text-xl mb-8">נתקעתם בשטח? צוות החילוץ המקצועי שלנו בדרך אליכם עם ציוד ייעודי לכל סוגי השקיעות.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
@@ -56,23 +56,24 @@ export default function Page() {
       </section>
 
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירותי חילוץ שטח מקצועיים</h2>
+        <h2 className="text-3xl font-bold mb-6">שירותי חילוץ שטח מקצועיים בכרמל</h2>
         <p className="mb-4">
-          אנו מתמחים בחילוץ רכבי 4x4, רכבי שטח ורכבים פרטיים ששקעו בבוץ באזור יערות הכרמל. 
-          למי שזקוק לשירותי גרירה נוספים באזור, אנו מציעים גם <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-400 underline">שירותי גרירה באזור צומת צק פוסט</Link>.
+          אנו מתמחים בחילוץ רכבי 4x4 ורכבי שטח ששקעו בבוץ באזור יערות הכרמל וסביבת האוניברסיטה. 
+          למי שמחפש פתרונות נוספים באזור, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-blue-400 underline">חילוץ רכב שקוע בבוץ באזור הכרמל</Link> או לבדוק 
+          <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-400 underline">שירותי גרירה במחיר נוח בצומת צק פוסט</Link>.
         </p>
         <p className="mb-4">
-          הצוות שלנו מכיר היטב את תוואי השטח סביב אוניברסיטת חיפה והכרמל. אנו מגיעים עם ציוד חילוץ ייעודי 
-          כדי להבטיח שהרכב שלכם יחולץ ללא נזקים מיותרים. אם נתקלתם בבעיה דחופה בדרכים, ניתן לבדוק גם את שירותי <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-haifa" className="text-blue-400 underline">חילוץ וגרירה 24/7 בצומת צק פוסט</Link>.
+          הצוות שלנו מכיר היטב את תוואי השטח המורכב סביב חיפה. אנו מגיעים עם ציוד חילוץ חזק כדי להבטיח שהרכב שלכם יחולץ ללא נזקים. 
+          אם נתקלתם בתקלה נוספת בדרכים, אנו מציעים גם פתרונות כגון <Link href="/areas/haifa-general/emergency-towing-electric-car-route-22-krayot" className="text-blue-400 underline">חילוץ רכב חשמלי באזור כביש 22</Link>.
         </p>
         
         <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800 mt-8">
           <h3 className="text-2xl font-semibold mb-4">למה לבחור בנו?</h3>
           <ul className="list-disc list-inside space-y-2">
-            <li>זמינות 24/7 לכל קריאה בשטח</li>
-            <li>ציוד חילוץ מתקדם לרכבי 4x4 ורכבי שטח</li>
-            <li>הגעה מהירה לכל נקודה ביערות הכרמל</li>
-            <li>מחירים הוגנים ושירות אדיב ללא פשרות</li>
+            <li>זמינות 24/7 לכל קריאה בלב היער והשטח</li>
+            <li>ציוד חילוץ מתקדם לרכבי 4x4 ורכבי פנאי</li>
+            <li>הגעה מהירה לכל נקודה ביערות הכרמל והסביבה</li>
+            <li>שקיפות מלאה ומחיר הוגן ללא הפתעות</li>
           </ul>
         </div>
       </section>
@@ -83,15 +84,15 @@ export default function Page() {
             <div className="space-y-6">
                 <div>
                     <h4 className="font-bold text-xl">תוך כמה זמן תגיעו לחילוץ ביערות הכרמל?</h4>
-                    <p className="text-neutral-400">אנו שואפים להגיע לכל נקודה בטווח זמן קצר מאוד, בהתאם לעומסי התנועה באזור הכרמל והגישה לשטח.</p>
+                    <p className="text-neutral-400">אנו שואפים להגיע לכל נקודה בטווח זמן קצר ככל הניתן, בהתאם לתנאי השטח ועומסי התנועה באזור הכרמל.</p>
                 </div>
                 <div>
-                    <h4 className="font-bold text-xl">האם אתם מחלצים אופנועים ששקעו בבוץ?</h4>
-                    <p className="text-neutral-400">אנו מתמקדים בחילוץ רכבים ורכבי 4x4 בלבד. איננו מספקים שירותי חילוץ לאופנועים.</p>
+                    <h4 className="font-bold text-xl">האם אתם מבצעים חילוץ אופנועים?</h4>
+                    <p className="text-neutral-400">השירות שלנו מתמקד בחילוץ רכבים ורכבי 4x4 בלבד. איננו מספקים שירותי חילוץ או גרירה לאופנועים.</p>
                 </div>
                 <div>
-                    <h4 className="font-bold text-xl">מה לעשות כשהרכב שוקע בבוץ?</h4>
-                    <p className="text-neutral-400">הדבר החשוב ביותר הוא לא ללחוץ על הגז בעוצמה שעלולה להעמיק את השקיעה. צרו איתנו קשר מיד לקבלת הכוונה מקצועית.</p>
+                    <h4 className="font-bold text-xl">מה עושים כשנתקעים בבוץ עמוק?</h4>
+                    <p className="text-neutral-400">הכי חשוב: אל תמשיכו ללחוץ על הגז כי זה יגרום לרכב לשקוע עמוק יותר. צרו איתנו קשר מיד והישארו במיקום בטוח עד הגעתנו.</p>
                 </div>
             </div>
         </div>

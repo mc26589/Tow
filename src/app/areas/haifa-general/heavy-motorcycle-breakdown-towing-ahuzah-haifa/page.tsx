@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "גרירת רכבים באחוזה חיפה 24/7 | שירות מהיר ומחיר הוגן",
-  description: "נתקעת באחוזה? אנו מספקים שירותי גרירה וחילוץ מקצועיים לרכבים פרטיים, מסחריים ו-4x4 בחיפה. הגעה מהירה, שירות אמין ומחיר הוגן. התקשרו עכשיו!",
+  description: "נתקעת באחוזה? שירותי גרירה וחילוץ מקצועיים בחיפה לכל סוגי הרכבים. הגעה מהירה, אמינות ומחיר הוגן. התקשרו עכשיו למוקד הגרירה באחוזה!",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-breakdown-towing-ahuzah-haifa"
   }
@@ -55,10 +55,11 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירותי גרירה וחילוץ באזור אחוזה</h2>
+        <h2 className="text-3xl font-bold mb-6">שירותי גרירה וחילוץ באזור אחוזה והכרמל</h2>
         <div className="prose max-w-3xl mb-8">
-          <p>אנו מציעים פתרונות גרירה מתקדמים לתושבי אחוזה והסביבה. בין אם הרכב לא מניע או שנתקעתם בדרך, הצוות שלנו זמין עבורכם. <strong>חשוב לציין: השירות מיועד לרכבים פרטיים, מסחריים ו-4x4 בלבד. איננו מספקים גרירת אופנועים או דו-גלגלי.</strong></p>
-          <p>זקוקים למידע נוסף? ניתן לבדוק גם אפשרויות ל<Link href="/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing">שירות גרירה זול באחוזה עם מחיר שקוף</Link> או לבדוק פתרונות ל<Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa">רכב חשמלי שנתקע באחוזה</Link>.</p>
+          <p>אנו מציעים פתרונות גרירה מתקדמים לתושבי אחוזה והסביבה. בין אם הרכב לא מניע או שנתקעתם בדרך, הצוות שלנו זמין עבורכם. אנו מתמחים בחילוץ רכבים פרטיים ומסחריים, ומציעים שירות מקיף באזור הכרמל.</p>
+          <p>במקרים מורכבים יותר, אנו מספקים מענה למצבים כמו <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region">חילוץ רכב תקוע בבוץ באזור הכרמל</Link> או <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university">חילוץ רכב ליד אוניברסיטת חיפה</Link>. חשוב לציין: השירות מיועד לרכבים פרטיים, מסחריים וארבע על ארבע בלבד.</p>
+          <p>זקוקים למידע נוסף? ניתן לבדוק גם אפשרויות ל<Link href="/areas/haifa-general/cheap-private-car-towing-ahuza-haifa">שירות גרירה זול לרכב פרטי באחוזה</Link> או לבדוק פתרונות ל<Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa">רכב חשמלי שנתקע באחוזה</Link>.</p>
         </div>
 
         <div className="bg-gray-50 p-8 rounded-xl">
@@ -74,7 +75,7 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold">האם אתם גוררים אופנועים?</h3>
-              <p>לא, אנו מתמקדים בשינוע וחילוץ של רכבים פרטיים, מסחריים ורכבי 4x4 בלבד.</p>
+              <p>לא, אנו מתמקדים בשינוע וחילוץ של רכבים פרטיים, מסחריים ורכבי שטח בלבד.</p>
             </div>
           </div>
         </div>

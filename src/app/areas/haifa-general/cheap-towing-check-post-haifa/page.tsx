@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר זול בצ'ק פוסט חיפה | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם בצ'ק פוסט? גרר זול בחיפה זמין 24/7. הגעה מהירה תוך 30 דקות, מחיר הוגן ושירות מקצועי לרכבים פרטיים ומסחריים. התקשרו עכשיו לחילוץ מהיר!",
+  title: "גרר זול בצ'ק פוסט חיפה | הגעה תוך 30 דקות | 24/7",
+  description: "נתקעתם בצ'ק פוסט? גרר זול בחיפה זמין 24/7. הגעה מהירה, מחיר הוגן ושירות מקצועי לרכבים פרטיים ומסחריים. התקשרו עכשיו לחילוץ מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/cheap-towing-check-post-haifa"
   }
@@ -44,7 +44,7 @@ export default function Page() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר זול לצ'ק פוסט חיפה – חילוץ מהיר 24/7</h1>
           <p className="text-lg md:text-xl mb-8">
             נתקעתם באזור הצ'ק פוסט או על ציר כביש 22? אנו כאן כדי לסייע לכם במהירות ובמחיר הוגן. 
-            אנו מתמחים בגרירת רכבים פרטיים ומסחריים. זקוקים לסיוע דחוף בדרך? אנו מציעים גם <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-yellow-300 underline font-semibold">שירותי חילוץ מהירים בציר 22</Link>.
+            אנו מתמחים בגרירת רכבים פרטיים ומסחריים. זקוקים לסיוע דחוף בדרך? ראו את שירותי ה-<Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="text-yellow-300 underline font-semibold">גרירה דחופה בכביש 22</Link> שלנו.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -65,8 +65,8 @@ export default function Page() {
             <li>✓ הגעה מהירה לצ'ק פוסט, דרך 22 והסביבה.</li>
             <li>✓ מחירים הוגנים ושקופים - ללא הפתעות בחיוב.</li>
             <li>✓ זמינות מלאה 24/7 לחילוץ רכבים תקועים.</li>
-            <li>✓ שירות אמין ומקצועי הכולל <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-400 underline">גרירה דחופה בצ'ק פוסט</Link>.</li>
-            <li>✓ פתרונות מתקדמים עבור <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-400 underline">חילוץ רכבים לאחר תאונה בכביש 22</Link>.</li>
+            <li>✓ שירות אמין הכולל <Link href="/areas/haifa-general/cheap-towing-services-check-post" className="text-blue-400 underline">גרר זול בצק פוסט</Link> מקצועי.</li>
+            <li>✓ פתרונות מתקדמים עבור <Link href="/areas/haifa-general/flatbed-towing-electric-car-dead-battery-check-post-haifa" className="text-blue-400 underline">גרירת רכב חשמלי עם מצבר ריק</Link>.</li>
           </ul>
         </div>
       </section>
@@ -80,12 +80,12 @@ export default function Page() {
               <p className="text-gray-700">בדרך כלל אנו מגיעים תוך 30-45 דקות, תלוי בעומסי התנועה בציר הראשי של חיפה ובשעה ביום.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם אתם מספקים שירותי גרירה גם לכבישים בינעירוניים סמוכים?</h3>
-              <p className="text-gray-700">כן, אנו מספקים גם <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-600 underline">שירותי גרירה 24/7 לעוקף קריות</Link> והאזורים המשיקים לצ'ק פוסט.</p>
+              <h3 className="font-bold text-xl">האם אתם מספקים שירותי גרירה לרכבים חשמליים?</h3>
+              <p className="text-gray-700">כן, אנו מציעים <Link href="/areas/haifa-general/emergency-towing-electric-car-route-22-krayot" className="text-blue-600 underline">שירותי חילוץ רכב חשמלי בכביש 22</Link> עם ציוד מתקדם.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">מה קורה אם הרכב מושבת לגמרי?</h3>
-              <p className="text-gray-700">אם הרכב אינו ראוי לנסיעה, אנו מספקים שירותי פינוי רכבים. ניתן גם לקבל מידע על <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="text-blue-600 underline">מכירת רכב לפירוק בחיפה</Link> במקום גרירה רגילה.</p>
+              <h3 className="font-bold text-xl">מה לעשות אם הרכב הושבת כליל?</h3>
+              <p className="text-gray-700">אנו מספקים פתרונות פינוי. במקרים של רכב ישן, ניתן לבדוק איתנו <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="text-blue-600 underline">פינוי רכבים לפירוק בחיפה</Link> בצורה מקצועית.</p>
             </div>
           </div>
         </div>

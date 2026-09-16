@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בצ'ק פוסט והקריות | שירות 24/7 ומחיר הוגן",
-  description: "נתקעתם עם רכב חשמלי באזור צ'ק פוסט או הקריות? שירות גרירה מומחה לרכבים חשמליים 24/7. מחיר הוגן, הגעה מהירה ומקצועיות ללא פשרות. התקשרו עכשיו!",
+  title: "גרירת רכב חשמלי בצ'ק פוסט והקריות | הגעה מהירה 24/7",
+  description: "נתקעתם עם רכב חשמלי באזור צ'ק פוסט או הקריות? שירות גרירה מקצועי 24/7 במחיר הוגן. ציוד מתקדם לשמירה על הסוללה. התקשרו עכשיו לקבלת שירות מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-electric-car-towing-check-post-krayot"
   }
@@ -19,7 +19,7 @@ export default function Page() {
     "areaServed": { "@type": "City", "name": "Haifa and Krayot" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "35.0240" },
-    "priceRange": "$$,$",
+    "priceRange": "$$$",
     "serviceType": "Electric Vehicle Towing"
   };
 
@@ -56,7 +56,7 @@ export default function Page() {
           <ul className="space-y-4 text-lg mb-8">
             <li>✓ זמינות מלאה 24/7 באזור צ'ק פוסט, חיפה והקריות.</li>
             <li>✓ מומחיות טכנית בטיפול וגרירה של רכבים חשמליים והיברידיים.</li>
-            <li>✓ מחירים הוגנים ושקופים ללא "הפתעות" בדרך.</li>
+            <li>✓ מחירים הוגנים ושקופים ללא הפתעות בדרך.</li>
             <li>✓ שימוש בציוד גרירה מתקדם המגן על תחתית הרכב והסוללה.</li>
             <li>✓ שירות אדיב ומקצועי מרגע הקריאה ועד ההגעה ליעד.</li>
           </ul>
@@ -64,9 +64,9 @@ export default function Page() {
           <div className="border-t border-gray-700 pt-8 mt-8">
             <h3 className="text-2xl font-bold mb-4">שירותים משלימים באזור</h3>
             <div className="flex flex-wrap gap-4">
-              <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-400 hover:underline">גרירת רכב דחופה בכביש 22 צ'ק פוסט</Link>
+              <Link href="/areas/haifa-general/emergency-towing-electric-car-route-22-krayot" className="text-blue-400 hover:underline">גרירת רכב חשמלי דחופה בכביש 22</Link>
               <Link href="/areas/haifa-general/flatbed-towing-electric-car-dead-battery-check-post-haifa" className="text-blue-400 hover:underline">גרירת רכב חשמלי עם פריקת מצבר בצ'ק פוסט</Link>
-              <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-400 hover:underline">שירותי גרירה זולים בקרית ביאליק</Link>
+              <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-400 hover:underline">שירותי גרירה במחיר הוגן בצ'ק פוסט</Link>
             </div>
           </div>
         </div>
@@ -81,8 +81,12 @@ export default function Page() {
               <p>כן, רכבים חשמליים דורשים אמצעי זהירות מיוחדים בזמן הגרירה כדי לא לפגוע במערכת ההנעה ובסוללה. אנו משתמשים בציוד מתקדם המותאם בדיוק עבורם.</p>
             </div>
             <div>
-              <h4 className="font-bold text-xl">תוך כמה זמן תגיעו לצ'ק פוסט?</h4>
-              <p>זמן ההגעה שלנו משתנה בהתאם לעומסי התנועה, אך אנו עושים כל מאמץ להגיע במהירות המרבית לכל נקודה בצ'ק פוסט, הקריות וחיפה.</p>
+              <h4 className="font-bold text-xl">מה לעשות אם נתקעתי עם סוללה ריקה בצ'ק פוסט?</h4>
+              <p>במקרה של פריקת סוללה מלאה, אנו נגיע במהירות עם גרר מותאם ונפנה את הרכב בבטחה לעמדת הטעינה הקרובה ביותר או למוסך מורשה.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-xl">האם השירות זמין גם בסוף השבוע ובחגים?</h4>
+              <p>אנו מבינים שתקלות יכולות לקרות בכל עת, לכן שירותי הגרירה שלנו באזור הקריות וצ'ק פוסט פעילים גם בסופי שבוע ובחגים כדי שלא תישאר תקוע.</p>
             </div>
           </div>
         </div>

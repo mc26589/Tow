@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בדרך בר יהודה חיפה | הגעה תוך 30 דקות | 24/7",
-  description: "נתקעתם בדרך בר יהודה חיפה? זקוקים לגרר מהיר? אנו מספקים שירותי גרירה מקצועיים ומחיר הוגן 24/7. הגעה מהירה לכל אזור הצ'ק פוסט והסביבה. התקשרו עכשיו!",
+  title: "גרר בדרך בר יהודה חיפה | 24/7 | הגעה תוך 30 דקות",
+  description: "נתקעתם בדרך בר יהודה בחיפה? זקוקים לגרר מהיר? אנו מספקים שירותי גרירה מקצועיים במחיר הוגן 24/7. הגעה מהירה לכל אזור הצ'ק פוסט והסביבה. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/towing-service-harley-davidson-derech-bar-yehuda-haifa",
   },
@@ -19,7 +19,7 @@ export default function Page() {
     "areaServed": { "@type": "City", "name": "Haifa" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "35.0000" },
-    "priceRange": "$$,$",
+    "priceRange": "$$$",
     "serviceType": "Towing and Roadside Assistance"
   };
 
@@ -33,9 +33,9 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">שירות גרירה וחילוץ בדרך בר יהודה חיפה</h1>
           <p className="text-lg mb-8">
-            נתקעתם בדרך בר יהודה בחיפה? הצוות המקצועי שלנו זמין לספק לכם <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="underline font-semibold">גרירת רכב דחופה בצ'ק פוסט</Link> ובסביבתה. 
-            אנו מתמחים בחילוץ רכבים פרטיים ומסחריים בכל אזור חיפה והצפון, כולל <Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="underline">סיוע מהיר בהחלפת גלגל בכביש 22 וצ'ק פוסט</Link>. 
-            אם הרכב הושבת עקב תקלה טכנית או תאונה, נשמח להעניק לכם פתרון מקיף של <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="underline">גרירת רכבים באזור הצ'ק פוסט והקריות</Link>. 
+            נתקעתם בדרך בר יהודה בחיפה? הצוות המקצועי שלנו זמין לספק לכם <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="underline font-semibold">גרירת רכב דחופה בצ'ק פוסט</Link> ובסביבתה. 
+            אנו מתמחים בחילוץ רכבים פרטיים ומסחריים בכל אזור חיפה והצפון, כולל <Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="underline">סיוע מהיר בכביש 22 וצ'ק פוסט</Link>. 
+            אם הרכב הושבת עקב תקלה טכנית או תאונה, נשמח להעניק לכם פתרון מקיף של <Link href="/areas/haifa-general/cheap-towing-services-check-post" className="underline">גרירת רכבים באזור הצ'ק פוסט והקריות</Link>. 
             חשוב לציין: אנו מתמקדים בחילוץ וגרירת רכבים ואיננו מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex gap-4">
@@ -54,7 +54,7 @@ export default function Page() {
         <ul className="list-disc pr-5 space-y-2 mb-10">
           <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
           <li>זמני הגעה מהירים לדרך בר יהודה ולכל הצירים המרכזיים בחיפה.</li>
-          <li>שירות מקצועי הכולל <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 underline">גרירה לאחר תאונה בכביש 22</Link>.</li>
+          <li>שירות מקצועי הכולל <Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="text-blue-600 underline">גרירה לאחר תאונה בכביש 22</Link>.</li>
           <li>מחירים הוגנים, שקיפות מלאה וניסיון רב בחילוץ כלי רכב.</li>
         </ul>
         
@@ -66,11 +66,11 @@ export default function Page() {
           </div>
           <div>
             <h3 className="font-bold">האם אתם גוררים רכבים חשמליים?</h3>
-            <p>כן, אנו ערוכים למתן שירות עבור <Link href="/areas/haifa-general/affordable-electric-car-towing-kiryat-motzkin-industrial-zone" className="text-blue-600 underline">גרירת רכבים חשמליים באזור הצ'ק פוסט והקריות</Link> תוך הקפדה על כללי בטיחות.</p>
+            <p>כן, אנו ערוכים למתן שירות עבור <Link href="/areas/haifa-general/flatbed-towing-electric-car-dead-battery-check-post-haifa" className="text-blue-600 underline">גרירת רכבים חשמליים באזור הצ'ק פוסט והקריות</Link> תוך הקפדה על כללי בטיחות.</p>
           </div>
           <div>
             <h3 className="font-bold">מה עושים אם הרכב ישן או שאינו בר תיקון?</h3>
-            <p>במקרים אלו, אנו מציעים שירות של <Link href="/areas/haifa-general/buy-cars-for-scrap-check-post-haifa" className="text-blue-600 underline">קניית רכבים לפירוק בצ'ק פוסט ובאזור חיפה</Link>, הכולל את פינוי הרכב על גבי גרר.</p>
+            <p>במקרים אלו, אנו מציעים שירות של <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="text-blue-600 underline">קניית רכבים לפירוק בצ'ק פוסט ובאזור חיפה</Link>, הכולל את פינוי הרכב על גבי גרר.</p>
           </div>
         </div>
       </section>
