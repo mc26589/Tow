@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'פינוי רכב לפירוק בנווה שאנן חיפה | קונה רכבים - הגעה מהירה!',
-  description: 'נתקעו עם רכב ישן בנווה שאנן? אנו מבצעים פינוי רכב לפירוק בחיפה במהירות, במחיר הוגן וזמינות 24/7. הגעה מהירה לכל רחובות השכונה. התקשרו עכשיו!',
+  description: 'נתקעו עם רכב ישן בנווה שאנן? אנו מבצעים פינוי רכב לפירוק בחיפה במהירות, במחיר הוגן וזמינות 24/7. הגעה לכל רחובות השכונה. התקשרו עכשיו!',
   alternates: {
     canonical: '/areas/haifa-general/car-scrapping-neve-shaanan-haifa',
   },
@@ -39,7 +39,7 @@ export default function Page() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">פינוי רכב לפירוק בנווה שאנן חיפה – הגעה מהירה והצעת מחיר הוגנת</h1>
           <p className="text-xl mb-8 leading-relaxed">
-            מחפשים שירות מקצועי לפינוי רכב לפירוק בשכונת נווה שאנן? אנו מתמחים בפינוי כל סוגי הרכבים – רכבים אחרי תאונה, רכבים עם תקלות מנוע או כאלה שפשוט אינם בשימוש. אנו מספקים מענה מקיף לתושבי חיפה, לרבות סיוע גם למי שזקוק לשירותי <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="underline font-semibold">גרירה בצומת הצ'ק פוסט</Link> או <Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="underline font-semibold">פינוי רכבים לפירוק בקריות</Link>. אנו מתחייבים לשקיפות מלאה ומחיר הוגן עבור הרכב שלכם, תוך הגעה לכל רחוב בנווה שאנן.
+            מחפשים שירות מקצועי לפינוי רכב לפירוק בשכונת נווה שאנן? אנו מתמחים בפינוי כל סוגי הרכבים – רכבים אחרי תאונה, רכבים עם תקלות מנוע או כאלה שפשוט אינם בשימוש. אנו מספקים מענה מקיף לתושבי חיפה, לרבות סיוע גם למי שזקוק לשירותי <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="underline font-semibold">גרירה בצומת הצ\'ק פוסט</Link> או למי שמחפש <Link href="/areas/haifa-general/scrap-cars-haifa-krayot-immediate-removal" className="underline font-semibold">פינוי רכבים לפירוק באזור הקריות</Link>. אנו מתחייבים לשקיפות מלאה ומחיר הוגן עבור הרכב שלכם, תוך הגעה לכל רחוב בנווה שאנן והסביבה.
           </p>
           <div className="bg-black/20 p-6 rounded-xl mb-8">
             <h2 className="text-2xl font-semibold mb-4">למה לבחור בנו לפינוי רכב בנווה שאנן?</h2>
@@ -69,11 +69,15 @@ export default function Page() {
           </div>
           <div>
             <h3 className="text-xl font-semibold">האם אתם קונים רכבים ללא טסט או רכבים מושבתים?</h3>
-            <p>בהחלט. אנו רוכשים רכבים מכל סוג, ללא טסט, רכבים אחרי תאונה או עם תקלות מכניות. למידע נוסף, ניתן לבדוק גם את השירות שלנו ל-<Link href="/areas/haifa-general/scrap-car-removal-kiryat-haim-cash" className="text-blue-600 underline">פינוי רכבים לפירוק בקרית חיים</Link>.</p>
+            <p>בהחלט. אנו רוכשים רכבים מכל סוג, ללא טסט, רכבים אחרי תאונה או עם תקלות מכניות. למידע נוסף על אזורים אחרים, ניתן לבדוק גם את השירות שלנו ל-<Link href="/areas/haifa-general/cash-for-scrap-cars-kiryat-motzkin" className="text-blue-600 underline">פינוי רכבים לפירוק בקרית מוצקין</Link>.</p>
           </div>
           <div>
             <h3 className="text-xl font-semibold">מה עושים אם הרכב נתקע מחוץ לשכונה בצומת סואן?</h3>
-            <p>אם הרכב נתקע באזור מרכזי, אנו מציעים מענה מהיר עם <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-600 underline">שירותי גרירה מקצועיים</Link> המאפשרים פינוי בטוח בכל שעה.</p>
+            <p>אם הרכב נתקע באזור מרכזי, אנו מציעים מענה מהיר עם <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה מקצועיים בצומת הצ\'ק פוסט</Link> המאפשרים פינוי בטוח בכל שעה.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">האם אתם נותנים שירות גם מחוץ לחיפה?</h3>
+            <p>כן, אנו מספקים שירותים גם באזורים הסמוכים. למידע נוסף על אזורים צפוניים יותר, ניתן לבדוק את השירות שלנו ל-<Link href="/areas/haifa-general/buy-old-cars-for-scrap-kiryat-yam" className="text-blue-600 underline">קניית רכבים לפירוק בקרית ים</Link>.</p>
           </div>
         </div>
       </section>

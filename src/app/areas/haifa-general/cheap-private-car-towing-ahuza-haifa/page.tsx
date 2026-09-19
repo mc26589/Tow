@@ -1,10 +1,14 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר רכב פרטי זול בשכונת אחוזה חיפה עכשיו | שירות 24/7",
-  description: "זקוקים לגרר באחוזה? שירות גרירה מהיר, מקצועי ובמחיר הוגן לרכבים פרטיים. זמינות מיידית 24/7 בכל אזור חיפה והקריות.",
+  title: "גרר באחוזה חיפה 24/7 | שירות מהיר ומחיר הוגן",
+  description: "נתקעתם עם הרכב באחוזה? שירות גרירה מהיר ומקצועי 24/7. מחיר הוגן, הגעה מהירה לכל שכונת אחוזה והסביבה. התקשרו עכשיו להצעת מחיר!",
+  alternates: {
+    canonical: "/areas/haifa-general/cheap-private-car-towing-ahuza-haifa"
+  }
 };
 
 export default function Page() {
@@ -53,14 +57,29 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לשירותי גרירה באחוזה?</h2>
-        <ul className="space-y-4 text-lg">
+        <ul className="space-y-4 text-lg mb-8">
           <li>✅ <strong>זמינות מיידית:</strong> הגעה מהירה לכל נקודה בשכונת אחוזה והסביבה.</li>
           <li>✅ <strong>מחיר הוגן:</strong> שירות גרירה במחיר משתלם ללא הפתעות.</li>
           <li>✅ <strong>מקצועיות:</strong> צוות מיומן המטפל ברכב שלכם בזהירות ובבטיחות.</li>
-          <li>✅ <strong>כיסוי רחב:</strong> שירות לרכבים פרטיים, רכבי שטח ומסחריות.</li>
+          <li>✅ <strong>כיסוי רחב:</strong> שירות לרכבים פרטיים ורכבי שטח. אם נתקעתם באזור יערות הכרמל, זכרו כי אנו מציעים גם <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-danya" className="text-blue-600 underline">שירותי חילוץ שטח בדניה</Link>.</li>
         </ul>
+
+        <div className="border-t pt-8">
+          <h3 className="text-2xl font-bold mb-4">שאלות נפוצות על גרירה באחוזה</h3>
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">כמה זמן לוקח לכם להגיע לאחוזה?</p>
+              <p>ברוב המקרים, הצוות שלנו מגיע תוך 30-45 דקות, בהתאם לעומסי התנועה באזור.</p>
+            </div>
+            <div>
+              <p className="font-bold">האם אתם גוררים גם לרשת צירים מרכזיים?</p>
+              <p>כן, אנו נותנים מענה גם באזור הצ'ק פוסט, למידע נוסף ראו <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה זולים בצ'ק פוסט</Link>.</p>
+            </div>
+          </div>
+        </div>
+
         <p className="mt-8 text-sm text-gray-600">
-          *שימו לב: אנו מתמחים בגרירת רכבים פרטיים ומסחריים בלבד. איננו מספקים שירותי גרירה לאופנועים.
+          *שימו לב: אנו מתמחים בגרירת רכבים פרטיים ומסחריים בלבד. איננו מספקים שירותי גרירה לאופנועים. אם אתם זקוקים לשירות אחר, ניתן לבדוק גם <Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles" className="text-blue-600 underline">שירותי חילוץ נוספים באחוזה</Link>.
         </p>
       </section>
     </main>

@@ -5,7 +5,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "גרירת רכב בכביש 22 וצומת הצ'ק פוסט | הגעה מהירה 24/7",
-  description: "נתקעת בכביש 22 או בצומת הצ'ק פוסט? שירות גרירה מקצועי, מחיר הוגן וזמינות 24/7 לרכבים פרטיים ומסחריים. הגעה מהירה לכל נקודה! התקשרו עכשיו.",
+  description: "נתקעת בכביש 22 או בצומת הצ'ק פוסט? שירות גרירה מקצועי, מחיר הוגן וזמינות 24/7. הגעה מהירה לכל נקודה לרכבים ורכבים מסחריים. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-breakdown-towing-route-22-check-post-haifa",
   },
@@ -44,7 +44,7 @@ export default function Page() {
           <h1 className="text-4xl font-bold mb-6">גרירת רכבים וסיוע בדרך בכביש 22 (עוקף קריות) וצומת הצ'ק פוסט</h1>
           <p className="text-lg mb-8 max-w-2xl">
             נתקעת עם הרכב באזור כביש 22 או בצומת הצ'ק פוסט? אנו כאן לסייע במהירות. 
-            אנו מתמחים בגרירת רכבים פרטיים, מסחריים ורכבי 4x4. אם נדרש שירות ספציפי כגון <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="underline font-bold">גרירה זולה בצומת הצ'ק פוסט</Link> או שירות <Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="underline font-bold">גרירה מהירה ופתרון תקר בכביש 22</Link>, הצוות שלנו זמין עבורך. 
+            אנו מתמחים בגרירת רכבים פרטיים, מסחריים ורכבי 4x4. מחפשים <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="underline font-bold">גרירה משתלמת בצומת הצ'ק פוסט</Link> או שירות <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="underline font-bold">גרירה מהירה באזור הקריות</Link>? הצוות שלנו זמין עבורך 24/7. 
             <strong> חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.</strong>
           </p>
           <div className="flex flex-wrap gap-4">
@@ -62,11 +62,12 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-4">למה לבחור בנו באזור חיפה והקריות?</h2>
         <ul className="list-disc list-inside space-y-2 mb-8">
-          <li>זמינות מלאה 24/7 לכל קריאה בכל שעות היממה.</li>
+          <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
           <li>הגעה מהירה לכל נקודה בכביש 22 ובצומת הצ'ק פוסט.</li>
           <li>צוות מיומן ומקצועי לטיפול ברכבים פרטיים ומסחריים.</li>
           <li>שקיפות מלאה ומחירים הוגנים ללא הפתעות.</li>
           <li>שירות מקצועי עבור <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 underline">גרירת רכב לאחר תאונה בכביש 22</Link>.</li>
+          <li>סיוע מיידי עם <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">גרירת רכבים חשמליים בכביש 22</Link>.</li>
         </ul>
 
         <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על גרירה באזור הצ'ק פוסט וכביש 22</h2>
@@ -78,10 +79,6 @@ export default function Page() {
           <div>
             <h3 className="font-bold text-lg">האם אתם מציעים גרירת אופנועים?</h3>
             <p>לא, איננו מספקים שירותי גרירה לאופנועים. אנו מתמקדים בגרירת רכבים פרטיים, רכבים מסחריים ורכבי 4x4 בלבד.</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">האם אתם מטפלים ברכבים חשמליים שנתקעו ללא סוללה?</h3>
-            <p>בהחלט. אנו מציעים שירותי <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">גרירת רכבים חשמליים בכביש 22</Link> וטיפול במקרים של התרוקנות סוללה.</p>
           </div>
           <div>
             <h3 className="font-bold text-lg">מהו טווח המחירים לגרירה באזור?</h3>

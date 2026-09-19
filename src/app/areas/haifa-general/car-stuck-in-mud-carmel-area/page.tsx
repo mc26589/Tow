@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב תקוע בבוץ בכרמל | הגעה תוך 30 דקות | 24/7",
-  description: "נתקעתם בבוץ באזור הכרמל? שירות חילוץ מקצועי לרכבים תקועים 24/7. הגעה מהירה, ציוד שטח מתקדם ומחירים הוגנים. התקשרו עכשיו לחילוץ בטוח!",
+  title: "חילוץ רכב תקוע בבוץ בכרמל | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם בבוץ באזור הכרמל? שירות חילוץ רכב מקצועי עם ציוד שטח מתקדם. פועלים 24/7, הגעה תוך 30 דקות. התקשרו עכשיו לחילוץ בטוח ומקצועי!",
   alternates: {
     canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-area",
   },
@@ -49,14 +49,14 @@ export default function Page() {
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-6">זקוקים לחילוץ רכב שנתקע בבוץ באזור הכרמל?</h2>
         <p className="mb-4">
-          אם הרכב שלכם שקע בבוץ בדרכי העפר של הכרמל, אל תנסו להמשיך ללחוץ על הגז כדי לא לגרום לנזק נוסף. אנו מתמחים ב- <Link href="/areas/haifa-general/emergency-car-rescue-mud-carmel-forest" className="text-blue-400 underline">emergency car rescue mud carmel forest</Link> ומספקים פתרונות מקצועיים לכל סוגי הרכבים. למי שמחפש פתרונות נוספים באזור, אנו גם מבצעים <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-haifa" className="text-blue-400 underline">4x4 mud recovery carmel haifa</Link> עם הציוד הכבד ביותר.
+          אם הרכב שלכם שקע בבוץ בדרכי העפר של הכרמל, אל תנסו להמשיך ללחוץ על הגז כדי לא לגרום לנזק נוסף. אנו מציעים שירות <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-danya" className="text-blue-400 underline">חילוץ שטח בכרמל ובדניה</Link> ומספקים פתרונות מקצועיים לכל סוגי הרכבים. למי שמחפש פתרונות נוספים באזור הכרמל והסביבה, אנו זמינים לכל קריאה.
         </p>
         
         <h3 className="text-2xl font-semibold mt-8 mb-4">למה לבחור בנו?</h3>
         <ul className="list-disc list-inside space-y-2 mb-6">
-          <li>זמינות מלאה 24/7 לכל אזור הכרמל והסביבה.</li>
-          <li>ניסיון עשיר בחילוץ רכבים פרטיים, מסחריים ו-4x4 מבוץ עמוק.</li>
-          <li>שימוש בציוד שטח מתקדם וכננות כוח להבטחת חילוץ בטוח.</li>
+          <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
+          <li>ניסיון עשיר בחילוץ רכבים פרטיים, מסחריים ורכבי שטח.</li>
+          <li>שימוש בציוד כננות מקצועי למניעת נזקים מיותרים לשלדת הרכב.</li>
           <li>מחירים הוגנים ושירות אדיב ללא הפתעות.</li>
         </ul>
 
@@ -65,18 +65,20 @@ export default function Page() {
           <div className="space-y-4">
             <div>
               <p className="font-bold">מהו זמן ההגעה המשוער לחילוץ בכרמל?</p>
-              <p className="text-neutral-400">אנו שואפים להגיע לכל נקודה בכרמל תוך 30-45 דקות, בהתאם לתנאי השטח.</p>
+              <p className="text-neutral-400">אנו שואפים להגיע לכל נקודה בכרמל תוך 30-45 דקות, בהתאם לתנאי השטח ועומסי התנועה.</p>
             </div>
             <div>
               <p className="font-bold">אילו עוד שירותים אתם מספקים באזור?</p>
-              <p className="text-neutral-400">בנוסף לחילוצי שטח, אנו מציעים <Link href="/areas/haifa-general/towing-services-stuck-vehicle-steep-hill-ahuza-haifa" className="text-blue-400 underline">towing services stuck vehicle steep hill ahuza haifa</Link> וכן שירותי גרירה רגילים כגון <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-400 underline">affordable car breakdown towing check post haifa krayot</Link>.</p>
+              <p className="text-neutral-400">
+                בנוסף לחילוצי בוץ, אנו מציעים <Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles" className="text-blue-400 underline">שירותי גרירה וחילוץ באחוזה</Link> וכן שירותי פינוי גרוטאות כגון <Link href="/areas/haifa-general/scrap-cars-haifa-krayot-immediate-removal" className="text-blue-400 underline">פינוי רכבים לפירוק בחיפה והקריות</Link>.
+              </p>
             </div>
           </div>
         </div>
 
         <div className="mt-8 p-6 rounded-xl border border-neutral-800">
           <p className="text-sm text-neutral-400">
-            <strong>הערה חשובה:</strong> אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4. במקרה של רכב שאינו תקין ומוגדר כגרוטאה, ניתן לבדוק אפשרות ל-<Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-400 underline">buy cars for scrap haifa krayot immediate removal</Link> או <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="text-blue-400 underline">sell damaged car for parts haifa immediate pickup</Link>.
+            <strong>הערה חשובה:</strong> אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח. במקרה של רכב ישן שאינו שווה תיקון, ניתן לבדוק אפשרות ל-<Link href="/areas/haifa-general/buy-old-cars-for-scrap-kiryat-yam" className="text-blue-400 underline">מכירת רכב ישן לפירוק בקרית ים</Link>.
           </p>
         </div>
       </section>
