@@ -4,7 +4,7 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ 4X4 ביערות הכרמל | חילוץ רכב מהבוץ 24/7 | שירות מהיר",
+  title: "חילוץ 4X4 ביערות הכרמל | הגעה תוך 30 דקות | 24/7",
   description: "נתקעתם עם רכב השטח בבוץ ביערות הכרמל? אנו מספקים שירותי חילוץ 4X4 מקצועיים ומהירים 24/7. הגעה מהירה, ציוד מתקדם ומחיר הוגן. התקשרו עכשיו לחילוץ!",
   alternates: {
     canonical: "/areas/haifa-general/4x4-vehicle-stuck-in-mud-carmel-forest",
@@ -40,12 +40,12 @@ export default function Page() {
       />
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-6">חילוץ רכב 4X4 שקוע בבוץ יערות הכרמל</h1>
+          <h1 className="text-4xl font-bold mb-6">חילוץ רכב 4X4 שקוע בבוץ ביערות הכרמל</h1>
           <p className="text-xl mb-8">
-            נתקעתם עם רכב השטח בבוץ העמוק של יערות הכרמל? אנו מספקים שירותי חילוץ שטח מקצועיים, מהירים ובטוחים לכל סוגי רכבי ה-4X4.
-            הצוות שלנו מצויד בציוד גרירה וחילוץ מתקדם המותאם לתנאי שטח קשים, ומגיע לכל נקודה מבודדת באזור הכרמל והסביבה. אם אתם זקוקים ל- 
-            <Link href="/areas/haifa-general/car-extraction-from-mud-carmel-reserve-haifa" className="underline font-semibold">חילוץ רכב מבוץ בשמורת הכרמל</Link> או לשירות 
-            <Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa" className="underline font-semibold">חילוץ 4X4 בשבילי דניה</Link>, אנו כאן עבורכם.
+            נתקעתם עם רכב השטח בבוץ העמוק של יערות הכרמל? אנו מספקים שירותי חילוץ שטח מקצועיים, מהירים ובטוחים לכל סוגי רכבי ה-4X4. 
+            הצוות שלנו מצויד בציוד גרירה מתקדם המותאם לתנאי שטח קשים ומגיע לכל נקודה באזור הכרמל. אם אתם זקוקים גם ל
+            <Link href="/areas/haifa-general/off-road-mud-rescue-carmel-private-car" className="underline font-semibold">חילוץ רכב פרטי בבוץ בכרמל</Link> או לשירות 
+            <Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles" className="underline font-semibold">חילוץ רכב באחוזה</Link>, אנו כאן עבורכם.
           </p>
           <div className="flex gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -62,14 +62,14 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ בשטח?</h2>
         <ul className="list-disc pr-6 space-y-4">
-          <li>זמינות מלאה 24/7 לכל קריאת חילוץ ביערות הכרמל.</li>
-          <li>ציוד חילוץ ייעודי לרכבי 4X4 ששקעו בבוץ עמוק.</li>
-          <li>צוות מיומן בעל ניסיון רב בחילוצי שטח מורכבים.</li>
-          <li>מחירים הוגנים ושירות אדיב ללא הפתעות.</li>
+          <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע לכל קריאה ביערות הכרמל.</li>
+          <li>ציוד חילוץ ייעודי לרכבי שטח ששקעו בבוץ עמוק או בנחלים.</li>
+          <li>ניסיון עשיר בטיפול בתנאי שטח מורכבים ושבילים צרים.</li>
+          <li>שקיפות מלאה במחירים ושירות אדיב ללא הפתעות.</li>
         </ul>
         <p className="mt-6 text-gray-700">
-          חשוב לציין: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח (4X4). שירותינו כוללים גם סיוע ברחבי האזור כמו 
-          <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-haifa-university" className="text-blue-600">חילוץ רכב ליד אוניברסיטת חיפה</Link>. איננו מספקים שירותי חילוץ או גרירה לאופנועים.
+          חשוב לציין: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4X4. השירות ניתן לאזור הכרמל והסביבה. למקרים של 
+          <Link href="/areas/haifa-general/car-stuck-in-sand-bat-galim-haifa" className="text-blue-600">חילוץ רכב ששקע בחול בבת גלים</Link>, אנו מציעים שירות נפרד. שירותינו אינם כוללים חילוץ אופנועים.
         </p>
       </section>
 
@@ -78,12 +78,12 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על חילוץ שטח בכרמל</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-xl">כמה זמן לוקח לכם להגיע לחילוץ ביערות הכרמל?</h3>
-              <p>אנו משתדלים להגיע לכל קריאה באזור יערות הכרמל והסביבה תוך זמן קצר ככל הניתן בהתאם לתנאי השטח והמרחק.</p>
+              <h3 className="font-bold text-xl">מהו זמן ההגעה הממוצע לחילוץ ביערות הכרמל?</h3>
+              <p>אנו משתדלים להגיע בתוך זמן קצר ככל הניתן. זמני ההגעה תלויים במיקום המדויק של הרכב ובתנאי השטח ביום הקריאה.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם אתם מחלצים גם רכבים פרטיים שאינם 4X4?</h3>
-              <p>כן, אנו נותנים מענה גם לרכבים פרטיים שנתקעו בדרכי עפר או בשולי הדרך, ומציעים שירותי <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-600">חילוץ רכב מבוץ באזור הכרמל</Link> במחיר הוגן.</p>
+              <h3 className="font-bold text-xl">האם אתם מבצעים חילוץ לרכבים פרטיים רגילים?</h3>
+              <p>בהחלט. אנו נותנים מענה מקצועי גם לרכבים פרטיים שנתקעו בדרכי עפר באזור, ומספקים שירותי <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-600">חילוץ רכב מבוץ באזור הכרמל</Link> במחיר הוגן ומשתלם.</p>
             </div>
           </div>
         </div>

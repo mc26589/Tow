@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'חילוץ רכב מתעלה בצומת צ\'ק פוסט | הגעה תוך 30 דקות | 24/7',
-  description: 'נתקעתם בתעלה בכביש 4 צ\'ק פוסט? צוות מקצועי יחלץ אתכם במהירות ובמחיר הוגן. זמינות 24/7 באזור חיפה והקריות. התקשרו עכשיו!',
+  description: 'נתקעתם בתעלה בכביש 4 צ\'ק פוסט? צוות חילוץ מקצועי יחלץ אתכם במהירות ובמחיר הוגן. זמינות 24/7 באזור חיפה והקריות. התקשרו עכשיו!',
   alternates: {
     canonical: '/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post',
   },
@@ -58,8 +58,8 @@ export default function Page() {
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">שירותי חילוץ מקצועיים בצומת צ\'ק פוסט</h2>
-          <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 שסטו מהכביש. אם אתם זקוקים גם ל<Link href="/areas/haifa-general/fast-towing-services-road-22-krayot-bypass" className="text-blue-400 underline">שירותי גרירה מהירים בכביש 22 עוקף קריות</Link> או לשירותי חילוץ מקצועיים, הצוות שלנו זמין עבורכם 24/7. חשוב לציין: אנו לא מספקים שירותי חילוץ לאופנועים.</p>
-          <p>הצוות שלנו מגיע מצויד בכלים המתאימים כדי להבטיח שהרכב יחולץ במינימום נזק. במידה והרכב ישן או מושבת, אנו מציעים גם פתרונות <Link href="/areas/haifa-general/kaniyat-rekhavim-yeshanim-lehalafim-kiryat-yam-pinui-meyadi" className="text-blue-400 underline">פינוי רכבים ישנים לגריטה באזור הקריות</Link>.</p>
+          <p className="mb-4">אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח שסטו מהכביש. אם אתם זקוקים גם ל <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-400 underline">שירותי גרירה בכביש 22 עוקף קריות</Link> לאחר תאונה, הצוות שלנו זמין עבורכם 24/7. שירותינו כוללים גם <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-400 underline">חילוץ רכבים לאחר תאונה בכביש 22</Link>. חשוב לציין: אנו לא מספקים שירותי חילוץ לאופנועים.</p>
+          <p>הצוות שלנו מגיע מצויד בכלים המתאימים כדי להבטיח שהרכב יחולץ במינימום נזק. במידה והרכב ישן או מושבת לאחר התאונה, אנו מציעים גם פתרונות <Link href="/areas/haifa-general/buying-cars-for-scrap-haifa-krayot" className="text-blue-400 underline">פינוי רכבים לפירוק באזור הקריות</Link>.</p>
         </div>
       </section>
 
@@ -73,11 +73,11 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold text-xl">האם אתם מחלצים רכבים שנפלו לתעלה עמוקה?</h3>
-              <p>כן, אנו ערוכים לביצוע חילוצים מורכבים. במידה והתעלה נמצאת בשטח קשה, אנו משתמשים בטכניקות דומות ל<Link href="/areas/haifa-general/emergency-mud-rescue-carmel-forest-haifa" className="text-blue-600 underline">חילוצי בוץ מהכרמל</Link>.</p>
+              <p>כן, אנו ערוכים לביצוע חילוצים מורכבים. במידה והתעלה נמצאת בשטח קשה, אנו משתמשים בטכניקות דומות ל<Link href="/areas/haifa-general/off-road-mud-rescue-carmel-private-car" className="text-blue-600 underline">חילוצי שטח ובוץ</Link>.</p>
             </div>
             <div>
               <h3 className="font-bold text-xl">מה טווח המחירים לחילוץ?</h3>
-              <p>אנו מציעים מחיר הוגן ושקוף. המחיר נקבע לפי מורכבות החילוץ מהתעלה והמרחק ליעד. אנו מציעים גם פתרונות משתלמים כמו <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-600 underline">גרירה במחיר הוגן בצ\'ק פוסט</Link>.</p>
+              <p>אנו מציעים מחיר הוגן ושקוף. המחיר נקבע לפי מורכבות החילוץ מהתעלה והמרחק ליעד. זקוקים גם ל<Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-600 underline">גרירה מהירה עקב פנצ\'ר</Link>? אנו כאן.</p>
             </div>
           </div>
         </div>

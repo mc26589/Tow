@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'מכירת רכב לפירוק בחיפה | פינוי מיידי מהשטח - מחיר הוגן!',
-  description: 'נתקעתם עם רכב מושבת? אנו קונים רכבים לפירוק בחיפה והקריות עם פינוי מיידי מהשטח ומזומן במקום. שירות אמין 24 שעות ביממה. התקשרו עכשיו!',
+  title: 'מכירת רכב לפירוק בחיפה – פינוי מיידי ומזומן במקום | מחיר הוגן!',
+  description: 'נתקעתם עם רכב מושבת? קונים רכבים לפירוק בחיפה והקריות עם פינוי מיידי מהשטח. מחיר הוגן, שירות אמין 24/7 ומזומן במקום. התקשרו עכשיו!',
   alternates: {
     canonical: '/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup',
   },
@@ -33,7 +33,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">מכירת רכב לפירוק בחיפה – פינוי מיידי מהשטח</h1>
-          <p className="text-xl mb-8">זקוקים לפינוי רכב מושבת, לאחר תאונה או ללא טסט? אנו כאן עבורכם עם שירות מהיר, אמין ומקצועי בכל חיפה והקריות.</p>
+          <p className="text-xl mb-8">זקוקים לפינוי רכב מושבת, לאחר תאונה או ללא טסט? אנו כאן עבורכם עם שירות מהיר, אמין ומקצועי בכל אזור חיפה והקריות.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="חיפה והקריות" />
             <a
@@ -47,12 +47,12 @@ export default function Page() {
       </section>
 
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">פינוי רכבים לפירוק בחיפה – פתרון מקצועי</h2>
+        <h2 className="text-3xl font-bold mb-6">פינוי רכבים לפירוק בחיפה – פתרון מקצועי ומיידי</h2>
         <p className="mb-4">
-          אם הרכב שלכם אינו נוסע, עבר תאונה או שפשוט הגיע הזמן להיפרד ממנו, אנו הכתובת שלכם. אנו מתמחים בפינוי רכבים פרטיים ומסחריים. אם אתם מחפשים <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="text-blue-600 font-bold underline">קניית רכבים לפירוק בחיפה והקריות</Link>, אנו מציעים מענה מהיר. באזור הצפון אנו מספקים פתרונות כגון <Link href="/areas/haifa-general/pinui-rechev-grotah-grira-check-post-haifa-krayot-lechalafim" className="text-blue-600 font-bold underline">פינוי רכב גרוטאה באזור הצ'ק פוסט</Link>.
+          אם הרכב שלכם אינו נוסע, עבר תאונה או שפשוט הגיע הזמן להיפרד ממנו, אנו הכתובת שלכם. אנו מתמחים בפינוי רכבים פרטיים ומסחריים. אם אתם מחפשים <Link href="/areas/haifa-general/buying-cars-for-scrap-haifa-krayot" className="text-blue-600 font-bold underline">קניית רכבים לפירוק בחיפה והקריות</Link>, אנו מציעים מענה מהיר. באזור הצפון אנו מספקים פתרונות גרירה ופינוי לרבות <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 font-bold underline">גרירה לאחר תאונה בכביש 22</Link>.
         </p>
         <p className="mb-4">
-          ללקוחות המחפשים שירות באזורים נוספים, אנו מבצעים גם <Link href="/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-immediate-removal" className="text-blue-600 font-bold underline">קניית רכבים לפירוק בקרית ים</Link> עם פינוי מיידי. איננו מטפלים באופנועים, אך נשמח לסייע לבעלי רכבים הזקוקים לשירותי <Link href="/areas/haifa-general/towing-for-scrap-kiryat-ata-road-22" className="text-blue-600 font-bold underline">גרירה לפירוק על כביש 22</Link>.
+          ללקוחות המחפשים שירות באזורים נוספים, אנו מבצעים גם <Link href="/areas/haifa-general/scrap-car-removal-kiryat-haim-cash" className="text-blue-600 font-bold underline">פינוי גרוטאות רכב בקרית חיים במזומן</Link> עם פינוי מיידי. בנוסף, אנו מספקים פתרונות למי שמחפש <Link href="/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal" className="text-blue-600 font-bold underline">קניית רכבים לפירוק בקרית ביאליק</Link>. איננו מטפלים באופנועים, אך נשמח לסייע לבעלי רכבים הזקוקים לשירותי <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-600 font-bold underline">גרירה בצירים המרכזיים</Link>.
         </p>
 
         <div className="bg-gray-100 p-6 rounded-xl mt-8">
@@ -60,15 +60,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <p className="font-bold">האם אתם קונים רכבים ללא טסט או אחרי תאונה?</p>
-              <p>כן, אנו רוכשים ומפנים רכבים מושבתים, רכבים שעברו תאונות או רכבים ללא טסט בתהליך מהיר ומסודר הכולל פינוי מהשטח.</p>
+              <p>כן, אנו רוכשים ומפנים רכבים מושבתים, רכבים שעברו תאונות או רכבים ללא טסט בתהליך מהיר ומסודר הכולל פינוי מהשטח תוך זמן קצר.</p>
             </div>
             <div>
               <p className="font-bold">מהו טווח המחירים לרכב לפירוק?</p>
-              <p>המחיר נקבע בהתאם למצב הרכב, סוגו והיכולת שלנו להפיק ממנו חלפים. אנו מציעים מחירים הוגנים ומשלמים במזומן במקום.</p>
+              <p>המחיר נקבע בהתאם למצב הרכב, סוגו והיכולת שלנו להפיק ממנו חלפים. אנו מציעים מחירים הוגנים ומשלמים במזומן במקום ללא עיכובים.</p>
             </div>
             <div>
               <p className="font-bold">האם אתם מספקים גרירה למקומות נוספים?</p>
-              <p>בהחלט. אם נתקעתם באזור הצ'ק פוסט, אנו מציעים גם <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-600 font-bold underline">שירותי גרירה במחיר משתלם בצ'ק פוסט</Link> לכל סוגי הרכבים הפרטיים.</p>
+              <p>בהחלט. אם נתקעתם באזור הצ\'ק פוסט, אנו מציעים גם <Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-600 font-bold underline">שירותי גרירה מהירים בצ\'ק פוסט</Link> לכל סוגי הרכבים הפרטיים והמסחריים.</p>
             </div>
           </div>
         </div>

@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'קונה רכבים לפירוק בצק פוסט חיפה | מחיר הוגן ושירות מיידי 24/7',
-  description: 'מחפשים קונה רכבים לפירוק בצק פוסט חיפה? פינוי רכבים מושבתים ללא עלות, הצעת מחיר הוגנת במקום ושירות מקצועי 24/7. התקשרו עכשיו לפינוי מהיר!',
+  title: 'קונה רכבים לפירוק בצק פוסט חיפה | מחיר הוגן ושירות מהיר',
+  description: 'מחפשים קונה רכבים לפירוק בצק פוסט חיפה? פינוי רכבים מושבתים מהיר, הצעת מחיר הוגנת במקום ושירות 24/7. הגעה מהירה לכל אזור הצ\'ק פוסט. התקשרו עכשיו!',
   alternates: {
     canonical: '/areas/haifa-general/buying-cars-for-scrap-check-post-haifa',
   },
@@ -38,8 +38,8 @@ export default function Page() {
 
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בצ'ק פוסט חיפה – פינוי מהיר בשטח</h1>
-          <p className="text-xl mb-8">צריכים לפנות רכב תקוע או מושבת? אנו מספקים מענה מקצועי הכולל פינוי רכבים ללא עלות ותשלום הוגן במקום.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בצ\'ק פוסט חיפה – פינוי מהיר בשטח</h1>
+          <p className="text-xl mb-8">נתקעתם עם רכב מושבת בצ\'ק פוסט? אנו מציעים שירות מקצועי, פינוי ללא עלות ותשלום הוגן במזומן במקום.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="חיפה והקריות" />
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors">
@@ -50,34 +50,34 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירות פינוי רכבים לפירוק בצ'ק פוסט – למה אנחנו?</h2>
+        <h2 className="text-3xl font-bold mb-6">שירות פינוי רכבים לפירוק בצ\'ק פוסט – למה לבחור בנו?</h2>
         <p className="mb-4">
-          אזור הצ'ק פוסט הוא עורק תחבורה מרכזי. אם נתקעת עם רכב במצב לא נסיע, אנו מציעים שירות מקיף שכולל <Link href="/areas/haifa-general/cash-for-junk-cars-check-post-haifa" className="text-blue-600 underline">קניית רכבים לפירוק בצ'ק פוסט</Link> במחיר הוגן. אנו עובדים סביב השעון כדי לספק מענה גם למי שמחפש <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-600 underline">גרירה זולה בצ'ק פוסט</Link> במקרה של תקלה טכנית.
+          אזור הצ\'ק פוסט מהווה צומת מרכזית בחיפה. אם נתקעתם עם רכב באזור, אנו מציעים מענה מיידי הכולל <Link href="/areas/haifa-general/buying-cars-for-scrap-haifa-krayot" className="text-blue-600 underline">קניית רכבים לפירוק בחיפה והקריות</Link> בתנאים הכי משתלמים. עבור מי שזקוק לסיוע טכני בכביש המהיר, אנו מפנים גם לשירותי <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-600 underline">גרירה בכביש 22 עוקף קריות</Link>.
         </p>
         <ul className="list-disc list-inside space-y-2 mb-6">
-          <li>פינוי רכבים מושבתים מכל נקודה באזור הצ'ק פוסט</li>
-          <li>שירות מקצועי 24/7 לכל סוגי הרכבים הפרטיים והמסחריים</li>
-          <li>הצעת מחיר תחרותית ומיידית בשטח</li>
-          <li>חיבור ישיר לשירותי <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="text-blue-600 underline">מכירת רכב משומש לפירוק בחיפה</Link></li>
+          <li>פינוי רכבים לפירוק ללא עלות מכל נקודה בצ\'ק פוסט</li>
+          <li>שירות 24/7 לכל סוגי הרכבים (פרטי, מסחרי)</li>
+          <li>הערכת מחיר הוגנת במקום</li>
+          <li>פתרון מקיף למקרים של תאונות דרכים עם <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 underline">גרירה לאחר תאונה בכביש 22</Link></li>
         </ul>
-        <p className="text-sm text-gray-600 italic">* אנו לא מטפלים באופנועים. עבור רכבים כבדים או דו-גלגלי, אנו מפנים למענה ייעודי.</p>
+        <p className="text-sm text-gray-600 italic">* השירות מיועד לרכבים בלבד, איננו מטפלים באופנועים.</p>
       </section>
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">שאלות נפוצות בנושא רכבים לפירוק בצ'ק פוסט</h2>
+          <h2 className="text-3xl font-bold mb-6">שאלות נפוצות על פינוי רכבים בצ\'ק פוסט</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-lg">באילו מקרים מומלץ למכור רכב לפירוק בצ'ק פוסט?</h3>
-              <p>כאשר עלות התיקון גבוהה מערך הרכב, או כשהרכב אינו עובר טסט. אנו מציעים פתרון מיידי לחיסכון בזמן ובבירוקרטיה.</p>
+              <h3 className="font-bold text-lg">תוך כמה זמן תגיעו לפנות את הרכב?</h3>
+              <p>אנו פרוסים באזור חיפה והקריות ומגיעים בדרך כלל תוך זמן קצר, במיוחד אם הרכב תקוע בצירי תנועה מרכזיים כמו כביש 22.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">איך קובעים את המחיר עבור רכב לפירוק?</h3>
-              <p>המחיר נקבע בהתאם למשקל הרכב, חלקי חילוף זמינים ושנתון. אנו מבטיחים את המחיר ההוגן ביותר באזור חיפה והסביבה.</p>
+              <h3 className="font-bold text-lg">איך יודעים מה המחיר עבור רכב לפירוק?</h3>
+              <p>המחיר נקבע לפי משקל הרכב, חלקי חילוף תקינים ודגם הרכב. אנו מקפידים על הצעת מחיר הוגנת ומיידית.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">האם השירות שלכם פועל גם מחוץ לצ'ק פוסט?</h3>
-              <p>בהחלט. אנו פעילים בכל רחבי חיפה, הקריות ואף מציעים שירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-600 underline">פינוי רכבים מהיר בחיפה והקריות</Link>.</p>
+              <h3 className="font-bold text-lg">האם אתם מספקים גם שירותי גרירה רגילים?</h3>
+              <p>בהחלט, אנו מציעים מגוון פתרונות, החל מפינוי רכבים לפירוק ועד שירותי <Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="text-blue-600 underline">גרירה בטוחה וזולה באזור כביש 22</Link> למוסך או לבית.</p>
             </div>
           </div>
         </div>
