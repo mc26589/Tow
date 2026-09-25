@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב בנווה שאנן חיפה | מחיר הוגן, הגעה ב-30 דקות 24/7",
-  description: "נתקעתם עם הרכב בנווה שאנן? שירות גרירה מקצועי וזול, הגעה מהירה עד 30-45 דקות. זמינים 24/7 לכל סוגי הרכבים. התקשרו עכשיו לשירות אמין ומחיר ללא תחרות!",
+  title: "גרירת רכב בנווה שאנן חיפה | מחיר הוגן, הגעה ב-30 דק'",
+  description: "נתקעתם עם הרכב בנווה שאנן? שירות גרירה מקצועי וזול, הגעה מהירה תוך 30 דקות. זמינים 24/7 לכל סוגי הרכבים. התקשרו עכשיו לשירות אמין ומחיר ללא תחרות!",
   alternates: {
     canonical: "/areas/haifa-general/cheap-car-towing-service-neve-shaanan-haifa",
   },
@@ -34,8 +34,8 @@ export default function Page() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירות גרירת רכב זול בנווה שאנן חיפה 24/7</h1>
           <p className="text-xl mb-8 max-w-2xl">
             נתקעתם עם הרכב באזור נווה שאנן? הצוות שלנו מספק שירותי גרירה מקצועיים, מהירים ובמחירים הוגנים. 
-            אנו ערוכים לכל תקלה וזמינים 24 שעות ביממה, 7 ימים בשבוע. אם נתקעתם בדרכים משובשות ליד <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="underline font-semibold">יערות הכרמל</Link>, אנו כאן לעזור. 
-            אנו מתמחים בגרירת רכבים פרטיים ומסחריים. במידה והרכב במצב גרוטאה שאינו ראוי לנסיעה, ניתן לבדוק גם שירותי <Link href="/areas/haifa-general/kone-rehavim-lepiruk-haifa-krayot" className="underline font-semibold">קניית רכבים לפירוק בחיפה והקריות</Link>.
+            אנו ערוכים לכל תקלה וזמינים 24 שעות ביממה, 7 ימים בשבוע. אם נתקעתם בדרכים משובשות ליד <Link href="/areas/haifa-general/mud-rescue-4x4-stuck-carmel-forest-haifa-university" className="underline font-semibold">יערות הכרמל ואוניברסיטת חיפה</Link>, אנו כאן לעזור. 
+            אנו מתמחים בגרירת רכבים פרטיים ומסחריים. במידה והרכב במצב גרוטאה שאינו ראוי לנסיעה, ניתן לבדוק גם שירותי <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="underline font-semibold">קניית רכבים לפירוק בחיפה</Link>.
           </p>
           <div className="flex flex-col md:flex-row gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -55,7 +55,7 @@ export default function Page() {
           <ul className="grid md:grid-cols-3 gap-8">
             <li className="p-6 bg-white rounded-xl shadow-sm">
               <h3 className="font-bold text-xl mb-2">זמינות מלאה 24/7</h3>
-              <p>שירות אמין לכל תרחיש, גם בשעות הלילה המאוחרות ובסופי שבוע.</p>
+              <p>שירות אמין לכל תרחיש, גם בשעות הלילה המאוחרות ובסוף השבוע.</p>
             </li>
             <li className="p-6 bg-white rounded-xl shadow-sm">
               <h3 className="font-bold text-xl mb-2">מחירים הוגנים</h3>
@@ -75,19 +75,19 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-bold">האם אתם גוררים רכבים מהאוניברסיטה או מהכרמל?</h3>
-              <p>כן, אנו מספקים חילוץ גם למקרים מורכבים יותר כגון <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-haifa-university" className="text-blue-700 underline">חילוץ רכב תקוע בבוץ ליד אוניברסיטת חיפה</Link> בכל שעות היממה.</p>
+              <p>כן, אנו מספקים חילוץ גם למקרים מורכבים יותר כגון <Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa" className="text-blue-700 underline">חילוץ רכב תקוע בשטח באזור דניה והכרמל</Link> בכל שעות היממה.</p>
             </div>
             <div>
               <h3 className="text-xl font-bold">האם אתם גוררים למוסכים מחוץ לחיפה?</h3>
-              <p>אנו מבצעים גרירה לכל חלקי הארץ, כולל שירותים ייעודיים כמו <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-700 underline">גרירה לצ'ק פוסט</Link> או למוסכים באזור הקריות במחיר משתלם.</p>
+              <p>אנו מבצעים גרירה לכל חלקי הארץ, כולל שירותים ייעודיים כמו <Link href="/areas/haifa-general/affordable-electric-car-towing-check-post-krayot" className="text-blue-700 underline">גרירת רכב חשמלי לצ'ק פוסט</Link> או למוסכים באזור הקריות במחיר משתלם.</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold">האם ניתן להזמין גרירה לרכב תקול באזור יציאה מהעיר?</h3>
-              <p>בוודאי. אנו מנוסים בגרירה מצירי תנועה עמוסים, כולל טיפול ב-<Link href="/areas/haifa-general/electric-vehicle-accident-towing-route-22-krayot-bypass" className="text-blue-700 underline">תאונות וגרירת רכבים בכביש 22 (עוקף קריות)</Link>.</p>
+              <h3 className="text-xl font-bold">האם ניתן להזמין גרירה לרכב תקול בכביש מהיר?</h3>
+              <p>בוודאי. אנו מנוסים בגרירה מצירי תנועה עמוסים, כולל טיפול ב-<Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-700 underline">גרירה בטוחה בכביש עוקף קריות</Link> ומחלפים מרכזיים.</p>
             </div>
             <div>
               <h3 className="text-xl font-bold">מה עושים אם הרכב נתקע עם מצבר ריק?</h3>
-              <p>אנו מעניקים שירותי התנעה וגרירה לכל סוגי הרכבים הפרטיים והמסחריים. חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.</p>
+              <p>אנו מעניקים שירותי התנעה וגרירה לרכבים פרטיים ומסחריים. חשוב לציין: איננו מספקים שירותי גרירה לאופנועים.</p>
             </div>
           </div>
         </div>

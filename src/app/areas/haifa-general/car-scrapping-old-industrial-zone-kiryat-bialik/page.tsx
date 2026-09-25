@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "פירוק רכבים באזור התעשייה קרית ביאליק | תשלום מזומן והגעה מהירה",
-  description: "מוכרים רכב לפירוק בקרית ביאליק? אנו קונים רכבים ישנים ומושבתים באזור התעשייה - תשלום הוגן במזומן, גרירה חינם ושירות מהיר. התקשרו עכשיו להצעה!",
+  title: "קניית רכבים לפירוק באזור התעשייה קרית ביאליק | תשלום מזומן מיידי",
+  description: "מוכרים רכב ישן באזור התעשייה קרית ביאליק? קונים רכבים לברזל ולפירוק במזומן, כולל פינוי וגרירה בחינם. שירות מהיר, אמין והוגן. התקשרו עכשיו לקבלת הצעה!",
   alternates: {
     canonical: "/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik"
   }
@@ -17,7 +17,7 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי גרירה ופירוק רכבים חיפה והקריות",
     "areaServed": "קרית ביאליק",
-    "priceRange": "$",
+    "priceRange": "הוגן",
     "serviceType": "קניית רכבים לפירוק וברזל"
   };
 
@@ -59,21 +59,20 @@ export default function Page() {
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-6">למה לבחור בנו לפירוק רכבים בקרית ביאליק?</h2>
         <p className="mb-4">
-          אנו מציעים שירות מקצועי ומקיף באזור התעשייה הישן. אם הרכב שלכם תקוע או שאתם מחפשים <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="text-blue-400">פירוק רכבים במזומן</Link> או גרירה מקצועית, אנו הכתובת. 
-          ניתן להתרשם גם משירותי <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-400">גרירה בצומת צ'ק פוסט</Link> או לבדוק שירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-towing-included" className="text-blue-400">פירוק רכבים בחיפה והקריות</Link> כולל גרירה.
+          אנו מציעים שירות מקצועי ומקיף באזור התעשייה הישן. אם הרכב שלכם תקוע או שאתם מחפשים פירוק רכבים במזומן, אנו הכתובת. אנו מספקים גם שירותי <Link href="/areas/haifa-general/affordable-flatbed-towing-kiryat-bialik-industrial-zone" className="text-blue-400">גרירה על גבי משטח באזור התעשייה קרית ביאליק</Link> למקרים דחופים, וכן שירותי <Link href="/areas/haifa-general/towing-for-scrap-kiryat-ata-road-22" className="text-blue-400">גרירה לפירוק בקרית אתא וכביש 22</Link>.
         </p>
-        <p className="text-red-400 font-semibold mb-8">חשוב להבהיר: אנו מתמחים ברכבים ורכבים מסחריים בלבד ואיננו מטפלים באופנועים.</p>
+        <p className="text-red-400 font-semibold mb-8">חשוב להבהיר: אנו מתמחים ברכבים פרטיים ומסחריים בלבד ואיננו מטפלים באופנועים.</p>
         
         <div className="mt-12 bg-neutral-900 p-8 rounded-lg">
           <h3 className="text-xl font-bold mb-4">שאלות נפוצות על פירוק רכבים</h3>
           <div className="space-y-4">
             <div>
-              <p className="font-bold">האם אתם מגיעים לכל האזור?</p>
-              <p>כן, אנו פעילים בפריסה מלאה באזור הקריות, כולל שירותי גרירה מקצועיים כמו <Link href="/areas/haifa-general/emergency-towing-road-22-krayot-bypass" className="text-blue-400">גרירה בכביש 22 עוקף קריות</Link>.</p>
+              <p className="font-bold">באילו אזורים נוספים ניתן לקבל שירות?</p>
+              <p>אנו פעילים בפריסה רחבה. ניתן להזמין שירותי <Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="text-blue-400">פירוק רכבים בקרית מוצקין</Link> או <Link href="/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-immediate-removal" className="text-blue-400">קניית רכבים לפירוק בקרית ים</Link> עם פינוי מיידי.</p>
             </div>
             <div>
               <p className="font-bold">מהו תהליך העבודה?</p>
-              <p>התהליך פשוט: מתקשרים, מתאמים הגעה, מקבלים תשלום במזומן במקום ואנו דואגים לפינוי הרכב בגרר. אם אתם זקוקים גם ל-<Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-400">גרירה דחופה בקרית ביאליק</Link>, אנו כאן לשירותכם.</p>
+              <p>התהליך פשוט: מתקשרים, מתאמים הגעה, מקבלים תשלום במזומן במקום ואנו דואגים לפינוי הרכב בגרר. זקוקים לעזרה בדרכים? אנו מפעילים גם <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-400">גרירה 24 שעות ביממה בכביש עוקף קריות</Link>.</p>
             </div>
           </div>
         </div>

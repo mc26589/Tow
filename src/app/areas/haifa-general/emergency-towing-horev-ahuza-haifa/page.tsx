@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'גרר בחורב ואחוזה, חיפה | הגעה תוך 30 דק\' | מחיר הוגן',
-  description: 'נתקעתם עם הרכב באזור חורב או אחוזה בחיפה? שירות גרירה 24/7, מקצועי ומהיר במחיר משתלם. חילוץ רכבים פרטיים ומסחריים. התקשרו עכשיו!',
+  title: 'גרר בחורב ואחוזה, חיפה | הגעה תוך 30 דקות | מחיר הוגן',
+  description: 'נתקעתם עם הרכב בחורב או אחוזה? שירותי גרירה מקצועיים 24/7 לכל סוגי הרכבים. הגעה מהירה, מחיר הוגן ושקיפות מלאה. התקשרו עכשיו!',
   alternates: {
     canonical: '/areas/haifa-general/emergency-towing-horev-ahuza-haifa',
   },
@@ -15,7 +15,7 @@ export default function Page() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'AutoTowing',
-    name: 'שירותי גרירה חיפה והקריות',
+    name: 'שירותי גרירה חורב ואחוזה חיפה',
     areaServed: 'חיפה',
     priceRange: '₪',
     openingHoursSpecification: {
@@ -44,7 +44,7 @@ export default function Page() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר חירום לרכב תקוע באזור חורב ואחוזה בחיפה</h1>
           <p className="text-xl mb-8 max-w-2xl">
             נתקעתם עם הרכב באזור חורב או אחוזה? אנו מציעים שירות חילוץ וגרירה מהיר ומקצועי לרכבים פרטיים ומסחריים. 
-            זמינות מלאה 24/7 עם הגעה תוך דקות לכל ציר מרכזי על הכרמל. שקיפות מלאה ומחיר הוגן.
+            זמינות מלאה 24 שעות ביממה עם הגעה תוך דקות לכל ציר מרכזי על הכרמל. שקיפות מלאה ומחיר הוגן.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -62,14 +62,11 @@ export default function Page() {
         <h2 className="text-3xl font-bold mb-6">למה לבחור בשירות הגרירה שלנו בחורב-אחוזה?</h2>
         <ul className="space-y-4 text-lg mb-8">
           <li>✓ הגעה מהירה לכל נקודה בציר חורב-אחוזה והסביבה הקרובה.</li>
-          <li>✓ צוות מקצועי ומנוסה לכל סוגי הרכבים (פרטי, רכבי שטח ומסחרי).</li>
-          <li>✓ מענה מקצועי לבעלי רכבים הזקוקים ל-<Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles" className="text-blue-600 underline font-semibold">שירותי חילוץ רכב באחוזה</Link>.</li>
-          <li>✓ שירות לדו-גלגלי כבד: <Link href="/areas/haifa-general/heavy-motorcycle-breakdown-towing-ahuzah-haifa" className="text-blue-600 underline">גרירת אופנוע כבד תקוע באחוזה</Link>.</li>
+          <li>✓ צוות מקצועי ומנוסה לכל סוגי הרכבים (פרטי ורכבי שטח).</li>
+          <li>✓ מומחיות בחילוצי שטח בקרבת העיר: <Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa" className="text-blue-600 underline">חילוץ רכבי שטח באזור דניה והכרמל</Link>.</li>
+          <li>✓ סיוע מקצועי גם במצבים מורכבים כמו <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-600 underline">חילוץ רכבים מהבוץ ביערות הכרמל</Link>.</li>
           <li>✓ מחירים הוגנים ללא הפתעות – שקיפות היא המוטו שלנו.</li>
         </ul>
-        <p>
-          זקוקים לחילוץ מורכב? אנו מומחים ב-<Link href="/areas/haifa-general/off-road-mud-rescue-carmel-private-car" className="text-blue-600 underline">חילוץ רכבים מהבוץ ביערות הכרמל</Link> או עזרה דחופה לרכבים בנתיבים עמוסים כמו <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-600 underline">גרירה בכביש עוקף קריות</Link>.
-        </p>
       </section>
 
       <section className="py-16 bg-gray-50">
@@ -81,11 +78,11 @@ export default function Page() {
               <p>ברוב המקרים, הגרר שלנו יגיע אליכם תוך 20 עד 30 דקות מרגע הקריאה, בהתאם לעומסי התנועה בציר חורב.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם אתם נותנים שירות חילוץ מחניונים סגורים?</h3>
-              <p>כן, אנו ערוכים למתן שירותי גרירה וחילוץ מחניונים תת-קרקעיים באמצעות ציוד מותאם ונגיש לכל סוגי הרכבים.</p>
+              <h3 className="font-bold text-xl">האם אתם מבצעים חילוצים גם מאזורים מרוחקים יותר בכרמל?</h3>
+              <p>כן, אנו ערוכים למתן שירותי גרירה וחילוץ לכל אזורי חיפה והסביבה, כולל <Link href="/areas/haifa-general/mud-rescue-4x4-stuck-carmel-forest-haifa-university" className="text-blue-600 underline">חילוץ רכבים תקועים באזור אוניברסיטת חיפה</Link>.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם השירות זמין גם בסוף השבוע?</h3>
+              <h3 className="font-bold text-xl">האם השירות זמין גם בסופי שבוע?</h3>
               <p>בוודאי, אנו מספקים שירותי גרירה 24 שעות ביממה, 7 ימים בשבוע, לכל אזור חיפה והצפון.</p>
             </div>
           </div>

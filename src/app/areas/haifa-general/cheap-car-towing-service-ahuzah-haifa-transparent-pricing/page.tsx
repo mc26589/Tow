@@ -13,8 +13,8 @@ function JsonLd<T>({ data }: { data: T }) {
 }
 
 export const metadata: Metadata = {
-  title: "גרר באחוזה חיפה - מחיר הוגן, הגעה מהירה תוך 30 דקות | 24/7",
-  description: "נתקעתם באחוזה? שירותי גרירה באחוזה חיפה במחיר הוגן ושקוף. מענה מהיר 24/7 לכל סוגי הרכבים. ללא הפתעות, שירות אמין ומקצועי. התקשרו עכשיו!",
+  title: "גרר באחוזה חיפה - מחיר הוגן, הגעה תוך 30 דקות | 24/7",
+  description: "נתקעתם באחוזה? שירותי גרירה באחוזה חיפה במחיר הוגן ושקוף. מענה מהיר 24/7 לכל סוגי הרכבים. ללא הפתעות, שירות מקצועי. התקשרו עכשיו!",
   alternates: {
     canonical: "https://yourdomain.com/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing",
   },
@@ -55,7 +55,7 @@ export default function Page() {
             שירותי גרירה באחוזה חיפה: שקיפות מלאה ומענה תוך דקות
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-            זקוקים לגרר באחוזה? אנו כאן לשירותכם 24/7. שירות גרירה מקצועי במחיר הוגן ללא הפתעות. טיפול מיומן ברכבים פרטיים ומסחריים בעליות המאתגרות של הכרמל.
+            זקוקים לגרר באחוזה? אנו כאן לשירותכם 24/7. שירות גרירה מקצועי במחיר הוגן. טיפול מיומן ברכבים בעליות המאתגרות של הכרמל.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-6 rounded-full transition duration-300 shadow-lg">
@@ -70,12 +70,12 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-10">למה לבחור בשירותי הגרירה שלנו בחיפה?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-800 p-6 rounded-lg"><h3>שקיפות מחירים</h3><p>מחיר הוגן וקבוע מראש. <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-400 underline">שירות גרירה משתלם</Link> בכל חיפה.</p></div>
-            <div className="bg-gray-800 p-6 rounded-lg"><h3>זמינות 24/7</h3><p>מענה מיידי לכל מצוקה. התמחות ב<Link href="/areas/haifa-general/towing-services-stuck-vehicle-steep-hill-ahuza-haifa" className="text-blue-400 underline">חילוץ מרחובות תלולים באחוזה</Link>.</p></div>
-            <div className="bg-gray-800 p-6 rounded-lg"><h3>חילוץ מורכב</h3><p>נתקעתם בשטח? בדקו את השירות שלנו ל<Link href="/areas/haifa-general/4x4-rescue-mud-carmel-forest-haifa-university" className="text-blue-400 underline">חילוץ רכב מבוץ באזור הכרמל</Link>.</p></div>
-            <div className="bg-gray-800 p-6 rounded-lg"><h3>רכבים חשמליים</h3><p>נתקעתם בלי חשמל? פתרון מקצועי ל<Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa" className="text-blue-400 underline">גרירת רכב חשמלי באחוזה</Link>.</p></div>
-            <div className="bg-gray-800 p-6 rounded-lg"><h3>פריסה ארצית</h3><p>פתרונות גרירה גם לצפון: <Link href="/areas/haifa-general/sherutei-grira-hilutz-krayot-kavish-22" className="text-blue-400 underline">גרירה וחילוץ בכביש 22</Link>.</p></div>
-            <div className="bg-gray-800 p-6 rounded-lg"><h3>מקצועיות בטיפול</h3><p>צוות מנוסה המעניק לכם שקט נפשי מלא בכל קריאה.</p></div>
+            <div className="bg-gray-800 p-6 rounded-lg"><h3>שקיפות מחירים</h3><p>מחיר הוגן וקבוע מראש. זקוקים לפתרון משלים? בדקו <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-400 underline">גרירה 24 7 עוקף קריות מחיר הוגן</Link>.</p></div>
+            <div className="bg-gray-800 p-6 rounded-lg"><h3>חילוץ שטח בחיפה</h3><p>נתקעתם בבוץ? אנו מומחים ב<Link href="/areas/haifa-general/mud-rescue-4x4-stuck-carmel-forest-haifa-university" className="text-blue-400 underline">mud rescue 4x4 stuck carmel forest haifa university</Link>.</p></div>
+            <div className="bg-gray-800 p-6 rounded-lg"><h3>זמינות בכל אזור</h3><p>פריסה רחבה מהכרמל ועד הקריות. למידע נוסף: <Link href="/areas/haifa-general/affordable-flatbed-towing-kiryat-bialik-industrial-zone" className="text-blue-400 underline">affordable flatbed towing kiryat bialik industrial zone</Link>.</p></div>
+            <div className="bg-gray-800 p-6 rounded-lg"><h3>טיפול ברכב חשמלי</h3><p>נתקעתם ללא סוללה? פתרון מקצועי לרכבים חשמליים ברחבי העיר והקריות.</p></div>
+            <div className="bg-gray-800 p-6 rounded-lg"><h3>מקצועיות בטיפול</h3><p>צוות מנוסה המעניק לכם שקט נפשי מלא בכל קריאה ובכל שעה.</p></div>
+            <div className="bg-gray-800 p-6 rounded-lg"><h3>חילוץ מהיר</h3><p>מענה מיידי לרכבים תקועים בצירי תנועה מרכזיים ובתוך שכונת אחוזה.</p></div>
           </div>
         </div>
       </section>
@@ -84,9 +84,9 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6 text-center">שאלות נפוצות על גרירה באחוזה</h2>
           <div className="max-w-3xl mx-auto space-y-4">
-            <div className="p-4 bg-white rounded shadow"><strong>כמה עולה גרירה באחוזה והכרמל?</strong><p>המחיר הוגן ומושפע מסוג הרכב, המרחק והשעה. אנו מתחייבים לשקיפות מלאה ללא עלויות נסתרות.</p></div>
+            <div className="p-4 bg-white rounded shadow"><strong>כמה עולה גרירה באחוזה והכרמל?</strong><p>המחיר הוגן ומושפע מסוג הרכב והמרחק. אנו מתחייבים לשקיפות מלאה ללא עלויות נסתרות.</p></div>
             <div className="p-4 bg-white rounded shadow"><strong>האם אתם מסייעים ברכבים תקועים בשיפועים?</strong><p>כן, אנו ערוכים לחילוץ רכבים מכל סוגי השיפועים והכבישים התלולים המאפיינים את שכונת אחוזה.</p></div>
-            <div className="p-4 bg-white rounded shadow"><strong>מה עושים במקרה של מצבר ריק?</strong><p>במקום גרירה יקרה, נסו להזמין שירות התנעה או גרירה במידת הצורך עבור רכבים חשמליים ורגילים כאחד.</p></div>
+            <div className="p-4 bg-white rounded shadow"><strong>האם אתם מבצעים חילוצי שטח בקרבת חיפה?</strong><p>כן, אנו מבצעים גם <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-400 underline">car rescue mud carmel forest nesher 24 7</Link> למקרים מורכבים.</p></div>
           </div>
         </div>
       </section>
