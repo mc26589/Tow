@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר בסטלה מאריס חיפה | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם עם הרכב בסטלה מאריס? אנו מספקים שירותי גרירה וחילוץ מקצועיים בחיפה 24/7. הגעה מהירה, מחיר הוגן ושירות לכל סוגי הרכבים. התקשרו עכשיו!",
+  title: "גרר בסטלה מאריס חיפה | גרירת רכבים ואופנועים 24/7 | מחיר הוגן",
+  description: "נתקעתם עם הרכב או האופנוע בסטלה מאריס? שירותי גרירה מקצועיים בחיפה 24/7. הגעה מהירה, מחיר הוגן ומקצועיות ללא פשרות. התקשרו עכשיו לפתרון מיידי!",
   alternates: {
     canonical: "/areas/haifa-general/motorcycle-towing-stella-maris-haifa",
   },
@@ -17,20 +17,20 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-6">
-            שירותי גרירה וחילוץ רכב בסטלה מאריס חיפה
+            שירותי גרירה וחילוץ בסטלה מאריס חיפה
           </h1>
-          <p className="text-xl mb-8">זקוקים לגרר בסטלה מאריס? צוות החילוץ שלנו בחיפה כאן בשבילכם 24/7</p>
+          <p className="text-xl mb-8">צריכים גרר דחוף בסטלה מאריס? צוות החילוץ שלנו בחיפה מגיע לכל נקודה בכרמל 24/7</p>
         </div>
       </section>
 
       <section className="py-12 container mx-auto px-4">
         <div className="max-w-3xl mx-auto bg-neutral-900 p-8 rounded-lg border border-neutral-800">
-          <h2 className="text-2xl font-semibold mb-4">שירות גרירה מקצועי בסטלה מאריס והסביבה</h2>
+          <h2 className="text-2xl font-semibold mb-4">שירות גרירה אמין ומקצועי לכל סוגי הרכבים</h2>
           <p className="mb-6 text-neutral-300">
-            הנסיעה בדרכים המתפתלות של אזור סטלה מאריס והכרמל עלולה להוביל לתקלות מפתיעות. אנו מתמחים בחילוץ וגרירת רכבים פרטיים, מסחריים ורכבי 4x4. אם נתקעתם באזור, אנו נספק פתרון מהיר ומקצועי. לבעיות דומות בדרכים תלולות, ראו את שירותינו ב- <Link href="/areas/haifa-general/towing-services-stuck-vehicle-steep-hill-ahuza-haifa" className="text-blue-400 hover:underline">גרירת רכב תקוע בשיפוע באחוזה</Link>.
+            הנסיעה בדרכים המתפתלות של סטלה מאריס עלולה להפתיע. אם הרכב או האופנוע שלכם שבק חיים, אנו כאן לתת מענה מקצועי. במידה ואתם זקוקים לטיפול בדרכים תלולות, אנו מציעים גם <Link href="/areas/haifa-general/towing-service-heavy-motorcycle-breakdown-ahuzah-haifa" className="text-blue-400 hover:underline">שירותי גרירת אופנועים כבדים באחוזה</Link>, ובאזור פרויד אנו מספקים <Link href="/areas/haifa-general/heavy-motorcycle-towing-freud-haifa-price" className="text-blue-400 hover:underline">גרירת אופנוע כבד בפרויד חיפה</Link> במחירים נוחים.
           </p>
           <p className="mb-6 text-neutral-300">
-            במקרה של רכב חשמלי שנתקע ללא טעינה, אנו מציעים <Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa" className="text-blue-400 hover:underline">שירות גרירת רכב חשמלי באחוזה</Link>. אם החילוץ נדרש בדרכי עפר באזור הכרמל, נשמח לסייע ב <Link href="/areas/haifa-general/4x4-rescue-mud-carmel-forest-haifa-university" className="text-blue-400 hover:underline">חילוץ שטח 4x4 ביערות הכרמל</Link>.
+            במקרה של תקיעה בדרכי עפר באזור הכרמל או חילוץ 4x4 מורכב, אנו מספקים פתרונות מהירים, כגון <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-haifa" className="text-blue-400 hover:underline">חילוץ שטח 4x4 בכרמל חיפה</Link>. אל תתפשרו על איכות השירות כשמדובר בבטיחות שלכם על הכביש.
           </p>
           
           <div className="flex flex-col gap-4 mt-8">
@@ -46,19 +46,19 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4 max-w-3xl">
-        <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על גרירה וחילוץ בחיפה</h2>
+        <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על גרירה וחילוץ בסטלה מאריס</h2>
         <div className="space-y-6 text-neutral-300">
           <div>
-            <h3 className="font-bold text-white">תוך כמה זמן תגיעו לחילוץ בסטלה מאריס?</h3>
-            <p>אנו פרוסים בכל רחבי חיפה ומשתדלים להגיע לסטלה מאריס תוך דקות ספורות, בהתאם לתנועה.</p>
+            <h3 className="font-bold text-white">האם אתם מגיעים במהירות לסטלה מאריס?</h3>
+            <p>כן, אנו מכירים היטב את הצירים המובילים לסטלה מאריס ושואפים להגעה מהירה ככל הניתן, גם בשעות העומס.</p>
           </div>
           <div>
-            <h3 className="font-bold text-white">באילו אזורים נוספים בחיפה אתם פועלים?</h3>
-            <p>אנו מציעים שירות מקיף כולל <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-400">גרירת רכב זולה באזור הצ'ק פוסט</Link> וכן מענה מהיר לדרכים בין-עירוניות כמו <Link href="/areas/haifa-general/towing-stuck-vehicle-road-22-haifa" className="text-blue-400">גרירת רכב בכביש 22</Link>.</p>
+            <h3 className="font-bold text-white">אילו סוגי כלים אתם גוררים?</h3>
+            <p>אנו מתמחים ברכבים פרטיים, רכבים מסחריים ואופנועים. לצורך עבודה באזורים אחרים כגון הצ\"ק פוסט, אנו מציעים <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-400">גרירת רכבים תקולים בצ\"ק פוסט</Link>.</p>
           </div>
           <div>
-            <h3 className="font-bold text-white">האם אתם רוכשים רכבים תקולים?</h3>
-            <p>בהחלט. אם התיקון לא כלכלי, אנו מבצעים <Link href="/areas/haifa-general/pinui-rechev-grotah-grira-check-post-haifa-krayot-lechalafim" className="text-blue-400">פינוי וקניית רכבים לפירוק בצ'ק פוסט</Link> במחיר הוגן.</p>
+            <h3 className="font-bold text-white">האם אתם מציעים שירותי פינוי גרוטאות?</h3>
+            <p>בהחלט. אם הרכב אינו בר תיקון כלכלי, אנו מבצעים <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-400">קניית רכבים לפירוק בחיפה והקריות</Link> כולל גרירה מיידית.</p>
           </div>
         </div>
       </section>

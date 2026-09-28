@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב מהבוץ ביער הכרמל | הגעה מהירה 24/7 - מחיר הוגן",
-  description: "נתקעתם בבוץ ביער הכרמל? שירות חילוץ מקצועי, מהיר וזול. הגעה תוך 30 דקות לכל רכב ששקע בשטח. פועלים 24/7. התקשרו עכשיו לחילוץ בטוח!",
+  title: "חילוץ רכב מהבוץ ביער הכרמל | הגעה תוך 30 דקות | 24/7",
+  description: "נתקעתם בבוץ ביער הכרמל? שירות חילוץ מקצועי ומהיר לכל רכב ששקע בשטח. הגעה תוך 30 דקות, מחיר הוגן ושירות 24/7. התקשרו עכשיו לחילוץ בטוח!",
   alternates: {
     canonical: "/areas/haifa-general/car-stuck-in-mud-rescue-carmel-forest-haifa",
   },
@@ -37,7 +37,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">חילוץ רכב שקוע בבוץ ביער הכרמל חיפה</h1>
-          <p className="text-xl md:text-2xl mb-6">תקועים בשטח? הגעה מהירה לחילוץ רכב מבוץ ביער הכרמל והסביבה 24/7.</p>
+          <p className="text-xl md:text-2xl mb-6">תקועים בשטח? הגעה מהירה לחילוץ רכב מבוץ ביער הכרמל ובסביבה 24 שעות ביממה.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <WhatsAppCTA cityName="חיפה והכרמל" />
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out text-lg">
@@ -51,7 +51,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">שירותי חילוץ רכבים מבוץ - זמינות מלאה</h2>
           <p className="mb-6 text-lg leading-relaxed">
-            יער הכרמל הוא אזור מרהיב, אך הבוץ יכול להפתיע גם נהגים מנוסים. אם הרכב שלכם שקע, הימנעו מניסיונות יציאה שיגרמו נזק לצמיגים או לגיר. אנו מציעים שירות חילוץ מהיר באזור. אם אתם זקוקים לחילוץ מורכב יותר, ראו את השירות שלנו ל-<Link href="/areas/haifa-general/urgent-mud-rescue-4x4-towing-carmel-forest-trails-haifa" className="text-blue-400 hover:underline">חילוץ 4x4 ורכבי שטח ביער הכרמל</Link>. בנוסף, אם אתם קרובים לאזור האוניברסיטה, אנו מספקים גם מענה מסוג <Link href="/areas/haifa-general/suv-stuck-in-mud-rescue-haifa-university" className="text-blue-400 hover:underline">חילוץ רכבי שטח באזור אוניברסיטת חיפה</Link>.
+            יער הכרמל הוא אזור מרהיב, אך הבוץ יכול להפתיע גם נהגים מנוסים. אם הרכב שלכם שקע, הימנעו מניסיונות יציאה שיגרמו נזק לצמיגים או לגיר. אנו מציעים שירות חילוץ מהיר באזור. אם אתם זקוקים לחילוץ מורכב יותר, ראו את השירות שלנו ל-<Link href="/areas/haifa-general/4x4-mud-recovery-carmel-haifa" className="text-blue-400 hover:underline">חילוץ 4x4 ורכבי שטח ביער הכרמל</Link>. בנוסף, אם אתם קרובים לאזור האוניברסיטה, אנו מספקים גם מענה מסוג <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university" className="text-blue-400 hover:underline">חילוץ רכבי שטח באזור אוניברסיטת חיפה</Link>.
           </p>
 
           <h3 className="text-2xl font-bold mb-6 mt-10">למה לבחור בשירות שלנו?</h3>

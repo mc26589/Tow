@@ -4,8 +4,8 @@ import { WhatsAppCTA } from '@/components/whatsapp-cta';
 import { BUSINESS_INFO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: "גרר בצומת צ'ק פוסט חיפה 24/7 | הגעה תוך 30 דקות - מחיר הוגן",
-  description: "נתקעתם בצומת צ'ק פוסט? גרר מפרץ אקספרס מספק שירותי גרירה וחילוץ תאונות 24/7. הגעה מהירה ומחיר הוגן לכל סוגי הרכבים. התקשרו עכשיו!",
+  title: "גרר בצומת צ'ק פוסט חיפה 24/7 | הגעה תוך 30 דקות",
+  description: "נתקעתם בצומת צ'ק פוסט? גרר מפרץ אקספרס מספק שירותי גרירה וחילוץ תאונות 24/7. הגעה מהירה, מקצועית ובמחיר הוגן. התקשרו עכשיו לקבלת סיוע!",
   alternates: {
     canonical: "https://www.towingrescuehaifa.co.il/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa",
   },
@@ -41,16 +41,17 @@ export default function Page() {
       <section className="container mx-auto p-4 py-12">
         <p className="text-lg mb-4 leading-relaxed font-rubik text-gray-800">
           נתקעתם עם הרכב בצומת העמוס בחיפה? ב-גרר מפרץ אקספרס אנו מספקים מענה מיידי למקרים של תאונות דרכים בכביש 4, תקלות מנוע או פנצ'רים בצומת צ'ק פוסט. אם אתם זקוקים ל- 
-          <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה משתלמים בצ'ק פוסט</Link> או נתקעתם בדרכים, הצוות שלנו ערוך לכל קריאה 24/7. אנו מנוסים מאוד בחילוץ רכבים מנתיבים עמוסים לאחר תאונות. לתשומת לבכם, אנו מתמחים ברכבים פרטיים ומסחריים ואיננו מספקים שירותי גרירה לאופנועים.
+          <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">שירותי גרירה משתלמים בצ'ק פוסט</Link> או נתקעתם בדרכים, הצוות שלנו ערוך לכל קריאה 24/7. אנו מנוסים מאוד ב- 
+          <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="text-blue-600 underline">חילוץ רכבים מתעלות בכביש 4</Link> ועמוסים לאחר תאונות. לתשומת לבכם, אנו מתמחים ברכבים פרטיים ומסחריים ואיננו מספקים שירותי גרירה לאופנועים.
         </p>
 
         <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm mb-6">
           <h2 className="text-2xl font-bold mb-4 text-blue-800">למה לבחור בגרר מפרץ אקספרס בצ'ק פוסט?</h2>
           <ul className="list-disc list-inside space-y-3 text-gray-700">
             <li><strong>זמינות 24/7:</strong> פריסה רחבה בחיפה, כולל שירות גרירה מהיר.</li>
-            <li><strong>מחירים הוגנים:</strong> אנו מציעים את הפתרון המשתלם ביותר ל- <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-600 underline">גרירה זולה בצ'ק פוסט</Link>.</li>
-            <li><strong>חילוץ מורכב:</strong> מומחים ב- <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-600 underline">גרירת רכבים באזור קריות וחיפה</Link>.</li>
-            <li><strong>ניסיון רב:</strong> אנו מספקים גם שירותי <Link href="/areas/haifa-general/scrap-cars-haifa-krayot-immediate-removal" className="text-blue-600 underline">פינוי רכבים לפירוק בצ'ק פוסט</Link> במזומן.</li>
+            <li><strong>מחירים הוגנים:</strong> אנו מציעים את הפתרון המשתלם ביותר ל- <Link href="/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7" className="text-blue-600 underline">גרירה זולה באזור חיפה והקריות</Link>.</li>
+            <li><strong>חילוץ מורכב:</strong> מומחים ב- <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירת רכבים מסחריים וקלים</Link> בצירים ראשיים.</li>
+            <li><strong>ניסיון רב:</strong> אנו מספקים גם שירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-600 underline">פינוי רכבים לפירוק בצ'ק פוסט</Link> במזומן.</li>
           </ul>
         </div>
 
@@ -63,7 +64,7 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold text-lg">האם אתם נותנים שירות גם במקרים של רכב חשמלי תקוע?</h3>
-              <p className="text-gray-700">בהחלט. אנו מציעים שירות מותאם הכולל <Link href="/areas/haifa-general/emergency-towing-electric-car-route-22-krayot" className="text-blue-600 underline">גרירת רכבים חשמליים בצפון</Link> בצורה בטוחה ומקצועית.</p>
+              <p className="text-gray-700">בהחלט. אנו מציעים שירות מותאם הכולל גרירת רכבים חשמליים בצורה בטוחה ומקצועית לכל מוסך מורשה שתבחרו.</p>
             </div>
           </div>
         </div>

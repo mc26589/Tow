@@ -6,7 +6,7 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "גרירה בכביש 22 וקריות | הגעה מהירה עד 30 דקות | 24/7",
-  description: "נתקעתם בכביש 22? שירותי גרירה וחילוץ מקצועיים לרכבים בקריות ובצ'ק פוסט. זמינות 24/7 במחיר הוגן ושירות מהיר. התקשרו עכשיו לפתרון מיידי!",
+  description: "נתקעתם בכביש 22? אנו מציעים שירותי גרירה וחילוץ מקצועיים לרכבים בקריות ובצ'ק פוסט. זמינות 24/7 במחיר הוגן ושירות מהיר. התקשרו עכשיו לפתרון מיידי!",
   alternates: {
     canonical: "https://yourdomain.com/areas/haifa-general/sherutei-grira-hilutz-krayot-kavish-22",
   },
@@ -38,7 +38,7 @@ export default function Page() {
             גרירה וחילוץ רכבים בכביש 22 וקריות - שירות מקצועי 24/7
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-            נתקעתם עם רכב פרטי או מסחרי בכביש 22? אנו כאן לחלץ אתכם בבטחה. אנו מספקים מענה מהיר למי שמחפש <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="underline text-yellow-300">שירותי גרירה בצומת הצ'ק פוסט</Link> או <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="underline text-yellow-300">גרירת רכב חשמלי בקריות</Link>. שימו לב: השירות אינו כולל גרירת אופנועים.
+            נתקעתם עם רכב פרטי או מסחרי בכביש 22? אנו כאן לחלץ אתכם בבטחה. אנו מספקים מענה מהיר למי שמחפש <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="underline text-yellow-300">שירותי גרירה בצומת הצ'ק פוסט</Link> או <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="underline text-yellow-300">גרירת רכבים קלים בכביש 22</Link>. שימו לב: השירות אינו כולל גרירת אופנועים.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-yellow-400 text-gray-900 px-8 py-3 rounded-full text-lg font-semibold hover:bg-yellow-500">
@@ -55,15 +55,15 @@ export default function Page() {
           <div className="max-w-3xl mx-auto space-y-6">
             <div>
               <h3 className="text-xl font-bold text-yellow-400">תוך כמה זמן תגיעו לחלץ אותי בכביש 22?</h3>
-              <p>הזמינות שלנו 24/7 מאפשרת לנו להגיע לכל נקודה בכביש 22 בזמן קצר. אם מדובר בתקלה פשוטה כגון פנצ'ר, תוכלו להיעזר ב<Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-400">שירותי גרירה ותיקון תקר בכביש 22</Link>.</p>
+              <p>הזמינות שלנו 24/7 מאפשרת לנו להגיע לכל נקודה בכביש 22 בזמן קצר. אם מדובר בתקלה פשוטה כגון פנצ'ר, תוכלו להיעזר ב<Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-400">שירותי גרירת רכב תקוע בצ'ק פוסט</Link>.</p>
             </div>
             <div>
               <h3 className="text-xl font-bold text-yellow-400">האם אתם קונים רכבים תקועים לפירוק?</h3>
-              <p>בהחלט. אם הרכב אינו בר תיקון, נשמח לסייע ב<Link href="/areas/haifa-general/buy-cars-for-scrap-check-post-haifa" className="text-blue-400">פינוי רכבים לפירוק בצ'ק פוסט</Link> או באזור הקריות באופן מיידי.</p>
+              <p>בהחלט. אם הרכב אינו בר תיקון, נשמח לסייע ב<Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-400">פינוי רכבים לפירוק באזור הקריות</Link> באופן מיידי ובמחיר הוגן.</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-yellow-400">האם אתם נותנים שירות גם במחלפים הסמוכים?</h3>
-              <p>כן, אנו נותנים מענה מלא הכולל <Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="text-blue-400">גרירת חירום במחלף קרית אתא</Link> וסביבתה לכל סוגי הרכבים הפרטיים.</p>
+              <h3 className="text-xl font-bold text-yellow-400">האם אתם מציעים שירותי חילוץ נוספים בקריות?</h3>
+              <p>כן, אנו נותנים מענה מלא הכולל <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-400">גרירת חירום זולה בקרית ביאליק</Link> וכן סיוע ב<Link href="/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7" className="text-blue-400">שירותי גרירה בקרית מוצקין 24/7</Link> לכל סוגי הרכבים הפרטיים והמסחריים.</p>
             </div>
           </div>
         </div>

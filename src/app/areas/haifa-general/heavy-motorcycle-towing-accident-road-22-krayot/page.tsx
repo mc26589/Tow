@@ -4,7 +4,7 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר לרכב בכביש 22 (עוקף קריות) - שירות מהיר תוך 30 דקות",
+  title: "גרר בכביש 22 (עוקף קריות) - הגעה תוך 30 דקות | 24/7",
   description: "נתקעתם בכביש 22? שירות גרר מקצועי 24/7 לכל סוגי הרכבים באזור הקריות וחיפה. מחיר הוגן ושירות מהיר. התקשרו עכשיו לסיוע!",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-accident-road-22-krayot",
@@ -23,8 +23,8 @@ export default function Page() {
       },
       {
         "@type": "Question",
-        "name": "האם אתם מספקים שירותי גרירה לאופנועים בכביש 22?",
-        "acceptedAnswer": { "@type": "Answer", "text": "אנו לא מספקים שירותי גרירה לאופנועים, אלא מתמחים בחילוץ וגרירת רכבים פרטיים, מסחריים ורכבי שטח." }
+        "name": "האם אתם מספקים שירותי גרירה לרכבים בכביש 22?",
+        "acceptedAnswer": { "@type": "Answer", "text": "כן, אנו מתמחים בחילוץ וגרירת רכבים פרטיים, מסחריים ורכבי שטח. לתשומת לבכם, איננו מסיעים אופנועים." }
       },
       {
         "@type": "Question",
@@ -52,12 +52,12 @@ export default function Page() {
 
       <section className="py-12 bg-gray-900 text-white">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-2xl font-bold mb-4">שירותי חילוץ מקצועיים בכביש 22</h2>
+          <h2 className="text-2xl font-bold mb-4">שירותי חילוץ ותמיכה בכביש 22</h2>
           <p className="mb-4">
-            כביש 22 הוא עורק תחבורה מרכזי. אם נתקעתם בדרך, מומלץ לבדוק את שירותי ה-<Link href="/areas/haifa-general/towing-road-22-krayot-bypass" className="text-blue-400">גרירה בכביש 22 עוקף קריות</Link> שלנו. אנו מציעים גם <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-400">שירותי גרירה לאחר תאונה בדרך 22 חיפה-קריית אתא</Link> באופן מיידי.
+            כביש 22 הוא עורק תחבורה מרכזי. אם נתקעתם בדרך, אנו מציעים מענה מיידי הכולל <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-400">גרירת רכבים באזור הצ'ק פוסט וחיפה</Link>. עבור משאיות קלות, ניתן להיעזר ב-<Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-400">שירותי חילוץ משאיות קלות בעוקף קריות</Link>.
           </p>
           <p className="mb-4">
-            למי שמחפש פתרונות נוספים באזור, אנו מפעילים גם <Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="text-blue-400">גרירת משטח במחיר משתלם באזור כביש 22</Link>, ומספקים מענה מהיר ב-<Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-400">חילוץ מהיר עקב פנצ\'ר בכביש 22 צ\'ק פוסט</Link>.
+            אנו מספקים פתרונות נוספים לאזור, לרבות <Link href="/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7" className="text-blue-400">שירותי גרירה בקרית מוצקין</Link> וכן <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-400">גרירת רכבים זולה בקרית ביאליק</Link>. הצוות שלנו זמין לסיוע טכני ותפעולי בכל שעה.
           </p>
           <p className="text-sm text-gray-400 italic">*לתשומת לבכם: איננו מספקים שירותי גרירה לאופנועים בכל אזור הפעילות.</p>
         </div>

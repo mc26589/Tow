@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב מהבוץ באוניברסיטת חיפה | 24/7 הגעה מהירה",
-  description: "נתקעתם בבוץ ליד אוניברסיטת חיפה? שירות חילוץ מקצועי לרכבים פרטיים ושטח 24/7. הגעה מהירה, ציוד מתקדם ומחיר הוגן. התקשרו עכשיו לחילוץ בטוח!",
+  title: "חילוץ רכב מהבוץ באוניברסיטת חיפה | הגעה מהירה 24/7",
+  description: "נתקעתם בבוץ באזור אוניברסיטת חיפה? חילוץ רכב מקצועי ומהיר לכל סוגי הרכבים. מחיר הוגן, ציוד חילוץ מתקדם וזמינות סביב השעון. התקשרו עכשיו לחילוץ בטוח!",
   alternates: {
     canonical: "/areas/haifa-general/suv-stuck-in-mud-rescue-haifa-university",
   },
@@ -17,7 +17,7 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי חילוץ וגרירה חיפה והקריות",
     "areaServed": "Haifa and Krayot",
-    "priceRange": "$$$",
+    "priceRange": "$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -43,7 +43,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">חילוץ רכב שטח תקוע בבוץ באזור אוניברסיטת חיפה</h1>
           <p className="text-xl mb-8 leading-relaxed">
-            נתקעתם עם הרכב בדרכי העפר סביב אוניברסיטת חיפה? אנו מתמחים בחילוץ רכבים ששקעו בבוץ בתוואי השטח המורכב של הכרמל. הצוות שלנו זמין בכל ימות השבוע להגעה מהירה. צריכים עזרה נוספת בקרבת מקום? ניתן לפנות גם לשירות <Link href="/areas/haifa-general/off-road-mud-rescue-carmel-private-car" className="underline font-bold">חילוץ רכב מבוץ באזור הכרמל</Link> או לשירותי גרירה מקצועיים ב-<Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles" className="underline font-bold">שכונת אחוזה הסמוכה</Link>.
+            נתקעתם עם הרכב בדרכי העפר סביב אוניברסיטת חיפה? אנו מתמחים ב-<Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university" className="underline font-bold">חילוץ רכב שטח תקוע בבוץ באזור הכרמל</Link>. הצוות שלנו זמין בכל ימות השבוע להגעה מהירה. צריכים עזרה נוספת בקרבת מקום? ניתן לפנות גם לשירות <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-haifa" className="underline font-bold">חילוץ רכב מבוץ באזור הכרמל</Link> או לשירותי גרירה מקצועיים ב-<Link href="/areas/haifa-general/towing-service-heavy-motorcycle-breakdown-ahuzah-haifa" className="underline font-bold">שכונת אחוזה הסמוכה</Link>.
           </p>
           <div className="flex flex-wrap gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -61,7 +61,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ באזור חיפה?</h2>
           <ul className="space-y-4 text-lg mb-8">
-            <li>✓ זמינות מלאה 24 שעות ביממה, כולל בסופי השבוע וחגים באזור האוניברסיטה.</li>
+            <li>✓ זמינות מלאה 24 שעות ביממה, כולל בסוף השבוע וחגים באזור האוניברסיטה.</li>
             <li>✓ ציוד חילוץ טכני מתקדם לרכבי 4x4 ורכבים פרטיים.</li>
             <li>✓ שקיפות מלאה במחיר - מחיר הוגן לכל קריאה.</li>
             <li>✓ היכרות עמוקה עם נתיבי הגישה והיערות הסמוכים לחיפה.</li>
@@ -76,11 +76,7 @@ export default function Page() {
               </div>
               <div>
                 <h4 className="font-bold text-lg">האם ניתן להזמין חילוץ גם אם הרכב לא רכב שטח?</h4>
-                <p className="text-gray-300">בהחלט. אנו מחלצים רכבים פרטיים ורכבים מסחריים שנכנסו בטעות לבוץ. אם נתקעתם בדרך עפר, אנחנו כאן לעזור.</p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg">האם אתם מחלצים גם אופנועים באזור הכרמל?</h4>
-                <p className="text-gray-300">חשוב להבהיר - השירות שלנו מתמקד בחילוץ רכבים בלבד (רכבים פרטיים, רכבי שטח ורכבים מסחריים). אין אנו מבצעים חילוץ אופנועים בכל אזור חיפה.</p>
+                <p className="text-gray-300">בהחלט. אנו מחלצים רכבים פרטיים ורכבים מסחריים שנכנסו לבוץ. למידע נוסף על מקרים דחופים בצירי תנועה מרכזיים, ניתן לבדוק <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="underline">חילוץ רכב מתעלה בדרך 4</Link>.</p>
               </div>
             </div>
           </div>

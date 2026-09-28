@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב תקוע בבוץ בכרמל | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם בבוץ באזור הכרמל? שירות חילוץ רכב מקצועי עם ציוד שטח מתקדם. פועלים 24/7, הגעה תוך 30 דקות. התקשרו עכשיו לחילוץ בטוח ומקצועי!",
+  title: "חילוץ רכב תקוע בבוץ בכרמל | הגעה תוך 30 דקות | 24/7",
+  description: "נתקעתם בבוץ באזור הכרמל? שירות חילוץ רכב מקצועי עם ציוד שטח מתקדם. פועלים 24/7, הגעה מהירה במחיר הוגן. התקשרו עכשיו לחילוץ בטוח!",
   alternates: {
     canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-area",
   },
@@ -33,7 +33,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב תקוע בבוץ באזור הכרמל – הגעה מהירה 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם בבוץ בדרכי העפר של הכרמל? הצוות שלנו מומחה בחילוצי שטח ומגיע אליכם עם ציוד כננות מתקדם.</p>
+          <p className="text-xl mb-8">נתקעתם בדרכי העפר או בשטחים בוציים בכרמל? הצוות שלנו מומחה בחילוצי שטח ומגיע אליכם עם ציוד כננות מתקדם.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="הכרמל וחיפה" />
             <a 
@@ -49,7 +49,7 @@ export default function Page() {
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-6">זקוקים לחילוץ רכב שנתקע בבוץ באזור הכרמל?</h2>
         <p className="mb-4">
-          אם הרכב שלכם שקע בבוץ בדרכי העפר של הכרמל, אל תנסו להמשיך ללחוץ על הגז כדי לא לגרום לנזק נוסף. אנו מציעים שירות <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-danya" className="text-blue-400 underline">חילוץ שטח בכרמל ובדניה</Link> ומספקים פתרונות מקצועיים לכל סוגי הרכבים. למי שמחפש פתרונות נוספים באזור הכרמל והסביבה, אנו זמינים לכל קריאה.
+          אם הרכב שלכם שקע בבוץ בדרכי העפר של הכרמל, אל תנסו להמשיך ללחוץ על הגז כדי לא לגרום לנזק נוסף. אנו מציעים שירות <Link href="/areas/haifa-general/mud-rescue-4x4-stuck-carmel-forest-haifa-university" className="text-blue-400 underline">חילוץ 4x4 בכרמל</Link> ומספקים פתרונות מקצועיים לכל סוגי הרכבים. למי שמחפש פתרונות חילוץ באזור, אנו זמינים לכל קריאה, כולל <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university" className="text-blue-400 underline">חילוץ ליד אוניברסיטת חיפה</Link>.
         </p>
         
         <h3 className="text-2xl font-semibold mt-8 mb-4">למה לבחור בנו?</h3>
@@ -70,16 +70,10 @@ export default function Page() {
             <div>
               <p className="font-bold">אילו עוד שירותים אתם מספקים באזור?</p>
               <p className="text-neutral-400">
-                בנוסף לחילוצי בוץ, אנו מציעים <Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles" className="text-blue-400 underline">שירותי גרירה וחילוץ באחוזה</Link> וכן שירותי פינוי גרוטאות כגון <Link href="/areas/haifa-general/scrap-cars-haifa-krayot-immediate-removal" className="text-blue-400 underline">פינוי רכבים לפירוק בחיפה והקריות</Link>.
+                בנוסף לחילוצי בוץ, אנו מציעים <Link href="/areas/haifa-general/towing-service-heavy-motorcycle-breakdown-ahuzah-haifa" className="text-blue-400 underline">שירותי גרירה באחוזה</Link> וכן שירותי פינוי רכבים לפירוק כגון <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-400 underline">פינוי רכבים גרוטאות בחיפה</Link>.
               </p>
             </div>
           </div>
-        </div>
-
-        <div className="mt-8 p-6 rounded-xl border border-neutral-800">
-          <p className="text-sm text-neutral-400">
-            <strong>הערה חשובה:</strong> אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח. במקרה של רכב ישן שאינו שווה תיקון, ניתן לבדוק אפשרות ל-<Link href="/areas/haifa-general/buy-old-cars-for-scrap-kiryat-yam" className="text-blue-400 underline">מכירת רכב ישן לפירוק בקרית ים</Link>.
-          </p>
         </div>
       </section>
     </main>

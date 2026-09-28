@@ -49,10 +49,10 @@ export default function Page() {
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">פינוי רכבים לפירוק בחיפה – פתרון מקצועי ומיידי</h2>
         <p className="mb-4">
-          אם הרכב שלכם אינו נוסע, עבר תאונה או שפשוט הגיע הזמן להיפרד ממנו, אנו הכתובת שלכם. אנו מתמחים בפינוי רכבים פרטיים ומסחריים. אם אתם מחפשים <Link href="/areas/haifa-general/buying-cars-for-scrap-haifa-krayot" className="text-blue-600 font-bold underline">קניית רכבים לפירוק בחיפה והקריות</Link>, אנו מציעים מענה מהיר. באזור הצפון אנו מספקים פתרונות גרירה ופינוי לרבות <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 font-bold underline">גרירה לאחר תאונה בכביש 22</Link>.
+          אם הרכב שלכם אינו נוסע, עבר תאונה או שפשוט הגיע הזמן להיפרד ממנו, אנו הכתובת שלכם. אנו מתמחים בפינוי רכבים פרטיים ומסחריים. אם אתם מחפשים <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-600 font-bold underline">קניית רכבים לפירוק בחיפה והקריות</Link>, אנו מציעים מענה מהיר. באזור הצפון אנו מספקים פתרונות גרירה ופינוי, כולל <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-600 font-bold underline">שירותי חילוץ לאחר תאונה בצומת צ\'ק פוסט</Link>.
         </p>
         <p className="mb-4">
-          ללקוחות המחפשים שירות באזורים נוספים, אנו מבצעים גם <Link href="/areas/haifa-general/scrap-car-removal-kiryat-haim-cash" className="text-blue-600 font-bold underline">פינוי גרוטאות רכב בקרית חיים במזומן</Link> עם פינוי מיידי. בנוסף, אנו מספקים פתרונות למי שמחפש <Link href="/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal" className="text-blue-600 font-bold underline">קניית רכבים לפירוק בקרית ביאליק</Link>. איננו מטפלים באופנועים, אך נשמח לסייע לבעלי רכבים הזקוקים לשירותי <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-600 font-bold underline">גרירה בצירים המרכזיים</Link>.
+          ללקוחות המחפשים שירות באזורים נוספים, אנו מבצעים גם <Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="text-blue-600 font-bold underline">פינוי רכבים לפירוק בקרית מוצקין</Link> עם פינוי מיידי. בנוסף, אנו מספקים פתרונות למי שמחפש <Link href="/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-rothschild" className="text-blue-600 font-bold underline">קניית רכבים לפירוק בקרית ים</Link>. אם נתקעתם באזור הררי, אנו מציעים גם פתרונות גרירה כמו <Link href="/areas/haifa-general/towing-service-heavy-motorcycle-breakdown-ahuzah-haifa" className="text-blue-600 font-bold underline">גרירת רכב בשכונת אחוזה בחיפה</Link>.
         </p>
 
         <div className="bg-gray-100 p-6 rounded-xl mt-8">
@@ -64,11 +64,11 @@ export default function Page() {
             </div>
             <div>
               <p className="font-bold">מהו טווח המחירים לרכב לפירוק?</p>
-              <p>המחיר נקבע בהתאם למצב הרכב, סוגו והיכולת שלנו להפיק ממנו חלפים. אנו מציעים מחירים הוגנים ומשלמים במזומן במקום ללא עיכובים.</p>
+              <p>המחיר נקבע בהתאם למצב הרכב, סוגו והיכולת שלנו להפיק ממנו חלפים. אנו מציעים מחירים הוגנים ומשלמים במזומן במקום ללא עיכובים. למידע נוסף על מחירי גרירה כלליים, ניתן לבדוק גם <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 font-bold underline">גרירה זולה בצ\'ק פוסט</Link>.</p>
             </div>
             <div>
-              <p className="font-bold">האם אתם מספקים גרירה למקומות נוספים?</p>
-              <p>בהחלט. אם נתקעתם באזור הצ\'ק פוסט, אנו מציעים גם <Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-600 font-bold underline">שירותי גרירה מהירים בצ\'ק פוסט</Link> לכל סוגי הרכבים הפרטיים והמסחריים.</p>
+              <p className="font-bold">באילו מקרים נוספים אתם מסייעים?</p>
+              <p>אנו מטפלים בכל סוגי הרכבים הפרטיים והמסחריים. במידה ונתקעתם בשטח, אנו מציעים שירותי <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-haifa" className="text-blue-600 font-bold underline">חילוץ רכבי 4x4 בחיפה</Link> במקצועיות ובמהירות.</p>
             </div>
           </div>
         </div>
