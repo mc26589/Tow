@@ -4,7 +4,7 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בצומת צ'ק פוסט | הגעה מהירה ב-30 דקות | 24/7",
+  title: "גרר בצומת צ'ק פוסט | הגעה מהירה תוך 30 דקות | 24/7",
   description: "נתקעתם בצומת צ'ק פוסט? גרר זול ומהיר לרכבים פרטיים ומסחריים. הגעה תוך 30 דקות לכל חיפה והקריות. זמינות 24/7 במחיר הוגן. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/cheap-towing-check-post-junction",
@@ -33,9 +33,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר זול בצומת צ'ק פוסט - זמינות מלאה 24/7</h1>
           <p className="text-xl mb-8">
-            זקוקים לשירותי גרירה דחופים בצומת צ'ק פוסט? אנו מתמחים בחילוץ רכבים ומתן <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="underline font-semibold">שירותי גרירה מקצועיים בצומת צ'ק פוסט והקריות</Link>. 
-            נתקעתם עם רכב מושבת? במידה והרכב הושבת כליל, ניתן גם לבדוק איתנו אפשרויות ל-<Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="underline font-semibold">מכירת רכבים לפירוק בצ'ק פוסט</Link>.
-            חשוב להדגיש: השירות מיועד לרכבים פרטיים ומסחריים בלבד (לא מספקים שירותי גרירה לאופנועים). מחירים הוגנים ושקיפות מלאה מובטחים.
+            זקוקים לשירותי גרירה דחופים בצומת צ'ק פוסט? אנו מציעים <Link href="/areas/haifa-general/cheap-towing-services-check-post" className="underline font-semibold">שירותי גרירה זולים בצ'ק פוסט</Link> לרכבים פרטיים ומסחריים. הגעה מהירה לכל אזור הצפון וחיפה. אם הרכב הושבת כליל, ניתן לבדוק איתנו גם אפשרויות ל-<Link href="/areas/haifa-general/cash-for-junk-cars-check-post-haifa" className="underline font-semibold">קניית רכבים לפירוק בצ'ק פוסט</Link> במזומן. חשוב לציין: השירות מיועד לרכבים בלבד ולא לאופנועים.
           </p>
           <div className="flex flex-col md:flex-row gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -54,24 +52,24 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בצומת צ'ק פוסט?</h2>
           <ul className="space-y-4 text-lg mb-8">
             <li>✓ זמינות מלאה 24 שעות ביממה, כולל חגים ושבתות.</li>
-            <li>✓ הגעה מהירה לכל נקודה בצומת צ'ק פוסט, כולל קרבה ל-<Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-400">כביש 22 (עוקף קריות)</Link>.</li>
-            <li>✓ מחיר זול, תחרותי והוגן - ללא עלויות נסתרות.</li>
-            <li>✓ שירות בטוח ומקצועי לרכבים תקועים כולל סיוע ב-<Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-400">גרירת רכבים לאחר תאונה בכביש 22</Link>.</li>
+            <li>✓ הגעה מהירה לכל נקודה בצומת צ'ק פוסט, כולל קרבה ל-<Link href="/areas/haifa-general/towing-road-22-krayot-bypass" className="text-blue-400">כביש 22 (עוקף קריות)</Link>.</li>
+            <li>✓ מחיר זול, תחרותי והוגן ללא עלויות נסתרות.</li>
+            <li>✓ שירות מקצועי ומיומן גם לתושבי האזור המחפשים <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-400">גרר זול בקרית ביאליק</Link> או <Link href="/areas/haifa-general/cheap-towing-kiryat-motzkin-fair-price" className="text-blue-400">גרר בקרית מוצקין</Link>.</li>
           </ul>
 
           <h3 className="text-2xl font-bold mb-4 mt-8">שאלות נפוצות</h3>
           <div className="space-y-6">
             <div>
               <h4 className="font-bold">מהו זמן ההגעה הממוצע לגרר בצומת צ'ק פוסט?</h4>
-              <p>אנו ממוקמים במיקום אסטרטגי המאפשר הגעה לרוב הקריאות בצומת צ'ק פוסט והסביבה תוך 20-30 דקות.</p>
+              <p>אנו ממוקמים במיקום אסטרטגי המאפשר הגעה לרוב הקריאות בצומת צ'ק פוסט והסביבה תוך 20 עד 30 דקות.</p>
             </div>
             <div>
               <h4 className="font-bold">האם אתם גוררים רכבים מכל הסוגים?</h4>
               <p>אנו גוררים רכבים פרטיים, רכבי שטח ורכבים מסחריים קלים. השירות אינו כולל גרירת אופנועים.</p>
             </div>
             <div>
-              <h4 className="font-bold">מהו טווח המחירים לגרירה בצ'ק פוסט?</h4>
-              <p>אנו מתחייבים למחיר הוגן ותחרותי המותאם למרחק הנסיעה ולאופי התקלה. ניתן ליצור קשר לקבלת הצעת מחיר מדויקת ללא הפתעות.</p>
+              <h4 className="font-bold">האם אתם מספקים שירותי גרירה גם לאחר תאונה?</h4>
+              <p>כן, אנו מנוסים מאוד בפינוי רכבים לאחר תאונות דרכים, כולל סיוע בצירי תנועה עמוסים כמו כביש 22.</p>
             </div>
           </div>
         </div>

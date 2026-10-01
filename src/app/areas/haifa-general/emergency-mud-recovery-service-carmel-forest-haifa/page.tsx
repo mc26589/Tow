@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "חילוץ בוץ ביערות הכרמל | חילוץ רכב תקוע 24/7 | מחיר הוגן",
-  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ מקצועי ומהיר לכל סוגי הרכבים. זמינות 24/7, מחיר הוגן והגעה מהירה לכל אזור בכרמל. התקשרו עכשיו לחילוץ מיידי!",
+  title: "חילוץ בוץ ביערות הכרמל | חילוץ מהיר 24/7 | הגעה מיידית",
+  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ מקצועי לרכב תקוע, 4x4 ופרטי. זמינות 24/7, מחיר הוגן והגעה מהירה לכל אזור בכרמל. התקשרו עכשיו לחילוץ מיידי!",
   alternates: {
     canonical: "/areas/haifa-general/emergency-mud-recovery-service-carmel-forest-haifa"
   }
@@ -17,7 +17,7 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי חילוץ וגרירה חיפה והקריות",
     "areaServed": "Haifa and Carmel",
-    "priceRange": "$$$,$$",
+    "priceRange": "מחיר הוגן",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -41,7 +41,7 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">חילוץ בוץ דחוף ביערות הכרמל חיפה</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">חילוץ בוץ דחוף ביערות הכרמל ובאזור חיפה</h1>
           <p className="text-xl mb-8">נתקעתם בבוץ בדרכי העפר? צוות חילוץ מקצועי בדרך אליכם לחילוץ מהיר, בטוח ובמחיר הוגן.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="חיפה והכרמל" />
@@ -58,25 +58,25 @@ export default function Page() {
       <section className="container mx-auto px-4 py-16">
         <div className="prose prose-invert max-w-3xl mx-auto">
           <h2>חילוץ רכבים תקועים בבוץ ביערות הכרמל</h2>
-          <p>נתקעתם בבוץ באחת מדרכי העפר של יערות הכרמל? אל תנסו "לחפור" ולסכן את הרכב. אנו מספקים שירותי חילוץ שטח מקצועי ומהיר לכל סוגי הרכבים. הצוות שלנו מיומן בחילוץ <Link href="/areas/haifa-general/off-road-mud-rescue-carmel-private-car">חילוץ רכב תקוע בבוץ ביערות הכרמל</Link> ומכיר היטב את תנאי השטח הייחודיים של חיפה והסביבה.</p>
+          <p>נתקעתם בבוץ באחת מדרכי העפר של יערות הכרמל? אל תנסו "לחפור" ולסכן את הרכב. אנו מספקים שירותי חילוץ שטח מקצועי לכל סוגי הרכבים. הצוות שלנו מיומן בחילוץ <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region">רכב תקוע בבוץ באזור הכרמל</Link> ומכיר היטב את תנאי השטח של <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-haifa-university">חילוץ שטח באזור אוניברסיטת חיפה</Link> והסביבה.</p>
           
           <h3>למה לבחור בנו לחילוץ בשטח?</h3>
           <ul>
             <li><strong>זמינות 24/7:</strong> חילוץ בכל שעה, כולל סוף השבוע וחגים.</li>
-            <li><strong>ציוד מקצועי:</strong> שימוש בכננות מתקדמות ורכבי שטח חזקים.</li>
-            <li><strong>מומחיות מקומית:</strong> הכרה מעמיקה של אזורי חילוץ מורכבים.</li>
+            <li><strong>ציוד מקצועי:</strong> שימוש בכננות מתקדמות ורכבי חילוץ ייעודיים.</li>
+            <li><strong>מומחיות מקומית:</strong> הכרה מעמיקה של אזורי חילוץ מורכבים בכרמל.</li>
             <li><strong>מחיר הוגן:</strong> שירות מקצועי ללא הפתעות במחיר משתלם.</li>
           </ul>
 
           <div className="mt-12">
             <h3>שאלות נפוצות</h3>
-            <p><strong>כמה זמן לוקח לכם להגיע ליערות הכרמל?</strong> בזכות צוותים זמינים בחיפה והסביבה, אנו עושים מאמץ להגיע במהירות המרבית לכל נקודה בשטח.</p>
-            <p><strong>האם אתם מחלצים רכבים ששקעו עמוק בבוץ?</strong> כן, אנו ערוכים לחילוץ רכבים פרטיים ומסחריים ששקעו בבוץ. אנו מתמקדים בבטיחות הרכב שלכם.</p>
-            <p><strong>האם אתם מציעים גם גרירה?</strong> בהחלט. אם לאחר החילוץ הרכב זקוק לטיפול, נוכל לבצע גרירה מקצועית. למידע נוסף ניתן לבקר בעמוד <Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles">שירותי גרירה וחילוץ בחיפה</Link>.</p>
-            <p><strong>איך עובד תהליך החילוץ?</strong> פשוט מאוד: לחיצה על כפתור הוואטסאפ או חיוג טלפוני תפעיל אותנו מיידית.</p>
+            <p><strong>כמה זמן לוקח לכם להגיע ליערות הכרמל?</strong> בזכות צוותים זמינים בחיפה, אנו מגיעים במהירות לכל נקודה בשטח.</p>
+            <p><strong>האם אתם מחלצים רכבי 4x4?</strong> כן, אנו מתמחים ב<Link href="/areas/haifa-general/mud-rescue-4x4-stuck-carmel-forest-haifa-university">חילוץ רכבי 4x4 ששקעו בבוץ</Link> עמוק.</p>
+            <p><strong>מה עושים אם הרכב לא מניע לאחר החילוץ?</strong> במידת הצורך, נבצע גרירה מקצועית. למידע נוסף על גרירה באזור אחוזה ניתן לעיין ב<Link href="/areas/haifa-general/emergency-towing-horev-ahuza-haifa">שירותי גרירה בהורב ואחוזה</Link>.</p>
+            <p><strong>האם אתם מחלצים אופנועים?</strong> לא, השירות ניתן לרכבים פרטיים, מסחריים ורכבי שטח בלבד.</p>
           </div>
 
-          <p><em>הערה: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 בלבד. איננו מספקים שירותי חילוץ או גרירה לאופנועים.</em></p>
+          <p><em>הערה: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח. איננו מספקים שירותי חילוץ לאופנועים.</em></p>
         </div>
       </section>
     </main>

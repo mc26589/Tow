@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "חילוץ שטח 4x4 בבוץ ביערות הכרמל | הגעה תוך 30 דקות!",
-  description: "נתקעתם בבוץ ביערות הכרמל? צוות חילוץ 4x4 מקצועי בדרך אליכם! שירות מהיר, אמין ומחיר הוגן בכל אזור חיפה והצפון. התקשרו עכשיו לחילוץ מיידי!",
+  description: "נתקעתם עם רכב השטח בבוץ ביערות הכרמל? צוות חילוץ 4x4 מקצועי עם כננות בדרך אליכם! שירות מהיר, אמין ומחיר הוגן בכל אזור חיפה. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa"
   }
@@ -19,8 +19,8 @@ export default function Page() {
     "areaServed": { "@type": "City", "name": "Haifa" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "34.9896" },
-    "priceRange": "$",
-    "serviceType": "4x4 Mud Recovery and Towing"
+    "priceRange": "$$, $$$",
+    "serviceType": "4x4 Mud Recovery"
   };
 
   return (
@@ -33,7 +33,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">חילוץ שטח 4x4 בבוץ ביערות הכרמל: הגעה מהירה!</h1>
-          <p className="text-xl mb-8">נתקעתם בבוץ? אל תנסו להמשיך להילחם – צוות החילוץ שלנו עם כננות עוצמתיות בדרך אליכם. שירות מקצועי, מהיר ובטוח לרכבי שטח.</p>
+          <p className="text-xl mb-8">נתקעתם בבוץ? אל תנסו להמשיך להילחם – צוות החילוץ שלנו עם כננות עוצמתיות בדרך אליכם. שירות מקצועי לרכבי שטח ו-4x4 בפריסה ארצית באזור חיפה.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa" />
             <a 
@@ -49,31 +49,30 @@ export default function Page() {
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold mb-6">חילוץ 4x4 מקצועי ומיידי בתוואי השטח של הכרמל</h2>
         <p className="mb-4">
-          השטח של יערות הכרמל טומן בחובו סכנות לנהגים לא מנוסים. אם שקעתם בבוץ, אנו מספקים שירותי חילוץ מהירים. אנו מטפלים גם במקרים מורכבים יותר כמו <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-400 underline">חילוץ רכב מבוץ באזור הכרמל</Link> או צורך ב-<Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-400 underline">גרירה משתלמת מאזור הצ'ק פוסט</Link> במידה והרכב נפגע מהעומס.
+          השטח של יערות הכרמל טומן בחובו סכנות לנהגים. אם שקעתם, אנו מספקים שירותי <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-blue-400 underline">חילוץ רכב מבוץ באזור הכרמל</Link> במהירות. אנו מטפלים גם במקרים מורכבים יותר כמו <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-400 underline">חילוץ רכב מבוץ ביערות הכרמל ונס הר</Link> או צורך ב-<Link href="/areas/haifa-general/cheap-towing-services-check-post" className="text-blue-400 underline">גרירה משתלמת באזור הצ'ק פוסט</Link> במידה והרכב נפגע.
         </p>
         
         <h3 className="text-2xl font-semibold mt-8 mb-4">למה לבחור בנו לחילוץ שטח בכרמל?</h3>
         <ul className="list-disc list-inside space-y-2 mb-6">
-          <li>זמינות מלאה: חילוץ 24/7 לכל סוגי רכבי ה-4x4 והשטח.</li>
-          <li>ניסיון מקומי: הכרת השבילים והדרכים העוקפות של יערות הכרמל.</li>
-          <li>ציוד מתקדם: שימוש בכננות מקצועיות לחילוץ ללא נזק לשלדת הרכב.</li>
-          <li>שירות מקצועי: מענה מהיר גם בדרכים מבודדות.</li>
+          <li>זמינות מלאה: חילוץ 24/7 לכל סוגי רכבי ה-4x4.</li>
+          <li>ניסיון מקומי: הכרת השבילים של <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-haifa-university" className="text-blue-400 underline">יערות הכרמל ואוניברסיטת חיפה</Link>.</li>
+          <li>ציוד מתקדם: שימוש בכננות מקצועיות לחילוץ ללא נזק לשלדה.</li>
         </ul>
         
         <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-800 mt-10">
           <h4 className="text-xl font-bold mb-4">שאלות נפוצות על חילוצי שטח</h4>
           <div className="space-y-4">
             <div>
-              <p className="font-bold">תוך כמה זמן תגיעו לחלץ אותי ביערות הכרמל?</p>
-              <p className="text-neutral-400">אנו מתחייבים להגעה מהירה ככל הניתן, בדרך כלל תוך 30-60 דקות, בהתאם למיקום המדויק ולתנאי השטח.</p>
+              <p className="font-bold">תוך כמה זמן תגיעו לחלץ אותי?</p>
+              <p className="text-neutral-400">אנו מתחייבים להגעה מהירה, בדרך כלל תוך 30-60 דקות, בהתאם למיקום המדויק.</p>
             </div>
             <div>
-              <p className="font-bold">האם אתם מחלצים גם במקרים שנדרשת גרירה לאחר החילוץ?</p>
-              <p className="text-neutral-400">בהחלט. במידה והרכב ניזוק ולא ניתן להמשיך בנסיעה, אנו מספקים פתרונות גרירה מקצועיים, כולל ל-<Link href="/areas/haifa-general/urgent-towing-commercial-van-check-post-route-22" className="text-blue-400 underline">גרירת רכבים מסחריים באזור ציר 22</Link>.</p>
+              <p className="font-bold">האם אתם מבצעים גרירה במקרה של נזק?</p>
+              <p className="text-neutral-400">בהחלט. אנו מספקים פתרונות גרירה מקצועיים, כולל ל-<Link href="/areas/haifa-general/towing-road-22-krayot-bypass" className="text-blue-400 underline">גרירה בכביש 22 עוקף קריות</Link>.</p>
             </div>
             <div>
-              <p className="font-bold">האם השירות כולל חילוץ אופנועים?</p>
-              <p className="text-neutral-400">חשוב להבהיר: אנו מתמחים בחילוץ רכבי שטח (ג'יפים, טנדרים, רכבי 4x4) בלבד, ואיננו מבצעים חילוץ לאופנועים.</p>
+              <p className="font-bold">האם אתם מחלצים אופנועים בשטח?</p>
+              <p className="text-neutral-400">חשוב להבהיר: אנו מתמחים בחילוץ רכבי שטח, ג'יפים וטנדרים בלבד, ולא איננו מחלצים אופנועים.</p>
             </div>
           </div>
         </div>

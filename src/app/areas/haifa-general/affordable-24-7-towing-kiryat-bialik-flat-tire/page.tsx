@@ -43,7 +43,7 @@ export default function Page() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה 24/7 בקרית ביאליק: חילוץ מהיר ומקצועי</h1>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            זקוקים לחילוץ דחוף? אנו מציעים שירותי גרירה והחלפת גלגל בקרית ביאליק בכל שעה. זמינים לתת מענה מקצועי גם ב<Link href="/areas/haifa-general/fast-towing-road-22-krayot" className="underline font-semibold">כביש 22 עוקף קריות</Link>.
+            זקוקים לחילוץ דחוף? אנו מציעים שירותי גרירה והחלפת גלגל בקרית ביאליק בכל שעה. זמינים לתת מענה מהיר גם ב<Link href="/areas/haifa-general/towing-road-22-krayot-bypass" className="underline font-semibold">כביש 22 עוקף קריות</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="קרית ביאליק" />
@@ -62,9 +62,9 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לשירותי גרירה בקרית ביאליק?</h2>
           <ul className="space-y-4 text-lg mb-10">
             <li>✅ <strong>זמינות מלאה:</strong> שירות 24/7 לכל תושבי הקריות, כולל <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-600">שירותי גרירה זולים בקרית ביאליק</Link>.</li>
-            <li>✅ <strong>מומחיות בדרכים:</strong> מענה מהיר במקרי <Link href="/areas/haifa-general/emergency-roadside-assistance-flat-tire-route-22-kiryat-bialik" className="text-blue-600">סיוע בדרך ופנצ'ר בכביש 22</Link>.</li>
+            <li>✅ <strong>מומחיות בדרכים:</strong> מענה מקצועי לכל תקלה, כולל שירותים דומים ל<Link href="/areas/haifa-general/cheap-towing-kiryat-motzkin-fair-price" className="text-blue-600">גרירת רכב בקרית מוצקין במחיר הוגן</Link>.</li>
             <li>✅ <strong>מחיר הוגן:</strong> שקיפות מלאה והצעת מחיר נוחה ללא הפתעות.</li>
-            <li>✅ <strong>כיסוי רחב:</strong> זמינות גבוהה גם ב<Link href="/areas/haifa-general/cheap-private-car-towing-24-7-kiryat-yam" className="text-blue-600">קרית ים</Link> והסביבה.</li>
+            <li>✅ <strong>כיסוי רחב:</strong> זמינות גבוהה גם בצירים ראשיים וחיבור לערים סמוכות.</li>
           </ul>
 
           <div className="mt-12 bg-white p-8 rounded-xl shadow-sm border border-gray-100">
@@ -72,15 +72,15 @@ export default function Page() {
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-lg">מהו זמן ההגעה הממוצע בקרית ביאליק?</h4>
-                <p>אנו משתדלים להגיע לכל נקודה בעיר ובסביבתה בזמן קצר ככל האפשר, במיוחד בצירים עמוסים כמו כביש 22.</p>
+                <p>אנו משתדלים להגיע לכל נקודה בעיר ובסביבתה בזמן קצר, במיוחד בצירים עמוסים כפי שנדרש במקרים של <Link href="/areas/haifa-general/towing-road-22-krayot-bypass" className="text-blue-600">גרירה בכביש 22 עוקף קריות</Link>.</p>
               </div>
               <div>
-                <h4 className="font-bold text-lg">האם אתם נותנים שירות גם בכבישים מהירים?</h4>
-                <p>כן, אנו מספקים מענה מקצועי גם למקרים של <Link href="/areas/haifa-general/emergency-breakdown-towing-route-22-krayot-bypass" className="text-blue-600">גרירת רכב בכביש 22 עוקף קריות</Link>.</p>
+                <h4 className="font-bold text-lg">האם אתם נותנים שירות גם במקרה של פנצ'ר?</h4>
+                <p>בהחלט. צוות הניידת שלנו ערוך להחלפת גלגל מהירה במקום, מבלי להזדקק לגרר בכל מקרה.</p>
               </div>
               <div>
-                <h4 className="font-bold text-lg">האם אתם גוררים רכבים חשמליים?</h4>
-                <p>כן, אנו ערוכים למתן שירות גם לרכבים חשמליים עם ציוד מתאים, בדומה לשירותי <Link href="/areas/haifa-general/flatbed-towing-electric-car-dead-battery-check-post-haifa" className="text-blue-600">גרירת רכבים חשמליים בצ'ק פוסט</Link>.</p>
+                <h4 className="font-bold text-lg">האם אתם מבצעים גרירה גם לערים סמוכות?</h4>
+                <p>כן, אנו נותנים מענה מלא לתושבי הקריות והסביבה, כולל סיוע מקיף כמו <Link href="/areas/haifa-general/cheap-towing-kiryat-motzkin-fair-price" className="text-blue-600">שירותי גרירה בקרית מוצקין</Link> וסביבתה.</p>
               </div>
             </div>
           </div>
