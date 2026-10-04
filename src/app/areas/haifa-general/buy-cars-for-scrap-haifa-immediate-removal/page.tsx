@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "קונה רכבים לפירוק בחיפה - פינוי מיידי במזומן | שירות 24/7",
-  description: "מוכרים רכב לפירוק בחיפה? קונים רכבים תקולים, ללא טסט או לאחר תאונה במזומן. שירות מהיר, פינוי מיידי מהשטח ומחיר הוגן בכל חיפה והקריות. התקשרו עכשיו!",
+  title: "קונה רכבים לפירוק בחיפה - פינוי מיידי במזומן | הגעה תוך 30 דקות",
+  description: "מוכרים רכב לפירוק בחיפה? קונים רכבים תקולים, ללא טסט או לאחר תאונה במזומן. פינוי מהיר מהשטח ושירות אמין בכל חיפה והקריות. התקשרו עכשיו להצעה!",
   alternates: {
     canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-immediate-removal",
   },
@@ -17,7 +17,7 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי קניית רכבים לפירוק ופינוי בחיפה",
     "areaServed": "Haifa and Krayot",
-    "priceRange": "$$,$",
+    "priceRange": "$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -58,14 +58,14 @@ export default function Page() {
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי הרכב שלכם בחיפה?</h2>
-          <p className="mb-4">אנו מומחים במתן שירותי פינוי לתושבי חיפה והקריות. אם אתם זקוקים לחילוץ דחוף או לפינוי רכב תקול באזור <Link href="/areas/haifa-general/emergency-towing-horev-ahuza-haifa" className="text-blue-400 underline">emergency towing horev ahuza haifa</Link>, אנחנו הכתובת. אנו קונים רכבים פרטיים ומסחריים ללא התחייבות לתיקון.</p>
+          <p className="mb-4">אנו מומחים במתן שירותי פינוי לתושבי חיפה והקריות. בין אם אתם מחפשים <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-400 underline">פירוק רכבים בחיפה והקריות</Link> או זקוקים לחילוץ דחוף באזור נווה שאנן, אנו כאן.</p>
           <ul className="list-disc list-inside space-y-2 mb-6">
             <li>פינוי מיידי מהשטח עם גרר מקצועי</li>
             <li>טיפול מהיר בכל הבירוקרטיה והורדה מהכביש</li>
             <li>שירות אמין ומחיר הוגן לכל סוגי הרכבים</li>
             <li>סיוע ברכבים שאינם מניעים בכל רחבי חיפה</li>
           </ul>
-          <p className="text-sm text-gray-400 italic">*שימו לב: אנו לא מטפלים באופנועים או דו-גלגלי מכל סוג שהוא.</p>
+          <p className="text-sm text-gray-400 italic">*שימו לב: אנו לא מטפלים באופנועים מכל סוג שהוא.</p>
         </div>
       </section>
 
@@ -75,15 +75,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold">האם אתם קונים רכבים ללא טסט?</h3>
-              <p>כן, אנו קונים רכבים ללא טסט, רכבים אחרי תאונה או רכבים שלא מניעים. אם נתקעתם בדרך, אנו מספקים גם שירותי <Link href="/areas/haifa-general/towing-stuck-car-road-22-krayot" className="text-blue-600 underline">towing stuck car road 22 krayot</Link> לכל סוגי הרכבים הפרטיים.</p>
+              <p>כן, אנו קונים רכבים ללא טסט, רכבים אחרי תאונה או רכבים שלא מניעים. אם הרכב נתקע בדרך, ניתן להיעזר בשירותי <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-600 underline">גרר זול בצק פוסט חיפה</Link>.</p>
             </div>
             <div>
-              <h3 className="font-bold">האם השירות כולל את אזורי הקריות?</h3>
-              <p>בהחלט, אנו פעילים בפריסה רחבה. אם אתם מחפשים <Link href="/areas/haifa-general/kaniyat-rekhavim-yeshanim-lehalafim-kiryat-yam-pinui-meyadi" className="text-blue-600 underline">kaniyat rekhavim yeshanim lehalafim kiryat yam pinui meyadi</Link> או שירות גרירה מקומי כגון <Link href="/areas/haifa-general/grar-zol-lerchev-takua-bekiryat-yam" className="text-blue-600 underline">grar zol lerchev takua bekiryat yam</Link>, צרו איתנו קשר.</p>
+              <h3 className="font-bold">האם אתם קונים רכבים באזור הקריות?</h3>
+              <p>בהחלט. אנו פעילים בפריסה רחבה. אם אתם זקוקים ל- <Link href="/areas/haifa-general/junk-car-removal-kiryat-yam-immediate-pickup" className="text-blue-600 underline">פינוי רכב ישן בקרית ים</Link> או מחפשים <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-600 underline">גרר דחוף וזול בקרית ביאליק</Link>, צרו איתנו קשר.</p>
             </div>
             <div>
-              <h3 className="font-bold">מה עושים אם הרכב נתקע באזור הגישה לצ'ק פוסט?</h3>
-              <p>במקרים כאלו, מלבד פינוי לפירוק, אנו מציעים שירותי חילוץ מהירים. ניתן להיעזר בשירותי <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="text-blue-600 underline">emergency car recovery ditch route 4 check post</Link> או <Link href="/areas/haifa-general/flatbed-towing-electric-car-dead-battery-check-post-haifa" className="text-blue-600 underline">flatbed towing electric car dead battery check post haifa</Link>.</p>
+              <h3 className="font-bold">מה השירות הכי מתאים לרכב תקוע שלא מניע?</h3>
+              <p>עבור רכב שלא מניע, אנו ממליצים על גרר שטוח. אם מדובר ברכב חשמלי שנתקע בדרך, אנו מציעים שירותי <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">גרירת רכב חשמלי בכביש 22</Link> למקצוענים.</p>
             </div>
           </div>
         </div>

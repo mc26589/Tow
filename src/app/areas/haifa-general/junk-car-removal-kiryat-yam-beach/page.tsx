@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'פינוי רכבים לפירוק בקריית ים - שירות מהיר ומחיר הוגן | 24/7',
-  description: 'נתקעתם עם רכב ישן בקריית ים? אנו מציעים פינוי רכבים לפירוק מהיר ומקצועי באזור החוף. תשלום במזומן, שירות אדיב ופינוי תוך זמן קצר. התקשרו עכשיו!',
+  title: 'פינוי רכבים לפירוק בקריית ים - הגעה מהירה ומזומן במקום | 24/7',
+  description: 'נתקעתם עם רכב ישן בקריית ים? אנו מציעים פינוי רכבים לפירוק מהיר, שירות אדיב ותשלום במזומן. פינוי מכל אזור החוף תוך זמן קצר. התקשרו עכשיו!',
   alternates: {
     canonical: '/areas/haifa-general/junk-car-removal-kiryat-yam-beach',
   },
@@ -43,10 +43,11 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">פינוי רכבים לפירוק באזור חוף קריית ים</h1>
           <p className="text-lg mb-8 max-w-2xl">
-            אנו מציעים שירות פינוי רכבים לפירוק מהיר ומקצועי באזור חוף קריית ים והסביבה. אם ברשותכם רכב ישן, תקול או מושבת, אנו נדאג לפינויו המיידי.
-            אנו מתמחים בפינוי רכבים פרטיים, מסחריים ורכבי שטח (4x4). מחפשים פתרון נוסף? בדקו את השירותים שלנו של
-            <Link href="/areas/haifa-general/buy-old-cars-for-scrap-kiryat-yam" className="underline mx-1">קניית רכבים ישנים לפירוק בקריית ים</Link>
-            או שירותי גרירה זולים כמו <Link href="/areas/haifa-general/cheap-towing-kiryat-yam-to-kiryat-motzkin" className="underline mx-1">גרירה מקריית ים לקריית מוצקין</Link>.
+            אנו מציעים שירות פינוי רכבים לפירוק מהיר ומקצועי באזור חוף קריית ים והסביבה. אם ברשותכם רכב ישן, תקול או מושבת, אנו נדאג לפינויו המיידי. 
+            אנו מתמחים בפינוי רכבים פרטיים ומסחריים. מחפשים פתרון מקיף? בדקו גם את השירותים שלנו של 
+            <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="underline mx-1">פירוק רכבים בחיפה והקריות</Link> 
+            או שירותי פינוי מיידי בקישור הבא: 
+            <Link href="/areas/haifa-general/junk-car-removal-kiryat-yam-immediate-pickup" className="underline mx-1">פינוי רכבים מהיר בקריית ים</Link>.
             <br /><br />
             <strong>הערה חשובה:</strong> שירותי הפינוי שלנו מיועדים לרכבים בלבד. איננו מספקים שירותי פינוי או גרירה לאופנועים.
           </p>
@@ -67,10 +68,10 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי הרכב שלכם?</h2>
           <ul className="space-y-4 text-gray-700">
-            <li>✓ שירות מהיר באזור חוף קריית ים והקריות.</li>
-            <li>✓ פינוי מקצועי של רכבים לפירוק ללא עלות.</li>
-            <li>✓ מחירים הוגנים עבור רכבים בעלי ערך לחלפים.</li>
-            <li>✓ זמינות 24/7 לכל קריאה.</li>
+            <li>✓ שירות מהיר ומקצועי באזור חוף קריית ים.</li>
+            <li>✓ פינוי רכבים לפירוק ללא עלות נוספת.</li>
+            <li>✓ מחירים הוגנים ותשלום במזומן במעמד הפינוי.</li>
+            <li>✓ זמינות 24 שעות ביממה, 7 ימים בשבוע.</li>
           </ul>
 
           <div className="mt-12">
@@ -82,7 +83,11 @@ export default function Page() {
               </div>
               <div>
                 <h4 className="font-bold">האם אתם קונים רכבים ללא טסט?</h4>
-                <p>כן, אנו קונים רכבים ישנים, מושבתים או כאלו ללא טסט לפירוק וברזל.</p>
+                <p>כן, אנו קונים רכבים ישנים, מושבתים או כאלו ללא טסט בתוקף עבור פירוק וברזל.</p>
+              </div>
+              <div>
+                <h4 className="font-bold">האם השירות כולל פינוי רכבים מאזור המלונות בקריית ים?</h4>
+                <p>בהחלט. אנו מספקים שירותי גרירה ופינוי בכל רחבי קריית ים, כולל אזור החוף והטיילת.</p>
               </div>
             </div>
           </div>

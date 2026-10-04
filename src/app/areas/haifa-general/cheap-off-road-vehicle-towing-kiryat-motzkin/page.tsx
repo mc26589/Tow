@@ -31,7 +31,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">גרר זול לרכב שטח בקרית מוצקין – שירות 24/7</h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">זקוקים לחילוץ? אנו מספקים שירותי גרירה מקצועיים לרכבי שטח באזור קרית מוצקין. נתקעתם בדרכים? אנו כאן לעזור.</p>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">זקוקים לחילוץ? אנו מספקים שירותי גרירה מקצועיים לרכבי שטח באזור קרית מוצקין. הגעה מהירה לכל אזור הקריות והסביבה.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a href={`tel:+${currentBusinessInfo.phone}`} className="bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-6 rounded-full">התקשרו עכשיו: {currentBusinessInfo.phone}</a>
@@ -41,26 +41,40 @@ export default function Page() {
 
       <section className="py-12 md:py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">למה לבחור בנו בקרית מוצקין?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">למה לבחור בשירותי הגרירה שלנו?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-3 text-blue-400">זמינות 24/7</h3>
-              <p>גם אם אתם צריכים <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-300 underline">גרירת חירום בכביש 22</Link>, אנחנו כאן עבורכם.</p>
+              <h3 className="text-2xl font-semibold mb-3 text-blue-400">זמינות סביב השעון</h3>
+              <p>גם אם אתם צריכים <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-300 underline">שירותי גרירה זולים בקרית ביאליק</Link>, הצוות שלנו זמין בכל עת.</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-3 text-blue-400">ניסיון בשטח</h3>
-              <p>מתמחים ב-<Link href="/areas/haifa-general/car-stuck-in-mud-rescue-carmel-forest-haifa" className="text-blue-300 underline">חילוץ רכבים שנתקעו בבוץ</Link> ובדרכים משובשות.</p>
+              <h3 className="text-2xl font-semibold mb-3 text-blue-400">מומחיות בחילוץ שטח</h3>
+              <p>אנו מציעים שירותי חילוץ מתקדמים, בדומה ל-<Link href="/areas/haifa-general/emergency-mud-recovery-service-carmel-forest-haifa" className="text-blue-300 underline">חילוץ בוץ ביערות הכרמל</Link> עם הציוד המתאים ביותר.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-3 text-blue-400">פתרונות לדרכים עמוסות</h3>
+              <p>ניתקעתם בדרכים מהירות? אנו מומחים ב-<Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-300 underline">גרירה בכביש 22 וצומת צק פוסט</Link> במחירים נוחים.</p>
             </div>
           </div>
         </div>
       </section>
 
       <section className="py-12 bg-gray-950 text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">שאלות נפוצות</h2>
-          <div className="max-w-3xl mx-auto space-y-6">
-            <div><h3 className="font-bold">מהו טווח המחירים לגרירת רכב שטח?</h3><p>המחיר הוגן ומשתנה בהתאם למרחק ולמורכבות החילוץ. נשמח לתת הצעת מחיר בטלפון.</p></div>
-            <div><h3 className="font-bold">האם אתם גוררים אופנועים?</h3><p>לא, איננו מספקים שירותי גרירה לאופנועים, אך נשמח לסייע בגרירת רכבים ורכבי שטח.</p></div>
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold mb-8 text-center">שאלות נפוצות על שירותי גרירה</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-bold text-lg">מהו טווח המחירים לגרירת רכב שטח?</h3>
+              <p>המחיר נקבע לפי מרחק הגרירה ומורכבות החילוץ. אנו מקפידים על מחיר הוגן ותחרותי. התקשרו לקבלת הצעת מחיר מדויקת.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">האם אתם נותנים שירות גם במקרה של פנצ'ר בחוף הים?</h3>
+              <p>כן, אנו מספקים מענה מהיר לבעיות דרך בסיסיות, בדומה לשירות <Link href="/areas/haifa-general/flat-tire-roadside-assistance-kiryat-yam-beach" className="text-blue-300 underline">החלפת גלגל בחוף קרית ים</Link>.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">האם אתם גוררים רכבים ללא טסט או רכבים ישנים?</h3>
+              <p>אנו מתמחים בגרירה למוסכים וגם בשירותי <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-300 underline">גרירה לפירוק רכבים באזור חיפה והקריות</Link>.</p>
+            </div>
           </div>
         </div>
       </section>

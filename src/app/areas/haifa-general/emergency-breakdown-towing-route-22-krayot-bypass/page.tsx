@@ -42,7 +42,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">שירותי גרירה וחילוץ דחופים בכביש 22 עוקף קריות</h1>
-          <p className="text-xl mb-8">נתקעתם בדרך? הצוות שלנו בדרך אליכם. שירות מהיר, אמין ומקצועי 24/7 לכל סוגי הרכבים.</p>
+          <p className="text-xl mb-8">נתקעתם בדרך? הצוות המקצועי שלנו בדרך אליכם. הגעה מהירה, אמינה ומחיר הוגן לכל סוגי הרכבים 24/7.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
@@ -57,11 +57,15 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בכביש 22?</h2>
-        <p className="mb-4">אנו מתמחים בחילוץ רכבים תקועים לאורך ציר עוקף קריות. אם אתם זקוקים לשירותי <Link href="/areas/haifa-general/towing-services-road-22-krayot" className="text-blue-600 underline">גרירה בכביש 22</Link> או מחפשים <Link href="/areas/haifa-general/urgent-towing-commercial-van-check-post-route-22" className="text-blue-600 underline">גרירת רכב מסחרי בצ'ק פוסט</Link>, אנחנו הכתובת.</p>
+        <p className="mb-4">
+          אנו מתמחים בחילוץ רכבים תקועים לאורך ציר עוקף קריות. זקוקים לשירותי 
+          <Link href="/areas/haifa-general/towing-services-road-22-krayot" className="text-blue-600 underline"> גרירה בכביש 22</Link> 
+          או מחפשים <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">גרירת רכב בצ'ק פוסט</Link>? הצוות שלנו ערוך לכל תרחיש, כולל טיפול בבעיות סוללה עם <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">חילוץ רכב חשמלי בכביש 22</Link>.
+        </p>
         <ul className="list-disc pr-6 space-y-2 mb-8">
           <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
-          <li>הגעה מהירה לכל נקודה בכביש 22.</li>
-          <li>טיפול ברכבים פרטיים, מסחריים ורכבי 4x4.</li>
+          <li>הגעה מהירה לכל נקודה בכביש 22 והסביבה.</li>
+          <li>טיפול ברכבים פרטיים, מסחריים ורכבי שטח.</li>
           <li>מחירים הוגנים ושקופים ללא הפתעות.</li>
         </ul>
 
@@ -72,13 +76,17 @@ export default function Page() {
             <p>אנו משתדלים להגיע לכל נקודה על ציר עוקף קריות במינימום זמן. זמני ההגעה תלויים בעומסי התנועה, אך תמיד נעשה את המירב להגיע אליכם במהירות האפשרית.</p>
           </div>
           <div>
-            <h3 className="font-bold">האם אתם גוררים גם משאיות קלות?</h3>
-            <p>כן, אנו מספקים גם שירותי <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירת משאיות קלות בכביש 22</Link>.</p>
+            <h3 className="font-bold">מה עושים אם נגמרה הסוללה ברכב החשמלי?</h3>
+            <p>אנחנו מציעים פתרונות ייעודיים, כולל <Link href="/areas/haifa-general/emergency-towing-electric-car-route-22-krayot" className="text-blue-600 underline">שירותי גרירה לרכב חשמלי בכביש 22</Link> לכל מטען קרוב.</p>
+          </div>
+          <div>
+            <h3 className="font-bold">האם אתם מציעים גרירה זולה באיזור הקריות?</h3>
+            <p>כן, אנו מספקים פתרונות במחירים אטרקטיביים, כגון <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-600 underline">שירותי גרירה זולים בקרית ביאליק</Link> והסביבה.</p>
           </div>
         </div>
 
         <p className="mt-6 text-sm text-gray-600">
-          *הערה: אנו מתמחים ברכבים בלבד ואיננו מספקים שירותי גרירה לאופנועים. לבירור על שירותים נוספים כגון <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-600 underline">גרירה זולה בצ'ק פוסט</Link>, ניתן לפנות למוקד שלנו.
+          *הערה: אנו מתמחים ברכבים בלבד ואיננו מספקים שירותי גרירה לאופנועים. למידע נוסף על <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-600 underline">גרירה זולה בצ'ק פוסט</Link> או חילוצים מיוחדים, ניתן לפנות למוקד שלנו.
         </p>
       </section>
     </main>

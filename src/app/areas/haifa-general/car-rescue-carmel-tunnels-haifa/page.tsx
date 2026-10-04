@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ רכב במנהרות הכרמל - הגעה מהירה 24/7 | מחיר הוגן',
-  description: 'נתקעתם ברכב במנהרות הכרמל? אנו מספקים חילוץ רכב מהיר, מקצועי ובטוח לכל אורך המנהרות. הגעה לכל נקודה בחיפה 24/7 במחיר הוגן. התקשרו עכשיו!',
+  title: 'חילוץ רכב במנהרות הכרמל - הגעה תוך 30 דקות | 24/7',
+  description: 'נתקעתם ברכב במנהרות הכרמל? שירות חילוץ מקצועי ומהיר לכל אורך ציר המנהרות בחיפה. מחירים הוגנים, זמינות מלאה 24/7. התקשרו עכשיו לעזרה מיידית!',
   alternates: {
     canonical: '/areas/haifa-general/car-rescue-carmel-tunnels-haifa'
   }
@@ -57,10 +57,10 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">מענה מיידי לחילוץ בתוך מנהרות הכרמל</h2>
-        <p className="mb-4">אם הרכב שלכם נתקע בתוך מנהרות הכרמל, אתם זקוקים לחברה מקצועית ומנוסה בטיפול בתקלות בתוואי תת-קרקעי מורכב. אנו מציעים שירות גרירה מהיר לכל ציר המנהרות.</p>
+        <p className="mb-4">אם הרכב שלכם נתקע בתוך מנהרות הכרמל, אתם זקוקים לחברה מקצועית ומנוסה בטיפול בתקלות בתוואי תת קרקעי מורכב. אנו מציעים שירות גרירה מהיר לכל ציר המנהרות.</p>
         
         <p className="mb-4">
-          זקוקים לשירות באזור? אנו מציעים גם <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">שירותי גרירה בצ'ק פוסט</Link>, סיוע של <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="text-blue-600 underline">חילוץ רכבים מתעלה בכביש 4</Link> או עזרה מקצועית של <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירת רכבים קלים בכביש 22</Link>.
+          אנו מספקים פתרונות משלימים באזור, כגון <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה זולים בצ'ק פוסט</Link>, סיוע של <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">גרירת רכבים תקועים בכביש 22</Link> וכן <Link href="/areas/haifa-general/emergency-mud-recovery-service-carmel-forest-haifa" className="text-blue-600 underline">חילוצי שטח ביערות הכרמל</Link>.
         </p>
 
         <h3 className="text-2xl font-semibold mt-8 mb-4">יתרונות השירות שלנו</h3>
@@ -75,16 +75,16 @@ export default function Page() {
           <h3 className="text-2xl font-bold mb-4">שאלות נפוצות</h3>
           <div className="space-y-4">
             <div>
-              <p className="font-bold">כמה זמן לוקח לכם להגיע למנהרות הכרמל?</p>
-              <p>אנו פרוסים בנקודות אסטרטגיות ליד הכניסות למנהרות וערוכים להגעה מהירה מאוד לכל נקודה לאורך הציר, בהתאם לעומסי התנועה.</p>
+              <p className="font-bold">תוך כמה זמן תגיעו למנהרות הכרמל?</p>
+              <p>אנו פרוסים בנקודות אסטרטגיות ליד הכניסות למנהרות וערוכים להגעה מהירה מאוד, בהתאם לעומסי התנועה באותו הרגע.</p>
             </div>
             <div>
-              <p className="font-bold">האם אתם גוררים אופנועים במנהרות?</p>
-              <p>השירות שלנו מתמקד בחילוץ רכבים פרטיים, רכבי שטח ורכבים מסחריים. במידה ואתם זקוקים לעזרה עם אופנוע באזור, נמליץ לפנות לשירות ייעודי של <Link href="/areas/haifa-general/heavy-motorcycle-towing-freud-haifa-price" className="text-blue-600 underline">גרירת אופנועים כבדים בחיפה</Link>.</p>
+              <p className="font-bold">מה עושים במקרה של תקלה במנהרה?</p>
+              <p>חובה להדליק אורות מצוקה, להיצמד לשוליים במידת האפשר ולחייג אלינו. מומלץ לעבור אל מעבר למעקה הבטיחות ולהמתין לכוחות החילוץ במקום בטוח.</p>
             </div>
             <div>
-              <p className="font-bold">מה עושים אם הרכב נתקע באמצע הנסיעה במנהרה?</p>
-              <p>יש להדליק אורות מצוקה, לנסות להיצמד לשוליים בבטחה, ולחייג אלינו מיד. מומלץ להמתין בתוך הרכב רק אם זה בטוח, או לעבור אל מעבר למעקה הבטיחות.</p>
+              <p className="font-bold">האם אתם מבצעים חילוץ של רכבים חשמליים?</p>
+              <p>כן, אנו ערוכים לטיפול וגרירה של רכבים חשמליים כולל סיוע במקרים של <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">פריקת סוללה ברכב חשמלי</Link>.</p>
             </div>
           </div>
         </section>

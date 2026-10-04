@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "קניית רכבים לפירוק בבת גלים חיפה | מזומן ופינוי מהיר 24/7",
-  description: "נתקעתם עם רכב ישן בבת גלים? קניית רכבים לפירוק בחיפה במחיר הוגן! פינוי מיידי, שירות מקצועי לכל סוגי הרכבים. התקשרו עכשיו להצעת מחיר משתלמת!",
+  title: "קניית רכבים לפירוק בבת גלים חיפה | מזומן ופינוי מהיר עד 30 דק'",
+  description: "נתקעתם עם רכב ישן בבת גלים? קניית רכבים לפירוק בחיפה במחיר הוגן! פינוי מיידי מהשטח, שירות מקצועי 24/7. התקשרו עכשיו להצעת מחיר משתלמת!",
   alternates: {
     canonical: "/areas/haifa-general/cash-for-scrap-cars-bat-galim-haifa",
   },
@@ -15,7 +15,7 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה ופירוק רכבים בחיפה",
+    "name": "שירותי גרירה ופירוק רכבים בחיפה ובבת גלים",
     "areaServed": "Haifa",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -28,7 +28,7 @@ export default function Page() {
       "latitude": "32.8268",
       "longitude": "34.9765"
     },
-    "priceRange": "$",
+    "priceRange": "הוגן",
     "serviceType": "Scrap car removal and towing"
   };
 
@@ -43,7 +43,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">קניית רכבים לפירוק בבת גלים חיפה – פינוי מיידי ומזומן</h1>
           <p className="text-xl mb-8">
-            זקוקים לפינוי רכב ישן בבת גלים? אנו מספקים שירות מקצועי לפינוי רכבים לפירוק. בין אם מדובר ברכב מושבת או רכב ללא טסט, אנו מציעים מענה מהיר. למידע נוסף על שירותים רחבים יותר באזור, בקרו בדף ה-<Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="underline">קניית רכבים לפירוק בצק פוסט</Link>.
+            זקוקים לפינוי רכב ישן בבת גלים? אנו מספקים שירות מקצועי לפינוי רכבים לפירוק. בין אם מדובר ברכב מושבת או רכב ללא טסט, אנו מציעים מענה מהיר. אנו משרתים גם אזורים סמוכים, למידע נוסף בקרו בדף ה-<Link href="/areas/haifa-general/cash-for-old-broken-car-neve-shaanan-haifa" className="underline font-semibold">קניית רכבים ישנים בנווה שאנן</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="בת גלים, חיפה" />
@@ -60,10 +60,10 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי רכב בבת גלים?</h2>
         <ul className="space-y-4 text-lg">
-          <li>✓ פינוי מיידי מהשטח בתיאום מראש.</li>
+          <li>✓ פינוי מיידי מהשטח בתיאום מהיר.</li>
           <li>✓ תשלום הוגן במזומן עבור הרכב שלכם.</li>
           <li>✓ שירות מקצועי לכל סוגי הרכבים (פרטי, מסחרי, 4x4).</li>
-          <li>✓ זמינות 24/7 לכל קריאה, כולל שירותי <Link href="/areas/haifa-general/towing-for-scrap-kiryat-ata-road-22" className="text-blue-600 underline">גרירה לפירוק בכביש 22</Link>.</li>
+          <li>✓ זמינות 24/7 לכל קריאה, כולל התמחות ב-<Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-600 underline">פירוק רכבים בחיפה ובקריות</Link>.</li>
         </ul>
       </section>
 
@@ -76,7 +76,11 @@ export default function Page() {
           </div>
           <div>
             <h3 className="font-bold text-xl">מה משפיע על המחיר שנקבל עבור הרכב?</h3>
-            <p>המחיר נקבע לפי סוג הרכב, השנה ומצבו המכני. אנו מבטיחים תשלום הוגן במזומן במקום.</p>
+            <p>המחיר נקבע לפי סוג הרכב, השנה ומצבו המכני. אנו מבטיחים תשלום הוגן במזומן במקום לכל רכב שיוצא מהכביש.</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-xl">האם אתם מספקים שירותים גם בכבישים ראשיים ליד חיפה?</h3>
+            <p>בהחלט. אנו נותנים מענה רחב כולל <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">גרירה בכביש 22 וצ'ק פוסט</Link> לכל מי שזקוק לסיוע מיידי.</p>
           </div>
           <div>
             <h3 className="font-bold text-xl">האם אתם מפנים גם אופנועים?</h3>

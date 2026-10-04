@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "קניית רכבים לפירוק בחיפה והקריות | פינוי מיידי ומזומן 24/7",
-  description: "מוכרים רכב ישן או תקול? קניית רכבים לפירוק בחיפה והקריות עם פינוי מיידי, תשלום במזומן ומחיר הוגן. שירות מהיר ואמין 24/7 - התקשרו עכשיו להצעת מחיר!",
+  title: "קניית רכבים לפירוק בחיפה והקריות | פינוי מיידי ותשלום במזומן",
+  description: "מוכרים רכב ישן או מושבת? קניית רכבים לפירוק בחיפה והקריות עם פינוי מיידי ותשלום הוגן במזומן. שירות זמין 24/7. התקשרו עכשיו להצעת מחיר משתלמת!",
   alternates: {
     canonical: "/areas/haifa-general/scrap-cars-haifa-krayot-immediate-removal"
   }
@@ -23,7 +23,7 @@ export default function Page() {
       "opens": "00:00",
       "closes": "23:59"
     },
-    "priceRange": "$$,$",
+    "priceRange": "$$$",
     "serviceType": "Scrap Car Removal",
     "geo": {
       "@type": "GeoCoordinates",
@@ -57,8 +57,7 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי רכבים לפירוק?</h2>
-        <p className="mb-4">אנו מתמחים בפינוי רכבים מכל הסוגים: רכבים פרטיים, רכבים מסחריים ורכבי 4x4. אם נתקעתם בדרכים או שהרכב שלכם מושבת, אנו מציעים מענה מהיר. ניתן להיעזר בשירותינו גם למקרים כמו <Link href="/areas/haifa-general/towing-stuck-car-road-22-krayot" className="text-blue-600 underline">גרירת רכב בכביש 22</Link>, <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="text-blue-600 underline">חילוץ רכב מתעלה בכביש 4</Link> או <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">גרירת רכב תקוע באזור הצ׳ק פוסט</Link>.</p>
-        <p className="mb-4 font-semibold text-red-600">שימו לב: איננו מספקים שירותי גרירה או פינוי לאופנועים מכל סוג שהוא.</p>
+        <p className="mb-4">אנו מתמחים בפינוי רכבים מכל הסוגים: רכבים פרטיים, רכבים מסחריים ורכבי 4x4. אם נתקעתם בדרכים, אנו מציעים מענה מהיר. אנו מציעים גם פתרונות כגון <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">גרירת רכב בכביש 22 ובצ׳ק פוסט</Link> ו-<Link href="/areas/haifa-general/cash-for-old-broken-car-neve-shaanan-haifa" className="text-blue-600 underline">קניית רכבים לפירוק בנווה שאנן</Link>. חשוב לציין: איננו מספקים שירותי גרירה או פינוי לאופנועים.</p>
       </section>
 
       <section className="py-16 bg-gray-50">
@@ -66,16 +65,16 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-8">שאלות נפוצות בנושא קניית רכבים לפירוק</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl font-semibold">האם אתם פעילים גם בקריות הספציפיות?</h3>
-              <p>כן, אנו נותנים שירות מלא בכל אזור חיפה והקריות, לרבות שירותים ספציפיים כמו <Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="text-blue-600">פינוי רכב לפירוק בקרית מוצקין</Link>, <Link href="/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-rothschild" className="text-blue-600">קניית רכבים לפירוק בקרית ים</Link> ו-<Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-600">גרירה וחילוץ בקרית ביאליק</Link>.</p>
+              <h3 className="text-xl font-semibold">האם אתם פעילים גם בקריות?</h3>
+              <p>כן, אנו נותנים שירות מלא בכל אזור חיפה והקריות. אם אתם זקוקים לשירותי גרירה דחופים בדרך, ניתן להזמין <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-600">גרירה זולה בקרית ביאליק</Link> או <Link href="/areas/haifa-general/junk-car-removal-kiryat-yam-immediate-pickup" className="text-blue-600">פינוי גרוטאות רכב בקרית ים</Link>.</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold">איך מתבצע התשלום על הרכב?</h3>
-              <p>התשלום על הרכב מתבצע במזומן במעמד הפינוי לאחר הערכת מצב הרכב והחלקים שניתן להפיק ממנו.</p>
+              <p>התשלום על הרכב מתבצע במזומן במעמד הפינוי לאחר הערכת מצב הרכב.</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold">האם אתם מטפלים בחילוצי שטח בחיפה?</h3>
-              <p>בנוסף לפירוק רכבים, אנו מספקים שירותי חילוץ מקצועיים כמו <Link href="/areas/haifa-general/mud-rescue-4x4-stuck-carmel-forest-haifa-university" className="text-blue-600">חילוץ רכבי 4x4 שנתקעו בבוץ</Link> באזור הכרמל והאוניברסיטה.</p>
+              <p>כן, אנו מספקים שירותי חילוץ מקצועיים לרבות <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-danya" className="text-blue-600">חילוצי שטח ביערות הכרמל ודניה</Link>.</p>
             </div>
           </div>
         </div>
