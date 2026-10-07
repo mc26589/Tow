@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ תאונות משאיות באחוזה, חיפה | הגעה מהירה 24/7 | מחיר הוגן',
+  title: 'חילוץ תאונות משאיות באחוזה, חיפה | שירות 24/7 מהיר ומקצועי',
   description: 'נתקעתם עם המשאית באחוזה? שירות חילוץ תאונות מקצועי ומהיר 24/7 באזור חיפה. גרירת משאיות ורכבים מסחריים במחיר הוגן. התקשרו עכשיו!',
   alternates: {
     canonical: '/areas/haifa-general/truck-accident-recovery-service-ahuzah-haifa',
@@ -31,10 +31,10 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            חילוץ תאונות משאיות באחוזה חיפה – זמינות 24/7
+            חילוץ תאונות משאיות באחוזה חיפה – הגעה מהירה 24/7
           </h1>
           <p className="text-xl md:text-2xl mb-8">
-            מענה מיידי ומקצועי לגרירה וחילוץ משאיות ורכבים מסחריים באזור אחוזה והסביבה.
+            זקוקים לחילוץ מקצועי? אנו זמינים בכל שעות היממה למתן מענה מהיר למשאיות ורכבים מסחריים באחוזה והסביבה.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <WhatsAppCTA cityName="אחוזה, חיפה" />
@@ -48,26 +48,26 @@ export default function Page() {
       <main className="bg-gray-900 text-gray-100 py-12 md:py-16">
         <div className="container mx-auto px-4">
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-center mb-8 text-blue-400">זקוקים לחילוץ משאית דחוף באחוזה?</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 text-blue-400">חילוץ מקצועי למשאיות באחוזה – למה לבחור בנו?</h2>
             <p className="text-lg leading-relaxed text-center max-w-3xl mx-auto">
-              אנו מבינים את המשמעות של משאית תקועה ללוח הזמנים שלכם. אנו מספקים מענה מהיר באזור אחוזה וסביבותיה. אם אתם זקוקים גם ל-<Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa" className="text-blue-300 underline">שירותי רכב חשמלי באחוזה</Link> או נתקעתם בדרכים ראשיות בדרך ל-<Link href="/areas/haifa-general/towing-services-road-22-krayot" className="text-blue-300 underline">כביש 22</Link>, אנו ערוכים לסייע לכם במהירות ובמקצועיות.
+              אנו מבינים את המשמעות של משאית תקועה ללוח הזמנים שלכם. אנו מספקים מענה מהיר באזור אחוזה וסביבותיה. אם אתם זקוקים ל-<Link href="/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing" className="text-blue-300 underline">שירות גרירה משתלם באחוזה</Link> או נתקעתם באזורים סמוכים בדרך ל-<Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-300 underline">כביש 22 עוקף קריות</Link>, הצוות המיומן שלנו ערוך להגיע אליכם במהירות ובמקצועיות ללא פשרות.
             </p>
           </section>
 
           <section className="mb-12 bg-gray-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold mb-6 text-blue-300">שאלות נפוצות (FAQ)</h2>
+            <h2 className="text-2xl font-bold mb-6 text-blue-300">שאלות נפוצות על שירותי חילוץ באחוזה</h2>
             <div className="space-y-6">
               <div>
-                <h3 className="font-bold text-xl">תוך כמה זמן תגיעו לחילוץ באחוזה?</h3>
-                <p>אנו שואפים לזמני הגעה מהירים מאוד לאזור אחוזה והסביבה. צרו קשר לקבלת הערכת זמן מדויקת לפי מיקומכם הנוכחי.</p>
+                <h3 className="font-bold text-xl">מהו זמן ההגעה הממוצע לחילוץ משאית באחוזה?</h3>
+                <p>אנו מציבים את זמן ההגעה כעדיפות עליונה. בהתאם לעומסי התנועה באזור אחוזה והכרמל, אנו שואפים להגיע בזמן הקצר ביותר. צרו קשר וקבלו הערכת זמנים מיידית.</p>
               </div>
               <div>
-                <h3 className="font-bold text-xl">האם אתם מספקים חילוץ שטח למשאיות?</h3>
-                <p>כן, אנו מתמחים בחילוצי שטח ובוץ. למידע נוסף ראו <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-300 underline">חילוץ רכב מבוץ באזור הכרמל</Link>.</p>
+                <h3 className="font-bold text-xl">האם אתם מספקים חילוץ רכב מבוץ או שטח באזור?</h3>
+                <p>בהחלט. אנו מתמחים בחילוצי שטח מורכבים. לפרטים נוספים ניתן לעיין בדף <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-300 underline">חילוץ רכב מבוץ ביערות הכרמל ונשר</Link>.</p>
               </div>
               <div>
                 <h3 className="font-bold text-xl">האם אתם גוררים אופנועים?</h3>
-                <p>השירות שלנו מתמקד במשאיות, רכבים מסחריים ורכבים פרטיים בלבד, איננו מבצעים גרירת אופנועים.</p>
+                <p>לא, אנו מתמקדים אך ורק במתן שירותי גרירה וחילוץ למשאיות, רכבים מסחריים ורכבים פרטיים. אנו לא מבצעים גרירת אופנועים.</p>
               </div>
             </div>
           </section>
