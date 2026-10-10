@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר בכביש 4 ליד קריית מוצקין - שירות מהיר תוך 30 דק'",
-  description: "נתקעתם בכביש 4 ליד קריית מוצקין? זקוקים לגרר? אנו מספקים שירותי גרירה מקצועיים 24/7 לרכבים פרטיים ומסחריים. מחיר הוגן והגעה מהירה. התקשרו עכשיו!",
+  title: "גרר בכביש 4 ליד קריית מוצקין | שירות חילוץ מהיר 24/7",
+  description: "נתקעתם בכביש 4 ליד קריית מוצקין? זקוקים לגרר? אנו מספקים שירותי גרירה מקצועיים 24/7. הגעה מהירה תוך 30 דקות, מחיר הוגן ושירות אדיב. התקשרו עכשיו לחילוץ!",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-service-breakdown-route-4-near-kiryat-motzkin"
   }
@@ -17,7 +17,7 @@ export default function Page() {
     "@type": "AutoTowing",
     "name": "שירותי גרירה וחילוץ חיפה והקריות",
     "areaServed": "Haifa and Krayot",
-    "priceRange": "$",
+    "priceRange": "$$,$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -43,7 +43,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה וחילוץ בכביש 4 ליד קריית מוצקין</h1>
           <p className="text-lg mb-8">
-            נתקעתם עם הרכב בכביש 4? אנו זמינים עבורכם 24 שעות ביממה עם שירות גרירה מקצועי. במידה ואתם זקוקים לחילוץ חירום באזור, אנו ממליצים גם לעיין בשירותי ה-<Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="underline">emergency towing road 22 kiryat ata interchange</Link> למקרה שאתם באזור מחלף קריית אתא.
+            נתקעתם עם הרכב בכביש 4? אנו זמינים עבורכם 24 שעות ביממה עם שירות גרירה מקצועי ומיומן. אנו מתמחים בחילוץ רכבים פרטיים ומסחריים. במידה ואתם זקוקים לסיוע באזור סמוך, אנו ממליצים גם על שירותי <Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="underline">emergency towing road 22 krayot</Link> הזמינים לכם לכל אורך עוקף קריות.
             <br /><strong>שימו לב: שירותינו מיועדים לרכבים פרטיים ומסחריים בלבד.</strong>
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -64,8 +64,8 @@ export default function Page() {
           <ul className="space-y-4">
             <li>✓ זמינות 24/7 לכל קריאה בכביש 4 ובאזור הקריות</li>
             <li>✓ מחירים הוגנים ושקיפות מלאה מול הלקוח</li>
-            <li>✓ התמחות ב-<Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-400">affordable towing check post haifa</Link></li>
-            <li>✓ פתרונות מהירים לרכבים חשמליים כולל <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-400">electric vehicle flat battery towing route 22 krayot</Link></li>
+            <li>✓ פתרונות מהירים לנהגים עם <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-400">affordable towing check post haifa</Link></li>
+            <li>✓ שירות מומחה עבור <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-400">emergency light truck towing route 22 krayot bypass</Link></li>
           </ul>
         </div>
       </section>
@@ -76,11 +76,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold">מהו זמן ההגעה הממוצע בכביש 4 ליד קריית מוצקין?</h3>
-              <p>אנו מגיעים לכל קריאה באזור בתוך כ-30 דקות בממוצע, בהתאם לעומסי התנועה.</p>
+              <p>אנו מגיעים לכל קריאה באזור בתוך כ-30 דקות בממוצע, בהתאם לעומסי התנועה באזור הקריות.</p>
             </div>
             <div>
-              <h3 className="font-bold">האם אתם קונים רכבים ישנים לפירוק?</h3>
-              <p>כן, אנו מציעים שירות של <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="text-blue-600">buy cars for scrap haifa krayot</Link> לתושבי האזור המעוניינים בפינוי מהיר.</p>
+              <h3 className="font-bold">מה לעשות אם הרכב שבק חיים והוא גורם לעיכוב בתנועה?</h3>
+              <p>במקרה של רכב תקוע, יש להפעיל אורות מהבהבים ולצאת בבטחה מהרכב לכיוון מעקה הבטיחות. לאחר מכן, פנו אלינו ואנו נגיע במהירות. במידה ומדובר ברכב ישן שלא שווה לתקן, אנו מציעים גם שירותי <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-600">car scrapping haifa krayot</Link> מקצועיים.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">האם אתם מספקים פתרונות גרירה גם לבעיות של פנצ'ר?</h3>
+              <p>כן, אנו נותנים מענה מלא גם למצבים אלו. ראו מידע נוסף על <Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-600">fast towing flat tire road 22 check post</Link> אם אתם נמצאים בקרבת צומת הצ'ק פוסט.</p>
             </div>
           </div>
         </div>

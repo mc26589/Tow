@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "פינוי רכב לפירוק בקרית ים | פינוי מיידי 24/7 - שירות אמין",
-  description: "צריכים פינוי רכב לפירוק בקרית ים? פינוי מהיר לכל סוגי הרכבים במזומן ובמחיר הוגן. שירות זמין 24/7 לתושבי הקריות. התקשרו עכשיו לפינוי מיידי!",
+  title: "פינוי רכב לפירוק בקרית ים | הגעה תוך 30 דקות | תשלום במזומן",
+  description: "פינוי רכב לפירוק בקרית ים 24/7. משלמים במזומן על רכבים ישנים, לאחר תאונה או ללא טסט. שירות מהיר, אמין ומקצועי לתושבי הקריות. התקשרו עכשיו לפינוי מיידי!",
   alternates: {
     canonical: "/areas/haifa-general/junk-car-removal-kiryat-yam-immediate-pickup"
   }
@@ -33,7 +33,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">פינוי רכב לפירוק בקרית ים – הגעה מהירה 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם עם רכב ישן? זקוקים לפינוי רכב לפירוק בקרית ים? אנו מתמחים בפינוי מהיר של רכבים, מסחריים ורכבי שטח. הגעה מהירה לכל שכונות העיר ללא עיכובים.</p>
+          <p className="text-xl mb-8">נתקעתם עם רכב ישן? זקוקים לפינוי רכב לפירוק בקרית ים? אנו מתמחים בפינוי מהיר של רכבים פרטיים ומסחריים במזומן. הגעה מהירה לכל שכונות העיר ללא עיכובים.</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="קרית ים" />
             <a 
@@ -47,32 +47,32 @@ export default function Page() {
       </section>
 
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">למה לבחור בשירות פינוי הרכב שלנו?</h2>
+        <h2 className="text-3xl font-bold mb-6">למה לבחור בשירות פינוי הרכב שלנו בקרית ים?</h2>
         <ul className="space-y-4 text-lg mb-8">
-          <li>✓ <strong>זמינות 24/7</strong> – אנחנו כאן עבורכם בכל שעה בקרית ים.</li>
+          <li>✓ <strong>זמינות מלאה</strong> – אנחנו כאן עבורכם בכל שעה בקרית ים.</li>
           <li>✓ <strong>פינוי מהיר</strong> – צוות מיומן המגיע לכל נקודה בעיר במהירות.</li>
-          <li>✓ <strong>מחיר הוגן</strong> – אנו משלמים מחיר הוגן עבור הרכב שלך במקום.</li>
+          <li>✓ <strong>מחיר הוגן</strong> – אנו משלמים מחיר הוגן עבור הרכב שלכם במקום במזומן.</li>
           <li>✓ <strong>שירות מקצועי</strong> – גרירה זהירה ובטוחה לכל סוגי הרכבים.</li>
         </ul>
         <p className="text-neutral-300">
-          אנו מספקים מענה מקיף לתושבי האזור, לרבות <Link href="/areas/haifa-general/buying-cars-for-scrap-haifa-krayot" className="text-blue-400 underline">קניית רכבים לפירוק באזור חיפה והקריות</Link>. זקוקים לעזרה בדרכים? אנו מציעים גם <Link href="/areas/haifa-general/cheap-towing-kiryat-yam-to-kiryat-motzkin" className="text-blue-400 underline">שירותי גרירה זולים מקרית ים לקרית מוצקין</Link> וסיוע בדרכים. שימו לב: שירותי הגרירה שלנו אינם מיועדים לאופנועים, אלא לרכבים פרטיים ומסחריים בלבד.
+          אנו מספקים מענה מקיף לתושבי האזור, לרבות <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-400 underline">קניית רכבים לפירוק באזור חיפה והקריות</Link>. זקוקים לעזרה בדרכים? אנו מציעים גם <Link href="/areas/haifa-general/scrap-car-removal-kiryat-haim-cash" className="text-blue-400 underline">פינוי רכבים לפירוק בקרית חיים</Link> וסיוע בפינוי רכבים מכל סוג. שימו לב: שירותי הגרירה שלנו מיועדים לרכבים פרטיים ומסחריים בלבד.
         </p>
       </section>
 
       <section className="py-16 bg-neutral-900 container mx-auto px-4 rounded-xl">
-        <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על פינוי רכבים</h2>
+        <h2 className="text-3xl font-bold mb-8">שאלות נפוצות על פינוי רכבים בקרית ים</h2>
         <div className="space-y-6">
           <div>
             <h3 className="text-xl font-semibold">האם אתם קונים רכבים ללא טסט?</h3>
-            <p className="text-neutral-400">כן, אנו רוכשים ומפנים רכבים ללא טסט, רכבים מושבתים אחרי תאונות, ורכבים ישנים שאינם נוסעים.</p>
+            <p className="text-neutral-400">כן, אנו רוכשים ומפנים רכבים ללא טסט, רכבים מושבתים אחרי תאונות, ורכבים ישנים שאינם נוסעים במחיר הוגן.</p>
           </div>
           <div>
             <h3 className="text-xl font-semibold">איך נקבע המחיר לפינוי הרכב?</h3>
-            <p className="text-neutral-400">המחיר נקבע בהתאם לסוג הרכב, הדגם, המצב המכני והקרבה לאזור הפינוי בקרית ים. אנו מתחייבים להצעת מחיר הוגנת ושקופה.</p>
+            <p className="text-neutral-400">המחיר נקבע בהתאם לסוג הרכב, הדגם, המצב המכני והקרבה לאזור הפינוי בקרית ים. אנו מתחייבים להצעת מחיר שקופה ללא הפתעות.</p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">האם אתם נותנים שירות גם באזורי התעשייה?</h3>
-            <p className="text-neutral-400">בהחלט. הצוות שלנו מגיע לכל שכונות קרית ים ולאזורי התעשייה הסמוכים כדי לפנות את הרכב בצורה בטוחה ומהירה.</p>
+            <h3 className="text-xl font-semibold">האם אתם מגיעים לכל חלקי קרית ים?</h3>
+            <p className="text-neutral-400">בהחלט. הצוות שלנו פרוס באזור ומגיע לכל רחוב ושכונה בקרית ים וסביבתה בזמן קצר, גם בשעות הלילה.</p>
           </div>
         </div>
       </section>

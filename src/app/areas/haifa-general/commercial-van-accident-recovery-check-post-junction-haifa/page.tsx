@@ -8,14 +8,14 @@ const SLUG = "commercial-van-accident-recovery-check-post-junction-haifa";
 const COMPANY_NAME = "גרר מפרץ אקספרס";
 
 export const metadata: Metadata = {
-  title: "חילוץ ואן מסחרי בצומת צ'ק פוסט חיפה | שירות מהיר תוך 30 דקות",
-  description: "נתקעתם עם ואן מסחרי בצומת צ'ק פוסט? גרר מפרץ אקספרס זמינים 24/7 לחילוץ מהיר, בטוח ובמחיר הוגן. התקשרו עכשיו להזמנת גרר מקצועי!",
+  title: "חילוץ ואן מסחרי בצומת צ'ק פוסט חיפה | הגעה מהירה 24/7",
+  description: "נתקעתם עם רכב מסחרי בצומת צ'ק פוסט? גרר מפרץ אקספרס זמינים 24/7 לחילוץ ואן מהיר, בטוח ובמחיר הוגן. התקשרו עכשיו להזמנת גרר מקצועי!",
   alternates: {
     canonical: `https://www.yourdomain.com/areas/haifa-general/${SLUG}`,
   },
   openGraph: {
-    title: H1_TITLE,
-    description: "שירותי גרירה וחילוץ לרכבים מסחריים בצומת צ'ק פוסט חיפה. זמינות 24/7, מחירים הוגנים ושירות מקצועי. חייגו אלינו עכשיו!",
+    title: "חילוץ ואן מסחרי בצומת צ'ק פוסט חיפה | שירות 24/7",
+    description: "שירותי גרירה לרכבים מסחריים בצומת צ'ק פוסט חיפה והסביבה. זמינות 24/7, מחירים הוגנים ושירות מקצועי לכל סוגי הרכבים המסחריים. חייגו עכשיו!",
     siteName: COMPANY_NAME,
     locale: 'he_IL',
     type: 'website',
@@ -28,7 +28,7 @@ const jsonLd = {
   "name": COMPANY_NAME,
   "description": "שירותי חילוץ וגרירה 24/7 לרכבים מסחריים לאחר תאונה או תקלה בצומת צ'ק פוסט חיפה.",
   "telephone": BUSINESS_INFO.phone,
-  "priceRange": "החל מ-250 ש" + "ח",
+  "priceRange": "החל מ-250 שקלים",
   "areaServed": { "@type": "Place", "name": "חיפה והצפון" },
   "openingHours": "Mo-Su 00:00-23:59"
 };
@@ -55,7 +55,7 @@ export default function Page() {
 
       <section className="container mx-auto p-4 py-12">
         <p className="text-lg mb-6 leading-relaxed text-gray-800">
-          צומת צ'ק פוסט בחיפה הוא אחד הצמתים העמוסים ביותר בישראל. אם נתקעתם עם רכב מסחרי, אנו מציעים שירות גרירה מקצועי בצומת צ'ק פוסט כדי לפנות אתכם בבטחה מהכביש הסואן. אנו ערוכים למתן פתרונות מהירים גם במקרים של <Link href="/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange" className="text-blue-600 underline">גרירת חירום בכביש 22 ומחלף קריית אתא</Link>. בנוסף, במידה ואתם זקוקים לטיפול ברכב חשמלי תקול באזור, ניתן לקבל אצלנו שירות <Link href="/areas/haifa-general/affordable-electric-car-towing-check-post-krayot" className="text-blue-600 underline">גרירה משתלמת לרכבים חשמליים בצ'ק פוסט והקריות</Link>.
+          צומת צ'ק פוסט בחיפה הוא אחד הצמתים העמוסים ביותר בישראל. אם נתקעתם עם רכב מסחרי, אנו מציעים שירות <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-600 underline">גרירה מקצועי בצומת צ'ק פוסט</Link> כדי לפנות אתכם בבטחה מהכביש הסואן. אנו ערוכים למתן פתרונות מהירים גם במקרים של <Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="text-blue-600 underline">גרירת חירום בכביש 22 ומחלף קריית אתא</Link>. בנוסף, במידה ואתם זקוקים לטיפול ברכב חשמלי תקול, אנו מציעים <Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-600 underline">שירותי גרירה ותיקון פנצ'ר בצ'ק פוסט</Link>.
         </p>
         
         <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm mb-12">
@@ -71,7 +71,7 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold text-lg">האם אתם מספקים חילוץ בשטח?</h3>
-              <p className="text-gray-700">כן, במידה ונתקעתם בשטח או מחוץ לכביש הסלול באזור הצפון, אנו מציעים שירות <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-600 underline">חילוץ רכב מבוץ באזור יערות הכרמל ונשר</Link> במקצועיות רבה.</p>
+              <p className="text-gray-700">כן, במידה ונתקעתם בשטח או מחוץ לכביש הסלול באזור הצפון, אנו מציעים שירות <Link href="/areas/haifa-general/emergency-car-rescue-mud-carmel-forest" className="text-blue-600 underline">חילוץ רכב מבוץ באזור יערות הכרמל ונשר</Link> במקצועיות רבה.</p>
             </div>
           </div>
         </div>

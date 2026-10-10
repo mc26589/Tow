@@ -43,7 +43,7 @@ export default function Page() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרר מהיר וטיפול בפנצ'ר בכביש 22 מחלף צ'ק פוסט</h1>
           <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            נתקעתם עם פנצ'ר בכביש 22 באזור מחלף צ'ק פוסט? אנו מבינים את הדחיפות והסכנה בעצירה בדרך מהירה. הצוות המקצועי שלנו מתמחה בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 ומגיע אליכם במהירות. אנו מציעים גם <Link href="/areas/haifa-general/fast-towing-services-road-22-krayot-bypass" className="underline">שירותי גרירה מהירים בכביש 22 עוקף קריות</Link> לכל מי שזקוק לסיוע מקצועי.
+            נתקעתם עם פנצ'ר בכביש 22 באזור מחלף צ'ק פוסט? אנו מבינים את הדחיפות והסכנה בעצירה בדרך מהירה. הצוות המקצועי שלנו מתמחה בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 ומגיע אליכם במהירות. זקוקים לחלופה נוספת? אנו מציעים גם <Link href="/areas/haifa-general/fast-towing-road-22-krayot" className="underline">שירותי גרירה מהירים בכביש 22 עוקף קריות</Link> לכל מי שזקוק לסיוע מקצועי.
           </p>
           
           <div className="flex flex-wrap gap-4">
@@ -65,7 +65,7 @@ export default function Page() {
           <li>✅ <strong>הגעה מהירה:</strong> פריסה רחבה המבטיחה זמן הגעה קצר לצ'ק פוסט.</li>
           <li>✅ <strong>מקצועיות:</strong> טיפול בטוח ברכבכם ללא נזקים.</li>
           <li>✅ <strong>מחירים הוגנים:</strong> <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="underline text-blue-600">שירותי גרירה במחיר משתלם בצ'ק פוסט</Link> ושקיפות מלאה.</li>
-          <li>✅ <strong>ציוד מתקדם:</strong> מגוון פתרונות כגון <Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="underline">גרירה בגרר משטח</Link> במחיר אטרקטיבי.</li>
+          <li>✅ <strong>פתרונות מתקדמים:</strong> אנו מספקים מענה גם במקרים של <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="underline">גרירת רכב מסחרי קל</Link> באזור הצ'ק פוסט.</li>
         </ul>
 
         <div className="bg-gray-50 p-8 rounded-xl">
@@ -77,7 +77,7 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold text-lg">מה עושים אם מדובר ברכב שטח שנתקע?</h3>
-              <p>אנו ערוכים לטיפול גם במקרים מורכבים יותר, כולל <Link href="/areas/haifa-general/jeep-towing-after-accident-check-post-haifa" className="text-blue-600">גרירת רכבי שטח לאחר תאונה</Link> או תקלה טכנית.</p>
+              <p>אנו ערוכים לטיפול גם במקרים מורכבים יותר, כולל <Link href="/areas/haifa-general/4x4-vehicle-stuck-in-mud-carmel-forest" className="text-blue-600">חילוץ רכבי שטח</Link> או תקלה טכנית מורכבת.</p>
             </div>
             <div>
               <h3 className="font-bold text-lg">האם אתם נותנים שירות לאופנועים?</h3>

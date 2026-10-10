@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר זול בצ\'ק פוסט חיפה | הגעה מהירה ב-30 דקות | 24/7",
-  description: "נתקעתם באזור הצ\'ק פוסט? שירותי גרר זול בחיפה 24/7. מחיר הוגן, שירות אמין לרכבים פרטיים ומסחריים. התקשרו עכשיו לחילוץ מהיר!",
+  title: "גרר זול בצק פוסט חיפה | הגעה מהירה תוך 30 דקות | 24/7",
+  description: "נתקעתם בצק פוסט? מחפשים גרר זול ואמין? אנו מספקים שירותי גרירה מקצועיים 24/7 לרכבים ורכבים מסחריים. הגעה מהירה, מחיר הוגן ושירות ללא פשרות. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/cheap-towing-check-post-haifa"
   }
@@ -15,7 +15,7 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה חיפה והקריות - צ\'ק פוסט",
+    "name": "שירותי גרירה חיפה והקריות - צק פוסט",
     "areaServed": "Haifa and Krayot",
     "priceRange": "₪₪",
     "openingHoursSpecification": {
@@ -41,10 +41,10 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר זול לצ\'ק פוסט חיפה – חילוץ מהיר 24/7</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר זול לצק פוסט חיפה – חילוץ מהיר 24/7</h1>
           <p className="text-lg md:text-xl mb-8">
-            נתקעתם באזור הצ\'ק פוסט או על ציר כביש 22? אנו כאן כדי לסייע לכם במהירות ובמחיר הוגן. 
-            אנו מתמחים בגרירת רכבים פרטיים ומסחריים. זקוקים לסיוע דחוף בדרך? ראו את שירותי ה-<Link href="/areas/haifa-general/towing-road-22-krayot-bypass" className="text-yellow-300 underline font-semibold">גרירה דחופה בכביש 22</Link> שלנו.
+            נתקעתם באזור הצק פוסט או על ציר כביש 22? אנו כאן כדי לסייע לכם במהירות ובמחיר הוגן. 
+            אנו מתמחים בגרירת רכבים פרטיים ומסחריים. זקוקים לסיוע דחוף בדרך? ראו את שירותי ה-<Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="text-yellow-300 underline font-semibold">גרירה דחופה בכביש 22</Link> שלנו.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -60,14 +60,14 @@ export default function Page() {
 
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו באזור הצ\'ק פוסט?</h2>
+          <h2 className="text-3xl font-bold mb-6">למה לבחור בנו באזור הצק פוסט?</h2>
           <ul className="space-y-4 text-gray-300">
-            <li>✓ הגעה מהירה לצ\'ק פוסט, דרך 22 והסביבה.</li>
+            <li>✓ הגעה מהירה לצק פוסט, דרך 22 והסביבה.</li>
             <li>✓ מחירים הוגנים ושקופים - ללא הפתעות בחיוב.</li>
             <li>✓ זמינות מלאה 24/7 לחילוץ רכבים תקועים.</li>
-            <li>✓ שירות אמין הכולל <Link href="/areas/haifa-general/cheap-towing-services-check-post" className="text-blue-400 underline">גרר זול בצק פוסט</Link> מורשה.</li>
-            <li>✓ פתרונות מתקדמים עבור גרירת רכב חשמלי עם מצבר ריק.</li>
-            <li>✓ שירותים נוספים כגון <Link href="/areas/haifa-general/cash-for-junk-cars-check-post-haifa" className="text-blue-400 underline">פינוי רכבים לפירוק בצ\'ק פוסט</Link>.</li>
+            <li>✓ שירות אמין הכולל <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-400 underline">גרר זול בצק פוסט</Link> מורשה.</li>
+            <li>✓ שירות מיוחד לתיקון דרך קל או <Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-400 underline">החלפת גלגל בכביש 22</Link>.</li>
+            <li>✓ שירותים נוספים כגון <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-400 underline">פינוי רכבים לפירוק בצק פוסט</Link>.</li>
           </ul>
         </div>
       </section>
@@ -77,16 +77,16 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-8">שאלות נפוצות (FAQ)</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-xl">מה זמן ההגעה המשוער לצומת הצ\'ק פוסט?</h3>
+              <h3 className="font-bold text-xl">מה זמן ההגעה המשוער לצומת הצק פוסט?</h3>
               <p className="text-gray-700">בדרך כלל אנו מגיעים תוך 30-45 דקות, תלוי בעומסי התנועה בציר הראשי ובשעה ביום.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם אתם קונים רכבים תקועים במקום?</h3>
-              <p className="text-gray-700">כן, אנו מספקים פתרונות פינוי מיידיים. אם הרכב הושבת, ניתן לבדוק איתנו <Link href="/areas/haifa-general/car-scrapping-haifa-krayot-immediate-removal" className="text-blue-600 underline">פינוי רכבים לפירוק בחיפה</Link> בצורה מקצועית.</p>
+              <h3 className="font-bold text-xl">האם אתם מציעים שירות גם לאופנועים?</h3>
+              <p className="text-gray-700">כן, אנו מספקים <Link href="/areas/haifa-general/heavy-motorcycle-breakdown-towing-route-22-check-post-haifa" className="text-blue-600 underline">גרירת אופנועים בצק פוסט</Link> בצורה בטוחה ומקצועית.</p>
             </div>
             <div>
               <h3 className="font-bold text-xl">האם אתם מגיעים גם לקריות הסמוכות?</h3>
-              <p className="text-gray-700">בהחלט. אנו מספקים שירותי <Link href="/areas/haifa-general/cheap-towing-kiryat-motzkin-fair-price" className="text-blue-600 underline">גרר זול בקרית מוצקין</Link> ובכל אזור הקריות.</p>
+              <p className="text-gray-700">בהחלט. אנו מספקים שירותי גרירה מקיפים לכל אזור חיפה, הקריות וציר כביש 22.</p>
             </div>
           </div>
         </div>

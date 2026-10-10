@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'גרר בחורב ואחוזה, חיפה | הגעה תוך 30 דקות | מחיר הוגן',
-  description: 'נתקעתם עם הרכב בחורב או אחוזה? שירותי גרירה מקצועיים 24/7 לכל סוגי הרכבים. הגעה מהירה, מחיר הוגן ושקיפות מלאה. התקשרו עכשיו!',
+  description: 'נתקעתם עם הרכב באזור חורב או אחוזה? שירותי גרירה מקצועיים 24/7. הגעה מהירה, מחיר הוגן ושירות אדיב. לחצו כאן להזמנת גרר מהירה!',
   alternates: {
     canonical: '/areas/haifa-general/emergency-towing-horev-ahuza-haifa',
   },
@@ -62,9 +62,10 @@ export default function Page() {
         <h2 className="text-3xl font-bold mb-6">למה לבחור בשירות הגרירה שלנו בחורב-אחוזה?</h2>
         <ul className="space-y-4 text-lg mb-8">
           <li>✓ הגעה מהירה לכל נקודה בציר חורב-אחוזה והסביבה הקרובה.</li>
-          <li>✓ צוות מקצועי ומנוסה לכל סוגי הרכבים (פרטי ורכבי שטח).</li>
+          <li>✓ צוות מקצועי ומנוסה לכל סוגי הרכבים.</li>
           <li>✓ מומחיות בחילוצי שטח בקרבת העיר: <Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa" className="text-blue-600 underline">חילוץ רכבי שטח באזור דניה והכרמל</Link>.</li>
-          <li>✓ סיוע מקצועי גם במצבים מורכבים כמו <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-600 underline">חילוץ רכבים מהבוץ ביערות הכרמל</Link>.</li>
+          <li>✓ סיוע מקצועי גם במצבים מורכבים כמו <Link href="/areas/haifa-general/emergency-car-rescue-mud-carmel-forest" className="text-blue-600 underline">חילוץ רכבים מהבוץ ביערות הכרמל</Link>.</li>
+          <li>✓ שירות ייעודי עבור <Link href="/areas/haifa-general/heavy-motorcycle-towing-ahuza-haifa" className="text-blue-600 underline">גרירת אופנועים כבדים באזור אחוזה</Link> על ידי צוות מיומן.</li>
           <li>✓ מחירים הוגנים ללא הפתעות – שקיפות היא המוטו שלנו.</li>
         </ul>
       </section>
@@ -79,11 +80,15 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold text-xl">האם אתם מבצעים חילוצים גם מאזורים מרוחקים יותר בכרמל?</h3>
-              <p>כן, אנו ערוכים למתן שירותי גרירה וחילוץ לכל אזורי חיפה והסביבה, כולל <Link href="/areas/haifa-general/mud-rescue-4x4-stuck-carmel-forest-haifa-university" className="text-blue-600 underline">חילוץ רכבים תקועים באזור אוניברסיטת חיפה</Link>.</p>
+              <p>כן, אנו ערוכים למתן שירותי גרירה וחילוץ לכל אזורי חיפה והסביבה, לרבות <Link href="/areas/haifa-general/emergency-tow-stuck-car-stella-maris-haifa-hills" className="text-blue-600 underline">חילוץ רכבים תקועים באזור סטלה מאריס</Link>.</p>
             </div>
             <div>
               <h3 className="font-bold text-xl">האם השירות זמין גם בסופי שבוע?</h3>
-              <p>בוודאי, אנו מספקים שירותי גרירה 24 שעות ביממה, 7 ימים בשבוע, לכל אזור חיפה והצפון.</p>
+              <p>בוודאי, אנו מספקים שירותי גרירה 24 שעות ביממה, שבעה ימים בשבוע, לכל אזור חיפה והצפון.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">האם ניתן לפנות רכב שאינו נוסע לצורך פירוק?</h3>
+              <p>בהחלט. אנו מספקים מענה מקצועי גם עבור <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-600 underline">פירוק רכבים בחיפה והקריות</Link> לכל סוגי הרכבים הישנים.</p>
             </div>
           </div>
         </div>

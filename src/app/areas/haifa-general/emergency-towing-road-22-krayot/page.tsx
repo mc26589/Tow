@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בכביש 22 (עוקף קריות) - הגעה תוך 30 דקות | 24/7",
-  description: "נתקעתם בכביש 22? שירות גרירה מהיר ומקצועי לעוקף קריות 24/7. מחיר הוגן, הגעה מהירה לכל נקודה בדרך. התקשרו עכשיו לקבלת שירות חילוץ בטוח!",
+  title: "גרר בכביש 22 (עוקף קריות) - הגעה מהירה ב-30 דקות | 24/7",
+  description: "נתקעתם בעוקף קריות? שירותי גרירה מקצועיים בכביש 22 זמינים 24/7. מחיר הוגן, הגעה מהירה לכל נקודה בדרך. התקשרו עכשיו לקבלת סיוע מידי!",
   alternates: {
     canonical: "/areas/haifa-general/emergency-towing-road-22-krayot",
   },
@@ -42,7 +42,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר דחוף לכביש 22 - עוקף קריות</h1>
-          <p className="text-xl mb-8">נתקעתם בדרך? אנו מספקים שירותי גרירה מקצועיים ומהירים לאורך כביש 22. שירות בטוח לכל סוגי הרכבים הפרטיים והמסחריים עם הגעה מהירה.</p>
+          <p className="text-xl mb-8">נתקעתם בדרך? אנו מספקים שירותי גרירה מקצועיים ומהירים לאורך כביש 22. שירות בטוח לכל סוגי הרכבים הפרטיים והמסחריים עם זמינות מלאה סביב השעון.</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a 
@@ -61,26 +61,22 @@ export default function Page() {
           <li>✓ הגעה מהירה לכל נקודה בכביש 22 (עוקף קריות) - חוסכים לכם זמן המתנה יקר.</li>
           <li>✓ שירות 24/7 ללא הפסקה, כולל סופי שבוע וחגים.</li>
           <li>✓ מחירים הוגנים ושקופים – מקבלים הצעת מחיר כבר בשיחת הטלפון.</li>
-          <li>✓ שירות בסטנדרט גבוה: <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-600 underline">גרר 24 7 עוקף קריות מחיר הוגן</Link> לכל דורש.</li>
+          <li>✓ שירות בסטנדרט גבוה: <Link href="/areas/haifa-general/fast-towing-road-22-krayot" className="text-blue-600 underline">גרר מהיר בכביש 22</Link> לכל רכב פרטי.</li>
         </ul>
 
         <h2 className="text-3xl font-bold mb-6">שאלות נפוצות על גרירה בכביש 22</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="font-bold text-xl">כמה זמן לוקח לגרר להגיע לכביש 22?</h3>
-            <p>אנו פרוסים באזור הקריות ומבטיחים זמן הגעה מהיר ככל הניתן בהתאם לעומסי התנועה.</p>
+            <h3 className="font-bold text-xl">האם אתם מציעים גרירה לרכבים מסחריים בכביש 22?</h3>
+            <p>כן, אנו מציעים <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירת רכב מסחרי קל בכביש 22</Link> בצורה בטוחה ומקצועית.</p>
           </div>
           <div>
-            <h3 className="font-bold text-xl">נתקעתי עם רכב חשמלי בכביש 22, האם אתם יכולים לעזור?</h3>
-            <p>בהחלט, אנו מציעים שירות מיוחד עבור <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">electric vehicle flat battery towing route 22 krayot</Link> לכל סוגי הרכבים החשמליים.</p>
+            <h3 className="font-bold text-xl">האם אתם מספקים שירות גרירה במקרה של תקר בגלגל?</h3>
+            <p>בהחלט, אנו מספקים <Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-krayot" className="text-blue-600 underline">שירות גרירה עקב תקר בכביש 22</Link> ופתרונות עזרה ראשונה בדרך.</p>
           </div>
           <div>
-            <h3 className="font-bold text-xl">האם אתם מציעים חילוץ אם נתקעתי באזור צ'ק פוסט בדרך לקריות?</h3>
-            <p>כן, אנו מספקים גם שירותי <Link href="/areas/haifa-general/towing-after-accident-check-post-haifa" className="text-blue-600 underline">towing after accident check post haifa</Link> לנהגים הזקוקים לחילוץ מהיר באזור זה.</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-xl">האם אתם גוררים אופנועים?</h3>
-            <p>אנו מתמחים בגרירת רכבים פרטיים ומסחריים בלבד. לקבלת שירות לאופנועים, אנו ממליצים לחפש בעלי מקצוע המתמחים בכך.</p>
+            <h3 className="font-bold text-xl">האם ניתן לקבל שירות באזור צ\'ק פוסט?</h3>
+            <p>כן, אנו פרוסים גם באזור זה ומציעים <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה משתלמים בצ\'ק פוסט</Link> לכל מי שנתקע בדרך לקריות.</p>
           </div>
         </div>
 
