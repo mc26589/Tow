@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר ג'יפים בצ'ק פוסט חיפה - שירות מהיר ומקצועי 24/7",
-  description: "נתקעתם עם הג'יפ לאחר תאונה בצ'ק פוסט חיפה? גרר חירום זמין 24/7 להגעה מהירה ומחיר הוגן. פינוי בטוח לכל היעדים. התקשרו עכשיו לקבלת סיוע מיידי!",
-  keywords: "גרר ג'יפים, גרר לאחר תאונה, צ'ק פוסט חיפה, גרר חיפה, גרר קריות, גרר 24/7, חילוץ ג'יפים, גרר רכבי שטח",
+  title: "גרר ג'יפים בצ'ק פוסט חיפה | הגעה תוך 30 דקות | 24/7",
+  description: "נתקעתם עם הג'יפ לאחר תאונה בצ'ק פוסט חיפה? גרר חירום מקצועי זמין 24/7. שירות מהיר, מחיר הוגן וטיפול בטוח לרכב שטח. התקשרו עכשיו לסיוע מיידי!",
+  keywords: "גרר ג'יפים, גרר לאחר תאונה, צ'ק פוסט חיפה, גרר חיפה, חילוץ ג'יפים, גרר 24/7, פינוי רכב לאחר תאונה",
   alternates: {
     canonical: "https://www.yourdomain.com/areas/haifa-general/jeep-towing-after-accident-check-post-haifa",
   },
@@ -42,9 +42,9 @@ export default function Page() {
             גרר ג'יפים לאחר תאונה בצ'ק פוסט חיפה והקריות
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-            זקוקים לשירותי גרר מהירים לג'יפ שלכם? אנו מספקים מענה חירום 24/7 באזור צ'ק פוסט. אם אתם זקוקים גם ל-
-            <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="underline">שירותי גרר במחיר נוח בצ'ק פוסט</Link> או חילוץ בכבישים מהירים כמו ה-
-            <Link href="/areas/haifa-general/fast-towing-services-road-22-krayot-bypass" className="underline">גרר מהיר בכביש 22 עוקף קריות</Link>, אנו כאן עבורכם.
+            זקוקים לשירותי גרר מהירים לג'יפ שלכם? אנו מספקים מענה חירום 24/7. אם אתם זקוקים ל- 
+            <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="underline">שירותי גרר במחיר נוח בצ'ק פוסט</Link> או עזרה מקצועית כמו 
+            <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="underline">חילוץ רכב מתעלה בכביש 4</Link>, צוות הגרר המומחה שלנו כאן עבורכם.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -68,11 +68,11 @@ export default function Page() {
             </div>
             <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-3 text-blue-400">מומחיות בדרכים</h3>
-              <p className="text-gray-300">מתמחים בחילוץ גם בתנאי שטח קשים, בדומה לשירותי <Link href="/areas/haifa-general/emergency-mud-rescue-carmel-forest-haifa" className="text-blue-300 underline">חילוץ מבוץ באזור הכרמל</Link>.</p>
+              <p className="text-gray-300">מתמחים בחילוץ בתנאי שטח מורכבים, בדומה לשירותי <Link href="/areas/haifa-general/4x4-stuck-mud-rescue-carmel-forest-haifa" className="text-blue-300 underline">חילוץ 4x4 בבוץ בכרמל</Link>.</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-3 text-blue-400">ציוד מתקדם</h3>
-              <p className="text-gray-300">ציוד מקצועי לג'יפים ורכבי 4x4 המבטיח הובלה בטוחה ללא נזקים נוספים.</p>
+              <p className="text-gray-300">ציוד מקצועי לג'יפים המבטיח הובלה בטוחה. זקוקים גם ל- <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-300 underline">גרר לאחר תאונה בכביש 22</Link>? הגעתם למקום הנכון.</p>
             </div>
           </div>
         </div>
@@ -81,14 +81,18 @@ export default function Page() {
       <section className="py-12 md:py-16 bg-gray-950 text-white">
         <div className="container mx-auto px-4 text-center">
            <h2 className="text-2xl md:text-4xl font-bold mb-6">שאלות נפוצות</h2>
-           <div className="max-w-2xl mx-auto text-right">
-             <div className="mb-6">
-               <h3 className="font-bold">האם אתם מספקים גרר לאופנועים?</h3>
-               <p>לא, אנו מתמקדים בגרר ג'יפים, רכבים פרטיים ומסחריים בלבד.</p>
+           <div className="max-w-2xl mx-auto text-right space-y-6">
+             <div>
+               <h3 className="font-bold text-lg">האם אתם מפנים רכבים גם מאזור כביש 4?</h3>
+               <p>כן, אנו מבצעים חילוץ וגרר לאורך כל ציר כביש 4, כולל אזור צ'ק פוסט וחיבורים לעוקף קריות.</p>
              </div>
-             <div className="mb-6">
-               <h3 className="font-bold">האם המחיר נקבע לפי מרחק?</h3>
-               <p>המחיר מושפע מהמיקום ומהמרחק ליעד. אנו מקפידים על מחיר הוגן ותחרותי לכל לקוח.</p>
+             <div>
+               <h3 className="font-bold text-lg">האם המחיר לגרירת ג'יפ יקר יותר מרכב רגיל?</h3>
+               <p>גרירת ג'יפים דורשת ציוד מתאים ומומחיות בשינוע רכבי שטח. אנו מתחייבים למחיר הוגן ושקוף ללא הפתעות.</p>
+             </div>
+             <div>
+               <h3 className="font-bold text-lg">האם אתם מציעים שירות גרירה גם לגרט?</h3>
+               <p>אנו מתמקדים בחילוץ וגרירה לאחר תאונות או תקלה. במידה והרכב במצב טוטאל-לוס, אנו יכולים לסייע בהפניה לשירותי <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-300 underline">פירוק רכבים באזור חיפה והקריות</Link>.</p>
              </div>
            </div>
         </div>

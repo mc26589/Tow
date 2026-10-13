@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בצ'ק פוסט חיפה | הגעה תוך 30 דקות | 24/7",
-  description: "נתקעתם עם רכב חשמלי ללא סוללה בצ'ק פוסט? שירות גרירת משטח (Flatbed) מקצועי למניעת נזקים לרכבכם. זמינות 24/7, מחיר הוגן ושירות מהיר. התקשרו עכשיו!",
+  title: "גרירת רכב חשמלי בצ'ק פוסט חיפה | מחיר הוגן | 24/7",
+  description: "נתקעתם עם רכב חשמלי ללא סוללה בצ'ק פוסט? שירות גרירת משטח מקצועי למניעת נזקים. זמינות 24/7, הגעה מהירה ומחיר הוגן. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/flatbed-towing-electric-car-dead-battery-check-post-haifa",
   },
@@ -64,33 +64,33 @@ export default function Page() {
         <p className="mb-6">רכב חשמלי דורש טיפול מיוחד בגלל רגישות מערכת ההנעה. גרירה לא מקצועית עלולה להוביל לנזקים יקרים. אנו משתמשים בציוד מתקדם ובגרר משטח המבטיח העברה בטוחה ומהירה.</p>
         <ul className="list-disc pr-6 space-y-2 mb-6">
           <li>שימוש בגרר משטח בלבד למניעת נזקים למערכת ההנעה החשמלית.</li>
-          <li>זמינות 24/7 באזור חיפה, הצ'ק פוסט, הקריות וצירים מרכזיים כמו <Link href="/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass" className="text-blue-600 underline">כביש 22 עוקף קריות</Link>.</li>
+          <li>זמינות 24/7 באזור חיפה, הצ'ק פוסט, הקריות וצירים מרכזיים כמו <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 underline">כביש 22 עוקף קריות</Link>.</li>
           <li>מומחיות בחילוץ רכבים חשמליים, היברידיים ורכבי שטח.</li>
-          <li>שירות מקצועי הכולל <Link href="/areas/haifa-general/towing-after-accident-check-post-haifa" className="text-blue-600 underline">גרירה לאחר תאונה בצ'ק פוסט</Link>.</li>
+          <li>שירות מהיר ומקצועי הכולל <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="text-blue-600 underline">חילוץ רכבים שירדו לכביש 4 באזור הצ'ק פוסט</Link>.</li>
         </ul>
         
         <div className="p-6 bg-gray-50 rounded-lg mb-10">
           <h3 className="text-xl font-bold mb-3">שירותי גרירה וחילוץ משלימים באזור:</h3>
           <ul className="space-y-2">
-            <li><Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 hover:underline">גרירת רכב חשמלי תקוע בכביש 22</Link></li>
-            <li><Link href="/areas/haifa-general/cheap-car-towing-service-neve-shaanan-haifa" className="text-blue-600 hover:underline">שירות גרירה זול בנווה שאנן</Link></li>
-            <li><Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-600 hover:underline">חילוץ רכבים מבוץ באזור הכרמל והסביבה</Link></li>
+            <li><Link href="/areas/haifa-general/cheap-towing-check-post-kiryat-ata" className="text-blue-600 hover:underline">גרירה זולה בצ'ק פוסט לקרית אתא</Link></li>
+            <li><Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-600 hover:underline">שירותי גרירה במחיר משתלם בצ'ק פוסט</Link></li>
+            <li><Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-600 hover:underline">פינוי רכבים לפירוק באזור חיפה והקריות</Link></li>
           </ul>
         </div>
 
         <h3 className="text-2xl font-bold mt-10 mb-4">שאלות נפוצות</h3>
         <div className="space-y-4">
           <div>
-            <h4 className="font-bold">מה עושים כשהרכב החשמלי נתקע ללא טעינה?</h4>
-            <p>רכבים חשמליים חייבים גרירה בגרר משטח כדי לא לפגוע במנוע החשמלי. אל תנסו לגרור בשיטות מסורתיות - הזמינו גרר משטח מקצועי.</p>
+            <h4 className="font-bold">מדוע חובה להשתמש בגרר משטח לרכב חשמלי?</h4>
+            <p>רכבים חשמליים כוללים מנועים רגישים שעלולים להינזק בגרר רגיל. גרירת משטח (Flatbed) מונעת גלגול של הגלגלים ומגינה על המערכות האלקטרוניות.</p>
           </div>
           <div>
-            <h4 className="font-bold">האם אתם נותנים שירות גם מחוץ לצ'ק פוסט?</h4>
-            <p>כן, אנו פעילים בכל אזור חיפה, הקריות, וניתן להזמין <Link href="/areas/haifa-general/affordable-flatbed-towing-kiryat-bialik-industrial-zone" className="text-blue-600 underline">גרירת משטח בקרית ביאליק</Link> או בכל עיר אחרת בסביבה.</p>
+            <h4 className="font-bold">האם אתם מספקים שירותי חילוץ גם בשטח או בדרכי עפר?</h4>
+            <p>אנו מציעים שירות מקיף כולל <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-600 underline">חילוץ רכבים מבוץ באזור הכרמל והסביבה</Link> באמצעות ציוד מקצועי.</p>
           </div>
           <div>
-            <h4 className="font-bold">מהו טווח המחירים לגרירה?</h4>
-            <p>אנו מציעים מחירים הוגנים ושקופים. המחיר תלוי במרחק הגרירה וסוג הרכב. צרו קשר לקבלת מחיר מדויק ללא עלויות נסתרות.</p>
+            <h4 className="font-bold">איך נקבע המחיר לגרירה באזור חיפה?</h4>
+            <p>המחיר נקבע לפי מרחק הנסיעה, שעת הקריאה וסוג הרכב. אנו מקפידים על הצעת מחיר הוגנת ושקופה ללא הפתעות.</p>
           </div>
         </div>
 

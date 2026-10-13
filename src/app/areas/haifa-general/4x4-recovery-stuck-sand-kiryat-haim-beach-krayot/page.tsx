@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ 4x4 בחוף קרית חיים | תקועים בחול? הגעה מהירה ב-30 דקות',
-  description: 'נתקעתם עם רכב השטח בחולות חוף קרית חיים? צוות חילוץ 4x4 מקצועי זמין 24/7. מחיר הוגן, ציוד חילוץ מתקדם והגעה תוך 30 דקות. התקשרו עכשיו!',
+  title: 'חילוץ 4x4 בחוף קרית חיים | הגעה מהירה ב-30 דקות - שירות 24/7',
+  description: 'נתקעתם בחולות חוף קרית חיים? צוות חילוץ 4x4 מקצועי בדרך אליכם. חילוץ רכב שטח מהיר, מחיר הוגן ושירות 24/7. התקשרו עכשיו להצלה מהירה!',
   alternates: {
     canonical: '/areas/haifa-general/4x4-recovery-stuck-sand-kiryat-haim-beach-krayot',
   },
@@ -43,12 +43,16 @@ export default function Page() {
       <section className="py-12 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">למה לבחור בנו לחילוץ רכב השטח שלכם בקריות?</h2>
-          <p className="mb-6">אנו מתמחים בחילוצי 4x4 מורכבים. אם נתקעתם בחוף קרית חיים, אנו כאן כדי לסייע במהירות. אנו מציעים גם פתרונות נוספים כגון <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-yellow-400 underline">גרירה דחופה בקרית ביאליק</Link> ואף <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-yellow-400 underline">שירותי גרירה מקצועיים באזור צומת צ'ק פוסט</Link>.</p>
+          <p className="mb-6">
+            אנו מתמחים בחילוצי 4x4 מורכבים מחולות רכים. אם נתקעתם בחוף קרית חיים, אנו כאן כדי לסייע במהירות. למי שזקוק לשירותי גרירה משלימים באזור, אנו מציעים גם <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-yellow-400 underline">גרירה במחיר משתלם בצומת צ'ק פוסט</Link> או <Link href="/areas/haifa-general/cheap-towing-kiryat-motzkin-fair-price" className="text-yellow-400 underline">גרירה בקרית מוצקין במחיר הוגן</Link>. 
+            בנוסף, במקרה של תאונה על הצירים הראשיים, זמין עבורכם שירות <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-yellow-400 underline">גרירה לאחר תאונה בכביש 22</Link>.
+          </p>
           <div className="p-6 bg-gray-800 rounded-lg">
             <h3 className="text-2xl font-bold mb-4">שירותים משלימים באזור הקריות</h3>
             <div className="space-y-2">
-              <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="block text-yellow-400 underline">חילוץ וגרירת משאיות קלות בכביש 22 עוקף קריות</Link>
-              <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-haifa" className="block text-yellow-400 underline">חילוץ רכבי 4x4 בבוץ באזור הכרמל</Link>
+              <Link href="/areas/haifa-general/4x4-stuck-mud-rescue-carmel-forest-haifa" className="block text-yellow-400 underline">חילוץ 4x4 בבוץ ביערות הכרמל</Link>
+              <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="block text-yellow-400 underline">חילוץ רכב מתעלה בכביש 4</Link>
+              <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="block text-yellow-400 underline">פירוק רכבים ישנים בחיפה והקריות</Link>
             </div>
           </div>
         </div>
@@ -58,10 +62,10 @@ export default function Page() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-bold mb-8 text-center">שאלות נפוצות על חילוץ רכב בחול</h2>
           <div className="space-y-6">
-            <div><h3 className="font-bold text-yellow-400">תוך כמה זמן תגיעו לחוף קרית חיים?</h3><p>אנו מגיעים תוך 30 עד 45 דקות מרגע הקריאה, בהתאם לעומסי התנועה בצירים המובילים לחוף.</p></div>
+            <div><h3 className="font-bold text-yellow-400">תוך כמה זמן תגיעו לחוף קרית חיים?</h3><p>אנו מגיעים תוך 30 עד 45 דקות מרגע הקריאה, בהתאם לעומסי התנועה באזור הקריות.</p></div>
             <div><h3 className="font-bold text-yellow-400">מה טווח המחירים לחילוץ בחול?</h3><p>המחיר נקבע לפי רמת הקושי, סוג הרכב והציוד הנדרש. אנו מבטיחים מחיר הוגן ושקוף ללא הפתעות.</p></div>
-            <div><h3 className="font-bold text-yellow-400">האם אתם מחלצים רכבים פרטיים?</h3><p>התמחותנו היא בחילוצי שטח מורכבים. אנו מעניקים שירותי גרירה לרכבים פרטיים בכל האזור, אך לא נותנים מענה לאופנועים.</p></div>
-            <div><h3 className="font-bold text-yellow-400">באילו עוד אזורים אתם פועלים?</h3><p>מעבר לחילוצים בחוף, אנו פעילים בכל רחבי חיפה והקריות, כולל אזורי התעשייה וצירים מרכזיים כמו כביש 22.</p></div>
+            <div><h3 className="font-bold text-yellow-400">האם אתם מחלצים רכבים פרטיים?</h3><p>התמחותנו היא בחילוצי שטח מורכבים. אנו מעניקים שירותי גרירה לרכבים פרטיים ורכבי שטח בכל האזור.</p></div>
+            <div><h3 className="font-bold text-yellow-400">האם אתם מחלצים אופנועים בחוף?</h3><p>השירות שלנו מתמקד ברכבי 4x4 ורכבים פרטיים. איננו נותנים מענה לחילוץ אופנועים בחול.</p></div>
           </div>
         </div>
       </section>

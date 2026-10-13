@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "חילוץ שטח 4x4 בבוץ ביערות הכרמל | הגעה תוך 30 דקות!",
-  description: "נתקעתם עם רכב השטח בבוץ ביערות הכרמל? צוות חילוץ 4x4 מקצועי עם כננות בדרך אליכם! שירות מהיר, אמין ומחיר הוגן בכל אזור חיפה. התקשרו עכשיו!",
+  description: "נתקעתם בבוץ ביערות הכרמל? צוות חילוץ 4x4 מקצועי עם כננות בדרך אליכם! שירות מהיר, אמין ומחיר הוגן בכל אזור חיפה. התקשרו עכשיו לחילוץ מיידי!",
   alternates: {
     canonical: "/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa"
   }
@@ -49,13 +49,13 @@ export default function Page() {
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold mb-6">חילוץ 4x4 מקצועי ומיידי בתוואי השטח של הכרמל</h2>
         <p className="mb-4">
-          השטח של יערות הכרמל טומן בחובו סכנות לנהגים. אם שקעתם, אנו מספקים שירותי <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-blue-400 underline">חילוץ רכב מבוץ באזור הכרמל</Link> במהירות. אנו מטפלים גם במקרים מורכבים יותר כמו <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-400 underline">חילוץ רכב מבוץ ביערות הכרמל ונס הר</Link> או צורך ב-<Link href="/areas/haifa-general/cheap-towing-services-check-post" className="text-blue-400 underline">גרירה משתלמת באזור הצ'ק פוסט</Link> במידה והרכב נפגע.
+          השטח של יערות הכרמל טומן בחובו סכנות לנהגים. אם שקעתם, אנו מספקים שירותי <Link href="/areas/haifa-general/off-road-mud-rescue-carmel-private-car" className="text-blue-400 underline">חילוץ רכב מבוץ ביערות הכרמל</Link> במהירות. אנו מטפלים גם במקרים מורכבים יותר כמו <Link href="/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7" className="text-blue-400 underline">חילוץ רכב מבוץ ביערות הכרמל ונס הר</Link> או צורך ב-<Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-400 underline">גרירה משתלמת באזור הצ'ק פוסט</Link> במידה והרכב נפגע.
         </p>
         
         <h3 className="text-2xl font-semibold mt-8 mb-4">למה לבחור בנו לחילוץ שטח בכרמל?</h3>
         <ul className="list-disc list-inside space-y-2 mb-6">
           <li>זמינות מלאה: חילוץ 24/7 לכל סוגי רכבי ה-4x4.</li>
-          <li>ניסיון מקומי: הכרת השבילים של <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-haifa-university" className="text-blue-400 underline">יערות הכרמל ואוניברסיטת חיפה</Link>.</li>
+          <li>ניסיון מקומי: הכרת השבילים של <Link href="/areas/haifa-general/4x4-stuck-mud-rescue-carmel-forest-haifa" className="text-blue-400 underline">חילוץ 4x4 ביערות הכרמל</Link>.</li>
           <li>ציוד מתקדם: שימוש בכננות מקצועיות לחילוץ ללא נזק לשלדה.</li>
         </ul>
         
@@ -64,15 +64,15 @@ export default function Page() {
           <div className="space-y-4">
             <div>
               <p className="font-bold">תוך כמה זמן תגיעו לחלץ אותי?</p>
-              <p className="text-neutral-400">אנו מתחייבים להגעה מהירה, בדרך כלל תוך 30-60 דקות, בהתאם למיקום המדויק.</p>
+              <p className="text-neutral-400">אנו מתחייבים להגעה מהירה, בדרך כלל תוך 30 עד 60 דקות, בהתאם למיקום המדויק שלכם ביערות הכרמל.</p>
             </div>
             <div>
               <p className="font-bold">האם אתם מבצעים גרירה במקרה של נזק?</p>
-              <p className="text-neutral-400">בהחלט. אנו מספקים פתרונות גרירה מקצועיים, כולל ל-<Link href="/areas/haifa-general/towing-road-22-krayot-bypass" className="text-blue-400 underline">גרירה בכביש 22 עוקף קריות</Link>.</p>
+              <p className="text-neutral-400">בהחלט. אנו מספקים פתרונות גרירה מקצועיים, כולל ל-<Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-400 underline">גרירה בכביש 22 עוקף קריות</Link>.</p>
             </div>
             <div>
               <p className="font-bold">האם אתם מחלצים אופנועים בשטח?</p>
-              <p className="text-neutral-400">חשוב להבהיר: אנו מתמחים בחילוץ רכבי שטח, ג'יפים וטנדרים בלבד, ולא איננו מחלצים אופנועים.</p>
+              <p className="text-neutral-400">אנו מתמחים בחילוץ רכבי שטח, ג'יפים וטנדרים בלבד. איננו מספקים שירותי חילוץ או גרירה לאופנועים.</p>
             </div>
           </div>
         </div>

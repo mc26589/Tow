@@ -1,10 +1,14 @@
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "קונה רכבים לפירוק בחיפה והקריות | שירות מהיר ומקצועי",
-  description: "מחפשים מי קונה רכבים לפירוק בחיפה והקריות? אנו מציעים שירות פינוי רכבים לפירוק במחירים הוגנים. שירות מהיר, אמין ומקצועי לכל סוגי הרכבים.",
+  title: "קונה רכבים לפירוק בחיפה והקריות | מחיר הוגן ושירות מהיר 24/7",
+  description: "רוצים למכור רכב לפירוק? קונה רכבים לפירוק בחיפה והקריות במחיר הוגן. שירות מהיר, פינוי מיידי וטיפול בכל סוגי הרכבים. התקשרו עכשיו להצעת מחיר!",
+  alternates: {
+    canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-krayot"
+  }
 };
 
 export default function Page() {
@@ -53,14 +57,29 @@ export default function Page() {
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפירוק רכבים?</h2>
-        <p className="mb-4">אנו מתמחים ברכישת רכבים לפירוק בחיפה והקריות ומעניקים שירות אמין ללא עיכובים. אנו קונים רכבים פרטיים, מסחריים ורכבי 4x4.</p>
+        <p className="mb-4">אנו מתמחים ברכישת רכבים לפירוק בחיפה והקריות ומעניקים שירות אמין ללא עיכובים. אם אתם מחפשים <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-600 underline">car scrapping haifa krayot</Link>, הגעתם למקום הנכון.</p>
+        <p className="mb-4">זקוקים לשירותי גרירה מקומיים? אנו ממליצים גם על שירותי <Link href="/areas/haifa-general/cheap-towing-kiryat-motzkin-fair-price" className="text-blue-600 underline">cheap towing kiryat motzkin fair price</Link> לכל מי שנתקע בדרך.</p>
         <p className="text-red-600 font-bold mb-4">חשוב להבהיר: איננו מטפלים באופנועים. השירות שלנו מיועד לרכבים בלבד.</p>
-        <ul className="list-disc pr-6 space-y-2">
+        <ul className="list-disc pr-6 space-y-2 mb-8">
           <li>פינוי מהיר מהשטח בחיפה והקריות</li>
           <li>מחירים הוגנים עבור הרכב שלכם</li>
           <li>טיפול מקצועי בכל סוגי הרכבים (למעט אופנועים)</li>
           <li>זמינות 24/7 לכל קריאה</li>
         </ul>
+
+        <div className="bg-gray-50 p-8 rounded-xl">
+          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-bold">באילו אזורים אתם פעילים?</h3>
+              <p>אנו מעניקים שירות מלא בכל חיפה, הקריות (ביאליק, מוצקין, ים, אתא) וסביבתן.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">האם אתם קונים כל רכב?</h3>
+              <p>אנו קונים רכבים פרטיים ומסחריים ללא טסט, לאחר תאונות או רכבים ישנים. לצערנו איננו קונים אופנועים.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בצ'ק פוסט והקריות | הגעה מהירה 24/7",
-  description: "נתקעתם עם רכב חשמלי באזור צ'ק פוסט או הקריות? שירות גרירה מקצועי 24/7 במחיר הוגן. ציוד מתקדם לשמירה על הסוללה. התקשרו עכשיו לקבלת שירות מהיר!",
+  title: "גרירת רכב חשמלי בצ'ק פוסט והקריות - הגעה תוך 30 דקות | 24/7",
+  description: "נתקעתם עם רכב חשמלי באזור צ'ק פוסט או הקריות? שירות גרירה מקצועי 24/7 במחיר הוגן. מומחים לרכבים חשמליים עם ציוד מתקדם. התקשרו עכשיו לקבלת שירות מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-electric-car-towing-check-post-krayot"
   }
@@ -56,7 +56,7 @@ export default function Page() {
           <ul className="space-y-4 text-lg mb-8">
             <li>✓ זמינות מלאה 24/7 באזור צ'ק פוסט, חיפה והקריות.</li>
             <li>✓ מומחיות טכנית בטיפול וגרירה של רכבים חשמליים והיברידיים.</li>
-            <li>✓ מחירים הוגנים ושקופים ללא הפתעות בדרך.</li>
+            <li>✓ מחירים הוגנים ושקופים ללא הפתעות.</li>
             <li>✓ שימוש בציוד גרירה מתקדם המגן על תחתית הרכב והסוללה.</li>
             <li>✓ שירות אדיב ומקצועי מרגע הקריאה ועד ההגעה ליעד.</li>
           </ul>
@@ -64,9 +64,10 @@ export default function Page() {
           <div className="border-t border-gray-700 pt-8 mt-8">
             <h3 className="text-2xl font-bold mb-4">שירותים משלימים באזור</h3>
             <div className="flex flex-wrap gap-4">
-              <Link href="/areas/haifa-general/emergency-towing-electric-car-route-22-krayot" className="text-blue-400 hover:underline">גרירת רכב חשמלי דחופה בכביש 22</Link>
-              <Link href="/areas/haifa-general/flatbed-towing-electric-car-dead-battery-check-post-haifa" className="text-blue-400 hover:underline">גרירת רכב חשמלי עם פריקת מצבר בצ'ק פוסט</Link>
-              <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-400 hover:underline">שירותי גרירה במחיר הוגן בצ'ק פוסט</Link>
+              <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-400 hover:underline">גרירת רכב לאחר תאונה בכביש 22</Link>
+              <Link href="/areas/haifa-general/cheap-towing-check-post-kiryat-ata" className="text-blue-400 hover:underline">שירותי גרירה זולים בצ'ק פוסט וקרית אתא</Link>
+              <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-400 hover:underline">גרירת רכב במחיר משתלם בצ'ק פוסט</Link>
+              <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="text-blue-400 hover:underline">חילוץ רכב תקוע בכביש 4</Link>
             </div>
           </div>
         </div>
@@ -87,6 +88,10 @@ export default function Page() {
             <div>
               <h4 className="font-bold text-xl">האם השירות זמין גם בסוף השבוע ובחגים?</h4>
               <p>אנו מבינים שתקלות יכולות לקרות בכל עת, לכן שירותי הגרירה שלנו באזור הקריות וצ'ק פוסט פעילים גם בסופי שבוע ובחגים כדי שלא תישאר תקוע.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-xl">מהו אזור הפעילות שלכם בצפון?</h4>
+              <p>אנחנו מעניקים שירות מקיף לכל אזור הצ'ק פוסט, מפרץ חיפה, קרית אתא, קרית ביאליק, קרית מוצקין וקרית ים.</p>
             </div>
           </div>
         </div>
