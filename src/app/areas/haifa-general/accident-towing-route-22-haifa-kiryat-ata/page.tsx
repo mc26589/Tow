@@ -35,7 +35,7 @@ export default function Page() {
           <h1 className="text-4xl font-bold mb-6">שירות גרירה לאחר תאונה בכביש 22 (עוקף קריות) - מענה מיידי</h1>
           <p className="text-xl mb-8">
             נתקעתם בכביש 22? אנו כאן עבורכם. אנו מתמחים בחילוץ וגרירת רכבים פרטיים ומסחריים לאחר תאונות באזור מחלף קריית אתא והסביבה. 
-            זקוקים לפתרון מקצועי? ראו גם את שירות ה-<Link href="/areas/haifa-general/fast-towing-road-22-krayot" className="underline font-semibold">fast towing road 22 krayot</Link> הזמין לכם בכל עת. 
+            זקוקים לפתרון מקצועי? ראו גם את שירות ה-<Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="underline font-semibold">גרירה בעזרת משאית גרר בכביש 22</Link> הזמין לכם בכל עת.
             שימו לב: איננו מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex gap-4">
@@ -59,7 +59,7 @@ export default function Page() {
             <li>✓ מחירים הוגנים ושקיפות מלאה - ללא הפתעות.</li>
             <li>✓ זמינות 24/7 לכל קריאה, כולל שבתות וחגים.</li>
           </ul>
-          <p className="text-lg">זקוקים לשירותים נוספים? אנו מספקים גם <Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="text-blue-400">שירותי גרירה בצומת צ'ק פוסט</Link> ובסביבת הקריות, לצד פתרונות של <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-400">emergency light truck towing route 22 krayot bypass</Link>.</p>
+          <p className="text-lg">זקוקים לשירותים נוספים? אנו מספקים גם <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-400">שירותי גרירה בצומת צ'ק פוסט</Link> ובסביבת הקריות, לצד פתרונות של <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-400">גרירת רכב מסחרי קל בכביש 22</Link>.</p>
         </div>
       </section>
 
@@ -73,11 +73,11 @@ export default function Page() {
             </div>
             <div>
               <h4 className="font-bold">האם אתם גוררים רכבים מהצומת הקרובה?</h4>
-              <p>כן, אנו נותנים מענה מקצועי גם ב-<Link href="/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7" className="text-blue-600">אזור קריית מוצקין</Link> ובכל סביבת כביש 22, עם זמינות גבוהה לכל סוגי הרכבים.</p>
+              <p>כן, אנו נותנים מענה מקצועי גם ב-<Link href="/areas/haifa-general/affordable-car-towing-kiryat-motzkin-24-7" className="text-blue-600">אזור קריית מוצקין</Link> ובכל סביבת כביש 22, עם זמינות גבוהה לכל סוגי הרכבים, כולל <Link href="/areas/haifa-general/towing-for-scrap-kiryat-bialik-road-22" className="text-blue-600">גרירת רכבים לפירוק באזור קריית ביאליק</Link>.</p>
             </div>
             <div>
               <h4 className="font-bold">מה טווח המחירים לגרירה בכביש 22?</h4>
-              <p>מחיר הגרירה נקבע לפי מרחק וסוג הרכב. אנו מתחייבים למחיר הוגן ותחרותי בשוק הגרירה בחיפה והקריות, ומספקים גם שירותי <Link href="/areas/haifa-general/emergency-towing-electric-car-route-22-krayot" className="text-blue-600">emergency towing electric car route 22 krayot</Link>.</p>
+              <p>מחיר הגרירה נקבע לפי מרחק וסוג הרכב. אנו מתחייבים למחיר הוגן ותחרותי בשוק הגרירה בחיפה והקריות, ומספקים גם שירותי <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600">גרירת רכב חשמלי בכביש 22</Link>.</p>
             </div>
           </div>
         </div>

@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "קניית רכבים לפירוק בבת גלים חיפה | מזומן ופינוי מהיר עד 30 דק'",
-  description: "נתקעתם עם רכב ישן בבת גלים? קניית רכבים לפירוק בחיפה במחיר הוגן! פינוי מיידי מהשטח, שירות מקצועי 24/7. התקשרו עכשיו להצעת מחיר משתלמת!",
+  title: "קניית רכבים לפירוק בבת גלים חיפה | פינוי מהיר ומזומן - עד 30 דקות",
+  description: "נתקעתם עם רכב ישן בבת גלים? קניית רכבים לפירוק בחיפה במחיר הוגן! פינוי מיידי מהשטח, שירות מקצועי 24 שעות ביממה. התקשרו עכשיו להצעת מחיר משתלמת!",
   alternates: {
     canonical: "/areas/haifa-general/cash-for-scrap-cars-bat-galim-haifa",
   },
@@ -43,7 +43,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">קניית רכבים לפירוק בבת גלים חיפה – פינוי מיידי ומזומן</h1>
           <p className="text-xl mb-8">
-            זקוקים לפינוי רכב ישן בבת גלים? אנו מספקים שירות מקצועי לפינוי רכבים לפירוק. בין אם מדובר ברכב מושבת או רכב ללא טסט, אנו מציעים מענה מהיר. אנו משרתים גם אזורים סמוכים, למידע נוסף בקרו בדף ה-<Link href="/areas/haifa-general/cash-for-old-broken-car-neve-shaanan-haifa" className="underline font-semibold">קניית רכבים ישנים בנווה שאנן</Link>.
+            זקוקים לפינוי רכב ישן בבת גלים? אנו מספקים שירות מקצועי לפינוי רכבים לפירוק. בין אם מדובר ברכב מושבת או רכב ללא טסט, אנו מציעים מענה מהיר. אנו משרתים גם אזורים סמוכים, למידע נוסף בקרו בדף ה- <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="underline font-semibold">קניית רכבים לפירוק בחיפה והקריות</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="בת גלים, חיפה" />
@@ -63,7 +63,7 @@ export default function Page() {
           <li>✓ פינוי מיידי מהשטח בתיאום מהיר.</li>
           <li>✓ תשלום הוגן במזומן עבור הרכב שלכם.</li>
           <li>✓ שירות מקצועי לכל סוגי הרכבים (פרטי, מסחרי, 4x4).</li>
-          <li>✓ זמינות 24/7 לכל קריאה, כולל התמחות ב-<Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-600 underline">פירוק רכבים בחיפה ובקריות</Link>.</li>
+          <li>✓ זמינות מלאה לכל קריאה, כולל שירותי <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-600 underline">גרירה במחיר משתלם בצ'ק פוסט</Link>.</li>
         </ul>
       </section>
 
@@ -80,7 +80,7 @@ export default function Page() {
           </div>
           <div>
             <h3 className="font-bold text-xl">האם אתם מספקים שירותים גם בכבישים ראשיים ליד חיפה?</h3>
-            <p>בהחלט. אנו נותנים מענה רחב כולל <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">גרירה בכביש 22 וצ'ק פוסט</Link> לכל מי שזקוק לסיוע מיידי.</p>
+            <p>בהחלט. אנו נותנים מענה רחב כולל <Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="text-blue-600 underline">גרירה בכביש 22 וסביבת הקריות</Link> לכל מי שזקוק לסיוע מיידי.</p>
           </div>
           <div>
             <h3 className="font-bold text-xl">האם אתם מפנים גם אופנועים?</h3>

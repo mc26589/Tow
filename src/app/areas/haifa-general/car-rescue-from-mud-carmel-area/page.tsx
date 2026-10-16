@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'חילוץ רכב מבוץ בכרמל | הגעה מהירה 24/7 | מחיר הוגן',
-  description: 'נתקעתם בבוץ באזור הכרמל? אנו מציעים חילוץ רכב מקצועי ומהיר לכל סוגי הרכבים, כולל רכבי 4x4. מחירים הוגנים, ציוד חילוץ מתקדם וזמינות מסביב לשעון. התקשרו עכשיו!',
+  description: 'נתקעתם בבוץ באזור הכרמל? אנו מציעים חילוץ רכב מקצועי ומהיר לכל סוגי הרכבים, כולל רכבי 4x4. הגעה מהירה, מחירים הוגנים וזמינות 24/7. התקשרו עכשיו!',
   alternates: {
     canonical: '/areas/haifa-general/car-rescue-from-mud-carmel-area',
   },
@@ -41,10 +41,10 @@ export default function Page() {
 
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-6">חילוץ רכב מבוץ באזור הכרמל</h1>
+          <h1 className="text-4xl font-bold mb-6">חילוץ רכב מבוץ באזור הכרמל והסביבה</h1>
           <p className="text-xl mb-8 max-w-2xl">
             נתקעתם עם הרכב בבוץ באזור הכרמל? הצוות שלנו מתמחה בחילוץ רכבים פרטיים ו-4x4 ששקעו בדרכי עפר ובשטח. 
-            אנו מספקים מענה מקצועי הכולל גם <Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa" className="underline">חילוץ 4x4 בשבילי יערות הכרמל ודניה</Link>. 
+            אנו מספקים מענה מקצועי הכולל גם <Link href="/areas/haifa-general/4x4-mud-rescue-carmel" className="underline">חילוץ 4x4 בשבילי יערות הכרמל ודניה</Link>. 
             השירות מתמקד בחילוץ רכבים מכל סוג (איננו מבצעים חילוץ אופנועים).
           </p>
           <div className="flex flex-wrap gap-4">
@@ -65,7 +65,7 @@ export default function Page() {
           <li>✓ זמינות מלאה 24/7 לכל קריאת חילוץ באזור הכרמל והסביבה.</li>
           <li>✓ ציוד חילוץ מתקדם המתאים לחילוץ רכב ששקע בבוץ כבד.</li>
           <li>✓ מחירים הוגנים ושקיפות מלאה – ללא הפתעות.</li>
-          <li>✓ צוות מיומן עם ניסיון עשיר ב-<Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="underline">חילוצי שטח ובוץ ביערות הכרמל</Link>.</li>
+          <li>✓ צוות מיומן עם ניסיון עשיר ב-<Link href="/areas/haifa-general/off-road-mud-rescue-carmel-private-car" className="underline">חילוצי שטח ובוץ בטוחים</Link>.</li>
         </ul>
       </section>
 
@@ -75,15 +75,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold">תוך כמה זמן תגיעו לחילוץ באזור הכרמל?</h3>
-              <p>אנו משתדלים להגיע לכל נקודה במינימום זמן. אם אתם זקוקים לחילוץ דחוף, צרו קשר. ניתן לקרוא גם על <Link href="/areas/haifa-general/emergency-car-rescue-mud-carmel-forest" className="underline">שירותי חירום לחילוץ מבוץ בכרמל</Link> באתר שלנו.</p>
+              <p>אנו משתדלים להגיע לכל נקודה במינימום זמן. אם אתם זקוקים לחילוץ דחוף, צרו קשר. ניתן לקרוא גם על <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="underline">שירותי גרירה וחילוץ באזור צומת הצ\'ק פוסט</Link> באתר שלנו.</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold">האם אתם מחלצים רכבים ששקעו עמוק בבוץ?</h3>
-              <p>כן, אנו ערוכים לכל סוגי השקיעות. למידע נוסף על מקרים מורכבים יותר, ניתן לבדוק גם את השירות שלנו ל-<Link href="/areas/haifa-general/car-stuck-in-mud-rescue-carmel-forest-haifa" className="underline">חילוץ רכבים שנתקעו בבוץ בלב יערות הכרמל</Link>.</p>
+              <p>כן, אנו ערוכים לכל סוגי השקיעות. למידע על גרירה בעת הצורך, ניתן לבדוק גם את השירות שלנו ל-<Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="underline">גרירה בעזרת גרר משטח באזור כביש 22</Link>.</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold">האם אתם נותנים שירות גם מחוץ לכרמל?</h3>
-              <p>כן, אנו נותנים שירותים בפריסה רחבה, כולל סיוע למי שזקוק ל-<Link href="/areas/haifa-general/cheap-towing-check-post-haifa" className="underline">שירותי גרירה זולים בצומת הצ'ק פוסט</Link>.</p>
+              <p>כן, אנו נותנים שירותים בפריסה רחבה, כולל סיוע למי שנתקע עם רכב חשמלי וזקוק ל-<Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa" className="underline">גרירה ושירות לרכב חשמלי בשכונת אחוזה</Link>.</p>
             </div>
           </div>
         </div>

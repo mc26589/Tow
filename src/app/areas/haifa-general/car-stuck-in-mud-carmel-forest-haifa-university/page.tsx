@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב תקוע בבוץ באוניברסיטת חיפה | יערות הכרמל | הגעה מהירה 24/7",
-  description: "נתקעתם בבוץ ביערות הכרמל או ליד אוניברסיטת חיפה? חילוץ רכב מהיר, מקצועי ובטוח 24/7. הגעה תוך זמן קצר, מחיר הוגן ושירות מצוין. התקשרו עכשיו לחילוץ!",
+  title: "חילוץ רכב מהבוץ באוניברסיטת חיפה והכרמל | הגעה מהירה 24/7",
+  description: "נתקעתם בבוץ ביערות הכרמל או ליד אוניברסיטת חיפה? חילוץ רכב מהיר, מקצועי ובטוח 24/7. הגעה מהירה, מחיר הוגן ושירות מצוין. התקשרו עכשיו לחילוץ!",
   alternates: {
     canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-forest-haifa-university"
   }
@@ -20,7 +20,7 @@ export default function Page() {
             חילוץ רכב תקוע בבוץ: יערות הכרמל ואוניברסיטת חיפה
           </h1>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            נתקעתם בבוץ בדרכי העפר סביב הכרמל? הצוות שלנו זמין 24/7 לחילוץ מקצועי, מהיר ובטוח. מתמחים בחילוצי שטח לרכבים פרטיים ומסחריים.
+            נתקעתם בבוץ בדרכי העפר סביב הכרמל? הצוות שלנו זמין 24/7 לחילוץ מקצועי. מתמחים בחילוצי שטח לרכבים פרטיים ומסחריים, עם הגעה לכל נקודה באזור.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="חיפה והכרמל" />
@@ -37,7 +37,7 @@ export default function Page() {
       <section className="py-16 container mx-auto px-4 text-neutral-200">
         <h2 className="text-3xl font-bold mb-6 text-white">למה לבחור בנו לחילוץ באזור הכרמל?</h2>
         <ul className="space-y-4 text-lg mb-8">
-          <li>✓ זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע לכל <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-blue-400 underline">חילוץ רכב בבוץ באזור הכרמל</Link>.</li>
+          <li>✓ זמינות מלאה 24 שעות ביממה לכל <Link href="/areas/haifa-general/4x4-mud-rescue-carmel" className="text-blue-400 underline">4x4 mud rescue carmel</Link>.</li>
           <li>✓ מומחיות בחילוץ רכבים תקועים בבוץ ובדרכי עפר באזור האוניברסיטה וציר מוריה.</li>
           <li>✓ הגעה מהירה לכל נקודה סביב אוניברסיטת חיפה ופארק הכרמל.</li>
           <li>✓ מחירים הוגנים ושירות אדיב ללא הפתעות.</li>
@@ -48,15 +48,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h4 className="font-bold text-white">כמה זמן לוקח לכם להגיע ליערות הכרמל?</h4>
-              <p>אנו משתדלים להגיע לכל נקודה באזור אוניברסיטת חיפה והכרמל בזמן הקצר ביותר. מרגע הקריאה, הצוות שלנו נערך ליציאה מהירה כדי לחלץ אתכם בבטחה.</p>
+              <p>אנו משתדלים להגיע לכל נקודה באזור אוניברסיטת חיפה והכרמל בזמן הקצר ביותר. הצוות שלנו ערוך לחילוץ רכב מהשטח בכל שעות היממה.</p>
             </div>
             <div>
               <h4 className="font-bold text-white">אילו סוגי רכבים אתם מחלצים?</h4>
-              <p>אנחנו מתמחים בחילוץ רכבים פרטיים, רכבי 4x4 ורכבים מסחריים קלים. במידה ואתם זקוקים לשירותי גרירה נוספים, ניתן לבדוק גם שירותי <Link href="/areas/haifa-general/cheap-private-car-towing-ahuza-haifa" className="text-blue-400 underline">גרירה באחוזה ובחיפה</Link> שאנו מציעים.</p>
+              <p>אנחנו מתמחים בחילוץ רכבים פרטיים, רכבי 4x4 ורכבים מסחריים. זקוקים לשירות נוסף? ניתן לבדוק גם <Link href="/areas/haifa-general/off-road-mud-rescue-carmel-private-car" className="text-blue-400 underline">off road mud rescue carmel private car</Link> או שירותי גרירה מקצועיים.</p>
             </div>
             <div>
               <h4 className="font-bold text-white">האם אתם פועלים גם באזורים סמוכים?</h4>
-              <p>כן, אנו נותנים מענה רחב לכל אזור הכרמל והסביבה, כולל סיוע למי שזקוק לפתרונות מקצועיים מסוג <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-area" className="text-blue-400 underline">חילוץ רכב תקוע בבוץ באזור הכרמל</Link>.</p>
+              <p>כן, אנו נותנים מענה רחב לכל אזור הכרמל והסביבה. אם נתקעתם באזורים נוספים, אנו מציעים גם פתרונות כמו <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-400 underline">cheap towing services check post junction</Link>.</p>
             </div>
           </div>
         </div>
