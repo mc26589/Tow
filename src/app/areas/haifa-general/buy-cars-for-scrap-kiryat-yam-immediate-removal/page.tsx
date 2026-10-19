@@ -5,7 +5,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "קונה רכבים לפירוק בקרית ים | פינוי מהיר ומזומן במקום",
-  description: "רוצים למכור רכב לפירוק בקרית ים? אנו קונים את כל סוגי הרכבים במזומן ובמחיר הוגן. פינוי מיידי מהיום להיום. התקשרו עכשיו לקבלת הצעת מחיר משתלמת!",
+  description: "רוצים למכור רכב לפירוק בקרית ים? קונים את כל סוגי הרכבים במזומן ובמחיר הוגן. פינוי מיידי מהיום להיום, ללא בירוקרטיה. התקשרו עכשיו להצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-immediate-removal"
   }
@@ -44,7 +44,7 @@ export default function Page() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">קונה רכבים לפירוק בקרית ים – פינוי מיידי במזומן</h1>
           <p className="text-xl mb-8 max-w-2xl">
             נתקעתם עם רכב ישן או מושבת? אנו קונים את כל סוגי הרכבים לפירוק בקרית ים. אנו מציעים פינוי מהיר מהשטח, ללא כאב ראש, במזומן ובמחיר הוגן. 
-            בין אם אתם מחפשים <Link href="/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-rothschild" className="underline">פינוי רכבים לפירוק באזור רוטשילד</Link> או בכל נקודה אחרת בעיר, אנו כאן לשירותכם.
+            אנו מספקים שירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="underline">קניית רכבים לפירוק בחיפה והקריות</Link> ומגיעים לכל נקודה בעיר במהירות.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="קרית ים" />
@@ -64,7 +64,7 @@ export default function Page() {
           <ul className="space-y-4 text-lg mb-8">
             <li>✓ פינוי מיידי של רכבים ללא טסט, רכבים ישנים או רכבים שעברו תאונה בקרית ים.</li>
             <li>✓ תשלום הוגן ומזומן במקום – ללא בירוקרטיה מיותרת.</li>
-            <li>✓ כיסוי מלא לכל הקריות, כולל שירותי <Link href="/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal" className="text-blue-600 underline">קניית רכבים לפירוק בקרית ביאליק</Link>.</li>
+            <li>✓ כיסוי מלא לכל הקריות, כולל שירותי <Link href="/areas/haifa-general/kaniyat-rekhavim-yeshanim-lehalafim-kiryat-yam-pinui-meyadi" className="text-blue-600 underline">קניית רכבים לפירוק בקרית ים (פינוי מיידי)</Link>.</li>
             <li>✓ צוות מקצועי שמגיע עד אליכם במהירות שיא.</li>
           </ul>
         </div>
@@ -80,7 +80,7 @@ export default function Page() {
             </div>
             <div>
               <h3 className="text-xl font-bold">האם אתם פעילים גם בשכונות הסמוכות?</h3>
-              <p>כן, אנו נותנים מענה מלא לתושבי הקריות, כולל שירותי <Link href="/areas/haifa-general/buying-old-cars-parts-kiryat-haim-krayot" className="text-blue-600">קניית רכבים לפירוק בקרית חיים</Link>.</p>
+              <p>כן, אנו נותנים מענה מלא לתושבי הקריות ומבצעים גם <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-600">גרירת רכבים באזור הצ’ק פוסט</Link> ובסביבה.</p>
             </div>
             <div>
               <h3 className="text-xl font-bold">תוך כמה זמן תגיעו לפנות את הרכב?</h3>

@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'פינוי רכבים לפירוק בקריית ים - הגעה מהירה ומזומן במקום | 24/7',
-  description: 'נתקעתם עם רכב ישן בקריית ים? אנו מציעים פינוי רכבים לפירוק מהיר, שירות אדיב ותשלום במזומן. הגעה מהירה לכל אזור החוף. התקשרו עכשיו לקבלת הצעת מחיר!',
+  title: 'פינוי רכבים לפירוק בקריית ים - מזומן במקום - הגעה תוך 30 דק\' | 24/7',
+  description: 'נתקעתם עם רכב ישן בקריית ים? אנו מציעים פינוי רכבים לפירוק עם תשלום במזומן במקום. הגעה מהירה לכל אזור החוף והקריות. התקשרו עכשיו לקבלת הצעת מחיר!',
   alternates: {
     canonical: '/areas/haifa-general/junk-car-removal-kiryat-yam-beach',
   },
@@ -45,9 +45,9 @@ export default function Page() {
           <p className="text-lg mb-8 max-w-2xl">
             אנו מציעים שירות פינוי רכבים לפירוק מהיר ומקצועי באזור חוף קריית ים והסביבה. אם ברשותכם רכב ישן, תקול או מושבת, אנו נדאג לפינויו המיידי. 
             אנו מתמחים בפינוי רכבים פרטיים ומסחריים. מחפשים פתרון מקיף? בדקו גם את השירותים שלנו של 
-            <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="underline mx-1">פירוק רכבים בחיפה והקריות</Link> 
-            או שירותים נוספים כגון 
-            <Link href="/areas/haifa-general/cash-for-junk-cars-for-parts-kiryat-motzkin-immediate-pickup" className="underline mx-1">פינוי רכבים בקריית מוצקין</Link>.
+            <Link href="/areas/haifa-general/kaniyat-rekhavim-yeshanim-lehalafim-kiryat-yam-pinui-meyadi" className="underline mx-1">קניית רכבים לפירוק בקריית ים</Link> 
+            או שירותי גרירה בנתיבי הצפון, כגון 
+            <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="underline mx-1">גרירה בצ\'ק פוסט וקריות</Link>.
             <br /><br />
             <strong>הערה חשובה:</strong> שירותי הפינוי שלנו מיועדים לרכבים בלבד. איננו מספקים שירותי פינוי או גרירה לאופנועים.
           </p>
@@ -68,7 +68,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי הרכב שלכם?</h2>
           <ul className="space-y-4 text-gray-700">
-            <li>✓ שירות מהיר ומקצועי באזור חוף קריית ים.</li>
+            <li>✓ שירות מהיר ומקצועי בכל אזור חוף קריית ים והטיילת.</li>
             <li>✓ פינוי רכבים לפירוק ללא עלות נוספת.</li>
             <li>✓ מחירים הוגנים ותשלום במזומן במעמד הפינוי.</li>
             <li>✓ זמינות 24 שעות ביממה, 7 ימים בשבוע.</li>
@@ -78,16 +78,16 @@ export default function Page() {
             <h3 className="text-2xl font-bold mb-4">שאלות נפוצות על פינוי רכבים בקריית ים</h3>
             <div className="space-y-6">
               <div>
-                <h4 className="font-bold">כמה זמן לוקח פינוי רכב מהחוף?</h4>
-                <p>אנו משתדלים להגיע לכל קריאה בקריית ים תוך זמן קצר, לרוב תוך פחות משעה בהתאם לעומס התנועה.</p>
+                <h4 className="font-bold">תוך כמה זמן תגיעו לפנות את הרכב מהחוף?</h4>
+                <p>אנו משתדלים להגיע לכל קריאה בקריית ים תוך זמן קצר, לרוב תוך פחות משעה בהתאם לעומס התנועה באזור.</p>
               </div>
               <div>
                 <h4 className="font-bold">האם אתם קונים רכבים ללא טסט?</h4>
-                <p>כן, אנו קונים רכבים ישנים, מושבתים או כאלו ללא טסט בתוקף עבור פירוק וברזל במחיר הוגן.</p>
+                <p>כן, אנו קונים רכבים ישנים, מושבתים או כאלו ללא טסט בתוקף עבור פירוק וברזל במחיר הוגן ושקוף.</p>
               </div>
               <div>
-                <h4 className="font-bold">האם השירות כולל פינוי רכבים מאזור המלונות בקריית ים?</h4>
-                <p>בהחלט. אנו מספקים שירותי גרירה ופינוי בכל רחבי קריית ים, כולל אזור החוף, הטיילת והאזורים הסמוכים ל- <Link href="/areas/haifa-general/cheap-towing-check-post-kiryat-ata" className="underline">צומת הצ'ק פוסט וקרית אתא</Link>.</p>
+                <h4 className="font-bold">מה כולל שירות פינוי רכבים לפירוק?</h4>
+                <p>השירות כולל פינוי מלא של הרכב, התחשבנות הוגנת במזומן ופינוי מהיר מהשטח מבלי להטריח את בעל הרכב.</p>
               </div>
             </div>
           </div>

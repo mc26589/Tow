@@ -44,7 +44,8 @@ export default function Page() {
           <h1 className="text-4xl font-bold mb-6">שירות גרירה וחילוץ רכבים באחוזה, חיפה</h1>
           <p className="text-lg mb-8">
             זקוק לחילוץ רכב באזור אחוזה? אנו מספקים שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי שטח. 
-            אם אתם זקוקים ל-<Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles" className="underline">שירות גרירה אמין באחוזה</Link> במחיר הוגן, אנו כאן לשירותכם.
+            אם אתם זקוקים ל-<Link href="/areas/haifa-general/cheap-car-towing-service-neve-shaanan-haifa" className="underline">שירות גרירה אמין באחוזה</Link> במחיר הוגן, אנו כאן לשירותכם. 
+            אנו זמינים לסייע גם במקרי חירום כגון <Link href="/areas/haifa-general/emergency-mud-recovery-service-carmel-forest-haifa" className="underline">חילוץ מרכב שנתקע בבוץ בכרמל</Link>. 
             שימו לב: אנו לא מספקים שירותי גרירה לאופנועים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -66,7 +67,7 @@ export default function Page() {
             <li>זמינות 24 שעות ביממה, 7 ימים בשבוע</li>
             <li>ציוד גרירה מתקדם לכל סוגי הרכבים</li>
             <li>פתרונות לבעלי רכבים חשמליים כולל חילוץ מצבר</li>
-            <li>שקיפות מלאה ושירות אדיב</li>
+            <li>שקיפות מלאה ושירות אדיב ללא הפתעות במחיר</li>
           </ul>
           
           <h3 className="text-xl font-bold mt-8 mb-4">שאלות נפוצות על גרירה באחוזה</h3>
@@ -77,11 +78,11 @@ export default function Page() {
             </div>
             <div>
               <p className="font-bold">האם אתם קונים רכבים ישנים לפירוק?</p>
-              <p>כן, אנו מציעים שירות <Link href="/areas/haifa-general/scrap-cars-haifa-krayot-immediate-removal" className="underline">פינוי רכבים לפירוק בחיפה</Link> למי שמעוניין להיפטר מרכב ישן בצורה מסודרת.</p>
+              <p>כן, אנו מציעים שירות <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="underline">פינוי רכבים לפירוק בחיפה</Link> למי שמעוניין להיפטר מרכב ישן בצורה מסודרת ומקצועית.</p>
             </div>
             <div>
               <p className="font-bold">באילו רכבים אתם מטפלים?</p>
-              <p>אנו נותנים שירות לרכבים פרטיים, מסחריים ורכבי שטח. איננו נותנים שירות לגרירת אופנועים.</p>
+              <p>אנו נותנים שירות לרכבים פרטיים, מסחריים ורכבי שטח. לצורך גרירת אופנועים מומלץ ליצור קשר עם שירות ייעודי כגון <Link href="/areas/haifa-general/heavy-motorcycle-breakdown-towing-ahuzah-haifa" className="underline">גרירת אופנועים כבדים באחוזה</Link>.</p>
             </div>
           </div>
         </div>

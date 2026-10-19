@@ -53,7 +53,7 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ באזור הכרמל?</h2>
           <ul className="space-y-4 text-lg mb-8">
             <li>✅ <strong>זמינות מלאה:</strong> שירות 24/7, גם בסופי שבוע וחגים.</li>
-            <li>✅ <strong>מומחיות בשטח:</strong> ניסיון רב ב-<Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region">חילוץ רכבים ששקעו בבוץ</Link> עמוק באזור יערות הכרמל.</li>
+            <li>✅ <strong>מומחיות בשטח:</strong> ניסיון רב ב-<Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-blue-600 hover:underline">חילוץ רכבים ששקעו בבוץ</Link> עמוק באזור יערות הכרמל.</li>
             <li>✅ <strong>ציוד מקצועי:</strong> שימוש באמצעי גרירה וחילוץ מתקדמים המותאמים לתוואי השטח.</li>
             <li>✅ <strong>שקיפות מלאה:</strong> הצעת מחיר הוגנת וברורה בטלפון לפני תחילת העבודה.</li>
           </ul>
@@ -67,7 +67,11 @@ export default function Page() {
               </div>
               <div>
                 <h3 className="font-bold text-xl">האם אתם מבצעים חילוצים גם באזורים סמוכים?</h3>
-                <p>כן, אנו מספקים שירותים גם באזורים נוספים, כגון <Link href="/areas/haifa-general/cheap-towing-services-check-post">שירותי גרירה בצ'ק פוסט</Link> או באזור העיר חיפה.</p>
+                <p>כן, אנו מספקים שירותים גם באזורים נוספים, כגון <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-600 hover:underline">שירותי גרירה בצ'ק פוסט</Link> או באזור העיר חיפה.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-xl">האם אתם מחלצים רכבי שטח ששקעו עמוק?</h3>
+                <p>בהחלט. אנו מנוסים מאוד בכל סוגי ה-<Link href="/areas/haifa-general/emergency-mud-rescue-carmel-forest-haifa" className="text-blue-600 hover:underline">חילוצי בוץ דחופים</Link> ומשתמשים בציוד ייעודי למקרים אלו.</p>
               </div>
             </div>
           </div>

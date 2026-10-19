@@ -46,7 +46,7 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-4">שירותי חילוץ מהירים בכביש 22</h2>
         <p className="mb-4">
-          נתקעתם עם פנצ\'ר בכביש 22 ליד קריית ביאליק? אנו כאן לעזור. אנו מציעים שירותי חילוץ מקצועיים לרכבים פרטיים ומסחריים. במידה ואתם זקוקים לשירותי גרירה רחבים יותר באזור, ניתן לעיין ב <Link href="/areas/haifa-general/towing-service-road-22-krayot-bypass" className="text-blue-600 underline">שירותי גרירה בכביש 22 עוקף קריות</Link>. למי שמחפש סיוע נוסף, אנו מציעים גם <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-600 underline">גרירה דחופה וזולה בקריית ביאליק</Link>.
+          נתקעתם עם פנצ\'ר בכביש 22 ליד קריית ביאליק? אנו כאן לעזור. אנו מציעים שירותי חילוץ מקצועיים לרכבים פרטיים ומסחריים. במידה ואתם צריכים גרירה, ניתן לעיין ב <Link href="/areas/haifa-general/emergency-breakdown-towing-route-22-krayot-bypass" className="text-blue-600 underline">שירותי גרירה בכביש 22 עוקף קריות</Link>. למי שמחפש סיוע נוסף, אנו מציעים גם <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">גרירה דחופה בכביש 22 לכיוון צ\'ק פוסט</Link> במחיר אטרקטיבי.
         </p>
         <p className="mb-4 font-semibold text-red-600">
           הערה: השירות ניתן לרכבים פרטיים ומסחריים בלבד. איננו מספקים שירותי חילוץ לאופנועים.
@@ -56,7 +56,7 @@ export default function Page() {
           <h3 className="text-xl font-bold mb-2">למה לבחור בנו?</h3>
           <ul className="list-disc list-inside space-y-2">
             <li>זמינות 24 שעות ביממה, 7 ימים בשבוע לכל תרחיש בכביש 22.</li>
-            <li>הגעה מהירה לאזור הקריות והצ\'ק פוסט.</li>
+            <li>הגעה מהירה לאזור הקריות, עכו וצ\'ק פוסט.</li>
             <li>שירות אדיב, שקוף ומחיר הוגן ללא הפתעות.</li>
             <li>מומחיות רבת שנים בחילוץ רכבים תקועים בבטחה.</li>
           </ul>
@@ -77,7 +77,7 @@ export default function Page() {
             </div>
             <div>
               <h4 className="font-bold">מה עושים אם אין לי גלגל רזרבי תקין?</h4>
-              <p>במקרים כאלו אנו נבצע גרירה מהירה למוסך קרוב או לפנצ\'רייה מומלצת באזור קריית ביאליק או הסביבה. ניתן לבדוק גם <Link href="/areas/haifa-general/cheap-towing-kiryat-motzkin-fair-price" className="text-blue-600 underline">גרירה זולה בקריית מוצקין</Link> במידת הצורך.</p>
+              <p>במקרים כאלו אנו נבצע גרירה מהירה למוסך קרוב או לפנצ\'רייה מומלצת באזור קריית ביאליק או הסביבה. אם הרכב זקוק לפינוי מקצועי, ניתן גם לבדוק <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">גרירה במחיר הוגן לאזור צ\'ק פוסט והקריות</Link>.</p>
             </div>
           </div>
         </div>

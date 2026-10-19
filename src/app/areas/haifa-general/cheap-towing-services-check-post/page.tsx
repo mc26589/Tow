@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "שירותי גרירה בצ'ק פוסט | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם עם הרכב בצ'ק פוסט? שירותי גרירה מקצועיים, אמינים ובמחיר הוגן. זמינות 24/7 לכל סוגי הרכבים. התקשרו עכשיו לחילוץ מהיר!",
+  title: "שירותי גרירה בצ'ק פוסט | הגעה תוך 30 דקות | מחיר הוגן 24/7",
+  description: "נתקעתם עם הרכב בצ'ק פוסט? שירותי גרירה וחילוץ מהירים ומקצועיים במחיר הוגן. זמינות 24/7 לכל סוגי הרכבים. התקשרו עכשיו להגעה מהירה!",
   alternates: {
     canonical: "/areas/haifa-general/cheap-towing-services-check-post",
   },
@@ -42,7 +42,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרירה זולים באזור צ'ק פוסט</h1>
-          <p className="text-xl mb-8">נתקעתם בצ'ק פוסט? אנחנו כאן כדי לחלץ אתכם במהירות ובמחיר הוגן.</p>
+          <p className="text-xl mb-8">זקוקים לגרר בצ'ק פוסט? אנחנו כאן כדי לחלץ אתכם בבטחה ובמחיר משתלם, 24 שעות ביממה.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition">
@@ -55,9 +55,9 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לשירותי גרירה בצ'ק פוסט?</h2>
         <p className="mb-4">
-          אנו מתמחים בחילוץ רכבים פרטיים, רכבים מסחריים ורכבי 4x4. אם אתם זקוקים גם לפתרונות נוספים, אנו מציעים שירותי 
-          <Link href="/areas/haifa-general/towing-service-road-22-krayot" className="text-blue-600 underline font-semibold"> גרירה בכביש 22 </Link> 
-          וכן סיוע ב-<Link href="/areas/haifa-general/affordable-electric-car-towing-check-post-krayot" className="text-blue-600 underline font-semibold"> גרירת רכבים חשמליים </Link>. חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים.
+          אנו מתמחים בחילוץ רכבים פרטיים, רכבים מסחריים ורכבי 4x4. אם נתקעתם בדרכים, אנו מציעים שירותי 
+          <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline font-semibold"> גרירה בכביש 22 </Link> 
+          וכן סיוע ב-<Link href="/areas/haifa-general/affordable-electric-car-towing-check-post-krayot" className="text-blue-600 underline font-semibold"> גרירת רכבים חשמליים </Link>. אנו מציעים גם פתרונות של <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-600 underline">חילוץ לאחר תאונה בצומת צ'ק פוסט</Link>. חשוב לציין: אנו לא מספקים שירותי גרירה לאופנועים.
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>זמינות מלאה 24/7 לכל אזור צ'ק פוסט והקריות.</li>
@@ -73,11 +73,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-bold">כמה זמן לוקח לגרר להגיע לצ'ק פוסט?</h3>
-              <p>בדרך כלל אנו מגיעים לכל נקודה באזור הצ'ק פוסט תוך זמן קצר מאוד, הודות לקרבה שלנו לצירי תנועה מרכזיים.</p>
+              <p>בזכות מיקומנו האסטרטגי בציר חיפה-קריות, אנו מגיעים לרוב הקריאות בצ'ק פוסט תוך זמן קצר מאוד.</p>
             </div>
             <div>
               <h3 className="text-xl font-bold">האם אתם קונים רכבים לפירוק באזור?</h3>
-              <p>כן, אנו מספקים שירותי <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="text-blue-600 underline">קניית רכבים לפירוק בצ'ק פוסט</Link> לכל מי שמעוניין להיפטר מרכב ישן.</p>
+              <p>כן, אנו מספקים שירותי <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="text-blue-600 underline">קניית רכבים לפירוק בצ'ק פוסט</Link> בתשלום הוגן ומיידי לכל רכב ישן או פגום.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold">האם אתם מבצעים גרירה במחיר זול?</h3>
+              <p>אנו מקפידים על מדיניות של מחיר הוגן ותחרותי לכל סוגי הגרירה באזור, ללא תוספות מיותרות.</p>
             </div>
           </div>
         </div>

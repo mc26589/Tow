@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ 4X4 ביערות הכרמל | הגעה תוך 30 דקות | 24/7",
-  description: "נתקעתם עם רכב השטח בבוץ ביערות הכרמל? אנו מספקים שירותי חילוץ 4X4 מקצועיים ומהירים 24/7. הגעה מהירה, ציוד מתקדם ומחיר הוגן. התקשרו עכשיו לחילוץ!",
+  title: "חילוץ 4X4 ביערות הכרמל | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם עם רכב שטח בבוץ ביערות הכרמל? אנו מציעים חילוץ 4X4 מקצועי, מהיר ובטוח 24/7. הגעה תוך 30 דקות לכל נקודה בכרמל. התקשרו עכשיו לחילוץ!",
   alternates: {
     canonical: "/areas/haifa-general/4x4-vehicle-stuck-in-mud-carmel-forest",
   },
@@ -42,10 +42,10 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">חילוץ רכב 4X4 שקוע בבוץ ביערות הכרמל</h1>
           <p className="text-xl mb-8">
-            נתקעתם עם רכב השטח בבוץ העמוק של יערות הכרמל? אנו מספקים שירותי חילוץ שטח מקצועיים, מהירים ובטוחים לכל סוגי רכבי ה-4X4. 
+            נתקעתם עם רכב השטח בבוץ העמוק של יערות הכרמל? אנו מספקים <Link href="/areas/haifa-general/emergency-mud-rescue-carmel-forest-haifa" className="underline">שירותי חילוץ שטח מקצועיים</Link> ומהירים לכל סוגי רכבי ה-4X4. 
             הצוות שלנו מצויד בציוד גרירה מתקדם המותאם לתנאי שטח קשים ומגיע לכל נקודה באזור הכרמל. אם אתם זקוקים גם ל
-            <Link href="/areas/haifa-general/off-road-mud-rescue-carmel-private-car" className="underline font-semibold">חילוץ רכב פרטי בבוץ בכרמל</Link> או לשירות 
-            <Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles" className="underline font-semibold">חילוץ רכב באחוזה</Link>, אנו כאן עבורכם.
+            <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="underline font-semibold">חילוץ רכב פרטי בבוץ באזור הכרמל</Link> או לשירות 
+            <Link href="/areas/haifa-general/emergency-tow-stuck-car-stella-maris-haifa-hills" className="underline font-semibold">חילוץ רכב תקוע בסטלה מאריס</Link>, אנו כאן עבורכם.
           </p>
           <div className="flex gap-4">
             <WhatsAppCTA cityName="חיפה והקריות" />
@@ -69,7 +69,7 @@ export default function Page() {
         </ul>
         <p className="mt-6 text-gray-700">
           חשוב לציין: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4X4. השירות ניתן לאזור הכרמל והסביבה. למקרים של 
-          <Link href="/areas/haifa-general/car-stuck-in-sand-bat-galim-haifa" className="text-blue-600">חילוץ רכב ששקע בחול בבת גלים</Link>, אנו מציעים שירות נפרד. שירותינו אינם כוללים חילוץ אופנועים.
+          <Link href="/areas/haifa-general/4x4-recovery-stuck-sand-kiryat-haim-beach-krayot" className="text-blue-600">חילוץ רכב ששקע בחול בקרית חיים</Link>, אנו מציעים שירות נפרד. שירותינו אינם כוללים חילוץ אופנועים.
         </p>
       </section>
 
@@ -79,11 +79,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold text-xl">מהו זמן ההגעה הממוצע לחילוץ ביערות הכרמל?</h3>
-              <p>אנו משתדלים להגיע בתוך זמן קצר ככל הניתן. זמני ההגעה תלויים במיקום המדויק של הרכב ובתנאי השטח ביום הקריאה.</p>
+              <p>אנו משתדלים להגיע בתוך זמן קצר ככל הניתן. זמני ההגעה תלויים במיקום המדויק של הרכב ובמצב העומסים בדרכי העפר ביום הקריאה.</p>
             </div>
             <div>
               <h3 className="font-bold text-xl">האם אתם מבצעים חילוץ לרכבים פרטיים רגילים?</h3>
-              <p>בהחלט. אנו נותנים מענה מקצועי גם לרכבים פרטיים שנתקעו בדרכי עפר באזור, ומספקים שירותי <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-600">חילוץ רכב מבוץ באזור הכרמל</Link> במחיר הוגן ומשתלם.</p>
+              <p>בהחלט. אנו נותנים מענה מקצועי גם לרכבים פרטיים שנתקעו בדרכי עפר באזור, ומספקים שירותי <Link href="/areas/haifa-general/emergency-mud-recovery-service-carmel-forest-haifa" className="text-blue-600">חילוץ רכב מבוץ באזור הכרמל</Link> במחיר הוגן ומשתלם.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">האם ניתן להזמין חילוץ גם אם נתקעתי בכביש מרכזי ליד הכרמל?</h3>
+              <p>בוודאי. אנו מספקים מענה גם בכבישים המקיפים, כולל שירותי <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600">חילוץ רכב בדרך 22</Link> וסביבת הצ'ק פוסט.</p>
             </div>
           </div>
         </div>
