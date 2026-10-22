@@ -5,7 +5,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "גרר בכביש 22 צ'ק פוסט | הגעה תוך 30 דקות | זמינות 24/7",
-  description: "נתקעתם עם פנצ'ר בכביש 22 צ'ק פוסט? גרר זמין 24/7, הגעה מהירה ומחיר הוגן לכל סוגי הרכבים. התקשרו עכשיו לחילוץ מקצועי ללא עיכובים!",
+  description: "נתקעתם עם פנצ'ר בכביש 22 צ'ק פוסט? שירות גרר זמין 24/7, הגעה מהירה ומחיר הוגן לכל רכב. התקשרו עכשיו לחילוץ מקצועי ללא עיכובים!",
   alternates: {
     canonical: "/areas/haifa-general/fast-towing-flat-tire-road-22-check-post"
   }
@@ -43,7 +43,7 @@ export default function Page() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">שירותי גרר מהיר וטיפול בפנצ'ר בכביש 22 מחלף צ'ק פוסט</h1>
           <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            נתקעתם עם פנצ'ר בכביש 22 באזור מחלף צ'ק פוסט? אנו מבינים את הדחיפות והסכנה בעצירה בדרך מהירה. הצוות המקצועי שלנו מתמחה בחילוץ רכבים פרטיים, מסחריים ורכבי 4x4 ומגיע אליכם במהירות. זקוקים לחלופה נוספת? אנו מציעים גם <Link href="/areas/haifa-general/fast-towing-road-22-krayot" className="underline">שירותי גרירה מהירים בכביש 22 עוקף קריות</Link> לכל מי שזקוק לסיוע מקצועי.
+            נתקעתם עם פנצ'ר או תקלה בכביש 22 באזור מחלף צ'ק פוסט? אנו מבינים את הדחיפות והסכנה בעצירה בדרך מהירה. הצוות המקצועי שלנו מתמחה בחילוץ רכבים פרטיים ומסחריים, ומגיע אליכם במהירות שיא. זקוקים גם ל<Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="underline">שירותי חילוץ לאחר תאונה בצ'ק פוסט</Link>? אנו זמינים לכל קריאה.
           </p>
           
           <div className="flex flex-wrap gap-4">
@@ -64,20 +64,20 @@ export default function Page() {
           <li>✅ <strong>זמינות מלאה:</strong> שירות 24/7 לכל אורך כביש עוקף קריות והסביבה.</li>
           <li>✅ <strong>הגעה מהירה:</strong> פריסה רחבה המבטיחה זמן הגעה קצר לצ'ק פוסט.</li>
           <li>✅ <strong>מקצועיות:</strong> טיפול בטוח ברכבכם ללא נזקים.</li>
-          <li>✅ <strong>מחירים הוגנים:</strong> <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="underline text-blue-600">שירותי גרירה במחיר משתלם בצ'ק פוסט</Link> ושקיפות מלאה.</li>
-          <li>✅ <strong>פתרונות מתקדמים:</strong> אנו מספקים מענה גם במקרים של <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="underline">גרירת רכב מסחרי קל</Link> באזור הצ'ק פוסט.</li>
+          <li>✅ <strong>מחירים הוגנים:</strong> אנו מציעים <Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="underline text-blue-600">גרירה במשטח (גרר שטוח) בכביש 22</Link> במחיר משתלם.</li>
+          <li>✅ <strong>פתרונות מתקדמים:</strong> מענה מקצועי גם ל<Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="underline">גרירת רכבים כבדים בכביש 22</Link>.</li>
         </ul>
 
         <div className="bg-gray-50 p-8 rounded-xl">
-          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות (FAQ)</h2>
+          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות</h2>
           <div className="space-y-6">
             <div>
               <h3 className="font-bold text-lg">תוך כמה זמן תגיעו למחלף צ'ק פוסט?</h3>
-              <p>אנו עושים את מירב המאמצים להגיע לכל קריאה באזור מחלף צ'ק פוסט בתוך זמן קצר, בהתאם לעומסי התנועה בצירים הראשיים.</p>
+              <p>אנו עושים את מירב המאמצים להגיע לכל קריאה באזור צ'ק פוסט בתוך זמן קצר, בהתאם לעומסי התנועה בצירים הראשיים.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">מה עושים אם מדובר ברכב שטח שנתקע?</h3>
-              <p>אנו ערוכים לטיפול גם במקרים מורכבים יותר, כולל <Link href="/areas/haifa-general/4x4-vehicle-stuck-in-mud-carmel-forest" className="text-blue-600">חילוץ רכבי שטח</Link> או תקלה טכנית מורכבת.</p>
+              <h3 className="font-bold text-lg">האם אתם מציעים גרירה לצורך פירוק רכב?</h3>
+              <p>כן, אנו מספקים שירותי <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="text-blue-600">קניית רכבים לפירוק בצ'ק פוסט</Link> למי שמעוניין להיפטר מרכב ישן.</p>
             </div>
             <div>
               <h3 className="font-bold text-lg">האם אתם נותנים שירות לאופנועים?</h3>

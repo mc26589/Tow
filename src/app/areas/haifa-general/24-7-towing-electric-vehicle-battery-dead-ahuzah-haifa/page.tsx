@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי באחוזה, חיפה | שירות 24/7 - הגעה ב-30 דקות",
-  description: "נתקעת עם הרכב החשמלי באחוזה? שירות גרירה מהיר ומקצועי 24/7 לכל סוגי הרכבים החשמליים. מחיר הוגן ושירות מהיר באזור הכרמל ומוריה. התקשרו עכשיו לחילוץ!",
+  title: "גרירת רכב חשמלי באחוזה, חיפה | 24/7 | הגעה תוך 30 דק'",
+  description: "נתקעת עם הרכב החשמלי באחוזה? שירות גרירה מקצועי ומהיר 24/7 לכל סוגי הרכבים החשמליים. מחיר הוגן והגעה מהירה לאזור הכרמל ומוריה. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa",
   },
@@ -16,7 +16,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
     "name": "שירותי גרירה וחילוץ חיפה והקריות",
-    "areaServed": "Haifa and Krayot",
+    "areaServed": "Haifa",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -45,7 +45,7 @@ export default function Page() {
             גרירת רכב חשמלי 24/7 בשכונת אחוזה, חיפה
           </h1>
           <p className="text-lg md:text-xl mb-8">
-            נתקעת עם הרכב החשמלי באחוזה? אנו מומחים בחילוץ וגרירה של רכבים חשמליים עם מצבר פרוק. הגעה מהירה לכל נקודה בכרמל ומוריה.
+            נתקעת עם הרכב החשמלי באחוזה? מומחים בחילוץ וגרירה של רכבים חשמליים עם מצבר פרוק. הגעה מהירה לכל נקודה בכרמל ומוריה.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -65,7 +65,7 @@ export default function Page() {
           <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע לכל אזור אחוזה וציר מוריה.</li>
           <li>מומחיות טכנית בטיפול ברכבים חשמליים ומערכות מתח גבוה.</li>
           <li>ציוד חילוץ מתקדם להעמסה בטוחה ללא נזק לרכב.</li>
-          <li>סיוע מקצועי גם עבור <Link href="/areas/haifa-general/emergency-car-rescue-mud-carmel-forest" className="text-blue-600 font-semibold underline">חילוץ רכב מהשטח בכרמל</Link>.</li>
+          <li>סיוע מקצועי גם עבור <Link href="/areas/haifa-general/emergency-mud-recovery-service-carmel-forest-haifa" className="text-blue-600 font-semibold underline">חילוץ רכב מהשטח ביערות הכרמל</Link>.</li>
           <li>שקיפות מלאה במחיר ללא הפתעות מיותרות.</li>
         </ul>
 
@@ -74,15 +74,15 @@ export default function Page() {
             <div className="space-y-4">
                 <div>
                     <p className="font-bold">באילו מקרים כדאי להזמין גרירה לרכב חשמלי?</p>
-                    <p className="text-gray-700">בדרך כלל כשהמצבר פרוק לחלוטין, תקלות במערכת בקרת הטעינה, או חוסר יכולת להניע. אנו מספקים מענה מקצועי בדומה לשירותי <Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="text-blue-600 underline">גרירת רכב חשמלי בכביש 22</Link>.</p>
+                    <p className="text-gray-700">בדרך כלל כשהמצבר פרוק לחלוטין או שיש תקלה במערכת הטעינה. אנו מספקים מענה מקצועי בדומה לשירותי <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-600 underline">גרירה בכביש 22</Link>.</p>
                 </div>
                 <div>
-                    <p className="font-bold">האם אתם מפנים רכבים ישנים מהשכונה?</p>
-                    <p className="text-gray-700">כן, אנו מספקים שירותי פינוי גרוטאות מהירה. למידע נוסף ניתן לבדוק את שירותי ה- <Link href="/areas/haifa-general/car-scrapping-haifa-krayot" className="text-blue-600 underline">פירוק רכבים בחיפה והקריות</Link>.</p>
+                    <p className="font-bold">האם אתם קונים רכבים ישנים לפירוק?</p>
+                    <p className="text-gray-700">כן, אנו מבצעים פינוי רכבים. למידע נוסף ראו <Link href="/areas/haifa-general/scrap-car-buyer-haifa-krayot-immediate-removal" className="text-blue-600 underline">קניית רכבים לפירוק בחיפה</Link>.</p>
                 </div>
                 <div>
-                    <p className="font-bold">מה עושים אם נתקעתי עם הרכב בשטח או בדרך הררית?</p>
-                    <p className="text-gray-700">באזור הכרמל והסביבה אנו מבצעים חילוצים מורכבים. ראו דפי מידע נוספים כמו <Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa" className="text-blue-600 underline">חילוץ רכב מהשטח בכרמל</Link>.</p>
+                    <p className="font-bold">האם אתם מחלצים רכבי שטח שנכנסו לבוץ בכרמל?</p>
+                    <p className="text-gray-700">בהחלט, אנו מומחים בחילוצי 4x4. ראו שירותי <Link href="/areas/haifa-general/mud-rescue-4x4-carmel-forest-haifa" className="text-blue-600 underline">חילוץ בוץ 4x4 בכרמל</Link>.</p>
                 </div>
             </div>
         </div>

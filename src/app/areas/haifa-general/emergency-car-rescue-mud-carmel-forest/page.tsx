@@ -58,14 +58,14 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-4">זקוקים לחילוץ רכב מהבוץ ביערות הכרמל? אנחנו כאן בשבילכם.</h2>
         <p className="mb-6">
-          יערות הכרמל מציעים נופים מרהיבים אך הדרכים הופכות למלכודת בוץ בחורף. אם נתקעתם, אנו מציעים שירותי 
-          <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-600 underline"> חילוץ מבוץ באזור הכרמל</Link> מקצועיים. למי שנתקע ליד מוסדות אקדמיים, אנו מספקים מענה מהיר עבור <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-haifa-university" className="text-blue-600 underline">חילוץ רכב תקוע באוניברסיטת חיפה</Link>. אם אתם זקוקים לחילוץ מורכב יותר עבור רכבי שטח, ניתן לעיין בשירותי <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-600 underline">חילוץ 4x4 ביערות הכרמל</Link> שלנו.
+          יערות הכרמל מציעים נופים מרהיבים אך הדרכים הופכות למלכודת בוץ בחורף. אנו מציעים שירותי 
+          <Link href="/areas/haifa-general/emergency-mud-recovery-service-carmel-forest-haifa" className="text-blue-600 underline"> חילוץ דחוף מהבוץ ביערות הכרמל</Link> מקצועיים. למי שנתקע ליד מוסדות אקדמיים, אנו מספקים מענה מהיר עבור <Link href="/areas/haifa-general/suv-stuck-in-mud-rescue-haifa-university" className="text-blue-600 underline">חילוץ רכב תקוע באוניברסיטת חיפה</Link>. אם אתם זקוקים לחילוץ מורכב יותר עבור רכבי שטח, ניתן לעיין בשירותי <Link href="/areas/haifa-general/mud-rescue-4x4-carmel-forest-haifa" className="text-blue-600 underline">חילוץ 4x4 ביערות הכרמל</Link> שלנו.
         </p>
 
         <h3 className="text-2xl font-semibold mb-3">למה לבחור בנו לחילוץ בשטח?</h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>זמינות מלאה:</strong> שירות חירום 24/7 לכל אזור חיפה והסביבה.</li>
-          <li><strong>מומחיות בשטח:</strong> ניסיון רב בחילוץ רכבים פרטיים ורכבי 4x4.</li>
+          <li><strong>זמינות מלאה:</strong> שירות חירום 24 שעות ביממה, 7 ימים בשבוע לכל אזור חיפה והסביבה.</li>
+          <li><strong>מומחיות בשטח:</strong> ניסיון רב בחילוץ רכבים פרטיים ורכבי שטח.</li>
           <li><strong>ציוד מתקדם:</strong> אמצעי חילוץ מודרניים לשליפה בטוחה מהבוץ.</li>
           <li><strong>מחירים הוגנים:</strong> שירות מקצועי במחיר משתלם ללא הפתעות.</li>
         </ul>
@@ -75,15 +75,19 @@ export default function Page() {
           <div className="space-y-4">
             <div>
               <p className="font-bold">כמה זמן לוקח להגיע ליערות הכרמל?</p>
-              <p>אנו משתדלים להגיע תוך זמן קצר מרגע הקריאה, בהתאם לתנאי השטח והתנועה.</p>
+              <p>אנו משתדלים להגיע תוך זמן קצר מרגע הקריאה, בהתאם לתנאי השטח והתנועה באזור.</p>
             </div>
             <div>
               <p className="font-bold">האם אתם גוררים רכב שאינו מניע אחרי החילוץ?</p>
               <p>בהחלט. אם הרכב זקוק לתיקון, נספק שירותי גרירה מקצועיים במחיר הוגן למוסך או לכל יעד שתבחרו.</p>
             </div>
             <div>
-              <p className="font-bold">האם אתם מחלצים גם רכבים כבדים?</p>
-              <p>אנו מחלצים רכבים פרטיים ומסחריים קלים. השירות אינו כולל חילוץ אופנועים.</p>
+              <p className="font-bold">האם אתם מחלצים רכבים דו גלגליים?</p>
+              <p>השירות שלנו מתמקד בחילוץ רכבים פרטיים, רכבי שטח ומסחריים קלים. אנו לא מבצעים חילוץ אופנועים.</p>
+            </div>
+            <div>
+              <p className="font-bold">האם אתם פעילים גם בכבישים ראשיים ליד הכרמל?</p>
+              <p>כן, אנו מספקים גם שירותי <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-600 underline">גרירה בכביש 22 עוקף קריות</Link> לכל מי שזקוק לסיוע בדרכים.</p>
             </div>
           </div>
         </div>

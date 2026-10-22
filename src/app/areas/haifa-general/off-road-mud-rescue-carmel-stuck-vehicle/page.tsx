@@ -5,7 +5,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "חילוץ שטח ובוץ בכרמל: הגעה מהירה 24/7 | מחיר הוגן",
-  description: "רכב תקוע בבוץ בכרמל? צוות מקצועי לחילוצי שטח 24/7. הגעה מהירה לכל מוקדי הכרמל, דניה ואחוזה. מחיר הוגן ושירות מהיר. התקשרו עכשיו לחילוץ!",
+  description: "רכב תקוע בבוץ בכרמל? צוות חילוץ מקצועי זמין 24/7. הגעה מהירה לכל מוקדי הכרמל, דניה והאוניברסיטה. מחיר הוגן ושירות שטח מיומן. התקשרו עכשיו לחילוץ!",
   alternates: { canonical: "/areas/haifa-general/off-road-mud-rescue-carmel-stuck-vehicle" }
 };
 
@@ -33,8 +33,8 @@ export default function Page() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ שטח ובוץ בכרמל: רכב תקוע? אנחנו בדרך אליך</h1>
           <p className="text-lg md:text-xl mb-8">
             נתקעת בבוץ בדרכי העפר של הכרמל? אנו מספקים שירותי חילוץ שטח מקצועיים לרכבים פרטיים ורכבי 4x4. 
-            אנו מתמחים בחילוץ מהיר באזורים מאתגרים, כולל <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-danya" className="underline font-bold">חילוץ בשטח ביערות הכרמל ובאזור דניה</Link>. 
-            בנוסף, אנו מעניקים שירותי גרירה מקצועיים כמו <Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles" className="underline font-bold">שירותי גרירה באחוזה חיפה</Link>. חשוב לציין: אנו לא מבצעים חילוץ או גרירה לאופנועים.
+            אנו מתמחים בחילוץ מהיר באזורים מאתגרים, כולל <Link href="/areas/haifa-general/mud-rescue-4x4-carmel-forest-haifa" className="underline font-bold">חילוץ שטח 4x4 ביערות הכרמל</Link> וסביבת דניה. 
+            בנוסף, אם נתקעת ליד מוסד אקדמי, אנו מציעים <Link href="/areas/haifa-general/suv-stuck-in-mud-rescue-haifa-university" className="underline font-bold">חילוץ SUV בבוץ באוניברסיטת חיפה</Link>. חשוב לציין: אנו לא מבצעים חילוץ או גרירה לאופנועים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa" />
@@ -70,7 +70,7 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold text-xl">האם השירות כולל גרירה לאחר החילוץ?</h3>
-              <p>במידה והרכב זקוק לתיקון במוסך לאחר החילוץ, נוכל לסייע בתיאום גרירה ליעדים שונים באזור חיפה והקריות, כולל <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="underline font-bold">שירותי גרירה באזור צ'ק פוסט</Link>.</p>
+              <p>במידה והרכב זקוק לתיקון במוסך, נוכל לסייע בתיאום גרירה ליעדים שונים, כולל <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="underline font-bold">גרירה מאזור צ'ק פוסט</Link> והסביבה.</p>
             </div>
           </div>
         </div>

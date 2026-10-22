@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from '@/lib/data';
 import { WhatsAppCTA } from '@/components/whatsapp-cta';
 
 export const metadata: Metadata = {
-  title: 'גרר בצק פוסט וחיפה | כביש 22 | הגעה מהירה 30 דקות | 24/7',
-  description: 'נתקעתם בצק פוסט או בכביש 22? גרר זמין 24/7 לכל סוגי הרכבים. מחיר הוגן ושירות מקצועי. התקשרו עכשיו להזמנת גרר מהיר!',
+  title: 'גרר בצק פוסט וחיפה | כביש 22 | הגעה תוך 30 דקות | 24/7',
+  description: 'נתקעתם בצק פוסט או בכביש 22? גרר זמין 24/7 לכל סוגי הרכבים. מחיר הוגן, שירות מהיר ומקצועי. התקשרו עכשיו להזמנת גרר מהיר!',
   alternates: {
     canonical: 'https://www.yourdomain.com/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap',
   },
@@ -33,7 +33,7 @@ export default function Page() {
             גרירת רכב בצק פוסט חיפה וכביש 22 - מענה מהיר 24/7
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            זקוקים לגרר בצק פוסט? נתקעתם על כביש 22? הצוות שלנו זמין 24/7 לחילוץ מקצועי ומהיר לכל סוגי הרכבים במחיר משתלם.
+            זקוקים לגרר בצק פוסט? נתקעתם על כביש 22? הצוות שלנו זמין 24 שעות ביממה לחילוץ מקצועי ומהיר לכל סוגי הרכבים במחיר משתלם.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
@@ -46,9 +46,10 @@ export default function Page() {
 
       <section className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-blue-400">שירותי גרירה מקצועיים בצפון</h2>
+          <h2 className="text-3xl font-bold mb-8 text-blue-400">שירותי גרירה וחילוץ מקצועיים בצפון</h2>
           <p className="text-lg mb-6">
-            אנו מעניקים מעטפת שירות מלאה לאזור חיפה, החל מ-<Link href="/areas/haifa-general/fast-towing-road-22-krayot" className="text-blue-300 underline">גרירת רכב תקוע בכביש 22</Link> ועד ל-<Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-300 underline">גרירת רכבים בצק פוסט</Link>. אנו מתמחים בחילוץ רכבים פרטיים ומסחריים, ומבטיחים שירות אמין במחיר הוגן. זקוקים לחילוץ מיוחד? נסו את שירות <Link href="/areas/haifa-general/fast-towing-flat-tire-road-22-check-post" className="text-blue-300 underline">גרירה ותיקון תקר בכביש 22</Link>.
+            אנו מעניקים מעטפת שירות מלאה לאזור חיפה, החל מ-<Link href="/areas/haifa-general/towing-road-22-krayot-bypass" className="text-blue-300 underline">גרירת רכב תקוע בכביש 22</Link> ועד ל-<Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="text-blue-300 underline">פינוי רכבים בצק פוסט</Link>. 
+            בנוסף, אם נקלעתם לתאונה, אנו מספקים <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-300 underline">שירותי חילוץ לאחר תאונה בצומת צק פוסט</Link>. אנו מתמחים בחילוץ רכבים פרטיים ומסחריים, ומבטיחים שירות אמין במחיר הוגן.
           </p>
         </div>
       </section>
@@ -63,14 +64,14 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold text-lg">האם אתם מציעים שירות לרכבים מסחריים?</h3>
-              <p>כן, אנו מספקים מענה מהיר לחילוץ רכבים קלים ומסחריים. למידע נוסף, בדקו גם <Link href="/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass" className="text-blue-600 underline">גרירת רכב מסחרי בכביש 22</Link>.</p>
+              <p>כן, אנו מספקים מענה מהיר לחילוץ רכבים קלים ומסחריים. למידע נוסף על אזורים סמוכים, ראו את שירותי <Link href="/areas/haifa-general/sherutei-grira-hilutz-krayot-kavish-22" className="text-blue-600 underline">הגרירה והחילוץ בכביש 22 לקריות</Link>.</p>
             </div>
             <div>
               <h3 className="font-bold text-lg">איך קובעים את מחיר הגרירה?</h3>
-              <p>המחיר נקבע בהתאם למרחק הגרירה וסוג הרכב, אך אנו תמיד מקפידים על הצעת מחיר הוגנת ומשתלמת עבור <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-600 underline">שירותי גרירה זולים בצק פוסט</Link>.</p>
+              <p>המחיר נקבע בהתאם למרחק הגרירה וסוג הרכב, אך אנו תמיד מקפידים על הצעת מחיר הוגנת ומשתלמת עבור כל שירותי הגרירה באזור חיפה והסביבה.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">האם השירות פעיל בסוף השבוע?</h3>
+              <h3 className="font-bold text-lg">האם השירות פעיל בסופי שבוע?</h3>
               <p>כן, אנו זמינים 24 שעות ביממה, שבעה ימים בשבוע, כולל שבתות וחגים, כדי להבטיח שלא תישאר תקוע בכבישים העמוסים כמו כביש 22.</p>
             </div>
           </div>

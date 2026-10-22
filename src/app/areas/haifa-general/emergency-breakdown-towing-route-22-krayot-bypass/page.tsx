@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "גרר בכביש 22 (עוקף קריות) - שירות 24/7 | הגעה תוך 30 דקות",
-  description: "נתקעתם בעוקף קריות? גרר זמין 24/7 עם הגעה מהירה ומחיר הוגן. שירות חילוץ מקצועי לכל סוגי הרכבים. התקשרו עכשיו לקבלת סיוע מיידי!",
+  title: "גרר בכביש 22 (עוקף קריות) - הגעה תוך 30 דקות | 24/7",
+  description: "נתקעתם בעוקף קריות? גרר זמין 24/7 עם מחיר הוגן ושירות מקצועי. הגעה מהירה לכל סוגי הרכבים. התקשרו עכשיו לסיוע מיידי!",
   alternates: {
     canonical: '/areas/haifa-general/emergency-breakdown-towing-route-22-krayot-bypass'
   }
@@ -58,13 +58,13 @@ export default function Page() {
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו בכביש 22?</h2>
         <p className="mb-4">
-          אנו מתמחים בחילוץ רכבים תקועים לאורך ציר עוקף קריות. אם אתם זקוקים ל-<Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-600 underline">עזרה דחופה בכביש 22 וצומת צק פוסט</Link>, אנו כאן עבורכם. אנו מספקים מענה מהיר גם במקרים של <Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-600 underline">גרירה במחיר משתלם בצק פוסט</Link> וכן מתמחים ב-<Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">גרירת רכבים מסחריים קלים</Link> לאורך הציר.
+          אנו מתמחים בחילוץ רכבים תקועים לאורך ציר עוקף קריות. אם אתם זקוקים ל-<Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-600 underline">שירותי גרירה מקצועיים בכביש 22</Link>, אנו כאן עבורכם. אנו מספקים מענה מהיר גם במקרים של <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 underline">גרירה לאחר תאונה בכביש 22</Link> וכן מתמחים ב-<Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="text-blue-600 underline">גרירת רכבים על משטח (גרר שטוח)</Link> לאורך הציר המרכזי.
         </p>
         <ul className="list-disc pr-6 space-y-2 mb-8">
           <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
           <li>הגעה מהירה לכל נקודה בכביש 22 והסביבה.</li>
           <li>טיפול ברכבים פרטיים, רכבים מסחריים ורכבי שטח.</li>
-          <li>שירות קניית רכבים לפירוק במקרה שהרכב אינו בר תיקון - <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="text-blue-600 underline">מידע על קניית רכבים לפירוק באזור</Link>.</li>
+          <li>שירות קניית רכבים לפירוק במקרה שהרכב אינו בר תיקון - <Link href="/areas/haifa-general/scrap-car-buyer-haifa-krayot-immediate-removal" className="text-blue-600 underline">פינוי רכבים לפירוק באזור</Link>.</li>
           <li>מחירים הוגנים ושקופים ללא הפתעות.</li>
         </ul>
 
@@ -80,7 +80,7 @@ export default function Page() {
           </div>
           <div>
             <h3 className="font-bold">מה עושים אם הרכב מושבת לגמרי?</h3>
-            <p>במקרים בהם הרכב ישן או שעלות התיקון אינה משתלמת, אנו מציעים שירות <Link href="/areas/haifa-general/kaniyat-rekhavim-yeshanim-lehalafim-kiryat-yam-pinui-meyadi" className="text-blue-600 underline">קניית רכבים לפירוק בקריות</Link> עם פינוי מיידי.</p>
+            <p>במקרים בהם הרכב ישן או שעלות התיקון אינה משתלמת, אנו מציעים שירות <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="text-blue-600 underline">קניית רכבים לפירוק באזור הקריות</Link> עם פינוי מיידי.</p>
           </div>
         </div>
 
