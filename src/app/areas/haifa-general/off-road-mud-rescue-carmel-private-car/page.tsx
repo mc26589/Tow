@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "חילוץ שטח ובוץ בכרמל לרכב פרטי - הגעה מהירה 24/7",
-  description: "נתקעתם בבוץ בכרמל? שירות חילוץ מקצועי לרכב פרטי עם הגעה מהירה לכל נקודה בחיפה. מחיר הוגן, ציוד מתקדם ושירות בטוח ללא נזקים. התקשרו עכשיו!",
+  title: "חילוץ שטח ובוץ בכרמל לרכב פרטי | הגעה מהירה 24/7",
+  description: "נתקעתם בבוץ בכרמל? שירות חילוץ שטח מקצועי לרכב פרטי עם הגעה מהירה בחיפה. צוות מיומן, מחיר הוגן ושירות ללא נזקים. התקשרו עכשיו לקבלת סיוע!",
   alternates: {
     canonical: "/areas/haifa-general/off-road-mud-rescue-carmel-private-car"
   }
@@ -48,7 +48,7 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירות חילוץ שטח מקצועי באזור הכרמל</h2>
-        <p className="mb-4">נתקעתם בדרכי עפר? אנו מומחים בחילוץ רכבים פרטיים ששקעו בבוץ. לשירותים משלימים באזור, תוכלו לבדוק <Link href="/areas/haifa-general/emergency-mud-recovery-service-carmel-forest-haifa" className="text-blue-600 underline">emergency mud recovery service carmel forest haifa</Link> או לבצע <Link href="/areas/haifa-general/mud-rescue-4x4-carmel-forest-haifa" className="text-blue-600 underline">mud rescue 4x4 carmel forest haifa</Link> לרכבים בעלי הנעה כפולה. אם התקיעה קרתה באזור האוניברסיטה, מומלץ לעיין בשירות <Link href="/areas/haifa-general/4x4-rescue-mud-carmel-forest-haifa-university" className="text-blue-600 underline">4x4 rescue mud carmel forest haifa university</Link>.</p>
+        <p className="mb-4">נתקעתם בדרכי עפר? אנו מומחים בחילוץ רכבים פרטיים ששקעו בבוץ. לשירותים משלימים, תוכלו לבדוק את שירות ה-<Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-haifa-university" className="text-blue-600 underline">car stuck in mud carmel forest haifa university</Link> המיועד לאזור האוניברסיטה, או לבצע <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-600 underline">4x4 mud recovery carmel forest haifa</Link> לרכבים בעלי הנעה כפולה. אם אתם זקוקים לחילוץ מורכב יותר, ראו <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-haifa-university" className="text-blue-600 underline">off road rescue carmel forest haifa university</Link>.</p>
         <p>אנו מבינים את הלחץ הכרוך בתקיעה בשטח. הצוות שלנו זמין 24 שעות ביממה, מקפיד על מחיר הוגן ומבטיח טיפול בטוח ברכבכם ללא נזקים מיותרים.</p>
       </section>
 
@@ -65,12 +65,12 @@ export default function Page() {
               <p>בהחלט. אם הרכב זקוק לגרירה לאחר החילוץ, אנו מציעים שירותי גרירה מקצועיים. למידע על גרירה בצירים מרכזיים, ראו <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-600 underline">towing services road 22 krayot bypass</Link>.</p>
             </div>
             <div>
-              <h3 className="font-bold">האם ניתן להזמין חילוץ לרכב שטח בעל הנעה 4x4?</h3>
-              <p>כן, אנו ערוכים לחילוץ מורכב של רכבי פנאי ושטח. למידע נוסף על רכבי שטח, ראו <Link href="/areas/haifa-general/suv-stuck-in-mud-rescue-haifa-university" className="text-blue-600 underline">suv stuck in mud rescue haifa university</Link>.</p>
+              <h3 className="font-bold">האם ניתן להזמין חילוץ לרכב שטח או מסחרי?</h3>
+              <p>כן, אנו ערוכים לחילוץ מורכב של רכבי פנאי ורכבים מסחריים. במידה ואתם זקוקים לסיוע דחוף בדרך, ניתן להיעזר בשירות <Link href="/areas/haifa-general/urgent-towing-commercial-van-check-post-route-22" className="text-blue-600 underline">urgent towing commercial van check post route 22</Link>.</p>
             </div>
             <div>
-              <h3 className="font-bold">מה עושים אם זקוקים לחילוץ דחוף ליד אזור הקריות?</h3>
-              <p>במידה ואתם זקוקים לסיוע באזור עוקף קריות, ניתן ליצור קשר דרך <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-600 underline">גרירה 24 7 עוקף קריות מחיר הוגן</Link>.</p>
+              <h3 className="font-bold">מה עושים אם הרכב אינו ניתן לתיקון בשטח?</h3>
+              <p>במידה והרכב אינו בר תיקון או שמדובר ברכב ישן, ניתן לבדוק שירותי <Link href="/areas/haifa-general/car-scrapping-haifa-krayot-towing" className="text-blue-600 underline">car scrapping haifa krayot towing</Link> בתיאום איתנו.</p>
             </div>
           </div>
         </div>

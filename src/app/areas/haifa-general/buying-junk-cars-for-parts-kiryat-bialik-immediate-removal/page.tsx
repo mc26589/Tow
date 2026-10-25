@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'קניית רכבים לפירוק בקרית ביאליק | מזומן ופינוי מהיר 24/7',
-  description: 'מעוניינים למכור רכב לפירוק בקרית ביאליק? קונים כל סוגי הרכבים במזומן במקום. שירות אמין, פינוי מהיר מהשטח ומחיר הוגן. התקשרו עכשיו לפינוי מיידי!',
+  description: 'מעוניינים למכור רכב לפירוק בקרית ביאליק? קונים את כל סוגי הרכבים במזומן במקום. פינוי מהיר, מחיר הוגן ושירות מקצועי. התקשרו עכשיו לפינוי מיידי מהשטח!',
   alternates: {
     canonical: '/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal',
   },
@@ -62,11 +62,11 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6">שירות פינוי רכבים מהיר לתושבי הקריות</h2>
           <p className="mb-4">
-            אנו מציעים פתרון מלא לפינוי רכבים שאינם בשימוש. השירות כולל הגעה לכל שכונה בקרית ביאליק, הערכת שווי הרכב ותשלום במזומן במקום. זקוקים לעזרה בדרכים? ניתן לבדוק שירותי <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-600 underline">גרירה דחופה וזולה בקרית ביאליק</Link> או לשירותי פינוי נרחבים יותר, ראו <Link href="/areas/haifa-general/buying-cars-for-scrap-haifa-krayot" className="text-blue-600 underline">קניית רכבים לפירוק בחיפה והקריות</Link>. למי שמחפש שירותים נוספים באזור הקריות, ניתן לבדוק גם <Link href="/areas/haifa-general/scrap-car-removal-for-parts-kiryat-motzkin" className="text-blue-600 underline">פירוק רכבים בקרית מוצקין</Link>.
+            אנו מציעים פתרון מלא לפינוי רכבים שאינם בשימוש. השירות כולל הגעה לכל שכונה בקרית ביאליק. אם הרכב זקוק לגרירה מהירה לנקודת הפירוק, תוכלו להסתייע בשירותי <Link href="/areas/haifa-general/towing-for-scrap-kiryat-bialik" className="text-blue-600 underline">towing for scrap kiryat bialik</Link> המקצועיים שלנו. למידע נוסף על שירותים רחבים באזור, בקרו ב<Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-towing-included" className="text-blue-600 underline">buy cars for scrap haifa krayot towing included</Link>.
           </p>
           <div className="bg-red-50 border-r-4 border-red-500 p-4 mt-8">
             <p className="font-bold">חשוב לדעת:</p>
-            <p>השירות מתמקד ברכבים בלבד (פרטיים ומסחריים). לצורך גרירה שוטפת באזור כביש 22, אנו ממליצים על <Link href="/areas/haifa-general/emergency-breakdown-towing-route-22-krayot-bypass" className="text-blue-600 underline">שירותי גרירה בכביש 22</Link>.</p>
+            <p>השירות מתמקד ברכבים בלבד (פרטיים ומסחריים). לצורך גרירה שוטפת באזור כביש 22, אנו ממליצים על <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-600 underline">towing services road 22 krayot bypass</Link>.</p>
           </div>
         </div>
       </section>
@@ -84,8 +84,8 @@ export default function Page() {
               <p>התשלום מתבצע במזומן במקום, מיד לאחר הערכת שווי הרכב ובדיקת הניירת הנדרשת לפינוי רכב לפירוק.</p>
             </div>
             <div>
-              <p className="font-bold text-lg">האם השירות זמין גם באזורים סמוכים?</p>
-              <p>כן, אנו נותנים שירות נרחב בכל אזור הקריות והסביבה. למקרים של תקלות דרך דחופות, תוכלו להיעזר ב<Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-600 underline">גרירה בצ'ק פוסט</Link> לפתרונות מיידיים.</p>
+              <p className="font-bold text-lg">האם אתם נותנים שירות גם במקרים דחופים?</p>
+              <p>בהחלט. אנו ערוכים למתן פתרונות מהירים. במקרה של תקלה דחופה באזור הצ'ק פוסט, תוכלו להיעזר ב<Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-600 underline">affordable towing check post haifa</Link>.</p>
             </div>
           </div>
         </div>

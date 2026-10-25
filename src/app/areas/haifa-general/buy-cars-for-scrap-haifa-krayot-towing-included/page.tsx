@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "קניית רכבים לפירוק בחיפה והקריות | גרירה חינם | זמינות 24/7",
-  description: "רוצים למכור רכב לפירוק בחיפה? אנו קונים את כל סוגי הרכבים במחיר הוגן, כולל פינוי וגרירה בחינם עד אליכם. שירות מהיר ומקצועי בכל אזור הצפון. התקשרו עכשיו!",
+  description: "רוצים למכור רכב לפירוק בחיפה והקריות? אנו קונים את כל סוגי הרכבים במחיר הוגן, כולל פינוי וגרירה בחינם עד אליכם. שירות מהיר ומקצועי. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-towing-included"
   }
@@ -56,8 +56,8 @@ export default function Page() {
       </section>
 
       <section className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">שירות מקצועי לפינוי רכבים לפירוק באזור חיפה</h2>
-        <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק מכל הסוגים: רכבים פרטיים, רכבים מסחריים וג'יפונים. מחפשים <Link href="/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup" className="text-blue-400 underline">מכירת רכב תקול לחלפים בחיפה בפינוי מיידי</Link>? הגעתם למקום הנכון. אנו נותנים שירות לתושבי אזור הצ'ק פוסט וזקוקים ל<Link href="/areas/haifa-general/affordable-car-towing-service-check-post-haifa" className="text-blue-400 underline">שירות גרירה זול בצ'ק פוסט</Link>.</p>
+        <h2 className="text-3xl font-bold mb-6">שירות מקצועי לפינוי רכבים לפירוק באזור חיפה והקריות</h2>
+        <p className="mb-4">אנו מתמחים בקניית רכבים לפירוק מכל הסוגים: רכבים פרטיים, רכבים מסחריים וג'יפונים. מחפשים <Link href="/areas/haifa-general/car-scrapping-haifa-krayot-towing" className="text-blue-400 underline">שירות פירוק רכבים בחיפה והקריות</Link> אמין? אנו נותנים שירות לכל תושבי האזור. אם הרכב תקוע, נשמח לספק גם <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-400 underline">שירות גרירה משתלם בצ'ק פוסט</Link> במידת הצורך.</p>
         <p className="mb-4"><strong>הערה חשובה:</strong> השירות מיועד לרכבים בעלי 4 גלגלים ומעלה בלבד. איננו מספקים שירותי פירוק לאופנועים.</p>
         
         <div className="mt-12">
@@ -65,15 +65,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold text-xl">האם אתם מגיעים לכל אזור חיפה והקריות?</h3>
-              <p>כן, אנו פעילים בכל רחבי חיפה והקריות, כולל סיוע למי שזקוק ל<Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-400 underline">גרירת רכב תקוע בכביש 22 צ'ק פוסט חיפה בזול</Link>.</p>
+              <p>כן, אנו פעילים בכל רחבי חיפה והקריות, כולל סיוע למי שזקוק ל<Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-400 underline">שירותי גרירה בכביש 22 עוקף קריות</Link>.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם ניתן לפנות רכב לאחר תאונה?</h3>
-              <p>בוודאי. אנו מנוסים בפינוי רכבים לאחר תאונה. אם קרתה לכם תאונה, אנו מציעים שירות <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="text-blue-400 underline">גרירה לאחר תאונה בצומת צ'ק פוסט</Link> במחיר תחרותי.</p>
+              <h3 className="font-bold text-xl">האם אתם מבצעים פירוק גם בקרית ביאליק?</h3>
+              <p>בוודאי. אנו מספקים מענה מהיר לכל מי שמחפש <Link href="/areas/haifa-general/towing-for-scrap-kiryat-bialik" className="text-blue-400 underline">גרירה לפירוק בקרית ביאליק</Link> ומעוניין להיפטר מרכב ישן במהירות.</p>
             </div>
             <div>
               <h3 className="font-bold text-xl">איך מגיעים אליכם לפינוי רכב ישן?</h3>
-              <p>פשוט מתקשרים אלינו. לתושבי קרית ים המחפשים <Link href="/areas/haifa-general/kaniyat-rekhavim-yeshanim-lehalafim-kiryat-yam-pinui-meyadi" className="text-blue-400 underline">קניית רכבים ישנים לפירוק בקרית ים</Link> אנו מספקים מענה מהיר בתוך שעות ספורות.</p>
+              <p>פשוט מתקשרים אלינו. לתושבי האזור המחפשים <Link href="/areas/haifa-general/cash-for-junk-cars-removal-hadar-hacarmel-haifa" className="text-blue-400 underline">קניית רכבים לפירוק בהדר הכרמל</Link> או בכל שכונה אחרת, אנו מספקים מענה מקצועי בתוך שעות ספורות.</p>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function Page() {
           <ul className="list-disc list-inside space-y-2">
             <li>גרירה ופינוי כלולים במחיר.</li>
             <li>תשלום במזומן או בהעברה מיידית ללא המתנה.</li>
-            <li>זמינות 24 שעות ביממה, 7 ימים בשבוע.</li>
+            <li>זמינות גבוהה בכל שעות היממה.</li>
             <li>מוניטין גבוה ושירות אמין בכל אזור הצפון.</li>
           </ul>
         </div>

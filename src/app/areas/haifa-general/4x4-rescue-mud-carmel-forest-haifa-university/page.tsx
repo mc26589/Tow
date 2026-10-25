@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ 4X4 מהבוץ בכרמל (אוניברסיטת חיפה) - הגעה מהירה 24/7',
-  description: 'נתקעתם בבוץ ביערות הכרמל ליד אוניברסיטת חיפה? צוות חילוץ 4X4 מומחה בדרך אליכם! הגעה מהירה, מחיר הוגן ושירות מקצועי ללא נזק. התקשרו עכשיו!',
+  title: 'חילוץ 4X4 מהבוץ בכרמל (אוניברסיטת חיפה) | הגעה מהירה 24/7',
+  description: 'נתקעתם בבוץ ליד אוניברסיטת חיפה? צוות חילוץ 4X4 מומחה בדרך אליכם! הגעה מהירה, מחיר הוגן ושירות מקצועי ללא נזק. התקשרו עכשיו!',
   alternates: {
     canonical: '/areas/haifa-general/4x4-rescue-mud-carmel-forest-haifa-university'
   }
@@ -58,10 +58,10 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לחילוץ בשטח?</h2>
         <ul className="list-disc pr-6 space-y-4">
-          <li>מומחיות מוכחת ב-<Link href="/areas/haifa-general/4x4-vehicle-stuck-in-mud-carmel-forest" className="text-blue-600 underline">חילוץ רכבי שטח מהבוץ</Link> באזור הכרמל.</li>
-          <li>זמינות מלאה 24/7 באזור חיפה, <Link href="/areas/haifa-general/mud-rescue-4x4-carmel-forest-haifa" className="text-blue-600 underline">יערות הכרמל</Link> וסביבת האוניברסיטה.</li>
+          <li>מומחיות מוכחת ב-<Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-600 underline">חילוץ רכבי שטח מהבוץ</Link> באזור הכרמל.</li>
+          <li>זמינות מלאה 24/7 באזור חיפה, <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-haifa-university" className="text-blue-600 underline">יערות הכרמל</Link> וסביבת האוניברסיטה.</li>
           <li>ציוד חילוץ מתקדם מונע נזקים לשלדת הרכב ומבטיח טיפול בטוח.</li>
-          <li>מחירים הוגנים ושירות אדיב ללא הפתעות, גם במקרים של <Link href="/areas/haifa-general/car-extraction-from-mud-carmel-reserve-haifa" className="text-blue-600 underline">חילוץ רכב משמורות טבע</Link>.</li>
+          <li>מחירים הוגנים ושירות אדיב ללא הפתעות, גם במקרים של <Link href="/areas/haifa-general/off-road-mud-rescue-carmel-private-car" className="text-blue-600 underline">חילוץ רכב משמורות טבע</Link>.</li>
         </ul>
 
         <div className="mt-10 p-6 bg-gray-50 rounded-xl">
@@ -73,18 +73,14 @@ export default function Page() {
             </div>
             <div>
               <p className="font-bold">האם אתם מחלצים רכבים שאינם 4X4?</p>
-              <p>כן, אנו מספקים שירותי <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-600 underline">גרירת רכבים רגילים</Link> שנתקעו בדרכי עפר משובשות בצידי הדרכים.</p>
+              <p>כן, אנו מספקים שירותי <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-600 underline">גרירת רכבים רגילים</Link> שנתקעו בדרכי עפר משובשות.</p>
             </div>
             <div>
               <p className="font-bold">מה טווח המחירים של חילוץ בשטח?</p>
-              <p>המחיר נקבע לפי מורכבות החילוץ ומיקום הרכב. אנו מקפידים על שקיפות מלאה ומחיר הוגן בהשוואה לשירותי גרירה אחרים.</p>
+              <p>המחיר נקבע לפי מורכבות החילוץ. אנו מקפידים על שקיפות מלאה ומחיר הוגן בהשוואה לשירותי גרירה אחרים.</p>
             </div>
           </div>
         </div>
-
-        <p className="mt-6 text-gray-700 italic">
-          חשוב לציין: אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי 4X4. איננו מספקים שירותי חילוץ או גרירה לאופנועים (במידה ואתם צריכים סיוע לאופנוע באחוזה, מומלץ לבדוק <Link href="/areas/haifa-general/motorcycle-towing-ahuza-haifa" className="text-blue-600 underline">שירותי גרירת אופנועים מקצועיים</Link>).
-        </p>
       </section>
     </main>
   );

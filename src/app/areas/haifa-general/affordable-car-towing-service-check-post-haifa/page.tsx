@@ -5,7 +5,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "גרר בצ'ק פוסט חיפה 24/7 | הגעה מהירה ומחיר הוגן",
-  description: "נתקעתם בצ'ק פוסט? גרר זמין 24/7 להגעה תוך 30 דקות. שירותי גרירה מקצועיים במחיר הוגן לכל סוגי הרכבים. התקשרו עכשיו לשירות מהיר!",
+  description: "נתקעתם באזור צ'ק פוסט? שירותי גרירה מקצועיים 24/7 לרכבים ורכבים מסחריים. הגעה תוך 30 דקות במחיר הוגן. התקשרו עכשיו לשירות מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-car-towing-service-check-post-haifa",
   },
@@ -44,8 +44,8 @@ export default function Page() {
           <section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
             <h2 className="text-3xl font-bold text-yellow-400 mb-4">שירותי גרירה בצ'ק פוסט והסביבה</h2>
             <p className="text-lg mb-4">
-              אנו מתמחים במתן פתרונות גרירה וחילוץ לכל מי שזקוק ל-<Link href="/areas/haifa-general/cheap-towing-services-check-post" className="text-yellow-400 underline">cheap towing services check post</Link> באופן מיידי. 
-              הניסיון הרב שלנו מאפשר לנו לבצע <Link href="/areas/haifa-general/towing-road-22-krayot-bypass" className="text-yellow-400 underline">towing road 22 krayot bypass</Link> בבטחה ובמהירות. 
+              אנו מתמחים במתן פתרונות גרירה וחילוץ לכל מי שזקוק לשירותי <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-yellow-400 underline">affordable towing check post haifa</Link> באופן מיידי.
+              הניסיון הרב שלנו מאפשר לנו לבצע <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-yellow-400 underline">towing services road 22 krayot bypass</Link> בבטחה ובמהירות.
               אם מצאתם את עצמכם עם רכב שלא מניע או מעורב בתאונה, אנו כאן לתת מענה מקצועי.
             </p>
           </section>
@@ -55,15 +55,15 @@ export default function Page() {
             <div className="space-y-6">
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-white mb-2">תוך כמה זמן הגרר מגיע לצ'ק פוסט?</h3>
-                <p>אנו מגיעים לרוב הנקודות תוך כ-30 דקות. לתושבי הסביבה, אנו מציעים גם <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-yellow-400">emergency towing cheap kiryat bialik</Link>.</p>
+                <p>אנו מגיעים לרוב הנקודות תוך כ-30 דקות. ללקוחות עסקיים אנו מציעים מענה מיוחד הכולל <Link href="/areas/haifa-general/urgent-towing-commercial-van-check-post-route-22" className="text-yellow-400">urgent towing commercial van check post route 22</Link>.</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-white mb-2">האם אתם קונים רכבים לפירוק באזור?</h3>
-                <p>בהחלט. אנו מבצעים <Link href="/areas/haifa-general/car-scrapping-haifa-krayot-immediate-removal" className="text-yellow-400">car scrapping haifa krayot immediate removal</Link> בפינוי מהיר מהמקום.</p>
+                <p>בהחלט. אנו מבצעים <Link href="/areas/haifa-general/car-scrapping-haifa-krayot-towing" className="text-yellow-400">car scrapping haifa krayot towing</Link> בפינוי מהיר מהמקום ללא עלות נוספת.</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-white mb-2">מה לעשות אם נתקעתי עם רכב בדרכים מסובכות?</h3>
-                <p>במידה ומדובר בבעיות שטח או חילוצים מורכבים יותר, מומלץ לעיין בשירותינו כמו <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region" className="text-yellow-400">car stuck in mud carmel region</Link> או <Link href="/areas/haifa-general/emergency-towing-horev-ahuza-haifa" className="text-yellow-400">emergency towing horev ahuza haifa</Link> אשר זמינים עבורכם 24/7.</p>
+                <h3 className="text-xl font-bold text-white mb-2">כיצד ניתן לקבל מידע על מחיר גרירה?</h3>
+                <p>המחיר תלוי במרחק ובסוג הרכב. ניתן לקבל הערכת מחיר מדויקת בשיחת טלפון קצרה. לשירותים מורכבים יותר כמו <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-haifa-university" className="text-yellow-400">car stuck in mud carmel forest haifa university</Link>, המחיר ייקבע בהתאם לציוד הנדרש.</p>
               </div>
             </div>
           </section>

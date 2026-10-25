@@ -57,9 +57,9 @@ export default function Page() {
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירותי גרירה וחילוץ באזור אחוזה והכרמל</h2>
         <div className="prose max-w-3xl mb-8">
-          <p>אנו מציעים פתרונות גרירה מתקדמים לתושבי אחוזה והסביבה. בין אם הרכב לא מניע או שנתקעתם בדרך, הצוות שלנו זמין עבורכם. אנו מתמחים בחילוץ רכבים פרטיים ומסחריים, ומציעים שירות מקיף באזור הכרמל.</p>
-          <p>במקרים מורכבים יותר, אנו מספקים מענה למצבים כמו <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-region">חילוץ רכב תקוע בבוץ באזור הכרמל</Link> או <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university">חילוץ רכב ליד אוניברסיטת חיפה</Link>. חשוב לציין: השירות מיועד לרכבים פרטיים, מסחריים וארבע על ארבע בלבד.</p>
-          <p>זקוקים למידע נוסף? ניתן לבדוק גם אפשרויות ל<Link href="/areas/haifa-general/cheap-private-car-towing-ahuza-haifa">שירות גרירה זול לרכב פרטי באחוזה</Link> או לבדוק פתרונות ל<Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa">רכב חשמלי שנתקע באחוזה</Link>.</p>
+          <p>אנו מציעים פתרונות גרירה מתקדמים לתושבי אחוזה והסביבה. הצוות שלנו זמין עבורכם לכל קריאה, בין אם נתקעתם בלב השכונה או בקרבת יערות הכרמל. אנו מתמחים בחילוץ רכבים פרטיים ומסחריים.</p>
+          <p>במקרים מורכבים יותר, אנו מספקים מענה מקצועי הכולל <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-haifa-university">חילוץ רכב תקוע בבוץ באזור אוניברסיטת חיפה</Link>. אם נתקעתם בשטח, אנו מציעים גם פתרונות כגון <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa">חילוץ רכבי 4x4 ביערות הכרמל</Link> כדי להחזיר אתכם לכביש במהירות.</p>
+          <p>זקוקים למידע נוסף? ניתן לבדוק גם אפשרויות ל<Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa">גרירת רכב חשמלי באחוזה</Link> או לשירותי חילוץ מורכבים יותר כמו <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-haifa-university">חילוץ רכבי שטח באזור אוניברסיטת חיפה</Link>.</p>
         </div>
 
         <div className="bg-gray-50 p-8 rounded-xl">
@@ -71,11 +71,11 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold">מה טווח המחירים לגרירה?</h3>
-              <p>המחיר נקבע לפי מרחק הגרירה וסוג הרכב. אנו מקפידים על מחירים הוגנים ושקופים לכל לקוחותינו.</p>
+              <p>המחיר נקבע לפי מרחק הגרירה, שעת הקריאה וסוג הרכב. אנו מקפידים על מחירים הוגנים ושקופים לכל לקוחותינו.</p>
             </div>
             <div>
               <h3 className="font-bold">האם אתם גוררים אופנועים?</h3>
-              <p>לא, אנו מתמקדים בשינוע וחילוץ של רכבים פרטיים, מסחריים ורכבי שטח בלבד.</p>
+              <p>השירות שלנו מיוקד בשינוע וחילוץ של רכבים פרטיים, רכבים מסחריים ורכבי שטח בלבד.</p>
             </div>
           </div>
         </div>
