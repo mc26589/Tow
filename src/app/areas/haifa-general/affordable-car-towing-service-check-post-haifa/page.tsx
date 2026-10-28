@@ -5,7 +5,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "גרר בצ'ק פוסט חיפה 24/7 | הגעה מהירה ומחיר הוגן",
-  description: "נתקעתם באזור צ'ק פוסט? שירותי גרירה מקצועיים 24/7 לרכבים ורכבים מסחריים. הגעה תוך 30 דקות במחיר הוגן. התקשרו עכשיו לשירות מהיר!",
+  description: "נתקעתם בצ'ק פוסט? שירותי גרירה מקצועיים 24/7 לרכבים ורכבים מסחריים. הגעה תוך 30 דקות במחיר הוגן. התקשרו עכשיו לשירות מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-car-towing-service-check-post-haifa",
   },
@@ -31,7 +31,7 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">גרר בצ'ק פוסט חיפה - שירות מהיר ומקצועי 24/7</h1>
-          <p className="text-xl md:text-2xl mb-8">נתקעתם בצ'ק פוסט? הצוות שלנו בדרך אליכם! שירות גרירה אמין במחיר הוגן לכל סוגי הרכבים.</p>
+          <p className="text-xl md:text-2xl mb-8">נתקעתם באזור הצ'ק פוסט? הגרר שלנו בדרך אליכם! שירות גרירה אמין ומקצועי לכל סוגי הרכבים במחיר הוגן.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-bold py-3 px-8 rounded-full">התקשרו עכשיו להזמנת גרר</a>
             <WhatsAppCTA cityName="חיפה והצ'ק פוסט" />
@@ -44,9 +44,8 @@ export default function Page() {
           <section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
             <h2 className="text-3xl font-bold text-yellow-400 mb-4">שירותי גרירה בצ'ק פוסט והסביבה</h2>
             <p className="text-lg mb-4">
-              אנו מתמחים במתן פתרונות גרירה וחילוץ לכל מי שזקוק לשירותי <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-yellow-400 underline">affordable towing check post haifa</Link> באופן מיידי.
-              הניסיון הרב שלנו מאפשר לנו לבצע <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-yellow-400 underline">towing services road 22 krayot bypass</Link> בבטחה ובמהירות.
-              אם מצאתם את עצמכם עם רכב שלא מניע או מעורב בתאונה, אנו כאן לתת מענה מקצועי.
+              אנו מתמחים במתן פתרונות גרירה וחילוץ לכל מי שזקוק לשירותי <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-yellow-400 underline">affordable emergency car towing check post haifa</Link> באופן מיידי. 
+              בין אם אתם צריכים <Link href="/areas/haifa-general/cheap-towing-check-post-krayot" className="text-yellow-400 underline">cheap towing check post krayot</Link> או עזרה דחופה, הניסיון הרב שלנו מאפשר לנו לבצע פינוי רכבים בבטחה ובמהירות.
             </p>
           </section>
 
@@ -55,15 +54,15 @@ export default function Page() {
             <div className="space-y-6">
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-white mb-2">תוך כמה זמן הגרר מגיע לצ'ק פוסט?</h3>
-                <p>אנו מגיעים לרוב הנקודות תוך כ-30 דקות. ללקוחות עסקיים אנו מציעים מענה מיוחד הכולל <Link href="/areas/haifa-general/urgent-towing-commercial-van-check-post-route-22" className="text-yellow-400">urgent towing commercial van check post route 22</Link>.</p>
+                <p>אנו מגיעים לרוב הנקודות תוך כ-30 דקות. ללקוחות עסקיים אנו מציעים מענה מיוחד הכולל פינוי רכבים מסחריים וציוד כבד.</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-white mb-2">האם אתם קונים רכבים לפירוק באזור?</h3>
-                <p>בהחלט. אנו מבצעים <Link href="/areas/haifa-general/car-scrapping-haifa-krayot-towing" className="text-yellow-400">car scrapping haifa krayot towing</Link> בפינוי מהיר מהמקום ללא עלות נוספת.</p>
+                <p>בהחלט. אנו מבצעים <Link href="/areas/haifa-general/buy-cars-for-scrap-check-post-haifa" className="text-yellow-400">buy cars for scrap check post haifa</Link> בפינוי מהיר מהמקום ללא עלות נוספת.</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-white mb-2">כיצד ניתן לקבל מידע על מחיר גרירה?</h3>
-                <p>המחיר תלוי במרחק ובסוג הרכב. ניתן לקבל הערכת מחיר מדויקת בשיחת טלפון קצרה. לשירותים מורכבים יותר כמו <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-haifa-university" className="text-yellow-400">car stuck in mud carmel forest haifa university</Link>, המחיר ייקבע בהתאם לציוד הנדרש.</p>
+                <h3 className="text-xl font-bold text-white mb-2">מה עושים אם הרכב נתקע בבוץ באזור חיפה?</h3>
+                <p>למקרים של רכב ששקע בבוץ, אנו מציעים שירות <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-yellow-400">car rescue from mud carmel area</Link> מקצועי עם ציוד מתאים לחילוצי שטח מורכבים.</p>
               </div>
             </div>
           </section>

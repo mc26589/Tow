@@ -5,7 +5,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "חילוץ 4x4 בבוץ בסטלה מאריס חיפה | הגעה מהירה 24/7",
-  description: "נתקעתם עם רכב השטח בבוץ בסטלה מאריס? חילוץ 4x4 מקצועי בחיפה והסביבה. מחיר הוגן, ציוד מתקדם וזמינות 24/7. התקשרו עכשיו לחילוץ מהיר!",
+  description: "נתקעתם בשטח בסטלה מאריס? חילוץ 4x4 מקצועי בחיפה והסביבה. מחיר הוגן, ציוד חילוץ מתקדם וזמינות 24/7 לכל סוגי הרכבים. התקשרו עכשיו לחילוץ מהיר!",
   alternates: {
     canonical: "/areas/haifa-general/4x4-stuck-in-mud-stella-maris-haifa",
   },
@@ -54,15 +54,15 @@ export default function Page() {
           <ul className="space-y-4 text-lg mb-8">
             <li>✓ זמינות מלאה 24/7 לכל קריאת חילוץ בחיפה והסביבה.</li>
             <li>✓ ציוד חילוץ מתקדם לחילוץ רכבי 4x4 ששקעו בתנאי שטח מורכבים.</li>
-            <li>✓ מחירים הוגנים ושירות שקוף ללא "הפתעות" בשטח.</li>
+            <li>✓ מחירים הוגנים ושירות שקוף ללא הפתעות בשטח.</li>
             <li>✓ ניסיון רב בחילוצי שטח באזור הכרמל והסביבה.</li>
           </ul>
           <div className="mt-8 p-4 bg-gray-800 rounded-lg">
-            <h3 className="font-bold mb-2">שירותי חילוץ נוספים באזור:</h3>
+            <h3 className="font-bold mb-2">שירותי חילוץ מומלצים נוספים באזור:</h3>
             <div className="flex flex-col gap-2">
-              <Link href="/areas/haifa-general/4x4-mud-recovery-carmel-forest-haifa" className="text-blue-400 hover:underline">חילוץ רכבים מבוץ בשמורת הכרמל</Link>
-              <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-haifa-university" className="text-blue-400 hover:underline">סיוע לרכב שנתקע באזור אוניברסיטת חיפה</Link>
-              <Link href="/areas/haifa-general/off-road-mud-rescue-carmel-private-car" className="text-blue-400 hover:underline">חילוץ רכבים פרטיים בשטח הכרמל</Link>
+              <Link href="/areas/haifa-general/hilutz-4x4-butz-carmel-haifa" className="text-blue-400 hover:underline">חילוץ רכבי שטח בבוץ בכרמל</Link>
+              <Link href="/areas/haifa-general/4x4-stuck-mud-rescue-carmel-forest-haifa" className="text-blue-400 hover:underline">חילוץ מבוץ ביערות הכרמל</Link>
+              <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-400 hover:underline">סיוע וחילוץ רכבים תקועים בכרמל</Link>
             </div>
           </div>
         </div>
@@ -74,15 +74,15 @@ export default function Page() {
           <div className="space-y-6">
             <div>
               <h3 className="font-bold text-xl">האם אתם מחלצים מכל סוגי השטח בחיפה?</h3>
-              <p>כן, אנו מתמחים בחילוץ רכבים שנתקעו בדרכי עפר, בוץ ואזורים הרריים. הניסיון שלנו כולל חילוצים מורכבים בסטלה מאריס, נחל שיח ואזור הכרמל והאוניברסיטה.</p>
+              <p>כן, אנו מתמחים בחילוץ רכבים שנתקעו בדרכי עפר, בוץ ואזורים הרריים. הניסיון שלנו כולל חילוצים מורכבים בסטלה מאריס, נחל שיח ואזור הכרמל.</p>
             </div>
             <div>
               <h3 className="font-bold text-xl">מהו זמן ההגעה הממוצע לחילוץ בסטלה מאריס?</h3>
-              <p>אנו מבינים את הדחיפות במצבי שטח. הצוות שלנו פרוס בנקודות מרכזיות בחיפה ושואף להגיע לחילוץ תוך זמן קצר ככל האפשר, בהתאם לעומסי התנועה.</p>
+              <p>אנו מבינים את הדחיפות במצבי שטח. הצוות שלנו פרוס בנקודות מרכזיות בחיפה ושואף להגיע לחילוץ תוך זמן קצר ככל האפשר.</p>
             </div>
             <div>
               <h3 className="font-bold text-xl">האם אתם מבצעים חילוץ אופנועים?</h3>
-              <p>לא, אנו מתמקדים בחילוץ רכבים פרטיים, רכבי שטח (4x4) ורכבים מסחריים בלבד ולא מספקים שירותי גרירה או חילוץ לאופנועים.</p>
+              <p>לא, אנו מתמקדים בחילוץ רכבים פרטיים, רכבי שטח ורכבים מסחריים בלבד ולא מספקים שירותי גרירה או חילוץ לאופנועים.</p>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'קונה רכבים לפירוק באחוזה חיפה | שירות מהיר ותשלום במזומן | עד 30 דקות',
+  title: 'קונה רכבים לפירוק באחוזה חיפה | שירות מהיר עד 30 דקות | תשלום במזומן',
   description: 'מעוניינים למכור רכב לפירוק באחוזה חיפה? אנו מציעים מחיר הוגן, פינוי מהיר ותשלום במזומן במקום. שירות זמין 24/7 לכל סוגי הרכבים. התקשרו עכשיו!',
   alternates: {
     canonical: 'https://yourdomain.com/areas/haifa-general/buying-cars-for-scrap-ahoza-haifa',
@@ -73,8 +73,8 @@ export default function Page() {
       <main className="container mx-auto px-4 py-12 text-gray-800">
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">למה לבחור בנו לפינוי רכבים באחוזה?</h2>
-          <p className="mb-4">אנו מבינים את הצורך בפינוי מהיר של רכבים ישנים. לצד שירות זה, אנו מציעים מענה מקיף לתושבי האזור, לרבות <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-600 underline">קניית רכבים לפירוק בחיפה והקריות</Link> ושירותי גרירה מתקדמים.</p>
-          <p>זקוקים לעזרה בדרכים? אנו מספקים פתרונות כגון <Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa" className="text-blue-600 underline">גרירת רכב חשמלי באחוזה</Link> למקרים של מצבר ריק.</p>
+          <p className="mb-4">אנו מבינים את הצורך בפינוי מהיר של רכבים ישנים. לצד שירות זה, אנו מציעים מענה מקיף לתושבי האזור, לרבות קניית רכבים לפירוק בחיפה והקריות ושירותי גרירה מתקדמים כמו <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-600 underline">גרירה בחיפה והסביבה</Link>.</p>
+          <p>נתקעתם עם רכב באזור הכרמל? אנו מספקים מענה מהיר גם במקרים של <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-600 underline">חילוץ רכב מהבוץ באזור הכרמל</Link> ופתרונות גרירה מקצועיים.</p>
         </section>
 
         <section className="mb-12 bg-gray-50 p-8 rounded-lg">
@@ -87,6 +87,10 @@ export default function Page() {
             <div>
               <h3 className="font-bold">מהו המחיר שניתן לקבל על רכב לפירוק?</h3>
               <p>המחיר נקבע לפי סוג הרכב, מצבו המכני ומשקלו. אנו מתחייבים למחיר הוגן ולתשלום מיידי במזומן במעמד הפינוי.</p>
+            </div>
+            <div>
+              <h3 className="font-bold">האם אתם מספקים שירותי חילוץ נוספים באזור?</h3>
+              <p>כן, אנו נותנים מענה למקרים דחופים כמו <Link href="/areas/haifa-general/electric-car-dead-battery-towing-grand-canyon-haifa" className="text-blue-600 underline">גרירת רכב חשמלי תקול</Link> או חילוצי שטח במידת הצורך.</p>
             </div>
           </div>
         </section>

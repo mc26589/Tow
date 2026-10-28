@@ -4,14 +4,14 @@ import { WhatsAppCTA } from '@/components/whatsapp-cta';
 import { BUSINESS_INFO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: "גרר בצומת צ'ק פוסט חיפה 24/7 | הגעה תוך 30 דקות",
-  description: "נתקעתם בצומת צ'ק פוסט? גרר מפרץ אקספרס מספק שירותי גרירה וחילוץ 24/7 במחיר הוגן. הגעה מהירה ומקצועית לכל רכב. התקשרו עכשיו לקבלת סיוע!",
+  title: "גרר בצומת צ'ק פוסט 24/7 | הגעה מהירה תוך 30 דקות",
+  description: "נתקעתם בצומת צ'ק פוסט? גרר מפרץ אקספרס מציע גרירה וחילוץ 24/7 במחיר הוגן. הגעה מהירה לכל אזור חיפה והצפון. התקשרו עכשיו לסיוע!",
   alternates: {
     canonical: "https://www.towingrescuehaifa.co.il/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa",
   },
   openGraph: {
     title: "גרר בצומת צ'ק פוסט חיפה 24/7 | שירות מהיר ומקצועי",
-    description: "צריכים גרר בצומת צ'ק פוסט? שירות גרירה וחילוץ תאונות 24/7. צוות מנוסה, הגעה מהירה ומחירים משתלמים.",
+    description: "זקוקים לגרר בצומת צ'ק פוסט? שירות גרירה וחילוץ תאונות 24/7 במחיר משתלם. הגעה מהירה לכל סוגי הרכבים.",
     url: "https://www.towingrescuehaifa.co.il/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa",
     siteName: "Towing Rescue Haifa",
     type: "website",
@@ -41,16 +41,21 @@ export default function Page() {
       <section className="container mx-auto p-4 py-12">
         <p className="text-lg mb-4 leading-relaxed font-rubik text-gray-800">
           נתקעתם עם הרכב בצומת העמוס בחיפה? בגרר מפרץ אקספרס אנו מספקים מענה מיידי למקרים של תאונות דרכים בכביש 4, תקלות מנוע או פנצ'רים בצומת צ'ק פוסט. אם אתם זקוקים ל- 
-          <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">שירותי גרירה משתלמים בצ'ק פוסט</Link> או מחפשים <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-600 underline">שירותי גרירה בכביש 22 עוקף קריות</Link>, הצוות שלנו ערוך לכל קריאה 24/7. אנו מנוסים מאוד בחילוץ רכבים מתעלות וצידי הדרכים. לתשומת לבכם, אנו מתמחים ברכבים פרטיים ומסחריים ואיננו מספקים שירותי גרירה לאופנועים.
+          <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה זמינים בצ'ק פוסט</Link> או מחפשים 
+          <Link href="/areas/haifa-general/cheap-towing-check-post-krayot" className="text-blue-600 underline">גרירה זולה בצ'ק פוסט וקריות</Link>, הצוות שלנו ערוך לכל קריאה 24 שעות ביממה. אנו מנוסים מאוד בחילוץ רכבים מתעלות וצידי הדרכים. לתשומת לבכם, אנו מתמחים ברכבים פרטיים ומסחריים ואיננו מספקים שירותי גרירה לאופנועים.
         </p>
 
         <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-sm mb-6">
           <h2 className="text-2xl font-bold mb-4 text-blue-800">למה לבחור בגרר מפרץ אקספרס בצ'ק פוסט?</h2>
           <ul className="list-disc list-inside space-y-3 text-gray-700">
             <li><strong>זמינות 24/7:</strong> פריסה רחבה בחיפה, כולל שירות גרירה מהיר ומקצועי.</li>
-            <li><strong>מחירים הוגנים:</strong> אנו מציעים את הפתרון המשתלם ביותר ל- <Link href="/areas/haifa-general/גרירה-24-7-עוקף-קריות-מחיר-הוגן" className="text-blue-600 underline">גרירה 24/7 עוקף קריות במחיר הוגן</Link>.</li>
-            <li><strong>חילוץ מורכב:</strong> מומחים בגרירת רכבים מסחריים וקלים בצירים ראשיים כולל <Link href="/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata" className="text-blue-600 underline">גרירת תאונות בכביש 22</Link>.</li>
-            <li><strong>ניסיון רב:</strong> מספקים גם שירותי <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="text-blue-600 underline">פינוי רכבים לפירוק בצ'ק פוסט</Link> במזומן.</li>
+            <li><strong>מחירים הוגנים:</strong> פתרון משתלם לכל צורך גרירה, כולל 
+              <Link href="/areas/haifa-general/affordable-electric-car-towing-check-post-krayot" className="text-blue-600 underline">גרירת רכב חשמלי בצ'ק פוסט</Link>.
+            </li>
+            <li><strong>חילוץ מורכב:</strong> מומחים בגרירת רכבים מסחריים וקלים בצירים ראשיים.</li>
+            <li><strong>ניסיון רב:</strong> מספקים גם שירותי 
+              <Link href="/areas/haifa-general/buy-cars-for-scrap-check-post-haifa" className="text-blue-600 underline">פינוי רכבים לפירוק בצ'ק פוסט</Link> במזומן.
+            </li>
           </ul>
         </div>
 
@@ -66,8 +71,8 @@ export default function Page() {
               <p className="text-gray-700">בהחלט. אנו מציעים שירות מותאם לרכבים חשמליים והיברידיים, כולל גרירה בטוחה למוסך המורשה שבחרתם.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">האם אתם נותנים מענה גם למקרים של תאונות קלות?</h3>
-              <p className="text-gray-700">כן, אנו מטפלים בכל סוגי המקרים, מתקלות טכניות ועד תאונות דרכים הדורשות פינוי מהיר מהכביש על מנת למנוע עומסי תנועה מיותרים.</p>
+              <h3 className="font-bold text-lg">מהו מחיר הגרירה הממוצע בצ'ק פוסט?</h3>
+              <p className="text-gray-700">המחיר נקבע לפי מרחק הגרירה וסוג הרכב. אנו מקפידים על מחיר גרירה הוגן ושקוף ללא הפתעות, התקשרו לקבלת הצעת מחיר מדויקת.</p>
             </div>
           </div>
         </div>
