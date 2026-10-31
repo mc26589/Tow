@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ שטח ביערות הכרמל ודניה | שירות 24/7 | הגעה מהירה",
-  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ רכב מקצועי בדניה ובאזור חיפה. ציוד מתקדם, מחיר הוגן והגעה מהירה לשטח. התקשרו עכשיו לחילוץ בטוח!",
+  title: "חילוץ שטח ביערות הכרמל ודניה | הגעה מהירה 24/7 | מחיר הוגן",
+  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ רכב מקצועי בדניה ובאזור חיפה. ציוד מתקדם, הגעה מהירה לשטח ומחיר הוגן. התקשרו עכשיו לחילוץ בטוח!",
   alternates: {
     canonical: "/areas/haifa-general/off-road-rescue-carmel-forest-danya",
   },
@@ -28,7 +28,7 @@ export default function Page() {
       "latitude": "32.7685",
       "longitude": "34.9895"
     },
-    "priceRange": "$$,$",
+    "priceRange": "מחיר הוגן",
     "serviceType": "Off-road vehicle recovery and towing"
   };
 
@@ -43,7 +43,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ רכב שטח מבוץ ביערות הכרמל סמוך לשכונת דניה</h1>
           <p className="text-lg md:text-xl mb-8">
-            נתקעתם בבוץ בדרכי העפר של הכרמל? צוות החילוץ שלנו מומחה בחילוץ רכבי 4x4, פרטיים ומסחריים בדניה והסביבה. אנו מספקים מענה מהיר בטוח ומקצועי. צריכים עזרה נוספת? מומלץ לעיין גם בשירותי <Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa" className="underline font-semibold">חילוץ וגרירת 4x4 ביערות הכרמל ודניה</Link> או <Link href="/areas/haifa-general/emergency-mud-rescue-carmel-forest-haifa" className="underline font-semibold">חילוץ שטח דחוף בכרמל</Link>.
+            נתקעתם בבוץ בדרכי העפר של הכרמל? צוות החילוץ שלנו מומחה בחילוץ רכבי 4x4, פרטיים ומסחריים בדניה והסביבה. אנו מספקים מענה מהיר בטוח ומקצועי. זקוקים לשירותי גרירה נוספים באזור? ניתן להתרשם גם משירות <Link href="/areas/haifa-general/emergency-towing-horev-ahuza-haifa" className="underline font-semibold">חילוץ חירום בחורב ואחוזה</Link> או <Link href="/areas/haifa-general/motorcycle-towing-ahuza-haifa" className="underline font-semibold">גרירת רכבים באחוזה חיפה</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="חיפה והכרמל" />
@@ -64,7 +64,7 @@ export default function Page() {
             <li>✓ זמינות מלאה 24/7 לכל קריאת חילוץ באזור דניה והכרמל.</li>
             <li>✓ ציוד חילוץ מתקדם לרכבי 4x4 ורכבים פרטיים שנתקעו בבוץ.</li>
             <li>✓ הגעה מהירה לכל נקודה ביער, בשבילי עפר ובדרכים ההיקפיות.</li>
-            <li>✓ שירות אמין במחיר הוגן ללא "הפתעות" מיותרות.</li>
+            <li>✓ שירות אמין במחיר הוגן ללא הפתעות מיותרות.</li>
           </ul>
           
           <div className="mt-12">
@@ -76,11 +76,11 @@ export default function Page() {
               </div>
               <div>
                 <h4 className="font-bold text-white">מהי עלות חילוץ רכב תקוע?</h4>
-                <p>מחיר החילוץ נקבע בהתאם למורכבות המקרה ומרחק ההגעה. אנו מתחייבים למחיר תחרותי והגון לכל קריאה.</p>
+                <p>מחיר החילוץ נקבע בהתאם למורכבות המקרה ומרחק ההגעה. אנו מתחייבים למחיר תחרותי והוגן לכל קריאה, כולל שירותים נוספים כמו <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-400">חילוץ וגרירה באזור חיפה</Link>.</p>
               </div>
               <div>
                 <h4 className="font-bold text-white">האם אתם מחלצים רכבים פרטיים משבילי עפר?</h4>
-                <p>בהחלט. אנו מספקים מענה מקצועי גם לרכבים פרטיים שנתקעו בשולי הדרך או בדרכים לא סלולות באזור דניה. ניתן להיעזר גם בשירות <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-blue-400">חילוץ מרכב מבוץ באזור הכרמל</Link> למקרים מורכבים.</p>
+                <p>בהחלט. אנו מספקים מענה מקצועי גם לרכבים פרטיים שנתקעו בשולי הדרך או בדרכים לא סלולות. למידע נוסף על אזורי שירות נוספים, ניתן לבדוק גם את שירותי <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-400">הגרירה בכביש 22 עוקף קריות</Link>.</p>
               </div>
             </div>
           </div>

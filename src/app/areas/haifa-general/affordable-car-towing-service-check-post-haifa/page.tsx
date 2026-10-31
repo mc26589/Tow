@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בצ'ק פוסט חיפה 24/7 | הגעה מהירה ומחיר הוגן",
-  description: "נתקעתם בצ'ק פוסט? שירותי גרירה מקצועיים 24/7 לרכבים ורכבים מסחריים. הגעה תוך 30 דקות במחיר הוגן. התקשרו עכשיו לשירות מהיר!",
+  title: "גרר בצ'ק פוסט חיפה 24/7 | הגעה תוך 30 דקות | מחיר הוגן",
+  description: "נתקעתם בצ'ק פוסט? גרר זמין 24/7 באזור חיפה והסביבה. שירות מקצועי, מהיר ובמחיר הוגן לכל סוגי הרכבים. התקשרו עכשיו להזמנת גרר!",
   alternates: {
     canonical: "/areas/haifa-general/affordable-car-towing-service-check-post-haifa",
   },
@@ -44,8 +44,7 @@ export default function Page() {
           <section className="mb-12 p-6 bg-gray-800 rounded-lg shadow-lg">
             <h2 className="text-3xl font-bold text-yellow-400 mb-4">שירותי גרירה בצ'ק פוסט והסביבה</h2>
             <p className="text-lg mb-4">
-              אנו מתמחים במתן פתרונות גרירה וחילוץ לכל מי שזקוק לשירותי <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-yellow-400 underline">affordable emergency car towing check post haifa</Link> באופן מיידי. 
-              בין אם אתם צריכים <Link href="/areas/haifa-general/cheap-towing-check-post-krayot" className="text-yellow-400 underline">cheap towing check post krayot</Link> או עזרה דחופה, הניסיון הרב שלנו מאפשר לנו לבצע פינוי רכבים בבטחה ובמהירות.
+              אנו מתמחים במתן פתרונות גרירה וחילוץ למי שנתקע בדרכים באזור חיפה והקריות. בין אם אתם זקוקים לשירותי <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-yellow-400 underline">גרירה דחופה בכביש 22 צ'ק פוסט</Link>, או אם רכבכם הושבת במהלך הנסיעה, הצוות שלנו מגיע במהירות לכל צומת מרכזי. כמו כן, אנו מציעים שירותי <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-yellow-400 underline">גרירה מקצועיים בכביש עוקף קריות</Link> לנהגים הזקוקים לפינוי בטוח.
             </p>
           </section>
 
@@ -54,15 +53,15 @@ export default function Page() {
             <div className="space-y-6">
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-white mb-2">תוך כמה זמן הגרר מגיע לצ'ק פוסט?</h3>
-                <p>אנו מגיעים לרוב הנקודות תוך כ-30 דקות. ללקוחות עסקיים אנו מציעים מענה מיוחד הכולל פינוי רכבים מסחריים וציוד כבד.</p>
+                <p>אנו מגיעים לרוב הנקודות תוך כ-30 דקות. זמני ההגעה תלויים בעומסי התנועה בצומת צ'ק פוסט, אך אנו עושים כל מאמץ להגיע במהירות המרבית.</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-white mb-2">האם אתם קונים רכבים לפירוק באזור?</h3>
-                <p>בהחלט. אנו מבצעים <Link href="/areas/haifa-general/buy-cars-for-scrap-check-post-haifa" className="text-yellow-400">buy cars for scrap check post haifa</Link> בפינוי מהיר מהמקום ללא עלות נוספת.</p>
+                <h3 className="text-xl font-bold text-white mb-2">מה לעשות אם הרכב נתקע בכביש מהיר?</h3>
+                <p>אם נתקעתם בדרך מהירה, מומלץ להתרחק מהרכב ולהמתין במקום בטוח. ניתן להיעזר בשירותי <Link href="/areas/haifa-general/emergency-breakdown-towing-route-22-krayot-bypass" className="text-yellow-400">גרירת חילוץ חירום בכביש 22</Link> לקבלת מענה מהיר.</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-white mb-2">מה עושים אם הרכב נתקע בבוץ באזור חיפה?</h3>
-                <p>למקרים של רכב ששקע בבוץ, אנו מציעים שירות <Link href="/areas/haifa-general/car-rescue-from-mud-carmel-area" className="text-yellow-400">car rescue from mud carmel area</Link> מקצועי עם ציוד מתאים לחילוצי שטח מורכבים.</p>
+                <h3 className="text-xl font-bold text-white mb-2">האם אתם קונים רכבים ישנים לפירוק באזור?</h3>
+                <p>בהחלט. אנו מבצעים פינוי של רכבים מושבתים במחיר הוגן. למידע נוסף ניתן לבדוק דפים כמו <Link href="/areas/haifa-general/towing-for-scrap-kiryat-bialik-road-22" className="text-yellow-400">גרירת רכב לפירוק בקרית ביאליק</Link>.</p>
               </div>
             </div>
           </section>

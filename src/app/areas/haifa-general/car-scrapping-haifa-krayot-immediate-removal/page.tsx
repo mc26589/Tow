@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "פינוי רכבים לפירוק בחיפה והקריות | פינוי מיידי | הצעת מחיר הוגנת",
-  description: "צריכים לפנות רכב ישן או מושבת? שירות פינוי רכבים לפירוק בחיפה והקריות עם הגעה מהירה ומחיר הוגן. פינוי רכבים פרטיים ומסחריים. התקשרו עכשיו לקבלת הצעת מחיר!",
+  title: "פינוי רכבים לפירוק בחיפה והקריות | פינוי מיידי | מחיר הוגן",
+  description: "נתקעתם עם רכב ישן? שירות פינוי רכבים לפירוק בחיפה והקריות עם הגעה מהירה ומחיר הוגן. פינוי רכבים פרטיים ומסחריים עד הבית. התקשרו עכשיו לקבלת הצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/car-scrapping-haifa-krayot-immediate-removal"
   }
@@ -35,7 +35,7 @@ export default function Page() {
           <p className="text-xl mb-8">זקוקים לפינוי רכב ישן או תקול? אנו מציעים שירות מהיר, אמין ומקצועי לכל תושבי חיפה והקריות.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="Haifa and Krayot" />
-            <a href={`tel:+${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition">
+            <a href={`tel:${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-3 rounded-lg font-bold hover:bg-gray-200 transition">
               התקשרו עכשיו לקבלת הצעת מחיר
             </a>
           </div>
@@ -47,14 +47,15 @@ export default function Page() {
           <h2 className="text-3xl font-bold mb-6">למה לבחור בנו לפינוי הרכב שלך?</h2>
           <ul className="space-y-4 text-lg mb-8">
             <li>✓ פינוי מיידי מהשטח ללא עיכובים מיותרים.</li>
-            <li>✓ הצעת מחיר הוגנת עבור הרכב שלך.</li>
+            <li>✓ הצעת מחיר הוגנת עבור הרכב שלך במקום.</li>
             <li>✓ שירות מקצועי לרכבים פרטיים, מסחריים ורכבי שטח.</li>
-            <li>✓ זמינות מלאה בכל אזור חיפה והקריות.</li>
+            <li>✓ זמינות מלאה בכל אזור חיפה והקריות, כולל צירים מרכזיים.</li>
           </ul>
           
           <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
             <h3 className="text-2xl font-bold mb-4">שירותים משלימים באזור</h3>
-            <p className="mb-4">זקוקים לשירותי גרירה נוספים? אנו מספקים מענה מקצועי גם עבור <Link href="/areas/haifa-general/towing-for-scrap-kiryat-bialik" className="text-blue-600 underline">towing for scrap kiryat bialik</Link> וכן סיוע במקרים של <Link href="/areas/haifa-general/towing-services-road-22-krayot-private-car" className="text-blue-600 underline">towing services road 22 krayot private car</Link>.</p>
+            <p className="mb-4">זקוקים לשירותי גרירה או חילוץ נוספים? אנו מספקים מענה מקצועי לאורך כביש 22 וסביבתו, כמו <Link href="/areas/haifa-general/towing-for-scrap-kiryat-bialik-road-22" className="text-blue-600 underline">towing for scrap kiryat bialik road 22</Link>, או אם נתקעתם בדרכים, תוכלו להיעזר בשירותי <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-600 underline">towing services road 22 krayot bypass</Link>.</p>
+            <p>לתושבי האזור המחפשים פתרונות לפירוק מקומי, זמין עבורכם גם שירות <Link href="/areas/haifa-general/פינוי-רכב-גרוטאה-לחלפים-קריית-מוצקין" className="text-blue-600 underline">פינוי רכב גרוטאה לחלפים קריית מוצקין</Link>.</p>
           </div>
 
           <div className="mt-12">
@@ -62,17 +63,21 @@ export default function Page() {
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-lg">כמה זמן לוקח פינוי רכב לפירוק?</h4>
-                <p>אנו משתדלים להגיע לכל נקודה בחיפה והקריות בזמן המהיר ביותר, לרוב תוך מספר שעות מרגע הקריאה.</p>
+                <p>אנו משתדלים להגיע לכל נקודה בחיפה והקריות בזמן המהיר ביותר, לרוב תוך מספר שעות מרגע הקריאה. בתיאום מראש ניתן לקבוע זמן מדויק.</p>
               </div>
               <div>
-                <h4 className="font-bold text-lg">האם אתם קונים כל סוג של רכב?</h4>
-                <p>אנו מתמחים ברכבים פרטיים ומסחריים המיועדים לפירוק. לקבלת הערכה מדויקת, צרו קשר עם נציגינו.</p>
+                <h4 className="font-bold text-lg">באילו רכבים אתם מטפלים?</h4>
+                <p>אנו קונים רכבים פרטיים, רכבים מסחריים ורכבי שטח המיועדים לפירוק. חשוב לציין שאיננו עוסקים בגרירת אופנועים, אלא במתן פתרונות לרכבים בעלי ארבעה גלגלים בלבד.</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-lg">האם אתם מגיעים לכל השכונות בחיפה?</h4>
+                <p>כן, אנו נותנים שירות בפריסה רחבה בחיפה, מהעיר התחתית, דרך השכונות שעל הכרמל ועד לקריות. אנו מכירים היטב את צירי התנועה כמו כביש 22 ומבטיחים הגעה מהירה.</p>
               </div>
             </div>
           </div>
 
           <p className="mt-8 text-sm text-gray-600">
-            הערה: אנו מתמחים בפינוי רכבים בלבד. איננו מספקים שירותי גרירה או פינוי לאופנועים. אנו מקפידים על עבודה מסודרת ופינוי בטוח של הרכב.
+            הערה: אנו מתמחים בפינוי רכבים לפירוק בלבד. אנו פועלים בשקיפות מלאה ומקפידים על תהליך עבודה מסודר, בטוח ומהיר עבור כל לקוח.
           </p>
         </div>
       </section>

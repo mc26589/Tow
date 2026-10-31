@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "שירותי גרירה באחוזה חיפה 24/7 | הגעה מהירה עד 30 דקות",
-  description: "נתקעתם עם הרכב באחוזה, חיפה? שירותי גרירה וחילוץ מקצועיים לרכבים פרטיים ומסחריים. הגעה מהירה, מחיר הוגן ושקיפות מלאה. התקשרו עכשיו לקבלת סיוע!",
+  title: "גרירת רכבים באחוזה חיפה 24/7 | הגעה מהירה עד 30 דקות",
+  description: "נתקעתם עם הרכב באחוזה, חיפה? שירותי גרירה מקצועיים, מחיר הוגן ושקיפות מלאה. הגעה מהירה לכל נקודה באחוזה. התקשרו עכשיו לקבלת סיוע מיידי!",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-service-ahuzah-haifa-now"
   }
@@ -43,10 +43,10 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">שירות גרירה וחילוץ רכבים באחוזה, חיפה</h1>
           <p className="text-lg mb-8">
-            זקוק לחילוץ רכב באזור אחוזה? אנו מספקים שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי שטח. 
-            אם אתם זקוקים ל-<Link href="/areas/haifa-general/cheap-car-towing-service-neve-shaanan-haifa" className="underline">שירות גרירה אמין באחוזה</Link> במחיר הוגן, אנו כאן לשירותכם. 
-            אנו זמינים לסייע גם במקרי חירום כגון <Link href="/areas/haifa-general/emergency-mud-recovery-service-carmel-forest-haifa" className="underline">חילוץ מרכב שנתקע בבוץ בכרמל</Link>. 
-            שימו לב: אנו לא מספקים שירותי גרירה לאופנועים.
+            נתקעתם באזור אחוזה? אנו מספקים שירותי גרירה מקצועיים לרכבים פרטיים, מסחריים ורכבי שטח. 
+            אם אתם מחפשים <Link href="/areas/haifa-general/emergency-towing-horev-ahuza-haifa" className="underline">שירותי גרירה דחופים באזור חורב ואחוזה</Link>, הגעתם למקום הנכון. 
+            אנו זמינים לסייע גם במקרי חירום אחרים ומתמחים בפתרון בעיות כביש. 
+            שימו לב: שירות זה מתמחה בגרירת רכבים בלבד ולא באופנועים כבדים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa and Krayot" />
@@ -64,25 +64,25 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-4">למה לבחור בנו באחוזה?</h2>
           <ul className="list-disc list-inside space-y-2 mb-6">
-            <li>זמינות 24 שעות ביממה, 7 ימים בשבוע</li>
-            <li>ציוד גרירה מתקדם לכל סוגי הרכבים</li>
-            <li>פתרונות לבעלי רכבים חשמליים כולל חילוץ מצבר</li>
-            <li>שקיפות מלאה ושירות אדיב ללא הפתעות במחיר</li>
+            <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע</li>
+            <li>ציוד גרירה מתקדם לכל סוגי הרכבים באחוזה והסביבה</li>
+            <li>פתרונות לרכבים חשמליים כולל התנעה ושירות חילוץ</li>
+            <li>שקיפות מלאה במחיר ושירות אדיב ללא הפתעות</li>
           </ul>
           
           <h3 className="text-xl font-bold mt-8 mb-4">שאלות נפוצות על גרירה באחוזה</h3>
           <div className="space-y-4">
             <div>
               <p className="font-bold">תוך כמה זמן תגיעו לאחוזה?</p>
-              <p>אנו משתדלים להגיע לכל נקודה באחוזה ובחיפה בזמן הקצר ביותר, בדרך כלל תוך פחות מ-30 דקות בהתאם לעומסי התנועה.</p>
+              <p>אנו משתדלים להגיע לכל נקודה באחוזה ובחיפה בזמן הקצר ביותר, לרוב תוך פחות מ-30 דקות בהתאם לעומסי התנועה באזור חורב ודרך אבא חושי.</p>
             </div>
             <div>
-              <p className="font-bold">האם אתם קונים רכבים ישנים לפירוק?</p>
-              <p>כן, אנו מציעים שירות <Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot" className="underline">פינוי רכבים לפירוק בחיפה</Link> למי שמעוניין להיפטר מרכב ישן בצורה מסודרת ומקצועית.</p>
+              <p className="font-bold">האם אתם מספקים שירותי גרירה לאופנועים?</p>
+              <p>אנו מתמקדים בגרירת רכבים, אך לבעלי אופנועים ניתן להיעזר בשירותים ייעודיים כמו <Link href="/areas/haifa-general/motorcycle-towing-ahuza-haifa" className="underline">גרירת אופנועים באחוזה</Link>.</p>
             </div>
             <div>
-              <p className="font-bold">באילו רכבים אתם מטפלים?</p>
-              <p>אנו נותנים שירות לרכבים פרטיים, מסחריים ורכבי שטח. לצורך גרירת אופנועים מומלץ ליצור קשר עם שירות ייעודי כגון <Link href="/areas/haifa-general/heavy-motorcycle-breakdown-towing-ahuzah-haifa" className="underline">גרירת אופנועים כבדים באחוזה</Link>.</p>
+              <p className="font-bold">האם אתם נותנים שירות גם במקרה של תאונה?</p>
+              <p>כן, אנו נותנים מענה מקצועי גם במקרי תאונה. למידע נוסף על שירותים רחבים באזור כביש 22 ניתן לבדוק גם <Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="underline">שירותי גרירה בכביש 22 עוקף קריות</Link>.</p>
             </div>
           </div>
         </div>
