@@ -1,11 +1,11 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת הארלי דייווידסון בקניון חיפה? מצא שירות גרירה מקצועי | 24/7",
-  description: "נתקעת עם האופנוע ליד קניון חיפה? גלה את השירותים הרלוונטיים באזור והיכן ניתן למצוא גרירה מקצועית לאופנועים. לחץ כאן לייעוץ מהיר ושירות זמין.",
+  title: "גרירת הארלי דייווידסון בחיפה - שירות מקצועי ליד הקניון | 24/7",
+  description: "נתקעת עם האופנוע ליד קניון חיפה? זקוק לגרר לאופנועים כבדים? אנו מספקים שירותי גרירה מקצועיים ומהירים בחיפה. חייגו עכשיו לייעוץ ללא עלות!",
   alternates: {
     canonical: "/areas/haifa-general/towing-service-harley-davidson-haifa-grand-canyon"
   }
@@ -35,10 +35,10 @@ export default function Page() {
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-6">
-            שירותי גרירה וחילוץ בחיפה: מידע חשוב עבור אופנועי הארלי דייווידסון
+            שירותי גרירה וחילוץ בחיפה: פתרונות לאופנועים כבדים
           </h1>
           <p className="text-lg md:text-xl mb-8">
-            נתקעת ליד קניון חיפה? אנו מספקים מענה מקצועי לרכבים פרטיים ומסחריים. במידה ואתה מחפש סיוע לאופנוע, חשוב לבחור במומחים המתאימים.
+            נתקעת ליד קניון חיפה? אופנוע כבד דורש מומחיות וציוד עיגון מיוחד. אל תסתכן בנזק לשילדה - הזמן שירות גרר מקצועי שיודע איך לטפל בכלים יקרים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={`tel:${BUSINESS_INFO.phone}`} className="bg-white text-black px-8 py-3 rounded-lg font-bold">
@@ -50,23 +50,36 @@ export default function Page() {
       </section>
 
       <section className="py-12 container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-4">מדוע חשוב לבחור בשירות מותאם לאופנוע?</h2>
+        <h2 className="text-2xl font-bold mb-4">מדוע לבחור בשירות גרירה מותאם לאופנוע?</h2>
         <p className="mb-4">
-          גרירת אופנוע מסוג הארלי דייווידסון דורשת ציוד עיגון מיוחד וניסיון רב. אנו מתמחים בחילוץ רכבים ורכבי שטח, אך עבור דו-גלגלי אנו ממליצים לפנות לשירותים ייעודיים כמו <Link href="/areas/haifa-general/heavy-motorcycle-towing-ahuza-haifa" className="text-blue-600 underline">גרירת אופנועים כבדים באחוזה</Link> או לבדוק אפשרויות נוספות עבור <Link href="/areas/haifa-general/heavy-motorcycle-breakdown-towing-route-22-check-post-haifa" className="text-blue-600 underline">גרירת אופנוע כבד בצק פוסט</Link> כדי להבטיח את שלמות הכלי שלך.
+          גרירת אופנועי הארלי דייווידסון או אופנועים כבדים אחרים דורשת ניסיון רב במניעת תזוזות. אנו ממליצים תמיד לבדוק את זמינות השירותים שלנו כמו 
+          <Link href="/areas/haifa-general/heavy-motorcycle-towing-service-ahuzah-haifa-now" className="text-blue-600 underline"> גרירת אופנועים כבדים באחוזה</Link> או 
+          <Link href="/areas/haifa-general/heavy-motorcycle-flat-tire-towing-ahuza-haifa" className="text-blue-600 underline"> טיפול בפנצ'ר לאופנוע כבד באחוזה</Link> 
+          כדי להבטיח את הגעת האופנוע ליעדו ללא שריטות.
         </p>
       </section>
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על שירותי גרירה באזור חיפה</h2>
+          <h2 className="text-2xl font-bold mb-6">שאלות נפוצות על גרירה וחילוץ בחיפה</h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-bold text-lg">האם אתם מציעים שירותי חילוץ נוספים באזור חיפה?</h3>
-              <p>כן, אנו מטפלים במגוון מקרים, החל מ- <Link href="/areas/haifa-general/emergency-car-rescue-mud-carmel-forest" className="text-blue-600 underline">חילוץ רכב תקוע בבוץ בכרמל</Link> ועד <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה במחיר הוגן בצק פוסט</Link>.</p>
+              <h3 className="font-bold text-lg">מה עושים אם נתקעתי עם אופנוע ליד הצק פוסט?</h3>
+              <p>במידה ונתקעת ליד הצק פוסט, ניתן להזמין 
+                <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-600 underline"> שירותי גרירה במחיר הוגן בצק פוסט</Link>.
+              </p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">מה לעשות אם האופנוע נתקע ליד אזור הקניון?</h3>
-              <p>מומלץ לוודא שימוש בגרר פלטה המותאם לאופנועים, במיוחד כאשר מדובר באופנועי קאסטום כבדים. הימנעו מניסיונות גרירה עצמאיים העלולים לגרום לנזק לשלדת האופנוע.</p>
+              <h3 className="font-bold text-lg">האם אתם מטפלים גם בחילוצי שטח בחיפה?</h3>
+              <p>כן, אנו מבצעים חילוצים מורכבים. קראו עוד על 
+                <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university" className="text-blue-600 underline"> חילוץ רכב שנתקע בבוץ בכרמל</Link>.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg">מהו טווח המחירים לגרירה באזור הקריות?</h3>
+              <p>המחיר תלוי במרחק הגרירה ובסוג הכלי. במידה ואתה זקוק לעזרה באזור הצפוני, ניתן לבדוק 
+                <Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="text-blue-600 underline"> שירותי גרירה דחופים בכביש 22</Link>.
+              </p>
             </div>
           </div>
         </div>

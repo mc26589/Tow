@@ -45,7 +45,7 @@ export default function Page() {
             גרירת רכב חשמלי עם מצבר פרוק בצ'ק פוסט חיפה
           </h1>
           <p className="text-lg md:text-xl mb-8">
-            נתקעתם עם רכב חשמלי ללא אנרגיה באזור הצ'ק פוסט? אנו מומחים בגרירת רכבים חשמליים על גבי משטח מותאם למניעת נזקים. פתרון בטוח, מהיר וזמין 24/7.
+            נתקעתם עם רכב חשמלי ללא אנרגיה באזור הצ'ק פוסט? אנו מומחים בגרירת רכבים חשמליים על גבי משטח מותאם למניעת נזקים. פתרון בטוח, מהיר וזמין 24/7. הגעה מהירה לכל אזור הצ'ק פוסט והסביבה.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <WhatsAppCTA cityName="חיפה והצ'ק פוסט" />
@@ -61,21 +61,21 @@ export default function Page() {
 
       <section className="py-12 container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-4">למה לבחור בנו לגרירת רכב חשמלי באזור הצ'ק פוסט?</h2>
-        <p className="mb-6">רכב חשמלי דורש טיפול מיוחד בגלל רגישות מערכת ההנעה. גרירה לא מקצועית עלולה להוביל לנזקים יקרים. אנו משתמשים בציוד מתקדם ובגרר משטח המבטיח העברה בטוחה ומהירה.</p>
+        <p className="mb-6">רכב חשמלי דורש טיפול מיוחד בגלל רגישות מערכת ההנעה. גרירה לא מקצועית עלולה להוביל לנזקים יקרים. אנו משתמשים בציוד מתקדם ובגרר משטח המבטיח העברה בטוחה ומהירה ללא צורך בהפעלת הגלגלים.</p>
         <ul className="list-disc pr-6 space-y-2 mb-6">
           <li>שימוש בגרר משטח בלבד למניעת נזקים למערכת ההנעה החשמלית.</li>
           <li>זמינות 24/7 באזור חיפה, הצ'ק פוסט, הקריות וצירים מרכזיים כמו <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">כביש 22 עוקף קריות</Link>.</li>
-          <li>מומחיות בחילוץ רכבים חשמליים, היברידיים ורכבי שטח.</li>
+          <li>מומחיות בחילוץ רכבים חשמליים מורכבים.</li>
           <li>שירות מהיר ומקצועי הכולל <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="text-blue-600 underline">חילוץ רכבים שירדו לשוליים בכביש 4 באזור הצ'ק פוסט</Link>.</li>
-          <li>שירות מקצועי של <Link href="/areas/haifa-general/cheap-towing-services-check-post-junction" className="text-blue-600 underline">גרירה זולה בצומת הצ'ק פוסט</Link> לכל יעד מבוקש.</li>
+          <li>שירות מקצועי של <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-600 underline">גרירה זולה בצומת הצ'ק פוסט</Link> לכל יעד מבוקש בארץ.</li>
         </ul>
         
         <div className="p-6 bg-gray-50 rounded-lg mb-10">
           <h3 className="text-xl font-bold mb-3">שירותי גרירה וחילוץ משלימים באזור:</h3>
           <ul className="space-y-2">
-            <li><Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="text-blue-600 hover:underline">גרירת משטח במחיר נוח באזור כביש 22</Link></li>
-            <li><Link href="/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal" className="text-blue-600 hover:underline">פינוי רכבים לפירוק בחיפה והקריות</Link></li>
-            <li><Link href="/areas/haifa-general/4x4-mud-rescue-carmel" className="text-blue-600 hover:underline">חילוץ רכבי שטח בדרכי עפר באזור הכרמל</Link></li>
+            <li><Link href="/areas/haifa-general/towing-services-road-22-krayot" className="text-blue-600 hover:underline">שירותי גרירה מקצועיים בכביש 22 לקריות</Link></li>
+            <li><Link href="/areas/haifa-general/car-scrapping-haifa-krayot-towing" className="text-blue-600 hover:underline">פינוי רכבים לפירוק בחיפה והקריות</Link></li>
+            <li><Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="text-blue-600 hover:underline">גרירת חירום וסיוע בדרכים בכביש 22</Link></li>
           </ul>
         </div>
 

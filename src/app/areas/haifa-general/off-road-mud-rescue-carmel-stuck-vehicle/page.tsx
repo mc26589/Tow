@@ -5,7 +5,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "חילוץ שטח ובוץ בכרמל: הגעה מהירה 24/7 | מחיר הוגן",
-  description: "רכב תקוע בבוץ בכרמל? צוות חילוץ מקצועי זמין 24/7. הגעה מהירה לכל מוקדי הכרמל, דניה והאוניברסיטה. מחיר הוגן ושירות שטח מיומן. התקשרו עכשיו לחילוץ!",
+  description: "רכב תקוע בבוץ בכרמל? צוות חילוץ מקצועי זמין 24/7. הגעה מהירה לכל מוקדי הכרמל, דניה ואחוזה. מחיר הוגן ושירות שטח מיומן. התקשרו עכשיו לחילוץ!",
   alternates: { canonical: "/areas/haifa-general/off-road-mud-rescue-carmel-stuck-vehicle" }
 };
 
@@ -33,8 +33,8 @@ export default function Page() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">חילוץ שטח ובוץ בכרמל: רכב תקוע? אנחנו בדרך אליך</h1>
           <p className="text-lg md:text-xl mb-8">
             נתקעת בבוץ בדרכי העפר של הכרמל? אנו מספקים שירותי חילוץ שטח מקצועיים לרכבים פרטיים ורכבי 4x4. 
-            אנו מתמחים בחילוץ מהיר באזורים מאתגרים, כולל <Link href="/areas/haifa-general/mud-rescue-4x4-carmel-forest-haifa" className="underline font-bold">חילוץ שטח 4x4 ביערות הכרמל</Link> וסביבת דניה. 
-            בנוסף, אם נתקעת ליד מוסד אקדמי, אנו מציעים <Link href="/areas/haifa-general/suv-stuck-in-mud-rescue-haifa-university" className="underline font-bold">חילוץ SUV בבוץ באוניברסיטת חיפה</Link>. חשוב לציין: אנו לא מבצעים חילוץ או גרירה לאופנועים.
+            אנו מתמחים בחילוץ מהיר באזורים מאתגרים, כולל <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university" className="underline font-bold">חילוץ שטח 4x4 ביערות הכרמל</Link> וסביבת דניה. 
+            זקוקים לשירותי גרירה באחוזה? ניתן להיעזר בשירותי <Link href="/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing" className="underline font-bold">גרירת רכבים באחוזה חיפה</Link>. שימו לב: אנו לא מבצעים חילוץ או גרירה לאופנועים.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <WhatsAppCTA cityName="Haifa" />
@@ -58,19 +58,19 @@ export default function Page() {
             <li>✓ מחירים הוגנים ושקופים - הצעת מחיר מסודרת בטלפון.</li>
           </ul>
 
-          <h2 className="text-3xl font-bold mb-6 mt-12">שאלות נפוצות על חילוץ בשטח</h2>
+          <h2 className="text-3xl font-bold mb-6 mt-12">שאלות נפוצות על חילוץ בשטח בחיפה</h2>
           <div className="space-y-6">
             <div>
               <h3 className="font-bold text-xl">תוך כמה זמן תגיעו לחלץ אותי בכרמל?</h3>
-              <p>זמן ההגעה תלוי במיקום המדויק ובתנאי השטח, אך אנו משתדלים להגיע לכל קריאה במינימום זמן מרגע הזמנת השירות.</p>
+              <p>זמן ההגעה תלוי במיקום המדויק ובתנאי השטח, אך אנו עושים מאמץ להגיע במינימום זמן לכל קריאה באזור חיפה והסביבה.</p>
             </div>
             <div>
               <h3 className="font-bold text-xl">האם אתם מחלצים רכבים פרטיים או רק 4x4?</h3>
-              <p>אנו ערוכים עם ציוד מתאים לחילוץ מגוון סוגי רכבים שתקועים בבוץ או בדרכי עפר לא סלולות, מרכבים פרטיים ועד רכבי שטח.</p>
+              <p>אנו ערוכים עם ציוד מתאים לחילוץ מגוון רכבים שתקועים בבוץ, כולל רכבים פרטיים, רכבי SUV ורכבי שטח כבדים.</p>
             </div>
             <div>
-              <h3 className="font-bold text-xl">האם השירות כולל גרירה לאחר החילוץ?</h3>
-              <p>במידה והרכב זקוק לתיקון במוסך, נוכל לסייע בתיאום גרירה ליעדים שונים, כולל <Link href="/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa" className="underline font-bold">גרירה מאזור צ'ק פוסט</Link> והסביבה.</p>
+              <h3 className="font-bold text-xl">מה עושים אם הרכב תקוע בבוץ עמוק?</h3>
+              <p>במקרים של בוץ עמוק אנו משתמשים בציוד גרירה ייעודי. במידה ותצטרכו גרירה לאחר מכן ליעד נוסף, נוכל לסייע בתיאום, בדומה לשירותי <Link href="/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post" className="underline font-bold">גרירה מאזור צ׳ק פוסט</Link>.</p>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'גרר בכביש 22 קריות | הגעה מהירה תוך 30 דקות | מחיר הוגן',
+  title: 'גרר בכביש 22 קריות | הגעה מהירה ב-30 דקות | מחיר הוגן',
   description: 'נתקעתם בכביש 22? שירות גרירה מהיר ומקצועי לרכב פרטי ומסחרי. צוות מיומן זמין 24/7 באזור הקריות, מחיר הוגן ושקיפות מלאה. התקשרו עכשיו לחילוץ!',
   alternates: {
     canonical: '/areas/haifa-general/towing-service-road-22-krayot'
@@ -28,7 +28,7 @@ export default function Page() {
       'latitude': '32.8156',
       'longitude': '35.0653'
     },
-    'priceRange': '$',
+    'priceRange': '₪',
     'serviceType': 'Towing and Roadside Assistance'
   };
 
@@ -41,8 +41,8 @@ export default function Page() {
       
       <section className="gradient-trust text-white py-14 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר רכבים תקועים בכביש 22 קריות – חילוץ מהיר 24/7</h1>
-          <p className="text-xl mb-8">נתקעתם בכביש 22? אל תסתכנו בשוליים. אנחנו בדרך אליכם עם ציוד חילוץ מתקדם.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">גרר רכבים בכביש 22 קריות – חילוץ מהיר 24/7</h1>
+          <p className="text-xl mb-8">נתקעתם בכביש 22? אל תסתכנו בשוליים. צוות מיומן בדרך אליכם עם ציוד חילוץ מתקדם.</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a 
               href={`tel:+${BUSINESS_INFO.phone}`} 
@@ -50,18 +50,18 @@ export default function Page() {
             >
               התקשרו עכשיו לחילוץ מהיר
             </a>
-            <WhatsAppCTA cityName="Haifa and Krayot" />
+            <WhatsAppCTA cityName="חיפה והקריות" />
           </div>
         </div>
       </section>
 
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">שירות גרירה מקצועי לאורך ציר עוקף קריות</h2>
-        <p className="mb-4">כביש 22 הוא עורק תחבורה ראשי ומהיר. אנו מספקים מענה מקצועי לכל תקלה, החל מהתחממות מנוע ועד תאונות דרכים, עם הקפדה על כללי בטיחות מחמירים.</p>
+        <p className="mb-4">כביש 22 הוא עורק תחבורה ראשי ומהיר. אנו מספקים מענה מקצועי לכל תקלה, החל מהתחממות מנוע ועד תאונות דרכים, עם הקפדה על כללי בטיחות מחמירים. אם הרכב החשמלי שלכם נתקע, אנו מציעים גם <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">שירות גרירה לרכב חשמלי תקוע בכביש 22</Link>.</p>
         <p className="mb-4">
-          זקוקים לפתרונות נוספים? אנו מציעים גם <Link href="/areas/haifa-general/towing-road-22-krayot-bypass" className="text-blue-600 underline">שירותי גרירה בכביש עוקף קריות</Link> או <Link href="/areas/haifa-general/emergency-towing-cheap-kiryat-bialik" className="text-blue-600 underline">גרירת חירום בקריית ביאליק</Link>.
+          זקוקים לפתרונות נוספים? אנו מציעים גם <Link href="/areas/haifa-general/emergency-breakdown-towing-route-22-krayot-bypass" className="text-blue-600 underline">שירות גרירה דחוף בכביש עוקף קריות</Link> או <Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="text-blue-600 underline">שירותי גרירה דחופים בכביש 22</Link>.
         </p>
-        <p className="mb-4"><strong>הערה:</strong> אנו מתמחים בגרירת רכבים פרטיים, רכבי שטח ומסחריים. איננו מספקים שירותי גרירה לאופנועים מכל סוג.</p>
+        <p className="mb-4"><strong>הערה:</strong> אנו מתמחים בגרירת רכבים פרטיים ורכבים מסחריים בלבד. איננו מספקים שירותי גרירה לאופנועים.</p>
       </section>
 
       <section className="py-10 bg-gray-50">
@@ -74,11 +74,11 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold text-lg">מה עושים אם הרכב מושבת לחלוטין?</h3>
-              <p>מעבר לגרירה, אנו מציעים שירותי <Link href="/areas/haifa-general/car-scrapping-haifa-krayot-immediate-removal" className="text-blue-600 underline">פינוי רכבים לפירוק בחיפה והקריות</Link> למי שמעוניין להיפטר מרכב ישן או מושבת.</p>
+              <p>מעבר לגרירה, אנו מציעים שירותי <Link href="/areas/haifa-general/car-scrapping-haifa-krayot-towing" className="text-blue-600 underline">פינוי רכבים לפירוק באזור חיפה והקריות</Link> למי שמעוניין להיפטר מרכב ישן.</p>
             </div>
             <div>
-              <h3 className="font-bold text-lg">האם אתם עובדים גם בערבי חג וסופי שבוע?</h3>
-              <p>כן, אנו פעילים 24 שעות ביממה, 7 ימים בשבוע, כולל שבתות וחגים, כדי להבטיח שלעולם לא תשארו תקועים.</p>
+              <h3 className="font-bold text-lg">האם אתם פעילים גם בסופי שבוע?</h3>
+              <p>כן, אנו פעילים 24 שעות ביממה, 7 ימים בשבוע, כולל שבתות וחגים, כדי להבטיח שלעולם לא תשארו תקועים בכביש 22.</p>
             </div>
           </div>
         </div>

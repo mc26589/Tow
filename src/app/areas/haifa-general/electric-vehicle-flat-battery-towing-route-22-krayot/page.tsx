@@ -5,8 +5,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בכביש 22: חילוץ מקצועי תוך 30 דקות | 24/7",
-  description: "נתקעתם ללא סוללה בכביש 22? אנו מספקים גרירת רכב חשמלי מומחית על פלטפורמה, מהקריות לצק פוסט במחיר הוגן. זמינות 24/7, התקשרו עכשיו לחילוץ מהיר!",
+  title: "גרירת רכב חשמלי בכביש 22: חילוץ מהיר תוך 30 דקות | 24/7",
+  description: "נתקעתם ללא סוללה בכביש 22? אנו מספקים שירותי גרירה מקצועיים לרכב חשמלי על פלטפורמה, מהקריות לצק פוסט. שירות אמין, זמין 24/7 במחיר הוגן. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot"
   }
@@ -43,7 +43,7 @@ export default function Page() {
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-6 text-blue-400">שירותי גרירה לרכב חשמלי בכביש 22 והקריות</h2>
             <p className="mb-4">
-              נתקעתם באמצע הדרך? אנו מומחים במתן <Link href="/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap" className="text-blue-300 underline">שירותי גרירה דחופים וזולים בצק פוסט</Link> ובציר כביש 22. אם אתם זקוקים לחילוץ מקצועי, ניתן להסתייע ב-<Link href="/areas/haifa-general/towing-services-road-22-krayot-bypass" className="text-blue-300 underline">גרירת רכב בכביש 22 עוקף קריות</Link>. אנו משתמשים בציוד ייעודי לרכבים חשמליים למניעת נזק. אם אתם תקועים בדרך ללא סוללה, אנו כאן לשירותכם עם פלטפורמות חדישות.
+              נתקעתם באמצע הדרך? אנו מומחים במתן <Link href="/areas/haifa-general/cheap-towing-check-post-junction" className="text-blue-300 underline">שירותי גרירה דחופים בצק פוסט</Link> ובציר כביש 22. אם אתם זקוקים לחילוץ מקצועי, ניתן להסתייע ב-<Link href="/areas/haifa-general/emergency-breakdown-towing-route-22-krayot-bypass" className="text-blue-300 underline">גרירת רכב בכביש 22 עוקף קריות</Link>. אנו משתמשים בציוד ייעודי לרכבים חשמליים למניעת נזק. אם אתם תקועים בדרך ללא סוללה, אנו כאן לשירותכם עם פלטפורמות חדישות וזמינות מסביב לשעון.
             </p>
           </section>
 
@@ -55,12 +55,12 @@ export default function Page() {
                 <p>גרירת רכב חשמלי בשיטה של גלגלים על הכביש עלולה לפגוע במערכת ההנעה הרגנרטיבית. אנו מקפידים על גרירה בטוחה על פלטפורמה בלבד כדי להגן על המערכות האלקטרוניות הרגישות.</p>
               </div>
               <div>
-                <h3 className="text-xl font-bold">האם אתם נותנים שירות גם באזורים נוספים?</h3>
-                <p>כן, אנו פעילים בפריסה רחבה. ניתן להזמין <Link href="/areas/haifa-general/emergency-breakdown-towing-route-22-krayot-bypass" className="text-blue-300 underline">שירותי גרירה דחופים בכביש עוקף קריות</Link> או לבצע <Link href="/areas/haifa-general/towing-for-scrap-kiryat-bialik-road-22" className="text-blue-300 underline">גרירה לגריטה בקריית ביאליק</Link> במידת הצורך.</p>
+                <h3 className="text-xl font-bold">באילו מקרים ניתן להזמין שירותי חילוץ נוספים?</h3>
+                <p>אנו מציעים פתרונות לכל סוגי התקלות בדרך, החל מ-<Link href="/areas/haifa-general/emergency-towing-road-22-krayot" className="text-blue-300 underline">גרירה דחופה בכביש 22</Link> ועד <Link href="/areas/haifa-general/cash-for-scrap-cars-kiryat-motzkin" className="text-blue-300 underline">פינוי רכב גרוטאה לחלפים</Link> אם הרכב אינו בר תיקון. השירות ניתן בפריסה רחבה בכל אזור חיפה והקריות.</p>
               </div>
               <div>
                 <h3 className="text-xl font-bold">מהו טווח המחירים לגרירת רכב חשמלי?</h3>
-                <p>המחיר נקבע לפי מרחק הגרירה, שעת הקריאה ומיקום הרכב. אנו מציעים שירות שקוף, הוגן ומקצועי. לבעלי רכבים ישנים שאינם נוסעים, אנו מספקים גם שירותי <Link href="/areas/haifa-general/פינוי-רכב-גרוטאה-לחלפים-קריית-מוצקין" className="text-blue-300 underline">פינוי רכב גרוטאה לחלפים בקריית מוצקין</Link>.</p>
+                <p>המחיר נקבע לפי מרחק הגרירה והמיקום המדויק. אנו מקפידים על שקיפות מלאה מול הלקוח. במידה ואתם תקועים באזור אחר, אנו מספקים גם <Link href="/areas/haifa-general/grar-zol-lerchev-takua-bekiryat-yam" className="text-blue-300 underline">שירותי גרירה זולים בקריית ים</Link> וסביבתה.</p>
               </div>
             </div>
           </section>

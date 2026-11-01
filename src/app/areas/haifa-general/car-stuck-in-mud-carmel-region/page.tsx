@@ -5,7 +5,7 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "חילוץ רכב תקוע בבוץ בכרמל | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם עם הרכב בבוץ באזור הכרמל? אנו מציעים שירותי חילוץ מהירים לרכבים שנתקעו בשטח ובדרכי עפר. מחיר הוגן, צוות מיומן וזמינות מסביב לשעון. התקשרו עכשיו!",
+  description: "נתקעתם עם הרכב בבוץ באזור הכרמל? אנו מציעים שירותי חילוץ מהירים לרכבים ששקעו בדרכי עפר ובשטח. צוות מיומן, ציוד מתקדם ומחיר הוגן. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-region",
   },
@@ -19,7 +19,7 @@ export default function Page() {
     "areaServed": { "@type": "Place", "name": "אזור הכרמל, חיפה" },
     "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59" },
     "geo": { "@type": "GeoCoordinates", "latitude": "32.7940", "longitude": "34.9896" },
-    "priceRange": "$$,$",
+    "priceRange": "$$$",
     "serviceType": "חילוץ רכב תקוע בבוץ"
   };
 
@@ -33,9 +33,9 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">חילוץ רכב תקוע בבוץ באזור הכרמל</h1>
           <p className="text-xl mb-8">
-            נתקעתם עם הרכב בבוץ באזור הכרמל? אנו מתמחים בחילוץ רכבים פרטיים, מסחריים ורכבי שטח ששקעו בדרכי עפר בוציות. 
-            אנו מעניקים פתרונות בשטח לרבות <Link href="/areas/haifa-general/off-road-rescue-carmel-forest-danya" className="underline">חילוץ רכב תקוע באזור דניה ויערות הכרמל</Link>. 
-            בנוסף, אנו מספקים שירותי גרירה מקצועיים גם לאזור אחוזה במקרה של תקלות טכניות, עם זמינות 24/7 וציוד חילוץ מתקדם.
+            נתקעתם עם הרכב בבוץ באזור הכרמל? אנו מתמחים בחילוץ רכבים פרטיים ורכבי שטח ששקעו בדרכי עפר בוציות. 
+            אנו מעניקים מענה מהיר במיוחד עבור <Link href="/areas/haifa-general/car-stuck-in-mud-carmel-forest-near-haifa-university" className="underline">חילוץ רכב תקוע בבוץ באזור יערות הכרמל ליד אוניברסיטת חיפה</Link>. 
+            בנוסף, אם נתקעתם באזורים מיושבים וזקוקים לשירותי גרירה אמינים, אנו מציעים גם <Link href="/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing" className="underline">שירותי גרירת רכב במחיר הוגן ושקוף באזור אחוזה בחיפה</Link>.
           </p>
           <div className="flex flex-wrap gap-4">
             <WhatsAppCTA cityName="חיפה והכרמל" />
@@ -55,9 +55,9 @@ export default function Page() {
           <ul className="list-disc list-inside space-y-4 text-lg mb-8">
             <li>זמינות מלאה 24 שעות ביממה, 7 ימים בשבוע.</li>
             <li>מומחיות בחילוץ רכבים שנתקעו בבוץ ובתוואי שטח מאתגר.</li>
-            <li>ציוד חילוץ מותאם לרכבים פרטיים ורכבי 4x4.</li>
-            <li>הגעה מהירה לכל נקודה באזור הכרמל והסביבה הקרובה.</li>
-            <li>שירות אדיב ומקצועי המעניק לכם שקט נפשי במחיר הוגן.</li>
+            <li>ציוד חילוץ כבד ומותאם לרכבים פרטיים ורכבי שטח.</li>
+            <li>הגעה מהירה לכל נקודה ברכס הכרמל ובדרכי העפר הנסתרות.</li>
+            <li>שירות אדיב ומקצועי המעניק לכם שקט נפשי במחיר הגון.</li>
           </ul>
           
           <div className="mt-12">
@@ -65,15 +65,15 @@ export default function Page() {
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-lg">תוך כמה זמן תגיעו לחלץ אותי באזור הכרמל?</h4>
-                <p>אנו משתדלים להגיע לכל נקודה בכרמל תוך זמן קצר, בהתאם לעומסי התנועה ולתנאי השטח.</p>
+                <p>אנו משתדלים להגיע לכל נקודה בכרמל תוך זמן קצר, לרוב תוך פחות מ-45 דקות, בהתאם לעומסי התנועה ולתנאי השטח.</p>
               </div>
               <div>
-                <h4 className="font-bold text-lg">באילו מקרים ניתן להסתייע בכם?</h4>
-                <p>אנו מחלצים רכבים שנתקעו בבוץ, שקעו בדרכי עפר או זקוקים ל<Link href="/areas/haifa-general/car-towing-rescue-ahuzah-haifa-not-motorcycles" className="underline">גרירה מהירה באזור אחוזה</Link> וסביבתה.</p>
+                <h4 className="font-bold text-lg">האם אתם מחלצים רכבים ששקעו בבוץ עמוק?</h4>
+                <p>כן, אנו מצוידים בציוד חילוץ ייעודי לרכבים ששקעו בדרכי עפר בוציות באזור הכרמל, דניה וסביבת האוניברסיטה.</p>
               </div>
               <div>
-                <h4 className="font-bold text-lg">מהו טווח המחירים לחילוץ?</h4>
-                <p>המחיר נקבע בהתאם למורכבות החילוץ. נשמח לתת הצעת מחיר הוגנת ושקופה בטלפון ללא התחייבות.</p>
+                <h4 className="font-bold text-lg">מהו טווח המחירים לחילוץ בשטח?</h4>
+                <p>המחיר נקבע לפי מורכבות החילוץ. אנו מקפידים על שקיפות מלאה ומחירים הוגנים בהשוואה לממוצע השוק באזור חיפה והסביבה.</p>
               </div>
             </div>
           </div>
