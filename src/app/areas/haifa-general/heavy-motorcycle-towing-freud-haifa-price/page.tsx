@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בדרך פרויד חיפה | שירות חילוץ 24/7 | מחיר הוגן והגעה מהירה",
-  description: "נתקעת בדרך פרויד בחיפה? זקוקים לגרר בדחיפות? שירותי גרירה מקצועיים 24/7 לרכבים פרטיים ומסחריים. הגעה מהירה, מחיר הוגן ושירות אמין. התקשרו עכשיו לפתרון מיידי!",
+  title: "גרר בדרך פרויד חיפה | שירות 24/7 | הגעה מהירה ומחיר הוגן",
+  description: "נתקעת בדרך פרויד בחיפה? צריכים גרר דחוף? שירותי גרירה מקצועיים 24/7 לרכבים פרטיים ומסחריים בדרך פרויד והכרמל. מחיר הוגן ושירות אמין. התקשרו עכשיו לפתרון מיידי!",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-freud-haifa-price"
   }
@@ -15,7 +15,7 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoTowing",
-    "name": "שירותי גרירה וחילוץ חיפה והקריות",
+    "name": "שירותי גרירה וחילוץ בדרך פרויד חיפה",
     "areaServed": "Haifa",
     "priceRange": "₪₪",
     "openingHoursSpecification": {
@@ -45,16 +45,16 @@ export default function Page() {
             שירותי גרירה וחילוץ בדרך פרויד חיפה
           </h1>
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-            נתקעת עם הרכב בעלייה או בירידה של דרך פרויד? צוות המומחים שלנו זמין עבורך 24/7. שירות גרירה מהיר ומקצועי לרכבים פרטיים, מסחריים ו-4x4.
+            נתקעת עם הרכב בדרך פרויד? צוות המומחים שלנו זמין עבורך 24/7. שירות גרירה מהיר ומקצועי לרכבים פרטיים, מסחריים ורכבי שטח.
           </p>
         </div>
       </section>
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl font-bold mb-4">שירות גרירה אמין ומקצועי בחיפה</h2>
+          <h2 className="text-2xl font-bold mb-4">שירות גרירה אמין ומקצועי בכל אזור חיפה</h2>
           <p className="mb-6">
-            כשאנחנו מדברים על גרירה בחיפה, אנחנו מבינים שהזמן שלכם יקר. אם הרכב נתקע בדרך פרויד, אנו מספקים מענה מהיר לכל אזור הכרמל. אנו מספקים פתרונות משלימים באזור כמו <Link href="/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa" className="text-blue-600 underline">חילוץ 4x4 ביערות הכרמל</Link> או <Link href="/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot" className="text-blue-600 underline">גרירת רכבים באזור הצ'ק פוסט והקריות</Link>. אנו מתמחים במתן מענה מהיר ומקצועי לכל ציר מרכזי בעיר.
+            זמן הוא גורם קריטי כשנתקעים בדרך פרויד. אנו מספקים מענה מהיר לכל ציר מרכזי בכרמל. בין אם מדובר ברכב תקוע או צורך בחילוץ מורכב יותר, אנו כאן לעזור. צוותנו מתמחה גם בפתרונות עבור <Link href="/areas/haifa-general/4x4-vehicle-stuck-in-mud-carmel-forest" className="text-blue-600 underline">חילוץ רכב תקוע בבוץ ביערות הכרמל</Link> או מענה מהיר עבור <Link href="/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa" className="text-blue-600 underline">גרירת רכבים חשמליים עם מצבר ריק באחוזה</Link>. אנו מתחייבים למחיר הוגן ומקצועיות ללא פשרות.
           </p>
           
           <div className="flex flex-col gap-4 mt-8">
@@ -71,16 +71,16 @@ export default function Page() {
             <h3 className="text-xl font-bold mb-4">שאלות נפוצות על שירותי גרירה בדרך פרויד</h3>
             <div className="space-y-6">
               <div>
-                <p className="font-bold">האם אתם גוררים אופנועים?</p>
-                <p>אנו מתמקדים אך ורק בגרירת רכבים פרטיים, רכבי שטח ומסחריות. למידע על חילוץ כלים אחרים כמו <Link href="/areas/haifa-general/motorcycle-towing-accident-road-22-kiryat-ata" className="text-blue-600 underline">גרירת אופנועים לאחר תאונה</Link>, מומלץ ליצור קשר ישירות לבירור זמינות.</p>
+                <p className="font-bold">האם אתם גוררים רכבים מכל הסוגים בדרך פרויד?</p>
+                <p>אנו מתמחים בגרירת רכבים פרטיים, מסחריים ורכבי שטח. למידע נוסף על אזורים אחרים, ניתן לבדוק גם <Link href="/areas/haifa-general/towing-stuck-vehicle-road-22-haifa" className="text-blue-600 underline">שירותי גרירת רכב תקוע בכביש 22</Link>.</p>
               </div>
               <div>
-                <p className="font-bold">מהו טווח המחירים לגרירה בחיפה?</p>
-                <p>המחיר נקבע בהתאם למרחק הגרירה, סוג הרכב והשעה. אנו מתחייבים למחיר הוגן ושקוף ללא הפתעות. לחיפוש פתרונות נוספים באזור תוכלו לבדוק גם <Link href="/areas/haifa-general/affordable-emergency-car-towing-check-post-haifa" className="text-blue-600 underline">גרירה דחופה בצ'ק פוסט</Link>.</p>
+                <p className="font-bold">מה עושים במקרה של תאונה בדרך פרויד?</p>
+                <p>חשוב להישאר בטוחים ולפנות את הרכב מהנתיב אם ניתן. אנו מספקים שירותי פינוי לאחר תאונות. למידע על חילוץ מורכב, עיינו גם במידע על <Link href="/areas/haifa-general/electric-vehicle-accident-towing-route-22-krayot-bypass" className="text-blue-600 underline">חילוץ רכבים חשמליים לאחר תאונה</Link>.</p>
               </div>
               <div>
-                <p className="font-bold">האם אתם נותנים שירות גם במקרה של מצבר ריק?</p>
-                <p>כן, אנו מספקים עזרה ראשונה לרכב הכוללת התנעה וחילוץ. במידה ומדובר ברכב חשמלי, ניתן לקבל מידע נוסף על <Link href="/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot" className="text-blue-600 underline">גרירת רכבים חשמליים</Link>.</p>
+                <p className="font-bold">מהו טווח המחירים לגרירה באזור חיפה?</p>
+                <p>המחיר תלוי בסוג הרכב וביעד הגרירה. אנו ידועים במחירים שקופים. למי שמחפש פתרונות נוספים, ניתן לבדוק גם <Link href="/areas/haifa-general/affordable-towing-check-post-haifa" className="text-blue-600 underline">שירותי גרירה זולים בצ'ק פוסט</Link>.</p>
               </div>
             </div>
           </div>
