@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ 4x4 מהבוץ ביער הכרמל חיפה | הגעה מהירה 24/7',
-  description: 'נתקעתם עם רכב השטח ביער הכרמל? שירות חילוץ 4x4 מקצועי בחיפה והסביבה 24/7. הגעה מהירה לכל שביל, ציוד מתקדם ומחיר הוגן. התקשרו עכשיו!',
+  title: { absolute: "חילוץ 4x4 מהבוץ ביער הכרמל חיפה | הגעה מהירה 24/7" },
+  description: "נתקעתם עם רכב השטח ביער הכרמל? שירות חילוץ 4x4 מקצועי בחיפה והסביבה 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: 'https://yourdomain.com/areas/haifa-general/4x4-mud-recovery-carmel-haifa',
   },

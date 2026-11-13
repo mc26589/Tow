@@ -7,8 +7,8 @@ import type { Metadata } from "next";
 const BUSINESS_INFO_PLACEHOLDER = { phone: "0501234567", email: "info@example.com", address: "חיפה והקריות" };
 
 export const metadata: Metadata = {
-  title: "גרר לרכב שטח בקרית מוצקין - מחיר זול, הגעה מהירה 24/7",
-  description: "נתקעתם עם רכב השטח בקרית מוצקין? גרר מקצועי זמין 24/7. הגעה מהירה לקריות, ציוד חילוץ מתקדם למגוון רכבים. מחיר הוגן ושירות מהיר. התקשרו עכשיו!",
+  title: { absolute: "גרר לרכב שטח בקרית מוצקין - מחיר זול, הגעה מהירה 24/7" },
+  description: "נתקעתם עם רכב השטח בקרית מוצקין? גרר מקצועי זמין 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: { canonical: "https://yourdomain.com/areas/haifa-general/cheap-off-road-vehicle-towing-kiryat-motzkin" },
 };
 

@@ -5,8 +5,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "גרר תאונה כביש 22 וצ'ק פוסט | הגעה מהירה 24/7 - מחיר הוגן",
-  description: "נתקעתם בכביש 22 או בצ'ק פוסט לאחר תאונה? שירות גרירה מקצועי זמין 24/7. הגעה מהירה, מחיר הוגן ושירות אמין. התקשרו עכשיו לחילוץ המהיר ביותר באזור!",
+  title: { absolute: "גרר תאונה כביש 22 וצ'ק פוסט | הגעה מהירה 24/7 - מחיר הוגן" },
+  description: "נתקעתם בכביש 22 או בצ'ק פוסט לאחר תאונה? שירות גרירה מקצועי זמין 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/accident-towing-road-22-check-post-krayot"
   }

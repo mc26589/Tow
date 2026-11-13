@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר ג'יפים בצ'ק פוסט חיפה | הגעה תוך 30 דקות | 24/7",
-  description: "נתקעתם עם הג'יפ לאחר תאונה בצ'ק פוסט חיפה? גרר חירום מקצועי זמין 24/7. שירות מהיר, מחיר הוגן וטיפול בטוח לרכב שטח. התקשרו עכשיו לסיוע מיידי!",
+  title: { absolute: "גרר ג'יפים בצ'ק פוסט חיפה | הגעה תוך 30 דקות | 24/7" },
+  description: "נתקעתם עם הג'יפ לאחר תאונה בצ'ק פוסט חיפה? גרר חירום מקצועי זמין 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   keywords: "גרר ג'יפים, גרר לאחר תאונה, צ'ק פוסט חיפה, גרר חיפה, חילוץ ג'יפים, גרר 24/7, פינוי רכב לאחר תאונה",
   alternates: {
     canonical: "https://www.yourdomain.com/areas/haifa-general/jeep-towing-after-accident-check-post-haifa",

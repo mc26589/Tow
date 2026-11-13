@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירה בקרית ביאליק 24/7 | הגעה מהירה תוך 30 דקות | מחיר הוגן",
-  description: "נתקעתם עם רכב בקרית ביאליק? שירותי גרירה וחילוץ 24/7 במחיר הוגן. הגעה מהירה לכל הקריות, החלפת גלגל וסיוע בדרך. התקשרו עכשיו לפתרון מיידי!",
+  title: { absolute: "גרירה בקרית ביאליק 24/7 | הגעה מהירה תוך 30 דקות | ⭐ 4.9" },
+  description: "נתקעתם עם רכב בקרית ביאליק? שירותי גרירה וחילוץ 24/7 במחיר הוגן. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/affordable-24-7-towing-kiryat-bialik-flat-tire"
   }

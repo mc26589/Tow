@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב קל בכביש 22 (עוקף קריות) - הגעה מהירה 24/7",
-  description: "נתקעתם בכביש 22 עוקף קריות? שירותי גרירה מקצועיים לרכב קל, מחיר הוגן והגעה תוך 30 דקות. זמינים לכל קריאה 24/7. התקשרו עכשיו לשירות אמין!",
+  title: { absolute: "גרירת רכב קל בכביש 22 (עוקף קריות) - הגעה מהירה 24/7" },
+  description: "נתקעתם בכביש 22 עוקף קריות? שירותי גרירה מקצועיים לרכב קל, מחיר הוגן והגעה תוך 30 דקות. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "https://yourdomain.com/areas/haifa-general/emergency-light-truck-towing-route-22-krayot-bypass",
   },

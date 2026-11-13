@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בסטלה מאריס חיפה | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם בעלייה לסטלה מאריס? שירותי גרירה מקצועיים 24/7 לכל סוגי הרכבים. הגעה מהירה, מחיר הוגן ושירות אדיב. התקשרו עכשיו לחילוץ מהיר!",
+  title: { absolute: "גרר בסטלה מאריס חיפה | הגעה מהירה 24/7 | מחיר הוגן" },
+  description: "נתקעתם בעלייה לסטלה מאריס? שירותי גרירה מקצועיים 24/7 לכל סוגי הרכבים. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/emergency-towing-stella-maris-haifa",
   },

@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "צריכים לפנות רכב לפירוק בקריית אתא או על כביש 22? שירות גרירה מהיר ומקצועי 24/7 במחיר הוגן. פינוי רכבים ללא עיכובים. התקשרו עכשיו להצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/towing-for-scrap-kiryat-ata-road-22"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

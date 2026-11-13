@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "פינוי וגרירת רכבים ישנים לחלפים בקריות | שירות 24/7 מהיר",
-  description: "זקוקים לפינוי רכב ישן או גרוטאה בקרית חיים והקריות? אנו מציעים שירות גרירה מקצועי, אמין וזמין 24/7. הגעה מהירה לכל נקודה. התקשרו עכשיו לקבלת שירות!",
+  title: { absolute: "פינוי וגרירת רכבים ישנים לחלפים בקריות | שירות 24/7 מהיר" },
+  description: "זקוקים לפינוי רכב ישן או גרוטאה בקרית חיים והקריות? אנו מציעים שירות גרירה מקצועי, אמין וזמין 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/buying-old-cars-parts-kiryat-haim-krayot",
   },

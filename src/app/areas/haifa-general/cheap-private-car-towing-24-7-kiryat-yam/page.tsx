@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "גרר בקרית ים 24/7 - הגעה מהירה עד 30 דקות | מחיר הוגן",
-  description: "נתקעתם עם הרכב בקרית ים? שירותי גרירה מקצועיים 24/7 במחיר הוגן. הגעה מהירה לכל נקודה בעיר. אל תחכו בכביש, התקשרו עכשיו להצעת מחיר משתלמת!",
+  title: { absolute: "גרר בקרית ים 24/7 - הגעה מהירה עד 30 דקות | מחיר הוגן" },
+  description: "נתקעתם עם הרכב בקרית ים? שירותי גרירה מקצועיים 24/7 במחיר הוגן. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/cheap-private-car-towing-24-7-kiryat-yam",
   },

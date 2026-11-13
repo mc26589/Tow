@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ 4x4 בבוץ בסטלה מאריס חיפה | הגעה מהירה 24/7",
-  description: "נתקעתם בשטח בסטלה מאריס? חילוץ 4x4 מקצועי בחיפה והסביבה. מחיר הוגן, ציוד חילוץ מתקדם וזמינות 24/7 לכל סוגי הרכבים. התקשרו עכשיו לחילוץ מהיר!",
+  title: { absolute: "חילוץ 4x4 בבוץ בסטלה מאריס חיפה | הגעה מהירה 24/7" },
+  description: "נתקעתם בשטח בסטלה מאריס? חילוץ 4x4 מקצועי בחיפה והסביבה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/4x4-stuck-in-mud-stella-maris-haifa",
   },

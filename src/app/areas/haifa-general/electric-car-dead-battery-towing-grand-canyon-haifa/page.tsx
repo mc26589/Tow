@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בגרנד קניון חיפה | חילוץ 24/7 - הגעה מהירה",
-  description: "נתקעתם עם רכב חשמלי ללא סוללה בגרנד קניון חיפה? צוות מומחה זמין 24/7. הגעה מהירה, שירות אמין ומקצועי. התקשרו עכשיו לחילוץ המהיר ביותר באזור!",
+  title: { absolute: "גרירת רכב חשמלי בגרנד קניון חיפה | ⭐ 4.9" },
+  description: "נתקעתם עם רכב חשמלי ללא סוללה בגרנד קניון חיפה? צוות מומחה זמין 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/electric-car-dead-battery-towing-grand-canyon-haifa"
   }

@@ -33,7 +33,10 @@ export default function AreasHubPage() {
                         אזורי שירות ושירותי חילוץ בחיפה והצפון
                     </h1>
                     <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                        אנחנו מגיעים לכל נקודה בצפון, משירותי <Link href="/areas/haifa-general/buying-cars-for-scrap-check-post-haifa" className="text-blue-600 font-bold hover:underline">גרר בצ'ק פוסט</Link> ועד <Link href="/areas/haifa-general/mud-rescue-4x4-carmel-forest-haifa" className="text-blue-600 font-bold hover:underline">חילוצי שטח בחיפה</Link>. צוות המומחים שלנו עומד לרשותכם 24/7.
+                        אנחנו מגיעים לכל נקודה בצפון, משירותי{" "}
+                        <Link href="/haifa" className="text-blue-600 font-bold hover:underline">גרר בחיפה</Link>, דרך{" "}
+                        <Link href="/krayot" className="text-blue-600 font-bold hover:underline">גרר בקריות</Link> ועד{" "}
+                        <Link href="/milon/towing-cost" className="text-blue-600 font-bold hover:underline">מחירון גרירה בצפון</Link>. צוות המומחים שלנו עומד לרשותכם 24/7.
                     </p>
                 </div>
 
@@ -43,9 +46,13 @@ export default function AreasHubPage() {
                         <div className="space-y-6">
                             {CITIES.map((city) => (
                                 <div key={city.slug}>
-                                    <h3 className="font-semibold text-lg text-slate-800 mb-3">{city.name_he}</h3>
+                                    <h3 className="font-semibold text-lg text-slate-800 mb-3">
+                                        <Link href={`/${city.slug}`} className="text-trust-blue-700 hover:underline">
+                                            {city.slug === "krayot" ? "גרר בקריות" : `גרר ב${city.name_he}`}
+                                        </Link>
+                                    </h3>
                                     <ul className="grid grid-cols-2 gap-2 text-sm">
-                                        <li><Link href={`/${city.slug}/private-car`} className="text-blue-600 hover:underline">כללי - {city.name_he}</Link></li>
+                                        <li><Link href={`/${city.slug}`} className="text-blue-600 hover:underline">כללי - {city.name_he}</Link></li>
                                         {NEIGHBORHOODS.filter(hood => hood.city_slug === city.slug).map(hood => (
                                             <li key={hood.slug}>
                                                 <Link href={`/locations/${city.slug}/${hood.slug}`} className="text-slate-600 hover:text-blue-600 hover:underline">
@@ -116,8 +123,8 @@ export default function AreasHubPage() {
                                 <p>המחיר שלנו הוגן ונקבע לפי מרחק וסוג החילוץ. אם מדובר ברכב שתקוע באזור הקריות, אנו מציעים <Link href="/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area" className="text-blue-600 underline">גרירה במחיר משתלם בכביש 22</Link>.</p>
                             </div>
                             <div>
-                                <h3 className="font-bold text-lg">האם אתם קונים רכבים לפירוק?</h3>
-                                <p>כן, אנו מספקים פתרון כולל. ניתן להתרשם משירותי <Link href="/areas/haifa-general/scrap-car-buyer-haifa-krayot-immediate-removal" className="text-blue-600 underline">פינוי רכבים לפירוק בחיפה והקריות</Link> לקבלת תשלום מיידי במקום.</p>
+                                <h3 className="font-bold text-lg">צריכים גרר בחיפה או בקריות עכשיו?</h3>
+                                <p>אנו זמינים מיד לכל שכונה וכביש ראשי. הזמינו <Link href="/haifa" className="text-blue-600 underline">גרר בחיפה</Link> או <Link href="/krayot" className="text-blue-600 underline">גרר בקריות</Link> ובדקו מחיר מראש ב-<Link href="/milon/towing-cost" className="text-blue-600 underline">מחירון גרירה 2026</Link>.</p>
                             </div>
                         </div>
                     </div>

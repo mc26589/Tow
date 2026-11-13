@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בדרך נוף כרמל חיפה | חילוץ רכב 24/7 - הגעה מהירה",
-  description: "נתקעתם בדרך נוף כרמל? שירותי גרירה מקצועיים לרכבים פרטיים ומסחריים בחיפה. מחיר הוגן, זמינות 24/7 ושירות אמין. התקשרו עכשיו לחילוץ מהיר!",
+  title: { absolute: "גרר בדרך נוף כרמל חיפה | חילוץ רכב 24/7 - הגעה מהירה" },
+  description: "נתקעתם בדרך נוף כרמל? שירותי גרירה מקצועיים לרכבים פרטיים ומסחריים בחיפה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-haifa-nof-carmel",
   },

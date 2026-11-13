@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "מוכרים רכב לפירוק בקרית מוצקין? אנו קונים רכבים במזומן מכל סוג, כולל גרירה חינם וטיפול בניירת. שירות מהיר ואמין, הגעה תוך 30 דקות. התקשרו עכשיו!",
   alternates: {
     canonical: "/areas/haifa-general/cash-for-scrap-cars-kiryat-motzkin"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

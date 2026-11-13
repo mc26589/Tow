@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ רכב במנהרות הכרמל - הגעה תוך 30 דקות | 24/7',
-  description: 'נתקעתם ברכב במנהרות הכרמל? שירות חילוץ מקצועי ומהיר לכל אורך ציר המנהרות בחיפה. מחירים הוגנים, זמינות מלאה 24/7. התקשרו עכשיו לעזרה מיידית!',
+  title: { absolute: "חילוץ רכב במנהרות הכרמל - הגעה תוך 30 דקות | 24/7" },
+  description: "נתקעתם ברכב במנהרות הכרמל? שירות חילוץ מקצועי ומהיר לכל אורך ציר המנהרות בחיפה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/car-rescue-carmel-tunnels-haifa'
   }

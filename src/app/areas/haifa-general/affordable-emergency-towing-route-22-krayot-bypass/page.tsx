@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירה בכביש 22 עוקף קריות | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם בכביש 22? שירותי גרירה מקצועיים ומהירים לעוקף קריות 24/7. הגעה תוך 30 דקות, מחיר הוגן ושירות מצוין. התקשרו עכשיו לקבלת סיוע!",
+  title: { absolute: "גרירה בכביש 22 עוקף קריות | הגעה מהירה 24/7 | מחיר הוגן" },
+  description: "נתקעתם בכביש 22? שירותי גרירה מקצועיים ומהירים לעוקף קריות 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/affordable-emergency-towing-route-22-krayot-bypass"
   }

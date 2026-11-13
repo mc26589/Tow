@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'מכירת רכב לפירוק בחיפה והקריות – פינוי מיידי ומזומן במקום',
-  description: 'נתקעתם עם רכב מושבת? קונים רכבים לפירוק בחיפה והקריות עם פינוי מיידי. מחיר הוגן, שירות אמין 24/7 ומזומן במקום. התקשרו עכשיו!',
+  title: { absolute: "מכירת רכב לפירוק בחיפה והקריות – פינוי מיידי ומזומן במקום" },
+  description: "נתקעתם עם רכב מושבת? קונים רכבים לפירוק בחיפה והקריות עם פינוי מיידי. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/sell-damaged-car-for-parts-haifa-immediate-pickup',
   },

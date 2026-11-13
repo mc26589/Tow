@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב מהבוץ באוניברסיטת חיפה והכרמל | הגעה מהירה 24/7",
-  description: "נתקעתם בבוץ ביערות הכרמל או ליד אוניברסיטת חיפה? חילוץ רכב מהיר, מקצועי ובטוח 24/7. הגעה מהירה, מחיר הוגן ושירות מצוין. התקשרו עכשיו לחילוץ!",
+  title: { absolute: "חילוץ רכב מהבוץ באוניברסיטת חיפה והכרמל | הגעה מהירה 24/7" },
+  description: "נתקעתם בבוץ ביערות הכרמל או ליד אוניברסיטת חיפה? חילוץ רכב מהיר, מקצועי ובטוח 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-forest-haifa-university"
   }

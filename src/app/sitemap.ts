@@ -57,6 +57,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         },
     ];
 
+    // 0.5. City Pillar pages (/haifa, /krayot, etc.)
+    const cityPillarUrls: MetadataRoute.Sitemap = CITIES.map((city) => ({
+        url: `${baseUrl}/${city.slug}`,
+        lastModified: staticLastMod,
+        changeFrequency: 'weekly',
+        priority: 0.95,
+    }));
+
     // 1. Gen static cities/vehicles
     const cityVehicleUrls: MetadataRoute.Sitemap = [];
     for (const city of CITIES) {
@@ -180,9 +188,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             .select('route_path')
             .eq('is_published', true);
 
+        const isOffBrandScrap = (routeOrSlug: string) => /scrap|junk|piruk|פירוק|גרוטא/i.test(routeOrSlug);
+
         if (!error && spokePages) {
             dynamicUrls = spokePages
                 .filter((page) => {
+                    if (isOffBrandScrap(page.route_path)) return false;
                     // route_path looks like "/areas/haifa-general/some-slug"
                     // which maps 1:1 to src/app/areas/haifa-general/some-slug/page.tsx
                     const relativePath = page.route_path.replace(/^\//, '');
@@ -222,6 +233,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                     .filter(dirent => dirent.isDirectory());
 
                 for (const pageDir of pageDirs) {
+                    if (/scrap|junk|piruk|פירוק|גרוטא/i.test(pageDir.name)) continue;
                     const pagePath = path.join(subDirPath, pageDir.name, 'page.tsx');
                     if (fs.existsSync(pagePath)) {
                         const stat = fs.statSync(pagePath);
@@ -242,7 +254,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Merge and deduplicate URLs
     const allUrlsMap = new Map<string, MetadataRoute.Sitemap[number]>();
 
-    [...staticRoutes, ...cityVehicleUrls, ...additionalPSEOUrls, ...guideUrls, ...dynamicUrls, ...fsUrls].forEach(item => {
+    [...staticRoutes, ...cityPillarUrls, ...cityVehicleUrls, ...additionalPSEOUrls, ...guideUrls, ...dynamicUrls, ...fsUrls].forEach(item => {
         if (!allUrlsMap.has(item.url)) {
             allUrlsMap.set(item.url, item);
         }

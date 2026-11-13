@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "צריכים פינוי רכבים לפירוק בהדר הכרמל? אנו קונים רכבים ללא תנועה במזומן ובמחיר הוגן! שירות מהיר, מקצועי ומיידי לכל תושבי האזור. התקשרו עכשיו להצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/cash-for-junk-cars-removal-hadar-hacarmel-haifa"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "קניית רכבים לפירוק בקרית ים | פינוי מיידי ותשלום הוגן במזומן",
-  description: "נתקעתם עם רכב ישן? אנו קונים רכבים לפירוק בקרית ים, רכבים תקולים או לאחר תאונה. פינוי מיידי, תשלום הוגן במזומן ושירות מהיר. התקשרו עכשיו לקבלת הצעה!",
+  title: { absolute: "קניית רכבים לפירוק בקרית ים | ⭐ 4.9" },
+  description: "נתקעתם עם רכב ישן? אנו קונים רכבים לפירוק בקרית ים, רכבים תקולים או לאחר תאונה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "https://yourdomain.com/areas/haifa-general/kaniyat-rekhavim-yeshanim-lehalafim-kiryat-yam-pinui-meyadi",
   },

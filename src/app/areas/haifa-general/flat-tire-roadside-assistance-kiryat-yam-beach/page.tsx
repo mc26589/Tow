@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "החלפת גלגל בחוף קריית ים | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם עם פנצ\'ר בחוף קריית ים? שירות החלפת גלגל מקצועי לכל סוגי הרכבים. הגעה מהירה תוך 30 דקות, מחיר הוגן ושירות 24/7. התקשרו עכשיו לסיוע מיידי!",
+  title: { absolute: "החלפת גלגל בחוף קריית ים | הגעה מהירה 24/7 | מחיר הוגן" },
+  description: "נתקעתם עם פנצ'ר בחוף קריית ים? שירות החלפת גלגל מקצועי לכל סוגי הרכבים. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/flat-tire-roadside-assistance-kiryat-yam-beach"
   }

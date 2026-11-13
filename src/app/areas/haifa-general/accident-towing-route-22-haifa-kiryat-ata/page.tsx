@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירה בכביש 22 חיפה-קריות: הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעת בכביש 22? שירותי גרירה וחילוץ מקצועיים לרכב לאחר תאונה בין חיפה לקריית אתא. הגעה מהירה תוך 30 דקות, זמינות 24/7 ומחיר הוגן. התקשרו עכשיו!",
+  title: { absolute: "גרירה בכביש 22 חיפה-קריות: הגעה מהירה 24/7 | מחיר הוגן" },
+  description: "נתקעת בכביש 22? שירותי גרירה וחילוץ מקצועיים לרכב לאחר תאונה בין חיפה לקריית אתא. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/accident-towing-route-22-haifa-kiryat-ata"
   }

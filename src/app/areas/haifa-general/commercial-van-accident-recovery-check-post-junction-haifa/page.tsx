@@ -8,8 +8,8 @@ const SLUG = "commercial-van-accident-recovery-check-post-junction-haifa";
 const COMPANY_NAME = "גרר מפרץ אקספרס";
 
 export const metadata: Metadata = {
-  title: "חילוץ ואן מסחרי בצומת צ'ק פוסט חיפה | הגעה מהירה 24/7",
-  description: "נתקעתם עם רכב מסחרי בצומת צ'ק פוסט? גרר מפרץ אקספרס זמינים 24/7 לחילוץ ואן מהיר, בטוח ובמחיר הוגן. התקשרו עכשיו להזמנת גרר מקצועי!",
+  title: { absolute: "חילוץ ואן מסחרי בצומת צ'ק פוסט חיפה | הגעה מהירה 24/7" },
+  description: "נתקעתם עם רכב מסחרי בצומת צ'ק פוסט? גרר מפרץ אקספרס זמינים 24/7 לחילוץ ואן מהיר, בטוח ובמחיר הוגן. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: `https://www.yourdomain.com/areas/haifa-general/${SLUG}`,
   },

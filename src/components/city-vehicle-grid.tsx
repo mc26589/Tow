@@ -24,7 +24,9 @@ export function CityVehicleGrid() {
                         <div key={city.slug}>
                             <h3 className="font-rubik font-semibold text-lg text-trust-blue-700 mb-3 flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-trust-blue-500" />
-                                גרירה ב{city.name_he}
+                                <Link href={`/${city.slug}`} className="hover:underline">
+                                    {city.slug === "krayot" ? "גרר בקריות" : `גרר ב${city.name_he}`} — עמוד ראשי ←
+                                </Link>
                             </h3>
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5">
                                 {topVehicles.map((vehicle) => (
@@ -52,7 +54,7 @@ export function CityVehicleGrid() {
                         {CITIES.slice(6).map((city, i) => (
                             <span key={city.slug}>
                                 <Link
-                                    href={`/${city.slug}/private-car`}
+                                    href={`/${city.slug}`}
                                     className="text-trust-blue-600 font-medium hover:text-trust-blue-800 hover:underline focus-ring rounded-sm px-1"
                                 >
                                     {city.name_he}

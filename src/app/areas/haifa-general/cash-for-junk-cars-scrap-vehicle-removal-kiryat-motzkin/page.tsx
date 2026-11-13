@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     url: 'https://www.towingrescuehaifa.com/cash-for-junk-cars-scrap-vehicle-removal-kiryat-motzkin',
     type: 'website',
   },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

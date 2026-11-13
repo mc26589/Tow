@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ 4X4 ביערות הכרמל | חילוץ שטח 24/7 | מחיר הוגן",
-  description: "נתקעתם בבוץ ביערות הכרמל? אנו מציעים חילוץ 4X4 מקצועי, מהיר ובטוח 24/7. הגעה מהירה לכל נקודה בכרמל כולל אזור אוניברסיטת חיפה. התקשרו עכשיו לחילוץ!",
+  title: { absolute: "חילוץ 4X4 ביערות הכרמל | חילוץ שטח 24/7 | מחיר הוגן" },
+  description: "נתקעתם בבוץ ביערות הכרמל? אנו מציעים חילוץ 4X4 מקצועי, מהיר ובטוח 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/4x4-vehicle-stuck-in-mud-carmel-forest",
   },

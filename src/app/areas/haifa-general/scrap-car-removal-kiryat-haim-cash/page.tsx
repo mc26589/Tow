@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/areas/haifa-general/scrap-car-removal-kiryat-haim-cash",
   },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

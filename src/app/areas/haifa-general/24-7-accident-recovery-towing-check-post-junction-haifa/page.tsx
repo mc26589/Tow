@@ -4,8 +4,8 @@ import { WhatsAppCTA } from '@/components/whatsapp-cta';
 import { BUSINESS_INFO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: "גרר בצומת צ'ק פוסט 24/7 | הגעה מהירה תוך 30 דקות",
-  description: "נתקעתם בצומת צ'ק פוסט? גרר מפרץ אקספרס מציע גרירה וחילוץ 24/7 במחיר הוגן. הגעה מהירה לכל אזור חיפה והצפון. התקשרו עכשיו לסיוע!",
+  title: { absolute: "גרר בצומת צ'ק פוסט 24/7 | הגעה מהירה תוך 30 דקות | ⭐ 4.9" },
+  description: "נתקעתם בצומת צ'ק פוסט? גרר מפרץ אקספרס מציע גרירה וחילוץ 24/7 במחיר הוגן. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "https://www.towingrescuehaifa.co.il/areas/haifa-general/24-7-accident-recovery-towing-check-post-junction-haifa",
   },

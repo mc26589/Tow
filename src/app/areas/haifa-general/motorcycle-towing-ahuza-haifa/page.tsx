@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר באחוזה חיפה | שירות גרירה וחילוץ 24/7 - הגעה מהירה",
-  description: "נתקעתם עם הרכב באחוזה? אנו מספקים שירותי גרירה וחילוץ מקצועיים לרכבים פרטיים ומסחריים 24/7. מחיר הוגן, שירות אדיב והגעה מהירה. התקשרו עכשיו!",
+  title: { absolute: "גרר באחוזה חיפה | שירות גרירה וחילוץ 24/7 - הגעה מהירה" },
+  description: "נתקעתם עם הרכב באחוזה? אנו מספקים שירותי גרירה וחילוץ מקצועיים לרכבים פרטיים ומסחריים 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/motorcycle-towing-ahuza-haifa",
   },

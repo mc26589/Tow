@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב בכביש 22 וצומת הצ'ק פוסט | הגעה מהירה 24/7",
-  description: "נתקעת בכביש 22 או בצומת הצ'ק פוסט? שירות גרירה מקצועי, מחיר הוגן וזמינות 24/7. הגעה מהירה לכל נקודה לרכבים ורכבים מסחריים. התקשרו עכשיו!",
+  title: { absolute: "גרירת רכב בכביש 22 וצומת הצ'ק פוסט | הגעה מהירה 24/7" },
+  description: "נתקעת בכביש 22 או בצומת הצ'ק פוסט? שירות גרירה מקצועי, מחיר הוגן וזמינות 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-breakdown-towing-route-22-check-post-haifa",
   },

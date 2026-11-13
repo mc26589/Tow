@@ -13,8 +13,8 @@ function JsonLd<T>({ data }: { data: T }) {
 }
 
 export const metadata: Metadata = {
-  title: "גרר באחוזה חיפה: מחיר הוגן, הגעה מהירה תוך 30 דקות | 24/7",
-  description: "נתקעתם עם הרכב באחוזה חיפה? אנו מציעים שירות גרירה מקצועי, שקוף ומהיר לכל סוגי הרכבים. הגעה תוך חצי שעה, מחירים ללא הפתעות. התקשרו עכשיו לקבלת שירות!",
+  title: { absolute: "גרר באחוזה חיפה: מחיר הוגן, הגעה מהירה תוך 30 דקות | 24/7" },
+  description: "נתקעתם עם הרכב באחוזה חיפה? אנו מציעים שירות גרירה מקצועי, שקוף ומהיר לכל סוגי הרכבים. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "https://yourdomain.com/areas/haifa-general/cheap-car-towing-service-ahuzah-haifa-transparent-pricing",
   },

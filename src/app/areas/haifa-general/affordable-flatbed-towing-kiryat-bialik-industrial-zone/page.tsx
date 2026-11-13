@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר שטוח באזור התעשייה קריית ביאליק | 24/7 הגעה מהירה",
-  description: "נתקעתם באזור התעשייה קריית ביאליק? שירות גרר שטוח מקצועי במחיר הוגן. זמינות 24/7 לרכבים פרטיים ומסחריים. התקשרו עכשיו להגעה מהירה!",
+  title: { absolute: "גרר שטוח באזור התעשייה קריית ביאליק | 24/7 הגעה מהירה" },
+  description: "נתקעתם באזור התעשייה קריית ביאליק? שירות גרר שטוח מקצועי במחיר הוגן. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/affordable-flatbed-towing-kiryat-bialik-industrial-zone",
   },

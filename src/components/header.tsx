@@ -23,12 +23,15 @@ export function Header() {
                 </Link>
 
                 {/* Navigation Links */}
-                <nav className="hidden md:flex items-center gap-6">
-                    <Link href="/areas" className="text-sm font-bold text-trust-blue-600 hover:text-blue-800 transition-colors">
-                        📍 אזורי שירות מלאים
+                <nav className="hidden md:flex items-center gap-5">
+                    <Link href="/haifa" className="text-sm font-bold text-slate-700 hover:text-blue-700 transition-colors">
+                        גרר בחיפה
                     </Link>
-                    <Link href="/about" className="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
-                        אודות
+                    <Link href="/krayot" className="text-sm font-bold text-slate-700 hover:text-blue-700 transition-colors">
+                        גרר בקריות
+                    </Link>
+                    <Link href="/areas" className="text-sm font-bold text-trust-blue-600 hover:text-blue-800 transition-colors">
+                        📍 אזורי שירות
                     </Link>
                     <Link href="/milon/towing-cost" className="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
                         🧮 מחשבון גרירה

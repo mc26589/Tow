@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'גרר לאחר תאונה בצומת הצק פוסט חיפה | הגעה מהירה 24/7',
-  description: 'נתקעתם לאחר תאונה בצומת הצק פוסט בחיפה? גרר מקצועי וזמין 24/7. הגעה תוך 30 דקות, שירות אמין ומחיר הוגן. התקשרו עכשיו!',
+  title: { absolute: "גרר לאחר תאונה בצומת הצק פוסט חיפה | הגעה מהירה 24/7" },
+  description: "נתקעתם לאחר תאונה בצומת הצק פוסט בחיפה? גרר מקצועי וזמין 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/towing-after-accident-check-post-haifa',
   },

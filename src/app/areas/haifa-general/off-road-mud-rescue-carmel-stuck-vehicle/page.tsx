@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ שטח ובוץ בכרמל: הגעה מהירה 24/7 | מחיר הוגן",
-  description: "רכב תקוע בבוץ בכרמל? צוות חילוץ מקצועי זמין 24/7. הגעה מהירה לכל מוקדי הכרמל, דניה ואחוזה. מחיר הוגן ושירות שטח מיומן. התקשרו עכשיו לחילוץ!",
+  title: { absolute: "חילוץ שטח ובוץ בכרמל: הגעה מהירה 24/7 | מחיר הוגן" },
+  description: "רכב תקוע בבוץ בכרמל? צוות חילוץ מקצועי זמין 24/7. הגעה מהירה לכל מוקדי הכרמל, דניה ואחוזה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: { canonical: "/areas/haifa-general/off-road-mud-rescue-carmel-stuck-vehicle" }
 };
 

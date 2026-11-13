@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב מסחרי דחוף בצ'ק פוסט וחיפה | הגעה מהירה 24/7",
-  description: "נתקעתם עם רכב מסחרי בצומת הצ'ק פוסט או כביש 22? שירות גרירה מהיר ומקצועי לרכבים מסחריים וטנדרים. מחיר הוגן, הגעה מהירה לכל אזור חיפה. התקשרו עכשיו!",
+  title: { absolute: "גרירת רכב מסחרי דחוף בצ'ק פוסט וחיפה | הגעה מהירה 24/7" },
+  description: "נתקעתם עם רכב מסחרי בצומת הצ'ק פוסט או כביש 22? שירות גרירה מהיר ומקצועי לרכבים מסחריים וטנדרים. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/urgent-towing-commercial-van-check-post-route-22"
   }

@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'גרירה וחילוץ באחוזה חיפה | שירות 24/7 | מחיר הוגן',
-  description: 'נתקעת באחוזה חיפה? אנו מציעים שירותי גרירה מקצועיים, חילוץ רכבים וטיפול בפנצ\'ר 24/7. הגעה מהירה ומחירים נוחים. התקשרו עכשיו לקבלת סיוע!',
+  title: { absolute: "גרירה וחילוץ באחוזה חיפה | שירות 24/7 | מחיר הוגן" },
+  description: "נתקעת באחוזה חיפה? אנו מציעים שירותי גרירה מקצועיים, חילוץ רכבים וטיפול בפנצ'ר 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: { canonical: '/areas/haifa-general/heavy-motorcycle-flat-tire-towing-ahuza-haifa' }
 };
 

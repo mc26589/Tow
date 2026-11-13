@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/areas/haifa-general/junk-car-removal-kiryat-yam-beach',
   },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

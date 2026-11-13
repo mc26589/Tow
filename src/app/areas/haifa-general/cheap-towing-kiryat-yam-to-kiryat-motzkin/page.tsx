@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר מקרית ים לקרית מוצקין - שירות מהיר ומחיר הוגן 24/7",
-  description: "נתקעת עם הרכב? שירותי גרירה מקצועיים מקרית ים לכל יעד בקרית מוצקין. זמינות 24/7, מחירים הוגנים והגעה מהירה. התקשרו עכשיו להצעת מחיר!",
+  title: { absolute: "גרר מקרית ים לקרית מוצקין - שירות מהיר ומחיר הוגן 24/7" },
+  description: "נתקעת עם הרכב? שירותי גרירה מקצועיים מקרית ים לכל יעד בקרית מוצקין. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/cheap-towing-kiryat-yam-to-kiryat-motzkin",
   },

@@ -4,8 +4,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'גרר בקרית ים 24/7 - שירות חילוץ רכב מהיר ומחיר הוגן',
-  description: 'נתקעתם עם הרכב בקרית ים? שירותי גרירה מקצועיים 24 שעות ביממה. מחירים הוגנים, זמינות מידית והגעה מהירה לכל הקריות. התקשרו עכשיו!',
+  title: { absolute: "גרר בקרית ים 24/7 - שירות חילוץ רכב מהיר ומחיר הוגן" },
+  description: "נתקעתם עם הרכב בקרית ים? שירותי גרירה מקצועיים 24 שעות ביממה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/grar-zol-lerchev-takua-bekiryat-yam',
   },

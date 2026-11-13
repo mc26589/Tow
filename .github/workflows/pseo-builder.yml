@@ -2,7 +2,7 @@ name: pSEO & E-E-A-T Builder
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight UTC
+    - cron: '0 2 * * 0' # Runs weekly on Sundays at 2:00 AM UTC to avoid bloat & save tokens
   workflow_dispatch:
 
 permissions:

@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'גרירת רכב בכביש 22 קרית אתא | שירות 24/7 הגעה מהירה!',
-  description: 'נתקעתם עם הרכב בכביש 22? שירותי גרירה מקצועיים ומהירים בקרית אתא והסביבה. מחיר הוגן, זמינות מלאה 24/7. לחצו להזמנת גרר והגעה מהירה אליכם.',
+  title: { absolute: "גרירת רכב בכביש 22 קרית אתא | שירות 24/7 הגעה מהירה!" },
+  description: "נתקעתם עם הרכב בכביש 22? שירותי גרירה מקצועיים ומהירים בקרית אתא והסביבה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/motorcycle-towing-accident-road-22-kiryat-ata',
   },

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/areas/haifa-general/cash-for-junk-cars-check-post-haifa",
   },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

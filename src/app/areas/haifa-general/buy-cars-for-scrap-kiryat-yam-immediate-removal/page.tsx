@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "רוצים למכור רכב לפירוק בקרית ים? קונים את כל סוגי הרכבים במזומן ובמחיר הוגן. פינוי מיידי מהיום להיום, ללא בירוקרטיה. התקשרו עכשיו להצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/buy-cars-for-scrap-kiryat-yam-immediate-removal"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

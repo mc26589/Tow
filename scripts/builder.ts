@@ -104,12 +104,12 @@ async function buildSGERoute(trendQuery: string, locationSlug: string, locationC
 async function runBuilder() {
     console.log("Starting Spoke Builder Agent...");
 
-    // Fetch pending trends
+    // Fetch pending trends (1 per weekly run to conserve tokens & avoid duplicate bloat)
     const { data: trends, error } = await supabase
         .from('local_trends')
         .select('*, micro_locations(slug, city)')
         .eq('status', 'pending')
-        .limit(3); // Process in batches to avoid Vercel timeouts
+        .limit(1);
 
     if (error || !trends) {
         console.log("No pending trends found.");
@@ -117,6 +117,11 @@ async function runBuilder() {
     }
 
     for (const trend of trends) {
+        if (/פירוק|גרוטא|scrap|junk/i.test(trend.query || '')) {
+            console.log(`⏭️ Skipping off-brand scrap query: ${trend.query}`);
+            await supabase.from('local_trends').update({ status: 'skipped', processed_at: new Date() }).eq('id', trend.id);
+            continue;
+        }
         const locationSlug = trend.micro_locations?.slug || 'haifa-general';
         const locationCity = trend.micro_locations?.city || 'Haifa and Krayot';
 

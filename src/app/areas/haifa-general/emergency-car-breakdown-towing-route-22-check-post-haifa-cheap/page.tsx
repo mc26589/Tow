@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from '@/lib/data';
 import { WhatsAppCTA } from '@/components/whatsapp-cta';
 
 export const metadata: Metadata = {
-  title: 'גרר בצק פוסט וחיפה | כביש 22 | הגעה תוך 30 דקות | 24/7',
-  description: 'נתקעתם בצק פוסט או בכביש 22? גרר זמין 24/7 לכל סוגי הרכבים. מחיר הוגן, שירות מהיר ומקצועי. התקשרו עכשיו להזמנת גרר מהיר!',
+  title: { absolute: "גרר בצק פוסט וחיפה | כביש 22 | הגעה תוך 30 דקות | 24/7" },
+  description: "נתקעתם בצק פוסט או בכביש 22? גרר זמין 24/7 לכל סוגי הרכבים. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: 'https://www.yourdomain.com/areas/haifa-general/emergency-car-breakdown-towing-route-22-check-post-haifa-cheap',
   },

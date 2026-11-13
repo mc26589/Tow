@@ -5,8 +5,8 @@ import { WhatsAppCTA } from '@/components/whatsapp-cta';
 import { BUSINESS_INFO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: "גרר בכביש 22 (עוקף קריות) | שירות מהיר תוך 30 דקות - 24/7",
-  description: "נתקעתם בכביש 22? גרר מפרץ אקספרס מספק גרירת רכבים מקצועית 24/7. הגעה מהירה, מחיר הוגן ושירות אדיב. התקשרו עכשיו להצעה משתלמת!",
+  title: { absolute: "גרר בכביש 22 (עוקף קריות) | שירות מהיר תוך 30 דקות - 24/7" },
+  description: "נתקעתם בכביש 22? גרר מפרץ אקספרס מספק גרירת רכבים מקצועית 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/affordable-flatbed-towing-route-22-krayot-area"
   }

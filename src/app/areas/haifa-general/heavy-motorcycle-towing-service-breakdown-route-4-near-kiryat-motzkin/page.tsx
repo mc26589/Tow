@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר בכביש 4 ליד קריית מוצקין - 24/7 חילוץ מהיר וזול",
-  description: "נתקעתם בכביש 4 ליד קריית מוצקין? זקוקים לגרר מהיר? אנו מספקים שירותי גרירה מקצועיים 24/7, הגעה תוך 30 דקות ומחיר הוגן. לחצו כאן לחילוץ מיידי!",
+  title: { absolute: "גרר בכביש 4 ליד קריית מוצקין - 24/7 חילוץ מהיר וזול" },
+  description: "נתקעתם בכביש 4 ליד קריית מוצקין? זקוקים לגרר מהיר? אנו מספקים שירותי גרירה מקצועיים 24/7, הגעה תוך. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-service-breakdown-route-4-near-kiryat-motzkin"
   }

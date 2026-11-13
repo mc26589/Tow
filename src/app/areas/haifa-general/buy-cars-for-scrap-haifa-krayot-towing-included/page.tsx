@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "רוצים למכור רכב לפירוק בחיפה והקריות? אנו קונים את כל סוגי הרכבים במזומן, כולל גרירה בחינם עד אליכם. שירות מהיר, אמין ומקצועי. התקשרו עכשיו להצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-towing-included"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

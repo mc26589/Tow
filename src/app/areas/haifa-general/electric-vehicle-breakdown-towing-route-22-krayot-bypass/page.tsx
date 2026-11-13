@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בכביש 22 (עוקף קריות) | שירות מהיר 24/7",
-  description: "נתקעת בכביש 22 עם רכב חשמלי? מומחי גרירה בטוחה עם ציוד מתקדם לשמירה על הסוללה. הגעה מהירה לכל הקריות במחיר הוגן. זמינים 24/7. התקשרו עכשיו!",
+  title: { absolute: "גרירת רכב חשמלי בכביש 22 (עוקף קריות) | שירות מהיר 24/7" },
+  description: "נתקעת בכביש 22 עם רכב חשמלי? מומחי גרירה בטוחה עם ציוד מתקדם לשמירה על הסוללה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/electric-vehicle-breakdown-towing-route-22-krayot-bypass",
   },

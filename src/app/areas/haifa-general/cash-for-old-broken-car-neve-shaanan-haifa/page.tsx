@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "קניית רכבים לפירוק בנווה שאנן חיפה | תשלום במזומן ופינוי מיידי",
-  description: "מעוניינים למכור רכב ישן או תקול בנווה שאנן? אנו קונים רכבים לפירוק בחיפה, משלמים במזומן ומפנים את הרכב מהשטח שלכם עוד היום. התקשרו לקבלת הצעת מחיר!",
+  title: { absolute: "קניית רכבים לפירוק בנווה שאנן חיפה | ⭐ 4.9" },
+  description: "מעוניינים למכור רכב ישן או תקול בנווה שאנן? אנו קונים רכבים לפירוק בחיפה, משלמים במזומן ומפנים את. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/cash-for-old-broken-car-neve-shaanan-haifa"
   }

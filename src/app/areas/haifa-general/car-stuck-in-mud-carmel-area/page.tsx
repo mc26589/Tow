@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב תקוע בבוץ בכרמל | הגעה תוך 30 דקות | 24/7",
-  description: "נתקעתם בבוץ באזור הכרמל? שירות חילוץ רכב מקצועי עם ציוד שטח מתקדם. פועלים 24/7, הגעה מהירה במחיר הוגן. התקשרו עכשיו לחילוץ בטוח!",
+  title: { absolute: "חילוץ רכב תקוע בבוץ בכרמל | הגעה תוך 30 דקות | 24/7" },
+  description: "נתקעתם בבוץ באזור הכרמל? שירות חילוץ רכב מקצועי עם ציוד שטח מתקדם. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/car-stuck-in-mud-carmel-area",
   },

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/areas/haifa-general/car-scrapping-neve-shaanan-haifa',
   },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

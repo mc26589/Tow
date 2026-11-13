@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { AboutSection } from "@/components/about-section";
 import { CityVehicleGrid } from "@/components/city-vehicle-grid";
 import { ReviewsSection } from "@/components/reviews-section";
@@ -66,9 +67,9 @@ export default function HomePage() {
                     </div>
 
                     <h1 className="font-rubik font-black text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6 tracking-tight drop-shadow-md">
-                        שירותי גרירה מהירים
+                        גרר בחיפה והקריות 24/7
                         <br />
-                        <span className="text-alert-400">בצפון הארץ</span>
+                        <span className="text-alert-400">שירותי גרירה וחילוץ בצפון</span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
@@ -134,6 +135,28 @@ export default function HomePage() {
                         <div className="flex items-center gap-1.5">
                             <span>⚡</span> 30 דקות ממוצע
                         </div>
+                    </div>
+
+                    {/* Quick Pillar Links */}
+                    <div className="flex flex-wrap items-center justify-center gap-2.5 mt-6">
+                        <Link
+                            href="/haifa"
+                            className="bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-full px-4 py-1.5 text-sm font-semibold transition-colors"
+                        >
+                            גרר בחיפה
+                        </Link>
+                        <Link
+                            href="/krayot"
+                            className="bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-full px-4 py-1.5 text-sm font-semibold transition-colors"
+                        >
+                            גרר בקריות
+                        </Link>
+                        <Link
+                            href="/milon/towing-cost"
+                            className="bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-full px-4 py-1.5 text-sm font-semibold transition-colors"
+                        >
+                            מחירון גרירה 2026
+                        </Link>
                     </div>
                 </div>
             </section>

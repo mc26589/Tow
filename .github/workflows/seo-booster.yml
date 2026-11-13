@@ -30,6 +30,7 @@ jobs:
       - name: Run SEO & CTR Booster Agent
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: npm run agent:seobooster
 
       # Safety net: never push code that fails the exact same build Vercel

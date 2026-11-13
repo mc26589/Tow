@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "נתקעתם עם רכב ישן? אנו קונים רכבים לפירוק בחיפה והקריות במזומן! שירות גרירה מקצועי ומהיר לכל סוגי הרכבים. התקשרו עכשיו להצעת מחיר הוגנת!",
   alternates: {
     canonical: "/areas/haifa-general/car-scrapping-haifa-krayot-towing"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

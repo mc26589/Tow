@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "מוכרים רכב ישן באזור התעשייה קרית ביאליק? קונים רכבים לברזל ולפירוק במזומן, כולל פינוי וגרירה בחינם. שירות מהיר, אמין והוגן. התקשרו עכשיו לקבלת הצעה!",
   alternates: {
     canonical: "/areas/haifa-general/car-scrapping-old-industrial-zone-kiryat-bialik"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

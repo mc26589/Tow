@@ -27,8 +27,8 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: "גרירת רכב ספורט ורכבים נמוכים באחוזה חיפה | הגעה מהירה 24/7",
-  description: "נתקעתם באחוזה עם רכב נמוך? גרר מפרץ אקספרס מציעים שירות גרירה מקצועי לרכבי ספורט ויוקרה ללא נזק. מחיר הוגן והגעה מהירה תוך דקות. התקשרו עכשיו!",
+  title: { absolute: "גרירת רכב ספורט ורכבים נמוכים באחוזה חיפה | ⭐ 4.9" },
+  description: "נתקעתם באחוזה עם רכב נמוך? גרר מפרץ אקספרס מציעים שירות גרירה מקצועי לרכבי ספורט ויוקרה ללא נזק. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "https://www.towingrescuehaifa.co.il/areas/haifa-general/affordable-low-clearance-sports-car-towing-ahuzah-haifa",
   }

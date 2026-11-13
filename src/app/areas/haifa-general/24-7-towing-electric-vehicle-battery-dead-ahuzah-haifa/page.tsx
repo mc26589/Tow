@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי באחוזה, חיפה | 24/7 | הגעה תוך 30 דקות",
-  description: "נתקעת עם הרכב החשמלי באחוזה? שירות גרירה וחילוץ מקצועי ומהיר 24/7 לכל סוגי הרכבים. מחיר הוגן והגעה מהירה לכל אזור הכרמל ומוריה. התקשרו עכשיו!",
+  title: { absolute: "גרירת רכב חשמלי באחוזה, חיפה | 24/7 | הגעה תוך 30 דקות" },
+  description: "נתקעת עם הרכב החשמלי באחוזה? שירות גרירה וחילוץ מקצועי ומהיר 24/7 לכל סוגי הרכבים. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/24-7-towing-electric-vehicle-battery-dead-ahuzah-haifa",
   },

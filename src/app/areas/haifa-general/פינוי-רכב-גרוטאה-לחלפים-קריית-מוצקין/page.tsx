@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://yourdomain.com/areas/haifa-general/פינוי-רכב-גרוטאה-לחלפים-קריית-מוצקין',
   },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

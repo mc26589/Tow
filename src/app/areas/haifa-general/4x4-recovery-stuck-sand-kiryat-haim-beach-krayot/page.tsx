@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ 4x4 בחוף קרית חיים | הגעה מהירה ב-30 דקות - שירות 24/7',
-  description: 'נתקעתם בחולות חוף קרית חיים? צוות חילוץ 4x4 מקצועי בדרך אליכם. חילוץ רכב שטח מהיר, מחיר הוגן ושירות 24/7. התקשרו עכשיו להצלה מהירה!',
+  title: { absolute: "חילוץ 4x4 בחוף קרית חיים | ⭐ 4.9" },
+  description: "נתקעתם בחולות חוף קרית חיים? צוות חילוץ 4x4 מקצועי בדרך אליכם. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/4x4-recovery-stuck-sand-kiryat-haim-beach-krayot',
   },

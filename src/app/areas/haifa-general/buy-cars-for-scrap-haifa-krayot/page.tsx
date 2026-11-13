@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "רוצים למכור רכב לפירוק בחיפה והקריות? אנו קונים רכבים ללא טסט, לאחר תאונה או ישנים במחיר הוגן. פינוי מיידי מהשטח 24/7. התקשרו עכשיו להצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-krayot"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'גרר בחורב ואחוזה, חיפה | הגעה תוך 30 דקות | מחיר הוגן',
-  description: 'נתקעתם עם הרכב באזור חורב או אחוזה? שירותי גרירה מקצועיים 24/7. הגעה מהירה, מחיר הוגן ושירות אדיב. לחצו כאן להזמנת גרר מהירה!',
+  title: { absolute: "גרר בחורב ואחוזה, חיפה | הגעה תוך 30 דקות | מחיר הוגן" },
+  description: "נתקעתם עם הרכב באזור חורב או אחוזה? שירותי גרירה מקצועיים 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/emergency-towing-horev-ahuza-haifa',
   },

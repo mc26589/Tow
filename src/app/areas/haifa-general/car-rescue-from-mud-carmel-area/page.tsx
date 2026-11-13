@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ רכב מבוץ בכרמל | הגעה מהירה 24/7 | מחיר הוגן',
-  description: 'נתקעתם בבוץ באזור הכרמל? אנו מציעים חילוץ רכב מקצועי ומהיר לכל סוגי הרכבים, כולל רכבי 4x4. הגעה מהירה, מחירים הוגנים וזמינות 24/7. התקשרו עכשיו!',
+  title: { absolute: "חילוץ רכב מבוץ בכרמל | הגעה מהירה 24/7 | מחיר הוגן" },
+  description: "נתקעתם בבוץ באזור הכרמל? אנו מציעים חילוץ רכב מקצועי ומהיר לכל סוגי הרכבים, כולל רכבי 4x4. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/car-rescue-from-mud-carmel-area',
   },

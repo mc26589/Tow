@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "מוכרים רכב לפירוק בחיפה? קונים רכבים לברזל או לחלפים עם גרירה חינם, תשלום במזומן והגעה מהירה עוד היום. צרו קשר לקבלת הצעת מחיר הוגנת!",
   alternates: {
     canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-towing-included"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

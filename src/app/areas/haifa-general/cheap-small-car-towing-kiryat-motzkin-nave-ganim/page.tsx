@@ -4,8 +4,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'גרר זול בנווה גנים, קרית מוצקין | שירות גרירה 24/7 מהיר',
-  description: 'נתקעתם עם הרכב בנווה גנים? שירות גרר זול, מקצועי ואמין בקרית מוצקין. הגעה מהירה, מחיר הוגן ושירות 24/7 לכל סוגי הרכבים. התקשרו עכשיו!',
+  title: { absolute: "גרר זול בנווה גנים, קרית מוצקין | שירות גרירה 24/7 מהיר" },
+  description: "נתקעתם עם הרכב בנווה גנים? שירות גרר זול, מקצועי ואמין בקרית מוצקין. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/cheap-small-car-towing-kiryat-motzkin-nave-ganim',
   },

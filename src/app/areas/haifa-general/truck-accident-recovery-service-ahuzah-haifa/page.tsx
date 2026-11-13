@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ תאונות משאיות באחוזה, חיפה | שירות 24/7 מהיר ומקצועי',
-  description: 'נתקעתם עם המשאית באחוזה? שירות חילוץ תאונות מקצועי ומהיר 24/7 באזור חיפה. גרירת משאיות ורכבים מסחריים במחיר הוגן. התקשרו עכשיו!',
+  title: { absolute: "חילוץ תאונות משאיות באחוזה, חיפה | ⭐ 4.9" },
+  description: "נתקעתם עם המשאית באחוזה? שירות חילוץ תאונות מקצועי ומהיר 24/7 באזור חיפה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/truck-accident-recovery-service-ahuzah-haifa',
   },

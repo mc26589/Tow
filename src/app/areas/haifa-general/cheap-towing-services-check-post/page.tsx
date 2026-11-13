@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "שירותי גרירה בצ'ק פוסט | הגעה תוך 30 דקות | מחיר הוגן 24/7",
-  description: "נתקעתם עם הרכב בצ'ק פוסט? שירותי גרירה וחילוץ מהירים ומקצועיים במחיר הוגן. זמינות 24/7 לכל סוגי הרכבים. התקשרו עכשיו להגעה מהירה!",
+  title: { absolute: "שירותי גרירה בצ'ק פוסט | הגעה תוך 30 דקות | ⭐ 4.9" },
+  description: "נתקעתם עם הרכב בצ'ק פוסט? שירותי גרירה וחילוץ מהירים ומקצועיים במחיר הוגן. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/cheap-towing-services-check-post",
   },

@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בדרך בר יהודה חיפה | זמינות 24/7 - הגעה מהירה",
-  description: "נתקעתם עם הרכב בדרך בר יהודה בחיפה? גרר מקצועי וזמין 24/7 באזור הצ'ק פוסט. שירות אמין במחיר הוגן, הגעה תוך 30 דקות. התקשרו עכשיו לפתרון מיידי!",
+  title: { absolute: "גרר בדרך בר יהודה חיפה | זמינות 24/7 - הגעה מהירה" },
+  description: "נתקעתם עם הרכב בדרך בר יהודה בחיפה? גרר מקצועי וזמין 24/7 באזור הצ'ק פוסט. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/towing-service-harley-davidson-derech-bar-yehuda-haifa",
   },

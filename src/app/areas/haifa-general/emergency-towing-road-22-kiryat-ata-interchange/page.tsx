@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב בכביש 22 מחלף קרית אתא | הגעה תוך 30 דקות | 24/7",
-  description: "נתקעתם במחלף קרית אתא? אנו מספקים שירותי גרירה מקצועיים ומהירים בכביש 22. זמינות 24/7, מחיר הוגן ושירות אדיב. התקשרו עכשיו לפינוי מהיר מהכביש!",
+  title: { absolute: "גרירת רכב בכביש 22 מחלף קרית אתא | הגעה תוך 30 דקות" },
+  description: "נתקעתם במחלף קרית אתא? אנו מספקים שירותי גרירה מקצועיים ומהירים בכביש 22. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/emergency-towing-road-22-kiryat-ata-interchange",
   },

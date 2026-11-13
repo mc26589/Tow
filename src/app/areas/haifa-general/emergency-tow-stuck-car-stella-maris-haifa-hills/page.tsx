@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בסטלה מאריס חיפה - חילוץ רכב תקוע 24/7 | מחיר הוגן",
-  description: "נתקעתם עם הרכב בעליות של סטלה מאריס? גרר חירום זמין 24/7 בחיפה. חילוץ מקצועי לרכב פרטי, מסחרי ו-4X4. הגעה מהירה, מחיר הוגן. התקשרו עכשיו!",
+  title: { absolute: "גרר בסטלה מאריס חיפה - חילוץ רכב תקוע 24/7 | מחיר הוגן" },
+  description: "נתקעתם עם הרכב בעליות של סטלה מאריס? גרר חירום זמין 24/7 בחיפה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/emergency-tow-stuck-car-stella-maris-haifa-hills",
   },

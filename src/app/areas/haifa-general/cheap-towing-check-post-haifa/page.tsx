@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בצק פוסט חיפה - הגעה תוך 30 דקות | שירות 24/7",
-  description: "נתקעתם בצק פוסט? מחפשים גרר אמין במחיר הוגן? אנו מספקים שירותי גרירה מקצועיים 24/7 לכל סוגי הרכבים באזור הצק פוסט וציר 22. התקשרו עכשיו לקבלת שירות מהיר!",
+  title: { absolute: "גרר בצק פוסט חיפה - הגעה תוך 30 דקות | שירות 24/7" },
+  description: "נתקעתם בצק פוסט? מחפשים גרר אמין במחיר הוגן? אנו מספקים שירותי גרירה מקצועיים 24/7 לכל סוגי הרכבים. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/cheap-towing-check-post-haifa"
   }

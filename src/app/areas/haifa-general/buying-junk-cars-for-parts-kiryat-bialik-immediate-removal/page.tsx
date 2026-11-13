@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/areas/haifa-general/buying-junk-cars-for-parts-kiryat-bialik-immediate-removal',
   },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

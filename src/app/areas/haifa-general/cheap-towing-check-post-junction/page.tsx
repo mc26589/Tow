@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בצומת צ'ק פוסט | הגעה מהירה תוך 30 דקות | 24/7",
-  description: "נתקעתם בצומת צ'ק פוסט? גרר זול ומהיר לרכבים פרטיים ומסחריים. הגעה תוך 30 דקות לכל חיפה והקריות. זמינות 24/7 במחיר הוגן. התקשרו עכשיו!",
+  title: { absolute: "גרר בצומת צ'ק פוסט | הגעה מהירה תוך 30 דקות | 24/7" },
+  description: "נתקעתם בצומת צ'ק פוסט? גרר זול ומהיר לרכבים פרטיים ומסחריים. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/cheap-towing-check-post-junction",
   },

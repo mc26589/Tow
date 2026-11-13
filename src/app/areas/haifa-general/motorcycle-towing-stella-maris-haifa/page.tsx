@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר בסטלה מאריס חיפה | גרירת רכבים ואופנועים 24/7 | מחיר הוגן",
-  description: "נתקעתם עם הרכב או האופנוע בסטלה מאריס? שירותי גרירה מקצועיים בחיפה 24/7. הגעה מהירה, מחיר הוגן ומקצועיות ללא פשרות. התקשרו עכשיו לפתרון מיידי!",
+  title: { absolute: "גרר בסטלה מאריס חיפה | גרירת רכבים ואופנועים 24/7" },
+  description: "נתקעתם עם הרכב או האופנוע בסטלה מאריס? שירותי גרירה מקצועיים בחיפה 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/motorcycle-towing-stella-maris-haifa",
   },

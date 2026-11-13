@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "תקועים בכביש 22? זקוקים לפינוי רכב לפירוק בקריית ביאליק? שירות גרירה מקצועי במחיר הוגן, זמינות 24/7 והגעה מהירה לכל הקריות. התקשרו עכשיו לתיאום פינוי!",
   alternates: {
     canonical: "/areas/haifa-general/towing-for-scrap-kiryat-bialik-road-22"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירה בצ'ק פוסט חיפה והקריות | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם בצומת צ'ק פוסט? שירותי גרירה וחילוץ רכב בחיפה והקריות במחיר הוגן. זמינות 24/7, מענה מהיר ומקצועי לכל סוגי הרכבים. התקשרו עכשיו לקבלת שירות!",
+  title: { absolute: "גרירה בצ'ק פוסט חיפה והקריות | הגעה מהירה 24/7 | ⭐ 4.9" },
+  description: "נתקעתם בצומת צ'ק פוסט? שירותי גרירה וחילוץ רכב בחיפה והקריות במחיר הוגן. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/affordable-car-breakdown-towing-check-post-haifa-krayot"
   }

@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב תקוע בעלייה תלולה באחוזה, חיפה | הגעה תוך 30 דקות",
-  description: "נתקעתם עם הרכב בשיפוע חזק באחוזה? חילוץ מקצועי לרכבים תקועים בעליות של הכרמל. שירות מהיר, אמין ומחיר הוגן. התקשרו עכשיו לקבלת סיוע!",
+  title: { absolute: "חילוץ רכב תקוע בעלייה תלולה באחוזה, חיפה | ⭐ 4.9" },
+  description: "נתקעתם עם הרכב בשיפוע חזק באחוזה? חילוץ מקצועי לרכבים תקועים בעליות של הכרמל. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/towing-services-stuck-vehicle-steep-hill-ahuza-haifa"
   }

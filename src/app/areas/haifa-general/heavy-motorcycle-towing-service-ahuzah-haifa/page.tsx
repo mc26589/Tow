@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר באחוזה חיפה 24/7 | חילוץ רכב מהיר במחיר הוגן",
-  description: "זקוקים לגרר באחוזה חיפה? חילוץ רכב מקצועי ומהיר 24/7. הגעה תוך 30 דקות לכל נקודה בכרמל ובסביבה. מחיר שקוף ושירות אמין. לחצו להזמנת גרר עכשיו!",
+  title: { absolute: "גרר באחוזה חיפה 24/7 | חילוץ רכב מהיר במחיר הוגן | ⭐ 4.9" },
+  description: "זקוקים לגרר באחוזה חיפה? חילוץ רכב מקצועי ומהיר 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-service-ahuzah-haifa",
   },

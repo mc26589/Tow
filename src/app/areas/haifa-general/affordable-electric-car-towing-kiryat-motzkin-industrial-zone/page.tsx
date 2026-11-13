@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי באזור התעשייה קריית מוצקין | 24/7 מהיר",
-  description: "נתקעת עם הרכב החשמלי באזור התעשייה קריית מוצקין? שירות גרירה מקצועי, בטוח ובמחיר הוגן. הגעה מהירה תוך דקות לכל הקריות. התקשרו עכשיו לפתרון מיידי!",
+  title: { absolute: "גרירת רכב חשמלי באזור התעשייה קריית מוצקין | 24/7 מהיר" },
+  description: "נתקעת עם הרכב החשמלי באזור התעשייה קריית מוצקין? שירות גרירה מקצועי, בטוח ובמחיר הוגן. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/affordable-electric-car-towing-kiryat-motzkin-industrial-zone"
   }

@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב בכביש 22 (עוקף קריות) | הגעה תוך 30 דקות | 24/7",
-  description: "נתקעתם בכביש 22? אנו מספקים שירותי גרירה מקצועיים, אמינים ובמחיר הוגן 24/7. הגעה מהירה לכל הקריות והסביבה. התקשרו עכשיו לסיוע מיידי!",
+  title: { absolute: "גרירת רכב בכביש 22 (עוקף קריות) | הגעה תוך 30 דקות | 24/7" },
+  description: "נתקעתם בכביש 22? אנו מספקים שירותי גרירה מקצועיים, אמינים ובמחיר הוגן 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/towing-services-road-22-krayot-private-car",
   },

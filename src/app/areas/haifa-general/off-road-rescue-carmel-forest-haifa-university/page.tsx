@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב שטח ביער הכרמל | הגעה מהירה 24/7 | מחיר הוגן",
-  description: "נתקעתם בבוץ ביער הכרמל ליד אוניברסיטת חיפה? שירות חילוץ 4x4 מקצועי, זמין 24/7. הגעה מהירה לכל שבילי הכרמל. התקשרו עכשיו לחילוץ בטוח!",
+  title: { absolute: "חילוץ רכב שטח ביער הכרמל | הגעה מהירה 24/7 | מחיר הוגן" },
+  description: "נתקעתם בבוץ ביער הכרמל ליד אוניברסיטת חיפה? שירות חילוץ 4x4 מקצועי, זמין 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/off-road-rescue-carmel-forest-haifa-university"
   }

@@ -133,6 +133,7 @@ export const metadata: Metadata = {
     description: 'גרר מפרץ אקספרס מספקים שירותי גרירה וחילוץ 24/7 בחיפה והקריות. הגעה מהירה, מחירים הוגנים ושירות מקצועי. התקשרו עכשיו!',
     images: ["https://www.towingrescuehaifa.co.il/images/twitter-image.jpg"],
   },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

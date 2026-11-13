@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בקרית מוצקין - מחיר הוגן | הגעה מהירה תוך 30 דקות",
-  description: "נתקעתם עם הרכב בקרית מוצקין? גרר מקצועי במחיר הוגן ושירות מהיר 24/7. הגעה מהירה לכל הקריות. לחצו כאן לייעוץ והזמנת גרר עכשיו!",
+  title: { absolute: "גרר בקרית מוצקין - מחיר הוגן | הגעה מהירה תוך 30 דקות" },
+  description: "נתקעתם עם הרכב בקרית מוצקין? גרר מקצועי במחיר הוגן ושירות מהיר 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/cheap-towing-kiryat-motzkin-fair-price"
   }

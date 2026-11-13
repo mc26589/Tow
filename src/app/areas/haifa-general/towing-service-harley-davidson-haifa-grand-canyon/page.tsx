@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרירת הארלי דייווידסון בחיפה - שירות מקצועי ליד הקניון | 24/7",
-  description: "נתקעת עם האופנוע ליד קניון חיפה? זקוק לגרר לאופנועים כבדים? אנו מספקים שירותי גרירה מקצועיים ומהירים בחיפה. חייגו עכשיו לייעוץ ללא עלות!",
+  title: { absolute: "גרירת הארלי דייווידסון בחיפה - שירות מקצועי ליד הקניון" },
+  description: "נתקעת עם האופנוע ליד קניון חיפה? זקוק לגרר לאופנועים כבדים? אנו מספקים שירותי גרירה מקצועיים. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/towing-service-harley-davidson-haifa-grand-canyon"
   }

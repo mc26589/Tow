@@ -4,8 +4,8 @@ import { WhatsAppCTA } from '@/components/whatsapp-cta';
 import { BUSINESS_INFO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'חילוץ 4x4 וגרירה בבוץ בכרמל ודניה | הגעה תוך 30 דקות - 24/7',
-  description: 'נתקעתם בבוץ ביער הכרמל או דניה? חילוץ 4x4 מקצועי וגרירת רכב במחיר הוגן. זמינים 24/7 להגעה מהירה לשטח. התקשרו עכשיו ונעזור לכם לצאת מהבוץ!',
+  title: { absolute: "חילוץ 4x4 וגרירה בבוץ בכרמל ודניה | ⭐ 4.9" },
+  description: "נתקעתם בבוץ ביער הכרמל או דניה? חילוץ 4x4 מקצועי וגרירת רכב במחיר הוגן. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   keywords: 'חילוץ 4x4, חילוץ בבוץ כרמל, גרירה בחיפה, גרירת רכב דניה, חילוץ רכב תקוע, גרר מפרץ אקספרס, חילוץ שטח דניה',
   alternates: {
     canonical: 'https://www.towingrescuehaifa.co.il/areas/haifa-general/4x4-mud-rescue-towing-carmel-forest-trails-denia-haifa',

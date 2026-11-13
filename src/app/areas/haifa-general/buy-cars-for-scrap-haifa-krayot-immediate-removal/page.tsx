@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "רוצים למכור רכב לפירוק בחיפה והקריות? אנו מציעים פינוי מיידי, הצעת מחיר הוגנת במזומן ושירות מהיר לכל סוגי הרכבים. התקשרו עכשיו להצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/buy-cars-for-scrap-haifa-krayot-immediate-removal"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר באחוזה חיפה 24/7 | הגעה תוך 30 דקות | מחיר הוגן",
-  description: "נתקעתם עם הרכב באחוזה? שירות גרירה מקצועי 24/7. הגעה מהירה לכל רחוב באחוזה, מחיר הוגן ושירות אמין. לחצו כאן להזמנת גרר וקבלת הצעת מחיר עכשיו!",
+  title: { absolute: "גרר באחוזה חיפה 24/7 | הגעה תוך 30 דקות | מחיר הוגן" },
+  description: "נתקעתם עם הרכב באחוזה? שירות גרירה מקצועי 24/7. הגעה מהירה לכל רחוב באחוזה, מחיר הוגן ושירות אמין. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/cheap-private-car-towing-ahuza-haifa"
   }

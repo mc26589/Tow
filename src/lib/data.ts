@@ -5,6 +5,7 @@
 
 export const CITIES = [
     { slug: "haifa", name_he: "חיפה" },
+    { slug: "krayot", name_he: "הקריות" },
     { slug: "kiryat-ata", name_he: "קרית אתא" },
     { slug: "kiryat-motzkin", name_he: "קרית מוצקין" },
     { slug: "kiryat-bialik", name_he: "קרית ביאליק" },

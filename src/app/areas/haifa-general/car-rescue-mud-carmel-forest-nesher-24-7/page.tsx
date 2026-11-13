@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב מבוץ ביערות הכרמל ונשר | 24/7 הגעה מהירה",
-  description: "נתקעתם בבוץ ביערות הכרמל או בנשר? חילוץ רכבים מקצועי 24/7 במחיר הוגן. הגעה מהירה לכל אזור הכרמל. התקשרו עכשיו לחילוץ מיידי!",
+  title: { absolute: "חילוץ רכב מבוץ ביערות הכרמל ונשר | 24/7 הגעה מהירה" },
+  description: "נתקעתם בבוץ ביערות הכרמל או בנשר? חילוץ רכבים מקצועי 24/7 במחיר הוגן. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/car-rescue-mud-carmel-forest-nesher-24-7",
   },

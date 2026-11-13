@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בדרך פרויד חיפה | שירות 24/7 | הגעה מהירה ומחיר הוגן",
-  description: "נתקעת בדרך פרויד בחיפה? צריכים גרר דחוף? שירותי גרירה מקצועיים 24/7 לרכבים פרטיים ומסחריים בדרך פרויד והכרמל. מחיר הוגן ושירות אמין. התקשרו עכשיו לפתרון מיידי!",
+  title: { absolute: "גרר בדרך פרויד חיפה | שירות 24/7 | הגעה מהירה ומחיר הוגן" },
+  description: "נתקעת בדרך פרויד בחיפה? צריכים גרר דחוף? שירותי גרירה מקצועיים 24/7 לרכבים פרטיים ומסחריים בדרך. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-freud-haifa-price"
   }

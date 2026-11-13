@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "קניית רכבים לפירוק בקריית ים - מזומן במקום | פינוי מיידי 24/7",
   description: "רוצים למכור רכב לפירוק בקריית ים? מקבלים מזומן במקום! שירות מהיר, הוגן ומקצועי לכל סוגי הרכבים. פינוי מהיר מהבית בכל שעה. התקשרו עכשיו לקבלת הצעה!",
   alternates: { canonical: "/areas/haifa-general/cash-for-junk-cars-kiryat-yam-immediate-pickup" },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

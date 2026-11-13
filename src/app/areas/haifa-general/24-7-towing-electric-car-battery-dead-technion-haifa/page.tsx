@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בטכניון חיפה | חילוץ 24/7 | הגעה תוך 30 דקות",
-  description: "נתקע רכב חשמלי בטכניון? גרר מקצועי 24/7 זמין להגעה מהירה לקמפוס. שירות מומחה לרכבים חשמליים, ללא נזק ובמחיר הוגן. התקשרו עכשיו לחילוץ!",
+  title: { absolute: "גרירת רכב חשמלי בטכניון חיפה | חילוץ 24/7 | ⭐ 4.9" },
+  description: "נתקע רכב חשמלי בטכניון? גרר מקצועי 24/7 זמין להגעה מהירה לקמפוס. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/24-7-towing-electric-car-battery-dead-technion-haifa"
   }

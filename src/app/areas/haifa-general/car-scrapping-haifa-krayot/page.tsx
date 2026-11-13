@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "רוצים למכור רכב לפירוק בחיפה והקריות? אנו קונים רכבים מכל הסוגים במחיר הוגן, פינוי מהיר והגעה לכל אזור הצפון. התקשרו עכשיו לקבלת הצעה משתלמת!",
   alternates: {
     canonical: "/areas/haifa-general/car-scrapping-haifa-krayot"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

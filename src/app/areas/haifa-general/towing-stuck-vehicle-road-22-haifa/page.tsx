@@ -5,8 +5,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'גרירת רכב בכביש 22 חיפה - שירות 24/7 הגעה מהירה ומחיר הוגן',
-  description: 'נתקעת בכביש 22? שירותי גרירה וחילוץ מקצועיים לרכב בחיפה והקריות 24/7. הגעה מהירה, שירות אמין ומחיר הוגן. התקשרו עכשיו!',
+  title: { absolute: "גרירת רכב בכביש 22 חיפה | ⭐ 4.9" },
+  description: "נתקעת בכביש 22? שירותי גרירה וחילוץ מקצועיים לרכב בחיפה והקריות 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: { canonical: '/areas/haifa-general/towing-stuck-vehicle-road-22-haifa' },
 };
 

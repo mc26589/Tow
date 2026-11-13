@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'חילוץ רכב מתעלה בצומת צ\'ק פוסט | הגעה מהירה 24/7 | מחיר הוגן',
-  description: 'נתקעתם בתעלה בכביש 4 צ\'ק פוסט? צוות מקצועי לחילוץ רכב לכל סוגי הרכבים. הגעה מהירה תוך 30 דקות לאזור חיפה והקריות. התקשרו עכשיו!',
+  title: { absolute: "חילוץ רכב מתעלה בצומת צ'ק פוסט | הגעה מהירה 24/7 | ⭐ 4.9" },
+  description: "נתקעתם בתעלה בכביש 4 צ'ק פוסט? צוות מקצועי לחילוץ רכב לכל סוגי הרכבים. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/emergency-car-recovery-ditch-route-4-check-post',
   },

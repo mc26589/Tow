@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בכביש 22 (עוקף קריות) - הגעה תוך 30 דקות | 24/7",
-  description: "נתקעתם בכביש 22? שירות גרר מקצועי 24/7 לכל סוגי הרכבים באזור הקריות וחיפה. מחיר הוגן ושירות מהיר. התקשרו עכשיו לסיוע!",
+  title: { absolute: "גרר בכביש 22 (עוקף קריות) - הגעה תוך 30 דקות | 24/7" },
+  description: "נתקעתם בכביש 22? שירות גרר מקצועי 24/7 לכל סוגי הרכבים באזור הקריות וחיפה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-accident-road-22-krayot",
   },

@@ -5,8 +5,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "גרירה בכביש 22 וקריות | הגעה מהירה עד 30 דקות | 24/7",
-  description: "נתקעתם בכביש 22? אנו מציעים שירותי גרירה וחילוץ מקצועיים לרכבים בקריות ובצ'ק פוסט. זמינות 24/7 במחיר הוגן ושירות מהיר. התקשרו עכשיו לפתרון מיידי!",
+  title: { absolute: "גרירה בכביש 22 וקריות | הגעה מהירה עד 30 דקות | 24/7" },
+  description: "נתקעתם בכביש 22? אנו מציעים שירותי גרירה וחילוץ מקצועיים לרכבים בקריות ובצ'ק פוסט. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "https://yourdomain.com/areas/haifa-general/sherutei-grira-hilutz-krayot-kavish-22",
   },

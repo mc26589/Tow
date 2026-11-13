@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ משאיות בקרית מוצקין 24/7 - הגעה מהירה ומחיר הוגן",
-  description: "נתקעתם עם רכב מסחרי או משאית בקרית מוצקין? צוות מומחים זמין לחילוץ מקצועי וגרירה 24/7. הגעה מהירה, מחיר הוגן ושירות שקוף. התקשרו עכשיו!",
+  title: { absolute: "חילוץ משאיות בקרית מוצקין 24/7 - הגעה מהירה ומחיר הוגן" },
+  description: "נתקעתם עם רכב מסחרי או משאית בקרית מוצקין? צוות מומחים זמין לחילוץ מקצועי וגרירה 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/commercial-truck-accident-recovery-kiryat-motzkin-24-7",
   },

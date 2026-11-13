@@ -2,7 +2,7 @@ name: Local Researcher (Event & Long-tail)
 
 on:
   schedule:
-    - cron: '0 */12 * * *' # Runs every 12 hours
+    - cron: '0 3 * * 0' # Runs weekly on Sundays before pSEO builder to conserve tokens
   workflow_dispatch: # Allow manual trigger
 
 jobs:

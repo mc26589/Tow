@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בקרית ים 24/7 | שירות גרר משטח מהיר | מחיר הוגן",
-  description: "נתקעתם עם הרכב בקרית ים? גרר משטח מקצועי 24/7 לכל סוגי הרכבים. הגעה מהירה, מחיר הוגן ושירות ללא תחרות. התקשרו עכשיו להצעת מחיר!",
+  title: { absolute: "גרר בקרית ים 24/7 | שירות גרר משטח מהיר | מחיר הוגן" },
+  description: "נתקעתם עם הרכב בקרית ים? גרר משטח מקצועי 24/7 לכל סוגי הרכבים. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/affordable-flatbed-towing-kiryat-yam-disabled-vehicle",
   },

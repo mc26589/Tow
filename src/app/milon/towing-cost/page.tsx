@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { JsonLd } from '@/components/json-ld';
 import TowingCalculator from '@/components/TowingCalculator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -81,6 +82,79 @@ export default function TowingCostPage() {
                     {/* The Interactive Calculator Widget */}
                     <TowingCalculator />
                 </div>
+
+                {/* Static HTML Pricing Table for Rich Snippets & "מחירון גרירה" SEO */}
+                <section className="max-w-4xl mx-auto bg-white p-6 md:p-10 rounded-3xl border border-slate-200/60 shadow-sm space-y-6">
+                    <div className="space-y-2">
+                        <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+                            טבלת מחירון גרירה 2026 — חיפה, הקריות והצפון
+                        </h2>
+                        <p className="text-slate-600">
+                            טווחי מחירים מומלצים להזמנת{' '}
+                            <Link href="/haifa" className="text-primary font-semibold hover:underline">גרר בחיפה</Link>{' '}
+                            או{' '}
+                            <Link href="/krayot" className="text-primary font-semibold hover:underline">גרר בקריות</Link>{' '}
+                            לפי סוג השירות, הרכב ותנאי החילוץ:
+                        </p>
+                    </div>
+
+                    <div className="overflow-x-auto rounded-2xl border border-slate-200">
+                        <table className="w-full text-right border-collapse">
+                            <thead>
+                                <tr className="bg-slate-900 text-white text-sm md:text-base">
+                                    <th className="py-3.5 px-4 font-bold">סוג הגרירה / השירות</th>
+                                    <th className="py-3.5 px-4 font-bold">טווח מחיר 2026</th>
+                                    <th className="py-3.5 px-4 font-bold">הערות ודגשים</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-200 text-sm md:text-base">
+                                <tr className="hover:bg-slate-50">
+                                    <td className="py-3.5 px-4 font-semibold text-slate-900">גרירת רכב פרטי בתוך חיפה / הקריות (עד 10 ק&quot;מ)</td>
+                                    <td className="py-3.5 px-4 font-bold text-primary whitespace-nowrap">150 – 300 ₪</td>
+                                    <td className="py-3.5 px-4 text-slate-600">מחיר בסיס עירוני בשעות היום (א&apos;-ה&apos;)</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50">
+                                    <td className="py-3.5 px-4 font-semibold text-slate-900">גרירה בינעירונית בצפון (תוספת לכל ק&quot;מ)</td>
+                                    <td className="py-3.5 px-4 font-bold text-primary whitespace-nowrap">8 – 12 ₪ לק&quot;מ</td>
+                                    <td className="py-3.5 px-4 text-slate-600">מעבר למרחק הבסיס העירוני</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50">
+                                    <td className="py-3.5 px-4 font-semibold text-slate-900">
+                                        <Link href="/haifa/electric" className="text-primary hover:underline">
+                                            גרירת רכב חשמלי / היברידי (הרמה מלאה Flatbed)
+                                        </Link>
+                                    </td>
+                                    <td className="py-3.5 px-4 font-bold text-primary whitespace-nowrap">250 – 400 ₪</td>
+                                    <td className="py-3.5 px-4 text-slate-600">העמסה מותאמת למניעת נזק לסוללה ולמערכת ההנעה</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50">
+                                    <td className="py-3.5 px-4 font-semibold text-slate-900">גרירת רכב מסחרי / טנדר / SUV</td>
+                                    <td className="py-3.5 px-4 font-bold text-primary whitespace-nowrap">250 – 450 ₪</td>
+                                    <td className="py-3.5 px-4 text-slate-600">בהתאם למשקל הרכב ואורך המסלול</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50">
+                                    <td className="py-3.5 px-4 font-semibold text-slate-900">
+                                        <Link href="/hazards/underground-parking/haifa" className="text-primary hover:underline">
+                                            חילוץ רכב תקוע מחניון תת-קרקעי
+                                        </Link>
+                                    </td>
+                                    <td className="py-3.5 px-4 font-bold text-primary whitespace-nowrap">300 – 450 ₪</td>
+                                    <td className="py-3.5 px-4 text-slate-600">כולל ציוד נמוך-קומה, גלגליות או הוצאה למפלס פתוח</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50">
+                                    <td className="py-3.5 px-4 font-semibold text-slate-900">חילוץ שטח 4x4 (בוץ / חול / יערות הכרמל)</td>
+                                    <td className="py-3.5 px-4 font-bold text-primary whitespace-nowrap">350 – 600 ₪</td>
+                                    <td className="py-3.5 px-4 text-slate-600">תלוי במרחק מהכביש הסלול ובמורכבות החילוץ</td>
+                                </tr>
+                                <tr className="hover:bg-slate-50">
+                                    <td className="py-3.5 px-4 font-semibold text-slate-900">תוספת שירותי גרירה בלילה / שבת וחג</td>
+                                    <td className="py-3.5 px-4 font-bold text-primary whitespace-nowrap">+25% – 50%</td>
+                                    <td className="py-3.5 px-4 text-slate-600">זמינות מיידית 24/7 ומחיר סופי מוסכם בטלפון מראש</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
 
                 <section className="max-w-3xl mx-auto mt-16 space-y-8 bg-white p-8 md:p-10 rounded-3xl border border-slate-200/60 shadow-sm">
                     <h2 className="text-3xl font-bold text-slate-900">

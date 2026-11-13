@@ -12,6 +12,7 @@
 // @ts-ignore — google-trends-api has no types
 import googleTrends from 'google-trends-api';
 import type { SupabaseClient } from '@supabase/supabase-js';
+import { fetchGscTrendingTopicCandidates } from './gsc-client';
 
 export interface TrendTopic {
     title: string;
@@ -297,11 +298,24 @@ export async function getTrendingTopicForArticle(
 ): Promise<{
     topic: string;
     keywords: string[];
-    source: 'daily-trends' | 'seo-researcher' | 'google-suggest' | 'related-queries' | 'seed-rotation';
+    source: 'gsc-opportunity' | 'daily-trends' | 'seo-researcher' | 'google-suggest' | 'related-queries' | 'seed-rotation';
     weatherContext?: string;
 } | null> {
     const weather = await fetchHaifaWeather();
     const weatherContext = weather.summary;
+
+    // Strategy 0: Real Google Search Console zero-click striking-distance queries (lowest cost, highest ROI)
+    const gscCandidates = await fetchGscTrendingTopicCandidates(existingTitles, 8);
+    for (const candidate of gscCandidates) {
+        if (!isTopicCovered(candidate.topic, existingTitles)) {
+            return {
+                topic: candidate.topic,
+                keywords: [candidate.topic, 'חיפה והקריות', 'גרר מפרץ אקספרס'],
+                source: 'gsc-opportunity',
+                weatherContext,
+            };
+        }
+    }
 
     // Strategy 1: Live Google Trends RSS (Israel) automotive/weather/road topics
     const dailyTrends = await fetchDailyTrends();

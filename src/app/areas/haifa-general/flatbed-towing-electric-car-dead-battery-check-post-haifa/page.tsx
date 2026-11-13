@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בצ'ק פוסט חיפה | הגעה מהירה 24/7",
-  description: "נתקעתם עם רכב חשמלי ללא סוללה בצ'ק פוסט? גרירת משטח מקצועית למניעת נזקים למערכת ההנעה. זמינות 24/7, מחיר הוגן ושירות מהיר. התקשרו עכשיו!",
+  title: { absolute: "גרירת רכב חשמלי בצ'ק פוסט חיפה | הגעה מהירה 24/7 | ⭐ 4.9" },
+  description: "נתקעתם עם רכב חשמלי ללא סוללה בצ'ק פוסט? גרירת משטח מקצועית למניעת נזקים למערכת ההנעה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/flatbed-towing-electric-car-dead-battery-check-post-haifa",
   },

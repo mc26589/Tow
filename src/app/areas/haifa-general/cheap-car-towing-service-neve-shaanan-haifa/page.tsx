@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכב בנווה שאנן חיפה | מחיר הוגן, הגעה ב-30 דק'",
-  description: "נתקעתם עם הרכב בנווה שאנן? שירות גרירה מקצועי וזול, הגעה מהירה תוך 30 דקות. זמינים 24/7 לכל סוגי הרכבים. התקשרו עכשיו לשירות אמין ומחיר ללא תחרות!",
+  title: { absolute: "גרירת רכב בנווה שאנן חיפה | מחיר הוגן, הגעה ב-30 דק'" },
+  description: "נתקעתם עם הרכב בנווה שאנן? שירות גרירה מקצועי וזול, הגעה מהירה תוך 30 דקות. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/cheap-car-towing-service-neve-shaanan-haifa",
   },

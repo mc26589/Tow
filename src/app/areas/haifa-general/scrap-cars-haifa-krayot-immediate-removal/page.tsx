@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "מוכרים רכב ישן או מושבת? קניית רכבים לפירוק בחיפה והקריות עם פינוי מיידי ותשלום הוגן במזומן. שירות זמין 24/7. התקשרו עכשיו להצעת מחיר משתלמת!",
   alternates: {
     canonical: "/areas/haifa-general/scrap-cars-haifa-krayot-immediate-removal"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

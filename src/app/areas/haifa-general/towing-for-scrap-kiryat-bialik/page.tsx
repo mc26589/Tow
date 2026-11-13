@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "צריכים לפנות רכב לפירוק בקריית ביאליק? שירות פינוי רכבים מקצועי, מחיר הוגן ותשלום במזומן במקום. הגעה מהירה לכל שכונה. התקשרו עכשיו לקבלת הצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/towing-for-scrap-kiryat-bialik"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

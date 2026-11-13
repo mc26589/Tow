@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "החלפת גלגל בכביש 22 קריית ביאליק | הגעה תוך 30 דקות",
-  description: "נתקעתם עם פנצ\'ר בכביש 22 ליד קריית ביאליק? צוות מקצועי יגיע אליכם תוך 30 דקות במחיר הוגן. שירות חילוץ 24/7 לכל סוגי הרכבים. התקשרו עכשיו לסיוע!",
+  title: { absolute: "החלפת גלגל בכביש 22 קריית ביאליק | הגעה תוך 30 דקות" },
+  description: "נתקעתם עם פנצ'ר בכביש 22 ליד קריית ביאליק? צוות מקצועי יגיע אליכם תוך 30 דקות במחיר הוגן. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/emergency-roadside-assistance-flat-tire-route-22-kiryat-bialik"
   }

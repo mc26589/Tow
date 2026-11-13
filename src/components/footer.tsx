@@ -44,10 +44,10 @@ export function Footer() {
                             {CITIES.map((city) => (
                                 <li key={city.slug}>
                                     <Link
-                                        href={`/${city.slug}/private-car`}
+                                        href={`/${city.slug}`}
                                         className="text-slate-400 hover:text-white transition-colors focus-ring rounded-sm px-1 py-0.5 inline-block -ml-1"
                                     >
-                                        גרירה ב{city.name_he}
+                                        {city.slug === "krayot" ? "גרר בקריות" : `גרר ב${city.name_he}`}
                                     </Link>
                                 </li>
                             ))}

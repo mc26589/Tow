@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://yourdomain.com/areas/haifa-general/buying-cars-for-scrap-ahoza-haifa',
   },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

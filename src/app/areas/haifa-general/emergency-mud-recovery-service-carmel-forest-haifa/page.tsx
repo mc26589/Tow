@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "חילוץ בוץ ביערות הכרמל | חילוץ מהיר 24/7 | הגעה מיידית",
-  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ מקצועי לרכב תקוע, 4x4 ופרטי. זמינות 24/7, מחיר הוגן והגעה מהירה לכל אזור בכרמל. התקשרו עכשיו לחילוץ מיידי!",
+  title: { absolute: "חילוץ בוץ ביערות הכרמל | חילוץ מהיר 24/7 | הגעה מיידית" },
+  description: "נתקעתם בבוץ ביערות הכרמל? שירות חילוץ מקצועי לרכב תקוע, 4x4 ופרטי. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/emergency-mud-recovery-service-carmel-forest-haifa"
   }

@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "פינוי רכב לפירוק בקרית ים 24/7. משלמים במזומן על רכבים ישנים, לאחר תאונה או ללא טסט. שירות מהיר, אמין ומקצועי לתושבי הקריות. התקשרו עכשיו לפינוי מיידי!",
   alternates: {
     canonical: "/areas/haifa-general/junk-car-removal-kiryat-yam-immediate-pickup"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

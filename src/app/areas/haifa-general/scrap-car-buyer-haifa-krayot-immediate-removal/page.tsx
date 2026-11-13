@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "נתקעתם עם רכב ישן? קונה רכבים לפירוק בחיפה והקריות במזומן. פינוי מהיר 24/7, מחיר הוגן ושירות מקצועי לכל סוגי הרכבים. התקשרו עכשיו להצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/scrap-car-buyer-haifa-krayot-immediate-removal"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

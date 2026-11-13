@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב מהחול בבת גלים חיפה | הגעה עד 30 דקות | 24/7",
-  description: "נתקעתם בחולות חוף בת גלים? אל תסתכנו! שירות חילוץ מקצועי, מהיר ובמחיר הוגן 24/7. הגעה מיידית לכל נקודה בחוף. התקשרו עכשיו לחילוץ בטוח!",
+  title: { absolute: "חילוץ רכב מהחול בבת גלים חיפה | הגעה עד 30 דקות | 24/7" },
+  description: "נתקעתם בחולות חוף בת גלים? אל תסתכנו! שירות חילוץ מקצועי, מהיר ובמחיר הוגן 24/7. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/car-stuck-in-sand-bat-galim-haifa"
   }

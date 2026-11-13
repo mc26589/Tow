@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "נתקעתם עם רכב ישן? שירות פינוי רכבים לפירוק בחיפה והקריות עם הגעה מהירה ומחיר הוגן. פינוי רכבים פרטיים ומסחריים עד הבית. התקשרו עכשיו לקבלת הצעת מחיר!",
   alternates: {
     canonical: "/areas/haifa-general/car-scrapping-haifa-krayot-immediate-removal"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

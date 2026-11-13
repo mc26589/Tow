@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'גרירת משאיות בקריית חיים | חילוץ מהיר 24/7 | מחיר הוגן',
-  description: 'נתקעתם עם משאית באזור התעשייה קריית חיים? גרירת משאיות כבדות, חילוץ רכבים מסחריים וציוד הנדסי. הגעה מהירה, שירות אמין ומחיר הוגן. התקשרו עכשיו!',
+  title: { absolute: "גרירת משאיות בקריית חיים | חילוץ מהיר 24/7 | מחיר הוגן" },
+  description: "נתקעתם עם משאית באזור התעשייה קריית חיים? גרירת משאיות כבדות, חילוץ רכבים מסחריים וציוד הנדסי. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: '/areas/haifa-general/heavy-duty-truck-towing-kiryat-haim-industrial-zone',
   },

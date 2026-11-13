@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "חילוץ רכב בדרכים תלולות בחיפה | הגעה תוך 30 דקות | 24/7",
-  description: "נתקעת בעלייה תלולה בחיפה? אנו מתמחים בחילוץ רכבים בדרכים המאתגרות של הכרמל והסביבה. מחיר הוגן, ציוד מתקדם ושירות מהיר 24/7. התקשרו עכשיו!",
+  title: { absolute: "חילוץ רכב בדרכים תלולות בחיפה | הגעה תוך 30 דקות | 24/7" },
+  description: "נתקעת בעלייה תלולה בחיפה? אנו מתמחים בחילוץ רכבים בדרכים המאתגרות של הכרמל והסביבה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/towing-steep-roads-haifa",
   },

@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   description: "רוצים למכור רכב לפירוק? אנו קונים רכבים בחיפה והקריות במחיר הוגן! פינוי מהיר, שירות 24/7 לכל סוגי הרכבים. התקשרו עכשיו להצעת מחיר משתלמת!",
   alternates: {
     canonical: "/areas/haifa-general/kone-rehavim-lepiruk-haifa-krayot"
-  }
+  },
+  robots: { index: false, follow: true }
 };
 
 export default function Page() {

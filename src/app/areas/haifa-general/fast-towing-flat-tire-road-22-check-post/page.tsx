@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרר בכביש 22 צ'ק פוסט | הגעה תוך 30 דקות | זמינות 24/7",
-  description: "נתקעתם עם פנצ'ר בכביש 22 צ'ק פוסט? שירות גרר זמין 24/7, הגעה מהירה ומחיר הוגן לכל רכב. התקשרו עכשיו לחילוץ מקצועי ללא עיכובים!",
+  title: { absolute: "גרר בכביש 22 צ'ק פוסט | הגעה תוך 30 דקות | זמינות 24/7" },
+  description: "נתקעתם עם פנצ'ר בכביש 22 צ'ק פוסט? שירות גרר זמין 24/7, הגעה מהירה ומחיר הוגן לכל רכב. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/fast-towing-flat-tire-road-22-check-post"
   }

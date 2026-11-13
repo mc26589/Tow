@@ -258,8 +258,8 @@ export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isH
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": `אזורי שירות בצפון`,
-                    "item": `${baseUrl}/areas`
+                    "name": citySlug === "krayot" ? "גרר בקריות" : `גרר ב${cityName}`,
+                    "item": `${baseUrl}/${citySlug}`
                 },
                 {
                     "@type": "ListItem",

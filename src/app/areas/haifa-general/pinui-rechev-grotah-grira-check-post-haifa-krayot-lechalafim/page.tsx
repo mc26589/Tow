@@ -5,8 +5,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "פינוי רכב גרוטאה וגרירה בצ'ק פוסט, חיפה והקריות | שירות 24/7",
-  description: "צריכים פינוי רכב גרוטאה בצ'ק פוסט, חיפה או בקריות? שירות מהיר, פינוי רכבים לפירוק במחיר הוגן ותשלום במזומן במקום. התקשרו עכשיו לפינוי מיידי!",
+  title: { absolute: "פינוי רכב גרוטאה וגרירה בצ'ק פוסט, חיפה והקריות | ⭐ 4.9" },
+  description: "צריכים פינוי רכב גרוטאה בצ'ק פוסט, חיפה או בקריות? שירות מהיר, פינוי רכבים לפירוק במחיר הוגן ותשלום. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: { canonical: "/areas/haifa-general/pinui-rechev-grotah-grira-check-post-haifa-krayot-lechalafim" }
 };
 

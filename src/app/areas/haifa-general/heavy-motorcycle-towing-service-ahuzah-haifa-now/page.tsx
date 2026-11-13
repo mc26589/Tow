@@ -4,8 +4,8 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "גרירת רכבים באחוזה חיפה 24/7 | הגעה מהירה עד 30 דקות",
-  description: "נתקעתם עם הרכב באחוזה, חיפה? שירותי גרירה מקצועיים, מחיר הוגן ושקיפות מלאה. הגעה מהירה לכל נקודה באחוזה. התקשרו עכשיו לקבלת סיוע מיידי!",
+  title: { absolute: "גרירת רכבים באחוזה חיפה 24/7 | הגעה מהירה עד 30 דקות" },
+  description: "נתקעתם עם הרכב באחוזה, חיפה? שירותי גרירה מקצועיים, מחיר הוגן ושקיפות מלאה. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/heavy-motorcycle-towing-service-ahuzah-haifa-now"
   }

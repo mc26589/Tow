@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/areas/haifa-general/buying-cars-for-scrap-haifa-krayot',
   },
+  robots: { index: false, follow: true },
 };
 
 export default function Page() {

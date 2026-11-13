@@ -5,8 +5,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "גרירת רכב חשמלי בכביש 22: חילוץ מהיר תוך 30 דקות | 24/7",
-  description: "נתקעתם ללא סוללה בכביש 22? אנו מספקים שירותי גרירה מקצועיים לרכב חשמלי על פלטפורמה, מהקריות לצק פוסט. שירות אמין, זמין 24/7 במחיר הוגן. התקשרו עכשיו!",
+  title: { absolute: "גרירת רכב חשמלי בכביש 22: חילוץ מהיר תוך 30 דקות | 24/7" },
+  description: "נתקעתם ללא סוללה בכביש 22? אנו מספקים שירותי גרירה מקצועיים לרכב חשמלי על פלטפורמה, מהקריות לצק פוסט. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/electric-vehicle-flat-battery-towing-route-22-krayot"
   }

@@ -4,8 +4,8 @@ import { BUSINESS_INFO } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "גרר בקרית ביאליק 24/7 | שירות מהיר ומחיר הוגן | הגעה מהירה",
-  description: "זקוקים לגרר בקרית ביאליק? שירותי גרירה 24/7 במחיר זול ומשתלם. צוות מקצועי מגיע אליכם תוך זמן קצר לכל נקודה בקריות. התקשרו עכשיו לחילוץ מהיר!",
+  title: { absolute: "גרר בקרית ביאליק 24/7 | שירות מהיר ומחיר הוגן | ⭐ 4.9" },
+  description: "זקוקים לגרר בקרית ביאליק? שירותי גרירה 24/7 במחיר זול ומשתלם. הגעה תוך 25 דק', מ-150 ₪ ⭐ 4.9. חייגו: 054-917-4414",
   alternates: {
     canonical: "/areas/haifa-general/emergency-towing-cheap-kiryat-bialik"
   }
