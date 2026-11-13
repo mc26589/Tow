@@ -20,12 +20,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     if (!road) return {};
 
-    const title = `גרר צמוד ל${road.name_he} | חילוץ מהיר מהכביש`;
-    const description = `נתקעתם על ${road.name_he}? שירות גרירה מהיר ומקצועי על הציר. אל תישארו בשוליים בחוסר אונים – התקשרו לחילוץ מיידי.`;
+    const title = `גרר ב${road.name_he} 24/7 | חילוץ חירום תוך 25 דק' ⭐`;
+    const description = `נתקעתם על ${road.name_he}? אל תישארו בשוליים! ניידת גרר קרובה יוצאת אליכם מיד (25–30 דק', 4.9★). מחיר הוגן מראש בטלפון: ${BUSINESS_INFO.displayPhone}`;
 
     return {
-        title,
+        title: {
+            absolute: title,
+        },
         description,
+        openGraph: {
+            title,
+            description,
+            type: "website",
+            locale: "he_IL",
+        },
         alternates: {
             canonical: `/roads/${road.slug}`,
         },
@@ -45,7 +53,18 @@ export default async function RoadPage({ params }: PageProps) {
 
     return (
         <>
-            <JsonLd cityName="צפון" citySlug="north" vehicleName="רכב" vehicleSlug="private-car" faqs={faqs} />
+            <JsonLd
+                cityName="צפון"
+                citySlug="north"
+                vehicleName="רכב"
+                vehicleSlug="private-car"
+                faqs={faqs}
+                breadcrumbs={[
+                    { name: "עמוד הבית", item: "/" },
+                    { name: "אזורי שירות", item: "/areas" },
+                    { name: `חילוץ ב${road.name_he}`, item: `/roads/${road.slug}` },
+                ]}
+            />
 
             <section className="bg-slate-900 text-white py-14 md:py-24 border-b-4 border-alert-500">
                 <div className="max-w-4xl mx-auto px-4 text-center">

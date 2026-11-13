@@ -11,7 +11,7 @@ async function fixPage(filePath: string) {
     console.log(`Fixing: ${filePath}`);
     const content = fs.readFileSync(filePath, 'utf-8');
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash", generationConfig: { responseMimeType: "text/plain" } });
+    const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview", generationConfig: { responseMimeType: "text/plain" } });
 
     const systemPrompt = `
         You are an elite Next.js developer. I am giving you a React Server Component for a towing company website.

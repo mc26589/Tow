@@ -26,12 +26,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     if (!city || !light) return {};
 
-    const title = `${light.name_he} נדלקה? גרר ב${city.name_he} | ייעוץ וחילוץ`;
-    const description = `נדלקה לכם ${light.name_he} ברכב באזור ${city.name_he}? אל תקחו סיכון. שירותי גרירה מקצועיים לחילוץ מידי מהמקום למניעת נזק למנוע. התקשרו.`;
+    const title = `${light.name_he}? מותר לנסוע? מדריך + גרר ב${city.name_he}`;
+    const description = `נדלקה ${light.name_he} ב${city.name_he}? בדקו מיד אם מותר להמשיך לנסוע או שחובה לעצור כדי לא להרוס את המנוע. ייעוץ מיידי וגרר תוך 30 דק': ${BUSINESS_INFO.displayPhone}`;
 
     return {
-        title,
+        title: {
+            absolute: title,
+        },
         description,
+        openGraph: {
+            title,
+            description,
+            type: "website",
+            locale: "he_IL",
+        },
         alternates: {
             canonical: `/warning-lights/${light.slug}/${city.slug}`,
         },

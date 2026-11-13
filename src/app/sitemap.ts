@@ -10,30 +10,49 @@ export const revalidate = 3600; // Revalidate every hour
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://grar-haifa.vercel.app';
+    // Stable date for static/programmatic routes so sitemap lastmod doesn't change every hour
+    // and starve new blog/area URLs in google-indexer/sync.js
+    const staticLastMod = new Date('2026-11-13T00:00:00Z');
+    const latestGuideDate = GUIDES.reduce((latest, g) => {
+        const d = new Date(g.publishDate);
+        return !isNaN(d.getTime()) && d > latest ? d : latest;
+    }, staticLastMod);
 
     const staticRoutes: MetadataRoute.Sitemap = [
         {
             url: baseUrl,
-            lastModified: new Date(),
-            changeFrequency: 'daily',
+            lastModified: staticLastMod,
+            changeFrequency: 'weekly',
             priority: 1,
         },
         {
             url: `${baseUrl}/about`,
-            lastModified: new Date(),
+            lastModified: staticLastMod,
             changeFrequency: 'monthly',
             priority: 0.5,
         },
         {
             url: `${baseUrl}/facts`,
-            lastModified: new Date(),
+            lastModified: staticLastMod,
             changeFrequency: 'monthly',
             priority: 0.7,
         },
         {
             url: `${baseUrl}/emergency-guide`,
-            lastModified: new Date(),
+            lastModified: staticLastMod,
             changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/milon/towing-cost`,
+            lastModified: staticLastMod,
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/areas`,
+            lastModified: staticLastMod,
+            changeFrequency: 'weekly',
             priority: 0.8,
         },
     ];
@@ -44,7 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         for (const vehicle of VEHICLES) {
             cityVehicleUrls.push({
                 url: `${baseUrl}/${city.slug}/${vehicle.slug}`,
-                lastModified: new Date(),
+                lastModified: staticLastMod,
                 changeFrequency: 'weekly',
                 priority: 0.9,
             });
@@ -59,7 +78,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         for (const hazard of HAZARDS) {
             additionalPSEOUrls.push({
                 url: `${baseUrl}/hazards/${hazard.slug}/${city.slug}`,
-                lastModified: new Date(),
+                lastModified: staticLastMod,
                 changeFrequency: 'weekly',
                 priority: 0.8,
             });
@@ -71,7 +90,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         for (const industry of B2B_INDUSTRIES) {
             additionalPSEOUrls.push({
                 url: `${baseUrl}/b2b/${industry.slug}/${city.slug}`,
-                lastModified: new Date(),
+                lastModified: staticLastMod,
                 changeFrequency: 'weekly',
                 priority: 0.8,
             });
@@ -83,7 +102,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         for (const city of CITIES) {
             additionalPSEOUrls.push({
                 url: `${baseUrl}/destination/${destination.slug}/${city.slug}`,
-                lastModified: new Date(),
+                lastModified: staticLastMod,
                 changeFrequency: 'weekly',
                 priority: 0.8,
             });
@@ -95,7 +114,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         for (const light of WARNING_LIGHTS) {
             additionalPSEOUrls.push({
                 url: `${baseUrl}/warning-lights/${light.slug}/${city.slug}`,
-                lastModified: new Date(),
+                lastModified: staticLastMod,
                 changeFrequency: 'weekly',
                 priority: 0.8,
             });
@@ -106,7 +125,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const neighborhood of NEIGHBORHOODS) {
         additionalPSEOUrls.push({
             url: `${baseUrl}/locations/${neighborhood.city_slug}/${neighborhood.slug}`,
-            lastModified: new Date(),
+            lastModified: staticLastMod,
             changeFrequency: 'weekly',
             priority: 0.8,
         });
@@ -116,7 +135,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const road of ROADS) {
         additionalPSEOUrls.push({
             url: `${baseUrl}/roads/${road.slug}`,
-            lastModified: new Date(),
+            lastModified: staticLastMod,
             changeFrequency: 'weekly',
             priority: 0.8,
         });
@@ -126,15 +145,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const guideUrls: MetadataRoute.Sitemap = [
         {
             url: `${baseUrl}/guides`,
-            lastModified: new Date(),
+            lastModified: latestGuideDate,
             changeFrequency: 'weekly',
-            priority: 0.7,
+            priority: 0.8,
         },
         ...GUIDES.map((guide) => ({
             url: `${baseUrl}/guides/${guide.slug}`,
             lastModified: new Date(guide.publishDate),
             changeFrequency: 'monthly' as const,
-            priority: 0.6,
+            priority: 0.7,
         }))
     ];
 
@@ -178,7 +197,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 })
                 .map((page) => ({
                     url: `${baseUrl}${page.route_path}`,
-                    lastModified: new Date(),
+                    lastModified: staticLastMod,
                     changeFrequency: 'weekly',
                     priority: 0.8,
                 }));
@@ -205,9 +224,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 for (const pageDir of pageDirs) {
                     const pagePath = path.join(subDirPath, pageDir.name, 'page.tsx');
                     if (fs.existsSync(pagePath)) {
+                        const stat = fs.statSync(pagePath);
                         fsUrls.push({
                             url: `${baseUrl}/areas/${area.name}/${pageDir.name}`,
-                            lastModified: new Date(),
+                            lastModified: stat.mtime,
                             changeFrequency: 'weekly',
                             priority: 0.8,
                         });

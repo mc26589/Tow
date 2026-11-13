@@ -24,12 +24,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     if (!city || !industry) return {};
 
-    const title = `גרר עסקי עבור ${industry.name_he} ב${city.name_he} | הגעה תוך חצי שעה`;
-    const description = `זקוקים לחילוץ וגרירה עבור ${industry.name_he} ב${city.name_he}? שירות VIP לנהגים מקצועיים. חשבוניות מס, עבודה מול חברות, ומינימום זמן השבתה. הזמינו עכשיו.`;
+    const title = `גרר עסקי ל${industry.name_he} ב${city.name_he} 24/7 | חשבונית מס`;
+    const description = `חילוץ וגרירה ב${city.name_he} ל${industry.name_he}: קדימות בקריאה (25–30 דק'), חשבונית מס כחוק ומינימום זמן השבתה (4.9★). חייגו למוקד: ${BUSINESS_INFO.displayPhone}`;
 
     return {
-        title,
+        title: {
+            absolute: title,
+        },
         description,
+        openGraph: {
+            title,
+            description,
+            type: "website",
+            locale: "he_IL",
+        },
         alternates: {
             canonical: `/b2b/${industry.slug}/${city.slug}`,
         },

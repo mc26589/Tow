@@ -51,7 +51,7 @@ jobs:
             echo "No changes to commit"
             exit 0
           fi
-          git commit -m "docs: add new weekly social blog guide [skip ci]"
+          git commit -m "docs: add new weekly social blog guide"
           # Pull latest changes from remote before pushing (prevents conflicts)
           for i in 1 2 3; do
             git pull --rebase origin main || {

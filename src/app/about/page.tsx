@@ -6,19 +6,21 @@ import Link from "next/link";
 import { ShieldCheck, Anchor, Wrench, FileCheck, MapPin, HeartHandshake } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "אודות - גרר מפרץ אקספרס | חילוץ וגרירה בחיפה והקריות",
-  description: "הכירו את גרר מפרץ אקספרס - מעל 15 שנות ניסיון בחילוץ וגרירה. הכירו את הסיפור שלנו, מקצועיות נטולת פשרות, שקיפות, וביטוח מקיף שמעניק לכם שקט נפשי על הכביש.",
+  title: {
+    absolute: "אודות גרר מפרץ אקספרס | 15+ שנות ניסיון וביטוח מלא בחיפה",
+  },
+  description: "הכירו את גרר מפרץ אקספרס — 15+ שנות ניסיון בחיפה והקריות (דירוג 4.9★). ביטוח סחר מלא, חשבונית מס להחזר מחברת הביטוח ומחיר סופי בטלפון: 054-917-4414",
   keywords: ["אודות גרר מפרץ אקספרס", "גרירה בחיפה", "חילוץ רכבים בצפון", "סיפור החברה", "ביטוח חילוץ רכב", "גרר אמין"],
   openGraph: {
     title: "אודות גרר מפרץ אקספרס | מקצועיות, שקיפות וביטוח מקיף",
     description: "הכירו את צוות המומחים של גרר מפרץ אקספרס. שירותי גרירה מהירים בחיפה והקריות, עם דגש על אמינות ושירות מעל הכל.",
     images: [{ url: "/images/about-tow-truck-haifa.png", width: 1200, height: 630, alt: "גרר מפרץ אקספרס בפעולה בחיפה" }],
-    url: "https://www.grarmifrats.co.il/about",
+    url: "/about",
     locale: "he_IL",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.grarmifrats.co.il/about",
+    canonical: "/about",
   },
 };
 

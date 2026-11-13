@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AboutSection } from "@/components/about-section";
 import { CityVehicleGrid } from "@/components/city-vehicle-grid";
 import { ReviewsSection } from "@/components/reviews-section";
@@ -7,17 +8,18 @@ import { FAQSection } from "@/components/faq-section";
 import { generateFAQs } from "@/lib/seo-content";
 import TowingCalculator from "@/components/TowingCalculator";
 
+export const metadata: Metadata = {
+    alternates: {
+        canonical: "/",
+    },
+};
+
 export default function HomePage() {
     const homeFaqs = generateFAQs("חיפה", "רכבים");
 
     return (
         <>
             <JsonLd isHomePage={true} faqs={homeFaqs} />
-
-            {/* Hidden semantic text for Googlebot/Screen readers (Long-tail keywords) */}
-            <div className="sr-only" aria-hidden="true">
-                גרר מפרץ אקספרס — שירותי דרכים מקצועיים בחיפה והצפון. שגריר מהיר לחילוץ רכבים, פנצ'ר בדרך, תקלות במנהרות הכרמל, שירות גרירה PRO. חלופה מהירה ואמינה לאיתוראן. גרר בשיטת KSP — מחיר שקוף ושירות מיידי 24/7.
-            </div>
 
             {/* Calculator SEO — WebApplication structured data */}
             <script
@@ -70,9 +72,9 @@ export default function HomePage() {
                     </h1>
 
                     <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-                        נתקעתם בדרך? צריכים שגריר או גרר דחוף? אנחנו מגיעים תוך 30 דקות לכל מקום בחיפה, הקריות, עכו ויקנעם.
+                        נתקעתם בדרך? צריכים גרר דחוף עכשיו? אנחנו מגיעים תוך 25–30 דקות לכל מקום בחיפה, הקריות, עכו ויקנעם.
                         <br className="hidden md:block" />
-                        שירותי דרכים מקצועיים — פנצ'ר, תקלות מכניות, מנהרות הכרמל. מחירי PRO שקופים, בלי הפתעות.
+                        שירותי גרירה וחילוץ מקצועיים — פנצ'ר, תקלות מכניות, חניונים ומנהרות הכרמל. מחיר סופי ושקוף בטלפון, בלי הפתעות.
                     </p>
 
                     {/* Hero CTAs */}

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { GUIDES } from "@/lib/guides";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/json-ld";
@@ -15,13 +16,30 @@ export async function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const guide = GUIDES.find(g => g.slug === params.slug);
     if (!guide) return {};
 
+    // Avoid double-branding ("| גרר מפרץ אקספרס | גרר מפרץ אקספרס") and keep SERP title <= 65 chars
+    const cleanTitle = guide.title.replace(/\s*[|\-–]\s*גרר מפרץ אקספרס\s*$/, "").trim();
+    const withBrand = `${cleanTitle} | מפרץ אקספרס`;
+    const finalTitle = withBrand.length <= 65 ? withBrand : cleanTitle;
+
     return {
-        title: `${guide.title} | גרר מפרץ אקספרס`,
+        title: {
+            absolute: finalTitle,
+        },
         description: guide.description,
+        alternates: {
+            canonical: `/guides/${guide.slug}`,
+        },
+        openGraph: {
+            title: finalTitle,
+            description: guide.description,
+            type: "article",
+            publishedTime: guide.publishDate,
+            locale: "he_IL",
+        },
     };
 }
 

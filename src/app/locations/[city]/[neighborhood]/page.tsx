@@ -26,12 +26,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     if (!city || !neighborhood) return {};
 
-    const title = `גרר ב${neighborhood.name_he}, ${city.name_he} | הגעה מהירה 24/7`;
-    const description = `נתקעתם ב${neighborhood.name_he}? שירותי גרירה מקצועיים בזמינות מיידית לאזור ${neighborhood.name_he} והסביבה. מחיר הוגן, צוות מיומן, התקשרו עכשיו!`;
+    const title = `גרר ב${neighborhood.name_he}, ${city.name_he} 24/7 | הגעה ב-25 דק' ⭐`;
+    const description = `נתקעתם ב${neighborhood.name_he} (${city.name_he})? ניידת גרר פנויה באזורכם תגיע תוך 25–30 דק' (4.9★). מחיר הוגן סופי בטלפון ללא הפתעות: ${BUSINESS_INFO.displayPhone}`;
 
     return {
-        title,
+        title: {
+            absolute: title,
+        },
         description,
+        openGraph: {
+            title,
+            description,
+            type: "website",
+            locale: "he_IL",
+        },
         alternates: {
             canonical: `/locations/${city.slug}/${neighborhood.slug}`,
         },

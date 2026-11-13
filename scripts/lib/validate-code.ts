@@ -54,17 +54,60 @@ export function validateTsxSyntax(
 /**
  * Explicit guardrail for the exact bug class that caused the outage:
  * a bare Hebrew גרשיים sitting between two Hebrew letters inside a
- * double-quoted string (e.g. סופ"ש, בע"מ, ק"מ, סל"ד, ת"א, צה"ל, ח"כ...),
- * without a preceding backslash. This pattern is invisible to a human
- * skimming the text (it just looks like correct Hebrew) but breaks a
- * double-quoted JS string literal every time.
+ * double-quoted JS/JSX string literal (e.g. סופ"ש, בע"מ, ק"מ, סל"ד, ת"א...),
+ * without a preceding backslash.
  *
- * Flag matches even beyond builder.ts's page.tsx output, since any agent
- * (seo-booster, blog, social) could introduce the same pattern.
+ * Uses TypeScript's own TSX scanner so valid Hebrew גרשיים inside backtick
+ * template literals (like `guides.ts` HTML content), single-quoted strings,
+ * JSX text, and comments are NOT falsely flagged, while any bare `"` between
+ * Hebrew letters in a double-quoted string literal IS caught accurately.
  */
 export function findUnescapedHebrewQuotes(code: string): string[] {
-    const pattern = /"[^"\\]*[\u0590-\u05FF]"[\u0590-\u05FF][^"]*"/g;
-    return code.match(pattern) || [];
+    const matches: string[] = [];
+    const scanner = ts.createScanner(
+        ts.ScriptTarget.Latest,
+        /* skipTrivia */ false,
+        ts.LanguageVariant.JSX,
+        code
+    );
+
+    const hebrewChar = /[\u0590-\u05FF]/;
+    let prevTokenWasDoubleQuotedHebrewEnd = false;
+    let prevTokenEnd = -1;
+    let prevTokenText = '';
+
+    let token = scanner.scan();
+    while (token !== ts.SyntaxKind.EndOfFileToken) {
+        const start = scanner.getTokenPos();
+        const text = scanner.getTokenText();
+
+        if (
+            prevTokenWasDoubleQuotedHebrewEnd &&
+            start === prevTokenEnd &&
+            (token === ts.SyntaxKind.Identifier || hebrewChar.test(text[0] || ''))
+        ) {
+            matches.push(`${prevTokenText}${text}`);
+        }
+
+        // Track whether this token is a double-quoted string literal ending right after a Hebrew letter
+        if (
+            token === ts.SyntaxKind.StringLiteral &&
+            text.startsWith('"') &&
+            text.endsWith('"') &&
+            text.length >= 3 &&
+            hebrewChar.test(text[text.length - 2])
+        ) {
+            prevTokenWasDoubleQuotedHebrewEnd = true;
+            prevTokenEnd = scanner.getTextPos();
+            prevTokenText = text;
+        } else {
+            prevTokenWasDoubleQuotedHebrewEnd = false;
+        }
+
+        token = scanner.scan();
+    }
+
+    return matches;
 }
 
 /**

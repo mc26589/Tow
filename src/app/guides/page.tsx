@@ -1,11 +1,21 @@
+import type { Metadata } from "next";
 import { GUIDES } from "@/lib/guides";
 import Link from "next/link";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
 
-export const metadata = {
-    title: "מדריכי גרירה וחילוץ - גרר מפרץ אקספרס",
-    description: "מרכז המידע של גרר מפרץ אקספרס: טיפים לבטיחות בדרכים, הכנת הרכב לחורף, מה לעשות לאחר תאונה ועוד.",
+export const metadata: Metadata = {
+    title: {
+        absolute: "מדריכים וטיפים לנהגים בחיפה והקריות [2026] | מפרץ אקספרס",
+    },
+    description: "נתקעתם בדרך או נדלקה נורה? מדריכים מעשיים לנהגים בחיפה והקריות: אבחון תקלות, הכנה לחורף, רכב חשמלי ומתי חובה להזמין גרר. חילוץ 24/7: 054-917-4414",
+    alternates: {
+        canonical: "/guides",
+    },
+    openGraph: {
+        title: "מדריכים וטיפים לנהגים בחיפה והקריות [2026]",
+        description: "מדריכים מעשיים לנהגים: אבחון תקלות, נורות אזהרה, בטיחות בדרכים ורכב חשמלי בחיפה והצפון.",
+        type: "website",
+        locale: "he_IL",
+    },
 };
 
 export default function GuidesPage() {

@@ -46,7 +46,7 @@ jobs:
           git config user.email "seobot@grar-haifa.co.il"
           git add -A
           git diff --staged --quiet && { echo "No changes to commit"; exit 0; }
-          git commit -m "seo: auto-optimize landing pages metadata and links [skip ci]"
+          git commit -m "seo: auto-optimize landing pages metadata and links"
           # Pull latest changes from remote before pushing (prevents conflicts)
           for i in 1 2 3; do
             git pull --rebase origin main || {

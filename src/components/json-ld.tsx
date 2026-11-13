@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import { BUSINESS_INFO, OWNER_INFO } from '@/lib/data';
 import { FAQItem } from '@/lib/seo-content';
 
@@ -9,6 +8,7 @@ interface JsonLdProps {
     vehicleSlug?: string;
     faqs?: FAQItem[];
     isHomePage?: boolean;
+    breadcrumbs?: { name: string; item: string }[];
     guide?: {
         title: string;
         description: string;
@@ -18,7 +18,7 @@ interface JsonLdProps {
     };
 }
 
-export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isHomePage, guide }: JsonLdProps) {
+export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isHomePage, breadcrumbs, guide }: JsonLdProps) {
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://grar-haifa.vercel.app";
 
     const person = {
@@ -48,7 +48,7 @@ export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isH
         priceRange: "$$",
         ...(BUSINESS_INFO.sameAs && BUSINESS_INFO.sameAs.length > 0 ? { sameAs: BUSINESS_INFO.sameAs } : {}),
         founder: { "@id": `${baseUrl}/#owner` },
-        knowsAbout: ["גרירה", "חילוץ רכב", "שירותי דרכים", "שגריר", "גרר", "פנצ'ר", "מנהרות הכרמל", "איתוראן"],
+        knowsAbout: ["גרירת רכב", "חילוץ רכב", "שירותי דרכים", "גרר חיפה", "גרר קריות", "פנצ'ר", "מנהרות הכרמל", "חילוץ מחניון תת קרקעי"],
         openingHoursSpecification: {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: [
@@ -135,14 +135,6 @@ export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isH
                         serviceType: "Flat Tire Assistance",
                     }
                 },
-                {
-                    "@type": "Offer",
-                    itemOffered: {
-                        "@type": "Service",
-                        name: "גרירת אופנועים",
-                        serviceType: "Motorcycle Towing",
-                    }
-                },
             ],
         },
         potentialAction: {
@@ -171,6 +163,9 @@ export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isH
             "headline": guide.title,
             "description": guide.description,
             "datePublished": guide.publishDate,
+            "dateModified": guide.publishDate,
+            "inLanguage": "he",
+            "image": `${baseUrl}/images/about-tow-truck-haifa.png`,
             "author": { "@id": `${baseUrl}/#owner` },
             "publisher": { "@id": `${baseUrl}/#business` },
             "url": `${baseUrl}/guides/${guide.slug}`,
@@ -178,6 +173,46 @@ export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isH
                 "@type": "WebPage",
                 "@id": `${baseUrl}/guides/${guide.slug}`
             }
+        });
+
+        if (!breadcrumbs) {
+            schemas.push({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "עמוד הבית",
+                        "item": baseUrl
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "מדריכים וטיפים",
+                        "item": `${baseUrl}/guides`
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": guide.title,
+                        "item": `${baseUrl}/guides/${guide.slug}`
+                    }
+                ]
+            });
+        }
+    }
+
+    if (breadcrumbs && breadcrumbs.length > 0) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": breadcrumbs.map((crumb, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "name": crumb.name,
+                "item": crumb.item.startsWith("http") ? crumb.item : `${baseUrl}${crumb.item}`
+            }))
         });
     }
 
@@ -223,8 +258,8 @@ export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isH
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": `גרירה ב${cityName}`,
-                    "item": `${baseUrl}/${citySlug}`
+                    "name": `אזורי שירות בצפון`,
+                    "item": `${baseUrl}/areas`
                 },
                 {
                     "@type": "ListItem",
@@ -241,7 +276,7 @@ export function JsonLd({ cityName, citySlug, vehicleName, vehicleSlug, faqs, isH
     }
 
     return (
-        <Script
+        <script
             id="json-ld"
             type="application/ld+json"
             dangerouslySetInnerHTML={{

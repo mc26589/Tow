@@ -34,11 +34,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     if (!city || !vehicle) return {};
 
-    const title = `גרר ל${vehicle.name_he} ב${city.name_he} | שגריר PRO 24/7 ⭐ הגעה ב-30 דקות`;
-    const description = `נתקעתם עם ${vehicle.name_he}? שירותי דרכים וגרירה מקצועיים ב${city.name_he}. שגריר מהיר תוך 30 דקות, פנצ'ר, תקלות, מנהרות הכרמל. מחיר PRO הוגן, חלופה מהירה לאיתוראן. התקשרו עכשיו!`;
+    const title = `גרר ל${vehicle.name_he} ב${city.name_he} 24/7 | הגעה ב-25 דק' ⭐ 4.9`;
+    const description = `נתקעתם עם ${vehicle.name_he} ב${city.name_he}? גרר אמין בדרך אליכם תוך 25–30 דק' (4.9★). מחיר הוגן סופי בטלפון ללא הפתעות, כולל חניונים ולילה: ${BUSINESS_INFO.displayPhone}`;
 
     return {
-        title,
+        title: {
+            absolute: title,
+        },
         description,
         openGraph: {
             title,

@@ -51,7 +51,7 @@ jobs:
           mkdir -p src/app/areas/
           git add src/app/areas/ || true
           git diff --staged --quiet && { echo "No changes to commit"; exit 0; }
-          git commit -m "Auto-generate pSEO pages: E-E-A-T & SGE [skip ci]"
+          git commit -m "Auto-generate pSEO pages: E-E-A-T & SGE"
           # Pull latest changes from remote before pushing (prevents conflicts)
           for i in 1 2 3; do
             git pull --rebase origin main || {

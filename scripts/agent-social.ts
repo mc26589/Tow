@@ -79,7 +79,7 @@ async function postToFacebook(message: string, link: string) {
 
 async function runSocialSEOAgency() {
   const model = genAI.getGenerativeModel({ 
-    model: "gemini-2.5-flash",
+    model: "gemini-3.1-flash-lite-preview",
     generationConfig: { responseMimeType: "application/json" }
   }); 
 
@@ -90,7 +90,9 @@ async function runSocialSEOAgency() {
   let existingTitles: string[] = [];
   try {
     const guidesContent = fs.readFileSync(guidesPath, "utf-8");
-    existingTitles = Array.from(guidesContent.matchAll(/title:\s*"([^"]+)"/g)).map(m => m[1]);
+    existingTitles = Array.from(guidesContent.matchAll(/["']?title["']?\s*:\s*"((?:[^"\\]|\\.)*)"/g)).map(m =>
+      m[1].replace(/\\"/g, '"')
+    );
   } catch (e) {
     console.warn("Could not read guides.ts for existing titles.");
   }
@@ -199,8 +201,8 @@ ${trendHint}
       const insertIndex = guidesFileContent.lastIndexOf("];");
       if (insertIndex !== -1) {
         // Prevent duplicate slugs
-        const existingSlugs = guidesFileContent.match(/"slug":\s*"([^"]+)"/g) || [];
-        const slugSet = new Set(existingSlugs.map(s => s.replace(/"slug":\s*"/, '').replace(/"$/, '')));
+        const existingSlugs = Array.from(guidesFileContent.matchAll(/["']?slug["']?\s*:\s*"([^"]+)"/g)).map(m => m[1]);
+        const slugSet = new Set(existingSlugs);
         if (slugSet.has(newGuide.slug)) {
           const suffix = Date.now().toString().slice(-6);
           console.warn(`Slug "${newGuide.slug}" already exists, appending suffix: ${suffix}`);

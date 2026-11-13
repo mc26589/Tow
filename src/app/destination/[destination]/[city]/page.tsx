@@ -24,12 +24,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     if (!city || !destination) return {};
 
-    const title = `גרר מ${city.name_he} אל ${destination.name_he} | מפרץ אקספרס`;
-    const description = `נתקעתם ב${city.name_he} וצריכים גרירה ישירה אל ${destination.name_he}? שירותי גרירה מקצועיים הישר למוסך היבואן או נקודת הטיפול, במחירים הגונים וללא עיכובים.`;
+    const title = `גרר מ${city.name_he} אל ${destination.name_he} | מחיר מראש ⭐`;
+    const description = `גרירה ישירה מ${city.name_he} אל ${destination.name_he} ללא גרירה כפולה! איסוף תוך 25–30 דק' (4.9★) ומחיר הוגן סופי בטלפון. חייגו: ${BUSINESS_INFO.displayPhone}`;
 
     return {
-        title,
+        title: {
+            absolute: title,
+        },
         description,
+        openGraph: {
+            title,
+            description,
+            type: "website",
+            locale: "he_IL",
+        },
         alternates: {
             canonical: `/destination/${destination.slug}/${city.slug}`,
         },

@@ -48,7 +48,7 @@ async function checkVercelDeployments() {
             const logsText = logsData.map((d: any) => d.text).join("\\n");
 
             // Step 2: Send to Gemini for analysis
-            const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+            const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
             const prompt = `
 You are an expert DevOps engineer. A Vercel deployment just failed.
 Analyze these build logs, identify the exact cause of the failure, and propose the necessary terminal commands or fixes to resolve it remotely.

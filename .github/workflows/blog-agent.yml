@@ -30,6 +30,8 @@ jobs:
       - name: Run Blog Agent
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
         run: npm run agent:blog
 
       # Safety net: never push code that fails the exact same build Vercel
@@ -46,7 +48,7 @@ jobs:
           git config user.email "bot@grar-haifa.co.il"
           git add -A
           git diff --staged --quiet && { echo "No changes to commit"; exit 0; }
-          git commit -m "blog: auto-generated article [skip ci]"
+          git commit -m "blog: auto-generated article"
           # Pull latest changes from remote before pushing (prevents conflicts)
           for i in 1 2 3; do
             git pull --rebase origin main || {

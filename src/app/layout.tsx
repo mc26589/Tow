@@ -22,16 +22,24 @@ const rubik = Rubik({
 export const metadata: Metadata = {
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://grar-haifa.vercel.app'),
     title: {
-        default: "גרר מפרץ אקספרס - שירותי גרירה וחילוץ בחיפה והסביבה 24/7",
+        default: "גרר בחיפה והקריות 24/7 ⭐ 4.9 | הגעה ב-25 דק' • גרר מפרץ אקספרס",
         template: "%s | גרר מפרץ אקספרס",
     },
     description:
-        "נתקעתם עם הרכב? מחפשים גרר בחיפה או גרר בקריות? שירותי גרירה מקצועיים ואמינים באזור הצפון. התחייבות להגעה מהירה תוך 30 דקות וזמינות מלאה 24/7. התקשרו! ✓",
+        "נתקעתם בחיפה, בקריות או בצפון? גרר אמין מגיע תוך 25–30 דק' (דירוג 4.9★ מ-127+ לקוחות). מחיר הוגן סופי בטלפון ללא הפתעות, כולל לילה, שבת ורכב חשמלי: 054-917-4414",
 
     openGraph: {
         type: "website",
         locale: "he_IL",
         siteName: "גרר מפרץ אקספרס",
+        images: [
+            {
+                url: "/images/about-tow-truck-haifa.png",
+                width: 1200,
+                height: 630,
+                alt: "גרר מפרץ אקספרס - שירותי גרירה וחילוץ בחיפה והקריות",
+            },
+        ],
     },
     robots: {
         index: true,

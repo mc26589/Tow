@@ -68,26 +68,23 @@ async function run() {
     console.log(`Found ${allUrls.length} total URLs in sitemap.`);
 
     const cache = loadCache();
-    let urlsToProcess = [];
+    const newUrls = [];
+    const updatedUrls = [];
 
-    // Figure out which URLs need indexing
+    // Prioritize brand-new uncached URLs first (e.g., new blog articles & area pages),
+    // then updated URLs so fresh content is never starved by the daily 190-URL quota.
     for (const urlObj of allUrls) {
         const { loc, lastmod } = urlObj;
 
-        // If not in cache, or if the sitemap lastmod is newer than what we have in cache
-        let needsIndexing = false;
         if (!cache[loc]) {
-            needsIndexing = true;
+            newUrls.push(urlObj);
         } else if (lastmod && cache[loc] !== lastmod) {
-            needsIndexing = true;
-        }
-
-        if (needsIndexing) {
-            urlsToProcess.push(urlObj);
+            updatedUrls.push(urlObj);
         }
     }
 
-    console.log(`Found ${urlsToProcess.length} URLs that need indexing based on cache.`);
+    let urlsToProcess = [...newUrls, ...updatedUrls];
+    console.log(`Found ${newUrls.length} new URLs and ${updatedUrls.length} updated URLs needing indexing.`);
 
     if (urlsToProcess.length === 0) {
         console.log('Nothing to do! All pages are up to date.');

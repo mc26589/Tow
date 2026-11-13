@@ -26,6 +26,7 @@ interface PageInfo {
     route: string;
     slug: string;
     hasMetadata: boolean;
+    hasHighCtrMetadata: boolean;
 }
 
 // Recursively find all page.tsx files
@@ -60,19 +61,31 @@ async function main() {
         const slug = path.basename(path.dirname(file));
         const content = fs.readFileSync(file, "utf-8");
         const hasMetadata = content.includes("export const metadata") || content.includes("export let metadata");
-        
-        allPages.push({ filePath: file, route, slug, hasMetadata });
+        const hasHighCtrMetadata =
+            hasMetadata &&
+            content.includes("absolute:") &&
+            (content.includes("displayPhone") || content.includes("054-917-4414"));
+
+        allPages.push({ filePath: file, route, slug, hasMetadata, hasHighCtrMetadata });
     }
 
-    // Prioritize pages without metadata
+    // Prioritize pages without metadata first, then pages without high-CTR metadata
     let targetPages = allPages.filter(p => !p.hasMetadata).slice(0, 15);
-    
+
     if (targetPages.length < 15) {
         const remainingCount = 15 - targetPages.length;
-        const pagesWithMetadata = allPages.filter(p => p.hasMetadata);
-        // Pick random pages that already have metadata for further optimization/internal link building
-        const shuffled = pagesWithMetadata.sort(() => 0.5 - Math.random());
-        targetPages.push(...shuffled.slice(0, remainingCount));
+        const needsCtrUpgrade = allPages
+            .filter(p => p.hasMetadata && !p.hasHighCtrMetadata)
+            .sort(() => 0.5 - Math.random());
+        targetPages.push(...needsCtrUpgrade.slice(0, remainingCount));
+    }
+
+    if (targetPages.length < 15) {
+        const remainingCount = 15 - targetPages.length;
+        const alreadyUpgraded = allPages
+            .filter(p => p.hasHighCtrMetadata)
+            .sort(() => 0.5 - Math.random());
+        targetPages.push(...alreadyUpgraded.slice(0, remainingCount));
     }
 
     console.log(`🎯 Selected ${targetPages.length} pages for optimization this run.`);
@@ -103,12 +116,13 @@ async function main() {
 
         We need to optimize this page to increase both search impressions and clicks.
 
-        STRICT SEO Requirements:
-        1. **Metadata & Title Tag (CTR Booster):**
-           - Ensure the page exports metadata: \`export const metadata: Metadata = { title: "...", description: "...", alternates: { canonical: "${page.route}" } }\`.
-           - The title MUST be a highly compelling Hebrew search title (under 60-70 characters) targeting the exact topic. Include CTR hooks like "מחיר הוגן", "24/7", "שירות מהיר", "הגעה תוך 30 דקות", or specific neighborhood names.
-           - The description MUST be a persuasive Hebrew meta description (under 150-160 characters) ending with a clear CTA (e.g. "התקשרו עכשיו!", "כנסו לפרטים!").
-           - Make sure \`import type { Metadata } from "next";\` is added at the top if missing.
+        STRICT SEO & HIGH-CTR Requirements:
+        1. **Metadata & Title Tag (CTR Booster — CRITICAL):**
+           - Ensure the page imports \`BUSINESS_INFO\` from \`@/lib/data\` and \`type { Metadata } from "next"\`.
+           - Ensure the page exports metadata using \`title: { absolute: "..." }\` so the layout template does NOT append extra text and truncate the title!
+           - The \`title.absolute\` MUST be under 58 characters, punchy, and high-CTR in Hebrew: start with the exact local service/problem, and include concrete trust/urgency hooks (e.g. "תוך 25 דק'", "24/7", "⭐ 4.9", "מחיר מראש"). Do NOT write spammy competitor names or duplicate the brand name if it makes the title > 58 chars.
+           - The \`description\` MUST be a persuasive Hebrew meta description (130-155 characters) using a template literal that includes: specific location/problem, arrival time (25-30 דקות), upfront phone quote ("מחיר סופי בטלפון ללא הפתעות"), rating ("דירוג 4.9★"), and direct phone CTA \`\${BUSINESS_INFO.displayPhone}\`.
+           - Include \`openGraph: { title: "...", description: \`...\`, type: "website", locale: "he_IL" }\` and \`alternates: { canonical: "${page.route}" }\`.
         
         2. **Internal Linking:**
            - Here is a list of other pages on the site that you can link to if relevant keywords appear in the text:

@@ -25,12 +25,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     if (!city || !hazard) return {};
 
-    const title = `${hazard.name_he} ב${city.name_he} | ציוד חילוץ ייעודי`;
-    const description = `זקוקים ל${hazard.name_he} ב${city.name_he}? יש לנו את הציוד, הגרר והניסיון המתאים לתנאי שטח מורכבים ולחילוצים קשים. הגעה מהירה, התקשרו כעת!`;
+    const title = `${hazard.name_he} ב${city.name_he} 24/7 | הגעה ב-25 דק' ⭐`;
+    const description = `צריכים ${hazard.name_he} ב${city.name_he}? ${hazard.description} הגעה תוך 25–30 דק' (4.9★), ציוד ייעודי ללא נזק ומחיר סופי בטלפון: ${BUSINESS_INFO.displayPhone}`;
 
     return {
-        title,
+        title: {
+            absolute: title,
+        },
         description,
+        openGraph: {
+            title,
+            description,
+            type: "website",
+            locale: "he_IL",
+        },
         alternates: {
             canonical: `/hazards/${hazard.slug}/${city.slug}`,
         },

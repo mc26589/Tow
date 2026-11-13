@@ -4,10 +4,18 @@ import TowingCalculator from '@/components/TowingCalculator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 export const metadata: Metadata = {
-    title: 'מחירון גרירה וחילוץ 2026 | מחשבון עלות גרירת רכב | גרר מפרץ אקספרס',
-    description: 'מחירון גרירה מעודכן לשנת 2026. כמה עולה לגרור רכב? חשבו אונליין את עלות הגרירה המשוערת לפי סוג הרכב, זמן השירות, ומרחק הנסיעה.',
+    title: {
+        absolute: 'מחירון גרירה 2026: כמה עולה גרר? מחשבון חינמי מיידי',
+    },
+    description: 'כמה עולה לגרור רכב ב-2026? בדקו תוך 10 שניות במחשבון החינמי! תעריף מקומי שקוף מ-150 ₪ ללא הפתעות. הצעת מחיר סופית בטלפון: 054-917-4414',
     alternates: {
-        canonical: 'https://grar-haifa.vercel.app/milon/towing-cost',
+        canonical: '/milon/towing-cost',
+    },
+    openGraph: {
+        title: 'מחירון גרירה 2026: כמה עולה גרר? מחשבון חינמי מיידי',
+        description: 'בדקו תוך 10 שניות כמה עולה לגרור רכב בחיפה, הקריות והצפון לפי מרחק, סוג רכב ושעה.',
+        type: 'website',
+        locale: 'he_IL',
     },
 };
 
@@ -36,6 +44,10 @@ export default function TowingCostPage() {
             <JsonLd
                 isHomePage={false}
                 faqs={DYNAMIC_FAQS}
+                breadcrumbs={[
+                    { name: "עמוד הבית", item: "/" },
+                    { name: "מחירון ומחשבון גרירה 2026", item: "/milon/towing-cost" },
+                ]}
             />
 
             {/* Decorative background blurs */}

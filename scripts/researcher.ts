@@ -1,81 +1,129 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { createClient } from '@supabase/supabase-js';
 import * as dotenv from 'dotenv';
+import fs from 'fs';
+import path from 'path';
+import {
+    fetchDailyTrends,
+    fetchGoogleSuggestQueries,
+    fetchHaifaWeather,
+    isTopicCovered,
+} from './lib/trends-fetcher';
 
 dotenv.config({ path: '.env.local' });
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
-const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-const OTHERS_INTENTS = ['vehicle', 'situation', 'price', 'complementary'];
-
-// --- Helper Functions ---
-
-async function fetchWeatherStatus(location: string): Promise<{ isEmergency: boolean; context: string | null }> {
-    // 1. קריאה ל-API של מזג אוויר חינמי (למשל, OpenWeatherMap)
-    // אם מזג האוויר סוער בחיפה (גשם חזק, שלג, הצפות):
-    // return { isEmergency: true, context: "סופה עזה והצפות בכרמל" };
-    return { isEmergency: false, context: null };
+if (!GEMINI_API_KEY || !SUPABASE_URL || !SUPABASE_KEY) {
+    console.error('Missing GEMINI_API_KEY or Supabase environment variables.');
+    process.exit(1);
 }
 
-async function getMissingMicroLocations(): Promise<any[]> {
-    // שליפה של מיקומים שעדיין לא כיסינו בצורה מספקת
-    const { data } = await supabase.from('micro_locations').select('*');
-    return data || [];
-}
-
-// --- Main Agent Action 1: The Researcher ---
+const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 async function runLocalResearcher() {
-    console.log("Starting Local Researcher...");
+    console.log('Starting Local Researcher (Weather + Live Trends + Google Suggest + SEO AI)...');
 
-    // Setup Gemini 3.1 Flash Lite with low temperature for factual trend extraction
-    const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
-    const weather = await fetchWeatherStatus("Haifa");
+    const modelName = process.env.GEMINI_MODEL || 'gemini-3.1-flash-lite-preview';
+    const model = genAI.getGenerativeModel({ model: modelName });
+
+    const [weather, dailyTrends, suggestA, suggestB] = await Promise.all([
+        fetchHaifaWeather(),
+        fetchDailyTrends(),
+        fetchGoogleSuggestQueries('גרירת רכב חיפה '),
+        fetchGoogleSuggestQueries('תקלה ברכב '),
+    ]);
+
+    // Load existing guides and recent trends so we don't research duplicates
+    let existingTitles: string[] = [];
+    try {
+        const guidesPath = path.join(process.cwd(), 'src', 'lib', 'guides.ts');
+        const guidesContent = fs.readFileSync(guidesPath, 'utf-8');
+        existingTitles = Array.from(guidesContent.matchAll(/["']?title["']?\s*:\s*"((?:[^"\\]|\\.)*)"/g)).map((m) =>
+            m[1].replace(/\\"/g, '"')
+        );
+    } catch {
+        // ignore
+    }
+
+    const { data: recentTrends } = await supabase
+        .from('local_trends')
+        .select('query')
+        .order('id', { ascending: false })
+        .limit(30);
+
+    const existingTrendQueries = (recentTrends || []).map((r) => r.query).filter(Boolean);
+    const allCovered = [...existingTitles, ...existingTrendQueries];
+
+    const todayStr = new Date().toISOString().split('T')[0];
+    const liveSignals = [
+        ...dailyTrends.map((t) => `${t.title} (${t.trafficVolume || 'trending'})`),
+        ...suggestA,
+        ...suggestB,
+    ].slice(0, 15);
 
     let systemPrompt = `
-        You are an elite Local SEO expert. We provide towing services in Haifa and the Krayot area (Israel).
-        Based on the 4 intents (Vehicle: e.g., heavy motorcycles. Situation: e.g., mud rescue in Carmel. Price: e.g., cheap towing. Complementary: e.g., buying cars for parts),
-        Output exactly 5 highly specific, long-tail local search queries that people are likely searching for RIGHT NOW.
-        Focus on hyper-local topography (e.g., Ahuzah, Check Post, Route 22).
+        You are an elite Local SEO & Search Trend Researcher in Israel.
+        Today's date is ${todayStr}. Current local context: ${weather.summary}.
+        We provide 24/7 towing and roadside rescue services in Haifa and the Krayot area ONLY (חיפה, קריות, נשר, טירת כרמל, עכו, יקנעם, טבעון).
+        NOTE: We do NOT tow motorcycles (אופנועים).
 
-        Output format must be a strictly valid JSON array of strings: ["query 1", "query 2", ...]
+        Live Israeli search signals right now:
+        ${liveSignals.length > 0 ? liveSignals.map((s) => `- ${s}`).join('\n') : '- (Use current seasonal & local driving trends in Haifa/Krayot)'}
+
+        Topics/queries ALREADY covered (DO NOT repeat these):
+        ${allCovered.slice(-25).map((t) => `- ${t}`).join('\n')}
+
+        Output exactly 5 fresh, high-CTR, high-intent Hebrew long-tail search queries or article/landing-page topics that drivers in Haifa & Krayot are searching for RIGHT NOW.
+        Cover diverse angles: EV battery/towing, steep hills/Carmel Tunnels, winter/rain hazards, dashboard warning lights, parking garage rescue, or local roads (Route 22, Route 4, Freud, Check Post).
+
+        Output format must be a strictly valid JSON array of Hebrew strings: ["query 1", "query 2", ...]
     `;
 
     if (weather.isEmergency) {
-        systemPrompt += `\nEMERGENCY SEO MODE ACTIVATED: The weather is severe (${weather.context}). Focus queries on storm-related towing (e.g., flooded cars, accidents).`;
+        systemPrompt += `\nEMERGENCY SEO MODE ACTIVATED: Severe weather in Haifa (${weather.context}). Prioritize storm/flood/slippery-road towing queries.`;
     }
 
     try {
         const result = await model.generateContent({
-            contents: [{ role: "user", parts: [{ text: systemPrompt }] }],
+            contents: [{ role: 'user', parts: [{ text: systemPrompt }] }],
             generationConfig: {
-                temperature: 0.3, // Low temperature for consistency
-                responseMimeType: "application/json",
-            }
+                temperature: 0.4,
+                responseMimeType: 'application/json',
+            },
         });
 
         const textResponse = result.response.text();
         const trends: string[] = JSON.parse(textResponse);
-        console.log("Trends Discovered:", trends);
+        console.log('Trends Discovered:', trends);
 
-        // Map these to intents/locations conceptually and save to Supabase
-        // (In a real scenario, you'd use Gemini again or exact string matching to link to specific UUIDs in Supabase)
-
+        let inserted = 0;
         for (const query of trends) {
+            if (!query || isTopicCovered(query, allCovered)) {
+                console.log(`⏭️ Skipping already-covered trend: "${query}"`);
+                continue;
+            }
             const { error } = await supabase.from('local_trends').insert({
-                query: query,
-                source: 'gemini',
+                query,
+                source: liveSignals.length > 0 ? 'gemini+live-trends' : 'gemini',
                 is_emergency: weather.isEmergency,
                 emergency_context: weather.context,
-                status: 'pending' // Ready for Builder Agent
+                status: 'pending',
             });
-            if (error) console.error("Error saving trend:", error.message);
+            if (error) {
+                console.error('Error saving trend:', error.message);
+            } else {
+                inserted++;
+            }
         }
 
-        console.log("Researcher finished.");
+        console.log(`Researcher finished. Inserted ${inserted} new unique trends.`);
     } catch (e) {
-        console.error("Agent failed:", e);
+        console.error('Agent failed:', e);
+        process.exit(1);
     }
 }
 
