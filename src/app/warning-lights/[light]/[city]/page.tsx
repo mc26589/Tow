@@ -1,19 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { BUSINESS_INFO, CITIES, findCity } from "@/lib/data";
+import { BUSINESS_INFO, findCity } from "@/lib/data";
 import { WARNING_LIGHTS, findWarningLight, getPseoWhatsAppLink } from "@/lib/data-pseo";
 import { generateFAQs } from "@/lib/seo-content";
 import { JsonLd } from "@/components/json-ld";
 import { DiagnosticTool } from "@/components/diagnostic-tool";
+import { FAQSection } from "@/components/faq-section";
 
 export async function generateStaticParams() {
-    const params: { light: string; city: string }[] = [];
-    for (const city of CITIES) {
-        for (const light of WARNING_LIGHTS) {
-            params.push({ light: light.slug, city: city.slug });
-        }
-    }
-    return params;
+    return WARNING_LIGHTS.map((light) => ({
+        light: light.slug,
+        city: "haifa",
+    }));
 }
 
 interface PageProps {
@@ -24,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const city = findCity(params.city);
     const light = findWarningLight(params.light);
 
-    if (!city || !light) return {};
+    if (!city || !light || city.slug !== "haifa") return {};
 
     const title = `${light.name_he}? מותר לנסוע? מדריך + גרר ב${city.name_he}`;
     const description = `נדלקה ${light.name_he} ב${city.name_he}? בדקו מיד אם מותר להמשיך לנסוע או שחובה לעצור כדי לא להרוס את המנוע. ייעוץ מיידי וגרר תוך 30 דק': ${BUSINESS_INFO.displayPhone}`;
@@ -50,7 +48,7 @@ export default async function WarningLightPage({ params }: PageProps) {
     const city = findCity(params.city);
     const light = findWarningLight(params.light);
 
-    if (!city || !light) {
+    if (!city || !light || city.slug !== "haifa") {
         notFound();
     }
 
@@ -64,7 +62,16 @@ export default async function WarningLightPage({ params }: PageProps) {
 
     return (
         <>
-            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName="רכב" vehicleSlug="private-car" faqs={faqs} />
+            <JsonLd
+                cityName={city.name_he}
+                citySlug={city.slug}
+                faqs={faqs}
+                breadcrumbs={[
+                    { name: "עמוד הבית", item: "/" },
+                    { name: `גרר ב${city.name_he}`, item: `/${city.slug}` },
+                    { name: light.name_he, item: `/warning-lights/${light.slug}/${city.slug}` },
+                ]}
+            />
 
             <section className="bg-white py-14 md:py-24">
                 <div className="max-w-3xl mx-auto px-4 text-center">
@@ -116,6 +123,8 @@ export default async function WarningLightPage({ params }: PageProps) {
                     </div>
                 </div>
             </section>
+
+            <FAQSection faqs={faqs} city={city.name_he} vehicle="רכב" />
         </>
     );
 }

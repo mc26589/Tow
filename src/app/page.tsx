@@ -12,6 +12,7 @@ import TowingCalculator from "@/components/TowingCalculator";
 export const metadata: Metadata = {
     alternates: {
         canonical: "/",
+        types: { "text/markdown": "/index.md" },
     },
 };
 

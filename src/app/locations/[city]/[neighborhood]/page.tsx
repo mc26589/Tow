@@ -60,7 +60,16 @@ export default async function NeighborhoodPage({ params }: PageProps) {
 
     return (
         <>
-            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName="רכב" vehicleSlug="private-car" faqs={faqs} />
+            <JsonLd
+                cityName={city.name_he}
+                citySlug={city.slug}
+                faqs={faqs}
+                breadcrumbs={[
+                    { name: "עמוד הבית", item: "/" },
+                    { name: city.slug === "krayot" ? "גרר בקריות" : `גרר ב${city.name_he}`, item: `/${city.slug}` },
+                    { name: `גרר ב${neighborhood.name_he}`, item: `/locations/${city.slug}/${neighborhood.slug}` },
+                ]}
+            />
 
             <section className="gradient-trust text-white py-14 md:py-20">
                 <div className="max-w-4xl mx-auto px-4 text-center">

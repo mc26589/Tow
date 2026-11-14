@@ -266,3 +266,255 @@ export async function fetchGscTrendingTopicCandidates(existingTexts: string[], l
     }
 }
 
+export interface GscWindowSummary {
+    startDate: string;
+    endDate: string;
+    clicks: number;
+    impressions: number;
+    avgCtr: number;
+    avgPosition: number;
+    activePages: number;
+}
+
+export interface GscComparisonPage {
+    route: string;
+    recentClicks: number;
+    recentImpressions: number;
+    recentCtr: number;
+    recentPosition: number;
+    baselineClicks: number;
+    baselineImpressions: number;
+    baselineCtr: number;
+    baselinePosition: number;
+    positionDelta: number; // positive = improved (moved closer to 1)
+    topQueries: GscQueryMetric[];
+}
+
+export interface GscUncoveredCluster {
+    representativeQuery: string;
+    relatedQueries: string[];
+    totalImpressions: number;
+    bestPosition: number;
+}
+
+export interface GscComparisonReport {
+    recentWindow: GscWindowSummary;
+    baselineWindow: GscWindowSummary;
+    strikingDistance: GscComparisonPage[];
+    lowCtrTopPositions: GscComparisonPage[];
+    uncoveredClusters: GscUncoveredCluster[];
+    allBaselinePages: GscComparisonPage[];
+}
+
+function isIrrelevantOrBannedQuery(q: string): boolean {
+    return /scrap|junk|piruk|פירוק|גרוטא|אופנוע|קטנוע|motorcycle|פתח תקווה|שגריר|מוקד תנועה/i.test(q);
+}
+
+function aggregateWindowStats(rows: SearchAnalyticsRow[], startDate: string, endDate: string): GscWindowSummary {
+    const valid = rows.filter((r) => !isOffBrandScrap(normalizeRoute(r.keys[0])));
+    const clicks = valid.reduce((sum, r) => sum + r.clicks, 0);
+    const impressions = valid.reduce((sum, r) => sum + r.impressions, 0);
+    const weightedPos = impressions > 0
+        ? valid.reduce((sum, r) => sum + r.position * r.impressions, 0) / impressions
+        : 0;
+    return {
+        startDate,
+        endDate,
+        clicks,
+        impressions,
+        avgCtr: impressions > 0 ? Number((clicks / impressions).toFixed(4)) : 0,
+        avgPosition: Number(weightedPos.toFixed(2)),
+        activePages: valid.length,
+    };
+}
+
+/**
+ * Fetches latest 4 available GSC days vs preceding 28 days, classifies Striking Distance (pos 5-20),
+ * Low-CTR Top 1-5 (<3% CTR), and uncovered Hebrew query clusters.
+ */
+export async function fetchGscComparisonReport(
+    existingCorpusTexts: string[],
+    canonicalRoutes?: Set<string>
+): Promise<GscComparisonReport | null> {
+    const token = await getAccessToken();
+    if (!token) {
+        console.warn('⚠️ No GSC credentials found (GCP_SA_KEY or google-indexer/service-account-keys.json).');
+        return null;
+    }
+
+    // GSC usually lags ~2-3 days; compare latest 4 available days vs preceding 28 days
+    const recentEnd = formatDateDaysAgo(3);
+    const recentStart = formatDateDaysAgo(6);
+    const baselineEnd = formatDateDaysAgo(7);
+    const baselineStart = formatDateDaysAgo(34);
+
+    const [recentPages, baselinePages, combinedQueryPageRows, combinedQueryRows] = await Promise.all([
+        queryGsc(token, { startDate: recentStart, endDate: recentEnd, dimensions: ['page'], rowLimit: 500 }),
+        queryGsc(token, { startDate: baselineStart, endDate: baselineEnd, dimensions: ['page'], rowLimit: 1000 }),
+        queryGsc(token, { startDate: baselineStart, endDate: recentEnd, dimensions: ['query', 'page'], rowLimit: 2500 }),
+        queryGsc(token, { startDate: baselineStart, endDate: recentEnd, dimensions: ['query'], rowLimit: 1000 }),
+    ]);
+
+    const recentWindow = aggregateWindowStats(recentPages, recentStart, recentEnd);
+    const baselineWindow = aggregateWindowStats(baselinePages, baselineStart, baselineEnd);
+
+    const recentByRoute = new Map<string, SearchAnalyticsRow>();
+    for (const r of recentPages) {
+        const route = normalizeRoute(r.keys[0]);
+        if (!isOffBrandScrap(route)) recentByRoute.set(route, r);
+    }
+
+    const baselineByRoute = new Map<string, SearchAnalyticsRow>();
+    for (const r of baselinePages) {
+        const route = normalizeRoute(r.keys[0]);
+        if (!isOffBrandScrap(route)) baselineByRoute.set(route, r);
+    }
+
+    const queriesByRoute = new Map<string, GscQueryMetric[]>();
+    for (const r of combinedQueryPageRows) {
+        const query = r.keys[0].trim();
+        const route = normalizeRoute(r.keys[1]);
+        if (isIrrelevantOrBannedQuery(query) || isOffBrandScrap(route)) continue;
+        const list = queriesByRoute.get(route) || [];
+        list.push({
+            query,
+            impressions: r.impressions,
+            clicks: r.clicks,
+            position: Number(r.position.toFixed(1)),
+        });
+        queriesByRoute.set(route, list);
+    }
+
+    const allRoutes = Array.from(
+        new Set<string>([...Array.from(recentByRoute.keys()), ...Array.from(baselineByRoute.keys())])
+    );
+    const allPages: GscComparisonPage[] = [];
+
+    for (const route of allRoutes) {
+        if (canonicalRoutes && canonicalRoutes.size > 0 && !canonicalRoutes.has(route)) {
+            continue;
+        }
+        const rec = recentByRoute.get(route);
+        const base = baselineByRoute.get(route);
+        const recPos = rec ? Number(rec.position.toFixed(1)) : 0;
+        const basePos = base ? Number(base.position.toFixed(1)) : 0;
+
+        const topQueries = (queriesByRoute.get(route) || [])
+            .sort((a, b) => b.impressions - a.impressions)
+            .slice(0, 8);
+
+        allPages.push({
+            route,
+            recentClicks: rec?.clicks ?? 0,
+            recentImpressions: rec?.impressions ?? 0,
+            recentCtr: rec ? Number(rec.ctr.toFixed(4)) : 0,
+            recentPosition: recPos,
+            baselineClicks: base?.clicks ?? 0,
+            baselineImpressions: base?.impressions ?? 0,
+            baselineCtr: base ? Number(base.ctr.toFixed(4)) : 0,
+            baselinePosition: basePos,
+            positionDelta: recPos > 0 && basePos > 0 ? Number((basePos - recPos).toFixed(1)) : 0,
+            topQueries,
+        });
+    }
+
+    const effectiveImpressions = (p: GscComparisonPage) => p.recentImpressions + p.baselineImpressions;
+    const effectivePosition = (p: GscComparisonPage) =>
+        p.recentImpressions >= 3 && p.recentPosition > 0 ? p.recentPosition : p.baselinePosition || p.recentPosition;
+    const effectiveCtr = (p: GscComparisonPage) => {
+        const totalImp = effectiveImpressions(p);
+        if (totalImp === 0) return 0;
+        return (p.recentClicks + p.baselineClicks) / totalImp;
+    };
+
+    const strikingDistance = allPages
+        .filter((p) => {
+            const pos = effectivePosition(p);
+            return pos >= 5 && pos <= 20 && effectiveImpressions(p) >= 2;
+        })
+        .sort((a, b) => effectiveImpressions(b) - effectiveImpressions(a));
+
+    const lowCtrTopPositions = allPages
+        .filter((p) => {
+            const pos = effectivePosition(p);
+            const ctr = effectiveCtr(p);
+            return pos >= 1 && pos <= 5 && ctr < 0.03 && effectiveImpressions(p) >= 2;
+        })
+        .sort((a, b) => effectiveImpressions(b) - effectiveImpressions(a));
+
+    // Identify uncovered Hebrew query clusters
+    const hebrewRe = /[\u0590-\u05FF]/;
+    const corpusNormalized = existingCorpusTexts.map((t) => t.toLowerCase());
+    const uncoveredQueries: Array<{ query: string; impressions: number; position: number }> = [];
+
+    for (const r of combinedQueryRows) {
+        const q = r.keys[0].trim();
+        if (!hebrewRe.test(q) || q.length < 5 || q.startsWith('"')) continue;
+        if (isIrrelevantOrBannedQuery(q)) continue;
+        if (r.impressions < 3) continue;
+
+        const significantTokens = q
+            .toLowerCase()
+            .replace(/[^\u0590-\u05FFa-z0-9\s]/g, ' ')
+            .split(/\s+/)
+            .filter((w) => w.length >= 3 && !['איך', 'כמה', 'מה', 'של', 'עם', 'או', 'על', 'את'].includes(w));
+
+        if (significantTokens.length === 0) continue;
+
+        const covered = corpusNormalized.some((doc) => {
+            const matches = significantTokens.filter((tok) => doc.includes(tok));
+            return matches.length >= Math.min(2, significantTokens.length);
+        });
+
+        if (!covered) {
+            uncoveredQueries.push({
+                query: q,
+                impressions: r.impressions,
+                position: Number(r.position.toFixed(1)),
+            });
+        }
+    }
+
+    // Group uncovered queries by shared stem overlap
+    const clusters: GscUncoveredCluster[] = [];
+    const sortedUncovered = uncoveredQueries.sort((a, b) => b.impressions - a.impressions);
+
+    for (const item of sortedUncovered) {
+        const tokens = item.query
+            .toLowerCase()
+            .replace(/[^\u0590-\u05FFa-z0-9\s]/g, ' ')
+            .split(/\s+/)
+            .filter((w) => w.length >= 3);
+
+        const existingCluster = clusters.find((c) => {
+            const rep = c.representativeQuery.toLowerCase();
+            return tokens.some((tok) => rep.includes(tok));
+        });
+
+        if (existingCluster) {
+            if (!existingCluster.relatedQueries.includes(item.query)) {
+                existingCluster.relatedQueries.push(item.query);
+            }
+            existingCluster.totalImpressions += item.impressions;
+            existingCluster.bestPosition = Math.min(existingCluster.bestPosition, item.position);
+        } else {
+            clusters.push({
+                representativeQuery: item.query,
+                relatedQueries: [item.query],
+                totalImpressions: item.impressions,
+                bestPosition: item.position,
+            });
+        }
+    }
+
+    return {
+        recentWindow,
+        baselineWindow,
+        strikingDistance,
+        lowCtrTopPositions,
+        uncoveredClusters: clusters.sort((a, b) => b.totalImpressions - a.totalImpressions).slice(0, 5),
+        allBaselinePages: allPages,
+    };
+}
+
+

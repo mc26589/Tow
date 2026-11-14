@@ -59,6 +59,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
         alternates: {
             canonical: `/${city.slug}`,
+            types: { "text/markdown": `/${city.slug}.md` },
         },
     };
 }

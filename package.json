@@ -16,7 +16,9 @@
         "agent:reporter": "npx tsx scripts/agent-reporter.ts",
         "agent:blog": "npx tsx scripts/agent-blog.ts",
         "agent:fixer": "npx tsx scripts/agent-fixer.ts",
-        "agent:seobooster": "npx tsx scripts/agent-seo-booster.ts"
+        "agent:seobooster": "npx tsx scripts/agent-seo-booster.ts",
+        "agent:seo-cycle": "npx tsx scripts/autonomous-seo-cycle.ts",
+        "indexnow": "npx --yes tsx scripts/indexnow.ts"
     },
     "dependencies": {
         "@google/generative-ai": "^0.24.1",

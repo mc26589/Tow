@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { BUSINESS_INFO, CITIES, findCity } from "@/lib/data";
+import { BUSINESS_INFO, findCity } from "@/lib/data";
 import { HAZARDS, findHazard, getPseoWhatsAppLink } from "@/lib/data-pseo";
 import { generateFAQs } from "@/lib/seo-content";
 import { JsonLd } from "@/components/json-ld";
+import { FAQSection } from "@/components/faq-section";
+
+const ALLOWED_HAZARD_CITIES = ["haifa", "krayot"] as const;
 
 export async function generateStaticParams() {
     const params: { hazard: string; city: string }[] = [];
-    for (const city of CITIES) {
+    for (const citySlug of ALLOWED_HAZARD_CITIES) {
         for (const hazard of HAZARDS) {
-            params.push({ hazard: hazard.slug, city: city.slug });
+            params.push({ hazard: hazard.slug, city: citySlug });
         }
     }
     return params;
@@ -23,7 +26,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const city = findCity(params.city);
     const hazard = findHazard(params.hazard);
 
-    if (!city || !hazard) return {};
+    const isAllowedCity = ALLOWED_HAZARD_CITIES.includes(params.city as (typeof ALLOWED_HAZARD_CITIES)[number]);
+    if (!city || !hazard || !isAllowedCity) return {};
 
     const title = `${hazard.name_he} ב${city.name_he} 24/7 | הגעה ב-25 דק' ⭐`;
     const description = `צריכים ${hazard.name_he} ב${city.name_he}? ${hazard.description} הגעה תוך 25–30 דק' (4.9★), ציוד ייעודי ללא נזק ומחיר סופי בטלפון: ${BUSINESS_INFO.displayPhone}`;
@@ -49,7 +53,8 @@ export default async function HazardPage({ params }: PageProps) {
     const city = findCity(params.city);
     const hazard = findHazard(params.hazard);
 
-    if (!city || !hazard) {
+    const isAllowedCity = ALLOWED_HAZARD_CITIES.includes(params.city as (typeof ALLOWED_HAZARD_CITIES)[number]);
+    if (!city || !hazard || !isAllowedCity) {
         notFound();
     }
 
@@ -59,7 +64,16 @@ export default async function HazardPage({ params }: PageProps) {
 
     return (
         <>
-            <JsonLd cityName={city.name_he} citySlug={city.slug} vehicleName="רכב" vehicleSlug="private-car" faqs={faqs} />
+            <JsonLd
+                cityName={city.name_he}
+                citySlug={city.slug}
+                faqs={faqs}
+                breadcrumbs={[
+                    { name: "עמוד הבית", item: "/" },
+                    { name: city.slug === "krayot" ? "גרר בקריות" : `גרר ב${city.name_he}`, item: `/${city.slug}` },
+                    { name: `${hazard.name_he} ב${city.name_he}`, item: `/hazards/${hazard.slug}/${city.slug}` },
+                ]}
+            />
 
             <section className="bg-slate-50 py-14 md:py-24">
                 <div className="max-w-4xl mx-auto px-4 text-center">
@@ -103,6 +117,8 @@ export default async function HazardPage({ params }: PageProps) {
                     </div>
                 </div>
             </section>
+
+            <FAQSection faqs={faqs} city={city.name_he} vehicle="רכב" />
         </>
     );
 }

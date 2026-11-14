@@ -1,23 +1,19 @@
 import { MetadataRoute } from 'next';
-import { supabase } from '@/lib/supabase';
 import { CITIES, VEHICLES } from '@/lib/data';
 import { GUIDES } from '@/lib/guides';
-import { B2B_INDUSTRIES, DESTINATIONS, HAZARDS, NEIGHBORHOODS, ROADS, WARNING_LIGHTS } from '@/lib/data-pseo';
-import fs from 'fs';
-import path from 'path';
+import { HAZARDS, NEIGHBORHOODS, ROADS, WARNING_LIGHTS } from '@/lib/data-pseo';
 
 export const revalidate = 3600; // Revalidate every hour
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://grar-haifa.vercel.app';
-    // Stable date for static/programmatic routes so sitemap lastmod doesn't change every hour
-    // and starve new blog/area URLs in google-indexer/sync.js
-    const staticLastMod = new Date('2026-11-13T00:00:00Z');
+    const staticLastMod = new Date('2026-11-14T00:00:00Z');
     const latestGuideDate = GUIDES.reduce((latest, g) => {
         const d = new Date(g.publishDate);
         return !isNaN(d.getTime()) && d > latest ? d : latest;
     }, staticLastMod);
 
+    // Core static pages
     const staticRoutes: MetadataRoute.Sitemap = [
         {
             url: baseUrl,
@@ -29,7 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             url: `${baseUrl}/about`,
             lastModified: staticLastMod,
             changeFrequency: 'monthly',
-            priority: 0.5,
+            priority: 0.6,
         },
         {
             url: `${baseUrl}/facts`,
@@ -46,18 +42,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         {
             url: `${baseUrl}/milon/towing-cost`,
             lastModified: staticLastMod,
-            changeFrequency: 'monthly',
+            changeFrequency: 'weekly',
             priority: 0.9,
         },
         {
             url: `${baseUrl}/areas`,
             lastModified: staticLastMod,
             changeFrequency: 'weekly',
-            priority: 0.8,
+            priority: 0.85,
         },
     ];
 
-    // 0.5. City Pillar pages (/haifa, /krayot, etc.)
+    // City Pillar pages (/haifa, /krayot, /tirat-carmel, etc.)
     const cityPillarUrls: MetadataRoute.Sitemap = CITIES.map((city) => ({
         url: `${baseUrl}/${city.slug}`,
         lastModified: staticLastMod,
@@ -65,7 +61,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.95,
     }));
 
-    // 1. Gen static cities/vehicles
+    // City x specialized vehicle pages (electric, commercial, suv only)
     const cityVehicleUrls: MetadataRoute.Sitemap = [];
     for (const city of CITIES) {
         for (const vehicle of VEHICLES) {
@@ -73,19 +69,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 url: `${baseUrl}/${city.slug}/${vehicle.slug}`,
                 lastModified: staticLastMod,
                 changeFrequency: 'weekly',
-                priority: 0.9,
+                priority: 0.85,
             });
         }
     }
 
-    // 1.5. Gen other dynamic pSEO routes
+    // Consolidated canonical pSEO routes (no city-multiplied bloat)
     const additionalPSEOUrls: MetadataRoute.Sitemap = [];
 
-    // Hazards per city
-    for (const city of CITIES) {
+    // Hazards — only Haifa & Krayot hubs
+    for (const citySlug of ['haifa', 'krayot'] as const) {
         for (const hazard of HAZARDS) {
             additionalPSEOUrls.push({
-                url: `${baseUrl}/hazards/${hazard.slug}/${city.slug}`,
+                url: `${baseUrl}/hazards/${hazard.slug}/${citySlug}`,
                 lastModified: staticLastMod,
                 changeFrequency: 'weekly',
                 priority: 0.8,
@@ -93,40 +89,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         }
     }
 
-    // B2B per city
-    for (const city of CITIES) {
-        for (const industry of B2B_INDUSTRIES) {
-            additionalPSEOUrls.push({
-                url: `${baseUrl}/b2b/${industry.slug}/${city.slug}`,
-                lastModified: staticLastMod,
-                changeFrequency: 'weekly',
-                priority: 0.8,
-            });
-        }
-    }
-
-    // Destinations — route is /destination/[destination]/[city]
-    for (const destination of DESTINATIONS) {
-        for (const city of CITIES) {
-            additionalPSEOUrls.push({
-                url: `${baseUrl}/destination/${destination.slug}/${city.slug}`,
-                lastModified: staticLastMod,
-                changeFrequency: 'weekly',
-                priority: 0.8,
-            });
-        }
-    }
-
-    // Warning Lights
-    for (const city of CITIES) {
-        for (const light of WARNING_LIGHTS) {
-            additionalPSEOUrls.push({
-                url: `${baseUrl}/warning-lights/${light.slug}/${city.slug}`,
-                lastModified: staticLastMod,
-                changeFrequency: 'weekly',
-                priority: 0.8,
-            });
-        }
+    // Warning Lights — canonical Haifa hub only
+    for (const light of WARNING_LIGHTS) {
+        additionalPSEOUrls.push({
+            url: `${baseUrl}/warning-lights/${light.slug}/haifa`,
+            lastModified: staticLastMod,
+            changeFrequency: 'monthly',
+            priority: 0.75,
+        });
     }
 
     // Neighborhoods
@@ -139,122 +109,34 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         });
     }
 
-    // Roads
+    // Major Roads
     for (const road of ROADS) {
         additionalPSEOUrls.push({
             url: `${baseUrl}/roads/${road.slug}`,
             lastModified: staticLastMod,
             changeFrequency: 'weekly',
-            priority: 0.8,
+            priority: 0.85,
         });
     }
 
-    // 2. Gen Guides
+    // Guides hub + canonical guides only
     const guideUrls: MetadataRoute.Sitemap = [
         {
             url: `${baseUrl}/guides`,
             lastModified: latestGuideDate,
             changeFrequency: 'weekly',
-            priority: 0.8,
+            priority: 0.85,
         },
         ...GUIDES.map((guide) => ({
             url: `${baseUrl}/guides/${guide.slug}`,
             lastModified: new Date(guide.publishDate),
             changeFrequency: 'monthly' as const,
-            priority: 0.7,
-        }))
+            priority: 0.75,
+        })),
     ];
 
-    // 3. Fetch from Supabase (Spoke pages)
-    //
-    // IMPORTANT: builder.ts inserts a spoke_pages row as soon as it writes
-    // page.tsx to the CI runner's local disk — but that write only becomes
-    // "real" if the subsequent `git commit` + `git push` (and, since
-    // 2026-09-08, the build-verification step) also succeed. If the push
-    // fails for any reason (merge conflict, failed build, workflow crash,
-    // API quota, etc.) the Supabase row still exists and still says
-    // is_published: true, but the file was never actually deployed. Left
-    // unchecked, that row goes straight into the sitemap and Google gets a
-    // 404 for a URL that never had a real page — which is exactly the
-    // "Not Found (404)" issue Search Console flagged on 2026-09-06.
-    //
-    // Fix: treat the DB as an index of *candidate* routes, not a source of
-    // truth on its own — only include a spoke_pages URL in the sitemap if
-    // its page.tsx file actually exists in the currently deployed build.
-    let dynamicUrls: MetadataRoute.Sitemap = [];
-    try {
-        const { data: spokePages, error } = await supabase
-            .from('spoke_pages')
-            .select('route_path')
-            .eq('is_published', true);
-
-        const isOffBrandScrap = (routeOrSlug: string) => /scrap|junk|piruk|פירוק|גרוטא/i.test(routeOrSlug);
-
-        if (!error && spokePages) {
-            dynamicUrls = spokePages
-                .filter((page) => {
-                    if (isOffBrandScrap(page.route_path)) return false;
-                    // route_path looks like "/areas/haifa-general/some-slug"
-                    // which maps 1:1 to src/app/areas/haifa-general/some-slug/page.tsx
-                    const relativePath = page.route_path.replace(/^\//, '');
-                    const pageFilePath = path.join(process.cwd(), 'src', 'app', relativePath, 'page.tsx');
-                    const exists = fs.existsSync(pageFilePath);
-                    if (!exists) {
-                        console.warn(
-                            `sitemap: skipping ${page.route_path} — spoke_pages row exists but page.tsx was never deployed (likely a failed CI push).`
-                        );
-                    }
-                    return exists;
-                })
-                .map((page) => ({
-                    url: `${baseUrl}${page.route_path}`,
-                    lastModified: staticLastMod,
-                    changeFrequency: 'weekly',
-                    priority: 0.8,
-                }));
-        } else {
-            console.error('Error fetching spoke pages for sitemap:', error);
-        }
-    } catch (err) {
-        console.error('Failed to connect to Supabase for sitemap:', err);
-    }
-
-    // 4. Scan physical file system for AI generated pSEO pages (areas)
-    const fsUrls: MetadataRoute.Sitemap = [];
-    try {
-        const areasDir = path.join(process.cwd(), 'src', 'app', 'areas');
-        if (fs.existsSync(areasDir)) {
-            const subAreas = fs.readdirSync(areasDir, { withFileTypes: true })
-                .filter(dirent => dirent.isDirectory());
-
-            for (const area of subAreas) {
-                const subDirPath = path.join(areasDir, area.name);
-                const pageDirs = fs.readdirSync(subDirPath, { withFileTypes: true })
-                    .filter(dirent => dirent.isDirectory());
-
-                for (const pageDir of pageDirs) {
-                    if (/scrap|junk|piruk|פירוק|גרוטא/i.test(pageDir.name)) continue;
-                    const pagePath = path.join(subDirPath, pageDir.name, 'page.tsx');
-                    if (fs.existsSync(pagePath)) {
-                        const stat = fs.statSync(pagePath);
-                        fsUrls.push({
-                            url: `${baseUrl}/areas/${area.name}/${pageDir.name}`,
-                            lastModified: stat.mtime,
-                            changeFrequency: 'weekly',
-                            priority: 0.8,
-                        });
-                    }
-                }
-            }
-        }
-    } catch (err) {
-        console.error('Failed to scan file system for sitemap:', err);
-    }
-
-    // Merge and deduplicate URLs
     const allUrlsMap = new Map<string, MetadataRoute.Sitemap[number]>();
-
-    [...staticRoutes, ...cityPillarUrls, ...cityVehicleUrls, ...additionalPSEOUrls, ...guideUrls, ...dynamicUrls, ...fsUrls].forEach(item => {
+    [...staticRoutes, ...cityPillarUrls, ...cityVehicleUrls, ...additionalPSEOUrls, ...guideUrls].forEach((item) => {
         if (!allUrlsMap.has(item.url)) {
             allUrlsMap.set(item.url, item);
         }

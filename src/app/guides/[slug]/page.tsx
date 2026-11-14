@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: guide.description,
         alternates: {
             canonical: `/guides/${guide.slug}`,
+            types: { "text/markdown": `/guides/${guide.slug}.md` },
         },
         openGraph: {
             title: finalTitle,
@@ -57,6 +58,7 @@ export default function GuideArticlePage({ params }: Props) {
                     slug: guide.slug,
                     author: guide.author
                 }}
+                faqs={guide.faqs}
             />
 
             <header className="bg-slate-50 py-16 border-b border-slate-100">
@@ -91,16 +93,41 @@ export default function GuideArticlePage({ params }: Props) {
                                prose-headings:font-rubik prose-headings:font-bold prose-headings:text-slate-900
                                prose-p:text-slate-600 prose-p:leading-relaxed
                                prose-li:text-slate-600
-                               prose-strong:text-slate-900 prose-strong:font-bold"
+                               prose-strong:text-slate-900 prose-strong:font-bold
+                               prose-table:border-collapse prose-th:bg-slate-100 prose-th:p-3 prose-td:p-3 prose-td:border prose-th:border"
                     dangerouslySetInnerHTML={{ __html: guide.content }}
                 />
 
+                {guide.faqs && guide.faqs.length > 0 && (
+                    <section className="mt-14 pt-10 border-t border-slate-200" dir="rtl">
+                        <h2 className="text-2xl font-rubik font-bold text-slate-900 mb-6">
+                            שאלות נפוצות
+                        </h2>
+                        <div className="space-y-4">
+                            {guide.faqs.map((faq, idx) => (
+                                <details
+                                    key={idx}
+                                    open={idx === 0}
+                                    className="group rounded-2xl border border-slate-200 bg-slate-50 p-5"
+                                >
+                                    <summary className="cursor-pointer font-bold text-slate-900 list-none flex items-center justify-between gap-4">
+                                        <span>{faq.question}</span>
+                                        <span className="text-blue-600 text-xl font-bold group-open:hidden">+</span>
+                                        <span className="text-blue-600 text-xl font-bold hidden group-open:inline">−</span>
+                                    </summary>
+                                    <p className="mt-3 text-slate-600 leading-relaxed">{faq.answer}</p>
+                                </details>
+                            ))}
+                        </div>
+                    </section>
+                )}
+
                 <div className="mt-16 pt-10 border-t border-slate-100 bg-slate-50 p-8 rounded-3xl text-center">
                     <h3 className="text-2xl font-bold mb-4 text-slate-900">צריכים חילוץ או גרירה עכשיו?</h3>
-                    <p className="text-slate-600 mb-8">אנחנו זמינים עבורכם 24/7 באזור חיפה והצפון.</p>
+                    <p className="text-slate-600 mb-8">אנחנו זמינים עבורכם 24/7 באזור חיפה, הקריות, טירת כרמל והצפון — הגעה תוך 25–30 דק&apos;.</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <a href="tel:+972549174414" className="bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all">
-                            התקשרו עכשיו
+                            התקשרו עכשיו: 054-917-4414
                         </a>
                         <a href="https://wa.me/972549174414" className="bg-whatsapp text-white px-8 py-4 rounded-full font-bold text-lg hover:opacity-90 transition-all">
                             שלחו הודעת וואטסאפ

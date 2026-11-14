@@ -1,0 +1,61 @@
+name: Autonomous 4-Day Technical SEO Cycle
+
+on:
+  schedule:
+    # Runs every 4 days at 06:00 UTC (08:00/09:00 Israel Time)
+    - cron: '0 6 */4 * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  seo-4day-cycle:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci --no-progress --no-audit --no-fund --loglevel=error
+
+      - name: Run Autonomous 4-Day SEO Cycle
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY || secrets.GOOGLE_INDEXING_SERVICE_ACCOUNT }}
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          NEXT_PUBLIC_SITE_URL: https://grar-haifa.vercel.app
+        run: npx --yes tsx scripts/autonomous-seo-cycle.ts
+
+      - name: Commit & Push to Main (Triggers Vercel Deploy)
+        run: |
+          git config user.name "Autonomous SEO Engineer"
+          git config user.email "seo-cycle@grar-haifa.vercel.app"
+          git add -A
+          git diff --staged --quiet && { echo "No changes to commit"; exit 0; }
+          git commit -m "seo: autonomous 4-day GSC optimization & content cycle"
+          for i in 1 2 3; do
+            git pull --rebase origin main || {
+              echo "Rebase failed — checking for conflict markers..."
+              if grep -rn '<<<<<<< ' -- . 2>/dev/null; then
+                echo "ERROR: Conflict markers detected. Aborting."
+                git rebase --abort 2>/dev/null || true
+                exit 1
+              fi
+            }
+            git push && break
+            echo "Push attempt $i failed, retrying in 5s..."
+            sleep 5
+          done
+

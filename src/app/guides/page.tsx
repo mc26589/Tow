@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     description: "נתקעתם בדרך או נדלקה נורה? מדריכים מעשיים לנהגים בחיפה והקריות: אבחון תקלות, הכנה לחורף, רכב חשמלי ומתי חובה להזמין גרר. חילוץ 24/7: 054-917-4414",
     alternates: {
         canonical: "/guides",
+        types: { "text/markdown": "/guides.md" },
     },
     openGraph: {
         title: "מדריכים וטיפים לנהגים בחיפה והקריות [2026]",

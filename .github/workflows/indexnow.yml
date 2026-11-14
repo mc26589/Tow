@@ -1,0 +1,30 @@
+name: IndexNow Ping (Bing / ChatGPT Search freshness)
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Weekly safety net — Mondays 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Give Vercel time to finish deploying the commit before we announce URLs.
+      - name: Wait for deployment
+        if: github.event_name == 'push'
+        run: sleep 240
+
+      - name: Ping IndexNow
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://grar-haifa.vercel.app' }}
+        run: npx --yes tsx scripts/indexnow.ts
+

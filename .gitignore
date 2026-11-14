@@ -40,3 +40,6 @@ mcp_config.json
 # Google Indexer - exclude secrets and deps only
 google-indexer/service-account-keys.json
 google-indexer/node_modules/
+
+# Local runtime cache
+.cache/

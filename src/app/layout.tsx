@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { AgentTools } from "@/components/agent-tools";
 
 const heebo = Heebo({
     subsets: ["hebrew", "latin"],
@@ -70,6 +71,7 @@ export default function RootLayout({
                 <Footer />
                 <WhatsAppCTA />
                 <Analytics />
+                <AgentTools />
             </body>
         </html>
     );

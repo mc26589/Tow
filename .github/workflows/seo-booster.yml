@@ -1,9 +1,9 @@
 name: SEO & CTR Booster Agent
 
 on:
-  schedule:
-    # Runs at 9:00 AM UTC (12:00 PM Israel Time) every 3 days
-    - cron: '0 9 */3 * *'
+  # Consolidated into seo-4day-cycle.yml (cron every 4 days) to keep 12-day cooldown unified
+  # schedule:
+  #   - cron: '0 9 */3 * *'
   workflow_dispatch: # Allows manual trigger from GitHub Actions tab
 
 permissions:

@@ -1,8 +1,9 @@
 name: pSEO & E-E-A-T Builder
 
 on:
-  schedule:
-    - cron: '0 2 * * 0' # Runs weekly on Sundays at 2:00 AM UTC to avoid bloat & save tokens
+  # Disabled scheduled runs to prevent pSEO bloat; controlled content runs via seo-4day-cycle.yml
+  # schedule:
+  #   - cron: '0 2 * * 0'
   workflow_dispatch:
 
 permissions:

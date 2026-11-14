@@ -17,31 +17,14 @@ export const CITIES = [
     { slug: "rekhasim", name_he: "רכסים" },
     { slug: "akko", name_he: "עכו" },
     { slug: "nesher", name_he: "נשר" },
+    { slug: "tirat-carmel", name_he: "טירת כרמל" },
 ] as const;
 
 export const VEHICLES = [
-    // General types
-    { slug: "private-car", name_he: "רכב פרטי", category: "general" as const },
-    { slug: "commercial", name_he: "רכב מסחרי", category: "general" as const },
+    // Core specialized vehicle categories (consolidated to prevent pSEO cannibalization)
     { slug: "electric", name_he: "רכב חשמלי", category: "general" as const },
-    { slug: "pickup", name_he: "טנדר", category: "general" as const },
+    { slug: "commercial", name_he: "רכב מסחרי", category: "general" as const },
     { slug: "suv", name_he: "ג'יפ / 4X4", category: "general" as const },
-    // Brands
-    { slug: "toyota", name_he: "טויוטה", category: "brand" as const },
-    { slug: "hyundai", name_he: "יונדאי", category: "brand" as const },
-    { slug: "kia", name_he: "קיה", category: "brand" as const },
-    { slug: "mazda", name_he: "מאזדה", category: "brand" as const },
-    { slug: "skoda", name_he: "סקודה", category: "brand" as const },
-    { slug: "seat", name_he: "סיאט", category: "brand" as const },
-    { slug: "volkswagen", name_he: "פולקסווגן", category: "brand" as const },
-    { slug: "chevrolet", name_he: "שברולט", category: "brand" as const },
-    { slug: "nissan", name_he: "ניסאן", category: "brand" as const },
-    { slug: "renault", name_he: "רנו", category: "brand" as const },
-    { slug: "suzuki", name_he: "סוזוקי", category: "brand" as const },
-    { slug: "peugeot", name_he: "פיג'ו", category: "brand" as const },
-    { slug: "tesla", name_he: "טסלה", category: "brand" as const },
-    { slug: "byd", name_he: "BYD", category: "brand" as const },
-    { slug: "geely", name_he: "ג'ילי", category: "brand" as const },
 ] as const;
 
 export const BUSINESS_INFO = {
@@ -50,7 +33,7 @@ export const BUSINESS_INFO = {
     displayPhone: "054-917-4414",
     whatsappBase: "https://wa.me/972549174414",
     description: "שירותי גרירה מהירים ומקצועיים בצפון הארץ. הגעה מהירה, מחירים הוגנים, 24/7.",
-    areas: "חיפה והקריות, עכו, יקנעם, קרית טבעון, רכסים, נשר",
+    areas: "חיפה והקריות, טירת כרמל, נשר, עכו, יקנעם, קרית טבעון, רכסים",
     // Entity-triangulation links (GEO / Local SEO): AI answer engines and Google cross-check
     // these profiles against the on-site NAP (Name, Address, Phone) to verify the business is
     // real and trustworthy before citing it. Fill in the real URLs once available — an empty

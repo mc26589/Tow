@@ -1,9 +1,9 @@
 name: Blog Content Agent
 
 on:
-  schedule:
-    # Runs at 9:00 AM Israel Time (07:00 UTC) every 3 days
-    - cron: '0 7 */3 * *'
+  # Consolidated into seo-4day-cycle.yml (max 1-2 data-backed guides every 4 days)
+  # schedule:
+  #   - cron: '0 7 */3 * *'
   workflow_dispatch: # Allows manual trigger
 
 permissions:

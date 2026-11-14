@@ -13,6 +13,7 @@ export const NEIGHBORHOODS = [
     { slug: "sderot-moriah", name_he: "שדרות מוריה", city_slug: "haifa" },
     { slug: "karmeliya", name_he: "כרמליה", city_slug: "haifa" },
     { slug: "stella-maris", name_he: "סטלה מאריס", city_slug: "haifa" },
+    { slug: "check-post", name_he: "צ'ק פוסט", city_slug: "haifa" },
 
     // Kiryat Ata
     { slug: "givat-alonim", name_he: "גבעת אלונים", city_slug: "kiryat-ata" },
@@ -75,7 +76,11 @@ export const NEIGHBORHOODS = [
     { slug: "ben-dor", name_he: "בן דור", city_slug: "nesher" },
     { slug: "ramot-yitzhak", name_he: "רמות יצחק", city_slug: "nesher" },
     { slug: "givat-amos", name_he: "גבעת עמוס", city_slug: "nesher" },
-    { slug: "givat-nesher", name_he: "גבעת נשר", city_slug: "nesher" }
+    { slug: "givat-nesher", name_he: "גבעת נשר", city_slug: "nesher" },
+
+    // Tirat Carmel
+    { slug: "galim", name_he: "גלים", city_slug: "tirat-carmel" },
+    { slug: "nof-yam", name_he: "נוף ים", city_slug: "tirat-carmel" },
 ];
 
 export const ROADS = [
@@ -117,21 +122,6 @@ export const HAZARDS = [
     { slug: "highway-flat-tire", name_he: "פנצ'ר בכביש מהיר", description: "החלפת גלגל או חילוץ בכבישים מהירים מסוכנים (כמו כביש 22), בלי לסכן את חייכם בשוליים." }
 ];
 
-export const B2B_INDUSTRIES = [
-    { slug: "taxis", name_he: "נהגי מוניות", description: "שירות גרירה מהיר ומקצועי המותאם במיוחד לנהגי מוניות שצריכים לחזור לעלות על ההגה כמה שיותר מהר. אפשרות לחשבונית עסקית במקום." },
-    { slug: "delivery-scooters", name_he: "קטנועי משלוחים (שליחים)", description: "חילוץ קטנועי וולט/משלוחים באמצעות נגרר ייעודי לדו-גלגלי, בלי להמתין שעות לניידת שירות." },
-    { slug: "leasing-fleets", name_he: "רכבי ליסינג והשכרה", description: "פתרון לחברות והשכרות. גרירה ישירה למוסכי הסדר כולל כל האישורים הנדרשים מהביטוח במקרה תאונה." },
-    { slug: "work-vehicles", name_he: "משאיות ורכבי עבודה", description: "גרירת משאיות עד 12 טון, מיניבוסים ורכבי מסחריים עם ציוד כבד. גרירה עם משקפיים (Underlift)." }
-];
-
-export const DESTINATIONS = [
-    { slug: "toyota-matam", name_he: "מוסך מורשה טויוטה מתם", type: "garage" },
-    { slug: "hyundai-check-post", name_he: "מרכז שירות יונדאי צ'ק פוסט", type: "garage" },
-    { slug: "tesla-haifa", name_he: "מוסך טסלה (Tesla) חיפה", type: "garage" },
-    { slug: "mivdak-kiryat-ata", name_he: "מכון טסטים מבדק קרית אתא", type: "testing-center" },
-    { slug: "pancheria-check-post", name_he: "פאנצ'ריה צ'ק פוסט", type: "tire-repair" }
-];
-
 export function findNeighborhood(slug: string) {
     return NEIGHBORHOODS.find((n) => n.slug === slug);
 }
@@ -146,14 +136,6 @@ export function findWarningLight(slug: string) {
 
 export function findHazard(slug: string) {
     return HAZARDS.find((h) => h.slug === slug);
-}
-
-export function findB2BIndustry(slug: string) {
-    return B2B_INDUSTRIES.find((b) => b.slug === slug);
-}
-
-export function findDestination(slug: string) {
-    return DESTINATIONS.find((d) => d.slug === slug);
 }
 
 export function getPseoWhatsAppLink(customMessage: string) {

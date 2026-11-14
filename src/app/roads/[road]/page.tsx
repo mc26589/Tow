@@ -54,10 +54,6 @@ export default async function RoadPage({ params }: PageProps) {
     return (
         <>
             <JsonLd
-                cityName="צפון"
-                citySlug="north"
-                vehicleName="רכב"
-                vehicleSlug="private-car"
                 faqs={faqs}
                 breadcrumbs={[
                     { name: "עמוד הבית", item: "/" },
