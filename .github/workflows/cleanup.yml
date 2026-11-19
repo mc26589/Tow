@@ -11,7 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Vercel Cleanup Route
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: |
-          curl -X GET "https://grar-haifa.vercel.app/api/cron/cleanup" \
-          -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
-          -s -o /dev/null -w "%{http_code}"
+          HTTP_CODE=$(curl -sS -o /tmp/cleanup_resp.txt -w "%{http_code}" \
+            -X GET "https://grar-haifa.vercel.app/api/cron/cleanup" \
+            -H "Authorization: Bearer ${CRON_SECRET}")
+          echo "HTTP status: ${HTTP_CODE}"
+          cat /tmp/cleanup_resp.txt || true
+          echo ""
+          if [ "${HTTP_CODE}" -lt 200 ] || [ "${HTTP_CODE}" -ge 300 ]; then
+            echo "::error::Cleanup endpoint failed with HTTP ${HTTP_CODE}"
+            exit 1
+          fi

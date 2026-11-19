@@ -1,5 +1,4 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import fetch from "node-fetch";
 import * as dotenv from 'dotenv';
 
 dotenv.config({ path: '.env.local' });
@@ -27,6 +26,10 @@ async function checkVercelDeployments() {
             }
         });
 
+        if (!response.ok) {
+            throw new Error(`Vercel deployments API failed (${response.status}): ${await response.text()}`);
+        }
+
         const data: any = await response.json();
         if (!data.deployments || data.deployments.length === 0) {
             console.log("No deployments found.");
@@ -34,27 +37,39 @@ async function checkVercelDeployments() {
         }
 
         const latestDeployment = data.deployments[0];
-        console.log(`Latest deployment state: ${latestDeployment.state}`);
+        const deploymentId = latestDeployment.uid || latestDeployment.id;
+        console.log(`Latest deployment ${deploymentId} state: ${latestDeployment.state}`);
 
         if (latestDeployment.state === "ERROR") {
-            console.log(`Deployment ${latestDeployment.id} failed. Initiating AI fix strategy.`);
+            console.log(`Deployment ${deploymentId} failed. Initiating AI fix strategy.`);
 
-            // Step 1: Fetch logs (simplified) - usually done via events endpoint
-            const logsResp = await fetch(`https://api.vercel.com/v2/deployments/${latestDeployment.id}/events`, {
+            // Step 1: Fetch build/event logs using the correct Vercel `uid`
+            const logsResp = await fetch(`https://api.vercel.com/v2/deployments/${deploymentId}/events`, {
                 headers: { "Authorization": `Bearer ${VERCEL_TOKEN}` }
             });
 
+            if (!logsResp.ok) {
+                throw new Error(`Vercel events API failed (${logsResp.status}): ${await logsResp.text()}`);
+            }
+
             const logsData: any = await logsResp.json();
-            const logsText = logsData.map((d: any) => d.text).join("\\n");
+            const logsArray = Array.isArray(logsData) ? logsData : [];
+            const logsText = logsArray
+                .map((d: any) => d?.payload?.text || d?.text || "")
+                .filter(Boolean)
+                .join("\n");
 
             // Step 2: Send to Gemini for analysis
-            const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite-preview" });
+            const model = genAI.getGenerativeModel({
+                model: process.env.GEMINI_MODEL || "gemini-3.1-flash-lite-preview",
+                generationConfig: { responseMimeType: "application/json" }
+            });
             const prompt = `
 You are an expert DevOps engineer. A Vercel deployment just failed.
 Analyze these build logs, identify the exact cause of the failure, and propose the necessary terminal commands or fixes to resolve it remotely.
 
 Logs limit analysis:
-${logsText.substring(logsText.length - 2000)} // Pass last 2000 chars
+${logsText.slice(-2000)}
 
 Return a concise JSON object:
 {
@@ -71,29 +86,34 @@ Return a concise JSON object:
             console.log("AI Analysis:", analysis);
 
             if (!analysis.requires_human) {
-                console.log("AI suggests it can be fixed with another redeploy or a quick commit bypass.");
-                // Option: Trigger another deploy via API or create an issue in Github via gh cli
-                // We trigger a redeploy (perhaps without build cache)
-                await fetch(`https://api.vercel.com/v13/deployments`, {
+                console.log("AI suggests it can be fixed with a fresh redeploy without cache.");
+                const redeployResp = await fetch(`https://api.vercel.com/v13/deployments?forceNew=1`, {
                     method: "POST",
-                    headers: { "Authorization": `Bearer ${VERCEL_TOKEN}` },
+                    headers: {
+                        "Authorization": `Bearer ${VERCEL_TOKEN}`,
+                        "Content-Type": "application/json"
+                    },
                     body: JSON.stringify({
-                        name: "grar-haifa",
-                        target: "production",
-                        project: VERCEL_PROJECT_ID,
-                        source: "cli",
-                        forceNew: true // Build without cache
+                        name: latestDeployment.name || "grar-haifa",
+                        deploymentId,
+                        target: latestDeployment.target || "production",
+                        project: VERCEL_PROJECT_ID
                     })
                 });
+                if (!redeployResp.ok) {
+                    throw new Error(`Vercel redeploy failed (${redeployResp.status}): ${await redeployResp.text()}`);
+                }
                 console.log("Triggered a fresh redeploy to attempt auto-fix.");
             } else {
                 console.error("AI determined the fix requires human intervention.");
+                process.exit(1);
             }
         } else {
             console.log("Deployment is successful/healthy. No action needed.");
         }
     } catch (error) {
         console.error("Monitor agent encountered an error:", error);
+        process.exit(1);
     }
 }
 

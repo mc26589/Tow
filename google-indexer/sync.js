@@ -67,7 +67,28 @@ async function run() {
     const allUrls = await fetchSitemapUrls(SITEMAP_URL);
     console.log(`Found ${allUrls.length} total URLs in sitemap.`);
 
+    if (allUrls.length === 0) {
+        console.error('❌ Sitemap returned 0 URLs or failed to fetch. Aborting.');
+        process.exitCode = 1;
+        return;
+    }
+
     const cache = loadCache();
+    const activeUrlSet = new Set(allUrls.map(u => u.loc));
+
+    // Prune URLs removed from sitemap (e.g. after 301 consolidation) so cache stays clean
+    let prunedCount = 0;
+    for (const cachedUrl of Object.keys(cache)) {
+        if (!activeUrlSet.has(cachedUrl)) {
+            delete cache[cachedUrl];
+            prunedCount++;
+        }
+    }
+    if (prunedCount > 0) {
+        console.log(`🧹 Pruned ${prunedCount} stale URLs no longer in sitemap.`);
+        saveCache(cache);
+    }
+
     const newUrls = [];
     const updatedUrls = [];
 
@@ -99,6 +120,7 @@ async function run() {
 
     let successCount = 0;
     let failedCount = 0;
+    let hitQuota = false;
 
     for (let i = 0; i < urlsToProcess.length; i++) {
         const { loc, lastmod } = urlsToProcess[i];
@@ -121,8 +143,9 @@ async function run() {
 
         } catch (error) {
             // Check if error is quota exceeded
-            if (error.message.includes('Quota exceeded')) {
+            if (error.message && error.message.includes('Quota exceeded')) {
                 console.log(`\n❌ Quota Exceeded! Stopping execution for today. We'll continue tomorrow.`);
+                hitQuota = true;
                 break;
             }
             console.error(`[${i + 1}/${urlsToProcess.length}] ❌ Error indexing ${loc}:`, error.message);
@@ -140,12 +163,20 @@ async function run() {
     console.log(`Total URLs processed today: ${successCount}`);
     console.log(`Failed URLs today: ${failedCount}`);
 
-    const remaining = (await fetchSitemapUrls(SITEMAP_URL)).filter(u => {
-        return !cache[u.loc] || (u.lastmod && cache[u.loc] !== u.lastmod)
+    if (failedCount > 0 && successCount === 0 && !hitQuota) {
+        console.error('❌ All indexing attempts failed without hitting quota. Failing workflow for visibility.');
+        process.exitCode = 1;
+    }
+
+    const remaining = allUrls.filter(u => {
+        return !cache[u.loc] || (u.lastmod && cache[u.loc] !== u.lastmod);
     }).length;
 
     console.log(`Remaining URLs to index in future runs: ${remaining}`);
 }
 
 // Start
-run();
+run().catch(err => {
+    console.error('❌ Fatal error in google-indexer:', err);
+    process.exit(1);
+});

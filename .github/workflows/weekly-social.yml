@@ -16,21 +16,24 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-          
+
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund --loglevel=error
-        
+        run: npm ci --no-progress --no-audit --no-fund --loglevel=error
+
       - name: Run Social Media Agent
         env:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_FACEBOOK }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY_FACEBOOK || secrets.GEMINI_API_KEY }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY || secrets.GOOGLE_INDEXING_SERVICE_ACCOUNT }}
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
           # FACEBOOK_USER_ACCESS_TOKEN if needed for group discovery
         run: npm run agent:social
 
@@ -66,4 +69,3 @@ jobs:
             echo "Push attempt $i failed, retrying in 5s..."
             sleep 5
           done
-

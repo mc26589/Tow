@@ -1,8 +1,11 @@
 name: Core Web Vitals Analytics Loop
 
 on:
-  schedule:
-    - cron: '0 1 * * *' # Runs daily at 1:00 AM UTC
+  # Disabled daily schedule: scripts/analytics.ts currently uses hardcoded mock metrics,
+  # which was inserting duplicate fake rows into Supabase and burning Gemini tokens daily.
+  # Re-enable schedule once real Vercel Web Analytics API fetching is wired up.
+  # schedule:
+  #   - cron: '0 1 * * *' # Runs daily at 1:00 AM UTC
   workflow_dispatch:
 
 permissions:
@@ -11,7 +14,7 @@ permissions:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,9 +35,10 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: npm run agent:analytics
-        
-        # Optional: Auto-apply the AI suggestion if safe
+
+      # Optional: Auto-apply the AI suggestion if safe
       # - name: Auto-apply technical improvements (LCP/INP/CLS)
       #   run: |
       #     npm run agent:apply-fixes
