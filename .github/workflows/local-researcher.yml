@@ -1,8 +1,10 @@
 name: Local Researcher (Event & Long-tail)
 
 on:
-  schedule:
-    - cron: '0 3 * * 0' # Runs weekly on Sundays before pSEO builder to conserve tokens
+  # Disabled scheduled runs: pseo-builder.yml and blog-agent.yml were consolidated into
+  # seo-4day-cycle.yml, so writing weekly trends to local_trends is unused and burns tokens.
+  # schedule:
+  #   - cron: '0 3 * * 0' # Runs weekly on Sundays before pSEO builder to conserve tokens
   workflow_dispatch: # Allow manual trigger
 
 jobs:
